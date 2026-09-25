@@ -1,0 +1,138 @@
+# CCS (Leave) Rules, 1972 — Sequential Comic Workflow
+
+## Operating mode
+
+Proceed automatically in numerical order without requesting permission between batches. Process a complete rule before advancing to the next rule. If a rule is too large for one comic, split it into clearly numbered batches or multiple parts, while preserving the same characters, setting, and story context until every sub-rule, clause, sub-clause, proviso, explanation, exception, definition, cross-reference, and relevant amendment for that rule is covered.
+
+Only after the rule-level ledger is marked complete may the workflow switch characters, setting, props, and story mechanism for the next rule.
+
+Language: Hinglish narrative and dialogue; preserve legal main terms and exact citations in English.
+
+## Mandatory gates for every provision
+
+1. Fetch and cite the latest authoritative DoPT source.
+2. Identify exact rule hierarchy.
+3. Check amendments, OMs, provisos, exceptions, and currentness.
+4. Separate permission, sanction, approval, intimation, reporting, and prohibition.
+5. Verify every number and date.
+6. Lock the characters, setting, props, and story context for the current rule.
+7. Generate readable Hinglish comics in batches without overloading a panel.
+8. Perform a text and legal audit before presentation.
+9. Mark every atomic element in the ledger.
+10. Switch characters/story only after the complete current rule is marked complete.
+
+The assistant must not pause to ask whether to continue. It should continue with the next batch in the active rule and retain continuity across turns.
+
+## Coverage ledger
+
+| Provision | Status | Comic | Source/currentness checked |
+|---|---|---|---|
+| Rule 1 — Short title and commencement | Complete | `ccs-leave-rule-1-comic.png` | DoPT consolidated source, updated 18.10.2023 |
+| Rule 2 — Extent of application | Complete | `ccs-leave-rule-2-comic-hinglish.png` | DoPT consolidated source, updated 18.10.2023 |
+| Rule 3(1)(a)–(d) — Definitions | Complete for this atomic batch | `ccs-leave-rule-3-definitions-a-d-hinglish.png` | Official DoPT circulars domain consolidated version updated 24.09.2024; verify each later batch |
+| Rule 3(1)(e), (f), (fa) — Definitions | Complete for this atomic batch | `ccs-leave-rule-3-definitions-e-fa-hinglish.png` | Official DoPT circulars domain consolidated version updated 24.09.2024 |
+| Rule 3(1)(g)–(j) — Definitions | Complete for this atomic batch | `ccs-leave-rule-3-definitions-g-j-hinglish.png` | Official DoPT circulars domain consolidated version updated 24.09.2024 |
+| Rule 3(1)(k)–(m), 3(2) — Definitions and cross-reference | Complete | `ccs-leave-rule-3-definitions-k-m-hinglish.png` | Official DoPT circulars domain consolidated version updated 24.09.2024 |
+| Rule 4(1)–(2) — Temporary transfer and foreign service | Complete | `ccs-leave-rule-4-hinglish.png` | Official consolidated version updated 24.09.2024; transfer terms remain material |
+| Rule 5(1)(a) and provisos — Temporary transfer from other leave rules | Complete for Part 1 | `ccs-leave-rule-5-part-1-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 5 — Transfer from services or posts governed by other leave rules (remaining provisions) | Complete for Part 2 | `ccs-leave-rule-5-part-2-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 6 — Transfer to industrial establishment | Complete | `ccs-leave-rule-6-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 7 — Right to leave | Complete | `ccs-leave-rule-7-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 8 — Regulation of claim to leave | Complete | `ccs-leave-rule-8-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 9 — Effect of dismissal, removal or resignation on leave at credit | Complete | `ccs-leave-rule-9-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 10 — Commutation of one kind of leave into another | Complete | `ccs-leave-rule-10-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 11 — Combination of different kinds of leave | Complete | `ccs-leave-rule-11-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 12 — Maximum amount of continuous leave | Complete | `ccs-leave-rule-12-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 13 — Acceptance of service or employment while on leave | Complete | `ccs-leave-rule-13-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 14 — Application for leave | Complete | `ccs-leave-rule-14-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 15 — Leave account | Complete | `ccs-leave-rule-15-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 16 — Verification of title to leave | Complete | `ccs-leave-rule-16-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 17 — Leave not to be granted in certain circumstances | Complete | `ccs-leave-rule-17-hinglish.png` | Official DoPT circulars-domain consolidated version updated 24.09.2024 |
+| Rule 18 — Deleted | Complete (Deleted in current consolidation) | `ccs-leave-rule-18-hinglish.png` | Official DoPT circulars-domain consolidated version updated 24.09.2024; no deletion date claimed |
+| Rule 19(1) — Grant of leave on medical certificate: application, Form 3/Form 4, CGHS/AMA sources, 8 km condition | Complete for Part 1 | `ccs-leave-rule-19-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate Rule 19 text |
+| Rule 19(1) — Private-hospital Authorized Doctor clause, away-from-CGHS/Headquarters provisos, Form 5 | Complete for Part 2 | `ccs-leave-rule-19-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate Rule 19 text |
+| Rule 19(2)–(6), Rule 19 NOTE — Permanently-unfit bar, second opinion, no-right rule, 3-day waiver, AYUSH/Dentist/Honorary MO note | Superseded — see corrected rows below (2018 amendment verified) | — | G.S.R. 438(E) dated 03.04.2018 substituted Rule 19(2) |
+| Rule 19(2), (2A), (2B) — Disability certificate in Form 3-A, competent Medical Authorities, no reference required | Complete for Part 3 | `ccs-leave-rule-19-part-3-hinglish.png` | G.S.R. 438(E) dated 03.04.2018; official consolidated version updated 24.09.2024 |
+| Rule 19(3)–(6), Rule 19(1) tail + NOTE — Second opinion, GMO duty, no-right rule, 3-day waiver, nature/duration, AYUSH/Dentist/Honorary MO | Complete for Part 4 | `ccs-leave-rule-19-part-4-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 20(1)(a), (1)(b)(i)–(ii) — Unlikely to be fit: no automatic refusal, 12 months at a time, Form 3-A requirement | Complete for Part 1 | `ccs-leave-rule-20-part-1-hinglish.png` | G.S.R. 438(E) dated 03.04.2018; official consolidated version updated 24.09.2024 |
+| Rule 20 provisos + 20(2) — Remitted back, not debited, section 20 RPwD Act suo motu; Rule 7/Rule 12/Rule 3(1)(fa) cross-links | Complete for Part 2 | `ccs-leave-rule-20-part-2-hinglish.png` | G.S.R. 438(E) dated 03.04.2018; official consolidated version updated 24.09.2024 |
+| Rule 7 proviso (2018) — Rule 20 leave not refused/revoked without reference to Medical Authority, binding advice | Complete via cross-link | `ccs-leave-rule-20-part-2-hinglish.png` (Panel 3 + card) | G.S.R. 438(E) dated 03.04.2018 |
+| Rule 12 proviso (2018) — Rule 12 not applicable to disability medical-certificate leave | Complete via cross-link | `ccs-leave-rule-20-part-2-hinglish.png` (Panel 3 + card) | G.S.R. 438(E) dated 03.04.2018 |
+| Rule 21 — Commencement and termination of leave | Complete | `ccs-leave-rule-21-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 22(1)(i) + provisos, 22(2) — Deemed permission, securities/moneys, relief-transfer, replacement-delay bars, HOD waiver | Complete for Part 1 | `ccs-leave-rule-22-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 22(1)(ii), 22(3), NOTE — Medical prefix/suffix, pay effect, compensatory leave | Complete for Part 2 | `ccs-leave-rule-22-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated after audit caught incorrect pay-effect dates |
+| Rule 23(1)–(2) Deleted + 23(3), 23(3)(a) — Recall compulsory, India entitlements | Complete for Part 1 | `ccs-leave-rule-23-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated after audit caught invented book text |
+| Rule 23(3)(b), SR 142/143 note — Recall from abroad: voyage as duty, salary, passage, refund, TA | Complete for Part 2 | `ccs-leave-rule-23-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 24(1)–(2) — Return from leave: early return permission, LPR preclusion and appointing-authority consent | Complete for Part 1 | `ccs-leave-rule-24-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated to fix label typo |
+| Rule 24(3)–(4), NOTE — Form 5 fitness, (b)(c) Not printed, RMP discretion, no automatic post, report and await orders, TB light work | Complete for Part 2 | `ccs-leave-rule-24-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 25 — Absence after expiry of leave: no salary, HPL/EOL debit, wilful absence discipline | Complete | `ccs-leave-rule-25-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated to fix inconsistent ledger illustration |
+| Rule 26(1)(a) — Earned leave advance credit 15+15, unavailed joining-time credit, 300+LTC cap | Complete for Part 1 | `ccs-leave-rule-26-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate ("in addition to" LTC wording verified) |
+| Rule 26(1)(b)–(d) — Carry forward, 285-day separate-credit rule, temporary-to-permanent credit, foreign service; (c)(ii)/NOTE/EXCEPTION Not printed | Complete for Part 2 | `ccs-leave-rule-26-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 26(2)–(3) — Maximum 180 days at a time, (ii) Not printed, up to 300+LTC for outside-India spells, India-portion proviso | Complete for Part 3 | `ccs-leave-rule-26-part-3-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 27 — Calculation of Earned Leave: 2½-day rate, exit cutoffs, EOL/dies-non reduction, rounding | Complete | `ccs-leave-rule-27-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 28(1) — Vacation Department EL: full/part/no vacation, year definition, forgo-order notes | Complete for Part 1 | `ccs-leave-rule-28-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 28(2)–(3), NOTE — Vacation combination cap, 300-day carry forward, joining-time credit | Complete for Part 2 | `ccs-leave-rule-28-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated to fix wrong (iii) citation |
+| Rule 29(1)–(2)(a)–(ca) — HPL advance credit 10+10, 5/3-day rate, appointment/exit cutoffs | Complete for Part 1 | `ccs-leave-rule-29-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 29(2)(d), (3)–(5) — Dies-non 1/18th cut, Rule 49 grant, MC/private affairs, rounding, temporary proviso | Complete for Part 2 | `ccs-leave-rule-29-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 30 — Commuted leave: half-HPL limit, double debit, study 180 days, resignation recovery, EL-due NOTE | Complete | `ccs-leave-rule-30-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 31(1), (1-A) — LND grant: 360-day cap, three conditions, four-illness temporary grant | Complete for Part 1 | `ccs-leave-rule-31-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 31(2) + provisos — LND cancellation/refund, ill-health/death and 48(1)(b)/56(j)/56(l) protections | Complete for Part 2 | `ccs-leave-rule-31-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 32(1)–(2)(b) — EOL grant, 3/6-month temporary limits, (c) Deleted, President exception | Complete for Part 1 | `ccs-leave-rule-32-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 32(2)(d)–(e) + NOTE — 18-month illness EOL, home-TB NOTE, 24-month study EOL | Complete for Part 2 | `ccs-leave-rule-32-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 32(3)–(6) — Form 6 bond + sureties, SC/ST training, continuous spell, retrospective EOL | Complete for Part 3 | `ccs-leave-rule-32-part-3-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 33 — Probationer, person on probation, apprentice leave | Complete | `ccs-leave-rule-33-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 34 — Re-employment treated as fresh entry; Rules 35–37 Deleted | Complete (combined micro-rules comic) | `ccs-leave-rule-34-37-hinglish.png` | Official consolidated version updated 24.09.2024; no deletion dates claimed |
+| Rule 38 — Leave preparatory to retirement, foreign-service LPR, (c) Deleted | Complete | `ccs-leave-rule-38-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 38-A — LTC encashment in service: 10/30/60, formula, protected quantum | Complete | `ccs-leave-rule-38a-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 39(1)–(2) — No leave beyond exit dates, suo motu EL+HPL cash, formulas, 300-day cap | Complete for Part 1 | `ccs-leave-rule-39-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated to fix wrong formula sub-labels |
+| Rule 39(3)–(5-A) — Withholding, extension, notice and penalty retirement cash | Complete for Part 2 | `ccs-leave-rule-39-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 39(6) — Termination, resignation (150-day half-EL), re-employment encashment | Complete for Part 3 | `ccs-leave-rule-39-part-3-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rules 39-A + 39-B — Death-in-service and invalidation cash, temporary HPL bar | Complete (combined) | `ccs-leave-rule-39ab-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 39-C — Family payment order (i)–(xi) with eldest-widow explanation | Complete | `ccs-leave-rule-39c-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 39-D — PSU/autonomous-body absorption EL cash + permanent-absorption note | Complete | `ccs-leave-rule-39d-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 40(1)–(6) — Leave salary rates: EL/HPL/commuted/EOL + foreign-service NOTE + deleteds | Complete for Part 1 | `ccs-leave-rule-40-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 40(7)–(9) — Re-employment pay, ESI set-off, overdrawal recovery + deleteds | Complete for Part 2 | `ccs-leave-rule-40-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rules 41 + 42 — Drawal in rupees in India; 30-day advance + transfer notes | Complete (combined) | `ccs-leave-rule-41-42-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 43(1)–(3) — Maternity grant 180 days + ESI NOTE; miscarriage 45 days + pre-1995 proviso | Complete for Part 1 | `ccs-leave-rule-43-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; G.S.R. 331(E) 18.06.2024 surrogacy text verified via Gazette-based reports |
+| Rule 43(4)–(6) — Combination + 2-year continuation, no-debit, surrogacy 180 days | Complete for Part 2 | `ccs-leave-rule-43-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; G.S.R. 331(E) 18.06.2024 surrogacy text verified via Gazette-based reports |
+| Rule 43-A — Paternity 15 days + window/pay/combine/no-debit/lapse/note + surrogacy (6) | Complete | `ccs-leave-rule-43a-hinglish.png` | Official consolidated version updated 24.09.2024; G.S.R. 331(E) 18.06.2024 surrogacy text verified via Gazette-based reports |
+| Rule 43-AA — Adoption paternity 15 days + foster care + ward notes | Complete | `ccs-leave-rule-43aa-hinglish.png` | Official consolidated version updated 24.09.2024; 2023 foster-care amendment verified via amendment reports |
+| Rule 43-B — Female adoption leave 180 days + foster care + continuation + ward note | Complete | `ccs-leave-rule-43b-hinglish.png` | Official consolidated version updated 24.09.2024; 2023 foster-care amendment verified via amendment reports |
+| Rule 43-C(1)–(3) — CCL grant 730 days + child definition (18/40%-any-age) + spell conditions | Complete for Part 1 | `ccs-leave-rule-43c-part-1-hinglish.png` | G.S.R. 554(E) 06.06.2018 + G.S.R. 1209(E) 11.12.2018 texts verified via notification reproductions; 24.09.2024 consolidation |
+| Rule 43-C(4)–(8) — 100%/80% pay + Explanation + combine/continuation/no-debit + surrogacy (8) | Complete for Part 2 | `ccs-leave-rule-43c-part-2-hinglish.png` | G.S.R. 1209(E) 11.12.2018 + G.S.R. 331(E) 18.06.2024 texts verified via Gazette-based reports; 24.09.2024 consolidation |
+| Rule 44 chapeau–2(a) — WRIIL grant (both nexus limbs) + hospitalisation full pay + general 6+12 scale | Complete for Part 1 | `ccs-leave-rule-44-part-1-hinglish.png` | G.S.R. 1209(E) 11.12.2018 substituted Rule 44; clean text cross-verified across notification reproductions |
+| Rule 44(2)(b)–(4) — CAPF officer 6+24, CAPF below-officer unlimited, WC set-off, no EL/HPL credit | Complete for Part 2 | `ccs-leave-rule-44-part-2-hinglish.png` | G.S.R. 1209(E) 11.12.2018 substituted Rule 44; clean text cross-verified across notification reproductions |
+| Rules 45 + 46 — Omitted by G.S.R. 1209(E) 11.12.2018 (special disability accidental injury + hospital leave); no provisions to cover | Omitted — no comic required | — | Fourth Amendment notification clause (E); Dept of Posts amendment summary corroborates |
+| Rule 47 — Seamen's sick leave: 6 weeks full pay + proviso bars; 3-month duty disability + WC/ESI set-off | Complete | `ccs-leave-rule-47-hinglish.png` | No amendment found; 2025 MCRHRDI summary corroborates currency; 24.09.2024 consolidation |
+| Rule 48 — Deleted; no provisions to cover | Deleted — no comic required | — | Rule text reads "Deleted"; no live provision |
+| Rule 49(1)–(3) — Dept leave scope + temporarily-not-required + recess grant + 18-month extension | Complete for Part 1 | `ccs-leave-rule-49-part-1-hinglish.png` | No amendment found; gconnect updated-text + 2025 MCRHRDI summary corroborate; 24.09.2024 consolidation |
+| Rule 49(4)–(6) — Non-recess grant + without-salary continuation + 25% pay/DA/heirs | Complete for Part 2 | `ccs-leave-rule-49-part-2-hinglish.png` | No amendment found; gconnect updated-text + 2025 MCRHRDI summary corroborate; 24.09.2024 consolidation |
+| Rule 49(7)–(10) + NOTE — Not duty/debit + none-due/combine + debit cancellation + 1973 NOTE | Complete for Part 3 | `ccs-leave-rule-49-part-3-hinglish.png` | No amendment found; gconnect updated-text + 2025 MCRHRDI summary corroborate; 24.09.2024 consolidation |
+| Rule 50(1)–(2) + NOTE — Study purpose + training/tour + public-administration + mind-widening | Complete for Part 1 | `ccs-leave-rule-50-part-1-hinglish.png` | Referencer text + ISTM/servicerules corroboration; 24.09.2024 consolidation |
+| Rule 50(3)(i)–(ii) + provisos — Public-advantage bar + IES/ISS PhD + MO/specialist PG | Complete for Part 2 | `ccs-leave-rule-50-part-2-hinglish.png` | Referencer text + ISTM/servicerules corroboration; 24.09.2024 consolidation |
+| Rule 50(3)(iii)–(6) — Forex gate + India-facility bar + 5-yr service/3-yr bond + frequency | Complete for Part 3 | `ccs-leave-rule-50-part-3-hinglish.png` | CHS 5-yr parenthetical in 50(5)(ii) verified via 19.09.2022 consolidated text; 24.09.2024 consolidation |
+| Rule 51 — Max study leave 12/24 months + CHS 36 months with 5-yr bond | Complete | `ccs-leave-rule-51-hinglish.png` | ISTM official summary corroborates 12/24/36 + bonds; 24.09.2024 consolidation |
+| Rule 52 — Study applications: proper channel + course/exam detail + own-risk rule | Complete | `ccs-leave-rule-52-hinglish.png` | No amendment found; DoPT study-leave FAQ corroborates scheme; 24.09.2024 consolidation |
+| Rule 53(1)–(3) + NOTE — Audit report + parent concurrence + Mission intimation/facilities | Complete for Part 1 | `ccs-leave-rule-53-part-1-hinglish.png` | No amendment found; DoPT study-leave FAQ corroborates scheme; 24.09.2024 consolidation |
+| Rule 53(4)–(5) — Bonds Forms 7/8 vs 9/10 + Audit certificate + completion proof | Complete for Part 2 | `ccs-leave-rule-53-part-2-hinglish.png` | No amendment found; DoPT study-leave FAQ corroborates scheme; 24.09.2024 consolidation |
+| Rules 54 + 55 — No-debit + 28/36-month caps + overlap rule + shortfall resumption | Complete (combined) | `ccs-leave-rule-54-55-hinglish.png` | 28/36 caps confirmed via DoPT FAQ + legal sources; 24.09.2024 consolidation |
+| Rule 56 — Study salary: abroad 4 components + India 3 + stipend/HPL floor + 1996 pay | Complete | `ccs-leave-rule-56-hinglish.png` | Substituted text corroborated by 2018 summary; no later amendment found; 24.09.2024 consolidation |
+| Rule 57(1)–(2) — Allowance grant scope + scholarship netting (nil/difference) | Complete for Part 1 | `ccs-leave-rule-57-part-1-hinglish.png` | Text corroborated across reproductions; no amendment found; 24.09.2024 consolidation |
+| Rule 57(3)–(6) — Breaks + vacation proof + deleted (4) + 24-month cap | Complete for Part 2 | `ccs-leave-rule-57-part-2-hinglish.png` | Text corroborated across reproductions; no amendment found; 24.09.2024 consolidation |
+| Rule 58 — Sterling per-diem table (1.00/1.65/1.20/2.00/2.75) + revision + President | Complete | `ccs-leave-rule-58-hinglish.png` | Rates verbatim; unrevised status corroborated by MHA AIS Regulations July 2024; 24.09.2024 consolidation |
+| Rule 59 — Allowance payment: cert + monthly provisional + attendance/diary proof | Complete | `ccs-leave-rule-59-hinglish.png` | No amendment found; text corroborated across reproductions; 24.09.2024 consolidation |
+| Rules 60 + 61 — HRA 180-day gate + no-other-allowance + TA exceptions | Complete (combined) | `ccs-leave-rule-60-61-hinglish.png` | 180-day HRA corroborated by 2018 summary; 24.09.2024 consolidation |
+| Rule 62 — Fees self-borne + Presidential/CAG exceptions + scholar bar | Complete | `ccs-leave-rule-62-hinglish.png` | No amendment found; text corroborated across reproductions; 24.09.2024 consolidation |
+| Rule 63(1) — Refund triggers (3-yr/CHS 5-yr) + GoI + foreign costs + interest | Complete for Part 1 | `ccs-leave-rule-63-part-1-hinglish.png` | CHS parenthetical verified via 19.09.2022 consolidated text; 2024 summary corroborates scheme |
+| Rule 63 prov–(3) — Medical/absorption exemptions + conversion + waiver | Complete for Part 2 | `ccs-leave-rule-63-part-2-hinglish.png` | Text corroborated (2024 summary + reproductions); 24.09.2024 consolidation |
+| Rules 64–66 — Interpretation + power to relax + Rule 66 repeal and saving | Complete (combined) | `ccs-leave-rule-64-65-66-hinglish.png` | Chapter VII full text; Rules 1–66 range corroborated (referencer index + chapter text, Aug-2026 rulebook course); 24.09.2024 consolidation |
+| First Schedule [See Rule 3(c)] — Authorities competent to grant leave: 12-kind row (6 authorities) + SDL row (5, no delegation) + study-leave row (3) + NOTE 1 foreign service | Complete | `ccs-leave-rule-first-schedule-hinglish.png` | Full 3-row table verified via Sept-2025-indexed full-text reproduction; study row corroborated (gconnect + ISTM); no NOTE 2 found; Hospital Leave still named (Rule 46 omitted 2018), WRIIL unlisted |
+| Second Schedule [See Rule 3(h)] — Forms map: 1 [R14] + 2 [R15] + 3/4/3-A/5 medical certificates + 6–10 bonds (eleven forms) | Complete (overview map) | `ccs-leave-rule-second-schedule-hinglish.png` | All 11 verified: CAG PDF (Forms 3/4 titles), goipress full text (2, 3-A), Goa Govt bond PDF (7–10 titles), DoPT/CGS consolidation (1, 5, 6); regenerated: Sameer badge unified to Assistant in all panels, audited clean |
+
+## Source baseline
+
+Latest consolidated source located: [Central Civil Services (Leave) Rules, 1972, updated as on 24.09.2024](https://documents.doptcirculars.nic.in/D2/D02est/updatedccsleaverulesN9ExV.pdf). The DoPT acts page also lists a consolidated version updated as on 18.10.2023: [DoPT acts page](https://dopt.gov.in/acts/central-civil-services-leave-rules-0). Individual post-24.09.2024 amendments or instructions must still be checked for each rule.
+
+## Non-repetition ledger
+
+Rules 1–2 used: Establishment office; Assistant and Establishment Officer; joining report, appointment order, transfer order; scope and commencement explanation. Future comics must vary the setting, characters, props, conflict, and teaching mechanism where the provision permits.

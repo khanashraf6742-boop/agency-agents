@@ -1138,3 +1138,36 @@ To everyone who has opened a PR, filed an issue, started a Discussion, or simply
 Made with ❤️ by the community, for the community
 
 </div>
+
+## Grok Build CLI
+
+This repository includes a small installer for xAI's open-source **Grok Build** terminal coding agent. It keeps the upstream Rust project out of this repository and installs the official released binary:
+
+```sh
+./scripts/install-grok-build.sh
+grok
+```
+
+Grok Build is a terminal/TUI application rather than a browser server, so it cannot be exposed as an HTTP live preview. Authenticate on first launch as described in the upstream [Grok Build repository](https://github.com/xai-org/grok-build). To build the upstream source instead, install Rust and follow its build instructions.
+
+## Additional agent platforms
+
+The following requested upstream projects can be incorporated one at a time without mixing their dependency trees into this repository:
+
+- [AutoGPT](https://github.com/khanashraf6742-boop/AutoGPT) — autonomous agent platform
+- [Dify](https://github.com/khanashraf6742-boop/dify) — LLM application and workflow platform
+- [Ruflo](https://github.com/khanashraf6742-boop/ruflo) — agent orchestration platform
+- [Anything LLM](https://github.com/khanashraf6742-boop/anything-llm) — document and workspace assistant
+- [CopilotKit](https://github.com/khanashraf6742-boop/CopilotKit) — in-app copilot UI and runtime
+
+Install one or more upstream projects into a user-owned shared directory:
+
+```sh
+./scripts/install-agent-platforms.sh autogpt
+./scripts/install-agent-platforms.sh dify ruflo
+./scripts/install-agent-platforms.sh anything-llm copilotkit
+# or fetch all five
+./scripts/install-agent-platforms.sh all
+```
+
+By default, sources are stored in `~/.local/share/agency-agents/platforms`. Set `AGENCY_AGENTS_PLATFORM_DIR` to use another location. Each project is kept separate so its own Docker/services, environment variables, license, and startup instructions remain authoritative. The installer updates an already-fetched project with a fast-forward-only pull and never overwrites local changes.
