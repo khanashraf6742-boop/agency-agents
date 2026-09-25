@@ -80,6 +80,10 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 32(1)–(2)(b) — EOL grant, 3/6-month temporary limits, (c) Deleted, President exception | Complete for Part 1 | `ccs-leave-rule-32-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 32(2)(d)–(e) + NOTE — 18-month illness EOL, home-TB NOTE, 24-month study EOL | Complete for Part 2 | `ccs-leave-rule-32-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 32(3)–(6) — Form 6 bond + sureties, SC/ST training, continuous spell, retrospective EOL | Complete for Part 3 | `ccs-leave-rule-32-part-3-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 33 — Probationer, person on probation, apprentice leave | Complete | `ccs-leave-rule-33-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 34 — Re-employment treated as fresh entry; Rules 35–37 Deleted | Complete (combined micro-rules comic) | `ccs-leave-rule-34-37-hinglish.png` | Official consolidated version updated 24.09.2024; no deletion dates claimed |
+| Rule 38 — Leave preparatory to retirement, foreign-service LPR, (c) Deleted | Complete | `ccs-leave-rule-38-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 38-A — LTC encashment in service: 10/30/60, formula, protected quantum | Complete | `ccs-leave-rule-38a-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 
 ## Source baseline
 
