@@ -69,6 +69,9 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 26(1)(a) — Earned leave advance credit 15+15, unavailed joining-time credit, 300+LTC cap | Complete for Part 1 | `ccs-leave-rule-26-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate ("in addition to" LTC wording verified) |
 | Rule 26(1)(b)–(d) — Carry forward, 285-day separate-credit rule, temporary-to-permanent credit, foreign service; (c)(ii)/NOTE/EXCEPTION Not printed | Complete for Part 2 | `ccs-leave-rule-26-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 26(2)–(3) — Maximum 180 days at a time, (ii) Not printed, up to 300+LTC for outside-India spells, India-portion proviso | Complete for Part 3 | `ccs-leave-rule-26-part-3-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 27 — Calculation of Earned Leave: 2½-day rate, exit cutoffs, EOL/dies-non reduction, rounding | Complete | `ccs-leave-rule-27-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 28(1) — Vacation Department EL: full/part/no vacation, year definition, forgo-order notes | Complete for Part 1 | `ccs-leave-rule-28-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 28(2)–(3), NOTE — Vacation combination cap, 300-day carry forward, joining-time credit | Complete for Part 2 | `ccs-leave-rule-28-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated to fix wrong (iii) citation |
 
 ## Source baseline
 
