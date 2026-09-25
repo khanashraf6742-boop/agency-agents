@@ -63,6 +63,9 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 22(1)(ii), 22(3), NOTE — Medical prefix/suffix, pay effect, compensatory leave | Complete for Part 2 | `ccs-leave-rule-22-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated after audit caught incorrect pay-effect dates |
 | Rule 23(1)–(2) Deleted + 23(3), 23(3)(a) — Recall compulsory, India entitlements | Complete for Part 1 | `ccs-leave-rule-23-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated after audit caught invented book text |
 | Rule 23(3)(b), SR 142/143 note — Recall from abroad: voyage as duty, salary, passage, refund, TA | Complete for Part 2 | `ccs-leave-rule-23-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 24(1)–(2) — Return from leave: early return permission, LPR preclusion and appointing-authority consent | Complete for Part 1 | `ccs-leave-rule-24-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated to fix label typo |
+| Rule 24(3)–(4), NOTE — Form 5 fitness, (b)(c) Not printed, RMP discretion, no automatic post, report and await orders, TB light work | Complete for Part 2 | `ccs-leave-rule-24-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 25 — Absence after expiry of leave: no salary, HPL/EOL debit, wilful absence discipline | Complete | `ccs-leave-rule-25-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated to fix inconsistent ledger illustration |
 
 ## Source baseline
 
