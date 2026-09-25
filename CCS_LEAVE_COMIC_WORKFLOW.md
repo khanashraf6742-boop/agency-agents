@@ -97,6 +97,9 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 43(4)–(6) — Combination + 2-year continuation, no-debit, surrogacy 180 days | Complete for Part 2 | `ccs-leave-rule-43-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; G.S.R. 331(E) 18.06.2024 surrogacy text verified via Gazette-based reports |
 | Rule 43-A — Paternity 15 days + window/pay/combine/no-debit/lapse/note + surrogacy (6) | Complete | `ccs-leave-rule-43a-hinglish.png` | Official consolidated version updated 24.09.2024; G.S.R. 331(E) 18.06.2024 surrogacy text verified via Gazette-based reports |
 | Rule 43-AA — Adoption paternity 15 days + foster care + ward notes | Complete | `ccs-leave-rule-43aa-hinglish.png` | Official consolidated version updated 24.09.2024; 2023 foster-care amendment verified via amendment reports |
+| Rule 43-B — Female adoption leave 180 days + foster care + continuation + ward note | Complete | `ccs-leave-rule-43b-hinglish.png` | Official consolidated version updated 24.09.2024; 2023 foster-care amendment verified via amendment reports |
+| Rule 43-C(1)–(3) — CCL grant 730 days + child definition (18/40%-any-age) + spell conditions | Complete for Part 1 | `ccs-leave-rule-43c-part-1-hinglish.png` | G.S.R. 554(E) 06.06.2018 + G.S.R. 1209(E) 11.12.2018 texts verified via notification reproductions; 24.09.2024 consolidation |
+| Rule 43-C(4)–(8) — 100%/80% pay + Explanation + combine/continuation/no-debit + surrogacy (8) | Complete for Part 2 | `ccs-leave-rule-43c-part-2-hinglish.png` | G.S.R. 1209(E) 11.12.2018 + G.S.R. 331(E) 18.06.2024 texts verified via Gazette-based reports; 24.09.2024 consolidation |
 
 ## Source baseline
 
