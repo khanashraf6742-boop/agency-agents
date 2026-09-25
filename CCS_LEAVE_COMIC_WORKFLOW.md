@@ -75,6 +75,11 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 29(1)–(2)(a)–(ca) — HPL advance credit 10+10, 5/3-day rate, appointment/exit cutoffs | Complete for Part 1 | `ccs-leave-rule-29-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 29(2)(d), (3)–(5) — Dies-non 1/18th cut, Rule 49 grant, MC/private affairs, rounding, temporary proviso | Complete for Part 2 | `ccs-leave-rule-29-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 30 — Commuted leave: half-HPL limit, double debit, study 180 days, resignation recovery, EL-due NOTE | Complete | `ccs-leave-rule-30-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 31(1), (1-A) — LND grant: 360-day cap, three conditions, four-illness temporary grant | Complete for Part 1 | `ccs-leave-rule-31-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 31(2) + provisos — LND cancellation/refund, ill-health/death and 48(1)(b)/56(j)/56(l) protections | Complete for Part 2 | `ccs-leave-rule-31-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 32(1)–(2)(b) — EOL grant, 3/6-month temporary limits, (c) Deleted, President exception | Complete for Part 1 | `ccs-leave-rule-32-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 32(2)(d)–(e) + NOTE — 18-month illness EOL, home-TB NOTE, 24-month study EOL | Complete for Part 2 | `ccs-leave-rule-32-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 32(3)–(6) — Form 6 bond + sureties, SC/ST training, continuous spell, retrospective EOL | Complete for Part 3 | `ccs-leave-rule-32-part-3-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 
 ## Source baseline
 
