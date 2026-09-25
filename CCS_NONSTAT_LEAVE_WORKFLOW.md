@@ -37,9 +37,9 @@ landscape + summary card + exam hook, same characters within a block.
 | Inter-ministerial 10 days + cultural 30 days + overall 30-day cap (5.7–5.9) | Complete | `ccs-nonstat-sports-cultural-hinglish.png` | Brochure 5.7–5.9 (MHA 27/3/68-Estt(B) 28.06.1969; DP&Trg 28016/2/84; DP&T 6/1/85-Estt(Pay-I)) |
 | Scientific associations + IIPA 6 working days (6.1–6.2) | Complete | `ccs-nonstat-scientific-hinglish.png` | Brochure 6.1–6.2 (MHA 74/4/50-Estt(A) 26.07.1951; MHA 46/11/62-Estt(A) 21.06.1962) |
 | Co-operative societies — outstation 10 + delegate rule + sanction + HQ/half-day/certificate (6.3–6.6) | Complete | `ccs-nonstat-coop-hinglish.png` | Brochure 6.3–6.6 (MHA 46/22/63-Estt(A) 14.01.1964; MHA 28016/1/84-Estt(A) 19.06.1984) |
-| Union/JCM — 20/10/5 + no double-dip + non-calendar year + staff-side 5 + prep 10 (7–7.2, JCA OMs) | Pending | `ccs-nonstat-union-hinglish.png` |  |
-| Departmental exams — DPE + Steno Gr III/TA/no-DA/2 occasions (8.1–8.2) | Pending | `ccs-nonstat-exams-hinglish.png` |  |
-| Hindi Parishad — 5 + 5 + 20 journey + 20 cap (9.1–9.5) | Pending | `ccs-nonstat-hindi-parishad-hinglish.png` |  |
+| Union/JCM — 20/10/5 + no double-dip + non-calendar year + staff-side 5 + prep 10 (7–7.2, JCA OMs) | Complete | `ccs-nonstat-union-hinglish.png` | Brochure 7–7.2 (MHA 27/3/69-Estt(B) 08.04.1969; DOPT 8/13/72-JCA 04.09.1972; MHA 8/6/70-JCA 30.10.1970) |
+| Departmental exams — DPE + Steno Gr III/TA/no-DA/2 occasions (8.1–8.2) | Complete | `ccs-nonstat-exams-hinglish.png` | Brochure 8.1–8.2 (MHA 46/26/63-Estt(A) 02.12.1963; MHA 1/18/70-CS.II 31.08.1970) |
+| Hindi Parishad — 5 + 5 + 20 journey + 20 cap (9.1–9.5) | Complete | `ccs-nonstat-hindi-parishad-hinglish.png` | Brochure 9.1–9.5 (MHA 28016/2/76-Estt(B) 30.06.1976) |
 | TA/Aux AF/Naval Reserve/Home Guards/Civil Defence P1 — interview/camps/transit (10.1–10.4) | Pending | `ccs-nonstat-defence-part-1-hinglish.png` |  |
 | Aux police/Civil Defence P2 — Home Guards/NVC/PRD + Civil Defence Corps (10.5–10.6) | Pending | `ccs-nonstat-defence-part-2-hinglish.png` |  |
 | Bandh/curfew absence — beyond control + 5 km + picketing + HoD (11–11.1) | Pending | `ccs-nonstat-bandh-hinglish.png` |  |
