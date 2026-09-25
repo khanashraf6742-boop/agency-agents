@@ -108,6 +108,10 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 49(1)–(3) — Dept leave scope + temporarily-not-required + recess grant + 18-month extension | Complete for Part 1 | `ccs-leave-rule-49-part-1-hinglish.png` | No amendment found; gconnect updated-text + 2025 MCRHRDI summary corroborate; 24.09.2024 consolidation |
 | Rule 49(4)–(6) — Non-recess grant + without-salary continuation + 25% pay/DA/heirs | Complete for Part 2 | `ccs-leave-rule-49-part-2-hinglish.png` | No amendment found; gconnect updated-text + 2025 MCRHRDI summary corroborate; 24.09.2024 consolidation |
 | Rule 49(7)–(10) + NOTE — Not duty/debit + none-due/combine + debit cancellation + 1973 NOTE | Complete for Part 3 | `ccs-leave-rule-49-part-3-hinglish.png` | No amendment found; gconnect updated-text + 2025 MCRHRDI summary corroborate; 24.09.2024 consolidation |
+| Rule 50(1)–(2) + NOTE — Study purpose + training/tour + public-administration + mind-widening | Complete for Part 1 | `ccs-leave-rule-50-part-1-hinglish.png` | Referencer text + ISTM/servicerules corroboration; 24.09.2024 consolidation |
+| Rule 50(3)(i)–(ii) + provisos — Public-advantage bar + IES/ISS PhD + MO/specialist PG | Complete for Part 2 | `ccs-leave-rule-50-part-2-hinglish.png` | Referencer text + ISTM/servicerules corroboration; 24.09.2024 consolidation |
+| Rule 50(3)(iii)–(6) — Forex gate + India-facility bar + 5-yr service/3-yr bond + frequency | Complete for Part 3 | `ccs-leave-rule-50-part-3-hinglish.png` | CHS 5-yr parenthetical in 50(5)(ii) verified via 19.09.2022 consolidated text; 24.09.2024 consolidation |
+| Rule 51 — Max study leave 12/24 months + CHS 36 months with 5-yr bond | Complete | `ccs-leave-rule-51-hinglish.png` | ISTM official summary corroborates 12/24/36 + bonds; 24.09.2024 consolidation |
 
 ## Source baseline
 
