@@ -66,6 +66,9 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 24(1)–(2) — Return from leave: early return permission, LPR preclusion and appointing-authority consent | Complete for Part 1 | `ccs-leave-rule-24-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated to fix label typo |
 | Rule 24(3)–(4), NOTE — Form 5 fitness, (b)(c) Not printed, RMP discretion, no automatic post, report and await orders, TB light work | Complete for Part 2 | `ccs-leave-rule-24-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 25 — Absence after expiry of leave: no salary, HPL/EOL debit, wilful absence discipline | Complete | `ccs-leave-rule-25-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated to fix inconsistent ledger illustration |
+| Rule 26(1)(a) — Earned leave advance credit 15+15, unavailed joining-time credit, 300+LTC cap | Complete for Part 1 | `ccs-leave-rule-26-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate ("in addition to" LTC wording verified) |
+| Rule 26(1)(b)–(d) — Carry forward, 285-day separate-credit rule, temporary-to-permanent credit, foreign service; (c)(ii)/NOTE/EXCEPTION Not printed | Complete for Part 2 | `ccs-leave-rule-26-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 26(2)–(3) — Maximum 180 days at a time, (ii) Not printed, up to 300+LTC for outside-India spells, India-portion proviso | Complete for Part 3 | `ccs-leave-rule-26-part-3-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 
 ## Source baseline
 
