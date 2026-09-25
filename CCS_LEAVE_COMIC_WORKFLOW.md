@@ -100,6 +100,9 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 43-B — Female adoption leave 180 days + foster care + continuation + ward note | Complete | `ccs-leave-rule-43b-hinglish.png` | Official consolidated version updated 24.09.2024; 2023 foster-care amendment verified via amendment reports |
 | Rule 43-C(1)–(3) — CCL grant 730 days + child definition (18/40%-any-age) + spell conditions | Complete for Part 1 | `ccs-leave-rule-43c-part-1-hinglish.png` | G.S.R. 554(E) 06.06.2018 + G.S.R. 1209(E) 11.12.2018 texts verified via notification reproductions; 24.09.2024 consolidation |
 | Rule 43-C(4)–(8) — 100%/80% pay + Explanation + combine/continuation/no-debit + surrogacy (8) | Complete for Part 2 | `ccs-leave-rule-43c-part-2-hinglish.png` | G.S.R. 1209(E) 11.12.2018 + G.S.R. 331(E) 18.06.2024 texts verified via Gazette-based reports; 24.09.2024 consolidation |
+| Rule 44 chapeau–2(a) — WRIIL grant (both nexus limbs) + hospitalisation full pay + general 6+12 scale | Complete for Part 1 | `ccs-leave-rule-44-part-1-hinglish.png` | G.S.R. 1209(E) 11.12.2018 substituted Rule 44; clean text cross-verified across notification reproductions |
+| Rule 44(2)(b)–(4) — CAPF officer 6+24, CAPF below-officer unlimited, WC set-off, no EL/HPL credit | Complete for Part 2 | `ccs-leave-rule-44-part-2-hinglish.png` | G.S.R. 1209(E) 11.12.2018 substituted Rule 44; clean text cross-verified across notification reproductions |
+| Rules 45 + 46 — Omitted by G.S.R. 1209(E) 11.12.2018 (special disability accidental injury + hospital leave); no provisions to cover | Omitted — no comic required | — | Fourth Amendment notification clause (E); Dept of Posts amendment summary corroborates |
 
 ## Source baseline
 
