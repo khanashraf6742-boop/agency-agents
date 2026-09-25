@@ -84,6 +84,9 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 34 — Re-employment treated as fresh entry; Rules 35–37 Deleted | Complete (combined micro-rules comic) | `ccs-leave-rule-34-37-hinglish.png` | Official consolidated version updated 24.09.2024; no deletion dates claimed |
 | Rule 38 — Leave preparatory to retirement, foreign-service LPR, (c) Deleted | Complete | `ccs-leave-rule-38-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 38-A — LTC encashment in service: 10/30/60, formula, protected quantum | Complete | `ccs-leave-rule-38a-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 39(1)–(2) — No leave beyond exit dates, suo motu EL+HPL cash, formulas, 300-day cap | Complete for Part 1 | `ccs-leave-rule-39-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated to fix wrong formula sub-labels |
+| Rule 39(3)–(5-A) — Withholding, extension, notice and penalty retirement cash | Complete for Part 2 | `ccs-leave-rule-39-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 39(6) — Termination, resignation (150-day half-EL), re-employment encashment | Complete for Part 3 | `ccs-leave-rule-39-part-3-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 
 ## Source baseline
 
