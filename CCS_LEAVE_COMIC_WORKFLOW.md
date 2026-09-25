@@ -103,6 +103,11 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 44 chapeau–2(a) — WRIIL grant (both nexus limbs) + hospitalisation full pay + general 6+12 scale | Complete for Part 1 | `ccs-leave-rule-44-part-1-hinglish.png` | G.S.R. 1209(E) 11.12.2018 substituted Rule 44; clean text cross-verified across notification reproductions |
 | Rule 44(2)(b)–(4) — CAPF officer 6+24, CAPF below-officer unlimited, WC set-off, no EL/HPL credit | Complete for Part 2 | `ccs-leave-rule-44-part-2-hinglish.png` | G.S.R. 1209(E) 11.12.2018 substituted Rule 44; clean text cross-verified across notification reproductions |
 | Rules 45 + 46 — Omitted by G.S.R. 1209(E) 11.12.2018 (special disability accidental injury + hospital leave); no provisions to cover | Omitted — no comic required | — | Fourth Amendment notification clause (E); Dept of Posts amendment summary corroborates |
+| Rule 47 — Seamen's sick leave: 6 weeks full pay + proviso bars; 3-month duty disability + WC/ESI set-off | Complete | `ccs-leave-rule-47-hinglish.png` | No amendment found; 2025 MCRHRDI summary corroborates currency; 24.09.2024 consolidation |
+| Rule 48 — Deleted; no provisions to cover | Deleted — no comic required | — | Rule text reads "Deleted"; no live provision |
+| Rule 49(1)–(3) — Dept leave scope + temporarily-not-required + recess grant + 18-month extension | Complete for Part 1 | `ccs-leave-rule-49-part-1-hinglish.png` | No amendment found; gconnect updated-text + 2025 MCRHRDI summary corroborate; 24.09.2024 consolidation |
+| Rule 49(4)–(6) — Non-recess grant + without-salary continuation + 25% pay/DA/heirs | Complete for Part 2 | `ccs-leave-rule-49-part-2-hinglish.png` | No amendment found; gconnect updated-text + 2025 MCRHRDI summary corroborate; 24.09.2024 consolidation |
+| Rule 49(7)–(10) + NOTE — Not duty/debit + none-due/combine + debit cancellation + 1973 NOTE | Complete for Part 3 | `ccs-leave-rule-49-part-3-hinglish.png` | No amendment found; gconnect updated-text + 2025 MCRHRDI summary corroborate; 24.09.2024 consolidation |
 
 ## Source baseline
 
