@@ -125,6 +125,8 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 62 — Fees self-borne + Presidential/CAG exceptions + scholar bar | Complete | `ccs-leave-rule-62-hinglish.png` | No amendment found; text corroborated across reproductions; 24.09.2024 consolidation |
 | Rule 63(1) — Refund triggers (3-yr/CHS 5-yr) + GoI + foreign costs + interest | Complete for Part 1 | `ccs-leave-rule-63-part-1-hinglish.png` | CHS parenthetical verified via 19.09.2022 consolidated text; 2024 summary corroborates scheme |
 | Rule 63 prov–(3) — Medical/absorption exemptions + conversion + waiver | Complete for Part 2 | `ccs-leave-rule-63-part-2-hinglish.png` | Text corroborated (2024 summary + reproductions); 24.09.2024 consolidation |
+| Rules 64 + 65 — Interpretation reference + power to relax with concurrence | Complete (combined) | `ccs-leave-rule-64-65-hinglish.png` | 64 text (1988 notification) + 65 text verified via current-text reproductions; MCRHRDI 2025 confirms 1–65 range |
+| Repeal and saving (unnumbered closing provision) — Cesser + deemed-valid past actions/credits | Complete (in 64–65 comic) | `ccs-leave-rule-64-65-hinglish.png` | Text verified via DoPT-contents-listed reproduction; 24.09.2024 consolidation |
 
 ## Source baseline
 
