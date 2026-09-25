@@ -116,6 +116,10 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 53(1)–(3) + NOTE — Audit report + parent concurrence + Mission intimation/facilities | Complete for Part 1 | `ccs-leave-rule-53-part-1-hinglish.png` | No amendment found; DoPT study-leave FAQ corroborates scheme; 24.09.2024 consolidation |
 | Rule 53(4)–(5) — Bonds Forms 7/8 vs 9/10 + Audit certificate + completion proof | Complete for Part 2 | `ccs-leave-rule-53-part-2-hinglish.png` | No amendment found; DoPT study-leave FAQ corroborates scheme; 24.09.2024 consolidation |
 | Rules 54 + 55 — No-debit + 28/36-month caps + overlap rule + shortfall resumption | Complete (combined) | `ccs-leave-rule-54-55-hinglish.png` | 28/36 caps confirmed via DoPT FAQ + legal sources; 24.09.2024 consolidation |
+| Rule 56 — Study salary: abroad 4 components + India 3 + stipend/HPL floor + 1996 pay | Complete | `ccs-leave-rule-56-hinglish.png` | Substituted text corroborated by 2018 summary; no later amendment found; 24.09.2024 consolidation |
+| Rule 57(1)–(2) — Allowance grant scope + scholarship netting (nil/difference) | Complete for Part 1 | `ccs-leave-rule-57-part-1-hinglish.png` | Text corroborated across reproductions; no amendment found; 24.09.2024 consolidation |
+| Rule 57(3)–(6) — Breaks + vacation proof + deleted (4) + 24-month cap | Complete for Part 2 | `ccs-leave-rule-57-part-2-hinglish.png` | Text corroborated across reproductions; no amendment found; 24.09.2024 consolidation |
+| Rule 58 — Sterling per-diem table (1.00/1.65/1.20/2.00/2.75) + revision + President | Complete | `ccs-leave-rule-58-hinglish.png` | Rates verbatim; unrevised status corroborated by MHA AIS Regulations July 2024; 24.09.2024 consolidation |
 
 ## Source baseline
 
