@@ -93,6 +93,10 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 40(1)–(6) — Leave salary rates: EL/HPL/commuted/EOL + foreign-service NOTE + deleteds | Complete for Part 1 | `ccs-leave-rule-40-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 40(7)–(9) — Re-employment pay, ESI set-off, overdrawal recovery + deleteds | Complete for Part 2 | `ccs-leave-rule-40-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rules 41 + 42 — Drawal in rupees in India; 30-day advance + transfer notes | Complete (combined) | `ccs-leave-rule-41-42-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 43(1)–(3) — Maternity grant 180 days + ESI NOTE; miscarriage 45 days + pre-1995 proviso | Complete for Part 1 | `ccs-leave-rule-43-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; G.S.R. 331(E) 18.06.2024 surrogacy text verified via Gazette-based reports |
+| Rule 43(4)–(6) — Combination + 2-year continuation, no-debit, surrogacy 180 days | Complete for Part 2 | `ccs-leave-rule-43-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; G.S.R. 331(E) 18.06.2024 surrogacy text verified via Gazette-based reports |
+| Rule 43-A — Paternity 15 days + window/pay/combine/no-debit/lapse/note + surrogacy (6) | Complete | `ccs-leave-rule-43a-hinglish.png` | Official consolidated version updated 24.09.2024; G.S.R. 331(E) 18.06.2024 surrogacy text verified via Gazette-based reports |
+| Rule 43-AA — Adoption paternity 15 days + foster care + ward notes | Complete | `ccs-leave-rule-43aa-hinglish.png` | Official consolidated version updated 24.09.2024; 2023 foster-care amendment verified via amendment reports |
 
 ## Source baseline
 
