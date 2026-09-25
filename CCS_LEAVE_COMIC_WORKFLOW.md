@@ -126,6 +126,8 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 63(1) — Refund triggers (3-yr/CHS 5-yr) + GoI + foreign costs + interest | Complete for Part 1 | `ccs-leave-rule-63-part-1-hinglish.png` | CHS parenthetical verified via 19.09.2022 consolidated text; 2024 summary corroborates scheme |
 | Rule 63 prov–(3) — Medical/absorption exemptions + conversion + waiver | Complete for Part 2 | `ccs-leave-rule-63-part-2-hinglish.png` | Text corroborated (2024 summary + reproductions); 24.09.2024 consolidation |
 | Rules 64–66 — Interpretation + power to relax + Rule 66 repeal and saving | Complete (combined) | `ccs-leave-rule-64-65-66-hinglish.png` | Chapter VII full text; Rules 1–66 range corroborated (referencer index + chapter text, Aug-2026 rulebook course); 24.09.2024 consolidation |
+| First Schedule [See Rule 3(c)] — Authorities competent to grant leave: 12-kind row (6 authorities) + SDL row (5, no delegation) + study-leave row (3) + NOTE 1 foreign service | Complete | `ccs-leave-rule-first-schedule-hinglish.png` | Full 3-row table verified via Sept-2025-indexed full-text reproduction; study row corroborated (gconnect + ISTM); no NOTE 2 found; Hospital Leave still named (Rule 46 omitted 2018), WRIIL unlisted |
+| Second Schedule [See Rule 3(h)] — Forms 1–10 (prescribed templates, not substantive provisions) | Documented (no comic — formats only) | — | Identified: 1 [R14 application], 4 [R19 medical certificate], 5 [R24(3) fitness certificate], 6 [R32(3) EOL bond], 7–10 [R53 study-leave bonds]; Forms 2–3 titles unverified; no Form 11 evidence |
 
 ## Source baseline
 
