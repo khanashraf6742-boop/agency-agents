@@ -120,6 +120,11 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 57(1)–(2) — Allowance grant scope + scholarship netting (nil/difference) | Complete for Part 1 | `ccs-leave-rule-57-part-1-hinglish.png` | Text corroborated across reproductions; no amendment found; 24.09.2024 consolidation |
 | Rule 57(3)–(6) — Breaks + vacation proof + deleted (4) + 24-month cap | Complete for Part 2 | `ccs-leave-rule-57-part-2-hinglish.png` | Text corroborated across reproductions; no amendment found; 24.09.2024 consolidation |
 | Rule 58 — Sterling per-diem table (1.00/1.65/1.20/2.00/2.75) + revision + President | Complete | `ccs-leave-rule-58-hinglish.png` | Rates verbatim; unrevised status corroborated by MHA AIS Regulations July 2024; 24.09.2024 consolidation |
+| Rule 59 — Allowance payment: cert + monthly provisional + attendance/diary proof | Complete | `ccs-leave-rule-59-hinglish.png` | No amendment found; text corroborated across reproductions; 24.09.2024 consolidation |
+| Rules 60 + 61 — HRA 180-day gate + no-other-allowance + TA exceptions | Complete (combined) | `ccs-leave-rule-60-61-hinglish.png` | 180-day HRA corroborated by 2018 summary; 24.09.2024 consolidation |
+| Rule 62 — Fees self-borne + Presidential/CAG exceptions + scholar bar | Complete | `ccs-leave-rule-62-hinglish.png` | No amendment found; text corroborated across reproductions; 24.09.2024 consolidation |
+| Rule 63(1) — Refund triggers (3-yr/CHS 5-yr) + GoI + foreign costs + interest | Complete for Part 1 | `ccs-leave-rule-63-part-1-hinglish.png` | CHS parenthetical verified via 19.09.2022 consolidated text; 2024 summary corroborates scheme |
+| Rule 63 prov–(3) — Medical/absorption exemptions + conversion + waiver | Complete for Part 2 | `ccs-leave-rule-63-part-2-hinglish.png` | Text corroborated (2024 summary + reproductions); 24.09.2024 consolidation |
 
 ## Source baseline
 
