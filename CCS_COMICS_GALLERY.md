@@ -1,12 +1,15 @@
 # CCS Rules — Hinglish Comic Gallery
 
-Exam-oriented Hinglish comic strips for two complete rulebooks. Conventions across every comic:
+Exam-oriented Hinglish comic strips for three complete collections. Conventions across every comic:
 Hinglish story/dialogue, main legal terms and citations in exact English, four-panel landscape format
 with a navy summary card + exam hook, and every provision verified against current authoritative text
 before rendering (see the coverage ledgers for per-provision sources).
 
-- CCS (Leave) Rules, 1972: Rules 1–66 — **94 ledger entries, 94 comics — COMPLETE**
+- CCS (Leave) Rules, 1972: Rules 1–66 + First & Second Schedules — **96 ledger entries, 96 comics — COMPLETE**
 - CCS (Conduct) Rules, 1964: Rules 1–25 (incl. 3-A, 3-B, 3-C, 13-A, 15-A, 18-A, 22-A) — **32 ledger entries, 32 comics — COMPLETE**
+- Non-statutory leave (CL / SPL CL / RH / comp-off; DoPT Brochure + OMs) — **25 blocks, 25 comics — COMPLETE**
+
+**Grand total: 153 comics.** Print-ready master PDFs: [Leave (97 pp)](CCS_LEAVE_COMICS_MASTER.pdf) · [Conduct (33 pp)](CCS_CONDUCT_COMICS_MASTER.pdf) · [Non-statutory leave (26 pp)](CCS_NONSTAT_LEAVE_COMICS_MASTER.pdf).
 
 ## CCS (Leave) Rules, 1972
 
@@ -108,6 +111,8 @@ Rulebook: Rules 1–66. Coverage ledger with per-provision verification sources:
 | Rule 63(1) — Refund triggers (3-yr/CHS 5-yr) + GoI + foreign costs + interest | Complete for Part 1 | [<img src="ccs-leave-rule-63-part-1-hinglish.png" width="420">](ccs-leave-rule-63-part-1-hinglish.png) |
 | Rule 63 prov–(3) — Medical/absorption exemptions + conversion + waiver | Complete for Part 2 | [<img src="ccs-leave-rule-63-part-2-hinglish.png" width="420">](ccs-leave-rule-63-part-2-hinglish.png) |
 | Rules 64–66 — Interpretation + power to relax + Rule 66 repeal and saving | Complete (combined) | [<img src="ccs-leave-rule-64-65-66-hinglish.png" width="420">](ccs-leave-rule-64-65-66-hinglish.png) |
+| First Schedule [See Rule 3(c)] — Authorities competent to grant leave: 12-kind row (6 authorities) + SDL row (5, no delegation) + study-leave row (3) + NOTE 1 foreign service | Complete | [<img src="ccs-leave-rule-first-schedule-hinglish.png" width="420">](ccs-leave-rule-first-schedule-hinglish.png) |
+| Second Schedule [See Rule 3(h)] — Forms map: 1 [R14] + 2 [R15] + 3/4/3-A/5 medical certificates + 6–10 bonds (eleven forms) | Complete (overview map) | [<img src="ccs-leave-rule-second-schedule-hinglish.png" width="420">](ccs-leave-rule-second-schedule-hinglish.png) |
 
 ## CCS (Conduct) Rules, 1964
 
@@ -147,3 +152,43 @@ Rulebook: Rules 1–25 including inserted rules. Coverage ledger with per-provis
 | Rule 21 — Marriage: (1)(2) no bigamy either way + CG-permission proviso (personal law + other grounds) + (3) foreign-nationality spouse, forthwith intimate | Complete | [<img src="ccs-conduct-rule-21-hinglish.png" width="420">](ccs-conduct-rule-21-hinglish.png) |
 | Rules 22 + 22-A — Intoxicating drinks/drugs (a)(b)(bb)(c)(d) + public-place Explanation + under-14 child-labour ban | Complete (combined) | [<img src="ccs-conduct-rule-22-22a-hinglish.png" width="420">](ccs-conduct-rule-22-22a-hinglish.png) |
 | Rules 23 + 24 + 25 — Interpretation finality + delegation (except Rules 23/24) + repeal-and-saving | Complete (combined) | [<img src="ccs-conduct-rule-23-24-25-hinglish.png" width="420">](ccs-conduct-rule-23-24-25-hinglish.png) |
+
+## Non-statutory leave (CL / SPL CL / RH / comp-off)
+
+DoPT Brochure on Casual Leave & Special Casual Leave + Office Memoranda. Coverage ledger with per-block verification sources: `CCS_NONSTAT_LEAVE_WORKFLOW.md`.
+
+| Block | Status | Comic (click to enlarge) |
+|---|---|---|
+| CL Part 1 — nature (Art 308 CSR) + quantum 8/5 + HoO relaxation + operating-staff 10 (1998 OMs) | Complete | [<img src="ccs-nonstat-cl-part-1-hinglish.png" width="420">](ccs-nonstat-cl-part-1-hinglish.png) |
+| CL Part 2 — prefix/suffix + intervening + combinations + tour no-DA + LTC | Complete | [<img src="ccs-nonstat-cl-part-2-hinglish.png" width="420">](ccs-nonstat-cl-part-2-hinglish.png) |
+| CL Part 3 — half-day + sick-next-day + pre-applied bar + late/early debit + unauthorized absence + register (2.10–2.14) | Complete | [<img src="ccs-nonstat-cl-part-3-hinglish.png" width="420">](ccs-nonstat-cl-part-3-hinglish.png) |
+| SPL CL general principles — not leave, no evasion, regular-or-CL-not-both, days-vs-working-days, LTC (3.1–3.6) | Complete | [<img src="ccs-nonstat-spl-general-hinglish.png" width="420">](ccs-nonstat-spl-general-hinglish.png) |
+| Family welfare P1 — sterilization table + laparoscopy + 2nd-operation certificate + prefix/suffix (4.1) | Complete | [<img src="ccs-nonstat-family-part-1-hinglish.png" width="420">](ccs-nonstat-family-part-1-hinglish.png) |
+| Family welfare P2 — complications 7/14 + husband 7 days + recanalisation 21/journey/conditions (4.2–4.6) | Complete | [<img src="ccs-nonstat-family-part-2-hinglish.png" width="420">](ccs-nonstat-family-part-2-hinglish.png) |
+| Sports duty — duty treatment + travel + coaching camps + pre-selection trials (5.1/5.2) | Complete | [<img src="ccs-nonstat-sports-duty-hinglish.png" width="420">](ccs-nonstat-sports-duty-hinglish.png) |
+| Sports 30-day — coach/admin + commentator + camps + trekking/IMF + combinations (5.3–5.6) | Complete | [<img src="ccs-nonstat-sports-30day-hinglish.png" width="420">](ccs-nonstat-sports-30day-hinglish.png) |
+| Inter-ministerial 10 days + cultural 30 days + overall 30-day cap (5.7–5.9) | Complete | [<img src="ccs-nonstat-sports-cultural-hinglish.png" width="420">](ccs-nonstat-sports-cultural-hinglish.png) |
+| Scientific associations + IIPA 6 working days (6.1–6.2) | Complete | [<img src="ccs-nonstat-scientific-hinglish.png" width="420">](ccs-nonstat-scientific-hinglish.png) |
+| Co-operative societies — outstation 10 + delegate rule + sanction + HQ/half-day/certificate (6.3–6.6) | Complete | [<img src="ccs-nonstat-coop-hinglish.png" width="420">](ccs-nonstat-coop-hinglish.png) |
+| Union/JCM — 20/10/5 + no double-dip + non-calendar year + staff-side 5 + prep 10 (7–7.2) | Complete | [<img src="ccs-nonstat-union-hinglish.png" width="420">](ccs-nonstat-union-hinglish.png) |
+| Departmental exams — DPE + Steno Gr III/TA/no-DA/2 occasions (8.1–8.2) | Complete | [<img src="ccs-nonstat-exams-hinglish.png" width="420">](ccs-nonstat-exams-hinglish.png) |
+| Hindi Parishad — 5 + 5 + 20 journey + 20 cap (9.1–9.5) | Complete | [<img src="ccs-nonstat-hindi-parishad-hinglish.png" width="420">](ccs-nonstat-hindi-parishad-hinglish.png) |
+| TA/Aux AF/Naval Reserve/Home Guards/Civil Defence P1 — interview/camps/transit (10.1–10.4) | Complete | [<img src="ccs-nonstat-defence-part-1-hinglish.png" width="420">](ccs-nonstat-defence-part-1-hinglish.png) |
+| Aux police/Civil Defence P2 — Home Guards/NVC/PRD + Civil Defence Corps (10.5–10.6) | Complete | [<img src="ccs-nonstat-defence-part-2-hinglish.png" width="420">](ccs-nonstat-defence-part-2-hinglish.png) |
+| Bandh/curfew absence — beyond control + 5 km + picketing + HoD (11–11.1) | Complete | [<img src="ccs-nonstat-bandh-hinglish.png" width="420">](ccs-nonstat-bandh-hinglish.png) |
+| Misc P1 — blood donation + apheresis 4x/yr + St John 3 days + RD parade (12.1–12.2.1, 2017 OM) | Complete | [<img src="ccs-nonstat-misc-part-1-hinglish.png" width="420">](ccs-nonstat-misc-part-1-hinglish.png) |
+| Misc P2 — Lok Sahayak Sena 14 days + ex-servicemen 15 days (12.3–12.4) | Complete | [<img src="ccs-nonstat-misc-part-2-hinglish.png" width="420">](ccs-nonstat-misc-part-2-hinglish.png) |
+| Organ donation 42 days P1 — grant + conditions (i)–(iii) (OM 25.04.2023) | Complete | [<img src="ccs-nonstat-organ-part-1-hinglish.png" width="420">](ccs-nonstat-organ-part-1-hinglish.png) |
+| Organ donation 42 days P2 — conditions (iv)–(vii) + Rule-2 applicability + w.e.f. | Complete | [<img src="ccs-nonstat-organ-part-2-hinglish.png" width="420">](ccs-nonstat-organ-part-2-hinglish.png) |
+| Disabilities — 4 days SPL CL + 10 days conferences (2007/2008 OMs) | Complete | [<img src="ccs-nonstat-disability-hinglish.png" width="420">](ccs-nonstat-disability-hinglish.png) |
+| Exception OMs — special maternity 60 days + contract encashment 10 days/year (2022/2019 OMs) | Complete | [<img src="ccs-nonstat-exceptions-hinglish.png" width="420">](ccs-nonstat-exceptions-hinglish.png) |
+| Restricted Holidays — max 2 RH + annual list + prefix/suffix rules | Complete | [<img src="ccs-nonstat-rh-hinglish.png" width="420">](ccs-nonstat-rh-hinglish.png) |
+| Compensatory off — lieu rules + half-day + one-month availment (1976 OM + Rule 22) | Complete | [<img src="ccs-nonstat-compoff-hinglish.png" width="420">](ccs-nonstat-compoff-hinglish.png) |
+
+## Master PDFs (print-ready)
+
+| PDF | Contents |
+|---|---|
+| [CCS_LEAVE_COMICS_MASTER.pdf](CCS_LEAVE_COMICS_MASTER.pdf) | Cover + all 96 Leave comics in ledger order (97 pages) |
+| [CCS_CONDUCT_COMICS_MASTER.pdf](CCS_CONDUCT_COMICS_MASTER.pdf) | Cover + all 32 Conduct comics in ledger order (33 pages) |
+| [CCS_NONSTAT_LEAVE_COMICS_MASTER.pdf](CCS_NONSTAT_LEAVE_COMICS_MASTER.pdf) | Cover + all 25 non-statutory-leave comics in ledger order (26 pages) |
