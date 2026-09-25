@@ -35,6 +35,23 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 3(1)(k)–(m), 3(2) — Definitions and cross-reference | Complete | `ccs-leave-rule-3-definitions-k-m-hinglish.png` | Official DoPT circulars domain consolidated version updated 24.09.2024 |
 | Rule 4(1)–(2) — Temporary transfer and foreign service | Complete | `ccs-leave-rule-4-hinglish.png` | Official consolidated version updated 24.09.2024; transfer terms remain material |
 | Rule 5(1)(a) and provisos — Temporary transfer from other leave rules | Complete for Part 1 | `ccs-leave-rule-5-part-1-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 5 — Transfer from services or posts governed by other leave rules (remaining provisions) | Complete for Part 2 | `ccs-leave-rule-5-part-2-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 6 — Transfer to industrial establishment | Complete | `ccs-leave-rule-6-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 7 — Right to leave | Complete | `ccs-leave-rule-7-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 8 — Regulation of claim to leave | Complete | `ccs-leave-rule-8-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 9 — Effect of dismissal, removal or resignation on leave at credit | Complete | `ccs-leave-rule-9-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 10 — Commutation of one kind of leave into another | Complete | `ccs-leave-rule-10-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 11 — Combination of different kinds of leave | Complete | `ccs-leave-rule-11-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 12 — Maximum amount of continuous leave | Complete | `ccs-leave-rule-12-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 13 — Acceptance of service or employment while on leave | Complete | `ccs-leave-rule-13-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 14 — Application for leave | Complete | `ccs-leave-rule-14-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 15 — Leave account | Complete | `ccs-leave-rule-15-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 16 — Verification of title to leave | Complete | `ccs-leave-rule-16-hinglish.png` | Official consolidated version updated 24.09.2024 |
+| Rule 17 — Leave not to be granted in certain circumstances | Complete | `ccs-leave-rule-17-hinglish.png` | Official DoPT circulars-domain consolidated version updated 24.09.2024 |
+| Rule 18 — Deleted | Complete (Deleted in current consolidation) | `ccs-leave-rule-18-hinglish.png` | Official DoPT circulars-domain consolidated version updated 24.09.2024; no deletion date claimed |
+| Rule 19(1) — Grant of leave on medical certificate: application, Form 3/Form 4, CGHS/AMA sources, 8 km condition | Complete for Part 1 | `ccs-leave-rule-19-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate Rule 19 text |
+| Rule 19(1) — Private-hospital Authorized Doctor clause, away-from-CGHS/Headquarters provisos, Form 5 | Complete for Part 2 | `ccs-leave-rule-19-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate Rule 19 text |
+| Rule 19(2)–(6), Rule 19 NOTE — Permanently-unfit bar, second opinion, no-right rule, 3-day waiver, AYUSH/Dentist/Honorary MO note | Pending | — | Verify against official consolidated version updated 24.09.2024 before generating Part 3 |
 
 ## Source baseline
 
