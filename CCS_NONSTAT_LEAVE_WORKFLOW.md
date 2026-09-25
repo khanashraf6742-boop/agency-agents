@@ -40,11 +40,11 @@ landscape + summary card + exam hook, same characters within a block.
 | Union/JCM — 20/10/5 + no double-dip + non-calendar year + staff-side 5 + prep 10 (7–7.2, JCA OMs) | Complete | `ccs-nonstat-union-hinglish.png` | Brochure 7–7.2 (MHA 27/3/69-Estt(B) 08.04.1969; DOPT 8/13/72-JCA 04.09.1972; MHA 8/6/70-JCA 30.10.1970) |
 | Departmental exams — DPE + Steno Gr III/TA/no-DA/2 occasions (8.1–8.2) | Complete | `ccs-nonstat-exams-hinglish.png` | Brochure 8.1–8.2 (MHA 46/26/63-Estt(A) 02.12.1963; MHA 1/18/70-CS.II 31.08.1970) |
 | Hindi Parishad — 5 + 5 + 20 journey + 20 cap (9.1–9.5) | Complete | `ccs-nonstat-hindi-parishad-hinglish.png` | Brochure 9.1–9.5 (MHA 28016/2/76-Estt(B) 30.06.1976) |
-| TA/Aux AF/Naval Reserve/Home Guards/Civil Defence P1 — interview/camps/transit (10.1–10.4) | Pending | `ccs-nonstat-defence-part-1-hinglish.png` |  |
-| Aux police/Civil Defence P2 — Home Guards/NVC/PRD + Civil Defence Corps (10.5–10.6) | Pending | `ccs-nonstat-defence-part-2-hinglish.png` |  |
-| Bandh/curfew absence — beyond control + 5 km + picketing + HoD (11–11.1) | Pending | `ccs-nonstat-bandh-hinglish.png` |  |
-| Misc P1 — blood donation + apheresis 4x + St John 3 days + RD parade (12.1–12.2.1, 2017 OM) | Pending | `ccs-nonstat-misc-part-1-hinglish.png` |  |
-| Misc P2 — Lok Sahayak Sena 14 days + ex-servicemen 15 days (12.3–12.4) | Pending | `ccs-nonstat-misc-part-2-hinglish.png` |  |
+| TA/Aux AF/Naval Reserve/Home Guards/Civil Defence P1 — interview/camps/transit (10.1–10.4) | Complete | `ccs-nonstat-defence-part-1-hinglish.png` | Brochure 10.1–10.4 (MHA 25/19/49-Estt-A 07.07.1950; 47/2/55-Estt-A 18.05.1957; 47/4/62 & 47/28/63; 36/15/64-Estt-B 15.06.1965) |
+| Aux police/Civil Defence P2 — Home Guards/NVC/PRD + Civil Defence Corps (10.5–10.6) | Complete | `ccs-nonstat-defence-part-2-hinglish.png` | Brochure 10.5–10.6 (MHA 25/1/49-Estt-A 10.01.1949; 47/7/63-Estt(A); 2/7/68-DG CD); cosmetic quirk: P2 plate reads "Ex-Servicemant" (P1/P3 correct) |
+| Bandh/curfew absence — beyond control + 5 km + picketing + HoD (11–11.1) | Complete | `ccs-nonstat-bandh-hinglish.png` | Brochure 11–11.1 (DP&T 27/6/71-Estt(B) 01.11.1971; 28016/1/79-Estt(A); 3011/(S)/87-Estt(B)); cosmetic quirk: P3 board "PARTICULAIR" (card spells "particular" correctly) |
+| Misc P1 — blood donation + apheresis 4x + St John 3 days + RD parade (12.1–12.2.1, 2017 OM) | Complete | `ccs-nonstat-misc-part-1-hinglish.png` | Brochure 12.1–12.2.1 (MHA 46/11/56-Estt(A) 08.10.1956; 27/5/70-Estt(B); 46/9/55-Estt(A)) + apheresis OM 13020/1/2017-Estt(L) 28.12.2017; 12.1 base category rendered as SPL CL per 2017 OM phrasing |
+| Misc P2 — Lok Sahayak Sena 14 days + ex-servicemen 15 days (12.3–12.4) | Complete | `ccs-nonstat-misc-part-2-hinglish.png` | Brochure 12.3–12.4 (MHA 46/5/58-Estt-A 25.06.1958; DP&AR 28016/12/75-Estt(B) 04.05.1976) |
 | Organ donation 42 days P1 — grant + conditions (i)–(iii) (2023 OM) | Pending | `ccs-nonstat-organ-part-1-hinglish.png` |  |
 | Organ donation 42 days P2 — conditions (iv)–(vii) + Rule-2 applicability + w.e.f. (2023 OM) | Pending | `ccs-nonstat-organ-part-2-hinglish.png` |  |
 | Disabilities — 4 days SPL CL + 10 days conferences (2007/2008 OMs) | Pending | `ccs-nonstat-disability-hinglish.png` |  |
