@@ -87,6 +87,9 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 39(1)–(2) — No leave beyond exit dates, suo motu EL+HPL cash, formulas, 300-day cap | Complete for Part 1 | `ccs-leave-rule-39-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated to fix wrong formula sub-labels |
 | Rule 39(3)–(5-A) — Withholding, extension, notice and penalty retirement cash | Complete for Part 2 | `ccs-leave-rule-39-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 39(6) — Termination, resignation (150-day half-EL), re-employment encashment | Complete for Part 3 | `ccs-leave-rule-39-part-3-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rules 39-A + 39-B — Death-in-service and invalidation cash, temporary HPL bar | Complete (combined) | `ccs-leave-rule-39ab-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 39-C — Family payment order (i)–(xi) with eldest-widow explanation | Complete | `ccs-leave-rule-39c-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 39-D — PSU/autonomous-body absorption EL cash + permanent-absorption note | Complete | `ccs-leave-rule-39d-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 
 ## Source baseline
 
