@@ -32,11 +32,11 @@ landscape + summary card + exam hook, same characters within a block.
 | SPL CL general principles (3.1–3.6: not leave, no evasion, regular-or-CL-not-both, days-vs-working-days, LTC) | Complete | `ccs-nonstat-spl-general-hinglish.png` | Brochure 3.1–3.6 (MHA 1958/1954, DP&AR 1977/1978/1981 OMs); cosmetic quirk: prop application reads "NPL CL" (all legal text exact) |
 | Family welfare P1 — sterilization table + laparoscopy + 2nd-operation certificate + prefix/suffix (4.1) | Complete | `ccs-nonstat-family-part-1-hinglish.png` | Brochure 4.1 (DP&AR 1979/1980/1984 OMs); durations triple-corroborated (brochure mirror, gconnect Dec-2018, digitalscr) |
 | Family welfare P2 — complications 7/14 + husband 7 days + recanalisation 21/journey/conditions (4.2–4.6) | Complete | `ccs-nonstat-family-part-2-hinglish.png` | Brochure 4.2–4.6 (DP&AR 1979/1980/1981 OMs); Jan-2008 modification OM traced, durations unchanged in consolidated text |
-| Sports: duty treatment + travel + coaching camps + pre-selection trials (5.1/5.2 + compendium) | Pending | `ccs-nonstat-sports-duty-hinglish.png` |  |
-| Sports 30-day categories — coach/admin, commentator, coaching camps, trekking/IMF + combinations (5.3–5.6) | Pending | `ccs-nonstat-sports-30day-hinglish.png` |  |
-| Inter-ministerial 10 days + cultural 30 days + overall 30-day cap (5.7–5.9) | Pending | `ccs-nonstat-sports-cultural-hinglish.png` |  |
-| Scientific associations + IIPA 6 working days (6.1–6.2) | Pending | `ccs-nonstat-scientific-hinglish.png` |  |
-| Co-operative societies — outstation 10 + delegate rule + sanction + HQ/half-day/certificate (6.3–6.6) | Pending | `ccs-nonstat-coop-hinglish.png` |  |
+| Sports: duty treatment + travel + coaching camps + pre-selection trials (5.1/5.2 + compendium) | Complete | `ccs-nonstat-sports-duty-hinglish.png` | Brochure 5.1/5.2 (DP&Trg OM 6/1/85-Estt(Pay-I) 16.07.1985) + DoPT Compendium (trials/camps within 30 days; I-Class rail / economy air) |
+| Sports 30-day categories — coach/admin, commentator, coaching camps, trekking/IMF + combinations (5.3–5.6) | Complete | `ccs-nonstat-sports-30day-hinglish.png` | Brochure 5.3–5.6 (DP&AR 28016/2/79 28.11.1979; OMs 27/4/68-Estt(B), 28016/2/84-Estt(A); trekking corroborated by 1989 OM); v1 regenerated for plate swap, v2 audited clean |
+| Inter-ministerial 10 days + cultural 30 days + overall 30-day cap (5.7–5.9) | Complete | `ccs-nonstat-sports-cultural-hinglish.png` | Brochure 5.7–5.9 (MHA 27/3/68-Estt(B) 28.06.1969; DP&Trg 28016/2/84; DP&T 6/1/85-Estt(Pay-I)) |
+| Scientific associations + IIPA 6 working days (6.1–6.2) | Complete | `ccs-nonstat-scientific-hinglish.png` | Brochure 6.1–6.2 (MHA 74/4/50-Estt(A) 26.07.1951; MHA 46/11/62-Estt(A) 21.06.1962) |
+| Co-operative societies — outstation 10 + delegate rule + sanction + HQ/half-day/certificate (6.3–6.6) | Complete | `ccs-nonstat-coop-hinglish.png` | Brochure 6.3–6.6 (MHA 46/22/63-Estt(A) 14.01.1964; MHA 28016/1/84-Estt(A) 19.06.1984) |
 | Union/JCM — 20/10/5 + no double-dip + non-calendar year + staff-side 5 + prep 10 (7–7.2, JCA OMs) | Pending | `ccs-nonstat-union-hinglish.png` |  |
 | Departmental exams — DPE + Steno Gr III/TA/no-DA/2 occasions (8.1–8.2) | Pending | `ccs-nonstat-exams-hinglish.png` |  |
 | Hindi Parishad — 5 + 5 + 20 journey + 20 cap (9.1–9.5) | Pending | `ccs-nonstat-hindi-parishad-hinglish.png` |  |
