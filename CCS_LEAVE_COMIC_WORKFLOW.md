@@ -90,6 +90,9 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rules 39-A + 39-B — Death-in-service and invalidation cash, temporary HPL bar | Complete (combined) | `ccs-leave-rule-39ab-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 39-C — Family payment order (i)–(xi) with eldest-widow explanation | Complete | `ccs-leave-rule-39c-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 39-D — PSU/autonomous-body absorption EL cash + permanent-absorption note | Complete | `ccs-leave-rule-39d-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 40(1)–(6) — Leave salary rates: EL/HPL/commuted/EOL + foreign-service NOTE + deleteds | Complete for Part 1 | `ccs-leave-rule-40-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 40(7)–(9) — Re-employment pay, ESI set-off, overdrawal recovery + deleteds | Complete for Part 2 | `ccs-leave-rule-40-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rules 41 + 42 — Drawal in rupees in India; 30-day advance + transfer notes | Complete (combined) | `ccs-leave-rule-41-42-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 
 ## Source baseline
 
