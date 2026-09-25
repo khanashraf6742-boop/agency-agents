@@ -72,6 +72,9 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 27 — Calculation of Earned Leave: 2½-day rate, exit cutoffs, EOL/dies-non reduction, rounding | Complete | `ccs-leave-rule-27-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 28(1) — Vacation Department EL: full/part/no vacation, year definition, forgo-order notes | Complete for Part 1 | `ccs-leave-rule-28-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 | Rule 28(2)–(3), NOTE — Vacation combination cap, 300-day carry forward, joining-time credit | Complete for Part 2 | `ccs-leave-rule-28-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate; regenerated to fix wrong (iii) citation |
+| Rule 29(1)–(2)(a)–(ca) — HPL advance credit 10+10, 5/3-day rate, appointment/exit cutoffs | Complete for Part 1 | `ccs-leave-rule-29-part-1-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 29(2)(d), (3)–(5) — Dies-non 1/18th cut, Rule 49 grant, MC/private affairs, rounding, temporary proviso | Complete for Part 2 | `ccs-leave-rule-29-part-2-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
+| Rule 30 — Commuted leave: half-HPL limit, double debit, study 180 days, resignation recovery, EL-due NOTE | Complete | `ccs-leave-rule-30-hinglish.png` | Official consolidated version updated 24.09.2024; secondary searchable copies corroborate |
 
 ## Source baseline
 
