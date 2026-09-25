@@ -112,6 +112,10 @@ The assistant must not pause to ask whether to continue. It should continue with
 | Rule 50(3)(i)–(ii) + provisos — Public-advantage bar + IES/ISS PhD + MO/specialist PG | Complete for Part 2 | `ccs-leave-rule-50-part-2-hinglish.png` | Referencer text + ISTM/servicerules corroboration; 24.09.2024 consolidation |
 | Rule 50(3)(iii)–(6) — Forex gate + India-facility bar + 5-yr service/3-yr bond + frequency | Complete for Part 3 | `ccs-leave-rule-50-part-3-hinglish.png` | CHS 5-yr parenthetical in 50(5)(ii) verified via 19.09.2022 consolidated text; 24.09.2024 consolidation |
 | Rule 51 — Max study leave 12/24 months + CHS 36 months with 5-yr bond | Complete | `ccs-leave-rule-51-hinglish.png` | ISTM official summary corroborates 12/24/36 + bonds; 24.09.2024 consolidation |
+| Rule 52 — Study applications: proper channel + course/exam detail + own-risk rule | Complete | `ccs-leave-rule-52-hinglish.png` | No amendment found; DoPT study-leave FAQ corroborates scheme; 24.09.2024 consolidation |
+| Rule 53(1)–(3) + NOTE — Audit report + parent concurrence + Mission intimation/facilities | Complete for Part 1 | `ccs-leave-rule-53-part-1-hinglish.png` | No amendment found; DoPT study-leave FAQ corroborates scheme; 24.09.2024 consolidation |
+| Rule 53(4)–(5) — Bonds Forms 7/8 vs 9/10 + Audit certificate + completion proof | Complete for Part 2 | `ccs-leave-rule-53-part-2-hinglish.png` | No amendment found; DoPT study-leave FAQ corroborates scheme; 24.09.2024 consolidation |
+| Rules 54 + 55 — No-debit + 28/36-month caps + overlap rule + shortfall resumption | Complete (combined) | `ccs-leave-rule-54-55-hinglish.png` | 28/36 caps confirmed via DoPT FAQ + legal sources; 24.09.2024 consolidation |
 
 ## Source baseline
 
