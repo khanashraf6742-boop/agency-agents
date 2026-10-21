@@ -1,0 +1,226 @@
+[
+ {
+  "id": "c01_01_evolution_and_concept",
+  "chapter": "CHAPTER 1 • SECTION 1 & 2: NPS EVOLUTION & CORPORATE SECTOR MODEL",
+  "student_q": "Sir, when was N.P.S. introduced for government employees, and what led to the launch of the Corporate Sector Model?",
+  "teacher_full": "Welcome to the Complete P.F.R.D.A. National Pension System Corporate Model Masterclass! In this session, we examine the unbundled architecture, investment choices, tax rules, fee schedules, and exit options. Let us begin. Let us review the historical milestones first. National Pension System started on 1 January 2004 for Central Government employees, opened to all citizens on 1 May 2009, and expanded to corporate entities in December 2011. Unlike traditional defined-benefit pensions, National Pension System is an individual defined-contribution plan. Your retirement wealth grows through market-linked investments tracked under your unique Permanent Retirement Account Number. The Corporate Model enables employers and Public Sector Undertakings to co-contribute toward retirement savings for their staff, using standard institutional frameworks. Keep this exam trap in mind: the Armed Forces were completely excluded from the mandatory National Pension System rollout on 1 January 2004. Remember the key dates: Central Government on 1 January 2004, All Citizens on 1 May 2009, and the Corporate Model in December 2011.",
+  "cards": [
+   "Let us review the historical milestones first. National Pension System started on 1 January 2004 for Central Government employees, opened to all citizens on 1 May 2009, and expanded to corporate entities in December 2011.",
+   "Unlike traditional defined-benefit pensions, National Pension System is an individual defined-contribution plan. Your retirement wealth grows through market-linked investments tracked under your unique Permanent Retirement Account Number.",
+   "The Corporate Model enables employers and Public Sector Undertakings to co-contribute toward retirement savings for their staff, using standard institutional frameworks.",
+   "Keep this exam trap in mind: the Armed Forces were completely excluded from the mandatory National Pension System rollout on 1 January 2004."
+  ],
+  "intro": "Welcome to the Complete P.F.R.D.A. National Pension System Corporate Model Masterclass! In this session, we examine the unbundled architecture, investment choices, tax rules, fee schedules, and exit options. Let us begin.",
+  "hook": "Remember the key dates: Central Government on 1 January 2004, All Citizens on 1 May 2009, and the Corporate Model in December 2011."
+ },
+ {
+  "id": "c01_02_unbundled_architecture",
+  "chapter": "CHAPTER 2 • SECTION 2 & 3: UNBUNDLED ARCHITECTURE & THE REGULATOR (PFRDA)",
+  "student_q": "Sir, why is N.P.S. called an unbundled system, and how does P.F.R.D.A. oversee its different institutional pillars?",
+  "teacher_full": "Under Section 3, the Pension Fund Regulatory and Development Authority is the statutory regulator. It appoints all operational agencies, sets investment mandates, and monitors performance. N.P.S. features an unbundled architecture. Recordkeeping, fund management, asset custody, and banking are handled by independent, specialized institutions to eliminate conflicts of interest and reduce costs. This separation ensures safety: recordkeeping agency N.S.D.L. maintains your account data, Bank of India clears funds, fund managers manage portfolios, and Stock Holding Corporation holds the assets. Never make this mistake: the regulator does not hold your money. Funds vest legally in the independent N.P.S. Trust, while assets remain with the Custodian. Remember: The regulator oversees the framework, while unbundled institutions manage records, banking, and investments at low cost.",
+  "cards": [
+   "Under Section 3, the Pension Fund Regulatory and Development Authority is the statutory regulator. It appoints all operational agencies, sets investment mandates, and monitors performance.",
+   "N.P.S. features an unbundled architecture. Recordkeeping, fund management, asset custody, and banking are handled by independent, specialized institutions to eliminate conflicts of interest and reduce costs.",
+   "This separation ensures safety: recordkeeping agency N.S.D.L. maintains your account data, Bank of India clears funds, fund managers manage portfolios, and Stock Holding Corporation holds the assets.",
+   "Never make this mistake: the regulator does not hold your money. Funds vest legally in the independent N.P.S. Trust, while assets remain with the Custodian."
+  ],
+  "intro": "",
+  "hook": "Remember: The regulator oversees the framework, while unbundled institutions manage records, banking, and investments at low cost."
+ },
+ {
+  "id": "c01_03_cra_and_trustee_bank",
+  "chapter": "CHAPTER 3 • SECTION 4: CENTRAL RECORDKEEPING AGENCY & TRUSTEE BANK",
+  "student_q": "Sir, what are the exact responsibilities of N.S.D.L. as the C.R.A., and why is Bank of India designated as the Trustee Bank?",
+  "teacher_full": "National Securities Depository Limited serves as the Central Recordkeeping Agency. It issues unique Permanent Retirement Account Numbers, tracks ledger units, and connects all operating entities. The N.P.S. Trust is established under the Indian Trusts Act of 1882. It maintains an account with Bank of India, which is designated as the Trustee Bank to handle fund transfers. Footnote 4 defines the Trustee Bank transaction: it spans the entire chain from receiving remittance instructions, transferring funds to fund managers, and clearing exit payouts directly into subscriber bank accounts. Do not confuse distributor and recordkeeper: Points of Presence collect registration forms, but unique account generation and ledger accounting are performed exclusively by N.S.D.L. Remember: N.S.D.L. is the recordkeeper issuing your account number, Bank of India is the Trustee Bank, and the N.P.S. Trust holds fiduciary ownership.",
+  "cards": [
+   "National Securities Depository Limited serves as the Central Recordkeeping Agency. It issues unique Permanent Retirement Account Numbers, tracks ledger units, and connects all operating entities.",
+   "The N.P.S. Trust is established under the Indian Trusts Act of 1882. It maintains an account with Bank of India, which is designated as the Trustee Bank to handle fund transfers.",
+   "Footnote 4 defines the Trustee Bank transaction: it spans the entire chain from receiving remittance instructions, transferring funds to fund managers, and clearing exit payouts directly into subscriber bank accounts.",
+   "Do not confuse distributor and recordkeeper: Points of Presence collect registration forms, but unique account generation and ledger accounting are performed exclusively by N.S.D.L."
+  ],
+  "intro": "",
+  "hook": "Remember: N.S.D.L. is the recordkeeper issuing your account number, Bank of India is the Trustee Bank, and the N.P.S. Trust holds fiduciary ownership."
+ },
+ {
+  "id": "c01_04_pfms_custodian_asps",
+  "chapter": "CHAPTER 4 • SECTION 4: PFMs, CUSTODIAN (SHCIL) & ANNUITY SERVICE PROVIDERS",
+  "student_q": "Sir, which fund managers are registered under N.P.S., who holds physical custody of the shares and bonds, and who pays annuities?",
+  "teacher_full": "Under Section 4, the six registered institutional fund managers include S.B.I., L.I.C., U.T.I., I.C.I.C.I. Prudential, Kotak Mahindra, and Reliance Capital. Either the employer or the employee selects one. Stock Holding Corporation of India serves as the registered Custodian. Footnote 5 clarifies that while custody is covered, Demat and statutory market charges are billed extra. Seven life insurance companies are empanelled as Annuity Service Providers. They receive the exit corpus and deliver guaranteed monthly pension payments. Watch out for Footnote 3: the fund management fee is calculated on average monthly assets. It includes trade brokerage, but excludes custodian fees and government taxes. Remember: Six fund managers handle portfolio investments, S.H.C.I.L. holds asset custody, and seven insurance companies pay monthly annuities.",
+  "cards": [
+   "Under Section 4, the six registered institutional fund managers include S.B.I., L.I.C., U.T.I., I.C.I.C.I. Prudential, Kotak Mahindra, and Reliance Capital. Either the employer or the employee selects one.",
+   "Stock Holding Corporation of India serves as the registered Custodian. Footnote 5 clarifies that while custody is covered, Demat and statutory market charges are billed extra.",
+   "Seven life insurance companies are empanelled as Annuity Service Providers. They receive the exit corpus and deliver guaranteed monthly pension payments.",
+   "Watch out for Footnote 3: the fund management fee is calculated on average monthly assets. It includes trade brokerage, but excludes custodian fees and government taxes."
+  ],
+  "intro": "",
+  "hook": "Remember: Six fund managers handle portfolio investments, S.H.C.I.L. holds asset custody, and seven insurance companies pay monthly annuities."
+ },
+ {
+  "id": "c01_05_corporate_entities_and_pops",
+  "chapter": "CHAPTER 5 • SECTION 4 & 5.5: ELIGIBLE CORPORATES, POPs & ONBOARDING FORMS",
+  "student_q": "Sir, can a partnership firm, trust, or proprietary business join the Corporate Model, and what forms are submitted to the P.O.P.?",
+  "teacher_full": "Under Section 4, almost all organized employers qualify: registered companies, cooperatives, Central and State Public Sector Undertakings, partnerships, Limited Liability Partnerships, proprietorships, trusts, and societies. Over 50 Points of Presence operating more than 14,000 branch service points act as the operational interface. Their standard service timelines are relaxed to allow consolidated corporate data and fund uploads. The employer signs an agreement with an authorized Point of Presence, fills Form C.H.O. 1 with branch details, completes identity checks, and receives an Entity Registration Number from N.S.D.L. Do not overlook regulatory compliance: both the employer and Point of Presence must follow customer due diligence rules under the Prevention of Money Laundering Act. Remember: The model covers companies, partnerships, trusts, and public undertakings through Form C.H.O. 1 under anti-money laundering regulations.",
+  "cards": [
+   "Under Section 4, almost all organized employers qualify: registered companies, cooperatives, Central and State Public Sector Undertakings, partnerships, Limited Liability Partnerships, proprietorships, trusts, and societies.",
+   "Over 50 Points of Presence operating more than 14,000 branch service points act as the operational interface. Their standard service timelines are relaxed to allow consolidated corporate data and fund uploads.",
+   "The employer signs an agreement with an authorized Point of Presence, fills Form C.H.O. 1 with branch details, completes identity checks, and receives an Entity Registration Number from N.S.D.L.",
+   "Do not overlook regulatory compliance: both the employer and Point of Presence must follow customer due diligence rules under the Prevention of Money Laundering Act."
+  ],
+  "intro": "",
+  "hook": "Remember: The model covers companies, partnerships, trusts, and public undertakings through Form C.H.O. 1 under anti-money laundering regulations."
+ },
+ {
+  "id": "c01_06_corporate_benefits_and_tax",
+  "chapter": "CHAPTER 6 • SECTION 5.1 & 5.2: SALIENT FEATURES & CORPORATE TAX ADVANTAGES",
+  "student_q": "Sir, how does a corporate entity save taxes and administrative costs by offering N.P.S. to its workforce?",
+  "teacher_full": "Section 5.2 explains that adopting National Pension System saves administrative costs. Companies avoid the expense of managing private retirement trusts, bookkeeping, and annuity negotiations. Under Section 5.2, employer contributions up to 10 percent of salary, covering basic pay and dearness allowance, are deductible as a business expense from the company's profit and loss statement. The platform offers operational flexibility: an employer can select the fund manager and asset mix centrally for all employees, or allow employees to choose individually. Consider this calculation: on an eligible payroll of 10 crore rupees, a 10 percent employer contribution equals 1 crore rupees. The entire 1 crore is deducted as a business expense. Remember: Employer pension contributions up to 10 percent of basic plus D.A. qualify as a deductible corporate business expense.",
+  "cards": [
+   "Section 5.2 explains that adopting National Pension System saves administrative costs. Companies avoid the expense of managing private retirement trusts, bookkeeping, and annuity negotiations.",
+   "Under Section 5.2, employer contributions up to 10 percent of salary, covering basic pay and dearness allowance, are deductible as a business expense from the company's profit and loss statement.",
+   "The platform offers operational flexibility: an employer can select the fund manager and asset mix centrally for all employees, or allow employees to choose individually.",
+   "Consider this calculation: on an eligible payroll of 10 crore rupees, a 10 percent employer contribution equals 1 crore rupees. The entire 1 crore is deducted as a business expense."
+  ],
+  "intro": "",
+  "hook": "Remember: Employer pension contributions up to 10 percent of basic plus D.A. qualify as a deductible corporate business expense."
+ },
+ {
+  "id": "c01_07_subscriber_benefits_and_tax",
+  "chapter": "CHAPTER 7 • SECTION 5.3 & 5.4: SUBSCRIBER ADVANTAGES & INCOME TAX EXEMPTIONS",
+  "student_q": "Sir, how does N.P.S. help salaried employees reduce income tax, and what are the age and eligibility conditions?",
+  "teacher_full": "Under Section 5.4, any Indian citizen, whether resident or non-resident, aged between 18 and 60 years can join through registration Form C.S. S. 1. Duplicate accounts are prohibited because your account is portable. Under Section 80 C.C.D. 1, an employee's personal contribution up to 10 percent of basic pay plus dearness allowance is tax-deductible within the overall 1 lakh rupee limit. The biggest tax advantage lies in Section 80 C.C.D. 2: employer contributions up to 10 percent of basic plus D.A. are deductible without being counted inside the 1 lakh rupee ceiling. Remember: you can hold only one account number in your lifetime. If you already have an account, you must map it to your new corporate using Form C.S. S. 3 rather than opening a second one. Remember: Employee contributions fall under Section 80 C.C.D. 1 within the limit, while employer contributions under 80 C.C.D. 2 stand outside the cap.",
+  "cards": [
+   "Under Section 5.4, any Indian citizen, whether resident or non-resident, aged between 18 and 60 years can join through registration Form C.S. S. 1. Duplicate accounts are prohibited because your account is portable.",
+   "Under Section 80 C.C.D. 1, an employee's personal contribution up to 10 percent of basic pay plus dearness allowance is tax-deductible within the overall 1 lakh rupee limit.",
+   "The biggest tax advantage lies in Section 80 C.C.D. 2: employer contributions up to 10 percent of basic plus D.A. are deductible without being counted inside the 1 lakh rupee ceiling.",
+   "Remember: you can hold only one account number in your lifetime. If you already have an account, you must map it to your new corporate using Form C.S. S. 3 rather than opening a second one."
+  ],
+  "intro": "",
+  "hook": "Remember: Employee contributions fall under Section 80 C.C.D. 1 within the limit, while employer contributions under 80 C.C.D. 2 stand outside the cap."
+ },
+ {
+  "id": "c01_08_active_vs_auto_choice",
+  "chapter": "CHAPTER 8 • SECTION 5.6: INVESTMENT CHOICES (ACTIVE CHOICE VS AUTO CHOICE)",
+  "student_q": "Sir, how can a subscriber decide where his pension money is invested across equity, bonds, and government securities?",
+  "teacher_full": "Section 5.6 outlines three asset classes: Asset Class E invests in equity shares, Asset Class C invests in corporate debt and fixed income, and Asset Class G invests in Government Securities. Under Active Choice, you set your own investment percentages across E, C, and G. However, equity investment in Class E is capped at a strict maximum of 50 percent. Under Auto Choice, an automated Lifecycle Fund rebalances your portfolio based on age. It maintains 50 percent equity up to age 35, gradually reducing risk as you get older. Do not forget this limit: under the brochure rules, you cannot choose 100 percent equity. Asset Class E is capped at a maximum of 50 percent. Remember: Active choice caps equity at 50 percent, while Auto Choice automatically lowers risk as your age increases.",
+  "cards": [
+   "Section 5.6 outlines three asset classes: Asset Class E invests in equity shares, Asset Class C invests in corporate debt and fixed income, and Asset Class G invests in Government Securities.",
+   "Under Active Choice, you set your own investment percentages across E, C, and G. However, equity investment in Class E is capped at a strict maximum of 50 percent.",
+   "Under Auto Choice, an automated Lifecycle Fund rebalances your portfolio based on age. It maintains 50 percent equity up to age 35, gradually reducing risk as you get older.",
+   "Do not forget this limit: under the brochure rules, you cannot choose 100 percent equity. Asset Class E is capped at a maximum of 50 percent."
+  ],
+  "intro": "",
+  "hook": "Remember: Active choice caps equity at 50 percent, while Auto Choice automatically lowers risk as your age increases."
+ },
+ {
+  "id": "c01_09_lifecycle_fund_matrix",
+  "chapter": "CHAPTER 9 • SECTION 5.6: LIFECYCLE FUND AGE-WISE ASSET MATRIX",
+  "student_q": "Sir, how does the Lifecycle matrix adjust equity, corporate debt, and government securities as an employee ages?",
+  "teacher_full": "Review the baseline: up to age 35, your portfolio holds 50 percent equity, 30 percent corporate bonds, and 20 percent government securities for capital growth. Starting at age 36, equity reduces by 2 percent every year, corporate debt reduces by 1 percent, and safe government securities increase by 3 percent each year. By age 55, your portfolio reaches conservative safety: equity and corporate debt drop to 10 percent each, while government securities increase to 80 percent. Let us verify age 45: 10 years past age 35 reduces equity by 20 percent to 30 percent, drops debt to 20 percent, and raises government bonds to 50 percent, balancing at 100 percent. Remember: The matrix starts at 50 percent equity up to age 35, and shifts to 80 percent government securities by age 55.",
+  "cards": [
+   "Review the baseline: up to age 35, your portfolio holds 50 percent equity, 30 percent corporate bonds, and 20 percent government securities for capital growth.",
+   "Starting at age 36, equity reduces by 2 percent every year, corporate debt reduces by 1 percent, and safe government securities increase by 3 percent each year.",
+   "By age 55, your portfolio reaches conservative safety: equity and corporate debt drop to 10 percent each, while government securities increase to 80 percent.",
+   "Let us verify age 45: 10 years past age 35 reduces equity by 20 percent to 30 percent, drops debt to 20 percent, and raises government bonds to 50 percent, balancing at 100 percent."
+  ],
+  "intro": "",
+  "hook": "Remember: The matrix starts at 50 percent equity up to age 35, and shifts to 80 percent government securities by age 55."
+ },
+ {
+  "id": "c01_10_tier1_vs_tier2_accounts",
+  "chapter": "CHAPTER 10 • SECTION 5.7 & 5.8: TIER-I VS TIER-II ACCOUNTS & CONTRIBUTION PATTERNS",
+  "student_q": "Sir, can a subscriber withdraw money anytime from Tier 1, and how does voluntary Tier 2 operate?",
+  "teacher_full": "Under Section 5.7, Tier 1 is your core, non-withdrawable retirement pension account. It provides full tax exemptions, and administrative charges can be covered by your employer. Tier 2 is an optional investment account with complete withdrawal flexibility. However, it offers no tax deductions, and operating charges are paid entirely by the subscriber. For account operations: you can transfer money from Tier 2 into your Tier 1 retirement account, but retirement funds in Tier 1 can never be transferred back into Tier 2. Section 5.8 gives maximum flexibility: employers and employees can contribute equal amounts, unequal percentages, or let either party contribute independently. Remember: Tier 1 is your tax-exempt retirement account, Tier 2 offers anytime withdrawals, and funds can switch only from Tier 2 into Tier 1.",
+  "cards": [
+   "Under Section 5.7, Tier 1 is your core, non-withdrawable retirement pension account. It provides full tax exemptions, and administrative charges can be covered by your employer.",
+   "Tier 2 is an optional investment account with complete withdrawal flexibility. However, it offers no tax deductions, and operating charges are paid entirely by the subscriber.",
+   "For account operations: you can transfer money from Tier 2 into your Tier 1 retirement account, but retirement funds in Tier 1 can never be transferred back into Tier 2.",
+   "Section 5.8 gives maximum flexibility: employers and employees can contribute equal amounts, unequal percentages, or let either party contribute independently."
+  ],
+  "intro": "",
+  "hook": "Remember: Tier 1 is your tax-exempt retirement account, Tier 2 offers anytime withdrawals, and funds can switch only from Tier 2 into Tier 1."
+ },
+ {
+  "id": "c01_11_minimum_contributions_and_dormancy",
+  "chapter": "CHAPTER 11 • SECTION 5.9 & 5.10: MINIMUM CONTRIBUTIONS & DORMANCY PENALTIES",
+  "student_q": "Sir, what is the least amount a subscriber must deposit each year, and what happens if he misses a payment?",
+  "teacher_full": "Under Section 5.9, Tier 1 accounts require at least 500 rupees per deposit, an annual minimum total of 6,000 rupees, and at least one deposit every financial year. For Tier 2 accounts under Section 5.10, the minimum deposit is 250 rupees, with an annual requirement of at least one deposit and a year-end closing balance of 2,000 rupees. If you deposit less than the mandatory minimum in a financial year, your account turns dormant and a default penalty of 100 rupees per year is charged. To unfreeze a dormant account, pay the missed contributions along with the 100-rupee penalty. If fees erode the balance to zero, the account closes permanently. Remember: Tier 1 requires 6,000 rupees a year, Tier 2 requires a 2,000-rupee year-end balance, and missing payments costs a 100-rupee penalty.",
+  "cards": [
+   "Under Section 5.9, Tier 1 accounts require at least 500 rupees per deposit, an annual minimum total of 6,000 rupees, and at least one deposit every financial year.",
+   "For Tier 2 accounts under Section 5.10, the minimum deposit is 250 rupees, with an annual requirement of at least one deposit and a year-end closing balance of 2,000 rupees.",
+   "If you deposit less than the mandatory minimum in a financial year, your account turns dormant and a default penalty of 100 rupees per year is charged.",
+   "To unfreeze a dormant account, pay the missed contributions along with the 100-rupee penalty. If fees erode the balance to zero, the account closes permanently."
+  ],
+  "intro": "",
+  "hook": "Remember: Tier 1 requires 6,000 rupees a year, Tier 2 requires a 2,000-rupee year-end balance, and missing payments costs a 100-rupee penalty."
+ },
+ {
+  "id": "c01_12_pop_and_intermediary_charges",
+  "chapter": "CHAPTER 12 • SECTION 5.11 & 5.12: POP, CRA, CUSTODIAN & TRUSTEE BANK CHARGES",
+  "student_q": "Sir, how much commission does a Point of Presence charge, and what do the five footnotes say about C.R.A. and Custodian fees?",
+  "teacher_full": "Under Section 5.11, Points of Presence charge 100 rupees plus 0.25 percent on initial registration, and 0.25 percent on future deposits, capped between 20 and 25,000 rupees. Recordkeeping agency N.S.D.L. charges 50 rupees for opening, 225 rupees annually, and 5 rupees per transaction. Footnote 1 confirms that your annual fee covers a printed account statement sent once every year. Footnote 2 details transactions like scheme changes and statement reprints. Footnote 3 notes that the fund manager's fee is calculated on average monthly assets and includes brokerage, but excludes custodian fees and taxes. Asset Custodian S.H.C.I.L. charges zero point zero zero seven five percent annually on electronic holdings, and Bank of India charges zero for R.B.I. centers. Footnote 5 adds that Demat and S.E.B.I. charges are billed extra. Remember: Points of Presence charge 0.25 percent capped between 20 and 25,000 rupees, while N.S.D.L. charges 225 rupees a year, including a printed statement.",
+  "cards": [
+   "Under Section 5.11, Points of Presence charge 100 rupees plus 0.25 percent on initial registration, and 0.25 percent on future deposits, capped between 20 and 25,000 rupees.",
+   "Recordkeeping agency N.S.D.L. charges 50 rupees for opening, 225 rupees annually, and 5 rupees per transaction. Footnote 1 confirms that your annual fee covers a printed account statement sent once every year.",
+   "Footnote 2 details transactions like scheme changes and statement reprints. Footnote 3 notes that the fund manager's fee is calculated on average monthly assets and includes brokerage, but excludes custodian fees and taxes.",
+   "Asset Custodian S.H.C.I.L. charges zero point zero zero seven five percent annually on electronic holdings, and Bank of India charges zero for R.B.I. centers. Footnote 5 adds that Demat and S.E.B.I. charges are billed extra."
+  ],
+  "intro": "",
+  "hook": "Remember: Points of Presence charge 0.25 percent capped between 20 and 25,000 rupees, while N.S.D.L. charges 225 rupees a year, including a printed statement."
+ },
+ {
+  "id": "c01_13_exit_and_vesting_criteria",
+  "chapter": "CHAPTER 13 • SECTION 5.13: EXIT, VESTING CRITERIA & THE 10% PHASED RULE",
+  "student_q": "Sir, when can a subscriber withdraw his N.P.S. corpus, and how does phased withdrawal between age 60 and 70 work?",
+  "teacher_full": "Under Section 5.13, if you exit early before turning 60, you must lock in at least 80 percent of your wealth to buy a monthly annuity. Only 20 percent is paid out as lump sum. At age 60, retirement rules apply: you invest at least 40 percent in an annuity, and withdraw the remaining 60 percent as a lump sum or phased up to age 70. In phased withdrawal, you must take out at least 10 percent each year. In the event of death, the nominee has the option to receive 100 percent of the accumulated pension corpus as an immediate lump sum payment. Do not forget this deadline: you cannot keep funds invested past age 70. Any remaining balance at age 70 must be compulsorily withdrawn. Remember: Before age 60, 80 percent goes to an annuity. At age 60, 40 percent goes to an annuity with at least 10 percent taken yearly if phased. On death, 100 percent goes to the nominee.",
+  "cards": [
+   "Under Section 5.13, if you exit early before turning 60, you must lock in at least 80 percent of your wealth to buy a monthly annuity. Only 20 percent is paid out as lump sum.",
+   "At age 60, retirement rules apply: you invest at least 40 percent in an annuity, and withdraw the remaining 60 percent as a lump sum or phased up to age 70. In phased withdrawal, you must take out at least 10 percent each year.",
+   "In the event of death, the nominee has the option to receive 100 percent of the accumulated pension corpus as an immediate lump sum payment.",
+   "Do not forget this deadline: you cannot keep funds invested past age 70. Any remaining balance at age 70 must be compulsorily withdrawn."
+  ],
+  "intro": "",
+  "hook": "Remember: Before age 60, 80 percent goes to an annuity. At age 60, 40 percent goes to an annuity with at least 10 percent taken yearly if phased. On death, 100 percent goes to the nominee."
+ },
+ {
+  "id": "c01_14_types_of_annuity",
+  "chapter": "CHAPTER 14 • SECTION 5.14: TYPES OF ANNUITY PLANS OFFERED BY ASPs",
+  "student_q": "Sir, when buying a monthly pension with the retirement corpus, what annuity options do life insurance companies offer?",
+  "teacher_full": "Under Section 5.14, Scheme 1 pays a uniform monthly pension for life. Scheme 2 guarantees pension payments for 5, 10, 15, or 20 years certain, and continues as long as you live thereafter. Scheme 3 returns the full purchase price to your family upon death. Scheme 4 provides an increasing pension that rises at a simple rate of 3 percent per year. Schemes 5 and 6 protect your family: Scheme 5 pays a 50 percent pension to the surviving spouse, while Scheme 6 continues the full 100 percent pension for the spouse's lifetime. Keep this in mind: once an annuity contract is executed with a life insurer, the option is permanent and cannot be changed or surrendered. Remember the six annuity options: flat life pension, guaranteed term, return of capital, 3 percent yearly growth, and spouse survivor coverage.",
+  "cards": [
+   "Under Section 5.14, Scheme 1 pays a uniform monthly pension for life. Scheme 2 guarantees pension payments for 5, 10, 15, or 20 years certain, and continues as long as you live thereafter.",
+   "Scheme 3 returns the full purchase price to your family upon death. Scheme 4 provides an increasing pension that rises at a simple rate of 3 percent per year.",
+   "Schemes 5 and 6 protect your family: Scheme 5 pays a 50 percent pension to the surviving spouse, while Scheme 6 continues the full 100 percent pension for the spouse's lifetime.",
+   "Keep this in mind: once an annuity contract is executed with a life insurer, the option is permanent and cannot be changed or surrendered."
+  ],
+  "intro": "",
+  "hook": "Remember the six annuity options: flat life pension, guaranteed term, return of capital, 3 percent yearly growth, and spouse survivor coverage."
+ },
+ {
+  "id": "c01_15_grievances_and_modifications",
+  "chapter": "CHAPTER 15 • SECTION 5.15 & 5.16: GRIEVANCE REDRESSAL (CGMS) & MASTER CHANGES",
+  "student_q": "Sir, if an employee faces an issue, how does the grievance system work, and which forms update subscriber records?",
+  "teacher_full": "Section 5.15 outlines three grievance channels: call the toll-free helpline, log into the web portal with your I-P.I.N. for an instant token, or submit a physical form to your Point of Presence. For updating records: submit Form C.S. S. 2 to correct personal details or reissue cards and passwords, and Form C.S. S. 3 to change employers or investment options. Employers use two institutional forms: Form C.H.O. 2 updates central investment allocations, and Form C.H.O. 3 transfers the company's account to a new Point of Presence. Always secure your token number: whether registering complaints online or by phone, an official tracking token is required for all escalation follow-ups. Remember: Grievances use toll-free one eight zero zero, two two two, zero eight zero, Form C.S. S. 2 updates personal details, and Form C.S. S. 3 changes your employer or scheme.",
+  "cards": [
+   "Section 5.15 outlines three grievance channels: call the toll-free helpline, log into the web portal with your I-P.I.N. for an instant token, or submit a physical form to your Point of Presence.",
+   "For updating records: submit Form C.S. S. 2 to correct personal details or reissue cards and passwords, and Form C.S. S. 3 to change employers or investment options.",
+   "Employers use two institutional forms: Form C.H.O. 2 updates central investment allocations, and Form C.H.O. 3 transfers the company's account to a new Point of Presence.",
+   "Always secure your token number: whether registering complaints online or by phone, an official tracking token is required for all escalation follow-ups."
+  ],
+  "intro": "",
+  "hook": "Remember: Grievances use toll-free one eight zero zero, two two two, zero eight zero, Form C.S. S. 2 updates personal details, and Form C.S. S. 3 changes your employer or scheme."
+ },
+ {
+  "id": "c01_16_master_recap_and_annexure",
+  "chapter": "CHAPTER 16 • SECTIONS 6 & 7: MASTER RECAP, OFFICIAL REFERENCES & REGISTERED POPs",
+  "student_q": "Sir, before we conclude, can we review a rapid-fire summary of all fees, percentages, thresholds, and websites?",
+  "teacher_full": "Final review, card 1: The Corporate Model features an unbundled architecture with six fund managers and seven insurers. Ten percent employer contributions offer dual corporate tax deductions and personal tax exemptions. Card 2: Equity is capped at 50 percent, the Lifecycle matrix rebalances automatically from age 35 to 55, and Tier 1 requires 6,000 rupees annually to avoid a 100-rupee dormancy penalty. Card 3: Points of Presence charge 0.25 percent, while N.S.D.L. charges 225 rupees annually. Premature exits require an 80 percent annuity, normal retirement requires 40 percent, and death pays 100 percent cash. Card 4: Track accounts on P.F.R.D.A. dot org dot in and C.R.A. dash N.S.D.L. dot com, or dial one eight zero zero, two two two, zero eight zero. Annexure A lists 52 registered Points of Presence delivering access nationwide. Remember: The N.P.S. Corporate Model combines low institutional costs, tax savings, flexible equity options, and secure life annuities.",
+  "cards": [
+   "Final review, card 1: The Corporate Model features an unbundled architecture with six fund managers and seven insurers. Ten percent employer contributions offer dual corporate tax deductions and personal tax exemptions.",
+   "Card 2: Equity is capped at 50 percent, the Lifecycle matrix rebalances automatically from age 35 to 55, and Tier 1 requires 6,000 rupees annually to avoid a 100-rupee dormancy penalty.",
+   "Card 3: Points of Presence charge 0.25 percent, while N.S.D.L. charges 225 rupees annually. Premature exits require an 80 percent annuity, normal retirement requires 40 percent, and death pays 100 percent cash.",
+   "Card 4: Track accounts on P.F.R.D.A. dot org dot in and C.R.A. dash N.S.D.L. dot com, or dial one eight zero zero, two two two, zero eight zero. Annexure A lists 52 registered Points of Presence delivering access nationwide."
+  ],
+  "intro": "",
+  "hook": "Remember: The N.P.S. Corporate Model combines low institutional costs, tax savings, flexible equity options, and secure life annuities."
+ }
+]
