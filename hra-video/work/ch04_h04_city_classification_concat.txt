@@ -1,0 +1,6 @@
+file '/home/user/agency-agents/hra-video/work/clips/h04_city_classification__00_question.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h04_city_classification__01_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h04_city_classification__02_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h04_city_classification__03_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h04_city_classification__04_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h04_city_classification__05_hook.mp4'

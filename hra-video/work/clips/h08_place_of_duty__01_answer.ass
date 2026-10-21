@@ -1,0 +1,18 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,DejaVu Sans,40,&H00FFFFFF,&H0000E6FF,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,3,1,2,170,170,58,1
+Style: Student,DejaVu Sans,40,&H00F0E442,&H0000E6FF,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,3,1,2,170,170,58,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.74,Default,,0,0,0,,The answer is the place of duty.
+Dialogue: 0,0:00:02.74,0:00:05.89,Default,,0,0,0,,Paragraph 3.1 says House\NRent Allowance is admissible
+Dialogue: 0,0:00:05.89,0:00:08.40,Default,,0,0,0,,with reference to the place of duty of the
+Dialogue: 0,0:00:08.40,0:00:11.15,Default,,0,0,0,,Government servant,\Nirrespective of whether he
+Dialogue: 0,0:00:11.15,0:00:13.92,Default,,0,0,0,,is residing at that\Nplace or anywhere else.

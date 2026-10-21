@@ -1,0 +1,6 @@
+file '/home/user/agency-agents/hra-video/work/clips/h06_position_today_2026__00_question.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h06_position_today_2026__01_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h06_position_today_2026__02_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h06_position_today_2026__03_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h06_position_today_2026__04_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h06_position_today_2026__05_hook.mp4'

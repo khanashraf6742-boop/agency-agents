@@ -1,0 +1,19 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,DejaVu Sans,40,&H00FFFFFF,&H0000E6FF,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,3,1,2,170,170,58,1
+Style: Student,DejaVu Sans,40,&H00F0E442,&H0000E6FF,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,3,1,2,170,170,58,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:04.16,Default,,0,0,0,,Card four. One hundred and\Neighty days of leave generally,
+Dialogue: 0,0:00:04.16,0:00:07.30,Default,,0,0,0,,eight months for tuberculosis\Nand cancer, forty
+Dialogue: 0,0:00:07.30,0:00:10.51,Default,,0,0,0,,days for staff outside\Nthe Fundamental Rules.
+Dialogue: 0,0:00:10.51,0:00:13.86,Default,,0,0,0,,Annexure Two with the\Nfirst claim, Annexure Three
+Dialogue: 0,0:00:13.86,0:00:17.01,Default,,0,0,0,,for the listed cases,\Nand the Appendix records
+Dialogue: 0,0:00:17.01,0:00:19.56,Default,,0,0,0,,the earlier orders now superseded.

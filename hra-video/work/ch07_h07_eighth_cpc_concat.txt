@@ -1,0 +1,6 @@
+file '/home/user/agency-agents/hra-video/work/clips/h07_eighth_cpc__00_question.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h07_eighth_cpc__01_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h07_eighth_cpc__02_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h07_eighth_cpc__03_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h07_eighth_cpc__04_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h07_eighth_cpc__05_hook.mp4'

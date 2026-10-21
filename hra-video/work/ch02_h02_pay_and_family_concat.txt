@@ -1,0 +1,6 @@
+file '/home/user/agency-agents/hra-video/work/clips/h02_pay_and_family__00_question.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h02_pay_and_family__01_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h02_pay_and_family__02_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h02_pay_and_family__03_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h02_pay_and_family__04_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h02_pay_and_family__05_hook.mp4'

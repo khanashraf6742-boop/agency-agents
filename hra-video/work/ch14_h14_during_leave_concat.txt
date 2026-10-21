@@ -1,0 +1,6 @@
+file '/home/user/agency-agents/hra-video/work/clips/h14_during_leave__00_question.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h14_during_leave__01_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h14_during_leave__02_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h14_during_leave__03_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h14_during_leave__04_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h14_during_leave__05_hook.mp4'

@@ -1,0 +1,6 @@
+file '/home/user/agency-agents/hra-video/work/clips/h12_sharing_rules__00_question.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h12_sharing_rules__01_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h12_sharing_rules__02_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h12_sharing_rules__03_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h12_sharing_rules__04_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h12_sharing_rules__05_hook.mp4'

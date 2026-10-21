@@ -1,0 +1,102 @@
+;FFMETADATA1
+[CHAPTER]
+TIMEBASE=1/1000
+START=20444
+END=80750
+title=Chapter 1 - Scope Of Application
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=80750
+END=134916
+title=Chapter 2 - Paras 1.1 & 1.2: 'Pay' And 'Family'
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=134916
+END=196990
+title=Chapter 3 - Paras 1.3 & 1.4: 'Same Station' & Ua
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=196990
+END=246166
+title=Chapter 4 - Para 2.1: Classification Of Cities
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=246166
+END=309638
+title=Chapter 5 - Para 2.1 Note: Rates & Da Ladder
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=309638
+END=371398
+title=Chapter 6 - Current Position: Where The Rates Stand Today
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=371398
+END=436611
+title=Chapter 7 - 8Th Cpc: Is 40% Hra Official Yet?
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=436611
+END=504999
+title=Chapter 8 - Paras 3.1–3.3: Place Of Duty
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=504999
+END=574258
+title=Chapter 9 - Para 3.4: The 8 Km Rule
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=574258
+END=635000
+title=Chapter 10 - Paras 4.1–4.5: Who Cannot Draw Hra
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=635000
+END=703953
+title=Chapter 11 - Paras 4.6–4.9: Transfer & Retention
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=703953
+END=773555
+title=Chapter 12 - Paras 5.1–5.4: Sharing Accommodation
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=773555
+END=827156
+title=Chapter 13 - Para 5.5: Guest House Stay
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=827156
+END=894962
+title=Chapter 14 - Para 6.1: Hra During Leave
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=894962
+END=970684
+title=Chapter 15 - Paras 6.2–6.9: Other Circumstances
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=970684
+END=1034046
+title=Chapter 16 - Para 7: Certificates
+
+[CHAPTER]
+TIMEBASE=1/1000
+START=1034046
+END=1126100
+title=Chapter 17 - Rapid-Fire Recap

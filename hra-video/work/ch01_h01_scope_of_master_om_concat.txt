@@ -1,0 +1,6 @@
+file '/home/user/agency-agents/hra-video/work/clips/h01_scope_of_master_om__00_question.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h01_scope_of_master_om__01_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h01_scope_of_master_om__02_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h01_scope_of_master_om__03_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h01_scope_of_master_om__04_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h01_scope_of_master_om__05_hook.mp4'

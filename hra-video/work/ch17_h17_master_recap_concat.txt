@@ -1,0 +1,6 @@
+file '/home/user/agency-agents/hra-video/work/clips/h17_master_recap__00_question.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h17_master_recap__01_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h17_master_recap__02_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h17_master_recap__03_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h17_master_recap__04_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h17_master_recap__05_hook.mp4'

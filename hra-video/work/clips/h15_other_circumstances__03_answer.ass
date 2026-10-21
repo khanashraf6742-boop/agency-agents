@@ -1,0 +1,18 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,DejaVu Sans,40,&H00FFFFFF,&H0000E6FF,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,3,1,2,170,170,58,1
+Style: Student,DejaVu Sans,40,&H00F0E442,&H0000E6FF,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,3,1,2,170,170,58,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.46,Default,,0,0,0,,Paragraph 6.6 covers\Nsuspension: the allowance
+Dialogue: 0,0:00:02.46,0:00:04.82,Default,,0,0,0,,continues, but beyond\None hundred and eighty
+Dialogue: 0,0:00:04.82,0:00:07.43,Default,,0,0,0,,days you need the Annexure\NThree certificate.
+Dialogue: 0,0:00:07.43,0:00:10.70,Default,,0,0,0,,Paragraph 6.9 is simple:\Nduring tour, your entitlement
+Dialogue: 0,0:00:10.70,0:00:13.88,Default,,0,0,0,,is regulated with reference\Nto your headquarters.

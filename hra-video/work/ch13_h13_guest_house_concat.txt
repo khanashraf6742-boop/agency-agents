@@ -1,0 +1,6 @@
+file '/home/user/agency-agents/hra-video/work/clips/h13_guest_house__00_question.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h13_guest_house__01_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h13_guest_house__02_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h13_guest_house__03_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h13_guest_house__04_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h13_guest_house__05_hook.mp4'

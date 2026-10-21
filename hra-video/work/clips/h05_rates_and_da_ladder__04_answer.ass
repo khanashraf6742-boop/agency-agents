@@ -1,0 +1,19 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,DejaVu Sans,40,&H00FFFFFF,&H0000E6FF,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,3,1,2,170,170,58,1
+Style: Student,DejaVu Sans,40,&H00F0E442,&H0000E6FF,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,3,1,2,170,170,58,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.66,Default,,0,0,0,,Here is the trap. The\Nrevision is automatic.
+Dialogue: 0,0:00:02.66,0:00:05.54,Default,,0,0,0,,The Department of Expenditure\Nconfirmed in August
+Dialogue: 0,0:00:05.54,0:00:08.19,Default,,0,0,0,,twenty twenty one that\Nno separate House Rent
+Dialogue: 0,0:00:08.19,0:00:11.07,Default,,0,0,0,,Allowance order is issued\Nwhen Dearness Allowance
+Dialogue: 0,0:00:11.07,0:00:12.54,Default,,0,0,0,,crosses these levels.
+Dialogue: 0,0:00:12.54,0:00:15.68,Default,,0,0,0,,So you will never find an\Norder saying thirty per cent.

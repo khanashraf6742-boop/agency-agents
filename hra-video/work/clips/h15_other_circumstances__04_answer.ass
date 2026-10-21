@@ -1,0 +1,21 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,DejaVu Sans,40,&H00FFFFFF,&H0000E6FF,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,3,1,2,170,170,58,1
+Style: Student,DejaVu Sans,40,&H00F0E442,&H0000E6FF,&H00000000,&H90000000,-1,0,0,0,100,100,0,0,1,3,1,2,170,170,58,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.39,Default,,0,0,0,,And the two traps.
+Dialogue: 0,0:00:01.39,0:00:04.19,Default,,0,0,0,,For re-employed pensioners,\NParagraph 6.7 computes
+Dialogue: 0,0:00:04.19,0:00:06.94,Default,,0,0,0,,House Rent Allowance on\Npay plus pension, subject
+Dialogue: 0,0:00:06.94,0:00:09.72,Default,,0,0,0,,to the ceiling of the\Nmaximum pay of the post.
+Dialogue: 0,0:00:09.72,0:00:13.83,Default,,0,0,0,,And for employees outside the\NFundamental Rules and the C.C.S.
+Dialogue: 0,0:00:13.83,0:00:16.03,Default,,0,0,0,,Leave Rules, Paragraph\N6.8 allows only forty
+Dialogue: 0,0:00:16.03,0:00:18.23,Default,,0,0,0,,days, extended to one\Nhundred and eighty for
+Dialogue: 0,0:00:18.23,0:00:20.53,Default,,0,0,0,,tuberculosis, cancer and similar ailments.

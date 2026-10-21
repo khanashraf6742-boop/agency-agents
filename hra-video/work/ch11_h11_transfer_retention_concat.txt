@@ -1,0 +1,6 @@
+file '/home/user/agency-agents/hra-video/work/clips/h11_transfer_retention__00_question.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h11_transfer_retention__01_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h11_transfer_retention__02_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h11_transfer_retention__03_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h11_transfer_retention__04_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h11_transfer_retention__05_hook.mp4'

@@ -1,0 +1,6 @@
+file '/home/user/agency-agents/hra-video/work/clips/h15_other_circumstances__00_question.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h15_other_circumstances__01_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h15_other_circumstances__02_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h15_other_circumstances__03_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h15_other_circumstances__04_answer.mp4'
+file '/home/user/agency-agents/hra-video/work/clips/h15_other_circumstances__05_hook.mp4'
