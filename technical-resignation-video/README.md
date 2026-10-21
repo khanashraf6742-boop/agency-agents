@@ -3,7 +3,7 @@
 A 16-chapter, simple-English Q&A explainer video built from the consolidated
 **DoPT O.M. No. DOPT-1669266628362 dated 24.11.2022** (Paras 2.1 to 5).
 
-* **16 chapters · 64 exam-ready cards · ~17 minutes**
+* **16 chapters · 64 exam-ready cards · 16 min 54 s · 1920×1080**
 * Riya (student) asks one question per chapter; the teacher answers card by card
 * Every chapter closes on a yellow **"trap / remember"** strip
 * Indian-English narration, colour-coded burned-in subtitles, 1920×1080
@@ -91,6 +91,30 @@ clause expansions run before bare acronym expansion, or `FR 9(24)` would become
 | `24.11.2022` (in the intro) | "twenty fourth November, twenty twenty two" |
 
 ---
+
+## Build verification
+
+Every render is checked before it is called done. Measured on the delivered file:
+
+| Check | Result |
+|---|---|
+| Captions present on every beat | 98/98 |
+| Caption baseline (drift = visible jumping) | 59–66 px, median 59 — no outliers |
+| Speaker colours | 16/16 Riya beats cyan, 82/82 teacher beats white |
+| Beat timing consistency | 14.2–19.9 chars/sec, median 16.7 |
+| Dead air (silence > 1.5 s) | none |
+| Integrated loudness | −16.0 LUFS, true peak −1.4 dBFS, LRA 3.3 LU |
+| Streams | H.264 1920×1080 + AAC 48 kHz stereo, faststart enabled |
+
+Two bugs worth remembering, both found by these checks rather than by eye:
+
+* **Captions stacked vertically.** Cues overlapped by 0.1 s at each boundary; libass
+  treats overlapping events as a collision and silently shifts them up, so subtitles
+  jumped between y≈816 and y≈1018 between cues. Cues now tile the timeline exactly.
+* **`resampler=soxr` after `loudnorm` crashes ffmpeg** —
+  `Assertion best_input >= 0 failed at src/fftools/ffmpeg_filter.c:1923`. It is
+  intermittent (it built the main file, then aborted on chapter 2). Plain
+  `aresample=48000` is used instead.
 
 ## Content provenance
 

@@ -1307,10 +1307,16 @@ def align_all(clips, noise=-42.0, min_dur=0.14, window=2.0, force=False):
                 pass
             else:
                 written += 1
+                # trim dead air at BOTH ends: a silent tail would otherwise stretch the
+                # caption timing for that beat and leave the slide hanging with no words.
                 run([FFMPEG, "-y", "-i", str(src),
                      "-af", f"atrim=start={s:.3f}:end={e:.3f},asetpts=N/SR/TB,"
                             f"silenceremove=start_periods=1:start_threshold=-48dB:"
-                            f"start_silence=0.02:detection=peak",
+                            f"start_silence=0.02:detection=peak,"
+                            f"areverse,"
+                            f"silenceremove=start_periods=1:start_threshold=-48dB:"
+                            f"start_silence=0.02:detection=peak,"
+                            f"areverse",
                      "-ar", "48000", "-ac", "2", str(out)])
             dur = probe_duration(out)
             report.append({"segment": key, "clip": c["key"], "chars": len(texts[i]),
@@ -1339,25 +1345,50 @@ def timed_words(text, dur):
     return out
 
 
-def make_cues(words, style, max_words=9, max_chars=44):
-    cues, buf = [], []
+def make_cues(words, style, total=None, max_words=9, max_chars=44, min_dur=0.75):
+    """Chunk timed words into readable captions.
+
+    Cues must TILE the timeline with no overlap: libass treats overlapping events as a
+    collision and silently stacks them vertically, which makes captions jump around the
+    frame. So every cue ends exactly where the next one begins (less 1 ms).
+    """
+    chunks, buf = [], []
     for w in words:
         buf.append(w)
         joined = " ".join(x[0] for x in buf)
         if len(buf) >= max_words or len(joined) >= max_chars or w[0].endswith((".", "?", "!")):
-            cues.append((buf[0][1], buf[-1][2] + 0.10, style, joined))
+            chunks.append(buf)
             buf = []
     if buf:
-        cues.append((buf[0][1], buf[-1][2] + 0.15, style, " ".join(x[0] for x in buf)))
-    # merge pulses that are too short to read
+        chunks.append(buf)
+
+    # merge captions too short to read comfortably
     merged = []
-    for c in cues:
-        if merged and c[0] - merged[-1][1] < 0.02 and len(merged[-1][3]) + len(c[3]) < max_chars + 12:
-            p = merged[-1]
-            merged[-1] = (p[0], c[1], p[2], p[3] + " " + c[3])
+    for ch in chunks:
+        if merged:
+            pn = len(merged[-1])
+            pc = sum(len(x[0]) for x in merged[-1])
+            cc = sum(len(x[0]) for x in ch)
+            if pn + len(ch) <= max_words + 3 and pc + cc <= max_chars + 10:
+                merged[-1] = merged[-1] + ch
+                continue
+        merged.append(ch)
+
+    last = total if total else (words[-1][2] + 0.12 if words else 0.0)
+    cues = []
+    for i, ch in enumerate(merged):
+        start = ch[0][1]
+        end = (merged[i + 1][0][1] - 0.001) if i + 1 < len(merged) else last
+        cues.append((start, end, style, " ".join(x[0] for x in ch)))
+
+    # drop any sliver too brief to render (should not happen after merging)
+    out = []
+    for i, (s, e, st, txt) in enumerate(cues):
+        if e - s < 0.12 and out:
+            out[-1] = (out[-1][0], e, out[-1][2], out[-1][3] + " " + txt)
         else:
-            merged.append(c)
-    return merged
+            out.append((s, e, st, txt))
+    return out
 
 
 def _two_line(s, max_chars=42):
@@ -1429,10 +1460,11 @@ def build_clips(segs, slides):
         aud = AUDIO_DIR / f"{s['key']}.wav"
         if not aud.exists():
             raise SystemExit(f"missing audio for {s['key']} - run --align first")
-        dur = probe_duration(aud) + PAD[s["kind"]]
+        adur = probe_duration(aud)
+        dur = adur + PAD[s["kind"]]
         ass = CLIPS_DIR / f"{s['key']}.ass"
-        words = timed_words(normalize_for_tts(s["text"]), probe_duration(aud))
-        cues = make_cues(words, "Student" if s["who"] == "student" else "Default")
+        words = timed_words(normalize_for_tts(s["text"]), adur)
+        cues = make_cues(words, "Student" if s["who"] == "student" else "Default", total=adur)
         write_ass(cues, ass)
         out = CLIPS_DIR / f"{s['key']}.mp4"
         run([FFMPEG, "-y", "-loop", "1", "-framerate", "30", "-i", str(slide), "-i", str(aud),
@@ -1448,7 +1480,9 @@ def mux(clips, out_path: Path):
     lst = BUILD_DIR / f"{out_path.stem}_concat.txt"
     lst.write_text("\n".join(f"file '{c.resolve()}'" for c in clips) + "\n", encoding="utf-8")
     run([FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", str(lst),
-         "-af", "loudnorm=I=-16:TP=-1.5:LRA=11",
+         # loudnorm's internal rate is 192 kHz; resample back so we do not ship 96 kHz audio.
+         # Do NOT ask for resampler=soxr here: it trips an assertion in ffmpeg's filter graph.
+         "-af", "loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000",
          "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out_path)])
     return out_path
 
