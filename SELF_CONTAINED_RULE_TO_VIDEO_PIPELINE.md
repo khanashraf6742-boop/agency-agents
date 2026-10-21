@@ -13,6 +13,7 @@ This file is **complete on its own**. Everything the work needs is inside it, in
 | The scene format specification | **Appendix 4** (`FORMAT_SPEC.md`) |
 | A tiny working sample + sample ledger & source | **Appendix 5** |
 | Coverage proof, practice scenes, quality gates, lessons, workflow script | **Appendices 6–10** |
+| Deployment & environment matrix, failure-mode messages, troubleshooting | **Appendix 11** |
 
 **Your first action in a new place:** create an empty working folder, then run the Step 1 extractor in Part B.
 
@@ -146,7 +147,13 @@ python3 selftest.py --audit                        # expect: ALL CARDS WITHIN BU
 python3 selftest.py --preview                      # expect: slides written to selftest_build/slides
 ```
 
-Do not edit markers or placeholders in `engine_template.py`. Edit the engine only to add pronunciation fixes to `_TTS_FIXES` (see Step 9). Requires Python 3.10+, `pip install pillow`; full video build also needs `ffmpeg`/`ffprobe` with libass and `edge-tts`.
+Do not edit markers or placeholders in `engine_template.py`. Edit the engine only to add pronunciation fixes to `_TTS_FIXES` (see Step 9).
+
+Environment (Appendix 11 has the full matrix and troubleshooting):
+- **Python 3.10+** — the engine checks this at start and exits with a one-line message instead of an obscure syntax error.
+- **Pillow** — auto-installed if missing: plain `pip`, then `--user`, then `--break-system-packages` (PEP 668 "externally managed" Debian/Ubuntu). `check_scenes.py` uses the same fallbacks.
+- **ffmpeg + ffprobe** (full video build only; `--audit` and `--preview` never call them) — if ffmpeg is missing the engine tries the `imageio-ffmpeg` wheel, which ships a static build **with libass**; if ffprobe is missing, durations and the stream check fall back to parsing `ffmpeg -i`. A static ffmpeg still needs a font on the box (DejaVu/Liberation, or the wheel's bundled fonts).
+- **edge-tts + internet** (neural voices) — install failures and offline runs are reported clearly; use `--no-tts` for a silent layout/timing pass. `--tts=off` is never required: the flag is `--no-tts`.
 
 ### Step 2 — Research first, build later
 
@@ -342,11 +349,75 @@ import subprocess
 import sys
 from pathlib import Path
 
+if sys.version_info < (3, 10):
+    sys.exit(f"ERROR: Python 3.10 or newer is required (this interpreter is {sys.version.split()[0]}).")
+
+
+def pip_install(package: str) -> bool:
+    """pip install with fallbacks, so it also works on PEP 668 'externally managed' systems
+    (Debian/Ubuntu python3) where a plain pip install is refused. Returns True on success."""
+    for extra in ([], ["--user"], ["--break-system-packages"]):
+        try:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", "--quiet", *extra, package],
+                                  stdout=subprocess.DEVNULL)
+            return True
+        except subprocess.CalledProcessError:
+            continue
+    return False
+
+
 try:
     from PIL import Image, ImageDraw, ImageFont
 except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "Pillow"])
-    from PIL import Image, ImageDraw, ImageFont
+    pip_install("Pillow")
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+    except ImportError:
+        sys.exit("ERROR: Pillow is required to render slides.\n"
+                 "  python3 -m pip install --user Pillow        (add --break-system-packages on Debian/Ubuntu)\n"
+                 "  or create a virtualenv:  python3 -m venv .venv && . .venv/bin/activate && pip install Pillow")
+
+
+FFMPEG = "ffmpeg"
+FFPROBE = "ffprobe"
+
+
+def _find_tool(name: str):
+    """Locate ffmpeg/ffprobe: PATH first, then the imageio-ffmpeg wheel (ffmpeg only)."""
+    found = shutil.which(name)
+    if found:
+        return found
+    if name == "ffmpeg":
+        try:
+            import imageio_ffmpeg
+            return imageio_ffmpeg.get_ffmpeg_exe()
+        except Exception:
+            return None
+    return None
+
+
+def require_media_tools():
+    """Resolve ffmpeg (with an automatic imageio-ffmpeg fallback) and explain clearly when it is missing.
+    ffprobe is optional: durations and the stream check fall back to parsing `ffmpeg -i`."""
+    global FFMPEG, FFPROBE
+    ff = _find_tool("ffmpeg")
+    if not ff:
+        print("ffmpeg not found on PATH - trying the imageio-ffmpeg wheel ...")
+        if pip_install("imageio-ffmpeg"):
+            ff = _find_tool("ffmpeg")
+    if not ff:
+        sys.exit("ERROR: ffmpeg is required for the video build (slides and --audit do not need it).\n"
+                 "  Linux:   sudo apt install ffmpeg        (libass is needed to burn subtitles)\n"
+                 "  macOS:   brew install ffmpeg\n"
+                 "  Windows: winget install Gyan.FFmpeg  or  https://ffmpeg.org/download.html\n"
+                 "  Any OS:  python3 -m pip install --user imageio-ffmpeg")
+    FFMPEG = ff
+    fp = _find_tool("ffprobe")
+    if fp:
+        FFPROBE = fp
+    else:
+        FFPROBE = None
+        print("note: ffprobe not found - falling back to `ffmpeg -i` for durations and the stream check.")
 
 
 W, H = 1920, 1080
@@ -765,16 +836,45 @@ def build_segments(scene):
     return segs
 
 
+def _duration_from_ffmpeg(path: Path) -> float:
+    """ffprobe-free duration: parse the 'Duration: h:mm:ss.xx' line that ffmpeg -i prints on stderr."""
+    err = subprocess.run([FFMPEG, "-hide_banner", "-i", str(path)], capture_output=True, text=True).stderr
+    m = re.search(r"Duration:\s*(\d+):(\d+):(\d+(?:\.\d+)?)", err)
+    if not m:
+        raise RuntimeError(f"cannot read the duration of {path} (ffprobe missing and ffmpeg printed none)")
+    h, mnt, s = m.groups()
+    return int(h) * 3600 + int(mnt) * 60 + float(s)
+
+
 def probe_duration(path: Path) -> float:
+    if not FFPROBE:
+        return _duration_from_ffmpeg(path)
     out = subprocess.check_output(
-        ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
+        [FFPROBE, "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
         text=True).strip()
     return float(out)
 
 
+def stream_info(path: Path):
+    """ffprobe stream listing, or the same information parsed out of `ffmpeg -i` when ffprobe is absent."""
+    if FFPROBE:
+        return subprocess.check_output([FFPROBE, "-v", "error", "-show_entries", "stream=codec_type,width,height",
+                                        "-of", "csv=p=0", str(path)], text=True).split()
+    err = subprocess.run([FFMPEG, "-hide_banner", "-i", str(path)], capture_output=True, text=True).stderr
+    info = []
+    for line in err.splitlines():
+        line = line.strip()
+        if " Video: " in line:
+            m = re.search(r"(\d{2,5})x(\d{2,5})", line)
+            info.append(f"video,{m.group(1)},{m.group(2)}" if m else "video,,")
+        elif " Audio: " in line:
+            info.append("audio,,")
+    return info
+
+
 def silent_audio(text: str, out: Path) -> float:
     dur = max(1.5, len(text.split()) / 2.6)
-    subprocess.run(["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono", "-t", f"{dur:.2f}",
+    subprocess.run([FFMPEG, "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono", "-t", f"{dur:.2f}",
                     "-c:a", "libmp3lame", str(out)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     return dur
 
@@ -896,8 +996,7 @@ async def main():
         print(f"Preview done: {SLIDES_DIR.resolve()}")
         return
 
-    if not shutil.which("ffmpeg") or not shutil.which("ffprobe"):
-        sys.exit("ERROR: ffmpeg/ffprobe not on PATH")
+    require_media_tools()
 
     print(f"\n=== Step 2: narration ({'SILENT TEST' if args.no_tts else args.student + ' / ' + args.teacher}) ===")
     words_by_job = {}
@@ -905,7 +1004,10 @@ async def main():
         try:
             import edge_tts  # noqa: F401
         except ImportError:
-            subprocess.check_call([sys.executable, "-m", "pip", "install", "edge-tts"])
+            if not pip_install("edge-tts"):
+                sys.exit("ERROR: edge-tts could not be installed.\n"
+                         "  python3 -m pip install --user edge-tts   (it also needs internet access)\n"
+                         "  Offline? build with --no-tts for a silent timing/layout pass.")
         sem = asyncio.Semaphore(4)
         tasks = [tts_segment(t, args.student if who == "student" else args.teacher, mp3, args.rate, sem)
                  for (_, who, t, _, _, _, mp3) in jobs]
@@ -925,7 +1027,7 @@ async def main():
         dur = sd + (0.9 if kind in ("question", "hook") else 0.5)
         clip = BUILD_DIR / f"clip_{i:03d}.mp4"
         subprocess.run([
-            "ffmpeg", "-y", "-loop", "1", "-framerate", "5", "-i", str(sp), "-i", str(mp3),
+            FFMPEG, "-y", "-loop", "1", "-framerate", "5", "-i", str(sp), "-i", str(mp3),
             "-af", "apad", "-t", f"{dur:.3f}",
             "-c:v", "libx264", "-tune", "stillimage", "-preset", "veryfast", "-g", "60", "-r", "30", "-pix_fmt", "yuv420p",
             "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", str(clip)],
@@ -939,21 +1041,20 @@ async def main():
     concat = BUILD_DIR / "concat.txt"
     concat.write_text("\n".join(f"file '{c.name}'" for c in clips) + "\n", encoding="utf-8")
     raw = BUILD_DIR / "raw_concat.mp4"
-    subprocess.run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(concat), "-c", "copy", str(raw)],
+    subprocess.run([FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", str(concat), "-c", "copy", str(raw)],
                    check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     ass = BUILD_DIR / "subtitles.ass"
     write_ass(cues, ass)
     ass_esc = str(ass).replace("\\", "/").replace(":", "\\:")
     subprocess.run([
-        "ffmpeg", "-y", "-i", str(raw), "-vf", f"subtitles='{ass_esc}'",
+        FFMPEG, "-y", "-i", str(raw), "-vf", f"subtitles='{ass_esc}'",
         "-af", "loudnorm=I=-16:TP=-1.5:LRA=11",
         "-c:v", "libx264", "-crf", "18", "-preset", "fast", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(OUTPUT_MP4)], check=True,
         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     dur = probe_duration(OUTPUT_MP4)
-    info = subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,width,height",
-                                    "-of", "csv=p=0", str(OUTPUT_MP4)], text=True).split()
+    info = stream_info(OUTPUT_MP4)
     print("\n=== Step 5: verification ===")
     print("streams:", info)
     print(f"DONE: {OUTPUT_MP4.resolve()}  |  {dur/60:.2f} min  |  {OUTPUT_MP4.stat().st_size/1048576:.1f} MB")
@@ -1052,7 +1153,19 @@ if __name__ == '__main__':
     errs = [l for l in out.split('\n') if any(k in l for k in ('FAIL', 'HOOK', 'Error', 'Traceback', 'duplicate', 'NARRATION'))]
     ns = {'__name__': 'chk'}
     exec(code.split('async def main')[0], ns)
-    from PIL import Image, ImageDraw
+    try:
+        from PIL import Image, ImageDraw
+    except ImportError:
+        # Same fallbacks as the engine: plain, --user, then --break-system-packages (PEP 668).
+        ok = False
+        for extra in ([], ['--user'], ['--break-system-packages']):
+            if subprocess.run([sys.executable, '-m', 'pip', 'install', '--quiet', *extra, 'Pillow']).returncode == 0:
+                ok = True
+                break
+        if not ok:
+            print("FAIL\n - Pillow is required: python3 -m pip install --user Pillow (add --break-system-packages on Debian/Ubuntu)")
+            sys.exit(1)
+        from PIL import Image, ImageDraw
     d = ImageDraw.Draw(Image.new('RGB', (10, 10))); fb = ns['fit_block']
     ids = []
     id_set = set()
@@ -1820,6 +1933,8 @@ Rules: (1) every practice question tests an item whose ledger status is `confirm
 - [ ] Glossary consistent; every "see Rule X" resolved; consolidated change log written
 - [ ] Obsolete-term sweep done over ALL outputs
 - [ ] Practice scenes (only if switched on) test current items only
+- [ ] Clean-machine gate: Step 1 run once on a fresh machine/container (no Pillow, no ffmpeg) and once with ffmpeg present; both self-tests PASS
+- [ ] Offline gate: `--audit` and `--preview` work with no network; `--no-tts` completes a full silent build; the failure messages in Appendix 11 appear as documented when a dependency is missing
 - [ ] Closing message: coverage, changes, unverified items, how to build locally, Sources as links
 
 ## APPENDIX 9 — Lessons learned (mistakes made and fixed in earlier work, generalised)
@@ -1874,9 +1989,109 @@ return results
 
 ---
 
+## APPENDIX 11 — Deployment & environment matrix (make it work anywhere)
+
+This file is **not a web service**: it is a document plus a Python kit. "Deployed" means three places, and each is verified below.
+
+| Where it runs | What is verified | Gate |
+|---|---|---|
+| **As a document** (GitHub rendering, a wiki, a pasted prompt) | every fenced block is balanced; the 4-backtick `FORMAT_SPEC.md` block nests correctly inside this appendix; no stray HTML; pure UTF-8 | the fence walk in "Deploy checks" (below) |
+| **As a kit installer** (Step 1, first run in a new place) | extractor finds **all 7** kit files, then the checker, assembler, `--audit` and `--preview` all pass on the bundled sample | Step 1 block prints `PASS: 5 scenes, 17 cards` |
+| **As a video builder** (`build_<stem>.py`, run locally or in CI) | full silent build (slides, clips, concat, libass burn, `ffmpeg -i` verification) completes and reports video + audio streams at 1920x1080 | `--no-tts` produces `<stem>_masterclass.mp4` |
+
+### Verified environment matrix (recorded from real runs)
+
+| Environment | Python | Pillow | ffmpeg / ffprobe | Result |
+|---|---|---|---|---|
+| Linux container, clean venv | 3.11 | auto-installed | neither on PATH | `--audit` and `--preview` PASS |
+| Linux container, static ffmpeg with libass, plus ffprobe | 3.11 | auto-installed | both on PATH | full `--no-tts` build PASS (3.6 min timeline) |
+| Linux container, **no** ffmpeg or ffprobe on PATH | 3.11 | present | resolved via `imageio-ffmpeg`; durations via `ffmpeg -i` | full `--no-tts` build PASS, identical duration, streams and file size |
+| 26 scenes / 111 cards, `PART_STARTS = "auto"` | 3.11 | present | static ffmpeg | `--audit` clean, parts of 10 / 9 / 9, `--part 3` build PASS (5.7 min, 126 subtitle cues) |
+| No Pillow, no package index reachable | 3.11 | missing | n/a | one-screen error naming the install commands, no traceback |
+| No ffmpeg, no imageio wheel, no index | 3.11 | present | missing | one-screen error naming OS install commands, no traceback |
+
+Python 3.10 compatibility is checked statically: all three kit scripts parse with `feature_version=(3, 10)`. At runtime the engine refuses anything older than 3.10 with one explanatory line instead of a syntax error.
+
+### What the engine does when a dependency is missing
+
+| Missing | Behaviour |
+|---|---|
+| Python < 3.10 | exits at startup: `ERROR: Python 3.10 or newer is required (this interpreter is X.Y.Z).` |
+| Pillow | tries `pip`, `pip --user`, then `pip --break-system-packages`; if all fail it prints the install commands plus the virtualenv alternative and exits 1 |
+| ffmpeg | prints `ffmpeg not found on PATH - trying the imageio-ffmpeg wheel ...`, installs it when allowed, then resolves the static binary: `pip install --user imageio-ffmpeg` |
+| ffmpeg (every route) | exits with Linux, macOS, Windows and `pip` install commands, and says that `--audit` and `--preview` work without it |
+| ffprobe only | prints `note: ffprobe not found - falling back to "ffmpeg -i" for durations and the stream check.` and continues |
+| libass or fonts | ffmpeg's own error is surfaced; use a full build (`apt install ffmpeg` includes libass) and a font package such as `fonts-dejavu-core` |
+| edge-tts or network | exits with the install command and the `--no-tts` workaround; the neural voices need outbound internet |
+| package index blocked | pip's own line is shown, then the kit's actionable message; nothing hangs and nothing half-writes |
+
+### Deploy checks to run in one paste
+
+Save this file as `PIPELINE.md` in an empty folder and run the three checks in order. They write only inside `WORK/`.
+
+```bash
+# 1. the document itself: every fenced block must close
+python3 - PIPELINE.md <<'CHECK1'
+import re, sys
+t = open(sys.argv[1], encoding='utf-8').read()
+stack = []
+for n, line in enumerate(t.split('\n'), 1):
+    m = re.match(r'^(`{3,})(.*)$', line)
+    if not m:
+        continue
+    ticks, rest = len(m.group(1)), m.group(2)
+    if not stack:
+        stack.append((ticks, n))
+    elif ticks >= stack[-1][0] and not rest.strip():
+        stack.pop()
+print('unclosed fences:', stack or 'none')
+sys.exit(1 if stack else 0)
+CHECK1
+
+# 2. installer + kit self-test
+mkdir -p WORK/kit && python3 - PIPELINE.md WORK/kit <<'CHECK2'
+import re, sys, pathlib
+md = pathlib.Path(sys.argv[1]).read_text(encoding='utf-8'); out = pathlib.Path(sys.argv[2])
+KIT_RE = re.compile(r'<!-- KIT_FILE: (\S+) BEGIN -->\s*(`{3,4})[^\n]*\n(.*?)\n\2\s*<!-- KIT_FILE: END -->', re.S)
+EXPECTED = {'engine_template.py', 'check_scenes.py', 'build_script_md.py', 'FORMAT_SPEC.md',
+            'sample_scenes.txt', 'sample_ledger.json', 'sample_source.txt'}
+got = set()
+for name, fence, body in KIT_RE.findall(md):
+    (out / name).write_text(body + '\n', encoding='utf-8'); got.add(name)
+missing = EXPECTED - got
+if missing:
+    sys.exit(f'KIT EXTRACTION INCOMPLETE: missing {sorted(missing)}')
+print(f'KIT extracted: {len(got)} files (expected {len(EXPECTED)})')
+CHECK2
+cd WORK/kit && python3 check_scenes.py sample_scenes.txt --ledger sample_ledger.json --source sample_source.txt
+
+# 3. the builder: dependency-light paths first, then a real build
+echo '{"scope":"deploy check","sources":["bundled sample"],"changes_vs_source":[],"key_facts":["sample kit only"],"not_verified":["none"],"remaining_gaps":[]}' > meta_test.json
+python3 build_script_md.py sample_scenes.txt meta_test.json selftest "Self test" selftest.md
+python3 - <<'CHECK3'
+import re
+t = open('selftest.md', encoding='utf-8').read()
+open('selftest.py', 'w', encoding='utf-8').write(re.search(r'````python\n(.*)\n````', t, re.S).group(1))
+CHECK3
+python3 selftest.py --audit                      # expect: ALL CARDS WITHIN BUDGET
+python3 selftest.py --preview                    # expect: slides written to selftest_build/slides
+python3 selftest.py --no-tts                     # silent full build; ffmpeg or the imageio-ffmpeg wheel
+python3 selftest.py --part 1 --preview           # PART_STARTS = "auto"-style parts still work
+```
+
+### Deployment habits that keep it perfect
+
+- **Pin the document, not the machine.** Keep `PIPELINE.md` and each generated `build_<stem>.py` under version control; the whole kit is reproducible from the file alone.
+- **Stage the checks by cost.** `--audit` in CI (seconds, no ffmpeg), `--preview` on the build box, `--no-tts` nightly, the voiced build only where the TTS service is reachable.
+- **Treat `WORK/` as scratch.** The kit writes only there; publish just the deliverables (`build_*.md`, `*_reference_sheet.md`, `*.mp4`).
+- **Never ship a build from a machine where the self-test did not print `PASS: 5 scenes, 17 cards`.** That one line proves extraction, verbatim grounding, the obsolete and unverified gates, coverage and layout budgets together.
+- **Fresh-container smoke test before announcing a batch:** run Step 1 exactly as published, then `--audit`. A missing Pillow must produce the documented message, never a traceback.
+- **Watch the two silent risks:** a static ffmpeg without libass (subtitles fail at the burn step) and a bare container with no fonts (blocks render as boxes). Both are caught by looking at one rendered slide, which `--preview` gives you in seconds.
+
 ## Version history
 
-- **v2.1 (this file)** — `--part` partitioning fixed: new `resolve_parts()` / `even_parts()` in `engine_template.py`; `PART_STARTS = "auto"` for even thirds, `[]` for one part, real boundary ids honoured exactly, and a placeholder list (just the first N scene ids) auto-balanced to N nearly equal parts with a printed note. `check_scenes.py` validates the resolved parts (non-empty, in order, gap-free, covering) and accepts `"auto"`; `FORMAT_SPEC.md` documents the four cases with worked sizes; sample scenes carry an explanatory comment; Appendix 8 adds a `--part` gate and Appendix 9 the lesson.
+- **v2.2 (this file)** — deployment hardening: `engine_template.py` refuses Python < 3.10 with one line; Pillow installs through `pip`, `--user` then `--break-system-packages` (PEP 668), and `check_scenes.py` uses the same fallbacks; `require_media_tools()` resolves ffmpeg from PATH or the `imageio-ffmpeg` wheel, treats ffprobe as optional and falls back to `ffmpeg -i` for durations (`_duration_from_ffmpeg`) and stream checks (`stream_info`); every missing dependency now exits with an actionable message instead of a traceback. New **Appendix 11** records the verified environment matrix, the failure-mode messages, a one-paste deploy check and deployment habits; Step 1 states the environment contract; Appendix 8 adds clean-machine and offline gates.
+- **v2.1** — `--part` partitioning fixed: new `resolve_parts()` / `even_parts()` in `engine_template.py`; `PART_STARTS = "auto"` for even thirds, `[]` for one part, real boundary ids honoured exactly, and a placeholder list (just the first N scene ids) auto-balanced to N nearly equal parts with a printed note. `check_scenes.py` validates the resolved parts (non-empty, in order, gap-free, covering) and accepts `"auto"`; `FORMAT_SPEC.md` documents the four cases with worked sizes; sample scenes carry an explanatory comment; Appendix 8 adds a `--part` gate and Appendix 9 the lesson.
 - **v2** — fixed Step 1 extractor for 4-backtick fences + post-check for all 7 expected kit files; `check_scenes.py` — obsolete tokens now collected from `changed` items too, token grounding extended to every text field (`title`, `chapter`, `badge`, `q`, `q_say`, `hook`, `hook_say`, `intro`, `lead`), `calc_asserts` check now includes narration, plural- and comma-aware obsolete-token matching, `safe_eval_ns` extended with the standard builtins (`len`, `str`, `int`, `float`, `bool`, `tuple`, `list`, `set`, `dict`, `range`, `sorted`, `any`, `all`, `zip`), syntax errors reported by **scene-file** line number, `intro` restricted to the first scene, `nic.in/gazette` dropped from `TIER1_MARKERS`; `engine_template.py` — `--part` gives a pluralised error and no bare `StopIteration`, `--audit` reports over-long narration, intro slide shows an "Introduction" label with a `CHAPTER INTRO` chip; `build_script_md.py` — `title`/`scope` escaped on the Markdown header line, missing `remaining_gaps` is now an error; samples — added `c04_rule98_historical` (obsolete) and `c05_rule99_unverified` (unverified) so the self-test exercises the `OBSOLETE / HISTORY ONLY` and `not confirmed against an official source` branches; `FORMAT_SPEC.md` — documents the `calc_asserts` namespace, narration word limits, the "close restatement" heuristic, and the intro-first-scene rule.
 - **v1** — initial.
 
@@ -1904,6 +2119,10 @@ return results
 | 16 | Close-restatement heuristic documented | `FORMAT_SPEC.md` – "The close restatement tag" |
 | 17 | `nic.in/gazette` removed from `TIER1_MARKERS` | `check_scenes.py` – tuple literal |
 | 18 | `--part` no longer degenerates into single-chapter runs: `resolve_parts()` / `even_parts()`, `PART_STARTS = "auto"`, placeholder repair with a printed note, and checker validation of the resolved ranges | `engine_template.py` – helpers + `if args.part:` block; `check_scenes.py` – `PART_STARTS` block; `FORMAT_SPEC.md` – `PART_STARTS` table |
+| 19 | Python < 3.10 refused with one line; Pillow install falls back through `--user` and `--break-system-packages` in both the engine and the checker | `engine_template.py` – header; `check_scenes.py` – Pillow bootstrap |
+| 20 | ffmpeg resolved from PATH or `imageio-ffmpeg`; ffprobe optional with `ffmpeg -i` fallbacks for durations and streams | `engine_template.py` – `require_media_tools()`, `_duration_from_ffmpeg()`, `stream_info()` |
+| 21 | Every missing dependency exits with an actionable message (no traceback), and `edge-tts` failures point at `--no-tts` | `engine_template.py` – install and TTS blocks |
+| 22 | Deployment contract documented: verified environment matrix, failure-mode table, one-paste deploy check, habits | `APPENDIX 11`; Step 1 environment paragraph; Appendix 8 gates |
 
 ### One behaviour you'll notice on the self-test
 
