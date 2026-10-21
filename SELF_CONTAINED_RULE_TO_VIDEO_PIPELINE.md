@@ -73,7 +73,7 @@ SCENE FORMAT (summary; the full specification is Appendix 4 and a working sample
           no double quote or backslash inside any string; no arrow/emoji glyphs; numbers spoken in words in narration.
 
 DELIVERABLES
- - One .md per batch: title, a ````python fenced script (docstring + engine + scenes), runnable as `python build_X.py --audit | --preview | --no-tts | --part 1..3 | (full build)`.
+ - One .md per batch: title, a ````python fenced script (docstring + engine + scenes), runnable as `python build_X.py --audit | --preview | --no-tts | --part N (N from PART_STARTS, or PART_STARTS = "auto") | (full build)`.
  - A short report per batch: counts (items; confirmed / changed / obsolete / unverified), what was removed, sources actually read, what could not be verified.
 Placeholders to fill: {{SOURCE_FILE_OR_LINK}}, {{RULES_OR_PARAS_TO_COVER}}, {{EXTRA_REQUIREMENTS}}, {{OUTPUT_FOLDER}}, {{TODAY}}.
 ```
@@ -135,7 +135,7 @@ if extras:
 print(f'KIT extracted: {len(got)} files (expected {len(EXPECTED)})')
 PY
 cd WORK/kit
-python3 check_scenes.py sample_scenes.txt --ledger sample_ledger.json --source sample_source.txt   # expect: PASS: 5 scenes, 17 cards
+python3 check_scenes.py sample_scenes.txt --ledger sample_ledger.json --source sample_source.txt   # expect: PASS: 5 scenes, 17 cards (a PART_STARTS "note:" line comes first)
 echo '{"scope":"test","sources":["s"],"changes_vs_source":[],"key_facts":["k"],"not_verified":["n"],"remaining_gaps":[]}' > meta_test.json
 python3 build_script_md.py sample_scenes.txt meta_test.json selftest "Self test" selftest.md
 python3 - <<'PY'
@@ -204,7 +204,7 @@ Research & anti-hallucination rules:
 
 ### Step 6 — Write the scenes
 
-Write `WORK/scenes/scenes_<n>.txt` — exactly `SCENES = [...]`, `FLOWS = {...}`, `PART_STARTS = [...]`. Colours `RED ORANGE BLUE GREEN SKY YELLOW PINK` are engine-predefined.
+Write `WORK/scenes/scenes_<n>.txt` — exactly `SCENES = [...]`, `FLOWS = {...}`, `PART_STARTS = [...]`. Colours `RED ORANGE BLUE GREEN SKY YELLOW PINK` are engine-predefined. For `--part` builds use `PART_STARTS = "auto"` for even thirds, or name the real part-start ids (1–3); a list of just the first few scene ids is treated as a placeholder and auto-balanced.
 
 - SHORT = screen text (plain words, one-line example); FULL = exact legal wording and citations; narration = 2–4 spoken sentences, numbers written in words (hard limit 100 words per card, 35 for `q_say`, 40 for `hook_say`, 80 for `intro`, 40 for `lead`; the engine's `--audit` enforces these).
 - Worked examples: explain terms simply, give a real example, verify arithmetic via Python expressions in `"calc_asserts"` (every expression must evaluate to `True`).
@@ -263,7 +263,7 @@ Deliver .md. State coverage metrics, changes versus source, and unverified items
 python build_<stem>.py --audit          # 1. card-density check
 python build_<stem>.py --preview        # 2. render slides only
 python build_<stem>.py --no-tts         # 3. silent dry run
-python build_<stem>.py --part 1         # 4. build first third
+python build_<stem>.py --part 1         # 4. build part 1 (1..N from PART_STARTS, or "auto")
 python build_<stem>.py                  # 5. full build
 ```
 
@@ -407,6 +407,66 @@ def normalize_for_tts(text: str) -> str:
     for pat, rep in _TTS_FIXES:
         text = re.sub(pat, rep, text)
     return re.sub(r'[ \t]+', ' ', text).strip()
+
+
+def even_parts(n_scenes, n_parts):
+    """Split n_scenes scenes into n_parts parts whose sizes differ by at most one.
+    The earlier parts take the extra scene (5 scenes, 3 parts -> 2 / 2 / 1)."""
+    n_parts = max(1, min(int(n_parts), n_scenes))
+    base, extra = divmod(n_scenes, n_parts)
+    sizes = [base + (1 if i < extra else 0) for i in range(n_parts)]
+    ranges, start = [], 0
+    for size in sizes:
+        ranges.append((start, start + size))
+        start += size
+    return ranges
+
+
+def resolve_parts(part_starts, scene_ids):
+    """Turn PART_STARTS into (start, end) scene ranges for --part, plus a note to print.
+
+    PART_STARTS may be:
+      * "auto"      -> three parts of nearly equal size (fewer parts if the batch is tiny);
+      * [] or None  -> a single part (the whole batch), so --part 1 stays valid;
+      * 1-3 scene ids -> that many parts, each starting at its id, the last running to the end.
+
+    Placeholder repair: a list that is merely the first N scene ids (c01, c02, c03) marks no
+    real boundary - honouring it literally would turn --part 1 and --part 2 into single-chapter
+    runs. Such a list is treated as "no boundary declared" and the batch is split into N nearly
+    equal parts, with a note explaining why. Real boundaries (c01, c12, c23) are never touched.
+    """
+    n_scenes = len(scene_ids)
+    if isinstance(part_starts, str):
+        if part_starts.strip().lower() != "auto":
+            sys.exit(f"PART_STARTS must be 'auto' or a list of scene ids; got {part_starts!r}")
+        return even_parts(n_scenes, 3), ""
+    if part_starts is None or (isinstance(part_starts, (list, tuple)) and not part_starts):
+        return even_parts(n_scenes, 1), ""
+    if not isinstance(part_starts, (list, tuple)):
+        sys.exit(f"PART_STARTS must be 'auto' or a list of 0-3 scene ids; got {part_starts!r}")
+    if len(part_starts) > 3:
+        sys.exit(f"PART_STARTS must have 0-3 scene ids; got {len(part_starts)}")
+    by_id = {sid: i for i, sid in enumerate(scene_ids)}
+    missing = [pid for pid in part_starts if pid not in by_id]
+    if missing:
+        sys.exit(f"PART_STARTS ids not found in SCENES: {missing}")
+    idx = [by_id[pid] for pid in part_starts]
+    if idx[0] != 0:
+        sys.exit(f"PART_STARTS must start with the first scene id; got index {idx[0]}")
+    if any(idx[i] >= idx[i + 1] for i in range(len(idx) - 1)):
+        sys.exit(f"PART_STARTS indices must be strictly increasing; got {idx}")
+    if idx == list(range(len(idx))) and n_scenes > len(idx):
+        n = len(idx)
+        if n == 1:
+            return even_parts(n_scenes, 1), (
+                f"PART_STARTS names only the first scene id, which is no real part boundary; "
+                f"building the whole batch as a single part instead "
+                f"(use PART_STARTS = 'auto' or name the true part-start ids to override)")
+        return even_parts(n_scenes, n), (
+            f"PART_STARTS names only the first {n} scene ids, which is no real part boundary; "
+            f"splitting the {n_scenes} scenes into {n} nearly equal parts instead "
+            f"(use PART_STARTS = 'auto' or name the true part-start ids to override)")
+    return [(idx[i], idx[i + 1] if i + 1 < len(idx) else n_scenes) for i in range(len(idx))], ""
 
 
 # ===== SCENES_BEGIN =====
@@ -799,7 +859,7 @@ async def main():
     ap.add_argument("--teacher", default=DEFAULT_TEACHER)
     ap.add_argument("--student", default=DEFAULT_STUDENT)
     ap.add_argument("--rate", default="-4%")
-    ap.add_argument("--part", type=int, help="1..len(PART_STARTS) = first / middle / last third of the chapters")
+    ap.add_argument("--part", type=int, help="build one part only: 1..N, where N comes from PART_STARTS (or PART_STARTS = 'auto')")
     args = ap.parse_args()
 
     if args.audit:
@@ -812,18 +872,15 @@ async def main():
         d.mkdir(parents=True, exist_ok=True)
     global SCENES, OUTPUT_MP4
     if args.part:
-        n_parts = len(PART_STARTS)
-        if n_parts == 0:
-            sys.exit("--part requires at least 1 PART_STARTS entry (found 0)")
+        ranges, note = resolve_parts(PART_STARTS, [x["id"] for x in SCENES])
+        n_parts = len(ranges)
         if not (1 <= args.part <= n_parts):
-            plural = "entry" if n_parts == 1 else "entries"
-            sys.exit(f"--part {args.part} is invalid: PART_STARTS has {n_parts} {plural} (valid range: 1..{n_parts})")
-        id_to_index = {x["id"]: i for i, x in enumerate(SCENES)}
-        for pid in PART_STARTS:
-            if pid not in id_to_index:
-                sys.exit(f"PART_STARTS id {pid!r} not found in SCENES")
-        _idx = [id_to_index[pid] for pid in PART_STARTS] + [len(SCENES)]
-        SCENES = SCENES[_idx[args.part - 1]:_idx[args.part]]
+            plural = "part" if n_parts == 1 else "parts"
+            sys.exit(f"--part {args.part} is invalid: the batch is split into {n_parts} {plural} (valid range: 1..{n_parts})")
+        if note:
+            print(f"note: {note}")
+        _a, _b = ranges[args.part - 1]
+        SCENES = SCENES[_a:_b]
         OUTPUT_MP4 = Path(f"{OUT_STEM}_part{args.part}.mp4")
     total = len(SCENES)
 
@@ -1052,8 +1109,15 @@ if __name__ == '__main__':
             errs.append(f"{s['id']}: 'intro' is only allowed on the first scene of a batch")
 
     ps = ns.get('PART_STARTS', [])
-    if not (1 <= len(ps) <= 3):
-        errs.append(f'PART_STARTS must have 1-3 valid scene ids; got {ps!r}')
+    if isinstance(ps, str):
+        if ps.strip().lower() != 'auto':
+            errs.append(f'PART_STARTS must be "auto" or a list of 0-3 scene ids; got {ps!r}')
+        elif not ns['SCENES']:
+            errs.append('PART_STARTS = "auto" needs at least one scene')
+    elif not isinstance(ps, (list, tuple)) or len(ps) > 3:
+        errs.append(f'PART_STARTS must be "auto" or a list of 0-3 scene ids; got {ps!r}')
+    elif not ps:
+        pass  # [] means one part: the whole batch
     elif any(pid not in id_set for pid in ps):
         errs.append(f'PART_STARTS refers to unknown ids: {ps!r}')
     else:
@@ -1062,6 +1126,15 @@ if __name__ == '__main__':
             errs.append(f'PART_STARTS must start at scene index 0; got {p_idx}')
         elif any(p_idx[i] >= p_idx[i+1] for i in range(len(p_idx)-1)):
             errs.append(f'PART_STARTS indices must be strictly increasing; got {p_idx}')
+    # --part must always produce non-empty, gap-free, in-order parts (auto or explicit alike).
+    try:
+        _ranges, _note = ns['resolve_parts'](ps, ids)
+        if not _ranges or _ranges[0][0] != 0 or _ranges[-1][1] != len(ids) or any(a >= b for a, b in _ranges):
+            errs.append(f'PART_STARTS produces empty or non-covering parts: {_ranges}')
+        elif _note:
+            print(f'note: {_note}')
+    except SystemExit as ex:
+        errs.append(f'PART_STARTS invalid: {ex}')
 
     for s in ns['SCENES']:
         for (t, body, c, n), (x, y, w, h) in zip(s['boxes'], ns['card_boxes'](s)):
@@ -1242,7 +1315,7 @@ Usage
     python build_{stem}.py --audit      # density check only (no ffmpeg / internet)
     python build_{stem}.py --preview    # slides only
     python build_{stem}.py --no-tts     # silent dry run
-    python build_{stem}.py --part 1     # one third of the chapters (1, 2 or 3)
+    python build_{stem}.py --part 1     # build one part (1..N from PART_STARTS, or PART_STARTS = "auto")
     python build_{stem}.py              # full build (needs internet for edge-tts; ffmpeg+ffprobe with libass on PATH)
 '''
 code = combine(scenes, stem=stem, title=esc(title), doc=doc)
@@ -1269,12 +1342,23 @@ A scenes file is a plain text file with exactly three top-level assignments:
 ```python
 SCENES = [ {...scene...}, {...scene...}, ... ]
 FLOWS = { "flow_key": {"nodes": [...4 nodes...], "edges": [...3 edges...]}, ... }   # may be {}
-PART_STARTS = ["id_of_first_scene", "id_of_first_scene_of_2nd_third", "id_of_first_scene_of_3rd_third"]
+PART_STARTS = ["id_of_first_scene", "id_of_first_scene_of_2nd_third", "id_of_first_scene_of_3rd_third"]   # or "auto"
 ```
 
 The colour names `RED, ORANGE, BLUE, GREEN, SKY, YELLOW, PINK` are already defined by the engine. Do not import anything. Do not write any other code.
 
-`PART_STARTS` may have **1, 2 or 3** entries; the first entry MUST be the first scene's id, and the entries MUST be strictly increasing in scene order. `--part N` on the built script will validate N against `len(PART_STARTS)`.
+`PART_STARTS` may have **1, 2 or 3** entries; the first entry MUST be the first scene's id, and the entries MUST be strictly increasing in scene order. It may also be the string `"auto"` (no ids needed) or `[]` (one part). `--part N` on the built script validates N against the number of **resolved** parts.
+
+How `PART_STARTS` becomes parts (`resolve_parts()` in the engine, verified by `check_scenes.py`):
+
+| `PART_STARTS` | `--part` count | Split |
+|---|---|---|
+| `"auto"` | 3 (fewer for tiny batches) | nearly equal parts, earlier parts take the extra scene: 5 scenes -> 2 / 2 / 1 |
+| `[]` or `None` | 1 | the whole batch |
+| 1-3 real boundary ids, e.g. `["c01_x", "c12_y", "c23_z"]` | `len(PART_STARTS)` | part *i* starts at entry *i*; the last part runs to the end (26 scenes -> 11 / 11 / 4) |
+| the first N scene ids, e.g. `["c01", "c02", "c03"]` | `len(PART_STARTS)` | **placeholder repair**: the list names no real boundary, so the batch is split into N nearly equal parts and a note is printed |
+
+The placeholder-repair row is what stops `--part 1` and `--part 2` from becoming single-chapter runs when the list is only the first few scene ids. Real boundaries are always honoured exactly. Every resolved part is non-empty, in order, and covers the batch with no gap or overlap.
 
 ## A scene
 
@@ -1546,6 +1630,10 @@ FLOWS = {
     },
 }
 
+# Placeholder boundaries: these are the first three scene ids, not real part starts.
+# resolve_parts() detects that, splits the five scenes into 2 / 2 / 1 for --part 1 / 2 / 3,
+# and prints a note. Use PART_STARTS = "auto" to ask for even parts explicitly, or name the
+# true part-start ids (for example ["c01_overview", "c04_rule98_historical"]) to control them.
 PART_STARTS = ["c01_overview", "c02_rule4_duty", "c03_chain"]
 ```
 <!-- KIT_FILE: END -->
@@ -1726,6 +1814,7 @@ Rules: (1) every practice question tests an item whose ledger status is `confirm
 - [ ] Every worked example verified via `calc_asserts` and recomputed by the auditor
 - [ ] Pronunciation table extended with this source's acronyms
 - [ ] `--audit` clean (card density AND narration length); `--preview` rendered; 2-3 slides inspected; no overflowing word; intro slide shows the "Introduction" label and a `CHAPTER INTRO` chip, not the raw question block
+- [ ] `PART_STARTS` checked with `--part`: every part non-empty and in order (use `PART_STARTS = "auto"` for even thirds; the checker prints a note when a placeholder list is auto-balanced)
 - [ ] Docstring lists sources, changes versus source, key facts, NOT VERIFIED, usage
 - [ ] Every chapter is one real question; question types mixed; answer order rule, exception, example, trap
 - [ ] Glossary consistent; every "see Rule X" resolved; consolidated change log written
@@ -1744,7 +1833,8 @@ Rules: (1) every practice question tests an item whose ledger status is `confirm
 - A `changed` item is "old X -> new Y" — old X is still superseded and must be blocked from every card. Collect `obsolete_tokens` from `changed` items too, not only from `obsolete` items.
 - Agents sometimes stay faithful on-screen but improvise a year or rule number in the spoken narration (or the title, question, hook, chapter line, intro or lead) - `check_scenes.py` must scan every text field, not only SHORT/FULL/narration.
 - Examples can be right when the rule is right but the spoken arithmetic is wrong - scan the NARRATION for digits when requiring `calc_asserts`; the card often has no numeric example while the voice does.
-- Unvalidated `PART_STARTS` ids crash `--part 1..3` at runtime - validate that `PART_STARTS` has 1-3 valid, strictly increasing scene IDs starting at index 0, and validate `--part` against `len(PART_STARTS)` with a pluralised message.
+- Unvalidated `PART_STARTS` ids crash `--part` builds at runtime - validate that `PART_STARTS` is `"auto"`, `[]`, or a list of 1-3 valid, strictly increasing scene IDs starting at index 0, and validate `--part` against the resolved part count with a pluralised message.
+- `PART_STARTS` holding only the first few scene ids is a placeholder, not a boundary plan. Slicing literally between consecutive ids made `--part 1` and `--part 2` single-chapter runs. Detect that shape, auto-balance to N nearly equal parts, and say so in a printed note; honour real boundaries exactly and add `PART_STARTS = "auto"` for even thirds.
 - Arrows, emoji and double quotes break the font or the narration strings.
 - Text coverage can be complete while currency is unproven - report both separately.
 - Usage limits can interrupt a workflow; resume it (cached agents replay) and re-check that the failed stages' output files exist.
@@ -1786,7 +1876,8 @@ return results
 
 ## Version history
 
-- **v2 (this file)** — fixed Step 1 extractor for 4-backtick fences + post-check for all 7 expected kit files; `check_scenes.py` — obsolete tokens now collected from `changed` items too, token grounding extended to every text field (`title`, `chapter`, `badge`, `q`, `q_say`, `hook`, `hook_say`, `intro`, `lead`), `calc_asserts` check now includes narration, plural- and comma-aware obsolete-token matching, `safe_eval_ns` extended with the standard builtins (`len`, `str`, `int`, `float`, `bool`, `tuple`, `list`, `set`, `dict`, `range`, `sorted`, `any`, `all`, `zip`), syntax errors reported by **scene-file** line number, `intro` restricted to the first scene, `nic.in/gazette` dropped from `TIER1_MARKERS`; `engine_template.py` — `--part` gives a pluralised error and no bare `StopIteration`, `--audit` reports over-long narration, intro slide shows an "Introduction" label with a `CHAPTER INTRO` chip; `build_script_md.py` — `title`/`scope` escaped on the Markdown header line, missing `remaining_gaps` is now an error; samples — added `c04_rule98_historical` (obsolete) and `c05_rule99_unverified` (unverified) so the self-test exercises the `OBSOLETE / HISTORY ONLY` and `not confirmed against an official source` branches; `FORMAT_SPEC.md` — documents the `calc_asserts` namespace, narration word limits, the "close restatement" heuristic, and the intro-first-scene rule.
+- **v2.1 (this file)** — `--part` partitioning fixed: new `resolve_parts()` / `even_parts()` in `engine_template.py`; `PART_STARTS = "auto"` for even thirds, `[]` for one part, real boundary ids honoured exactly, and a placeholder list (just the first N scene ids) auto-balanced to N nearly equal parts with a printed note. `check_scenes.py` validates the resolved parts (non-empty, in order, gap-free, covering) and accepts `"auto"`; `FORMAT_SPEC.md` documents the four cases with worked sizes; sample scenes carry an explanatory comment; Appendix 8 adds a `--part` gate and Appendix 9 the lesson.
+- **v2** — fixed Step 1 extractor for 4-backtick fences + post-check for all 7 expected kit files; `check_scenes.py` — obsolete tokens now collected from `changed` items too, token grounding extended to every text field (`title`, `chapter`, `badge`, `q`, `q_say`, `hook`, `hook_say`, `intro`, `lead`), `calc_asserts` check now includes narration, plural- and comma-aware obsolete-token matching, `safe_eval_ns` extended with the standard builtins (`len`, `str`, `int`, `float`, `bool`, `tuple`, `list`, `set`, `dict`, `range`, `sorted`, `any`, `all`, `zip`), syntax errors reported by **scene-file** line number, `intro` restricted to the first scene, `nic.in/gazette` dropped from `TIER1_MARKERS`; `engine_template.py` — `--part` gives a pluralised error and no bare `StopIteration`, `--audit` reports over-long narration, intro slide shows an "Introduction" label with a `CHAPTER INTRO` chip; `build_script_md.py` — `title`/`scope` escaped on the Markdown header line, missing `remaining_gaps` is now an error; samples — added `c04_rule98_historical` (obsolete) and `c05_rule99_unverified` (unverified) so the self-test exercises the `OBSOLETE / HISTORY ONLY` and `not confirmed against an official source` branches; `FORMAT_SPEC.md` — documents the `calc_asserts` namespace, narration word limits, the "close restatement" heuristic, and the intro-first-scene rule.
 - **v1** — initial.
 
 ---
@@ -1812,7 +1903,19 @@ return results
 | 15 | Syntax-error line numbers refer to the scene file | `check_scenes.py` – `except SyntaxError` |
 | 16 | Close-restatement heuristic documented | `FORMAT_SPEC.md` – "The close restatement tag" |
 | 17 | `nic.in/gazette` removed from `TIER1_MARKERS` | `check_scenes.py` – tuple literal |
+| 18 | `--part` no longer degenerates into single-chapter runs: `resolve_parts()` / `even_parts()`, `PART_STARTS = "auto"`, placeholder repair with a printed note, and checker validation of the resolved ranges | `engine_template.py` – helpers + `if args.part:` block; `check_scenes.py` – `PART_STARTS` block; `FORMAT_SPEC.md` – `PART_STARTS` table |
 
 ### One behaviour you'll notice on the self-test
 
 The `--ledger sample_ledger.json --source sample_source.txt` self-test now prints **`PASS: 5 scenes, 17 cards`** (up from 3 scenes / 11 cards) because the two new sample scenes (`c04`, `c05`) exercise the branches that were previously untested. If your terminal prints any other count, extraction or ledger loading is broken — re-check the Step 1 output for `missing [...]`.
+
+The sample `PART_STARTS` is a placeholder (the first three scene ids), so building it now prints a note and splits the five scenes **2 / 2 / 1** instead of 1 / 1 / 3:
+
+```text
+$ python selftest.py --part 1 --preview
+note: PART_STARTS names only the first 3 scene ids, which is no real part boundary; splitting the 5 scenes into 3 nearly equal parts instead (use PART_STARTS = 'auto' or name the true part-start ids to override)
+  scene 01/2  c01_overview
+  scene 02/2  c02_rule4_duty
+```
+
+`python selftest.py --part 4` now reports `--part 4 is invalid: the batch is split into 3 parts (valid range: 1..3)`.
