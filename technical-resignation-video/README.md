@@ -3,7 +3,7 @@
 A 16-chapter, simple-English Q&A explainer video built from the consolidated
 **DoPT O.M. No. DOPT-1669266628362 dated 24.11.2022** (Paras 2.1 to 5).
 
-* **16 chapters · 64 exam-ready cards · 16 min 54 s · 1920×1080**
+* **16 chapters · 64 exam-ready cards · 16 min 26 s · 1920×1080**
 * Riya (student) asks one question per chapter; the teacher answers card by card
 * Every chapter closes on a yellow **"trap / remember"** strip
 * Indian-English narration, colour-coded burned-in subtitles, 1920×1080
@@ -20,6 +20,16 @@ Ch 16    Master recap + the 8 constituent O.M.s
 ---
 
 ## Files
+
+Two cuts of the same recording are shipped — the voice is identical in both:
+
+| File | Length | What changed |
+|---|---|---|
+| `tech_resignation_masterclass.mp4` | **16 min 26 s** | **The final file.** Inter-card padding tightened (0.45→0.18 s after a card, 0.85→0.32 s after a question). Voice speed untouched. |
+| `tech_resignation_masterclass_brisk.mp4` | 15 min 13 s | The tightened cut played back at 1.08× (`setpts` + `atempo`), pitch preserved. Use this for repeat revision. |
+
+Nothing was re-recorded to make either one. Padding is only ~6 % of the runtime, so
+trimming it reclaims ~36 s; the brisk cut is where the remaining 73 s comes from.
 
 | File | What it is |
 |---|---|
@@ -104,7 +114,13 @@ Every render is checked before it is called done. Measured on the delivered file
 | Beat timing consistency | 14.2–19.9 chars/sec, median 16.7 |
 | Dead air (silence > 1.5 s) | none |
 | Integrated loudness | −16.0 LUFS, true peak −1.4 dBFS, LRA 3.3 LU |
-| Streams | H.264 1920×1080 + AAC 48 kHz stereo, faststart enabled |
+| Streams | H.264 1920×1080@30 + AAC 48 kHz stereo, faststart enabled |
+
+When re-trimming encoded clips with `-c copy`, ffmpeg rounds each cut **up** to the next
+packet boundary (+0.1 s worst case, +8 s cumulative over 98 beats). Any timeline you
+compute from *nominal* beat lengths will therefore drift out of sync with the real file —
+measure the timeline from the actual clip durations or the QA sweep will report caption
+dropouts that are not there.
 
 Two bugs worth remembering, both found by these checks rather than by eye:
 

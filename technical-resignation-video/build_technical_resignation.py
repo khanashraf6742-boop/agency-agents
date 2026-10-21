@@ -111,11 +111,13 @@ YELLOW = (240, 228, 66)
 PINK = (204, 121, 167)
 
 # Pacing: extra air after a slide flips, so the eye lands before the words start.
-PAD_QUESTION = 0.85
-PAD_HOOK = 0.95
-PAD_ANSWER = 0.45
-PAD_TITLE = 1.00
-PAD_OUTRO = 1.20
+# Tightened from the first cut (0.85/0.95/0.45/1.00/1.20) - the original gaps read as
+# hesitation on a revision video, and this reclaims ~36s without touching the voice.
+PAD_QUESTION = 0.32
+PAD_HOOK = 0.38
+PAD_ANSWER = 0.18
+PAD_TITLE = 0.55
+PAD_OUTRO = 0.70
 
 TITLE_HEAD = "TECHNICAL RESIGNATION & LIEN"
 TITLE_SUB = "DoPT O.M. No. DOPT-1669266628362  •  dated 24.11.2022"
