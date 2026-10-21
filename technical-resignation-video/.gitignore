@@ -1,0 +1,5 @@
+# Generated artefacts - rebuild locally with the commands in README.md.
+# Kept out of git because they are large and fully reproducible from the script.
+build/
+studio_raw/
+*.mp4
