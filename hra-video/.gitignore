@@ -1,0 +1,8 @@
+# Regenerable in seconds - excluded from git AND from workspace snapshots.
+#
+# IMPORTANT: do NOT ignore studio_raw/ or narration/. The snapshot system honours
+# .gitignore, so anything listed here is discarded on a sandbox reset. The recorded
+# WAVs are the expensive asset (3 turns to re-record) and must always persist.
+work/
+tools-venv/
+__pycache__/

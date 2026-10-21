@@ -1,0 +1,325 @@
+"""
+CANONICAL NARRATION SCRIPT - House Rent Allowance masterclass.
+
+These 28 strings are the EXACT text that was recorded and approved (post
+Indian-English pronunciation pass). They are the recovery anchor: slides and
+card text can be re-derived from them, but if this file is lost the whole
+narration has to be rewritten from scratch.
+
+Key convention: inside each chapter answer, everything up to the final
+"Remember: ..." sentence is the card narration; the "Remember:" sentence itself
+is the chapter's closing hook.
+"""
+
+TEXTS = {
+"00_title":
+"""Welcome to the complete masterclass on House Rent Allowance. We will walk through the \
+consolidated instructions of the Department of Expenditure, dated the thirtieth of \
+December, twenty twenty two, paragraph by paragraph. We will also flag, very clearly, \
+where the printed rate is no longer the rate you actually draw today. Let us begin with \
+Riya's first question.""",
+
+"01_answer_h01_scope_of_master_om":
+"""Let us begin with the document itself. This is Department of Expenditure Office \
+Memorandum number 2 slash 4 slash 2022 E two B, dated the thirtieth of December, twenty \
+twenty two. It supersedes every earlier instruction on House Rent Allowance. The \
+compendium applies to all civilian employees of the Central Government. It also applies \
+to civilian employees paid from the Defence Services Estimates. There is one group \
+students often forget: these orders also apply to persons serving in the Indian Audit and \
+Accounts Department. Now the trap. Two groups are outside these rules: employees \
+appointed on ad hoc or personal rates of pay, unless their appointment order specifically \
+allows House Rent Allowance; and staff paid out of contingencies, that is casual \
+employees and labour. Remember: the compendium covers all civilian Central Government \
+staff, Defence civilians, and Audit and Accounts Department staff, but excludes ad hoc \
+and contingency paid employees.""",
+
+"02_answer_h02_pay_and_family":
+"""Paragraph 1.1 is short but decisive. Pay, for calculating House Rent Allowance, means \
+the pay drawn in the prescribed Level in the Pay Matrix under the Seventh Central Pay \
+Commission. And note the exclusion: no other type of pay is counted. Special pay, and \
+similar additions, stay out of the House Rent Allowance calculation. Now family. \
+Paragraph 1.2 says family means the Government servant's wife or husband, children, and \
+other persons residing with and wholly dependent upon him or her. Here is the trap \
+examiners love. A husband, wife, child or parent with an independent source of income is \
+not treated as family, unless that income, including pension and its benefits, does not \
+exceed nine thousand rupees per month. Remember: pay for House Rent Allowance is the Pay \
+Matrix level alone, and the family income cut off is nine thousand rupees per month.""",
+
+"03_answer_h03_same_station_ua":
+"""Paragraph 1.3 gives three limbs. Same station means all places contiguous to the \
+qualified city under Paragraph 3.2, plus places dependent on it under Paragraph 3.4, plus \
+places inside the Urban Agglomeration of that city. Paragraph 1.4 takes the definition \
+from the latest Census Report of the Registrar General and Census Commissioner of India. \
+An Urban Agglomeration is a continuous urban spread made of a town and its adjoining \
+outgrowths, or contiguous towns. Why does this matter? Because during leave, deputation \
+abroad, training or suspension, your House Rent Allowance depends on retaining a house at \
+the same station. These two definitions decide what counts. Be careful with this trap. An \
+Urban Agglomeration is determined by the Census Report, not by municipal boundaries and \
+not by local usage. Two different tests, two different consequences. Remember: same \
+station covers contiguous, dependent and Urban Agglomeration areas, and the Urban \
+Agglomeration comes from the Census Report.""",
+
+"04_answer_h04_city_classification":
+"""Paragraph 2.1 is clear. Classification of cities for House Rent Allowance is based on \
+the population of the area, as per the latest Census Report. The first class is X. Any \
+city or town with a population of fifty lakh and above falls in X class. Y class covers \
+populations from five lakh up to fifty lakh. Z class covers everything below five lakh. \
+Any place not listed as X or Y is treated as Z. Now the trap. This compendium only fixes \
+the population criteria. The actual list of cities in each class is notified by separate \
+Department of Expenditure orders, the latest being the Census twenty eleven \
+reclassification of December twenty nineteen. Remember: X is fifty lakh and above, Y is \
+five to fifty lakh, Z is below five lakh, and the test always comes from the latest \
+Census.""",
+
+"05_answer_h05_rates_and_da_ladder":
+"""Excellent question, and this is the single most important correction in the whole \
+course. The table printed in the Office Memorandum gives the base Seventh Pay Commission \
+rates: twenty four per cent for X, sixteen for Y, and eight for Z. But read the note below \
+that table. When Dearness Allowance crosses twenty five per cent, the rates automatically \
+rise to twenty seven, eighteen and nine per cent. And when Dearness Allowance crosses \
+fifty per cent, they rise again, to thirty, twenty and ten per cent. Both of those \
+triggers have already fired. Here is the trap. The revision is automatic. The Department \
+of Expenditure confirmed in August twenty twenty one that no separate House Rent \
+Allowance order is issued when Dearness Allowance crosses these levels. So you will never \
+find an order saying thirty per cent. Remember: twenty four, sixteen and eight is only \
+the base rate. Both Dearness Allowance triggers have already fired, so today's rate is \
+thirty, twenty and ten per cent.""",
+
+"06_answer_h06_position_today_2026":
+"""Here is the current position. Dearness Allowance crossed fifty per cent with effect \
+from first January, twenty twenty four. That crossed the second and final threshold, so \
+House Rent Allowance moved to thirty, twenty and ten per cent of basic pay. Dearness \
+Allowance today is sixty per cent of basic pay, with effect from first January, twenty \
+twenty six. That is Office Memorandum 1 slash 1 sub one slash 2026 E two B, dated twenty \
+second April, twenty twenty six. And there is a floor. House Rent Allowance is never less \
+than five thousand four hundred rupees in X class, three thousand six hundred in Y, and \
+one thousand eight hundred in Z. Those figures are thirty, twenty and ten per cent of the \
+minimum pay of eighteen thousand. And here is the trap. Dearness Allowance at sixty per \
+cent does not give you a further House Rent Allowance step. The ladder has only two \
+rungs, at twenty five and fifty per cent, and both are behind us. Remember: House Rent \
+Allowance is thirty, twenty and ten per cent since January twenty twenty four, Dearness \
+Allowance is sixty per cent since January twenty twenty six, and there is no third rung \
+on the ladder.""",
+
+"07_answer_h07_eighth_cpc":
+"""Short answer: no, not official. The Eighth Central Pay Commission was formally \
+constituted by Gazette resolution dated third November, twenty twenty five. It is chaired \
+by Justice Ranjana Prakash Desai. In a written reply to the Lok Sabha on tenth August, \
+twenty twenty six, the Ministry of Finance confirmed the Commission has not submitted its \
+recommendations yet. It has eighteen months from constitution, so the report is due around \
+May, twenty twenty seven. It is still in the consultation phase. Meetings were held at \
+Chandigarh, Puducherry and Bengaluru, with Mumbai scheduled for twenty second and twenty \
+third October, twenty twenty six. Now the trap, and it is a big one. The forty, thirty \
+five and thirty per cent figures circulating online are demands submitted to the \
+Commission by staff bodies. They are not recommendations, and no Government order has \
+been issued on them. In an exam answer, quote only notified rates. Remember: the Eighth \
+Pay Commission was constituted on third November twenty twenty five, its report is due \
+around May twenty twenty seven, and the House Rent Allowance figures circulating online \
+are demands, not law.""",
+
+"08_answer_h08_place_of_duty":
+"""The answer is the place of duty. Paragraph 3.1 says House Rent Allowance is admissible \
+with reference to the place of duty of the Government servant, irrespective of whether he \
+is residing at that place or anywhere else. Paragraph 3.2 fixes the boundary. The locality \
+is the named municipality or corporation, and it also includes suburban municipalities, \
+notified areas or cantonments that are contiguous to it, plus any other area the Central \
+Government notifies. Paragraph 3.3 removes any doubt about change. If a State Government \
+includes an area within, or excludes it from, the municipality or Urban Agglomeration, \
+these instructions automatically apply or cease to apply from that very date. So the trap \
+is this: living elsewhere does not by itself defeat your claim. What matters is the place \
+of duty. But remember, the separate conditions in Paragraph 5 can still bar you on other \
+grounds. Remember: House Rent Allowance follows the place of duty, not where you sleep, \
+and boundary changes apply automatically from the date the State Government makes them.""",
+
+"09_answer_h09_eight_km_rule":
+"""Yes, possibly. Paragraph 3.4 says staff working in Central Government establishments \
+within eight kilometres of the periphery of the municipal limits of a qualified city get \
+that city's House Rent Allowance rates, even if they do not reside within those limits. \
+But there are conditions. First, a certificate in the Annexure One format must be obtained \
+from the Collector or Deputy Commissioner having jurisdiction, and the Administrative \
+Ministry must refer it to the Department of Expenditure for initial sanction for a period \
+of three years. Extensions beyond the initial three years may be allowed by the \
+Administrative Ministry in consultation with its Financial Adviser, and by the Comptroller \
+and Auditor General for staff serving under him. The certificate of dependency is obtained \
+from the Collector. Here is the precise trap. The eight kilometre rule continues only at \
+places within eight kilometres of the municipal limits which are NOT included in the Urban \
+Agglomeration of any city. If the place is inside a Urban Agglomeration, the Urban \
+Agglomeration rule applies instead. Remember: eight kilometres, a Collector's certificate \
+and a three year sanction, but only where the place is not already inside a Urban \
+Agglomeration.""",
+
+"10_answer_h10_who_cannot_draw":
+"""Paragraph 4.1 is the starting point. The allowance is not admissible to those who \
+occupy General Pool Residential accommodation provided by the Government. Paragraph 4.2 \
+covers departmental pools. Where Government quarters are available for the staff of \
+specified Departments or for specified categories of staff, the prescribed procedure for \
+applying for allotment has to be followed. Paragraph 4.3 answers your question precisely. \
+House Rent Allowance stops from the date the accommodation is actually handed over in an \
+immediately habitable condition. And on surrender, it becomes payable again from the date \
+of surrender. Two traps here. First, an officer debarred from allotment for unauthorised \
+sub letting still gets House Rent Allowance during the debarment. Second, a Government run \
+or subsidised hostel bars the allowance, but if the hostel charges market rent on \
+commercial lines, it does not. Remember: a Government quarter ends the allowance, it stops \
+on handing over in habitable condition, and a subsidised hostel also bars it, while a \
+commercial rent hostel does not.""",
+
+"11_answer_h11_transfer_retention":
+"""Paragraph 4.6 gives you a window. If you retain Government accommodation at the old \
+station on normal rent, penal rent, or even unauthorisedly on market rent, you may draw \
+House Rent Allowance at the new station for up to eight months from the date of transfer. \
+Paragraph 4.7 covers a different case. If you had no Government accommodation at the old \
+station and leave your family behind because you have not rented a house or been allotted \
+one at the new station, you stay eligible at the new station until you are allotted \
+accommodation there. Paragraph 4.8 is the hard stop. In either case, House Rent Allowance \
+under these provisions is not admissible beyond the date on which Government accommodation \
+is allotted to you at the new station. And the ninety day trap. For a transfer of ninety \
+days or less, you draw the old rate. Beyond ninety days, the rate follows the new place of \
+posting. If a short transfer is later extended, the switch happens from the date of the \
+extension order, not from the date of transfer. Remember: eight months if you retain the \
+old quarter, it stops on allotment at the new station, and ninety days is the point at \
+which the rate switches.""",
+
+"12_answer_h12_sharing_rules":
+"""Paragraph 5.1 sets three absolute bars. You cannot draw House Rent Allowance if you \
+share Government accommodation allotted to another Government servant, or live in \
+accommodation allotted to your parent, son or daughter by Government or a public body, or \
+if your spouse has been allotted accommodation at the same station, whether you live there \
+or separately. Now your case. Paragraph 5.2 says you remain eligible if you share private \
+accommodation with another Government servant, provided you pay rent or contribute towards \
+rent, house tax or property tax. The amount does not matter. But there is a limit. Where \
+two employees share accommodation allotted to another Government servant, House Rent \
+Allowance is admissible to only one of them, at their choice. And here is the contrast \
+examiners test. If husband and wife are both Government servants living in hired or owned \
+accommodation, both draw House Rent Allowance as per their own entitlement. That is \
+completely different from the Paragraph 5.1 bar, where the spouse has been allotted \
+Government accommodation at the same station. Remember: paying rent makes sharing \
+acceptable, an allotted spouse quarter is fatal to the claim, but both spouses in a hired \
+or owned house both get paid.""",
+
+"13_answer_h13_guest_house":
+"""Yes, but not as House Rent Allowance. Paragraph 5.5 allows reimbursement of the rent \
+actually paid when you stay temporarily in a State Bhavan, Guest House or Departmental \
+Guest House run by the Central Government, a State Government or an Autonomous \
+Organisation. There are five conditions. You must not have been allotted Government \
+accommodation, the guest house must be at your place of posting, you must produce rent \
+receipts, the reimbursement runs for a maximum of six months, and no House Rent Allowance \
+is paid during this period. So the outer limit is six months. Beyond that, the concession \
+simply does not run. The trap is the either-or. During this period you get the \
+reimbursement instead of House Rent Allowance, never both together. One is based on the \
+percentage of pay, the other on the rent actually paid with receipts. Remember: guest \
+house rent is reimbursed for up to six months, and no House Rent Allowance is paid during \
+that period.""",
+
+"14_answer_h14_during_leave":
+"""Paragraph 6.1.1 gives the general rule. You draw House Rent Allowance during leave at \
+the same rate as before, for leave not exceeding one hundred and eighty days, and for the \
+first one hundred and eighty days of any longer spell. Terminal leave is excluded. \
+Paragraph 6.1.5 adds the paperwork. Beyond the first one hundred and eighty days, on \
+grounds other than the medical grounds in 6.1.6, you must furnish the certificate \
+prescribed in Annexure Three. Paragraph 6.1.6 is the humane exception. For employees \
+suffering from tuberculosis, cancer or similar ailments on medical certificates in the \
+prescribed form, the limit extends from one hundred and eighty days to eight months. Two \
+final traps. If you take leave and then resign without joining duty, the authority must \
+recover the entire House Rent Allowance drawn before accepting the resignation. But if \
+leave on medical grounds beyond one hundred and eighty days ends in retirement on \
+invalidity, no recovery is made. Remember: one hundred and eighty days is the general \
+limit, eight months for tuberculosis and cancer, Annexure Three beyond that, and full \
+recovery if you resign instead of rejoining.""",
+
+"15_answer_h15_other_circumstances":
+"""Paragraph 6.2 covers joining time: you continue at the rate of the station from which \
+you were transferred. Paragraph 6.3 covers deputation abroad: you stay eligible for as \
+long as your family remains at your last place of duty in India, subject to the Annexure \
+Three certificate. For training abroad, Paragraph 6.4 gives you the rate of the station \
+you were deputed from, and leave during the training earns nothing. For training in India, \
+Paragraph 6.5 is generous: you may take whichever is more favourable, the place of \
+training or your place of duty. Paragraph 6.6 covers suspension: the allowance continues, \
+but beyond one hundred and eighty days you need the Annexure Three certificate. Paragraph \
+6.9 is simple: during tour, your entitlement is regulated with reference to your \
+headquarters. And the two traps. For re-employed pensioners, Paragraph 6.7 computes House \
+Rent Allowance on pay plus pension, subject to the ceiling of the maximum pay of the post. \
+And for employees outside the Fundamental Rules and the C.C.S. Leave Rules, Paragraph 6.8 \
+allows only forty days, extended to one hundred and eighty for tuberculosis, cancer and \
+similar ailments. Remember: training in India gives you the better of two rates, tour \
+follows your headquarters, and staff outside the Fundamental Rules get only forty days.""",
+
+"16_answer_h16_certificates":
+"""Paragraph 7.2.1 is the main one. Every Government servant must furnish a certificate \
+in the Annexure Two form along with the first claim for House Rent Allowance. Paragraph \
+7.2.2 splits the audience. Non-gazetted officers furnish the certificate to their Head of \
+Office; gazetted officers furnish it to their Accounts Officer. Paragraph 7.2.3 puts the \
+duty on the Drawing and Disbursing Officer, who must endorse two certificates on the bill: \
+that eligibility has been verified against the Ministry of Finance order, and that the \
+prescribed certificates have been obtained and the claims are in order. And the most \
+valuable trap of this chapter. You no longer need to apply for Government accommodation or \
+furnish a No Accommodation Certificate. That condition was dispensed with by the Department \
+of Expenditure order of third May, twenty nineteen. Annexure Three is still required for \
+the specific cases listed in Paragraph 7.3. Remember: Annexure Two goes with your first \
+claim, the Drawing and Disbursing Officer endorses the bill, and the No Accommodation \
+Certificate has been abolished.""",
+
+"17_answer_h17_master_recap":
+"""Card one. Scope covers civilians, Defence civilians and the Audit and Accounts \
+Department. Pay means the Pay Matrix level alone. And family excludes any relative with \
+independent income above nine thousand rupees a month. Card two. X is fifty lakh and \
+above, Y is five to fifty lakh, Z is below five lakh. The base rates were twenty four, \
+sixteen and eight. Today they are thirty, twenty and ten, and Dearness Allowance stands at \
+sixty per cent. Card three. House Rent Allowance follows the place of duty. The eight \
+kilometre rule is residual and needs a Collector's certificate. Government accommodation \
+bars the allowance, but sharing is fine if you pay rent or contribute to tax. Card four. \
+One hundred and eighty days of leave generally, eight months for tuberculosis and cancer, \
+forty days for staff outside the Fundamental Rules. Annexure Two with the first claim, \
+Annexure Three for the listed cases, and the Appendix records the earlier orders now \
+superseded. Remember: place of duty governs, thirty, twenty and ten per cent applies \
+today, one hundred and eighty days on leave, and Annexure Two goes with your first claim.""",
+
+"q00_questions":
+"""Sir, before we start the rates, whom does this House Rent Allowance compendium actually \
+apply to? Sir, the compendium defines pay and family. Why do those two definitions matter \
+so much?""",
+
+"q01_questions":
+"""Sir, House Rent Allowance rules keep referring to the same station. What exactly does \
+that cover? Sir, everybody talks about X, Y and Z class cities. Who decides that \
+classification?""",
+
+"q02_questions":
+"""Sir, this compendium says twenty four, sixteen and eight per cent. But my payslip shows \
+thirty per cent. Which one is correct? Sir, then what is the exact position as of today, \
+and is anything still pending?""",
+
+"q03_questions":
+"""Sir, everyone is sharing messages about a forty per cent House Rent Allowance under the \
+Eighth Pay Commission. Is that official now? Sir, if an officer works in a classified city \
+but lives in a village thirty kilometres away, what happens to his House Rent Allowance?""",
+
+"q04_questions":
+"""Sir, our office is eight kilometres outside the municipal limit. Do we still get the \
+city rate of House Rent Allowance? Sir, if an officer gets a Government quarter, does his \
+House Rent Allowance stop immediately?""",
+
+"q05_questions":
+"""Sir, on transfer I am allowed to keep my old quarter for a few months. Can I also claim \
+House Rent Allowance at the new station? Sir, two Government servants share a rented flat \
+and both pay rent. Can both of them draw House Rent Allowance?""",
+
+"q06_questions":
+"""Sir, on posting to a new station I stayed in a State Bhavan for a few months. Am I paid \
+anything? Sir, if I take a long leave, for how many months does my House Rent Allowance \
+continue?""",
+
+"q07_questions":
+"""Sir, what happens to my House Rent Allowance during joining time, or if I go abroad on \
+deputation? Sir, what certificates do I actually have to submit to draw House Rent \
+Allowance?""",
+
+"q08_questions":
+"""Sir, before we finish, can we do a rapid-fire recap of the whole compendium?""",
+
+"99_outro":
+"""That brings us to the end of this masterclass. Keep three things in mind. First, House \
+Rent Allowance follows your place of duty, not where you live. Second, the printed twenty \
+four, sixteen and eight per cent is only the base rate; today you draw thirty, twenty and \
+ten per cent. And third, the Eighth Pay Commission figures you see online are demands, not \
+law. Keep revising, and see you in the next chapter.""",
+}
