@@ -1347,6 +1347,63 @@ def timed_words(text, dur):
     return out
 
 
+_SENT_END = re.compile(r'[.!?]["\')]?$')
+
+
+def timed_words_anchored(text, audio: Path, dur: float, window: float = 1.2):
+    """Word timings for captions, anchored onto the pauses the voice actually took.
+
+    A purely length-weighted spread ignores that sentence-final words are followed by a
+    real pause, so it runs progressively late within a beat (measured bias -0.17 s, up to
+    2 s on the worst beat). Splitting the beat at sentence ends and snapping those
+    boundaries onto detected silence removes the drift (bias -0.07 s).
+    """
+    toks = text.split()
+    if not toks:
+        return []
+    wl = [len(t) + 1.0 for t in toks]
+    groups, cur = [], []
+    for i, t in enumerate(toks):
+        cur.append(i)
+        if _SENT_END.search(t):
+            groups.append(cur)
+            cur = []
+    if cur:
+        groups.append(cur)
+    if len(groups) <= 1:
+        return timed_words(text, dur)
+
+    tw = sum(wl)
+    preds, cum = [], 0.0
+    for grp in groups[:-1]:
+        cum += sum(wl[i] for i in grp)
+        preds.append(dur * cum / tw)
+
+    sil = detect_silences(audio, -40.0, 0.05)
+    bounds, last = [], 0.0
+    for p in preds:
+        cands = [((a + b) / 2.0, (b - a) - 0.5 * abs((a + b) / 2.0 - p))
+                 for a, b in sil if abs((a + b) / 2.0 - p) <= window]
+        t = max(cands, key=lambda x: x[1])[0] if cands else p
+        t = max(t, last + 0.15)
+        last = t
+        bounds.append(t)
+
+    out, start = [], 0.0
+    for gi, grp in enumerate(groups):
+        end = bounds[gi] if gi < len(bounds) else dur
+        span = max(end - start, 0.05)
+        span_w = max(span - min(0.20, span * 0.12), 0.05)   # leave the trailing pause
+        sw = sum(wl[i] for i in grp)
+        t0 = start
+        for i in grp:
+            s = span_w * wl[i] / sw
+            out.append((toks[i], t0, t0 + s))
+            t0 += s
+        start = end
+    return out
+
+
 def make_cues(words, style, total=None, max_words=9, max_chars=44, min_dur=0.75):
     """Chunk timed words into readable captions.
 
@@ -1465,7 +1522,7 @@ def build_clips(segs, slides):
         adur = probe_duration(aud)
         dur = adur + PAD[s["kind"]]
         ass = CLIPS_DIR / f"{s['key']}.ass"
-        words = timed_words(normalize_for_tts(s["text"]), adur)
+        words = timed_words_anchored(normalize_for_tts(s["text"]), aud, adur)
         cues = make_cues(words, "Student" if s["who"] == "student" else "Default", total=adur)
         write_ass(cues, ass)
         out = CLIPS_DIR / f"{s['key']}.mp4"
@@ -1487,6 +1544,37 @@ def mux(clips, out_path: Path):
          "-af", "loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000",
          "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out_path)])
     return out_path
+
+
+def add_chapter_marks(video: Path, segs, clip_durs):
+    """Embed chapter metadata so players show a navigable chapter list."""
+    meta = BUILD_DIR / f"{video.stem}_chapters.txt"
+    lines = [";FFMETADATA1"]
+    t = 0.0
+    starts = {}
+    for s, d in zip(segs, clip_durs):
+        if s["kind"] in ("title", "outro"):
+            t += d
+            continue
+        q = s["qno"]
+        if q not in starts:
+            starts[q] = t
+        t += d
+    order = sorted(starts)
+    for i, q in enumerate(order):
+        st = starts[q]
+        en = starts[order[i + 1]] if i + 1 < len(order) else t
+        sc = SCENES[q - 1]
+        label = sc["chapter"].split("•", 1)[-1].strip().title()
+        lines += ["[CHAPTER]", "TIMEBASE=1/1000",
+                  f"START={int(st * 1000)}", f"END={int(en * 1000)}",
+                  f"title=Chapter {q} - {label}", ""]
+    meta.write_text("\n".join(lines), encoding="utf-8")
+    tmp = video.with_suffix(".chapters.mp4")
+    run([FFMPEG, "-y", "-i", str(video), "-i", str(meta),
+         "-map_metadata", "1", "-map_chapters", "1", "-codec", "copy", str(tmp)])
+    shutil.move(str(tmp), str(video))
+    return len(order)
 
 
 def verify(path: Path, expected_min: float):
@@ -1566,6 +1654,8 @@ def main():
         print(f"  {len(clips)} clips | timeline {mins:.2f} min")
         main_mp4 = ROOT / f"{OUT_STEM}.mp4"
         mux(clips, main_mp4)
+        n_ch = add_chapter_marks(main_mp4, segs, [probe_duration(c) for c in clips])
+        print(f"  embedded {n_ch} chapter markers")
         print("verifying...")
         verify(main_mp4, mins)
         if args.chapter_wise:

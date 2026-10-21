@@ -3,7 +3,8 @@
 A 16-chapter, simple-English Q&A explainer video built from the consolidated
 **DoPT O.M. No. DOPT-1669266628362 dated 24.11.2022** (Paras 2.1 to 5).
 
-* **16 chapters · 64 exam-ready cards · 16 min 26 s · 1920×1080**
+* **16 chapters · 64 exam-ready cards · 16 min 19 s · 1920×1080**
+* Embedded chapter markers (16) — players show a navigable chapter list
 * Riya (student) asks one question per chapter; the teacher answers card by card
 * Every chapter closes on a yellow **"trap / remember"** strip
 * Indian-English narration, colour-coded burned-in subtitles, 1920×1080
@@ -25,8 +26,8 @@ Two cuts of the same recording are shipped — the voice is identical in both:
 
 | File | Length | What changed |
 |---|---|---|
-| `tech_resignation_masterclass.mp4` | **16 min 26 s** | **The final file.** Inter-card padding tightened (0.45→0.18 s after a card, 0.85→0.32 s after a question). Voice speed untouched. |
-| `tech_resignation_masterclass_brisk.mp4` | 15 min 13 s | The tightened cut played back at 1.08× (`setpts` + `atempo`), pitch preserved. Use this for repeat revision. |
+| `tech_resignation_masterclass.mp4` | **16 min 19 s** | **The final file.** Inter-card padding tightened (0.45→0.18 s after a card, 0.85→0.32 s after a question). Voice speed untouched. |
+| `tech_resignation_masterclass_brisk.mp4` | 15 min 06 s | The tightened cut played back at 1.08× (`setpts` + `atempo`), pitch preserved. Chapters rescaled to match. Use this for repeat revision. |
 
 Nothing was re-recorded to make either one. Padding is only ~6 % of the runtime, so
 trimming it reclaims ~36 s; the brisk cut is where the remaining 73 s comes from.
@@ -76,9 +77,20 @@ on-screen card begins. It does that in two steps:
    pause, scoring candidates by *pause length − distance*, because the pause
    between beats is reliably longer than a pause between sentences inside a beat.
 
-Measured result across the 98 beats: **14.7–19.1 chars/sec, median 16.6** — i.e.
+Measured result across the 98 beats: **14.2–19.9 chars/sec, median 16.7** — i.e.
 no beat is mistimed by more than a fraction of a second. `build/alignment_report.json`
 holds every cut, duration and snap offset.
+
+The same anchoring is then applied *inside* each beat to time the individual words for
+captions: the beat is split at sentence ends and those boundaries are snapped onto
+detected pauses. Three models were measured against real speech; the pause-midpoint
+anchor is what ships (a pause-*edge* anchor, which looks more principled, measures worse):
+
+| Word-timing model | median error | bias | > 0.5 s |
+|---|---|---|---|
+| length-weighted only | 0.29 s | −0.23 s | 15 % |
+| **anchored to pause midpoint (shipped)** | **0.18 s** | **−0.21 s** | **11 %** |
+| anchored to pause edge | 0.25 s | −0.26 s | 12 % |
 
 ---
 
@@ -113,8 +125,10 @@ Every render is checked before it is called done. Measured on the delivered file
 | Speaker colours | 16/16 Riya beats cyan, 82/82 teacher beats white |
 | Beat timing consistency | 14.2–19.9 chars/sec, median 16.7 |
 | Dead air (silence > 1.5 s) | none |
-| Integrated loudness | −16.0 LUFS, true peak −1.4 dBFS, LRA 3.3 LU |
+| Caption sync vs actual speech | median 0.08 s, p90 0.54 s — captions trail by ~0.2 s |
+| Integrated loudness | −16.0 LUFS, true peak −1.0 dBFS, LRA 2.9 LU |
 | Streams | H.264 1920×1080@30 + AAC 48 kHz stereo, faststart enabled |
+| Chapter markers | 16 embedded and in range |
 
 When re-trimming encoded clips with `-c copy`, ffmpeg rounds each cut **up** to the next
 packet boundary (+0.1 s worst case, +8 s cumulative over 98 beats). Any timeline you
