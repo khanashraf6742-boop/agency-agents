@@ -1,6 +1,14 @@
 # CCS (Pension) Rules 2021 — Batch 1 (Rules 1 to 10) — explainer video
 
-Deliverable: `pension_b1_rules_1_to_10_city_hinglish.mp4` — 1920x1080, 30 fps, 31 chapters, ~50 minutes.
+Deliverable: `pension_b1_rules_1_to_10_city_hinglish.mp4` — 1920x1080, 30 fps, 31 chapters, 49:44.
+
+**Direct download (91.3 MB):**
+<https://github.com/khanashraf6742-boop/agency-agents/raw/arena/a191c798-agency-agents/pension_rules_2021/pension_b1_rules_1_to_10_city_hinglish.mp4>
+
+**Play in the browser:**
+<https://github.com/khanashraf6742-boop/agency-agents/blob/arena/a191c798-agency-agents/pension_rules_2021/pension_b1_rules_1_to_10_city_hinglish.mp4>
+
+The MP4 is force-added to git (the repo `.gitignore` excludes `*.mp4`), so it is served straight from the branch. Release-asset uploads were not possible: `uploads.github.com` is blocked in the build sandbox. If you later merge this branch into `main`, the ~91 MB blob becomes part of `main`'s history — move it to Releases or LFS at that point if you want a lean repo.
 
 ## What is in the video
 
