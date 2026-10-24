@@ -1,0 +1,1584 @@
+[
+ {
+  "f": "voice_audio/s00_g00.mp3",
+  "voice": "voice-00",
+  "scene": "c02_01_rule11_start",
+  "chars": 527,
+  "text": "Welcome back, doston! Part 1 mein hum Rules 1 se 10 tak kar chuke hain, CCS Pension Rules 2021 ki basic zameen. Aaj Part 2 hai, Rules ke Chapter 3 ka, yani Rules 11 se 30. Yeh poora chapter ek hi sawaal ka jawab deta hai: pension nikalte waqt service ke kaunse saal gine jaate hain, aur kaunse nahi. Pension ka matlab hai retirement ke baad har mahine milne wala paisa. Qualifying service ka matlab hai woh saal jo Rules ginne ko maante hain. Isko ek stopwatch samajhiye, aur Rule 11 batata hai ki stopwatch kab start hoti hai."
+ },
+ {
+  "f": "voice_audio/s00_g01.mp3",
+  "voice": "voice-01",
+  "scene": "c02_01_rule11_start",
+  "chars": 83,
+  "text": "Sir, Government servant ki qualifying service kis din se count hona shuru hoti hai?"
+ },
+ {
+  "f": "voice_audio/s00_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_01_rule11_start",
+  "chars": 343,
+  "text": "Pehle rule lete hain. Qualifying service us din se shuru hoti hai jab servant pehla post charge karta hai. Isse koi farq nahi padta ki woh pehla post substantive tha, officiating tha ya temporary. Substantive matlab permanent. Officiating matlab kisi aur ki jagah, ya trial par post sambhalna. Temporary matlab aisa post jo permanent nahi hai."
+ },
+ {
+  "f": "voice_audio/s00_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_01_rule11_start",
+  "chars": 323,
+  "text": "Ab pehla exception. Agar pehla post sirf officiating ya temporary tha, to woh period tabhi ginta hai jab uske baad bina kisi break ke substantive appointment ho. Substantive post usi service mein ho ya doosri service mein, dono theek. Agar break hai aur substantive appointment nahi, to woh pehla period qualify nahi karta."
+ },
+ {
+  "f": "voice_audio/s00_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_01_rule11_start",
+  "chars": 313,
+  "text": "Ab doosra exception. Athara saal ki umar se pehle ki service count nahi hoti. Sirf ek exception hai: Rule 20 ke tehat civil pension ke liye gini jaane wali military service, jo hum jald hi padhenge. Iska matlab yeh nahi ki sab kuch khatam. Counting bas us din se shuru hoti hai jab insaan athara saal ka hota hai."
+ },
+ {
+  "f": "voice_audio/s00_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_01_rule11_start",
+  "chars": 404,
+  "text": "Ab do real examples. Bilal first July 2010 ko officiating appoint hua, aur first July 2012 ko substantive, bina gap ke. Uski counting 2010 se chalti hai, 2012 se nahi. Charu, janm tenth January 1985, first July 2002 ko join kari, seventeen saal paanch mahine ki umar mein. Uski counting uske eighteenth birthday, tenth January 2003 se shuru hoti hai, aur pehle chhah mahine nau din chhod diye jaate hain."
+ },
+ {
+  "f": "voice_audio/s00_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_01_rule11_start",
+  "chars": 347,
+  "text": "Dhyan dijiye, yahi trap hai. Pehla post officiating ya temporary hone se khatam nahi hota, jab tak uske baad bina break ke substantive appointment aa jaye. Ek aur savdhani. Source interruption ka ek seedha matlab deta hai, yani koi bhi gap, lekin hum woh wording kisi official source se confirm nahi kar paye, isliye ise rule maan kar mat padhiye."
+ },
+ {
+  "f": "voice_audio/s00_g07.mp3",
+  "voice": "voice-00",
+  "scene": "c02_01_rule11_start",
+  "chars": 180,
+  "text": "Yaad rakhiye: clock us din chalti hai jab aap pehla post charge karte hain, officiating service ko bina break ke substantive post chahiye, aur athara saal se pehle kuch nahi ginta."
+ },
+ {
+  "f": "voice_audio/s01_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_02_chapter_map",
+  "chars": 85,
+  "text": "Sir, bees rules bahut hote hain. Chapter 3 kaise organise hai taaki main kho na jaun?"
+ },
+ {
+  "f": "voice_audio/s01_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_02_chapter_map",
+  "chars": 228,
+  "text": "Step one, kya ginta hai. Rules 11 se 23, aur Rule 29, batate hain kaunsi service ginti hai aur kis condition par. State service, probation, contract service, military service, leave, training aur suspension, sabka apna rule hai."
+ },
+ {
+  "f": "voice_audio/s01_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_02_chapter_map",
+  "chars": 211,
+  "text": "Step two, kya kho sakta hai. Forfeiture matlab pehli service pension ke liye mita di jaati hai. Rule 24 dismissal ya removal par mita deta hai, Rule 26 resignation par, aur Rule 27 service mein interruption par."
+ },
+ {
+  "f": "voice_audio/s01_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_02_chapter_map",
+  "chars": 242,
+  "text": "Step three, kya bach sakta hai. Rule 25 mein reinstatement, Rule 26 mein permitted resignation, Rule 27 ke exceptions, aur Rule 28 mein condonation. Condonation ka simple matlab: authority gap maaf kar deti hai taaki pehli service bachi rahe."
+ },
+ {
+  "f": "voice_audio/s01_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_02_chapter_map",
+  "chars": 259,
+  "text": "Step four, proof. Rule 30 Head of Office se service check karwata hai aur career ke fix points par Format 4 mein certificate deta hai. Ek tip: routes ki koi ginti yaad mat kijiye. Source ne ek ginti di thi, par arithmetic milti nahi, isliye usse chhod dijiye."
+ },
+ {
+  "f": "voice_audio/s01_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_02_chapter_map",
+  "chars": 143,
+  "text": "Yaad rakhiye: count, lose, save, prove. Counting Rules 11 se 23 aur 29, losing Rules 24, 26 aur 27, saving Rules 25 se 28, aur proving Rule 30."
+ },
+ {
+  "f": "voice_audio/s02_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_03_amendments_currency",
+  "chars": 103,
+  "text": "Sir, source chaar Gazette notifications ginata hai. Inme se kaunse ne actually Rules 11 se 30 ko badla?"
+ },
+ {
+  "f": "voice_audio/s02_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_03_amendments_currency",
+  "chars": 251,
+  "text": "Original Rules G.S.R. 868(E), twentieth December 2021 se aaye. Uske baad sirf ek Gazette notification ne Chapter 3 ke andar kuch badla: G.S.R. 770(E), seventh October 2022, jisne Rule 20 ki ek clause badli. Woh change hum jald hi detail mein padhenge."
+ },
+ {
+  "f": "voice_audio/s02_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_03_amendments_currency",
+  "chars": 339,
+  "text": "2024 ka notification, G.S.R. 410(E), sixteenth July 2024, Rules 11 se 30 ko nahi badla. Usne Rule 57 badla, jise Rule 30 point karta hai. Iski start date par dhyan dijiye. Source sixteenth November 2024 kehta hai, par sau bees din ginne se thirteenth November aata hai, aur maine Gazette padhi nahi. Isliye kahein, about mid November 2024."
+ },
+ {
+  "f": "voice_audio/s02_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_03_amendments_currency",
+  "chars": 269,
+  "text": "2025 ka notification, G.S.R. 340(E), twenty-second May 2025, sirf Rule 37 amend karta hai, public sector undertakings mein absorbed employees ke baare mein. Woh agle batch ka hissa hai. Cite karte waqt sirf Rule 37 kahiye, kyunki do pages sub-rule number par alag hain."
+ },
+ {
+  "f": "voice_audio/s02_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_03_amendments_currency",
+  "chars": 396,
+  "text": "Ab honest currency note. Source kehta hai ise twelfth September 2026 ko check kiya gaya, par hum usse verify nahi kar sakte. Humne twenty-first October 2026 tak search kiya aur 2022 ke baad Rules 11 se 30 mein koi amendment nahi mila, lekin woh search search results se tha, Gazette se nahi. Isliye is part ki saari wording ko close restatement maaniye, aur exam answer Gazette se confirm kijiye."
+ },
+ {
+  "f": "voice_audio/s02_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_03_amendments_currency",
+  "chars": 119,
+  "text": "Yaad rakhiye: Chapter 3 mein sirf G.S.R. 770(E) of 2022 ne kuch badla, aur exact words ke liye hamesha Gazette dekhiye."
+ },
+ {
+  "f": "voice_audio/s03_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_04_rule12_duties_pay",
+  "chars": 111,
+  "text": "Sir, Rule 12 ke tehat service qualify hone se pehle kya sach hona chahiye, aur yahan service ka matlab kya hai?"
+ },
+ {
+  "f": "voice_audio/s03_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_04_rule12_duties_pay",
+  "chars": 280,
+  "text": "Pehle rule. Service tabhi qualify karti hai jab do baatein dono sach hon: duties Government regulate karti ho, aur pay bhi Government regulate karti ho, ya dono aisi conditions par hon jo Government tay karti hai. Yeh AND hai, OR nahi. Sirf duties kaafi nahi, sirf pay kaafi nahi."
+ },
+ {
+  "f": "voice_audio/s03_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_04_rule12_duties_pay",
+  "chars": 370,
+  "text": "Ab Explanation. Yahan service ka matlab hai Government ke under service, aur Government dwara pay ki gayi, ya to Consolidated Fund of India se, jo Government ka main account hai, ya us Local Fund se jo Government khud administer karti hai. Local Fund ka matlab Rule 3, clause 1, sub-clause r mein hai: uske kharch par Government ka poora aur direct control hona chahiye."
+ },
+ {
+  "f": "voice_audio/s03_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_04_rule12_duties_pay",
+  "chars": 334,
+  "text": "Ab exclusion. Aisi establishment ki service bahar hai jiske paas non-contributory pension scheme nahi, jab tak Government usse qualifying na maan le. Non-contributory matlab employee pension mein kuch nahi deta. Source aisi jagahon ko contributory provident fund type kehta hai, par woh label source ka apna gloss hai, confirmed nahi."
+ },
+ {
+  "f": "voice_audio/s03_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_04_rule12_duties_pay",
+  "chars": 363,
+  "text": "Ab ek real example. Dev aise office mein hai jahan duties Government rules follow karti hain, par salary society fund se aati hai jise Government control nahi karti. Ek limb poora hua, doosra nahi, isliye woh period qualify nahi karta. Agar salary Local Fund se aati jise Government administer karti, aur duties aur pay dono regulated hote, to ginti ho sakti thi."
+ },
+ {
+  "f": "voice_audio/s03_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_04_rule12_duties_pay",
+  "chars": 285,
+  "text": "Dhyan dijiye, yahi trap hai. Rule 2 poochta hai ki Rules kisi vyakti par lagte hain ya nahi. Rule 12 poochta hai ki service ka koi khaas hissa ginta hai ya nahi. Vyakti pehla test pass karke doosra fail kar sakta hai. Practice mein service book aur appointment letter hi evidence hain."
+ },
+ {
+  "f": "voice_audio/s03_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_04_rule12_duties_pay",
+  "chars": 163,
+  "text": "Yaad rakhiye: Rule 12 ke liye duties aur pay dono Government se regulated chahiye. Rule 2 poochta hai kaun cover hai, Rule 12 poochta hai kaunsi service ginti hai."
+ },
+ {
+  "f": "voice_audio/s04_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_05_rule13_state_service",
+  "chars": 116,
+  "text": "Sir, agar koi pehle State Government mein kaam kar chuka hai, to woh service ginti hai kya, aur paisa kaun deta hai?"
+ },
+ {
+  "f": "voice_audio/s04_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_05_rule13_state_service",
+  "chars": 496,
+  "text": "Pehle route one. State servant jiska pehla appointment State pensionable establishment mein thirty-first December 2003 ko ya usse pehle hua, aur jise baad mein permanently transfer kiya gaya aise Central post par jo in Rules mein aata hai, uski continuous State service ginti hai. Woh date isliye matter karti hai kyunki New Pension System first January 2004 se shuru hua. Proviso: officiating ya temporary service ke baad bina break ke substantive appointment chahiye, State mein ya Centre mein."
+ },
+ {
+  "f": "voice_audio/s04_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_05_rule13_state_service",
+  "chars": 422,
+  "text": "Ab route two. Agar usne State job se resignation diya aur phir Central post join kiya, to State service phir bhi ginti hai, par tabhi jab resignation proper permission ke saath thi. Explanation do test deta hai. Pehla, usne State Government ki previous permission lekar Central post ke liye apply kiya. Doosra, State ka order kehta hai ki woh proper permission ke saath Central post join karne ke liye resign kar raha hai."
+ },
+ {
+  "f": "voice_audio/s04_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_05_rule13_state_service",
+  "chars": 262,
+  "text": "Ab paisa. Rule 13(3) ke tehat poora pension aur gratuity Central Government uthati hai. Gratuity matlab retirement ya death par ek baar milne wali lump sum. Centre State se koi hissa recover nahi karta. Yeh yaad rakhiye, kyunki Rule 14 alag tarah kaam karta hai."
+ },
+ {
+  "f": "voice_audio/s04_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_05_rule13_state_service",
+  "chars": 385,
+  "text": "Ab ek real example. Asha 1999 mein Assistant Engineer ke roop mein State pensionable post par aayi aur 2007 mein permanently Central post par transfer hui. Uski poori State service ginti hai, aur kharch Centre uthati hai. Dhyan dijiye, yahi trap hai: Rule 13(2) Rule 26 ke permitted resignation exception par tika hai. Permission ke papers na hon to State service forfeit ho sakti hai."
+ },
+ {
+  "f": "voice_audio/s04_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_05_rule13_state_service",
+  "chars": 166,
+  "text": "Yaad rakhiye: pehla appointment thirty-first December 2003 ko ya pehle, permanent transfer ya proper permission ke saath resignation, aur poora paisa Centre deta hai."
+ },
+ {
+  "f": "voice_audio/s05_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_06_rule14_autonomous_body",
+  "chars": 82,
+  "text": "Sir, autonomous body ki service kab ginti hai, aur body ko kya pay karna hota hai?"
+ },
+ {
+  "f": "voice_audio/s05_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_06_rule14_autonomous_body",
+  "chars": 432,
+  "text": "Pehle rule. Autonomous body woh sanstha hai jise Government banati hai par jo apni management se chalti hai. Agar kisi ka pehla appointment aisi body mein thirty-first December 2003 ko ya pehle hua, aisi body mein jiska non-contributory pension scheme milta julta ho, aur baad mein usne resign karke proper permission ke saath Central post join kiya, to body ki service ginti hai. Chaar conditions, clause a se d, sab poori chahiye."
+ },
+ {
+  "f": "voice_audio/s05_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_06_rule14_autonomous_body",
+  "chars": 389,
+  "text": "Ab woh chaar conditions. A: officiating ya temporary Central appointment ke baad bina break ke substantive appointment hona chahiye. B: servant us service ke liye body se alag pension nahi le raha ho. C: body ek lump sum deti hai jo pension ya service gratuity aur retirement gratuity, dono cover kare. D: woh lump sum 1981 Commutation of Pension Rules ki commutation table se nikala jaye."
+ },
+ {
+  "f": "voice_audio/s05_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_06_rule14_autonomous_body",
+  "chars": 464,
+  "text": "Rule 14 ka ek Explanation hai, aur yahi hissa zyadatar notes miss kar dete hain. Proper permission baad mein aayi friendly letter se prove nahi hoti. Woh tabhi maani jaati hai jab do baatein sach hon. Pehla, usne body ki previous permission lekar Central post ke liye apply kiya. Doosra, body ka khud ka order saaf kahta hai ki woh proper permission ke saath Central post join karne ke liye resign kar raha hai. Dono limb chahiye, warna body ki service nahi ginti."
+ },
+ {
+  "f": "voice_audio/s05_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_06_rule14_autonomous_body",
+  "chars": 390,
+  "text": "Ab sub-rule two, woh line jise yeh build pehle unverified flag karta tha. State Government ke under aane wali autonomous body ke liye lump sum dene ki duty aasman se nahi girti. Woh us body par Central Government aur us State ke reciprocal arrangement se binding hoti hai. Yeh Rule 13 ka mirror image hai. Wahan Centre poora kharch uthati hai. Yahan body apna hissa lump sum se chukati hai."
+ },
+ {
+  "f": "voice_audio/s05_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_06_rule14_autonomous_body",
+  "chars": 348,
+  "text": "Dhyan dijiye, yahi trap hai. Public sector undertaking ki service, nationalised bank ya financial institution sameta, qualifying service nahi hai. Esha ko dekhiye, jo 2001 mein Central autonomous body mein aayi aur 2009 mein Central post par, lump sum paid: uski service ginti hai. Bilkul wahi dates nationalised bank mein hon to woh ginti hi nahi."
+ },
+ {
+  "f": "voice_audio/s05_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_06_rule14_autonomous_body",
+  "chars": 160,
+  "text": "Yaad rakhiye: autonomous body ki service ginti hai jab body lump sum deti hai, par PSU, nationalised bank aur financial institution ki service kabhi nahi ginti."
+ },
+ {
+  "f": "voice_audio/s06_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_07_rules15_17_status_probation_apprentice",
+  "chars": 86,
+  "text": "Sir, temporary status, probation aur apprentice service mein se kitna hissa ginta hai?"
+ },
+ {
+  "f": "voice_audio/s06_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_07_rules15_17_status_probation_apprentice",
+  "chars": 441,
+  "text": "Pehle Rule 15. Casual labourer jise thirty-first December 2003 ko ya pehle temporary status mila tha, 1993 Casual Labourers Scheme ke tehat, jise Department of Personnel and Training ne notify kiya, aur jo baad mein regularise hua, uske temporary-status service ka sirf fifty percent ginta hai. Poora nahi, bas aadha. Rule khud us notifying department ka naam leta hai, halanki 1993 ke original order ka number aur date abhi padha nahi gaya."
+ },
+ {
+  "f": "voice_audio/s06_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_07_rules15_17_status_probation_apprentice",
+  "chars": 273,
+  "text": "Rule 16 probation ka hai, yani job permanent hone se pehle ka trial period. Probation service tab ginti hai jab baad mein confirmation ho jaye, yani us post par ya doosri post par permanent kar diya jaye. Do cheezein chahiye: kisi post par probation, aur phir confirmation."
+ },
+ {
+  "f": "voice_audio/s06_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_07_rules15_17_status_probation_apprentice",
+  "chars": 309,
+  "text": "Rule 17 apprentice ka hai, yani woh log jo training arrangement ke tehat koi kaam seekhte hain. General rule yeh hai ki apprentice service ginti nahi. Ek patla exception hai: Subordinate Accounts Service ka apprentice, aur woh bhi sirf Indian Audit and Accounts Department ya Defence Accounts Department mein."
+ },
+ {
+  "f": "voice_audio/s06_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_07_rules15_17_status_probation_apprentice",
+  "chars": 225,
+  "text": "Ab ek real example. Gopal ko first April 2002 ko temporary status mila aur first April 2006 ko regularisation hui. Yeh chaar saal ki temporary-status service hai. Chaar ka aadha do saal, isliye do saal ginte hain, chaar nahi."
+ },
+ {
+  "f": "voice_audio/s06_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_07_rules15_17_status_probation_apprentice",
+  "chars": 298,
+  "text": "Dhyan dijiye, yahi trap hai. Ek aasan pattern: benefit tabhi milta hai jab sequence poora ho, probation phir confirmation, temporary status phir regularisation. Aam galti yeh hai ki log Rule 15 ke tehat poora period maang lete hain. Hamesha do cheezein check kijiye: service ka type aur percentage."
+ },
+ {
+  "f": "voice_audio/s06_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_07_rules15_17_status_probation_apprentice",
+  "chars": 192,
+  "text": "Yaad rakhiye: temporary status fifty percent ginta hai, probation ko confirmation chahiye, aur apprentice service nahi ginti siwaye Indian Audit and Accounts ya Defence Accounts department ke."
+ },
+ {
+  "f": "voice_audio/s07_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_08_rule18_contract",
+  "chars": 111,
+  "text": "Sir, regular appointment se pehle ki contract service kab ginti hai, aur us vyakti ko kya wapas karna hota hai?"
+ },
+ {
+  "f": "voice_audio/s07_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_08_rule18_contract",
+  "chars": 313,
+  "text": "Pehle limb one. Vyakti ko Government ne pehle ek fix period ke liye contract par liya, aur phir thirty-first December 2003 ko ya pehle usi ya doosri post par appoint kiya, aisi establishment mein jo in Rules mein aati hai, aur duty mein koi break nahi. Contract se regular service tak ka saaf switch hona chahiye."
+ },
+ {
+  "f": "voice_audio/s07_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_08_rule18_contract",
+  "chars": 311,
+  "text": "Ab limb two. Us vyakti ko 1972 Rules ke option ke hisaab se Government ko refund bhi karna hoga: Contributory Provident Fund mein Government ka jo hissa tha, jisme dono taraf paisa daalti hain, woh interest sameta, aur us service ke liye mila koi doosra compensation bhi. Dono limb chahiye. Ek akela kaafi nahi."
+ },
+ {
+  "f": "voice_audio/s07_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_08_rule18_contract",
+  "chars": 283,
+  "text": "Ab ek real example. Farid, ek engineer, 1998 se do saal ke contract par tha, 2000 mein bina gap ke usi department mein regular hua, aur Government ka provident fund hissa interest ke saath refund kar diya. Uski contract period ginti hai. Agar refund na karta, to woh nahi ginti hoti."
+ },
+ {
+  "f": "voice_audio/s07_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_08_rule18_contract",
+  "chars": 215,
+  "text": "Dhyan dijiye, yahi trap hai. Candidates ko clean switch yaad rehta hai aur refund bhool jaate hain, ya ulta. Dono limb poore chahiye, aur regular appointment thirty-first December 2003 ko ya usse pehle hona chahiye."
+ },
+ {
+  "f": "voice_audio/s07_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_08_rule18_contract",
+  "chars": 165,
+  "text": "Yaad rakhiye: Rule 18 ke liye contract se regular service tak thirty-first December 2003 tak saaf move chahiye, aur Government ke provident fund hisse ka refund bhi."
+ },
+ {
+  "f": "voice_audio/s08_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_09_no_break_family",
+  "chars": 100,
+  "text": "Sir, main baar baar sunta hoon, no break phir substantive post. Yeh condition kaunse rules mein hai?"
+ },
+ {
+  "f": "voice_audio/s08_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_09_no_break_family",
+  "chars": 322,
+  "text": "Family ko trace karte hain. Rule 11 mein officiating ya temporary service ginti hai agar uske baad bina break ke substantive appointment ho, usi service mein ya doosri mein. Rule 13 mein State ki officiating ya temporary service ginti hai agar uske baad bina break ke substantive appointment ho, State mein ya Centre mein."
+ },
+ {
+  "f": "voice_audio/s08_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_09_no_break_family",
+  "chars": 267,
+  "text": "Rule 14, clause a mein Central ki officiating ya temporary appointment ke baad bina break ke substantive appointment chahiye. Rule 18 wahi baat alag shabdon mein rakhta hai: duty mein no interruption. Yani chaar rules, ek hi idea, halanki Rule 18 ki wording alag hai."
+ },
+ {
+  "f": "voice_audio/s08_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_09_no_break_family",
+  "chars": 318,
+  "text": "Gaps kabhi kabhi bhare ja sakte hain. Rule 22, sub-rule 3, training aur appointment alag stations par hone par joining time tak ka gap ginta hai. Rule 26, sub-rule 4, joining time ke andar ka gap leave due se cover karta hai, aur baaki ke liye formal condonation chahiye. Gap bhar jaye to pehli service safe rehti hai."
+ },
+ {
+  "f": "voice_audio/s08_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_09_no_break_family",
+  "chars": 233,
+  "text": "Dhyan dijiye, yahi trap hai. Pehli officiating, temporary, State ya contract service ek naav jaisi hai jise anchor chahiye: substantive appointment. Agar gap hai aur usse koi bharta ya condone nahi karta, to pehli service nahi ginti."
+ },
+ {
+  "f": "voice_audio/s08_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_09_no_break_family",
+  "chars": 141,
+  "text": "Yaad rakhiye: officiating ya temporary service ko substantive appointment ka anchor chahiye, bina gap ke, jab tak gap bhara ya condone na ho."
+ },
+ {
+  "f": "voice_audio/s09_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_10_rule19_reemployed_civil_pensioner",
+  "chars": 94,
+  "text": "Sir, re-employment ke baad purani service kaun ginn sakta hai, aur kya refund karna padta hai?"
+ },
+ {
+  "f": "voice_audio/s09_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_10_rule19_reemployed_civil_pensioner",
+  "chars": 463,
+  "text": "Pehle entry gate. Rule 19 sirf un logon ke liye hai jo compensation pension, invalid pension, compensation gratuity ya invalid gratuity par retire hue. Invalid pension buri sehat ke kaaran retire hone wale ko milti hai. Aisa vyakti agar thirty-first December 2003 ko ya pehle re-employed hua aur pension rok kar refund kar diya, to purani service ginti hai. Superannuation ya retiring pension par retire hone wale naam nahi hain, isliye implication se bahar hain."
+ },
+ {
+  "f": "voice_audio/s09_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_10_rule19_reemployed_civil_pensioner",
+  "chars": 449,
+  "text": "Ab kya refund hota hai. Clause one: re-employment se pehle jo pension li ja chuki, woh refund nahi karni. Clause two: re-employment par pay fix karte waqt jo pension element ignore kiya gaya tha, woh refund karna padta hai. Source usse gratuity element kehta tha, par rule text pension element kehta hai. Clause three: jo pay fixation mein count kiya gaya, woh retirement gratuity aur commuted value se set off hota hai, aur balance refund hota hai."
+ },
+ {
+  "f": "voice_audio/s09_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_10_rule19_reemployed_civil_pensioner",
+  "chars": 352,
+  "text": "Ab kaise aur kab. Refund monthly instalments mein jaata hai, zyada se zyada thirty-six, aur pehli instalment option ke mahine ke agle mahine se. Purani service ginne ka haq poore refund ke baad hi zinda hota hai. Agar refund poora hone se pehle death ho jaye, to bacha hua hissa death gratuity se adjust hota hai, yani family ko milne wali lump sum se."
+ },
+ {
+  "f": "voice_audio/s09_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_10_rule19_reemployed_civil_pensioner",
+  "chars": 441,
+  "text": "Ab numbers ke saath ek real example. Gita, invalid pension par ek clerk, 1999 mein re-employed hui aur June 1999 mein option diya. Us par seventy-two thousand rupees bante hain, to woh thirty-six instalments do-do hazaar ki deti hai, July 1999 se June 2002 tak. Aakhri instalment ke baad hi uski purani service ginti hai. Agar bees instalments ke baad death hoti, to chalees hazaar diye jaate aur battis hazaar death gratuity se kaate jaate."
+ },
+ {
+  "f": "voice_audio/s09_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_10_rule19_reemployed_civil_pensioner",
+  "chars": 291,
+  "text": "Dhyan dijiye, yahi trap hai. Pehli instalment option ke agle mahine, option ke mahine mein nahi. Refund ke liye haan bolna kaafi nahi, kyunki counting aakhri instalment ke baad hi zinda hoti hai. Aur yaad rakhiye, is gate mein sirf compensation ya invalid pension aur gratuity aa sakte hain."
+ },
+ {
+  "f": "voice_audio/s09_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_10_rule19_reemployed_civil_pensioner",
+  "chars": 138,
+  "text": "Yaad rakhiye: zyada se zyada thirty-six instalments, option ke agle mahine se shuru, aur purani service poore refund ke baad hi ginti hai."
+ },
+ {
+  "f": "voice_audio/s10_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_11_rule19_5_vs_20_5",
+  "chars": 124,
+  "text": "Sir, jab re-employed vyakti ne purane benefits rakh liye, to civil aur military cases mein baad ka pension kaise chalta hai?"
+ },
+ {
+  "f": "voice_audio/s10_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_11_rule19_5_vs_20_5",
+  "chars": 356,
+  "text": "Pehle Rule 19, sub-rule 5. Agar re-employed civil pensioner ne pehli pension ya gratuity rakhi, aur purani service nahi ginti, to baad ka benefit cap ho jaata hai. Woh us farq se zyada nahi ho sakta jo combined service deti aur jo pehle mil chuka. Capital value matlab pension ki ek baar ki keemat, jo final retirement par commutation table se nikalti hai."
+ },
+ {
+  "f": "voice_audio/s10_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_11_rule19_5_vs_20_5",
+  "chars": 247,
+  "text": "Ab Rule 20, sub-rule 5, ulta. Military case mein baad ki civil service ka pension aur gratuity pehle se li ja rahi military pension aur gratuity se limit nahi hote. Yani civil se civil mein set-off cap hai, aur military se civil mein koi cap nahi."
+ },
+ {
+  "f": "voice_audio/s10_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_11_rule19_5_vs_20_5",
+  "chars": 320,
+  "text": "Ab banaye hue numbers se ek simple illustration. Maan lijiye combined service das lakh rupees deti aur chaar lakh pehle mil chuke hain. Rule 19 ke tehat baad ka benefit chhah lakh par cap ho jayega. Rule 20 ke tehat aisa koi cap nahi hoga. Asli calculation commutation tables se hota hai, isliye ise sirf idea samajhiye."
+ },
+ {
+  "f": "voice_audio/s10_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_11_rule19_5_vs_20_5",
+  "chars": 211,
+  "text": "Dhyan dijiye, yahi trap hai. In dono ko mix kar diya to marks jaate hain: nineteen five mein limit hai, twenty five mein nahi. Yahan dono texts close restatement hain, isliye exact words Gazette se check kijiye."
+ },
+ {
+  "f": "voice_audio/s10_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_11_rule19_5_vs_20_5",
+  "chars": 91,
+  "text": "Yaad rakhiye: Rule 19 sub-rule 5 mein limitation hai, aur Rule 20 sub-rule 5 mein koi nahi."
+ },
+ {
+  "f": "voice_audio/s11_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_12_rule20_military",
+  "chars": 67,
+  "text": "Sir, pehle ki military service kab civil pension ke liye ginti hai?"
+ },
+ {
+  "f": "voice_audio/s11_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_12_rule20_military",
+  "chars": 425,
+  "text": "Pehle rule. Kisi ne military service ki aur thirty-first December 2003 ko ya pehle civil post par re-employment hui. Usne re-employment par military pension rok di, 1972 Rules ke apne option ke hisaab se, aur jo pension li thi, pension ke kisi hisse ki commuted value, aur retirement gratuity service gratuity sameta, sab refund kar diya. Tab military service ginti hai. Yahi woh exception hai jise Rule 11 ne point kiya tha."
+ },
+ {
+  "f": "voice_audio/s11_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_12_rule20_military",
+  "chars": 393,
+  "text": "Ab refund aur gaps. Sub-rule 2 ke tehat refund monthly instalments mein, zyada se zyada thirty-six, aur counting ka haq poore refund ke baad zinda hota hai. Sub-rule 4 ke tehat jo order military service ginta hai woh military aur civil service ke beech ka gap bhi maaf kar deta hai, yani condone. Source military service ke andar ke gaps bhi jodta hai, par woh hissa hum confirm nahi kar paye."
+ },
+ {
+  "f": "voice_audio/s11_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_12_rule20_military",
+  "chars": 326,
+  "text": "Do Explanations yaad rakhiye. Explanation 2: agar vyakti ne military pension aur gratuity rakhni chuni, to uski military service nahi ginti. Explanation 3: jo thirty-first December 2003 ke baad military join karta hai woh New Pension System mein hai, aur military pension rakhta hai. Isliye refund-and-stop hi asli option hai."
+ },
+ {
+  "f": "voice_audio/s11_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_12_rule20_military",
+  "chars": 316,
+  "text": "Ab ek real example. Imran ne first January 1985 se thirty-first December 1998 tak military service ki, bilkul chaudah saal. Woh first March 1999 ko civil post par aaya, do mahine ke gap ke baad. Usne military pension rok di aur refund kar diya. Counting order ne gap maaf kar diya, aur poore chaudah saal ginte hain."
+ },
+ {
+  "f": "voice_audio/s11_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_12_rule20_military",
+  "chars": 150,
+  "text": "Yaad rakhiye: military service tabhi ginti hai jab vyakti ne military pension rok kar refund kiya, aur thirty-first December 2003 tak re-employed hua."
+ },
+ {
+  "f": "voice_audio/s12_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_13_rule20_2022_amendment",
+  "chars": 83,
+  "text": "Sir, 2022 ke amendment ne Rule 20 mein exactly kya badla, aur kya obsolete ho gaya?"
+ },
+ {
+  "f": "voice_audio/s12_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_13_rule20_2022_amendment",
+  "chars": 166,
+  "text": "Pehle amendment. G.S.R. 770(E), seventh October 2022, ne Rule 20 ke Explanation 1 ki clause two substitute ki. Chapter 3 ko chhune wala yahi ek Gazette amendment hai."
+ },
+ {
+  "f": "voice_audio/s12_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_13_rule20_2022_amendment",
+  "chars": 277,
+  "text": "Yeh sirf history hai. Purani wording kehti thi ki re-employment par pay fix karte waqt jo pension element ignore hua woh refund karne ki zarurat nahi thi. Woh wording obsolete ho gayi. Seventh October 2022 se kehta hai ki woh element refund karna tha. Matlab bilkul palat gaya."
+ },
+ {
+  "f": "voice_audio/s12_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_13_rule20_2022_amendment",
+  "chars": 368,
+  "text": "Ab current package. Clause one: re-employment se pehle li gayi pension refund nahi karni. Clause two: ignore kiya gaya pension element ab refund hota hai. Clause three, jise source ne chhod diya tha: pay fixation mein jo count hua woh retirement gratuity aur commuted value se set off hota hai, aur balance refund hota hai. Yeh Rule 19, sub-rule 2 ko aina dikhata hai."
+ },
+ {
+  "f": "voice_audio/s12_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_13_rule20_2022_amendment",
+  "chars": 309,
+  "text": "Dhyan dijiye, yahi trap hai. Purane notes wala candidate likhega ki yeh element refund karne ki zarurat nahi, aur woh ab galat hai. Source ne ise galti se gratuity element kaha tha; yeh pension element hai. Ek shabd ka amendment poora matlab palat sakta hai, isliye hamesha current position par answer dijiye."
+ },
+ {
+  "f": "voice_audio/s12_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_13_rule20_2022_amendment",
+  "chars": 111,
+  "text": "Yaad rakhiye: seventh October 2022 se pay fixation par ignore kiya gaya pension element refund karna padta hai."
+ },
+ {
+  "f": "voice_audio/s13_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_14_cutoff_and_refund_logic",
+  "chars": 103,
+  "text": "Sir, kaunse rules thirty-first December 2003 date use karte hain, aur refunds baar baar kyun aate hain?"
+ },
+ {
+  "f": "voice_audio/s13_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_14_cutoff_and_refund_logic",
+  "chars": 273,
+  "text": "Yeh timeline hai. Thirty-first December 2003 date Rules 13, 14, 15, 18, 19 aur 20 mein aati hai. Us date ke baad naye joiners New Pension System mein hain, jo first January 2004 se shuru hota hai. Yani yeh outside-service routes purani pension wali generation ke liye hain."
+ },
+ {
+  "f": "voice_audio/s13_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_14_cutoff_and_refund_logic",
+  "chars": 328,
+  "text": "Ab refund ka idea. Agar Government us service ke liye kuch de chuki hai, provident fund hissa, pension ya gratuity ke roop mein, to usi service ko dobara ginna double payment ho jayega. Isliye vyakti jo mila tha woh wapas karta hai. Rule 18 provident fund hisse ka hai, Rule 19 civil pension ka, aur Rule 20 military pension ka."
+ },
+ {
+  "f": "voice_audio/s13_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_14_cutoff_and_refund_logic",
+  "chars": 233,
+  "text": "Instalments par: Rules 19 aur 20 thirty-six monthly instalments tak dete hain, option ke agle mahine se shuru. Counting aakhri instalment ke baad hi zinda hoti hai. Rule 18, jitna text humne padha, instalments ka koi zikr nahi karta."
+ },
+ {
+  "f": "voice_audio/s13_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_14_cutoff_and_refund_logic",
+  "chars": 216,
+  "text": "Dhyan dijiye, yahi trap hai. Refund koi formality nahi hai. Woh counting ke liye pre-condition hai. Aur teeno rules alag rakhiye: Rule 18 provident fund hissa, Rule 19 civil pensioner, aur Rule 20 military pensioner."
+ },
+ {
+  "f": "voice_audio/s13_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_14_cutoff_and_refund_logic",
+  "chars": 161,
+  "text": "Yaad rakhiye: date thirty-first December 2003 hai, refund double benefit rokte hain, zyada se zyada thirty-six instalments, aur counting aakhri ke baad hi shuru."
+ },
+ {
+  "f": "voice_audio/s14_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_15_rule21_leave",
+  "chars": 83,
+  "text": "Sir, leave qualifying service ginti hai kya, aur agar service book kuch na kahe to?"
+ },
+ {
+  "f": "voice_audio/s14_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_15_rule21_leave",
+  "chars": 227,
+  "text": "Pehle rule. Har woh leave ginti hai jiske liye leave salary milti hai. Leave salary matlab leave ke dauraan milne wali pay. Extraordinary leave, yani bina pay ki leave, bhi ginti hai agar woh medical certificate par di gayi ho."
+ },
+ {
+  "f": "voice_audio/s14_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_15_rule21_leave",
+  "chars": 279,
+  "text": "Ab exception. Doosri extraordinary leave nahi ginti. Par appointing authority, usse grant karte waqt, do cases mein ginne ki permission de sakti hai: servant civil commotion ke kaaran duty join ya rejoin nahi kar paya, ya leave higher scientific ya technical studies ke liye thi."
+ },
+ {
+  "f": "voice_audio/s14_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_15_rule21_leave",
+  "chars": 322,
+  "text": "Ab Explanation, asli sona. Agar extraordinary leave medical certificate ya proviso se cover nahi hai, to service book mein us waqt definite entry chahiye jo kahe ki yeh period nahi ginega. Woh baad mein bhi ho sakti hai, par superannuation se chhah mahine pehle se zyada late nahi. Agar koi entry nahi, to leave ginti hai."
+ },
+ {
+  "f": "voice_audio/s14_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_15_rule21_leave",
+  "chars": 306,
+  "text": "Ab ek real example. Hari ne 2015 mein extraordinary leave li, aur uski service book mein kisi ne entry nahi ki. To woh period ginta hai. Agar department usse bahar rakhna chahta, aur Hari thirtieth November 2030 ko retire hota hai, to late entry thirtieth May 2030 tak, yani chhah mahine pehle, karni hogi."
+ },
+ {
+  "f": "voice_audio/s14_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_15_rule21_leave",
+  "chars": 240,
+  "text": "Dhyan dijiye, yahi trap hai. Silence ka matlab har rule mein alag hai. Rule 21 mein silence employee ke favour mein hai, leave ginti hai. Rule 23 mein silence nuksaan deta hai, suspension nahi ginta. Rule 28 mein silence ka matlab gap maaf."
+ },
+ {
+  "f": "voice_audio/s14_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_15_rule21_leave",
+  "chars": 149,
+  "text": "Yaad rakhiye: Rule 21 mein silence ka matlab extraordinary leave ginti hai, aur late entry superannuation se sirf chhah mahine pehle tak allowed hai."
+ },
+ {
+  "f": "voice_audio/s15_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_16_rule22_training",
+  "chars": 123,
+  "text": "Sir, Group C appointment se pehle ki training ginti hai kya, aur training aur appointment ke beech ke gaps ka kya hota hai?"
+ },
+ {
+  "f": "voice_audio/s15_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_16_rule22_training",
+  "chars": 429,
+  "text": "Pehle rule. Agar Government servant ko Group C post par regular appointment se pehle departmental training karni padi, aur us dauraan pay scale mein pay, stipend ya nominal allowance mila, to training period ginta hai. Stipend matlab trainee ko milne wali chhoti fix payment. Jo cases isme nahi aate, unke liye sub-rule 2 kehta hai ki Government order se tay karti hai ki appointment se theek pehle ki training ginti hai ya nahi."
+ },
+ {
+  "f": "voice_audio/s15_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_16_rule22_training",
+  "chars": 375,
+  "text": "Ab gaps. Jab training aur regular appointment alag stations par the, to gap joining time tak ginta hai, yani naye place tak travel aur join karne ka allowed time. Agar gap zyada hai, administrative reasons se, to extra hissa due leave dekar regularise hota hai, aur leave due na ho to Head of Department extraordinary leave deta hai. Woh extraordinary leave period ginta hai."
+ },
+ {
+  "f": "voice_audio/s15_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_16_rule22_training",
+  "chars": 302,
+  "text": "Ab ek real example. Jaya, Group C clerk, 2005 mein doosre station training par gayi. Usne joining time se chhah din zyada liye, administrative reasons se, aur leave due nahi thi. Head of Department ne chhah din ki extraordinary leave di, aur woh din ginte hain. Agar leave due hoti, woh pehle use hoti."
+ },
+ {
+  "f": "voice_audio/s15_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_16_rule22_training",
+  "chars": 327,
+  "text": "Head of Department kaun hai? Rule 3, clause 1, sub-clause p kehta hai: woh authority jo 1978 Delegation of Financial Powers Rules ke Schedule I mein named hai, ya jo President ne designate kiya. Actors yaad rakhiye: Rule 21 mein appointing authority, Rule 22 sub-rule 4 mein Head of Department, aur Rule 30 mein Head of Office."
+ },
+ {
+  "f": "voice_audio/s15_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_16_rule22_training",
+  "chars": 250,
+  "text": "Dhyan dijiye, yahi trap hai. Rule 21 ki aam extraordinary leave nahi ginti, par Rule 22 sub-rule 4 ki extraordinary leave ginti hai, kyunki woh regularise karne ka tool hai. Aur check kijiye kaun authority hai, warna file galat desk par chali jayegi."
+ },
+ {
+  "f": "voice_audio/s15_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_16_rule22_training",
+  "chars": 110,
+  "text": "Yaad rakhiye: Rule 22 sub-rule 4 ki extraordinary leave ginti hai, Rule 21 ki aam extraordinary leave ke ulta."
+ },
+ {
+  "f": "voice_audio/s16_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_17_rule23_suspension",
+  "chars": 59,
+  "text": "Sir, suspension ka period kab qualifying service ginta hai?"
+ },
+ {
+  "f": "voice_audio/s16_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_17_rule23_suspension",
+  "chars": 313,
+  "text": "Pehle rule. Suspension matlab inquiry chalte waqt duty se door rakha jaana. Inquiry ke ant mein period tabhi ginta hai jab do baatein dono sach hon: servant fully exonerated ho, yani saaf ho jaye, ya usse sirf minor penalty mili ho, aur suspension wholly unjustified thehraya gaya ho. Sirf exoneration kaafi nahi."
+ },
+ {
+  "f": "voice_audio/s16_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_17_rule23_suspension",
+  "chars": 277,
+  "text": "Ab baaki saare cases. Period nahi ginta jab tak competent authority, orders paas karte waqt, expressly declare na kare ki woh ginta hai, aur kitna ginta hai. Silence ka matlab: nahi ginta. Dhyan dijiye ki rule competent authority ka naam leta hai, appointing authority ka nahi."
+ },
+ {
+  "f": "voice_audio/s16_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_17_rule23_suspension",
+  "chars": 193,
+  "text": "Sub-rule 3 ke tehat har suspension case mein competent authority ko order pass karna hota hai ki period ka kitna hissa, agar koi, ginta hai, aur service book mein definite entry karni hoti hai."
+ },
+ {
+  "f": "voice_audio/s16_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_17_rule23_suspension",
+  "chars": 326,
+  "text": "Ab ek real example. Kiran sau din suspended hai. Agar woh fully exonerated hai aur suspension wholly unjustified thehra, to poore sau din ginte hain. Agar woh exonerated hai par suspension unjustified nahi thehra, to kuch nahi ginta jab tak authority expressly declare na kare, maan lijiye saath din, aur tab saath ginte hain."
+ },
+ {
+  "f": "voice_audio/s16_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_17_rule23_suspension",
+  "chars": 208,
+  "text": "Dhyan dijiye, yahi trap hai. Dono conditions AND se judi hain. Aur yahan silence nuksaan deta hai: agar competent authority expressly declare nahi karti, suspension period nahi ginta. Yeh Rule 21 ka ulta hai."
+ },
+ {
+  "f": "voice_audio/s16_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_17_rule23_suspension",
+  "chars": 161,
+  "text": "Yaad rakhiye: Rule 23 ke liye exoneration aur wholly unjustified suspension chahiye, warna period tabhi ginta hai jab competent authority expressly declare kare."
+ },
+ {
+  "f": "voice_audio/s17_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_18_rules24_25_dismissal_reinstatement",
+  "chars": 89,
+  "text": "Sir, dismissal ya removal par purani service ka kya hota hai, aur woh kab wapas aati hai?"
+ },
+ {
+  "f": "voice_audio/s17_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_18_rules24_25_dismissal_reinstatement",
+  "chars": 204,
+  "text": "Pehle Rule 24. Agar Government servant ko dismiss ya remove kiya jata hai, to uski purani service forfeit hoti hai, yani pension ke liye mit jaati hai. Rule 24 compulsory retirement ka zikr hi nahi karta."
+ },
+ {
+  "f": "voice_audio/s17_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_18_rules24_25_dismissal_reinstatement",
+  "chars": 197,
+  "text": "Compulsory retirement kyun bahar hai? Woh ek penalty hai, par rule uske liye service forfeit nahi karta. Yeh rule ki reading hai, isliye hamesha dekhiye ki order ne asal mein kaunsi penalty lagayi."
+ },
+ {
+  "f": "voice_audio/s17_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_18_rules24_25_dismissal_reinstatement",
+  "chars": 186,
+  "text": "Ab Rule 25. Agar dismiss, remove ya compulsorily retire kiya gaya vyakti baad mein reinstated hota hai, yani appeal ya review par wapas liya jata hai, to purani service dobara ginti hai."
+ },
+ {
+  "f": "voice_audio/s17_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_18_rules24_25_dismissal_reinstatement",
+  "chars": 250,
+  "text": "Sub-rule 2 line khinchta hai. Dismissal aur reinstatement ke beech ka gap, aur koi bhi suspension period, nahi ginta jab tak reinstating authority khaas order se unhe duty ya leave ke roop mein regularise na kare. Purani service lautti hai, gap nahi."
+ },
+ {
+  "f": "voice_audio/s17_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_18_rules24_25_dismissal_reinstatement",
+  "chars": 342,
+  "text": "Ab ek real example. Mohan ki service das saal thi jab first March 2015 ko woh dismissed hua. Rule 24 ke tehat woh forfeit ho gayi. First September 2017 ko appeal par reinstatement hui, to Rule 25 ke tehat uske das saal dobara ginte hain. Do saal chhah mahine ka gap nahi ginta, jab tak reinstating authority khaas order se regularise na kare."
+ },
+ {
+  "f": "voice_audio/s17_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_18_rules24_25_dismissal_reinstatement",
+  "chars": 168,
+  "text": "Yaad rakhiye: Rule 24 dismissal ya removal par forfeit karta hai, compulsory retirement par nahi, aur Rule 25 reinstatement par purani service wapas deta hai, gap nahi."
+ },
+ {
+  "f": "voice_audio/s18_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_19_rule26_resignation_forfeiture",
+  "chars": 85,
+  "text": "Sir, resignation purani service mita deti hai kya, aur isse bacha kaise ja sakta hai?"
+ },
+ {
+  "f": "voice_audio/s18_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_19_rule26_resignation_forfeiture",
+  "chars": 293,
+  "text": "Pehle general rule. Resignation purani service forfeit karti hai, jab tak appointing authority public interest mein resignation withdraw karne ki permission na de. Ek chhota correction: source ne kaha tha Rule 26 mein twenty-six sub-rules hain. Woh galat hai. Rule 26 mein aath sub-rules hain."
+ },
+ {
+  "f": "voice_audio/s18_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_19_rule26_resignation_forfeiture",
+  "chars": 244,
+  "text": "Ab saving. Forfeiture nahi hoti agar resignation proper permission ke saath, Government ke andar doosri aisi appointment lene ke liye di gayi thi jahan service qualify karti hai. Nayi appointment temporary ho ya permanent, isse farq nahi padta."
+ },
+ {
+  "f": "voice_audio/s18_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_19_rule26_resignation_forfeiture",
+  "chars": 445,
+  "text": "Sub-rule 3 papers ka hai. Resignation accept karne wale order mein saaf likhna chahiye ki vyakti proper permission ke saath doosri post join karne ke liye resign kar raha hai, aur Head of Office service book mein khaas entry karta hai. Permission, order, entry: teen kadiyan. Meena ko dekhiye, ek Assistant, jo doosri Central post join karne ke liye permission ke saath resign karti hai. Order aur entry sahi hon to uski purani service safe hai."
+ },
+ {
+  "f": "voice_audio/s18_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_19_rule26_resignation_forfeiture",
+  "chars": 307,
+  "text": "Sub-rule 4 do posts ke beech ke gap ka hai jab woh alag stations par hain. Jo hissa joining time ke andar hai woh relief ki date par due leave se cover hota hai, aur baaki ke liye formal condonation chahiye. Jaise gyarah din ka gap aur chhah din ka joining time: chhah din cover, paanch ke liye condonation."
+ },
+ {
+  "f": "voice_audio/s18_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_19_rule26_resignation_forfeiture",
+  "chars": 190,
+  "text": "Yaad rakhiye: resignation purani service forfeit karti hai, doosri Government post ke liye proper permission use bacha deti hai, aur order aur service book entry mein woh likha hona chahiye."
+ },
+ {
+  "f": "voice_audio/s19_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_20_rule26_withdrawal",
+  "chars": 104,
+  "text": "Sir, resignation kis condition par withdraw ho sakti hai, aur withdrawal se exactly kya wapas milta hai?"
+ },
+ {
+  "f": "voice_audio/s19_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_20_rule26_withdrawal",
+  "chars": 327,
+  "text": "Pehle withdrawal ki chaar conditions. One: resignation compelling reasons se di gayi thi, integrity, efficiency ya conduct par koi daag nahi tha, aur circumstances materially badal gaye. Two: beech ka conduct improper nahi tha. Three: absence ninety din se zyada nahi hui. Four: wahi post ya uske barabar ka post available hai."
+ },
+ {
+  "f": "voice_audio/s19_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_20_rule26_withdrawal",
+  "chars": 297,
+  "text": "Ab bar. Withdrawal allowed nahi hai agar resignation private commercial company, ya Government ki owned ya controlled corporation ya company join karne ke liye di gayi thi. Jitna rule text humne padha usme Government se controlled ya financed body bhi joda gaya hai, jise source ne chhod diya tha."
+ },
+ {
+  "f": "voice_audio/s19_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_20_rule26_withdrawal",
+  "chars": 205,
+  "text": "Jab withdrawal allowed hoti hai, order mein interruption ki condonation apne aap shamil hoti hai, isliye continuity bach jaati hai. Par interruption period khud nahi ginta. Continuity lautti hai, gap nahi."
+ },
+ {
+  "f": "voice_audio/s19_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_20_rule26_withdrawal",
+  "chars": 331,
+  "text": "Ek aur sub-rule hai jo source ne kabhi mention nahi kiya. Rule 26, sub-rule 8, kehta hai ki Rules 35 ya 36 ke liye di gayi resignation purani Government service forfeit nahi karti; woh rules agle part mein aate hain. Humne yahi baat do secondary copies mein dekhi, Gazette mein nahi, isliye final use se pehle Gazette check kijiye."
+ },
+ {
+  "f": "voice_audio/s19_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_20_rule26_withdrawal",
+  "chars": 279,
+  "text": "Dhyan dijiye, yahi trap hai. Bahut log sochte hain ki withdrawal allowed hui to gap bhi ginta hai. Nahin ginta. Ninety din ki limit sakht hai: assi din ki absence pass ho sakti hai, ninety-five nahi. Aur private commercial company ka bar record jitna saaf ho, phir bhi lagta hai."
+ },
+ {
+  "f": "voice_audio/s19_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_20_rule26_withdrawal",
+  "chars": 125,
+  "text": "Yaad rakhiye: chaar conditions, zyada se zyada ninety din, private company ke liye withdrawal nahi, aur gap kabhi nahi ginta."
+ },
+ {
+  "f": "voice_audio/s20_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_21_rule27_interruption",
+  "chars": 88,
+  "text": "Sir, service mein interruption purani service ka kya karti hai, aur exceptions kya hain?"
+ },
+ {
+  "f": "voice_audio/s20_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_21_rule27_interruption",
+  "chars": 275,
+  "text": "Pehle general rule. Service mein interruption purani service forfeit karti hai, paanch cases ke siwa. Case a: authorised leave of absence. Case b: unauthorised absence jo authorised leave ke baad chalti hai, par tab tak jab tak us post par koi substantively appoint nahi hua."
+ },
+ {
+  "f": "voice_audio/s20_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_21_rule27_interruption",
+  "chars": 357,
+  "text": "Case c: aisa suspension jiske turant baad reinstatement ho, ya servant ki death ho jaye, retire karne diya jaye, ya suspension ke dauraan superannuation par retire ho jaye. Case d: Government control wali establishment mein non-qualifying service par transfer, jo competent authority ne public interest mein order kiya ho. Case e: transfer par joining time."
+ },
+ {
+  "f": "voice_audio/s20_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_21_rule27_interruption",
+  "chars": 388,
+  "text": "Sub-rule 2 appointing authority ko power deta hai: order se woh unauthorised absence ko extraordinary leave mein badal sakti hai, retrospective effect ke saath. Ek example. Omar authorised leave par gaya aur phir chhah din bina sanction ke door raha. Uska post substantively bhara nahi gaya tha, isliye purani service safe rahi. Agar post bhar gaya hota, woh absence use forfeit kar deti."
+ },
+ {
+  "f": "voice_audio/s20_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_21_rule27_interruption",
+  "chars": 354,
+  "text": "Dhyan dijiye, yahi trap hai. Source ek mnemonic padhata hai, five exceptions and two conditions, par woh sirf yaad rakhne ka device hai. Clause c mein bhi conditions hain. Clause b post substantively na bharne par tika hai, aur clause d ko competent authority ka public interest order chahiye. Baaki koi bhi interruption purani service forfeit karta hai."
+ },
+ {
+  "f": "voice_audio/s20_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_21_rule27_interruption",
+  "chars": 174,
+  "text": "Yaad rakhiye: interruption paanch cases ke siwa purani service forfeit karta hai, aur sub-rule 2 appointing authority ko absence ko extraordinary leave mein badalne deta hai."
+ },
+ {
+  "f": "voice_audio/s21_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_22_rule28_condonation",
+  "chars": 100,
+  "text": "Sir, do spells of civil service ke beech ka gap kab maaf hota hai, aur authority mana kar sakti hai?"
+ },
+ {
+  "f": "voice_audio/s21_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_22_rule28_condonation",
+  "chars": 308,
+  "text": "Pehle automatic route. Government ke under civil service ke do spells ke beech ka gap maaf maan liya jaata hai, yani condoned, jab tak service book ulta na dikhaye. Gap se pehle ki service phir qualify karti hai. Defence Services Estimates ya Railway Estimates se pay ki gayi civil service bhi isme aati hai."
+ },
+ {
+  "f": "voice_audio/s21_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_22_rule28_condonation",
+  "chars": 223,
+  "text": "Ab limits. Automatic condonation tab nahi lagti jab gap resignation, dismissal, removal ya strike mein hissa lene se hua ho. Aur sub-rule 3 ke tehat gap period khud kabhi nahi ginta. Sirf gap se pehle ki service bachti hai."
+ },
+ {
+  "f": "voice_audio/s21_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_22_rule28_condonation",
+  "chars": 287,
+  "text": "Sub-rules 4 se 6 discretionary route dete hain. Appointing authority condonation par vichaar kar sakti hai. Mana karna sirf exceptional aur grave circumstances mein ho sakta hai, aur mana karne se pehle servant ko reasonable mauka milna chahiye ki woh apna case rakhe aur khud suna jaye."
+ },
+ {
+  "f": "voice_audio/s21_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_22_rule28_condonation",
+  "chars": 310,
+  "text": "Ab ek real example. Nisha ne ek civil post chhodi aur chhah mahine baad doosri join ki, service book mein koi ulti entry nahi thi. Gap apne aap condone ho gaya aur uski pehli service safe hai, par chhah mahine khud nahi ginte. Dhyan dijiye, yahi trap hai: condonation pehli service bachati hai, gap nahi ginti."
+ },
+ {
+  "f": "voice_audio/s21_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_22_rule28_condonation",
+  "chars": 157,
+  "text": "Yaad rakhiye: Rule 28 pehli service bachata hai par gap kabhi nahi ginta, aur automatic condonation resignation, dismissal, removal ya strike par nahi lagti."
+ },
+ {
+  "f": "voice_audio/s22_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_23_rule29_international",
+  "chars": 118,
+  "text": "Sir, agar Government servant ko United Nations ya kisi doosri international body bheja jaye, to woh service ginti hai?"
+ },
+ {
+  "f": "voice_audio/s22_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_23_rule29_international",
+  "chars": 329,
+  "text": "Pehle dekhein kaun cover hai. Rule 29 us Government servant ke liye hai jo foreign service par hai, yani Government ke apne cadre se bahar loan par, United Nations Secretariat ya doosri UN bodies, IMF, World Bank group ka IBRD, Asian Development Bank, Commonwealth Secretariat, ya kisi bhi doosri international organisation mein."
+ },
+ {
+  "f": "voice_audio/s22_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_23_rule29_international",
+  "chars": 152,
+  "text": "Uske paas option hai. Ya to woh us foreign service ke liye pension contribution deta hai aur service ginti hai, ya woh nahi deta aur service nahi ginti."
+ },
+ {
+  "f": "voice_audio/s22_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_23_rule29_international",
+  "chars": 117,
+  "text": "Agar woh service ginne ka option nahi leta, to usne jo contributions de diye the woh usse refund kar diye jaate hain."
+ },
+ {
+  "f": "voice_audio/s22_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_23_rule29_international",
+  "chars": 124,
+  "text": "Dhyan dijiye, yahi trap hai. Choice Government servant ki hai, department ki nahi. Yeh koi administrative decision nahi hai."
+ },
+ {
+  "f": "voice_audio/s22_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_23_rule29_international",
+  "chars": 109,
+  "text": "Yaad rakhiye: Rule 29 mein servant ka option hai: pay karo aur gino, ya na do aur contributions refund le lo."
+ },
+ {
+  "f": "voice_audio/s23_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_24_rule30_verification_triggers",
+  "chars": 91,
+  "text": "Sir, qualifying service kab verify honi chahiye, kaun karta hai, aur kaise bataya jata hai?"
+ },
+ {
+  "f": "voice_audio/s23_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_24_rule30_verification_triggers",
+  "chars": 384,
+  "text": "Pehle rule. Qualifying service do points par verify hoti hai: Government servant ke athara saal service poore hone par, aur phir jab superannuation se paanch saal bache hon, yani retirement ki umar par retirement se paanch saal pehle. Rule kehta hai, on each occasion. Yeh phrase ab full chapter text mein padha gaya hai, Gazette PDF nahi, isliye wording ko close restatement maaniye."
+ },
+ {
+  "f": "voice_audio/s23_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_24_rule30_verification_triggers",
+  "chars": 389,
+  "text": "Kaun karta hai? Head of Office, Accounts Officer ke saath consultation mein, service verify karta hai, qualifying service nikalta hai aur Format 4 mein batata hai. Sub-rule 2 kehta hai ki Head of Office Rule 57, clause 1, sub-clause a ki procedure follow karta hai. Rule 57 2024 mein amend hua aur Form 6-A laaya, isliye current Rule 57 check kijiye. Source ne sub-rule 2 diya hi nahi tha."
+ },
+ {
+  "f": "voice_audio/s23_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_24_rule30_verification_triggers",
+  "chars": 365,
+  "text": "Ab ek real example. Lata, senior assistant, first July 2005 ko join hui. Uske athara saal first July 2023 ko poore hote hain, to pehli verification tabhi padti hai, aur use Format 4 milta hai. Maan lijiye woh thirtieth June 2035 ko retire hoti hai. Paanch saal pehle thirtieth June 2030 hai, to doosri verification tabhi padti hai, aur dono records match hote hain."
+ },
+ {
+  "f": "voice_audio/s23_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_24_rule30_verification_triggers",
+  "chars": 232,
+  "text": "Dhyan dijiye, yahi trap hai. Do triggers hain, ek nahi. Servant ko certificate Format 4 mein milta hai; Form 6-A Rule 57 ke tehat alag document hai. Aur on each occasion wali phrase ab text mein hai, par Gazette PDF nahi padhi gayi."
+ },
+ {
+  "f": "voice_audio/s23_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_24_rule30_verification_triggers",
+  "chars": 140,
+  "text": "Yaad rakhiye: athara saal par aur retirement se paanch saal pehle verify, Head of Office Accounts Officer ke saath, aur Format 4 mein batao."
+ },
+ {
+  "f": "voice_audio/s24_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_25_rule30_finality_report",
+  "chars": 77,
+  "text": "Sir, do fix checks ke alawa verification kab hoti hai, aur kya woh final hai?"
+ },
+ {
+  "f": "voice_audio/s24_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_25_rule30_finality_report",
+  "chars": 191,
+  "text": "Pehle sub-rule 3. Verification teen khaas events par bhi hoti hai: temporary department se transfer, department ka closure, ya post ko surplus declare kiya jaana, yani uski zarurat nahi rahi."
+ },
+ {
+  "f": "voice_audio/s24_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_25_rule30_finality_report",
+  "chars": 188,
+  "text": "Sub-rule 4 verification ko final banata hai. Woh sirf tab dobara khulti hai jab baad ka koi rule ya order service qualify hone ki conditions badal de. Bas wahi ek exception, aur kuch nahi."
+ },
+ {
+  "f": "voice_audio/s24_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_25_rule30_finality_report",
+  "chars": 252,
+  "text": "Sub-rule 5 saalana report hai. Har saal thirty-first January tak Administrative Ministry ke Secretary ko report jaati hai, jismein likha hota hai pichle calendar year mein kisko certificate milna tha, kisko asal mein mila, aur baaki ke reasons kya the."
+ },
+ {
+  "f": "voice_audio/s24_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_25_rule30_finality_report",
+  "chars": 190,
+  "text": "Dhyan dijiye, yahi trap hai. Final ka matlab kabhi nahi nahi hota: baad ka rule ya order ise dobara khol sakta hai. Aur report thirty-first January tak due hai, pichle calendar year ke liye."
+ },
+ {
+  "f": "voice_audio/s24_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_25_rule30_finality_report",
+  "chars": 127,
+  "text": "Yaad rakhiye: teen khaas events, verification final jab tak rules na badlein, aur report Secretary ko thirty-first January tak."
+ },
+ {
+  "f": "voice_audio/s25_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_26_sep2025_guidelines",
+  "chars": 88,
+  "text": "Sir, 2025 ki DoPPW guidelines Rule 30 ki verification chain ko kaise mazboot karti hain?"
+ },
+ {
+  "f": "voice_audio/s25_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_26_sep2025_guidelines",
+  "chars": 365,
+  "text": "Pehle O.M. Yeh DoPPW Office Memorandum number 4 slash 35 slash 2024 hyphen P and PW bracket D slash 10377 hai, jiska naam hai comprehensive guidelines for timely payment of retirement dues and issue of Pension Payment Orders. PPO woh order hai jo pension authorise karta hai. Mahina September 2025 hai, par exact din padha nahi ja saka, isliye poora date nahi dete."
+ },
+ {
+  "f": "voice_audio/s25_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_26_sep2025_guidelines",
+  "chars": 277,
+  "text": "O.M. duty Head of Department par daalta hai. Usse pakka karna hai ki athara saal service ke baad aur retirement se paanch saal pehle verification certificates issue hon, aur compliance report har saal thirty-first January tak Secretary ko jaye. Yeh seedha Rule 30 se judta hai."
+ },
+ {
+  "f": "voice_audio/s25_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_26_sep2025_guidelines",
+  "chars": 416,
+  "text": "Baaki points: one hundred percent e-HRMS adoption, yani digital service records, aur central armed police forces ke liye poora Employee Payroll System. Missing documents ke kaaran do baar se zyada wapas aayi pension file upar escalate hoti hai. Nodal Officer har mahine Pay and Accounts Offices se milta hai. Source yeh bhi kehta hai ki manual records discourage honge, par humne woh padhe hue pages mein nahi dekha."
+ },
+ {
+  "f": "voice_audio/s25_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_26_sep2025_guidelines",
+  "chars": 284,
+  "text": "Dhyan dijiye, yahi trap hai. Yeh ek Office Memorandum hai, administrative instruction, Rules ka amendment nahi. Rule 30 trigger deta hai, aur O.M. accountability jodta hai. Wahi O.M. Rule 63 quote karta hai, ki PPO retirement se do mahine pehle tak due hai; woh rule agle part ka hai."
+ },
+ {
+  "f": "voice_audio/s25_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_26_sep2025_guidelines",
+  "chars": 161,
+  "text": "Yaad rakhiye: Rule 30 trigger deta hai, O.M. Head of Department ko responsible banata hai, aur compliance report thirty-first January tak Secretary ko jaati hai."
+ },
+ {
+  "f": "voice_audio/s26_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_27_authority_map_open_flags",
+  "chars": 93,
+  "text": "Sir, kaun authority kaunse rule mein act karti hai, aur kaunse points abhi confirm nahi hain?"
+ },
+ {
+  "f": "voice_audio/s26_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_27_authority_map_open_flags",
+  "chars": 306,
+  "text": "Appointing authority Rule 21 mein act karti hai, kuch extraordinary leave ginne ki permission dene ke liye; Rule 26 mein resignation withdraw karne par; Rule 27, sub-rule 2 mein absence commute karne ke liye; aur Rule 28, sub-rules 4 se 6 mein condonation par, jahan mana karne se pehle sunwai zaroori hai."
+ },
+ {
+  "f": "voice_audio/s26_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_27_authority_map_open_flags",
+  "chars": 361,
+  "text": "Competent authority Rule 23 mein act karti hai. Head of Department Rule 22, sub-rule 4 mein. Head of Office Rule 26 sub-rule 3 mein aur Rule 30 mein, Accounts Officer ke saath. Government Rule 22 sub-rule 2 mein decide karti hai. Rule 29 mein choice servant ki hai. Liability par, Rule 13 mein Centre deti hai aur Rule 14 mein autonomous body lump sum deti hai."
+ },
+ {
+  "f": "voice_audio/s26_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_27_authority_map_open_flags",
+  "chars": 560,
+  "text": "Ab honest flag list, jo humare clause by clause audit ke baad revise hui. Kai purane flags band ho gaye, kyunki humne poora chapter text padha. Rule 14 sub-rule 2 padhaya gaya. Rule 14 ka Explanation padhaya gaya. Rule 15 ka notifying department padhaya gaya. Rule 26 sub-rule 8 aur Rule 30 ke on each occasion confirm hain. Jo khula hai woh yeh. Yahan saari rule wording close restatement hai, Gazette text nahi. 2025 O.M. ka exact din legible nahi. 2024 notification ki effective date tay nahi. Aur Rule 21 wale example ka six month method ek assumption hai."
+ },
+ {
+  "f": "voice_audio/s26_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_27_authority_map_open_flags",
+  "chars": 354,
+  "text": "Aage ke liye ek cross-link. Rule 37 ka 2025 amendment Rules 7, 8, 41 aur 44, sub-rule 5, ko public sector undertakings mein absorbed employees par lagata hai. 2026 ka amendment, G.S.R. 775(E), Rule 37 mein proviso jodta hai, ex-Ordnance Factory Board employees ke liye. Humne woh sirf re-hosted PDF par dekha, isliye woh agle part ka hai aur unconfirmed."
+ },
+ {
+  "f": "voice_audio/s26_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_27_authority_map_open_flags",
+  "chars": 161,
+  "text": "Yaad rakhiye: hamesha jaan lijiye kaun authority kaunse rule mein act karti hai, appointing authority, competent authority, Head of Department ya Head of Office."
+ },
+ {
+  "f": "voice_audio/s27_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_28_decision_chain",
+  "chars": 98,
+  "text": "Sir, purani service ka koi hissa dekh kar, step by step kaise tay karein ki woh ginti hai ya nahi?"
+ },
+ {
+  "f": "voice_audio/s27_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_28_decision_chain",
+  "chars": 210,
+  "text": "Step one: start aur anchor check kijiye. Duties aur pay dono Government se regulated hain? Kisi officiating ya temporary hisse ke baad bina break ke substantive appointment hai, aur woh athara saal ke baad hai?"
+ },
+ {
+  "f": "voice_audio/s27_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_28_decision_chain",
+  "chars": 250,
+  "text": "Step two: route chuniye. State, autonomous body, temporary status, probation, apprentice, contract, re-employed pensioner, military, leave, training, suspension ya international organisation. Har ek mein date line, percentage aur refund check kijiye."
+ },
+ {
+  "f": "voice_audio/s27_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_28_decision_chain",
+  "chars": 168,
+  "text": "Step three: loss event dekhiye. Rule 24 mein dismissal ya removal, Rule 26 mein resignation, ya Rule 27 mein interruption. Inme se koi bhi pehli service mita sakta hai."
+ },
+ {
+  "f": "voice_audio/s27_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_28_decision_chain",
+  "chars": 279,
+  "text": "Step four: dekhiye kya bachata hai, aur phir prove kijiye. Reinstatement, permitted resignation, Rule 27 ke exceptions aur Rule 28 mein condonation. Uske baad Head of Office Format 4 mein verify karta hai. Short mein: ginti hai ya nahi, kya maine kho di, kya wapas mil sakti hai."
+ },
+ {
+  "f": "voice_audio/s27_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_28_decision_chain",
+  "chars": 106,
+  "text": "Yaad rakhiye: anchor check karo, route chuno, loss event dekho, phir dekho kya bachata hai aur prove karo."
+ },
+ {
+  "f": "voice_audio/s28_g00.mp3",
+  "voice": "voice-00",
+  "scene": "c02_29_table_counting_routes",
+  "chars": 249,
+  "text": "Ab revision karte hain, aur yahan se screen ka shape badal jata hai. Cards ki jagah aapko ek revision table ki rows dikhengi, bilkul waise hi jaise printed revision sheet hoti hai. Yeh pehli table har us rule ko ikattha karti hai jo credit deta hai."
+ },
+ {
+  "f": "voice_audio/s28_g01.mp3",
+  "voice": "voice-01",
+  "scene": "c02_29_table_counting_routes",
+  "chars": 100,
+  "text": "Sir, poora chapter ek table par mil sakta hai, taaki main saare counting routes ek saath dekh sakun?"
+ },
+ {
+  "f": "voice_audio/s28_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_29_table_counting_routes",
+  "chars": 439,
+  "text": "Pehli row foundation deti hai. Rule 11 clock us din start karta hai jab woh pehla post charge karta hai. Agar woh post officiating ya temporary thi, to bina break ke substantive post aana chahiye, aur athara saal se pehle kuch nahi ginta, Rule 20 ki military service ke siwa. Rule 12 control test jodta hai: duties aur pay dono Government se regulated hone chahiye, aur service Consolidated Fund of India ya Local Fund se pay honi chahiye."
+ },
+ {
+  "f": "voice_audio/s28_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_29_table_counting_routes",
+  "chars": 540,
+  "text": "Doosri row do transfers cover karti hai. Rule 13 ke tehat State pensionable establishment ki service permanent transfer par ya proper permission ke saath resignation par ginti hai, aur kharch Central Government uthati hai. Rule 14 ke tehat autonomous body ki service ginti hai agar body ki scheme milti julti ho, permission proper ho, chaar conditions poori hon, aur body 1981 ki commutation table se nikala lump sum de. Par Rule 14 ka sub-rule 3 public sector undertaking, nationalised bank aur financial institution ko bahar kar deta hai."
+ },
+ {
+  "f": "voice_audio/s28_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_29_table_counting_routes",
+  "chars": 381,
+  "text": "Teesri row sabse chhoti trio hai. Rule 15 temporary status mein ki gayi service ka sirf fifty percent deta hai, woh bhi jab status 2003 ke end tak mila ho aur regularisation hui ho. Rule 16 probation ginta hai jab confirmation ho jaye. Rule 17 apprentice service ke liye kuch bhi nahi deta, siwaye Audit ya Defence Accounts Department ke Subordinate Accounts Service apprentice ke."
+ },
+ {
+  "f": "voice_audio/s28_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_29_table_counting_routes",
+  "chars": 461,
+  "text": "Chauthi row teen refund routes rakhti hai. Rule 18 2003 ke end tak regular appointment se pehle ki contract service ginta hai, bashart ki contributory provident fund mein Government ka hissa refund ho. Rule 19 re-employed pensioner ki purani civil service ginta hai, aur Rule 20 military service. Teeno mein paisa settle hona chahiye, refund zyada se zyada thirty-six monthly instalments tak ja sakta hai, aur Rule 19 ke sub-rule 5 ka cap Rule 20 mein nahi hai."
+ },
+ {
+  "f": "voice_audio/s28_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_29_table_counting_routes",
+  "chars": 439,
+  "text": "Paanchvi row credit side band karti hai. Rule 21 leave salary wali saari leave ginta hai, aur medical certificate par di gayi extraordinary leave bhi. Rule 22 Group C appointment se pehle ki departmental training ginta hai. Rule 23 suspension tabhi ginta hai jab woh fully exonerated ho ya minor penalty mile, aur suspension wholly unjustified thehre. Rule 29 servant ko option deta hai ki pension contributions dekar foreign service gine."
+ },
+ {
+  "f": "voice_audio/s28_g07.mp3",
+  "voice": "voice-00",
+  "scene": "c02_29_table_counting_routes",
+  "chars": 163,
+  "text": "Table one ki paanch rows yaad rakhiye: start aur control, State aur body, status aur probation, refund routes, aur leave, training, suspension aur foreign service."
+ },
+ {
+  "f": "voice_audio/s29_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_30_table_loss_save_prove",
+  "chars": 113,
+  "text": "Sir, aur chapter ka doosra side? Kya service chheenta hai, kya bachata hai, aur aakhir mein prove kaun karta hai?"
+ },
+ {
+  "f": "voice_audio/s29_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_30_table_loss_save_prove",
+  "chars": 441,
+  "text": "Table two loss aur repair se khulti hai. Rule 24 chhota aur sakht hai: dismissal ya removal purani service ka forfeiture laata hai, aur compulsory retirement ka naam wahan nahi hai. Rule 25 repair karta hai: appeal ya review par reinstatement hone par woh apni purani service dobara ginta hai, par gap, aur usme koi suspension, tabhi ginta hai jab reinstating authority khaas order se us period ko duty ya leave ke roop mein regularise kare."
+ },
+ {
+  "f": "voice_audio/s29_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_30_table_loss_save_prove",
+  "chars": 411,
+  "text": "Row two, Rule 26, resignation. Resignation purani service forfeit karti hai, jab tak woh public interest mein withdraw na ho, ya proper permission ke saath aisi doosri Government appointment ke liye na di gayi ho jahan service qualify kare. Withdrawal ke liye chaar conditions, jisme ninety din se zyada absence nahi, aur jahan resignation private commercial company join karne ke liye thi wahan woh barred hai."
+ },
+ {
+  "f": "voice_audio/s29_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_30_table_loss_save_prove",
+  "chars": 517,
+  "text": "Row three, Rule 27, interruption. Interruption purani service forfeit karta hai, paanch cases ke siwa: authorised leave; authorised leave ke baad ki unauthorised absence jab post substantively bhara na ho; suspension jiske baad reinstatement, ya death, permitted retirement ya suspension ke dauraan superannuation; public interest mein non-qualifying service par transfer; aur joining time. Sub-rule 2 appointing authority ko unauthorised absence ko extraordinary leave mein badalne deta hai, retrospective effect se."
+ },
+ {
+  "f": "voice_audio/s29_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_30_table_loss_save_prove",
+  "chars": 385,
+  "text": "Row four, Rule 28, condonation. Jahan service book ulta kuch nahi kehti, wahan do spells ke beech ka gap apne aap condone hota hai aur pehli service qualifying rehti hai, aur Defence Services Estimates ya Railway Estimates se pay ki gayi service bhi isme aati hai. Par yeh gap par kabhi nahi lagta jo resignation, dismissal, removal ya strike se bana ho, aur gap khud kabhi nahi ginta."
+ },
+ {
+  "f": "voice_audio/s29_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_30_table_loss_save_prove",
+  "chars": 402,
+  "text": "Row five, Rule 30, proof. Head of Office, Accounts Officer ke saath, service verify karta hai aur qualifying service Format 4 mein batata hai, athara saal ke baad har mauke par aur phir jab superannuation se paanch saal bache hon. Woh verification final hai jab tak rules ya orders badal kar dobara dekhne ki zarurat na paida karein, aur har saal thirty-first January tak Secretary ko report jaati hai."
+ },
+ {
+  "f": "voice_audio/s29_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_30_table_loss_save_prove",
+  "chars": 157,
+  "text": "Table two yaad rakhiye: loss Rules 24, 26 aur 27 mein, rescue Rules 25, 26 sub-rule 2, Rule 27 ke paanch exceptions aur Rule 28 mein, aur proof Rule 30 mein."
+ },
+ {
+  "f": "voice_audio/s30_g00.mp3",
+  "voice": "voice-00",
+  "scene": "c02_31_chart_how_much_counts",
+  "chars": 269,
+  "text": "Chart us sawaal ka jawab deta hai jo prose chhupa leta hai: kitna. Har bar ek route hai, aur bar ki lambai batati hai ki us service ka kitna hissa qualifying service banta hai. Poori bars poora period leti hain. Ek aadhi bar Rule 15 hai. Khaali bars kuch bhi nahi deti."
+ },
+ {
+  "f": "voice_audio/s30_g01.mp3",
+  "voice": "voice-01",
+  "scene": "c02_31_chart_how_much_counts",
+  "chars": 82,
+  "text": "Sir, jab koi service ginti hai, to poora period ginta hai ya sirf kuch percentage?"
+ },
+ {
+  "f": "voice_audio/s30_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_31_chart_how_much_counts",
+  "chars": 116,
+  "text": "Rule 16 poori bar hai. Confirmation ke baad probation ka poora period ginta hai, usi post par ho ya doosri post par."
+ },
+ {
+  "f": "voice_audio/s30_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_31_chart_how_much_counts",
+  "chars": 145,
+  "text": "Rule 21 poori bar hai. Jis leave ke liye leave salary milti hai woh saari ginti hai, aur medical certificate par di gayi extraordinary leave bhi."
+ },
+ {
+  "f": "voice_audio/s30_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_31_chart_how_much_counts",
+  "chars": 195,
+  "text": "Rule 18 poori bar hai, par daam ke saath. Poora contract period ginta hai agar 2003 ke end tak covered post par bina break appointment hui, aur provident fund mein Government ka hissa refund hua."
+ },
+ {
+  "f": "voice_audio/s30_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_31_chart_how_much_counts",
+  "chars": 217,
+  "text": "Rules 19 aur 20 poori bars hain, ek baar paisa settle ho jaye. Purani civil ya military service tab poora ginti hai jab pehle li gayi pension aur gratuity refund ho jaye, ya unhe lena band karne ka option exercise ho."
+ },
+ {
+  "f": "voice_audio/s30_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_31_chart_how_much_counts",
+  "chars": 174,
+  "text": "Rule 15 chapter ki akeli aadhi bar hai. Temporary status mein ki gayi service ka fifty percent ginta hai, bashart ki status 2003 ke end tak mila ho aur regularisation hui ho."
+ },
+ {
+  "f": "voice_audio/s30_g07.mp3",
+  "voice": "voice-00",
+  "scene": "c02_31_chart_how_much_counts",
+  "chars": 203,
+  "text": "Rule 17 khaali bar hai. Apprentice service ke liye kuch nahi, do patle exceptions ke saath, Indian Audit and Accounts Department ya Defence Accounts Department ka Subordinate Accounts Service apprentice."
+ },
+ {
+  "f": "voice_audio/s30_g08.mp3",
+  "voice": "voice-00",
+  "scene": "c02_31_chart_how_much_counts",
+  "chars": 209,
+  "text": "Rule 14 ka sub-rule 3 khaali bar hai. Public sector undertaking, jisme nationalised bank ya financial institution bhi hai, ki service Central Government join karne se pehle kabhi qualifying service nahi banti."
+ },
+ {
+  "f": "voice_audio/s30_g09.mp3",
+  "voice": "voice-00",
+  "scene": "c02_31_chart_how_much_counts",
+  "chars": 179,
+  "text": "Gap khud hamesha khaali bar hai. Jahan Rule 27 purani service bachata hai, aur jahan Rule 28 interruption condone karta hai, wahan bhi gap ka period qualifying service nahi ginta."
+ },
+ {
+  "f": "voice_audio/s30_g10.mp3",
+  "voice": "voice-00",
+  "scene": "c02_31_chart_how_much_counts",
+  "chars": 145,
+  "text": "Chart yaad rakhiye: Rule 15 akeli aadhi bar, Rules 17, 14 sub-rule 3 aur gap khud khaali bars, aur baaki har counting rule poora period leta hai."
+ },
+ {
+  "f": "voice_audio/s31_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_32_table_provisos_explanations",
+  "chars": 97,
+  "text": "Sir, marks asal mein kahan bethe hain? Kaunse provisos aur Explanations examiners ko pasand hain?"
+ },
+ {
+  "f": "voice_audio/s31_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_32_table_provisos_explanations",
+  "chars": 328,
+  "text": "Rule 11 do provisos ek saans mein rakhta hai. Pehla anchor: officiating ya temporary service ke baad bina interruption substantive appointment chahiye, usi ya doosri service ya post mein. Doosra age line: athara saal se pehle ki service nahi ginti, siwaye Rule 20 ke tehat civil pension ke liye gini jaane wali military service."
+ },
+ {
+  "f": "voice_audio/s31_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_32_table_provisos_explanations",
+  "chars": 453,
+  "text": "Rule 12 ka Explanation service define karta hai: Government ke under service, Consolidated Fund of India ya Local Fund se pay, aur aisi establishment ki service bahar, jiske paas non-contributory pension scheme nahi, jab tak Government usse qualifying na maane. Rule 13 ka Explanation proper permission define karta hai: usne State ki previous permission se apply kiya, aur State ka order kehta hai ki woh proper permission ke saath resign kar raha hai."
+ },
+ {
+  "f": "voice_audio/s31_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_32_table_provisos_explanations",
+  "chars": 369,
+  "text": "Rule 14 chapter ka sabse bhaari rule hai. Sub-rule 1 mein chaar conditions, jo 1981 commutation table se nikale lump sum par khatam hoti hain. Sub-rule 2 us condition ko State Government ke under wali autonomous body par Centre aur us State ke reciprocal arrangement se binding banata hai. Aur Explanation body se proper permission define karta hai, dono limb ek saath."
+ },
+ {
+  "f": "voice_audio/s31_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_32_table_provisos_explanations",
+  "chars": 437,
+  "text": "Paisa par do fine print clusters. Rule 19 sub-rule 5 baad ki pension ya gratuity ko combined service ki value aur pehle diye gaye benefits ke farq par cap karta hai, commutation table se nikaal kar, aur Rule 20 sub-rule 5 mein jaan boojh kar aisa cap nahi hai. Rule 20 ke teen Explanations military cases settle karte hain, jisme thirty-first December 2003 ke baad join ki gayi service bhi hai, jo National Pension System mein jaati hai."
+ },
+ {
+  "f": "voice_audio/s31_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_32_table_provisos_explanations",
+  "chars": 603,
+  "text": "Procedural fine print. Rule 21: medical certificate ke siwa wali extraordinary leave tabhi ginti hai jab appointing authority grant karte waqt allow kare, civil commotion ya higher scientific aur technical studies ke liye, aur non-counting entry us waqt ya superannuation se chhah mahine pehle tak karni hogi. Rule 26 sub-rule 5 chaar conditions aur ninety din deta hai, sub-rule 6 private company ka bar, sub-rule 8 Rules 35 aur 36 ke liye resignation bachata hai. Rule 27 sub-rule 2 retrospective commutation deta hai. Rule 28 refusal sirf exceptional aur grave circumstances mein, aur sunwai ke baad."
+ },
+ {
+  "f": "voice_audio/s31_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_32_table_provisos_explanations",
+  "chars": 176,
+  "text": "Table three yaad rakhiye: marks fine print mein hain, Rule 11 ke do provisos, Rules 12, 13, 14, 19, 20 aur 21 ke Explanations, aur Rules 26, 27 aur 28 ka procedural fine print."
+ },
+ {
+  "f": "voice_audio/s32_g00.mp3",
+  "voice": "voice-00",
+  "scene": "c02_33_panel_four_numbers",
+  "chars": 220,
+  "text": "Yeh aakhri panel waise banaya gaya hai jaise revision slide banni chahiye: upar chaar numbers, phir woh habits jo in numbers ko marks mein badalti hain. Har number zor se boliye, phir boliye ki woh kya control karta hai."
+ },
+ {
+  "f": "voice_audio/s32_g01.mp3",
+  "voice": "voice-01",
+  "scene": "c02_33_panel_four_numbers",
+  "chars": 93,
+  "text": "Sir, agar exam ke din baaki sab bhool jaun, to kaunse numbers abhi bhi answer tay karte hain?"
+ },
+ {
+  "f": "voice_audio/s32_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_33_panel_four_numbers",
+  "chars": 315,
+  "text": "Number one, thirty-first December 2003. Chhah rules is par palatte hain: State service, autonomous body service, temporary status, contract service, re-employed civil pensioners aur military service. Date miss hui to poora answer gir jata hai. National Pension System agle din, first January 2004 se shuru hota hai."
+ },
+ {
+  "f": "voice_audio/s32_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_33_panel_four_numbers",
+  "chars": 283,
+  "text": "Number two, fifty percent. Rule 15 chapter ka akela rule hai jo aadha deta hai. Casual labourer jise 2003 ke end tak temporary status mila aur baad mein regularisation hui, usse us hisse ka aadha milta hai. Baaki har counting rule apni condition poori hone par poora period leta hai."
+ },
+ {
+  "f": "voice_audio/s32_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_33_panel_four_numbers",
+  "chars": 345,
+  "text": "Number three, thirty-six instalments. Rules 19 aur 20 mein refund zyada se zyada thirty-six monthly instalments mein ja sakta hai, pehli option ke agle mahine padti hai, aur ginne ka haq tabhi zinda hota hai jab aakhri rupaya chuk jaye. Asymmetry bhi yaad rakhiye: Rule 19 ka sub-rule 5 baad ka benefit cap karta hai, Rule 20 ka sub-rule 5 nahi."
+ },
+ {
+  "f": "voice_audio/s32_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_33_panel_four_numbers",
+  "chars": 319,
+  "text": "Habit one, silences padhiye. Rule 21 mein, agar service book mein entry nahi, to extraordinary leave ginti hai. Rule 23 mein, agar competent authority declare nahi kare, to suspension nahi ginta. Rule 28 mein, agar service book kuch na kahe, to gap apne aap condone ho jata hai. Wahi silence teen ulta results deta hai."
+ },
+ {
+  "f": "voice_audio/s32_g06.mp3",
+  "voice": "voice-00",
+  "scene": "c02_33_panel_four_numbers",
+  "chars": 371,
+  "text": "Number four, athara aur paanch. Rule 30 Head of Office se, Accounts Officer ke saath, athara saal ke baad aur phir superannuation se paanch saal bache hone par service verify karwata hai, aur result Format 4 mein batwata hai. Woh verification final hai jab tak rules badal kar use dobara na kholen, aur saalana report thirty-first January tak Secretary tak pahunchti hai."
+ },
+ {
+  "f": "voice_audio/s32_g07.mp3",
+  "voice": "voice-00",
+  "scene": "c02_33_panel_four_numbers",
+  "chars": 193,
+  "text": "Panel yaad rakhiye: thirty-first December 2003, Rule 15 ka aadha, Rules 19 aur 20 ke thirty-six instalments, Rule 30 ke do checks, aur teen silences jo teen alag directions mein kheenchti hain."
+ },
+ {
+  "f": "voice_audio/s33_g00.mp3",
+  "voice": "voice-01",
+  "scene": "c02_34_recap",
+  "chars": 75,
+  "text": "Sir, ek chhote recap mein, Rules 11 se 30 se mujhe kya yaad rakhna chahiye?"
+ },
+ {
+  "f": "voice_audio/s33_g01.mp3",
+  "voice": "voice-00",
+  "scene": "c02_34_recap",
+  "chars": 356,
+  "text": "Key numbers: Rule 11 mein umar athara; chhah rules mein thirty-first December 2003; Rule 15 mein fifty percent; Rules 19 aur 20 mein thirty-six instalments; Rule 26 mein ninety din; Rule 21 mein chhah mahine; Rule 30 mein athara saal aur paanch saal; aur report ke liye thirty-first January. Rule 27 mein paanch exceptions, aur Rule 26 mein aath sub-rules."
+ },
+ {
+  "f": "voice_audio/s33_g02.mp3",
+  "voice": "voice-00",
+  "scene": "c02_34_recap",
+  "chars": 349,
+  "text": "Top traps: officiating service ko anchor chahiye; Rule 12 AND hai; PSU service kabhi nahi ginti; Rule 15 sirf aadha deta hai; nineteen five limit karta hai aur twenty five nahi; 2022 ka change refund ko compulsory banata hai; silence ka matlab Rules 21, 23 aur 28 mein alag hai; gap kabhi nahi ginta; aur compulsory retirement Rule 24 mein nahi hai."
+ },
+ {
+  "f": "voice_audio/s33_g03.mp3",
+  "voice": "voice-00",
+  "scene": "c02_34_recap",
+  "chars": 287,
+  "text": "Currency note. Chapter 3 mein sirf G.S.R. 770(E) of 2022 ne kuch badla. Twenty-first October 2026 tak koi baad ka change nahi mila, par Gazette khud padhi nahi gayi. Isliye yahan har rule close restatement hai. Exam answer ya live file ke liye Gazette aur latest DoPPW O.M. check kijiye."
+ },
+ {
+  "f": "voice_audio/s33_g04.mp3",
+  "voice": "voice-00",
+  "scene": "c02_34_recap",
+  "chars": 277,
+  "text": "Agle part mein hum Chapter 4 par jayenge, emoluments, yani woh pay jo pension calculation mein jaati hai, Rules 31 aur 32 mein, aur Chapter 5, classes of pension, Rules 33 se 41 mein. Us se pehle Rule 19 aur 20 ka comparison, aur Rule 21 ka silence principle revise kar lijiye."
+ },
+ {
+  "f": "voice_audio/s33_g05.mp3",
+  "voice": "voice-00",
+  "scene": "c02_34_recap",
+  "chars": 96,
+  "text": "Yaad rakhiye: count, lose, save aur prove, aur exact words ke liye hamesha Gazette check kijiye."
+ }
+]
