@@ -98,3 +98,6 @@ video_build/
 pension_b2_hinglish*.mp4
 !voice_audio/
 !voice_audio/*.mp3
+
+# voice slice intermediates (regenerate with make_video2.py)
+voice_audio/slice_*.mp3

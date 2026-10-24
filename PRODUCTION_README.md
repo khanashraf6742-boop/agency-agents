@@ -123,3 +123,15 @@ Result: **58 m 37 s, 138.9 MB**, 1920x1080 H.264 + AAC 48 kHz stereo, 226 segmen
 Full width of the chapter: Rules 11-30, authority map, four revision tables, the
 "how much counts" chart, the four-numbers panel and the closing recap plus the
 Part 2 preview of Chapters 4-5.
+
+## 9. Publishing the video for download
+
+`DOWNLOAD_LARGE_VIDEOS.md` documents how the finished film is delivered: GitHub's 100 MB
+per-file limit means the master is re-encoded to a compact copy and split into ~38 MB
+parts, committed under `download_parts/<slug>/`, with a rejoin + SHA-256 README.
+
+Automate it for any coverage with:
+
+```
+./scripts/publish_video_parts.sh pension_b2_hinglish_FULL.mp4 batch2-rules-11-30
+```
