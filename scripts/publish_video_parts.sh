@@ -155,9 +155,12 @@ fi
 note "Splitting into parts"
 BASE="$(basename "${STAGE%.*}").mp4"
 if [ "$DRY_RUN" = 1 ]; then
-  TOTAL="$(file_size "$STAGE")"
+  # In a dry run the compact copy has not been made yet; the source size is an
+  # upper bound on how many parts the real run will need.
+  TOTAL="$SIZE"
+  [ -f "$STAGE" ] && TOTAL="$(file_size "$STAGE")"
   NPARTS=$(( (TOTAL + PART_SIZE - 1) / PART_SIZE ))
-  info "[dry-run] would write $NPARTS parts of up to $(human_size "$PART_SIZE") into $OUT_DIR"
+  info "[dry-run] would write $NPARTS part(s) (or fewer) of up to $(human_size "$PART_SIZE") into $OUT_DIR"
 else
   mkdir -p "$OUT_DIR"
   rm -f "$OUT_DIR/$BASE".part*
