@@ -86,3 +86,6 @@ integrations/vibe/agents/
 integrations/vibe/prompts/
 integrations/zcode/agents/
 graphify-out/
+
+# Batch 6 video build output (regenerate with: python pension_b6/build_pension_b6.py --preview)
+pension_b6/pension_b6_build/
