@@ -186,6 +186,11 @@ WHITE_T = TEXT_WHITE
 # ============================================================================
 # VOICES - English-on-screen, Hinglish-in-ear
 # ============================================================================
+# Set by --captions: reserves a strip above the trap line for burned subtitles.
+CAPTIONS = False
+CAPTION_BAND = 196
+READING_WPS = 3.15   # Roman-Hinglish words per second, comfortable read-aloud pace
+
 DEFAULT_TEACHER = "en-IN-PrabhatNeural"   # male, Indian English, reads Roman Hindi well
 DEFAULT_STUDENT = "en-IN-NeerjaNeural"    # female, Indian English
 HI_TEACHER = "hi-IN-MadhurNeural"         # only if you allow Devanagari text
@@ -2979,7 +2984,7 @@ def render_frame(scene, idx, total, reveal, kind, out_path=None):
         draw_heads(d, scene["heads"], 70, y, W - 140, acc, 1 if reveal >= 1 else 0)
         y += 108
 
-    bottom = H - 112
+    bottom = H - (CAPTION_BAND if CAPTIONS else 112)
     if "table" in scene:
         spec = scene["table"]
         shown = 0 if reveal <= 0 else max(1, round(reveal * len(spec["rows"]) / max(n, 1)))
@@ -3251,6 +3256,49 @@ def build_segments(scene):
     return segs
 
 
+# ---------------------------------------------------------------------------
+# ffmpeg discovery: PATH first, then any bundled static build
+# ---------------------------------------------------------------------------
+_FFMPEG = None
+
+
+def ffmpeg_bin():
+    """Return an ffmpeg executable path, or None. Never needs ffprobe."""
+    global _FFMPEG
+    if _FFMPEG is not None:
+        return _FFMPEG or None
+    found = shutil.which("ffmpeg")
+    if found:
+        _FFMPEG = found
+        return found
+    try:
+        import imageio_ffmpeg
+        _FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
+        return _FFMPEG
+    except Exception:
+        _FFMPEG = ""
+        return None
+
+
+def run_ffmpeg(args, **kw):
+    exe = ffmpeg_bin()
+    if not exe:
+        raise RuntimeError("ffmpeg not found: install it, or pip install imageio-ffmpeg")
+    return subprocess.run([exe, "-hide_banner", "-loglevel", "error", *args],
+                          check=True, **kw)
+
+
+def assert_ass_support():
+    """The captioned master needs the ass/subtitles filter (libass)."""
+    exe = ffmpeg_bin()
+    if not exe:
+        raise RuntimeError("ffmpeg not found")
+    out = subprocess.run([exe, "-hide_banner", "-filters"], capture_output=True, text=True).stdout
+    if " ass " not in out and " subtitles " not in out:
+        raise RuntimeError("this ffmpeg has no libass (ass/subtitles filter)")
+    return True
+
+
 def probe_duration(path: Path) -> float:
     out = subprocess.check_output(
         ["ffprobe", "-v", "error", "-show_entries", "format=duration",
@@ -3301,19 +3349,28 @@ def fmt_ass(t: float) -> str:
     return f"{h}:{m:02d}:{s:05.2f}"
 
 
-def write_ass(cues, path: Path):
+def write_ass(cues, path: Path, caption_layout: bool = False):
+    if caption_layout:
+        default_style = ("Style: Default,DejaVu Sans,42,&H00FFFFFF,&H0000E6FF,&H00000000,&H80000000,"
+                         "-1,0,0,0,100,100,0,0,1,3,1,2,140,140,115,1")
+        student_style = ("Style: Student,DejaVu Sans,42,&H0042E4F0,&H0000E6FF,&H00000000,&H80000000,"
+                         "-1,0,0,0,100,100,0,0,1,3,1,2,140,140,115,1")
+    else:
+        default_style = ("Style: Default,DejaVu Sans,38,&H00FFFFFF,&H0000E6FF,&H00000000,&H80000000,"
+                         "-1,0,0,0,100,100,0,0,1,3,1,2,160,160,84,1")
+        student_style = ("Style: Student,DejaVu Sans,38,&H0042E4F0,&H0000E6FF,&H00000000,&H80000000,"
+                         "-1,0,0,0,100,100,0,0,1,3,1,2,160,160,84,1")
     head = (
         "[Script Info]\nScriptType: v4.00+\nPlayResX: 1920\nPlayResY: 1080\n\n"
         "[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, "
         "BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, "
         "Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-        "Style: Default,DejaVu Sans,38,&H00FFFFFF,&H0000E6FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,3,1,2,160,160,84,1\n"
-        "Style: Student,DejaVu Sans,38,&H0042E4F0,&H0000E6FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,3,1,2,160,160,84,1\n\n"
+        + default_style + "\n" + student_style + "\n\n"
         "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"
     )
     lines = [head]
-    for s, e, style, txt in cues:
-        lines.append(f"Dialogue: 0,{fmt_ass(s)},{fmt_ass(e)},{style},,0,0,0,,{txt}")
+    for st, en, style, txt in cues:
+        lines.append(f"Dialogue: 0,{fmt_ass(st)},{fmt_ass(en)},{style},,0,0,0,,{txt}")
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -3338,6 +3395,248 @@ def even_words(text, dur):
 
 
 # ============================================================================
+# SILENT CAPTIONED MASTER  (no TTS: the narration is timed by reading pace)
+# ============================================================================
+DOT = "\u00b7"          # stand-in for the dot inside an abbreviation
+ABBREV = ("O.M.", "i.e.", "e.g.", "w.e.f.", "etc.", "viz.", "cf.", "Rs.", "No.",
+          "Sr.", "Smt.", "Dr.", "Shri.", "G.O.", "U.O.", "F.No.", "A.N.", "i.r.")
+
+
+def _protect_abbrev(s):
+    """Hide the dots of abbreviations so the sentence splitter cannot cut them."""
+    s = re.sub(r"\b(?:[A-Za-z]\.){2,}", lambda m: m.group(0).replace(".", DOT), s)
+    for ab in ABBREV:
+        s = s.replace(ab, ab.replace(".", DOT))
+    return s
+
+
+def caption_cues(text, start, dur, style):
+    """Readable two-line cues: sentence first, commas second, 11 words / 86 chars max."""
+    plain = re.sub(r"\s+", " ", strip_rich(text)).strip()
+    if not plain:
+        return []
+    MAX_W, MAX_C, LINE, MIN_D = 11, 86, 43, 0.7
+    plain = _protect_abbrev(plain)
+
+    def split_long(words, merge_tail=True):
+        """Break a long run at commas, else every MAX_W words."""
+        out, cur = [], []
+        for w in words:
+            cur.append(w)
+            if (w.endswith((",", ";", ":")) and len(cur) >= 4) or len(cur) >= MAX_W:
+                out.append(cur)
+                cur = []
+        if cur:
+            if merge_tail and out and len(cur) < 3:
+                out[-1].extend(cur)
+            else:
+                out.append(cur)
+        return out
+
+    units = []
+    for sent in re.findall(r"[^.!?]+[.!?]*", plain):
+        words = sent.strip().split()
+        if not words:
+            continue
+        if len(words) <= MAX_W and len(" ".join(words)) <= MAX_C:
+            units.append(words)
+        else:
+            units.extend(split_long(words))
+
+    # a one-word unit ("Sir,") never deserves its own cue: fold it into a neighbour
+    merged = []
+    for u in units:
+        if len(u) < 2 and merged:
+            merged[-1] = merged[-1] + u
+        else:
+            merged.append(list(u))
+    if len(merged) >= 2 and len(merged[0]) < 2:
+        merged[1] = merged[0] + merged[1]
+        merged = merged[1:]
+    units = merged
+
+    # merging can overflow a unit again: re-split anything past the limits
+    final = []
+    for u in units:
+        if len(u) > MAX_W or len(" ".join(u)) > MAX_C:
+            final.extend(split_long(u, merge_tail=False))
+        else:
+            final.append(u)
+    units = final
+
+    # keep every cue on screen for at least MIN_D seconds by folding short ones in
+    for _ in range(4):
+        if len(units) < 2:
+            break
+        weights = [max(1, sum(len(w) + 1 for w in u)) for u in units]
+        tot = sum(weights)
+        durs = [dur * w / tot for w in weights]
+        if min(durs) >= MIN_D:
+            break
+        i = durs.index(min(durs))
+        if i == 0:
+            units[1] = units[0] + units[1]
+            del units[0]
+        else:
+            units[i - 1] = units[i - 1] + units[i]
+            del units[i]
+
+    def two_lines(words):
+        text = " ".join(words)
+        if len(text) <= LINE:
+            return text
+        best, best_score = None, 1e9
+        for k in range(2, len(words)):
+            a, b = " ".join(words[:k]), " ".join(words[k:])
+            over = max(0, len(a) - LINE) + max(0, len(b) - LINE)
+            score = over * 20 + abs(len(a) - len(b))
+            if words[k - 1].endswith((",", ";", ":")):
+                score -= 4
+            if score < best_score:
+                best, best_score = (a, b), score
+        return (best[0] + "\\N" + best[1]) if best else text
+
+    weights = [max(1, sum(len(w) + 1 for w in u)) for u in units]
+    tot = sum(weights)
+    starts, t = [], start
+    for wgt in weights:
+        starts.append(t)
+        t += dur * wgt / tot
+    cues = []
+    for i, (u, s0) in enumerate(zip(units, starts)):
+        s1 = starts[i + 1] if i + 1 < len(starts) else start + dur
+        cues.append((s0 + 0.04, max(s0 + 0.5, s1 - 0.04), style, two_lines(u)))
+    return [(c0, c1, st, tx.replace(DOT, ".")) for (c0, c1, st, tx) in cues]
+CAP_SLIDES_DIR = BUILD_DIR / "cap_slides"
+CAP_CONTENT_H = 860      # card area is compressed into 0..860 px
+CAP_BAND = (860, 980)    # reserved, empty strip where the burned captions live
+
+
+def caption_safe_slide(src: Path, dst: Path) -> Path:
+    """Compress the card area upwards so a clean caption band exists.
+
+    Tall slides (four fat cards) reach y=902, which is exactly where the burned
+    captions sit. Rather than shrink the font on some slides and not others, the
+    whole content block 0..980 is scaled into 0..860 and the freed strip is
+    filled with the slide's own background ramp. The trap strip and footer are
+    pasted back untouched, so every frame gets an identical caption band.
+    """
+    if dst.exists() and dst.stat().st_mtime >= src.stat().st_mtime:
+        return dst
+    im = Image.open(src).convert("RGB")
+    out = Image.new("RGB", im.size)
+    out.paste(im.crop((0, 0, 1920, 980)).resize((1920, CAP_CONTENT_H), Image.LANCZOS), (0, 0))
+    draw = ImageDraw.Draw(out)
+    ramp = list(range(900, 980))
+    for y in range(CAP_CONTENT_H, 980):
+        t = (y - CAP_CONTENT_H) / (980 - CAP_CONTENT_H)
+        draw.line([(0, y), (1920, y)], fill=im.getpixel((4, ramp[int(t * (len(ramp) - 1))])))
+    out.paste(im.crop((0, 980, 1920, 1080)), (0, 980))
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    out.save(dst)
+    return dst
+
+
+def build_master(jobs, total_chapters, args):
+    """Render one still per slide state, concatenate with the concat demuxer, burn captions."""
+    assert_ass_support()
+    out = Path(args.master_out)
+    wps = READING_WPS * (1.0 if not args.fast_pace else 1.25)
+
+    print(f"\n=== Master build: {total_chapters} chapters, caption-paced ===")
+    fps = args.fps
+    # Exact frame timeline: every still is held for a whole number of frames and
+    # the caption clock is derived from those same frame counts, so video and
+    # subtitles cannot drift apart.
+    timeline, cues, frame_cursor = [], [], 0
+    for (si, who, text, kind, reveal, sp, _mp3) in jobs:
+        png = SLIDES_DIR / f"master_{si:02d}_{reveal:02d}.png"
+        if not png.exists():
+            render_frame(SCENES[si], si + 1, total_chapters,
+                         reveal, "question" if kind == "intro" else kind, png)
+        png = caption_safe_slide(png, CAP_SLIDES_DIR / png.name)
+        words = len(strip_rich(text).split())
+        dur = max(2.6, words / wps)
+        dur += 1.1 if kind in ("question", "hook") else 0.55
+        n_frames = max(2, int(round(dur * fps)))
+        t0, t1 = frame_cursor / fps, (frame_cursor + n_frames) / fps
+        if timeline and timeline[-1][0] == png:
+            timeline[-1][1] += n_frames
+        else:
+            timeline.append([png, n_frames])
+        cues += caption_cues(text, t0, t1 - t0, "Student" if who == "student" else "Default")
+        frame_cursor += n_frames
+
+    total_frames = frame_cursor
+    cursor = total_frames / fps
+    ass = BUILD_DIR / "master_captions.ass"
+    write_ass(cues, ass, caption_layout=True)
+    print(f"  stills {len(timeline)} | frames {total_frames} | caption cues {len(cues)} "
+          f"| runtime {cursor/60:.2f} min")
+
+    # The concat demuxer injects phantom hold-frames at every segment boundary
+    # (~2.4 frames per still, measured), which desynchronises burned captions.
+    # So each still is encoded as its own exact-length part with the caption
+    # layer shifted to its global start time, and the parts are then stream-copied
+    # together. Frame counts are therefore authoritative, not approximated.
+    parts_dir = BUILD_DIR / "parts"
+    if parts_dir.exists():
+        shutil.rmtree(parts_dir)
+    parts_dir.mkdir(parents=True)
+    parts, t0 = [], 0.0
+    print("  encoding parts (the slow part) ...")
+    for idx, (png, n_frames) in enumerate(timeline):
+        part = parts_dir / f"part_{idx:03d}.mp4"
+        filt = (f"setpts=PTS+{t0:.3f}/TB,ass=master_captions.ass,"
+                f"setpts=PTS-{t0:.3f}/TB,format=yuv420p")
+        run_ffmpeg(["-y", "-loop", "1", "-framerate", str(fps), "-i", str(png.resolve()),
+                    "-vf", filt, "-frames:v", str(n_frames),
+                    "-c:v", "libx264", "-preset", "medium", "-crf", str(args.crf),
+                    "-tune", "stillimage", "-g", str(fps * 10), "-pix_fmt", "yuv420p",
+                    "-video_track_timescale", "90000", str(part.resolve())], cwd=str(BUILD_DIR))
+        parts.append(part)
+        t0 += n_frames / fps
+        if (idx + 1) % 25 == 0 or idx + 1 == len(timeline):
+            print(f"    {idx+1}/{len(timeline)} parts  ({(idx+1)/len(timeline)*100:5.1f}%)")
+
+    listing = BUILD_DIR / "master_parts.txt"
+    listing.write_text("".join(f"file '{q.resolve().as_posix()}'\n" for q in parts), encoding="utf-8")
+    silent = BUILD_DIR / "master_silent.mp4"
+    run_ffmpeg(["-y", "-f", "concat", "-safe", "0", "-i", listing.name,
+                "-c", "copy", "-movflags", "+faststart", str(silent.resolve())],
+               cwd=str(BUILD_DIR))
+    # attach a silent 48 kHz stereo track so a voice-over can be laid in later
+    run_ffmpeg(["-y", "-i", str(silent.resolve()),
+                "-f", "lavfi", "-i", "anullsrc=r=48000:cl=stereo",
+                "-c:v", "copy", "-c:a", "aac", "-b:a", "96k", "-shortest",
+                "-movflags", "+faststart", str(out.resolve())])
+
+    # verification: prove the caption band really has text at known cue times
+    exe = ffmpeg_bin()
+    probe = BUILD_DIR / "verify.png"
+    picks = [cues[i] for i in range(0, len(cues), max(1, len(cues) // 8))][:8]
+    for (c0, c1, *_) in picks:
+        t = (c0 + c1) / 2
+        subprocess.run([exe, "-hide_banner", "-loglevel", "error", "-y",
+                        "-i", str(out.resolve()), "-ss", f"{t:.2f}", "-frames:v", "1",
+                        "-vf", "crop=1920:124:0:856", str(probe)], check=True)
+        # white narration text sums ~730, the amber student voice sums ~532,
+        # the dark navy slide background sums < 90 -> 450 separates them cleanly
+        bright = sum(1 for px in Image.open(probe).convert("RGB").get_flattened_data()
+                     if sum(px) > 450)
+        if bright < 250:
+            raise RuntimeError(f"caption missing at {t:.1f}s ({bright} bright px)")
+    print(f"  caption verification: 8/{len(picks)} sampled cue midpoints carry text")
+
+    size = out.stat().st_size / 1048576
+    print(f"\nDONE: {out.resolve()}")
+    print(f"  runtime {cursor/60:.1f} min | {size:.1f} MB | {args.fps} fps | crf {args.crf}")
+    print("  video is silent by design: the Hinglish narration is burned in as captions.")
+    print("  to add a voice where edge-tts is reachable:  python build_pension_b4.py --part N")
+    return out
+
+
+# ============================================================================
 # MAIN
 # ============================================================================
 async def main():
@@ -3346,6 +3645,13 @@ async def main():
     ap.add_argument("--audit", action="store_true", help="coverage + density + content audit, then exit")
     ap.add_argument("--preview", action="store_true", help="render slides only (no ffmpeg, no network)")
     ap.add_argument("--no-tts", action="store_true", help="silent timing run (needs ffmpeg)")
+    ap.add_argument("--master", action="store_true",
+                    help="silent master with burned Hinglish captions, one ffmpeg pass (no TTS needed)")
+    ap.add_argument("--crf", type=int, default=25, help="x264 quality for --master (default 25)")
+    ap.add_argument("--fps", type=int, default=25, help="frame rate for --master (default 25)")
+    ap.add_argument("--master-out", default="pension_b4_master_silent.mp4",
+                    help="output file for --master")
+    ap.add_argument("--fast-pace", action="store_true", help="25%% faster captions, shorter runtime")
     ap.add_argument("--list", action="store_true", help="print the chapter map and exit")
     ap.add_argument("--teacher", default=DEFAULT_TEACHER)
     ap.add_argument("--student", default=DEFAULT_STUDENT)
@@ -3388,6 +3694,8 @@ async def main():
         OUTPUT_MP4 = Path(f"{OUT_STEM}_part{args.part}.mp4")
     total = len(SCENES)
 
+    if args.master:
+        globals()["CAPTIONS"] = True
     print(f"=== Step 1: rendering {total} chapters ===")
     jobs = []
     for si, sc in enumerate(SCENES):
@@ -3399,6 +3707,10 @@ async def main():
         print(f"  {si+1:02d}/{total}  {sc['id']}")
     if args.preview:
         print(f"Preview frames: {SLIDES_DIR.resolve()}")
+        return
+
+    if args.master:
+        build_master(jobs, total, args)
         return
 
     if not shutil.which("ffmpeg") or not shutil.which("ffprobe"):
@@ -3480,9 +3792,15 @@ if __name__ == "__main__":
 python build_pension_b4.py --list       # the 43-chapter map
 python build_pension_b4.py --audit      # coverage + density + readability, writes the report
 python build_pension_b4.py --preview    # render every slide (no ffmpeg needed)
+python build_pension_b4.py --master     # THE VIDEO: silent captioned master, no TTS needed
 python build_pension_b4.py --no-tts     # silent timing run (needs ffmpeg)
 python build_pension_b4.py              # full build with edge-tts narration + burned subtitles
 ```
+
+`--master` needs an ffmpeg with libass (`pip install imageio-ffmpeg` is enough). It renders every
+slide, reserves a caption band at 860..980 px, encodes one exact-length clip per still, burns the
+Hinglish captions into that band, stream-copies the clips together and then verifies that eight cue
+midpoints actually contain caption pixels before it declares success.
 
 ## What the audit proves
 

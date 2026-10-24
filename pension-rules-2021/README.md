@@ -107,12 +107,63 @@ Inline markup in the content layer drives colour and weight without any per-run 
 
 ```bash
 pip install Pillow
-python build_pension_b4.py --audit      # the proof: coverage, density, readability
-python build_pension_b4.py --preview    # every slide, no ffmpeg
-python build_pension_b4.py --no-tts     # timing run, needs ffmpeg + ffprobe
-python build_pension_b4.py              # full build, needs edge-tts + ffmpeg with libass
-python build_pension_b4.py --part 2     # chapters 16-30 only
+python build_pension_b4.py --audit            # the proof: coverage, density, readability
+python build_pension_b4.py --preview          # every slide, no ffmpeg
+python build_pension_b4.py --master           # THE VIDEO: silent captioned master, no TTS needed
+python build_pension_b4.py --master --part 2  # chapters 16-30 only
+python build_pension_b4.py                    # full build with edge-tts narration
+python build_pension_b4.py --no-tts           # silent timing run with placeholder audio
 ```
+
+### The delivered video
+
+`pension_b4_master_silent.mp4` — 1920x1080, 25 fps, **46 min 27 s**, 69,675 frames, 215 stills,
+1,069 caption cues, ~60 MB, H.264 High + AAC.
+
+**The caption band is reserved, not overlaid.** Four-card slides reach y=902, which is exactly
+where burned captions sit, so a fixed overlay collided with the last card on the busiest chapters.
+`--master` therefore scales the card area (everything above the trap strip) from 0..980 px into
+0..860 px, fills 860..980 px with the slide's own background ramp, and pastes the yellow trap strip
+and footer back untouched. Every frame now has an identical empty band at 860..980 px, and the
+captions sit inside it — never over a card, never over the trap.
+
+It is **silent by design**: every word of the Hinglish narration is burned in as a two-line caption in
+the reserved band above the trap strip. That is deliberate, because this sandbox cannot reach the
+edge-tts endpoint (`speech.platform.bing.com`) or any binary CDN, so neural speech could not be
+generated here. The caption timing is caption-paced at 3.15 English words per second, which is a
+comfortable read-aloud speed and also very close to what an `en-IN` neural voice produces, so a later
+voice pass will drop onto the same timeline.
+
+**To add the voice later**, on any machine with internet access:
+
+```bash
+python build_pension_b4.py --part 1     # chapters 1-15, real edge-tts narration
+python build_pension_b4.py --part 2
+python build_pension_b4.py --part 3
+```
+
+or build the whole thing in one pass with `python build_pension_b4.py`.
+
+### ffmpeg
+
+The compiler finds `ffmpeg` on `PATH`, and otherwise falls back to a bundled static build:
+
+```bash
+pip install imageio-ffmpeg     # provides ffmpeg 7.0 with libass, which the captions need
+```
+
+`--master` refuses to run on an ffmpeg without libass, and after encoding it samples eight cue
+midpoints and fails the build if the caption band is empty — so a silent "captions did not burn"
+failure cannot ship. The white narration cues sum to ~730 brightness, the amber student cues to
+~532 and the navy slide background to under 90, so the threshold of 450 catches both voices.
+
+**How the timeline is made frame-exact.** The ffmpeg concat demuxer injects phantom hold-frames at
+every `file` boundary — measured at ~2.4 extra frames per still, which is about 16 s of drift over
+215 stills and is enough to slide captions off their slides. So `--master` does not rely on it:
+each still is encoded as its own clip with `-frames:v N` (N = round(seconds x fps)), the caption
+layer is shifted to that still's global start time with `setpts=PTS+t0/TB,ass=...,setpts=PTS-t0/TB`,
+and the clips are then stream-copied together with `-c copy`. Frame counts, not timestamps, are
+authoritative, so the burned caption always matches the frame it belongs to.
 
 Default voices are `en-IN-PrabhatNeural` (teacher) and `en-IN-NeerjaNeural` (student), which read
 Roman Hinglish correctly. If you ever want Devanagari narration, `HI_TEACHER` / `HI_STUDENT` are
