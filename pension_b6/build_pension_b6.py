@@ -2028,18 +2028,29 @@ def draw_table(d, spec, acc, reveal, n, kind):
 
 
 def draw_trap(d, scene, acc, kind):
+    """The trap is the punchline: held back during the question, readable mid-chapter, lit at the end."""
     text = re.sub(r"^REMEMBER:\s*", "", scene["hook"])
-    rounded(d, [M, TRAP_Y, W - M, TRAP_Y + TRAP_H], 12, fill=YELLOW,
-            outline=lerp(YELLOW, (255, 255, 255), 0.4), width=3)
+    if kind in ("intro", "question"):
+        fill, ink, tag_fill, tag_ink = (34, 44, 66), (94, 108, 134), (26, 34, 52), (120, 134, 158)
+        body = "Answer at the end of this chapter - try to spot it first."
+    elif kind == "hook":
+        fill, ink, tag_fill, tag_ink = YELLOW, (20, 16, 4), (26, 22, 6), YELLOW
+        body = text
+    else:
+        fill, ink, tag_fill, tag_ink = (120, 108, 40), (240, 236, 210), (56, 50, 18), (232, 214, 120)
+        body = text
+
+    rounded(d, [M, TRAP_Y, W - M, TRAP_Y + TRAP_H], 12, fill=fill,
+            outline=lerp(YELLOW, (255, 255, 255), 0.4) if kind == "hook" else (56, 68, 94), width=3 if kind == "hook" else 2)
     tag = "TRAP"
     ft = font(20, True)
     tw = text_w(d, tag, ft) + 26
-    rounded(d, [M + 12, TRAP_Y + 14, M + 12 + tw, TRAP_Y + TRAP_H - 14], 8, fill=(26, 22, 6))
-    d.text((M + 25, TRAP_Y + 21), tag, font=ft, fill=YELLOW)
-    f, l, lh, _ = fit_block(d, text, True, W - 2 * M - tw - 70, TRAP_H - 16, TRAP_START, TRAP_MIN, 1.12)
+    rounded(d, [M + 12, TRAP_Y + 14, M + 12 + tw, TRAP_Y + TRAP_H - 14], 8, fill=tag_fill)
+    d.text((M + 25, TRAP_Y + 21), tag, font=ft, fill=tag_ink)
+    f, l, lh, _ = fit_block(d, body, True, W - 2 * M - tw - 70, TRAP_H - 16, TRAP_START, TRAP_MIN, 1.12)
     ty = TRAP_Y + (TRAP_H - len(l) * lh) // 2
     for k, ln in enumerate(l):
-        d.text((M + tw + 40, ty + k * lh), ln, font=f, fill=(20, 16, 4))
+        d.text((M + tw + 40, ty + k * lh), ln, font=f, fill=ink)
 
 
 def draw_footer(d, acc, qno, total, reveal, n, kind):
@@ -2252,8 +2263,8 @@ def write_ass(cues, path: Path):
         "[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, "
         "Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, "
         "MarginR, MarginV, Encoding\n"
-        "Style: Default,DejaVu Sans,38,&H00FFFFFF,&H0000E6FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,3,1,2,160,160,60,1\n"
-        "Style: Student,DejaVu Sans,38,&H0042E4F0,&H0000E6FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,3,1,2,160,160,60,1\n\n"
+        "Style: Default,DejaVu Sans,34,&H00FFFFFF,&H0000E6FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,3,1,2,160,160,108,1\n"
+        "Style: Student,DejaVu Sans,34,&H0042E4F0,&H0000E6FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,3,1,2,160,160,108,1\n\n"
         "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"
     )
     lines = [head]
@@ -2280,17 +2291,144 @@ def even_words(text, dur):
     return [(t, i * step, (i + 1) * step) for i, t in enumerate(toks)]
 
 
+
+# ============================================================================
+# VOICED MODE - consume pre-recorded narration (voice/chNN_pN.mp3) instead of TTS
+# ============================================================================
+def detect_silences(path: Path, noise="-34dB", min_len=0.20):
+    """[(start, end)] of quiet stretches, so slide changes can land between sentences."""
+    err = subprocess.run([FFMPEG, "-hide_banner", "-i", str(path), "-af",
+                          f"silencedetect=noise={noise}:d={min_len}", "-f", "null", "-"],
+                         capture_output=True, text=True).stderr
+    starts = [float(x) for x in re.findall(r"silence_start: (-?[\d.]+)", err)]
+    ends = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", err)]
+    return list(zip(starts, ends[:len(starts)]))
+
+
+def snap_bounds(weights, duration, silences, tol=4.0, min_gap=1.2):
+    """Split one chapter's audio at sentence gaps nearest the character-weighted split."""
+    total_w = sum(weights) or 1
+    targets, acc = [], 0.0
+    for w in weights[:-1]:
+        acc += w
+        targets.append(duration * acc / total_w)
+    mids = [s for s, e in silences]
+    mids += []
+    chosen, prev = [], 0.0
+    for t in targets:
+        near = [m for m in mids if abs(m - t) <= tol and m > prev + min_gap]
+        b = min(near, key=lambda m: abs(m - t)) if near else max(t, prev + min_gap)
+        b = min(b, duration - 0.6)
+        chosen.append(b)
+        prev = b
+    return [0.0] + chosen + [duration]
+
+
+def voiced_beats(scene):
+    """Audio order: the student's question, then the intro (if any), the four cards, the trap."""
+    beats = [("student", scene["q_say"], 0, "question")]
+    if scene.get("intro"):
+        beats.append(("teacher", scene["intro"], 0, "intro"))
+    for i, b in enumerate(scene["boxes"]):
+        beats.append(("teacher", b[3], i + 1, "answer"))
+    beats.append(("teacher", scene["hook_say"], len(scene["boxes"]), "hook"))
+    return beats
+
+
+def concat_audio(parts, out: Path):
+    lst = out.with_suffix(".txt")
+    lst.write_text("\n".join(f"file '{p.resolve()}'" for p in parts) + "\n", encoding="utf-8")
+    subprocess.run([FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", str(lst),
+                    "-c", "copy", str(out)], check=True,
+                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    return out
+
+
+async def render_voiced(args, total_chapters):
+    """Build the master from recorded narration: no TTS, slides cut to the spoken sentences."""
+    vdir = Path(args.voice_dir)
+    vtmp = BUILD_DIR / "voiced"
+    vtmp.mkdir(parents=True, exist_ok=True)
+    clips, cues, cursor, used = [], [], 0.0, 0
+
+    for si, sc in enumerate(SCENES):
+        num = si + 1
+        parts = sorted(vdir.glob(f"ch{num:02d}_p*.mp3"))
+        if not parts:
+            print(f"  ch{num:02d}: no narration on disk - skipped")
+            continue
+        chapter_audio = concat_audio(parts, vtmp / f"ch{num:02d}_full.mp3")
+        dur = probe_duration(chapter_audio)
+        beats = voiced_beats(sc)
+        bounds = snap_bounds([max(len(b[1]), 1) for b in beats], dur,
+                            detect_silences(chapter_audio))
+        for i, (who, text, reveal, kind) in enumerate(beats):
+            d = bounds[i + 1] - bounds[i]
+            if d <= 0.35:
+                continue
+            png = SLIDES_DIR / f"{sc['id']}_{i:02d}_{kind}.png"
+            render_frame(sc, num, total_chapters, reveal, kind, png)
+            clip = vtmp / f"clip_{num:02d}_{i}.mp4"
+            subprocess.run([
+                FFMPEG, "-y", "-loop", "1", "-framerate", "5", "-i", str(png),
+                "-ss", f"{bounds[i]:.3f}", "-t", f"{d:.3f}", "-i", str(chapter_audio),
+                "-map", "0:v:0", "-map", "1:a:0",
+                "-c:v", "libx264", "-tune", "stillimage", "-preset", "veryfast", "-crf", str(args.clip_crf),
+                "-g", str(args.fps * 10), "-r", str(args.fps), "-pix_fmt", "yuv420p",
+                "-c:a", "aac", "-b:a", "128k", "-ar", "44100", "-ac", "1",
+                "-shortest", str(clip)], check=True,
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            cues += make_cues(even_words(text, d), cursor, "Student" if who == "student" else "Default")
+            clips.append(clip)
+            cursor += d
+        used += 1
+        print(f"  ch{num:02d}: {len(parts)} file(s), {dur/60:.2f} min, {len(beats)} beats synced")
+
+    if not clips:
+        sys.exit("No narrated chapters found - check --voice-dir")
+
+    concat = BUILD_DIR / "concat.txt"
+    concat.write_text("\n".join(f"file '{c.resolve()}'" for c in clips) + "\n", encoding="utf-8")
+    raw = BUILD_DIR / "raw_concat.mp4"
+    subprocess.run([FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", str(concat), "-c", "copy", str(raw)],
+                   check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    ass = BUILD_DIR / "subtitles.ass"
+    write_ass(cues, ass)
+    burn = args.subs and has_subtitles_filter()   # capped cards are already the captions
+    print(f"  {used} chapter(s) voiced | timeline {cursor/60:.2f} min | captions {'burned' if burn else 'skipped'}")
+    if burn:
+        ass_esc = str(ass).replace("\\", "/").replace(":", "\\:")
+        subprocess.run([FFMPEG, "-y", "-i", str(raw), "-vf", f"subtitles='{ass_esc}'",
+                        "-af", "loudnorm=I=-16:TP=-1.5:LRA=11",
+                        "-c:v", "libx264", "-crf", str(args.crf), "-preset", "fast", "-pix_fmt", "yuv420p",
+                        "-c:a", "aac", "-b:a", "160k", "-ar", "48000", "-movflags", "+faststart", str(OUTPUT_MP4)],
+                       check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    else:
+        subprocess.run([FFMPEG, "-y", "-i", str(raw), "-c", "copy", "-movflags", "+faststart",
+                        str(OUTPUT_MP4)], check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    dur = probe_duration(OUTPUT_MP4)
+    info = stream_info(OUTPUT_MP4)
+    print("\n=== verification ===")
+    print("streams:", info)
+    print(f"DONE: {OUTPUT_MP4.resolve()}  |  {dur/60:.2f} min  |  {OUTPUT_MP4.stat().st_size/1048576:.1f} MB")
+
+
 # ============================================================================
 # MAIN
 # ============================================================================
 async def main():
+    global SCENES, OUTPUT_MP4
     ap = argparse.ArgumentParser()
     ap.add_argument("--script", action="store_true", help="write the shooting script (English screen + Hinglish voice) and exit")
     ap.add_argument("--coverage", action="store_true", help="print the rule coverage matrix + density check, then exit")
     ap.add_argument("--audit", action="store_true", help="print the density table and exit (no ffmpeg needed)")
     ap.add_argument("--preview", action="store_true", help="render slides only")
     ap.add_argument("--no-tts", action="store_true", help="silent audio (offline layout/timing test)")
-    ap.add_argument("--no-subs", action="store_true", help="do not burn subtitles (default when --no-tts)")
+    ap.add_argument("--no-subs", action="store_true", help="never burn subtitles")
+    ap.add_argument("--subs", action="store_true", help="burn spoken-line subtitles (voiced mode; off by default)")
     ap.add_argument("--crf", type=int, default=21, help="x264 quality for the master (lower = bigger)")
     ap.add_argument("--clip-crf", type=int, default=23, help="x264 quality for the per-slide clips")
     ap.add_argument("--fps", type=int, default=24, help="frame rate of the slides (24 is plenty for stills)")
@@ -2298,6 +2436,10 @@ async def main():
     ap.add_argument("--student", default=DEFAULT_STUDENT)
     ap.add_argument("--rate", default="-4%")
     ap.add_argument("--part", type=int, choices=[1, 2, 3], help="1..3 = first, middle, last third of the chapters")
+    ap.add_argument("--voice-dir", default=None,
+                    help="render from recorded narration in this folder (chNN_pN.mp3) instead of edge-tts")
+    ap.add_argument("--out", default=None, help="override the output file name")
+    ap.add_argument("--only", default=None, help="comma-separated chapter numbers to include (excerpt render)")
     args = ap.parse_args()
 
     write_reference_sheet()
@@ -2317,7 +2459,18 @@ async def main():
 
     for d in (BUILD_DIR, SLIDES_DIR, AUDIO_DIR):
         d.mkdir(parents=True, exist_ok=True)
-    global SCENES, OUTPUT_MP4
+    if args.out:
+        OUTPUT_MP4 = Path(args.out)
+    total_all = len(SCENES)
+    if args.only:
+        keep = {int(x) for x in args.only.replace(" ", "").split(",") if x}
+        SCENES = [sc for i, sc in enumerate(SCENES) if i + 1 in keep]
+    if args.voice_dir:
+        find_ffmpeg()
+        print(f"  ffmpeg: {FFMPEG}")
+        print(f"=== VOICED MODE: {args.voice_dir} | {len(SCENES)} chapter(s) ===")
+        await render_voiced(args, total_chapters=total_all)
+        return
     if args.part:
         _idx = [next(i for i, x in enumerate(SCENES) if x["id"] == pid) for pid in PART_STARTS] + [len(SCENES)]
         SCENES = SCENES[_idx[args.part - 1]:_idx[args.part]]
@@ -2377,7 +2530,7 @@ async def main():
         cursor += dur
     print(f"  {len(clips)} clips | timeline {cursor/60:.2f} min")
 
-    burn = (not args.no_subs) and (not args.no_tts) and has_subtitles_filter()
+    burn = (args.subs or not args.no_tts) and (not args.no_subs) and has_subtitles_filter()
     if not args.no_subs and not args.no_tts and not burn:
         print("  NOTE: this ffmpeg has no libass 'subtitles' filter - rendering without burned captions.")
     if args.no_tts:

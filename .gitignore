@@ -93,3 +93,6 @@ pension_b6/pension_b6_build/
 # per-part renders and the build cache stay out of Git; the full master is tracked
 # so it can be downloaded straight from the repo (release uploads are blocked in this sandbox)
 pension_b6/pension_b6_masterclass_part*.mp4
+
+# narration renders: the sourced mp3 clips are tracked (small, re-renderable), the samples are not
+pension_b6/pension_b6_voiced_sample.mp4
