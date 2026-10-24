@@ -92,3 +92,24 @@ LANGUAGE SPLIT OK
 
 If you edit a row, the clause ledger tells you which statutory unit went missing; if you edit narration, the language
 audit tells you which segment is not Hinglish or has slipped into Devanagari.
+
+---
+
+## 7. In-sandbox video build (no ffmpeg install needed)
+
+`make_video2.py` builds the real MP4 inside this environment:
+
+```bash
+python make_video2.py --list                  # chunk / segment progress
+python make_video2.py --segments 0 55 --out part1.mp4
+python make_video2.py --out pension_b2_hinglish.mp4     # everything narrated so far
+```
+
+- Narrated audio lives in `voice_audio/` as 45 chunks (`chunk_NN.mp3`), each single-voice and <=1400 characters.
+  Teacher chunks use the male Indian-accent voice, student chunks the female one.
+- A chunk covers whole segments; `make_video2.py` slices it back into per-segment audio by character proportion
+  (validated to +/-0.8 s on a ground-truth chunk) so slides change with the narration.
+- Each slide carries a baked Hinglish caption band, so the video reads like a class recording.
+- ffmpeg comes from `imageio-ffmpeg` (7.0.2, libx264 + AAC), so nothing needs to be installed on the host.
+
+Progress is tracked by `voice_chunks.json` (which segments each chunk covers) and `voice_chunk_voices.json`.
