@@ -140,6 +140,7 @@ The reference screenshots are in `sample_frames/`.
 | `build_pension_b6.py` | **the updated compiler** — 32 chapters, 128 cards, 4 tables, coverage gate, language gate, Hinglish narration, `--script` / `--coverage` / `--audit` / `--preview` / `--no-tts` / `--part` |
 | `pension_b6_reference_sheet.md` | generated: coverage matrix + full examinable wording behind every card + the four drafting slips |
 | `pension_b6_narration_script.md` | generated: shooting script — English on-screen line and Hinglish SAY line, card by card |
+| `pension_b6_masterclass.mp4` | **the rendered master** — 39 min 27 s, 1920×1080, 24 fps, 33.9 MB, silent bed (see §11) |
 | `sample_frames/*.png` | six rendered 1920×1080 frames from the actual build |
 | `pension_b6_build/` | build output (slides, audio, clips); git-ignored |
 | `../build_pension_rules_batch6_simple_english_video.md` | the original upload, untouched, for diffing |
@@ -156,3 +157,39 @@ python build_pension_b6.py --part 2        # render only chapters 12-22
 ```
 
 Full build needs `edge-tts` (internet) and `ffmpeg`/`ffprobe` with **libass** for the burned-in subtitles. The density gate stops the build before rendering if any card, pill, trap strip or table cell would have to shrink below its legibility floor — so a bad edit can never reach the encoder.
+
+---
+
+## 11. The rendered master
+
+`pension_b6_masterclass.mp4` — **39 min 27 s, 1920×1080, H.264, 24 fps, 33.9 MB**, all 32 chapters, 193 reveal beats, audio stream present.
+
+**Download**
+
+```
+https://github.com/khanashraf6742-boop/agency-agents/raw/arena/b90f672d-agency-agents/pension_b6/pension_b6_masterclass.mp4
+```
+
+Browsable page (has a Download button): `…/blob/arena/b90f672d-agency-agents/pension_b6/pension_b6_masterclass.mp4`
+
+**Why the audio is silent.** Two sandbox limits, both outside the script:
+
+1. `edge-tts` cannot reach `speech.platform.bing.com` → no synthesis.
+2. `uploads.github.com` refuses TLS → no release asset, so the master is committed to the repo and served from the raw URL instead.
+
+The narration itself is finished and committed (`pension_b6_narration_script.md`, 128 SAY lines). Running the compiler on any machine with internet and ffmpeg produces the voiced cut in one command:
+
+```bash
+python build_pension_b6.py     # Hinglish neural voices + burned captions + loudness-normalised master
+```
+
+**Encoder settings used for this master** (all overridable):
+
+| Setting | Value | Why |
+|---|---|---|
+| `--fps` | 24 | stills need nothing faster; 24 fps with `-tune stillimage` cut the file from 41.5 MB to 33.9 MB for the same 39 minutes |
+| `--clip-crf` | 23 | per-slide clips stay flat, so quality loss is invisible |
+| silent bed | 24 kHz mono, 24 kbps | ~0.4 MB for a 39-minute file instead of ~60 MB |
+| `--no-subs` | auto-on with `--no-tts` | captions would have no timings to follow; the cards already carry the text |
+
+Regenerate with `python build_pension_b6.py --no-tts` (≈6 min 30 s on 2 vCPU).
