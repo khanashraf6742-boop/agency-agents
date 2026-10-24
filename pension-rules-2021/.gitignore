@@ -1,0 +1,7 @@
+# generated at build time
+pension_b4_build/
+*.mp4
+*.mp3
+
+# the delivered master is versioned so it can be downloaded straight from GitHub
+!pension_b4_master_silent.mp4
