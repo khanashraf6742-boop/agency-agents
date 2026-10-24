@@ -120,6 +120,16 @@ python build_pension_b4.py --no-tts           # silent timing run with placehold
 `pension_b4_master_silent.mp4` — 1920x1080, 25 fps, **46 min 27 s**, 69,675 frames, 215 stills,
 1,069 caption cues, ~60 MB, H.264 High + AAC.
 
+### Download
+
+The MP4 is committed to this repository so it can be downloaded without the build sandbox:
+
+- **Raw download:** <https://github.com/khanashraf6742-boop/agency-agents/raw/arena/f3b9d7cb-agency-agents/pension-rules-2021/pension_b4_master_silent.mp4>
+- **File page (big Download button):** <https://github.com/khanashraf6742-boop/agency-agents/blob/arena/f3b9d7cb-agency-agents/pension-rules-2021/pension_b4_master_silent.mp4>
+
+`.gitignore` keeps every other `*.mp4` out of the repository and whitelists only this file.
+GitHub warns that it is above the 50 MB recommended size; it is well under the 100 MB hard limit.
+
 **The caption band is reserved, not overlaid.** Four-card slides reach y=902, which is exactly
 where burned captions sit, so a fixed overlay collided with the last card on the busiest chapters.
 `--master` therefore scales the card area (everything above the trap strip) from 0..980 px into
