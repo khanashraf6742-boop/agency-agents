@@ -113,3 +113,13 @@ python make_video2.py --out pension_b2_hinglish.mp4     # everything narrated so
 - ffmpeg comes from `imageio-ffmpeg` (7.0.2, libx264 + AAC), so nothing needs to be installed on the host.
 
 Progress is tracked by `voice_chunks.json` (which segments each chunk covers) and `voice_chunk_voices.json`.
+
+## 8. Final render (complete film)
+
+`make_video2.py --segments 0 226 --out pension_b2_hinglish_FULL.mp4`
+
+Result: **58 m 37 s, 138.9 MB**, 1920x1080 H.264 + AAC 48 kHz stereo, 226 segments,
+47 single-voice narration chunks (43 teacher / 4 student) committed under `voice_audio/`.
+Full width of the chapter: Rules 11-30, authority map, four revision tables, the
+"how much counts" chart, the four-numbers panel and the closing recap plus the
+Part 2 preview of Chapters 4-5.
