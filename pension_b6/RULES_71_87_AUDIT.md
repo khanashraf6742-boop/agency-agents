@@ -193,3 +193,35 @@ python build_pension_b6.py     # Hinglish neural voices + burned captions + loud
 | `--no-subs` | auto-on with `--no-tts` | captions would have no timings to follow; the cards already carry the text |
 
 Regenerate with `python build_pension_b6.py --no-tts` (≈6 min 30 s on 2 vCPU).
+
+---
+
+## 12. Voiced cut (Indian-accent narration)
+
+**Status: 18 of 32 chapters voiced** — chapters 1–17 and 19 (chapter 18 is queued, see below).
+Rendered as `pension_b6_voiced_part1.mp4`, **19 min 29 s, 35 MB, 1920×1080, AAC 44.1 kHz mono**, mean level −19.5 dB, peak −1.3 dB.
+
+### Voices (chosen from an A/B audition)
+| Role | voice_id | Register |
+|---|---|---|
+| Teacher / main narration | `voice-00` | masculine, Indian English, explainer pace |
+| Riya (student question) | `voice-01` | feminine, Indian English, conversational |
+
+Both are neural Indian-English voices reading **Roman-script Hinglish**, so nothing is mangled by a script switch: *gratuity*, *licence fee*, *do hazaar chhabbis*, *pandrah din*, and rule references spoken as words ("Rule 71, sub rule 4, clause c").
+
+### How the sync works
+The recorded chapter audio is split where the speaker actually pauses (`silencedetect`), then each slide's cut point is snapped to the pause nearest that card's share of the chapter's characters. Picture therefore changes **in the gaps, never mid-sentence**. 63 detected pauses across 18 chapters, 6–7 beats per chapter.
+
+### Production rules learned while voicing
+* The **TRAP strip is held back** during the question ("answer at the end of this chapter"), dimmed through the body, and lit only when the narration delivers it — otherwise the slide spoils its own punchline.
+* **Burned captions are off by default** (`--subs` to enable): they were landing on the trap strip and simply repeated what the cards already print.
+* One chapter (18) was initially declined by a content filter — the wording around *death* in a comparative sentence. It is rephrased in `voice_plan.json` and re-queued; no content changed.
+
+### Remaining work
+14 clips: chapter 18, then 20–32. The speech tool allows **10 clips per turn**, so two more passes:
+
+```bash
+python build_pension_b6.py --voice-dir voice --out pension_b6_voiced_master.mp4   # after the last clip
+```
+
+`voice_plan.json` holds the exact text, part number and character count of every clip, so the recording can be finished anywhere.
