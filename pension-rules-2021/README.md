@@ -120,6 +120,32 @@ python build_pension_b4.py --no-tts           # silent timing run with placehold
 `pension_b4_master_silent.mp4` — 1920x1080, 25 fps, **46 min 27 s**, 69,675 frames, 215 stills,
 1,069 caption cues, ~60 MB, H.264 High + AAC.
 
+### Narrated master (the finished video)
+
+`pension_b4_master_narrated.mp4` is the delivered video: **48 min 47 s**, 1920x1080, H.264 High +
+AAC 96 kbps stereo, ~91 MB, **spoken narration throughout**.
+
+- **Teacher** voice reads the rule text, the worked examples and the trap warnings.
+- **Student** voice asks the opening question of each chapter.
+- The Hinglish captions stay burned into the reserved band, so the video works with sound off too.
+
+The narration is not a words-per-second guess. Every clip was recorded from the exact script, then
+split back into its script segments by a monotonic dynamic-programming alignment over the pauses the
+voice actually makes (character share as the cost prior). Across the 253 measured units the
+correlation between characters and spoken duration is **0.972**, so a slide is always on screen
+while its own sentence is being spoken. Slide time, caption time and audio time all come from those
+same measured durations, and the runtime is 48.78 min in all three.
+
+Rebuild it with:
+
+```bash
+python narrate_build.py --status   # how many clips exist
+python narrate_build.py --plan     # print the next batch of scripts to record
+python narrate_build.py --build    # assemble video + narration
+```
+
+`pension_b4_master_silent.mp4` is kept as the voice-free fallback (46:27, 54 MB).
+
 ### Download
 
 The MP4 is committed to this repository so it can be downloaded without the build sandbox:

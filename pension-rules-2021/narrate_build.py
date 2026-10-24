@@ -189,7 +189,8 @@ def build(args):
         spans = split_clip(c["path"], c["units"], runs)
         for (r, s), (a, b) in zip(c["units"], spans):
             seg = runs[r]["segs"][s]
-            pieces.append({"run": r, "seg": seg, "text": seg["text"],
+            pieces.append({"run": r, "ch": runs[r]["ch"], "reveal": seg["reveal"],
+                           "seg": seg, "text": seg["text"],
                            "kind": seg["kind"], "speaker": runs[r]["speaker"],
                            "clip": c["path"], "a": a, "b": b, "dur": max(0.8, b - a)})
 
@@ -249,22 +250,23 @@ def build(args):
         for p in parts_dir.glob("*.mp4"):
             p.unlink()
     parts_dir.mkdir(exist_ok=True)
-    timeline = []
-    for it in items:
-        png = BUILD / "cap_slides" / it.get("png", "")
-        timeline.append(it)
     # group consecutive segments that share a still
     groups = []
     for it in items:
-        png = f"master_{runs[it['run']]['ch']:02d}_{it['seg']['reveal']:02d}.png"
+        png = f"master_{it['ch']:02d}_{it['reveal']:02d}.png"
         if groups and groups[-1]["png"] == png:
             groups[-1]["frames"] += it["frames"]
         else:
-            groups.append({"png": png, "frames": it["frames"], "t0": it["t0"]})
+            groups.append({"png": png, "frames": it["frames"], "t0": it["t0"],
+                           "ch": it["ch"], "reveal": it["reveal"], "kind": it["kind"]})
     print(f"  stills {len(groups)}")
     parts = []
     for idx, g in enumerate(groups):
         png = BUILD / "slides" / g["png"]
+        if not png.exists():
+            b4.render_frame(b4.SCENES[g["ch"]], g["ch"] + 1, len(b4.SCENES),
+                            g["reveal"], "question" if g["kind"] == "intro" else g["kind"],
+                            png)
         safe = BUILD / "cap_slides" / g["png"]
         if not safe.exists():
             b4.caption_safe_slide(png, safe)
@@ -291,7 +293,7 @@ def build(args):
     out = Path(args.out).resolve()
     subprocess.run([FFMPEG, "-y", "-hide_banner", "-loglevel", "error",
                     "-i", str(silent), "-i", str(master),
-                    "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
+                    "-c:v", "copy", "-c:a", "aac", "-b:a", str(args.abitrate), "-ar", "48000",
                     "-shortest", "-movflags", "+faststart", str(out)], check=True)
     print(f"DONE {out} | {out.stat().st_size/1048576:.1f} MB | {probe(out)/60:.2f} min")
     return out
@@ -307,6 +309,7 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "pension_b4_master_silent.mp4"))
     ap.add_argument("--crf", type=int, default=26)
     ap.add_argument("--preset", default="medium")
+    ap.add_argument("--abitrate", default="96k", help="audio bitrate (voice needs no more)")
     args = ap.parse_args()
 
     RUNS.mkdir(parents=True, exist_ok=True)
