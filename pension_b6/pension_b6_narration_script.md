@@ -79,7 +79,7 @@ the SAY line under each is what the voice artist speaks. Rule references are spo
 *On screen:* Claims are called for only AFTER a police report: FIR, Daily Diary Entry or General Diary Entry.
 > SAY: Claims tabhi maange jaate hain jab police report ho — FIR, Daily Diary Entry ya General Diary Entry — aur police ka untraced report bhi. Bina report claim maangna jaldi karna hai, aur woh file wapas aayegi.
 
-**Card 3 - THE EXTRA CLAUSES (ADDED)**
+**Card 3 - THE PAPERS THAT TRAVEL WITH THE CLAIM**
 *On screen:* Use Format 11/Form 9 and Format 12/Form 10. Claim carries Format 9, Format 8 indemnity bond, both police reports.
 > SAY: Missing case mein claim ke saath Format 9 undertaking, Format 8 ka indemnity bond, aur dono police reports lagti hain. Aur Head of Office death certificate ka intezaar nahi karta — credible information par action shuru kar deta hai.
 
@@ -303,7 +303,7 @@ the SAY line under each is what the voice artist speaks. Rule references are spo
 *On screen:* Gratuity is decided provisionally under Rule 45(1)(b), on the last verified spell, whatever Rule 73(1) says.
 > SAY: Agar poori service verify nahi hui, to gratuity Rule 45 ke clause ke hisaab se provisionally tay hoti hai — jo spell death se pehle verify hui. Rule 73(1) ke bawajood yeh raasta khula hai.
 
-**Card 3 - RULE 75(7)(b)-(c) AND (8): ADDED**
+**Card 3 - RULE 75(7)(b)-(c) AND (8)**
 *On screen:* Form 9 claim in: provisional gratuity in ONE month. Final gratuity within THREE months of that. Tell the AO when paid.
 > SAY: Form 9 ka claim aa gaya to provisional gratuity death ki intimation ke ek mahine ke andar authorize hoti hai. Final gratuity teen mahine mein, aur balance beneficiaries ko. Payment hone par Accounts Officer ko batana hota hai.
 
@@ -443,7 +443,7 @@ the SAY line under each is what the voice artist speaks. Rule references are spo
 *On screen:* If dues are reported, the Head of Office checks the acquittance rolls for amounts already recovered, and tells the DoE.
 > SAY: Agar jawab nahi aaya, ya Directorate kehti hai ki assess nahi kar sakti, to maan liya jaata hai ki kuch recoverable nahi tha — aur roka hua amount family ko de diya jaata hai.
 
-**Card 3 - CLAUSES (ix), (x) AND 77(2): ADDED**
+**Card 3 - CLAUSES (ix), (x) AND 77(2)**
 *On screen:* (ix) Dues adjusted against the withheld amount, balance repaid. (x) Later dues may be recovered from dearness relief. 77(2): 15 days for Rule 67 dues.
 > SAY: Dues report ho jaayein to Head of Office acquittance rolls se check karta hai ki woh pehle pay se kata tha ya nahi. Agar kata tha, to woh pay bills Directorate ko dikhata hai — taaki family do baar na bhare.
 
@@ -788,7 +788,7 @@ the SAY line under each is what the voice artist speaks. Rule references are spo
 > SAY: Chobis October do hazaar pachees ka Office Memorandum batata hai referral kaise bhejein: pehle case examine karo, tentative conclusion banao, phir specific rule likho, Secretary ki approval se, preferably e-File par. Bina examination referral bhejna galat hai.
 
 **TRAP strip**
-*On screen:* Refer only AFTER examining the case and forming a tentative conclusion. Relaxation needs written reasons and concurrence!
+*On screen:* REMEMBER: Refer only AFTER examining the case. Relaxation needs written reasons plus concurrence!
 > SAY: Yaad rakhiye: pehle examine kijiye, tentative conclusion banaiye, phir refer kijiye. Rules 85 aur 86 ka text ab verified hai.
 
 ## Chapter 29: CHAPTER 29 • RULE 87: REPEAL AND SAVINGS, DOCUMENTS FORWARD, CASES BACK
@@ -816,7 +816,7 @@ the SAY line under each is what the voice artist speaks. Rule references are spo
 > SAY: Savings (c), (d), (e): commencement se pehle retire hue servant ka pending case, aur deceased servant ya pensioner ke gratuity aur family pension ke pending cases — purane rule se decide honge, jaise naye rules bane hi na hon. Baaki jo hua, woh naye rules ke tahat hua maana jaayega.
 
 **TRAP strip**
-*On screen:* REMEMBER: Documents go FORWARD, pending cases stay BEHIND. All of Rule 87 here is unverified gist!
+*On screen:* REMEMBER: Documents go FORWARD, pending cases stay BEHIND. That is Rule 87(2), now read in full!
 > SAY: Yaad rakhiye: documents aage, pending cases peeche. Rule 87 ka poora text ab verified hai.
 
 ## Chapter 30: CHAPTER 30 • THE 2025 GUIDELINES AND CLAIMS O.M.: WHAT THEY ADD TO RULES 71 TO 83
@@ -844,7 +844,7 @@ the SAY line under each is what the voice artist speaks. Rule references are spo
 > SAY: Layer alag rakhiye: rule ka clock kanoon hai, calendar administrative target hai. Welfare Officer ki madad time limit badha nahi sakti. Trap: stage baarah quote karna, ya calendar ko Rule 80 se replace karna.
 
 **TRAP strip**
-*On screen:* Documents go FORWARD, pending cases stay BEHIND. That is Rule 87(2), now read in full!
+*On screen:* REMEMBER: Stages 9, 10-A, 10-B and 11 are administrative. The Rule 80 clocks are the law!
 > SAY: Yaad rakhiye: calendar ke stages nau, das-A, das-B, gyarah administrative hain. Rule 80 ka clock kanoon hai.
 
 ## Chapter 31: CHAPTER 31 • WHICH AMENDMENTS TOUCH RULES 71 TO 87, AND HOW CURRENT IS THIS

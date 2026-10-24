@@ -89,3 +89,6 @@ graphify-out/
 
 # Batch 6 video build output (regenerate with: python pension_b6/build_pension_b6.py --preview)
 pension_b6/pension_b6_build/
+
+# the rendered master and per-slide clips stay out of Git; see Releases
+pension_b6/*.mp4

@@ -193,7 +193,7 @@ Rule 71(5): where the servant is missing, Rule 51 sub-rules (1) and (4) apply. [
 #### RULE 71(6): POLICE REPORT FIRST
 Rule 71(6)(c): claims are called for only after the police report (an FIR, a Daily Diary Entry or a General Diary Entry) that the person could not be traced. [Bare text read 24.10.2026.] FIR = First Information Report lodged at a police station.
 
-#### THE EXTRA CLAUSES (ADDED)
+#### THE PAPERS THAT TRAVEL WITH THE CLAIM
 Rule 71(6) additions (source omitted them; ledger R71-6-ADD): (a)-(b) use Format 11 with Form 9, and Format 12 with Form 10; (c) police-report condition; (d) the claim must carry the Format 9 undertaking, the FORMAT 8 indemnity bond and copies of both police reports; (e) the Head of Office does not wait for a death certificate and acts on credible information; (f) special efforts to collect forms: in person at the place of duty, blank forms by post elsewhere; (g) a family member other than the widow, widower or pensioner submits the Rule 50(12)(b) documents. [Bare text read 24.10.2026.] Indemnity bond = a promise to repay the Government if the missing person turns up or a wrong person is paid.
 
 #### TRAP: DISAPPEARED IS NOT DEAD
@@ -345,7 +345,7 @@ Rule 75(5): after the family pension and gratuity case has been forwarded to the
 #### RULE 75(7)(a): WHEN SERVICE IS NOT VERIFIED
 Rule 75(7)(a): where the full service has not been verified, the gratuity is provisionally decided under Rule 45(1)(b), on the last verified spell, notwithstanding Rule 73(1). [Bare text read 24.10.2026.]
 
-#### RULE 75(7)(b)-(c) AND (8): ADDED
+#### RULE 75(7)(b)-(c) AND (8)
 ADDITIONS (the source omitted them): Rule 75(7)(b): if a gratuity claim in Form 9 is received, provisional gratuity is authorised within one month of intimation. Rule 75(7)(c): the final gratuity is decided within three months of the provisional authority, and the balance is authorised. Rule 75(8): the Head of Office informs the Accounts Officer once the provisional gratuity is paid. Count: Rule 75 has EIGHT sub-rules, not seven as the source said. [Bare text read 24.10.2026.]
 
 #### COMPARE RULE 62, AND HISTORY
@@ -440,7 +440,7 @@ Rule 77(1)(v): the DoE reports other dues within one month of the Head of Office
 #### CLAUSE (viii): THE CROSS-CHECK
 Rule 77(1)(viii): if dues are intimated, the Head of Office checks the acquittance rolls to see whether they were already recovered; if so, he draws the DoE's attention to those pay bills. This stops the same money being recovered twice from the family. The source also compares this two-way check with Rule 68(3) (instalments from current pay before touching gratuity); that Rule 68(3) detail was not checked in this batch. [Bare text read 24.10.2026.]
 
-#### CLAUSES (ix), (x) AND 77(2): ADDED
+#### CLAUSES (ix), (x) AND 77(2)
 ADDITIONS (source stopped at clause (viii); Rule 77(1) has TEN clauses (i)-(x) plus sub-rule (2); ledger R77-1-IX-X, R77-2, R77-COUNT): Rule 77(1)(ix): dues not recovered earlier are adjusted against the withheld amount and the balance repaid. Rule 77(1)(x): unpaid dues left or reported later may be recovered by the Accounts Officer from dearness relief (DR, the cost-of-living add-on to pension) without the pensioner's consent, and no dearness relief is paid until recovered. Rule 77(2): within fifteen days of intimation the Head of Office finds other dues under Rule 67 (not accommodation dues) and recovers them from the gratuity. [Bare text read 24.10.2026.]
 
 #### RULE 77 VERSUS RULE 68, AND EXAMPLE
@@ -674,7 +674,7 @@ O.M. No. 1/1(51)/2024-P&PW(F)/9852 dated 24.10.2025 (number and date confirmed):
 #### THE LINK, AND THE TRAP
 Link: Rule 85 (to whom) plus the O.M. (how). The source's further point that the O.M. discipline also applies to Rule 86 relaxation proposals is its own commentary (ledger OM-24.10.2025-R86, unverified). Q and A: can an office refer a case to DoPPW without examining it? No; it must first examine, form a tentative conclusion and identify the provision. Trap: a bare reference with no tentative conclusion is not a proper referral.
 
-> TRAP: Refer only AFTER examining the case and forming a tentative conclusion. Relaxation needs written reasons and concurrence!
+> TRAP: REMEMBER: Refer only AFTER examining the case. Relaxation needs written reasons plus concurrence!
 
 ### Chapter 29: CHAPTER 29 • RULE 87: REPEAL AND SAVINGS, DOCUMENTS FORWARD, CASES BACK
 **RULE 87 — THE 1972 RULES ARE REPEALED, AND THE FIVE SAVINGS**  (RULE 87(1)-(2))
@@ -693,7 +693,7 @@ Rule 87(2)(c): a case concerning the authorisation of pension to a Government se
 #### MEMORY LINE, EXAMPLE AND TRAP
 Teaching device, not rule text: the document goes forward, the pending case stays behind. Example (invented): Mr Dev Rao retired in 2019 and his pension case is still pending at commencement; it is decided under the CCS (Pension) Rules 1972, and his old nomination still counts under 87(2)(a). Q and A: a servant who retired before 2021 with a pending case is dealt with under the 1972 Rules - that is clause (c). Trap: applying the 2021 Rules to such a case, or thinking that only the 1972 Rules were repealed (Office Memoranda are covered too). [Bare text read 24.10.2026.]
 
-> TRAP: REMEMBER: Documents go FORWARD, pending cases stay BEHIND. All of Rule 87 here is unverified gist!
+> TRAP: REMEMBER: Documents go FORWARD, pending cases stay BEHIND. That is Rule 87(2), now read in full!
 
 ### Chapter 30: CHAPTER 30 • THE 2025 GUIDELINES AND CLAIMS O.M.: WHAT THEY ADD TO RULES 71 TO 83
 **SEPT-OCT 2025 O.M.S — WELFARE OFFICER, PPO CALENDAR AND THE DEATH DAY**  (O.M.s 2025)
@@ -712,7 +712,7 @@ O.M. F.No. 38/10(03)/2025-P&PW(A) (e 11193)(iii) dated 30.10.2025 (ledger OM-30.
 #### TRAP: CALENDAR VERSUS RULE
 Summary of layers: Layer 1 Rule text (Rules 71 to 83 clocks); Layer 3 executive O.M.s and the September 2025 calendar. Q and A: what is the Welfare Officer's role in a death case? To hand-hold dependents in documentation and verification of the family pension claim. Example (invented): after pensioner Mr Bilal Khan dies, the Welfare Officer helps his widow Asha fill Form 12 and collect the death certificate; the Rule 79 and 80 clocks still run as written. Trap: quoting stage 12, or using the calendar to replace the Rule 80 clocks.
 
-> TRAP: Documents go FORWARD, pending cases stay BEHIND. That is Rule 87(2), now read in full!
+> TRAP: REMEMBER: Stages 9, 10-A, 10-B and 11 are administrative. The Rule 80 clocks are the law!
 
 ### Chapter 31: CHAPTER 31 • WHICH AMENDMENTS TOUCH RULES 71 TO 87, AND HOW CURRENT IS THIS
 **AMENDMENTS AND CURRENCY — WHAT CHANGED IN RULES 71-87 UP TO 21 OCT 2026**  (AMENDMENTS • CURRENCY)

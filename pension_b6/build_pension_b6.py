@@ -84,6 +84,7 @@ import argparse
 import asyncio
 import math
 import re
+import os
 import shutil
 import subprocess
 import sys
@@ -251,7 +252,7 @@ SCENES = [
              "Claims are called for only AFTER a police report: FIR, Daily Diary Entry or General Diary Entry.",
              "RED",
              "Claims tabhi maange jaate hain jab police report ho — FIR, Daily Diary Entry ya General Diary Entry — aur police ka untraced report bhi. Bina report claim maangna jaldi karna hai, aur woh file wapas aayegi."),
-            ("THE EXTRA CLAUSES (ADDED)",
+            ("THE PAPERS THAT TRAVEL WITH THE CLAIM",
              "Use Format 11/Form 9 and Format 12/Form 10. Claim carries Format 9, Format 8 indemnity bond, both police reports.",
              "GREEN",
              "Missing case mein claim ke saath Format 9 undertaking, Format 8 ka indemnity bond, aur dono police reports lagti hain. Aur Head of Office death certificate ka intezaar nahi karta — credible information par action shuru kar deta hai."),
@@ -491,7 +492,7 @@ SCENES = [
              "Gratuity is decided provisionally under Rule 45(1)(b), on the last verified spell, whatever Rule 73(1) says.",
              "SKY",
              "Agar poori service verify nahi hui, to gratuity Rule 45 ke clause ke hisaab se provisionally tay hoti hai — jo spell death se pehle verify hui. Rule 73(1) ke bawajood yeh raasta khula hai."),
-            ("RULE 75(7)(b)-(c) AND (8): ADDED",
+            ("RULE 75(7)(b)-(c) AND (8)",
              "Form 9 claim in: provisional gratuity in ONE month. Final gratuity within THREE months of that. Tell the AO when paid.",
              "GREEN",
              "Form 9 ka claim aa gaya to provisional gratuity death ki intimation ke ek mahine ke andar authorize hoti hai. Final gratuity teen mahine mein, aur balance beneficiaries ko. Payment hone par Accounts Officer ko batana hota hai."),
@@ -641,7 +642,7 @@ SCENES = [
              "If dues are reported, the Head of Office checks the acquittance rolls for amounts already recovered, and tells the DoE.",
              "BLUE",
              "Agar jawab nahi aaya, ya Directorate kehti hai ki assess nahi kar sakti, to maan liya jaata hai ki kuch recoverable nahi tha — aur roka hua amount family ko de diya jaata hai."),
-            ("CLAUSES (ix), (x) AND 77(2): ADDED",
+            ("CLAUSES (ix), (x) AND 77(2)",
              "(ix) Dues adjusted against the withheld amount, balance repaid. (x) Later dues may be recovered from dearness relief. 77(2): 15 days for Rule 67 dues.",
              "PINK",
              "Dues report ho jaayein to Head of Office acquittance rolls se check karta hai ki woh pehle pay se kata tha ya nahi. Agar kata tha, to woh pay bills Directorate ko dikhata hai — taaki family do baar na bhare."),
@@ -1010,7 +1011,7 @@ SCENES = [
              "RED",
              "Chobis October do hazaar pachees ka Office Memorandum batata hai referral kaise bhejein: pehle case examine karo, tentative conclusion banao, phir specific rule likho, Secretary ki approval se, preferably e-File par. Bina examination referral bhejna galat hai."),
         ],
-        "hook": "Refer only AFTER examining the case and forming a tentative conclusion. Relaxation needs written reasons and concurrence!",
+        "hook": "REMEMBER: Refer only AFTER examining the case. Relaxation needs written reasons plus concurrence!",
         "hook_say": "Yaad rakhiye: pehle examine kijiye, tentative conclusion banaiye, phir refer kijiye. Rules 85 aur 86 ka text ab verified hai.",
         "covers": ["R85", "R86", "OM-24.10.2025-NO", "OM-24.10.2025-PRE", "OM-24.10.2025-5ITEMS", "OM-24.10.2025-ROUTE", "OM-24.10.2025-SCOPE", "OM-24.10.2025-R86"],
     },
@@ -1040,7 +1041,7 @@ SCENES = [
              "GREEN",
              "Savings (c), (d), (e): commencement se pehle retire hue servant ka pending case, aur deceased servant ya pensioner ke gratuity aur family pension ke pending cases — purane rule se decide honge, jaise naye rules bane hi na hon. Baaki jo hua, woh naye rules ke tahat hua maana jaayega."),
         ],
-        "hook": "REMEMBER: Documents go FORWARD, pending cases stay BEHIND. All of Rule 87 here is unverified gist!",
+        "hook": "REMEMBER: Documents go FORWARD, pending cases stay BEHIND. That is Rule 87(2), now read in full!",
         "hook_say": "Yaad rakhiye: documents aage, pending cases peeche. Rule 87 ka poora text ab verified hai.",
         "covers": ["R87-1", "R87-2-A", "R87-2-B", "R87-2-C", "R87-2-D", "R87-2-E", "R87-CLIMAX", "R87-QA"],
     },
@@ -1070,7 +1071,7 @@ SCENES = [
              "RED",
              "Layer alag rakhiye: rule ka clock kanoon hai, calendar administrative target hai. Welfare Officer ki madad time limit badha nahi sakti. Trap: stage baarah quote karna, ya calendar ko Rule 80 se replace karna."),
         ],
-        "hook": "Documents go FORWARD, pending cases stay BEHIND. That is Rule 87(2), now read in full!",
+        "hook": "REMEMBER: Stages 9, 10-A, 10-B and 11 are administrative. The Rule 80 clocks are the law!",
         "hook_say": "Yaad rakhiye: calendar ke stages nau, das-A, das-B, gyarah administrative hain. Rule 80 ka clock kanoon hai.",
         "covers": ["OM-29.09.2025-NO", "OM-29.09.2025-WELFARE", "OM-29.09.2025-S9", "OM-29.09.2025-S10A", "OM-29.09.2025-S10B", "OM-29.09.2025-S11", "OM-29.09.2025-SCOPE", "OM-30.10.2025-NO", "OM-30.10.2025-FPSTART", "QA-WELFARE"],
     },
@@ -1159,7 +1160,7 @@ FULL = {
         "Rule 71(5): where the servant is missing, Rule 51 sub-rules (1) and (4) apply. [Bare text read 24.10.2026.] Missing = disappeared and not heard of; Rule 51 (Batch 4) sets the family pension entitlement for a missing person.",
     ("c6_03_rule71_5_6_missing", "RULE 71(6): POLICE REPORT FIRST"):
         "Rule 71(6)(c): claims are called for only after the police report (an FIR, a Daily Diary Entry or a General Diary Entry) that the person could not be traced. [Bare text read 24.10.2026.] FIR = First Information Report lodged at a police station.",
-    ("c6_03_rule71_5_6_missing", "THE EXTRA CLAUSES (ADDED)"):
+    ("c6_03_rule71_5_6_missing", "THE PAPERS THAT TRAVEL WITH THE CLAIM"):
         "Rule 71(6) additions (source omitted them; ledger R71-6-ADD): (a)-(b) use Format 11 with Form 9, and Format 12 with Form 10; (c) police-report condition; (d) the claim must carry the Format 9 undertaking, the FORMAT 8 indemnity bond and copies of both police reports; (e) the Head of Office does not wait for a death certificate and acts on credible information; (f) special efforts to collect forms: in person at the place of duty, blank forms by post elsewhere; (g) a family member other than the widow, widower or pensioner submits the Rule 50(12)(b) documents. [Bare text read 24.10.2026.] Indemnity bond = a promise to repay the Government if the missing person turns up or a wrong person is paid.",
     ("c6_03_rule71_5_6_missing", "TRAP: DISAPPEARED IS NOT DEAD"):
         "Trap: calling for claims before a police report exists is premature. Also note the sub-rule count: six, not four. Later chapters show the same police-report anchor in Rules 76(3)(e)-(f), 79(3) and 80(1). Example (invented): Bilal, a serving clerk, disappears; his wife lodges a General Diary Entry; only after that does the office call for claims, with an indemnity bond.",
@@ -1223,7 +1224,7 @@ FULL = {
         "Rule 75(5): after the family pension and gratuity case has been forwarded to the Accounts Officer under Rule 74, the Head of Office draws 100 per cent of the gratuity - (a) a sanction letter stating the amount, with a copy to the AO; (b) the letter states the amount recoverable out of the death gratuity; (c) the amount is drawn after deducting those dues. Rule 75(6): the gratuity is disbursed immediately after drawal. DRAFTING SLIP: clause (b) sends the reader to 'sub-rule (3) of rule 74', which only requires copies to be kept; the recoverable dues are listed in Rule 74(4). Quote the clause, not the pointer. [Bare text read 24.10.2026.]",
     ("c6_11_rule75_gratuity", "RULE 75(7)(a): WHEN SERVICE IS NOT VERIFIED"):
         "Rule 75(7)(a): where the full service has not been verified, the gratuity is provisionally decided under Rule 45(1)(b), on the last verified spell, notwithstanding Rule 73(1). [Bare text read 24.10.2026.]",
-    ("c6_11_rule75_gratuity", "RULE 75(7)(b)-(c) AND (8): ADDED"):
+    ("c6_11_rule75_gratuity", "RULE 75(7)(b)-(c) AND (8)"):
         "ADDITIONS (the source omitted them): Rule 75(7)(b): if a gratuity claim in Form 9 is received, provisional gratuity is authorised within one month of intimation. Rule 75(7)(c): the final gratuity is decided within three months of the provisional authority, and the balance is authorised. Rule 75(8): the Head of Office informs the Accounts Officer once the provisional gratuity is paid. Count: Rule 75 has EIGHT sub-rules, not seven as the source said. [Bare text read 24.10.2026.]",
     ("c6_11_rule75_gratuity", "COMPARE RULE 62, AND HISTORY"):
         "Comparison (ledger R75-VS-62): Rule 62 provisional pension is 100 per cent and provisional gratuity is 100 per cent less 10 per cent withheld, with a six-month limit; Rule 75 is the death-case counterpart with fifteen days and six months. Both treat the amount as drawn like establishment pay. HISTORY ONLY: a 2020 relaxation under the old Rule 80-A (provisional family pension without waiting for the file to go to the Accounts Officer) is background; its idea is carried into Rule 75 as sanction by the Head of Office. It is not examinable under the 2021 Rules. Teaching comment from the source (not rule text): in a death case no final PPO is ready beforehand, so the provisional step matters more. [Bare text read 24.10.2026; cross-batch rules are close restatements.]",
@@ -1263,7 +1264,7 @@ FULL = {
         "Rule 77(1)(v): the DoE reports other dues within one month of the Head of Office's intimation. (vi): meanwhile the Head of Office withholds 10 per cent of the death gratuity. (vii): if there is no intimation, or the DoE says it cannot assess, nothing is presumed recoverable and the withheld amount is released. [Bare text read 24.10.2026.]",
     ("c6_16_rule77_b", "CLAUSE (viii): THE CROSS-CHECK"):
         "Rule 77(1)(viii): if dues are intimated, the Head of Office checks the acquittance rolls to see whether they were already recovered; if so, he draws the DoE's attention to those pay bills. This stops the same money being recovered twice from the family. The source also compares this two-way check with Rule 68(3) (instalments from current pay before touching gratuity); that Rule 68(3) detail was not checked in this batch. [Bare text read 24.10.2026.]",
-    ("c6_16_rule77_b", "CLAUSES (ix), (x) AND 77(2): ADDED"):
+    ("c6_16_rule77_b", "CLAUSES (ix), (x) AND 77(2)"):
         "ADDITIONS (source stopped at clause (viii); Rule 77(1) has TEN clauses (i)-(x) plus sub-rule (2); ledger R77-1-IX-X, R77-2, R77-COUNT): Rule 77(1)(ix): dues not recovered earlier are adjusted against the withheld amount and the balance repaid. Rule 77(1)(x): unpaid dues left or reported later may be recovered by the Accounts Officer from dearness relief (DR, the cost-of-living add-on to pension) without the pensioner's consent, and no dearness relief is paid until recovered. Rule 77(2): within fifteen days of intimation the Head of Office finds other dues under Rule 67 (not accommodation dues) and recovers them from the gratuity. [Bare text read 24.10.2026.]",
     ("c6_16_rule77_b", "RULE 77 VERSUS RULE 68, AND EXAMPLE"):
         "Comparison (ledger R77-VS-68, R77-NDC14): Rule 68 (superannuation): the DoE reports within two months (one month for others), the NDC is issued within fourteen days of the application after vacating, ten per cent may be withheld, and the last eight months' fee is recovered from pay monthly (O.M. 28/91/2022-P&PW(B)(2) of 20.10.2023). The fourteen-day NDC and interest on excess withheld at the GPF rate are stated for retirement cases; the O.M. of 20.10.2023 does not mention Rule 77, so they are not stated for death cases. Example (invented): the Head of Office writes to the DoE in seven days; the DoE reports in one month; a due already recovered from pay is not recovered again.",
@@ -1913,7 +1914,7 @@ def draw_pills(d, scene, acc, reveal, kind):
     pw = (W - 2 * M - gap * (n - 1)) // n
     for i, (title, _short, col, _narr) in enumerate(scene["boxes"]):
         x = M + i * (pw + gap)
-        live = (i < reveal) or kind == "hook"
+        live = True
         newest = (i == reveal - 1) and kind == "answer"
         fill = col if live else dim(col, 0.45)
         rounded(d, [x, PILL_Y, x + pw, PILL_Y + PILL_H], 14, fill=fill,
@@ -1939,18 +1940,29 @@ def draw_rows(d, scene, acc, reveal, kind):
     n = len(scene["boxes"])
     h, gap = row_heights(n)
     for i, (title, body, col, _narr) in enumerate(scene["boxes"]):
-        if i >= reveal and kind != "hook":
-            continue
         x = M
         y = ROWS_TOP + i * (h + gap)
         w = W - 2 * M
         newest = (i == reveal - 1) and kind == "answer"
         c = col if (newest or kind == "hook") else dim(col, 0.8)
-        rounded(d, [x, y, x + w, y + h], 12, fill=ROW_BG, outline=YELLOW if newest else c,
+        pending = i >= reveal and kind != "hook"
+        rounded(d, [x, y, x + w, y + h], 12,
+                fill=ROW_BG if not pending else lerp(BG_TOP, ROW_BG, 0.55),
+                outline=YELLOW if newest else (c if not pending else (42, 54, 78)),
                 width=4 if newest else 2)
-        d.rectangle([x, y + 8, x + 10, y + h - 8], fill=c)
+        d.rectangle([x, y + 8, x + 10, y + h - 8], fill=c if not pending else (44, 56, 80))
 
         label, _tail = split_title(title)
+        if pending:
+            f_p, l_p, lh_p, _ = fit_block(d, label, True, 320 - 30, h - 20, LABEL_START, LABEL_MIN, 1.14)
+            py = y + (h - len(l_p) * lh_p) // 2
+            for k, ln in enumerate(l_p):
+                d.text((x + 26, py + k * lh_p), ln, font=f_p, fill=(72, 86, 112))
+            d.line([(x + 320, y + 14), (x + 320, y + h - 14)], fill=(44, 56, 80), width=2)
+            f_d = font(26)
+            dots = ".".join([""] * 3)
+            d.text((x + 344, y + h // 2 - 18), "coming next", font=f_d, fill=(66, 80, 106))
+            continue
         lw = 320
         f_l, l_l, lh_l, _ = fit_block(d, label, True, lw - 30, h - 20, LABEL_START, LABEL_MIN, 1.14)
         ly = y + (h - len(l_l) * lh_l) // 2
@@ -1980,7 +1992,7 @@ def draw_table(d, spec, acc, reveal, n, kind):
     xs = col_x(spec["widths"], W - 2 * M)
 
     if kind in ("intro", "question"):
-        shown = 0
+        shown = 1          # open on the first row so the table never looks empty
     elif kind == "hook":
         shown = len(rows)
     else:
@@ -2130,17 +2142,72 @@ def build_segments(scene):
     return segs
 
 
+FFMPEG = "ffmpeg"
+
+
+def find_ffmpeg():
+    """Locate an ffmpeg binary: $FFMPEG, then PATH, then the imageio-ffmpeg wheel."""
+    global FFMPEG
+    cand = [os.environ.get("FFMPEG", ""), shutil.which("ffmpeg") or ""]
+    for c in cand:
+        if c and Path(c).exists():
+            FFMPEG = c
+            return FFMPEG
+    try:
+        import imageio_ffmpeg
+        FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
+        return FFMPEG
+    except Exception:
+        sys.exit("ERROR: no ffmpeg found. Install it (apt install ffmpeg / brew install ffmpeg), "
+                 "put it on PATH, set $FFMPEG, or pip install imageio-ffmpeg.")
+
+
 def probe_duration(path: Path) -> float:
-    out = subprocess.check_output(
-        ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
-        text=True).strip()
-    return float(out)
+    """ffprobe if available, otherwise parse the duration out of ffmpeg's own banner."""
+    if shutil.which("ffprobe"):
+        out = subprocess.check_output(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+             "-of", "default=noprint_wrappers=1:nokey=1", str(path)], text=True).strip()
+        return float(out)
+    err = subprocess.run([FFMPEG, "-hide_banner", "-i", str(path)],
+                         capture_output=True, text=True).stderr
+    m = re.search(r"Duration: (\d+):(\d+):(\d+\.\d+)", err)
+    if not m:
+        raise RuntimeError(f"cannot read duration of {path}")
+    h, mi, se = m.groups()
+    return int(h) * 3600 + int(mi) * 60 + float(se)
+
+
+def stream_info(path: Path):
+    """[(kind, w, h)] - ffprobe when present, ffmpeg banner otherwise."""
+    if shutil.which("ffprobe"):
+        out = subprocess.check_output(
+            ["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,width,height",
+             "-of", "csv=p=0", str(path)], text=True)
+        return [tuple(x.split(",")) for x in out.split()]
+    err = subprocess.run([FFMPEG, "-hide_banner", "-i", str(path)],
+                         capture_output=True, text=True).stderr
+    info = []
+    if "Audio:" in err:
+        info.append(("audio", "", ""))
+    m = re.search(r"Video:.*?(\d{2,5})x(\d{2,5})", err)
+    if m:
+        info.insert(0, ("video", m.group(1), m.group(2)))
+    return info
+
+
+def has_subtitles_filter():
+    try:
+        out = subprocess.run([FFMPEG, "-hide_banner", "-filters"], capture_output=True, text=True).stdout
+    except Exception:
+        return False
+    return bool(re.search(r"^\s*\S+\s+subtitles\s", out, re.M))
 
 
 def silent_audio(text: str, out: Path) -> float:
     dur = max(1.5, len(text.split()) / 2.6)
-    subprocess.run(["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono", "-t", f"{dur:.2f}",
-                    "-c:a", "libmp3lame", str(out)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run([FFMPEG, "-y", "-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", f"{dur:.2f}",
+                    "-c:a", "libmp3lame", "-b:a", "24k", "-ar", "24000", "-ac", "1", str(out)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     return dur
 
 
@@ -2223,6 +2290,10 @@ async def main():
     ap.add_argument("--audit", action="store_true", help="print the density table and exit (no ffmpeg needed)")
     ap.add_argument("--preview", action="store_true", help="render slides only")
     ap.add_argument("--no-tts", action="store_true", help="silent audio (offline layout/timing test)")
+    ap.add_argument("--no-subs", action="store_true", help="do not burn subtitles (default when --no-tts)")
+    ap.add_argument("--crf", type=int, default=21, help="x264 quality for the master (lower = bigger)")
+    ap.add_argument("--clip-crf", type=int, default=23, help="x264 quality for the per-slide clips")
+    ap.add_argument("--fps", type=int, default=24, help="frame rate of the slides (24 is plenty for stills)")
     ap.add_argument("--teacher", default=DEFAULT_TEACHER)
     ap.add_argument("--student", default=DEFAULT_STUDENT)
     ap.add_argument("--rate", default="-4%")
@@ -2265,8 +2336,8 @@ async def main():
         print(f"Preview done: {SLIDES_DIR.resolve()}")
         return
 
-    if not shutil.which("ffmpeg") or not shutil.which("ffprobe"):
-        sys.exit("ERROR: ffmpeg/ffprobe not on PATH")
+    find_ffmpeg()
+    print(f"  ffmpeg: {FFMPEG}")
 
     print(f"\n=== Step 2: narration ({'SILENT TEST' if args.no_tts else args.student + ' / ' + args.teacher}) ===")
     words_by_job = {}
@@ -2294,39 +2365,51 @@ async def main():
         dur = sd + (0.9 if kind in ("question", "hook") else 0.5)
         clip = BUILD_DIR / f"clip_{i:03d}.mp4"
         subprocess.run([
-            "ffmpeg", "-y", "-loop", "1", "-framerate", "5", "-i", str(sp), "-i", str(mp3),
+            FFMPEG, "-y", "-loop", "1", "-framerate", "5", "-i", str(sp), "-i", str(mp3),
             "-af", "apad", "-t", f"{dur:.3f}",
-            "-c:v", "libx264", "-tune", "stillimage", "-preset", "veryfast", "-g", "60", "-r", "30", "-pix_fmt", "yuv420p",
-            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", str(clip)],
+            "-c:v", "libx264", "-tune", "stillimage", "-preset", "veryfast", "-crf", str(args.clip_crf),
+            "-g", str(args.fps * 10), "-r", str(args.fps), "-pix_fmt", "yuv420p",
+            "-c:a", "aac", "-b:a", ("24k" if args.no_tts else "192k"),
+            "-ar", ("24000" if args.no_tts else "48000"), "-ac", ("1" if args.no_tts else "2"), str(clip)],
             check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         cues += make_cues(words, cursor, "Student" if who == "student" else "Default")
         clips.append(clip)
         cursor += dur
     print(f"  {len(clips)} clips | timeline {cursor/60:.2f} min")
 
-    print("\n=== Step 4: concat + burn subtitles ===")
+    burn = (not args.no_subs) and (not args.no_tts) and has_subtitles_filter()
+    if not args.no_subs and not args.no_tts and not burn:
+        print("  NOTE: this ffmpeg has no libass 'subtitles' filter - rendering without burned captions.")
+    if args.no_tts:
+        print("  NOTE: --no-tts master is silent; captions are skipped (the cards already carry the text).")
+
+    print(f"\n=== Step 4: concat{' + burn subtitles' if burn else ' (stream copy, no re-encode)'} ===")
     concat = BUILD_DIR / "concat.txt"
     concat.write_text("\n".join(f"file '{c.name}'" for c in clips) + "\n", encoding="utf-8")
     raw = BUILD_DIR / "raw_concat.mp4"
-    subprocess.run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(concat), "-c", "copy", str(raw)],
+    subprocess.run([FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", str(concat), "-c", "copy", str(raw)],
                    check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     ass = BUILD_DIR / "subtitles.ass"
     write_ass(cues, ass)
-    ass_esc = str(ass).replace("\\", "/").replace(":", "\\:")
-    subprocess.run([
-        "ffmpeg", "-y", "-i", str(raw), "-vf", f"subtitles='{ass_esc}'",
-        "-af", "loudnorm=I=-16:TP=-1.5:LRA=11",
-        "-c:v", "libx264", "-crf", "18", "-preset", "fast", "-pix_fmt", "yuv420p",
-        "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(OUTPUT_MP4)], check=True,
-        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if burn:
+        ass_esc = str(ass).replace("\\", "/").replace(":", "\\:")
+        subprocess.run([
+            FFMPEG, "-y", "-i", str(raw), "-vf", f"subtitles='{ass_esc}'",
+            "-af", "loudnorm=I=-16:TP=-1.5:LRA=11",
+            "-c:v", "libx264", "-crf", str(args.crf), "-preset", "fast", "-pix_fmt", "yuv420p",
+            "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(OUTPUT_MP4)], check=True,
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    else:
+        subprocess.run([
+            FFMPEG, "-y", "-i", str(raw), "-c", "copy", "-movflags", "+faststart", str(OUTPUT_MP4)],
+            check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     dur = probe_duration(OUTPUT_MP4)
-    info = subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,width,height",
-                                    "-of", "csv=p=0", str(OUTPUT_MP4)], text=True).split()
+    info = stream_info(OUTPUT_MP4)
     print("\n=== Step 5: verification ===")
     print("streams:", info)
     print(f"DONE: {OUTPUT_MP4.resolve()}  |  {dur/60:.2f} min  |  {OUTPUT_MP4.stat().st_size/1048576:.1f} MB")
-    if not any(s.startswith("audio") for s in info):
+    if not any(str(s[0]).startswith("audio") for s in info):
         print("WARNING: no audio stream found!")
 
 
