@@ -125,6 +125,9 @@ Full width of the chapter: Rules 11-30, authority map, four revision tables, the
 Part 2 preview of Chapters 4-5.
 
 ## 9. Publishing the video for download
+For any admin-rules coverage (Conduct, Leave, Non-statutory, Pension, GPF), use the
+general procedure in `PUBLISH_VIDEOS_IN_PARTS.md`.
+
 
 `DOWNLOAD_LARGE_VIDEOS.md` documents how the finished film is delivered: GitHub's 100 MB
 per-file limit means the master is re-encoded to a compact copy and split into ~38 MB
