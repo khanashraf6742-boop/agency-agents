@@ -86,3 +86,6 @@ integrations/vibe/agents/
 integrations/vibe/prompts/
 integrations/zcode/agents/
 graphify-out/
+
+# Pension Batch 2 video build artefacts (regenerate with build_pension_b2.py)
+pension_b2_build/

@@ -1,6 +1,7 @@
 # CCS (Pension) Rules 2021 - Batch 2 - Rules 11-30: Qualifying Service - full-wording reference sheet
 
-Every row or card on screen is a short key-point; the full wording / examinable facts behind it are listed here.
+Every row or card on screen is a short key-point; the full ENGLISH wording / examinable facts behind it are listed here.
+On screen the video stays in English; the narration you hear is Hinglish (Roman script). Use this sheet to write an English answer.
 Revision chapters appear as the tables and the chart that the video shows.
 
 ## CHAPTER 1 • RULE 11: WHEN DOES QUALIFYING SERVICE START?

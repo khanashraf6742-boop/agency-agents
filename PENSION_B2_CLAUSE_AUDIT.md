@@ -1,6 +1,6 @@
 # Clause-by-clause audit — CCS (Pension) Rules 2021, Chapter III (Rules 11 to 30)
 
-**Build audited:** `build_pension_b2.py` (Revision 2, 24 October 2026)
+**Build audited:** `build_pension_b2.py` (Revision 3, 24 October 2026 — English on screen, Hinglish narration)
 **Auditor's stance:** treat the chapter as a statute, not as a summary. Every sub-rule, proviso and Explanation must either be taught on screen or be flagged as not read. Anything in between is a defect.
 **Result:** 20 rules, **81 statutory units**, all 81 now taught. Two substantive gaps were found and filled; four stale "unverified" flags were closed with the actual text.
 
@@ -72,7 +72,7 @@ python build_pension_b2.py --audit
 | Exam traps isolated | Pass — one "CLASSIC UPSC TRAP" strip per revision chapter, plus a trap card in every teaching chapter. |
 | Numbers kept visible | Pass — 31.12.2003, 50 percent, 36 instalments, 90 days, six months, 18 and 5 years, 31 January. |
 | Ambiguity removed | Pass — "silence" is taught three ways (Rules 21, 23, 28); "AND" versus "OR" is explicit in Rules 12 and 23; the cap asymmetry between 19(5) and 20(5) is taught as a pair. |
-| Language | Simple Indian city English throughout; no Devanagari script anywhere in the file (only `•` and `—` as typography). |
+| Language | English on screen. Narration is Hinglish in Roman script (chosen 24.10.2026). No Devanagari anywhere in the file (only `•` and `—` as typography). |
 
 ---
 
@@ -111,3 +111,18 @@ python build_pension_b2.py --preview    # slides only, into pension_b2_build/sli
 python build_pension_b2.py --no-tts     # silent dry run (needs ffmpeg on PATH)
 python build_pension_b2.py              # full build with edge-tts narration and burned subtitles
 ```
+
+---
+
+## 7. Language split (Revision 3)
+
+| Layer | Language | Why |
+|---|---|---|
+| Chapter pills, titles, row labels, row text, tables, chart labels, trap strips, hook strips | **English** | The frame is the examinable text; it must read like a printed revision sheet, as in the reference screenshot. |
+| `q_say` (student question) and every narration segment | **Hinglish, Roman script only** | A classroom in an Indian city explains in Hinglish; the choice was made explicitly in this revision. |
+| Rule numbers, dates, section words, and legal terms inside the Hinglish | **English** | Keeps the audio quotable: "Rule 19 sub-rule 5", "thirty-first December 2003", "Format 4". |
+| `FULL` text in `pension_b2_reference_sheet.md` | **English, unchanged** | So an English answer can still be written straight from the sheet. |
+
+Mechanics: all 226 narration segments were rewritten (9,819 words, about 65 minutes at 150 wpm); dates and numbers are spelled in
+words so the en-IN voice reads them cleanly. `--audit` now ends with a **language audit**: it fails on an empty narration, on any
+Devanagari character in narration or on screen, and it reports how many segments read as Hinglish (currently 226 of 226).
