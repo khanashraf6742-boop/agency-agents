@@ -96,3 +96,5 @@ video_build/
 
 # rendered videos are delivered as workspace downloads, not repo blobs
 pension_b2_hinglish*.mp4
+!voice_audio/
+!voice_audio/*.mp3
