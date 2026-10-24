@@ -93,3 +93,6 @@ pension_b2_build/
 # voice + video build artefacts
 voice_audio/
 video_build/
+
+# rendered videos are delivered as workspace downloads, not repo blobs
+pension_b2_hinglish*.mp4
