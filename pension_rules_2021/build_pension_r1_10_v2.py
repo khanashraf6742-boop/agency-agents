@@ -43,6 +43,7 @@ NOTES
 import argparse
 import asyncio
 import math
+import os
 import re
 import shutil
 import subprocess
@@ -60,6 +61,32 @@ except ImportError:
 # ============================================================================
 W, H = 1920, 1080
 BUILD_DIR = Path("pension_b1_build")
+
+
+def _resolve_ffmpeg():
+    """FFMPEG_BIN / PATH / the binary bundled inside the imageio-ffmpeg wheel."""
+    env = os.environ.get("FFMPEG_BIN")
+    if env and Path(env).exists():
+        return env
+    found = shutil.which("ffmpeg")
+    if found:
+        return found
+    try:
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except Exception:
+        return None
+
+
+def _resolve_ffprobe():
+    env = os.environ.get("FFPROBE_BIN")
+    if env and Path(env).exists():
+        return env
+    return shutil.which("ffprobe")
+
+
+FFMPEG = _resolve_ffmpeg()
+FFPROBE = _resolve_ffprobe()
 SLIDES_DIR = BUILD_DIR / "slides"
 AUDIO_DIR = BUILD_DIR / "audio"
 OUT_STEM = "pension_b1_rules_1_to_10_city_hinglish"
@@ -1088,6 +1115,14 @@ def draw_row(d, scene, i, n, x_kind, accent):
         d.text((ROW_X1 - 22 - pw + 11, y + 17), flag, font=ff, fill=fc)
 
 
+def draw_pending_row(d, scene, i, n):
+    """Empty slot for a row that is not revealed yet: keeps the page geometry stable
+    and makes the reveal read as progress instead of as a gap."""
+    top, h, gap = row_geometry(n, bool(scene.get("trap")))
+    y = top + i * (h + gap)
+    d.rounded_rectangle([ROW_X0, y, ROW_X1, y + h], radius=11, fill=(15, 22, 41), outline=(34, 46, 72), width=1)
+
+
 def draw_table(d, scene, shown, accent):
     tb = scene["table"]
     top, bottom = rows_region(bool(scene.get("trap")))
@@ -1281,8 +1316,11 @@ def render_frame(scene, qno, total, step, kind, out_path: Path):
         elif scene.get("kind") == "bars":
             draw_bars(d, scene, step, accent)
         else:
-            for i in range(min(step, n)):
-                draw_row(d, scene, i, n, kind, accent)
+            for i in range(n):
+                if i < step:
+                    draw_row(d, scene, i, n, kind, accent)
+                else:
+                    draw_pending_row(d, scene, i, n)
         if scene.get("trap") and step >= n:
             draw_trap(d, scene.get("trap", ""), accent)
     draw_progress(d, qno, total, step, n + 1, accent)
@@ -1440,15 +1478,23 @@ def audit_density():
 # AUDIO / SUBTITLES / RENDER
 # ============================================================================
 def probe_duration(path: Path) -> float:
-    out = subprocess.check_output(
-        ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
-        text=True).strip()
-    return float(out)
+    """ffprobe if present, otherwise read the Duration line ffmpeg prints on stderr."""
+    if FFPROBE:
+        out = subprocess.check_output(
+            [FFPROBE, "-v", "error", "-show_entries", "format=duration", "-of", "default=noprint_wrappers=1:nokey=1", str(path)],
+            text=True).strip()
+        return float(out)
+    err = subprocess.run([FFMPEG, "-i", str(path)], capture_output=True, text=True).stderr
+    m = re.search(r"Duration:\s*(\d+):(\d+):(\d+\.?\d*)", err)
+    if not m:
+        raise RuntimeError(f"cannot read duration of {path}")
+    h, mi, sec = m.groups()
+    return int(h) * 3600 + int(mi) * 60 + float(sec)
 
 
 def silent_audio(text: str, out: Path) -> float:
     dur = max(1.6, len(text.split()) / 2.5)
-    subprocess.run(["ffmpeg", "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono", "-t", f"{dur:.2f}",
+    subprocess.run([FFMPEG, "-y", "-f", "lavfi", "-i", "anullsrc=r=48000:cl=mono", "-t", f"{dur:.2f}",
                     "-c:a", "libmp3lame", str(out)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     return dur
 
@@ -1494,8 +1540,12 @@ def write_ass(cues, path: Path):
         "[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, "
         "Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, "
         "MarginR, MarginV, Encoding\n"
-        "Style: Default,DejaVu Sans,36,&H00FFFFFF,&H0000E6FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,3,1,2,160,160,64,1\n"
-        "Style: Student,DejaVu Sans,36,&H0042E4F0,&H0000E6FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,3,1,2,160,160,64,1\n\n"
+        # BorderStyle 3 = opaque box behind each caption line, so the Hinglish line stays
+        # readable over the yellow trap strip as well as over the dark rows.
+        # BorderStyle 3 = opaque box per caption line. MarginV 14 keeps the Hinglish
+        # caption in the bottom band so it never covers a row card or the trap strip.
+        "Style: Default,DejaVu Sans,30,&H00FFFFFF,&H0000E6FF,&H00000000,&HD00A0F1E,-1,0,0,0,100,100,0,0,3,12,0,2,240,240,16,1\n"
+        "Style: Student,DejaVu Sans,30,&H0042E4F0,&H0000E6FF,&H00000000,&HD00A0F1E,-1,0,0,0,100,100,0,0,3,12,0,2,240,240,16,1\n\n"
         "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text"
     )
     lines = [head]
@@ -1504,15 +1554,38 @@ def write_ass(cues, path: Path):
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def make_cues(words, offset, style, chunk=9):
+def _two_lines(text, max_chars=112):
+    """Pre-wrap a caption into at most two lines so it can never run off the frame.
+    libass does not wrap reliably inside an opaque-box style, so we do it ourselves."""
+    text = text.strip()
+    if len(text) <= max_chars // 2:
+        return text
+    words = text.split()
+    total = len(text)
+    best, best_d = None, 10 ** 9
+    for i in range(1, len(words)):
+        first = " ".join(words[:i])
+        second = " ".join(words[i:])
+        if len(first) > max_chars // 2 + 12:
+            break
+        d = abs(len(first) - len(second))
+        if d < best_d:
+            best, best_d = (first, second), d
+    if not best:
+        return text
+    return best[0] + chr(92) + "N" + best[1]
+
+
+def make_cues(words, offset, style, chunk=9, max_chars=112):
     cues, buf = [], []
     for w in words:
         buf.append(w)
-        if len(buf) >= chunk or w[0].endswith((".", "?", "!", ":")):
-            cues.append((offset + buf[0][1], offset + buf[-1][2] + 0.12, style, " ".join(x[0] for x in buf)))
+        joined = sum(len(x[0]) + 1 for x in buf)
+        if len(buf) >= chunk or joined > max_chars or w[0].endswith((".", "?", "!", ":")):
+            cues.append((offset + buf[0][1], offset + buf[-1][2] + 0.12, style, _two_lines(" ".join(x[0] for x in buf), max_chars)))
             buf = []
     if buf:
-        cues.append((offset + buf[0][1], offset + buf[-1][2] + 0.15, style, " ".join(x[0] for x in buf)))
+        cues.append((offset + buf[0][1], offset + buf[-1][2] + 0.15, style, _two_lines(" ".join(x[0] for x in buf), max_chars)))
     return cues
 
 
@@ -1561,12 +1634,12 @@ async def main():
             render_frame(sc, si + 1, total, step, kind, sp)
             jobs.append((si, who, text, kind, sp, AUDIO_DIR / f"{sc['id']}_{gi:02d}.mp3"))
         print(f"  {si + 1:02d}/{total}  {sc['id']}")
-    if args.preview or args.only:
+    if args.preview:
         print(f"Preview written to {SLIDES_DIR.resolve()}")
         return
 
-    if not shutil.which("ffmpeg") or not shutil.which("ffprobe"):
-        sys.exit("ERROR: ffmpeg / ffprobe with libass must be on PATH for the video build")
+    if not FFMPEG:
+        sys.exit("ERROR: no ffmpeg found. pip install imageio-ffmpeg, or set FFMPEG_BIN")
 
     print(f"\n=== Step 2: narration ({'SILENT TEST' if args.no_tts else args.student + ' / ' + args.teacher}) ===")
     words_by_job = {}
@@ -1593,7 +1666,7 @@ async def main():
         dur = dur_speech + (1.1 if kind in ("question", "trap") else 0.55)
         clip = BUILD_DIR / f"clip_{i:03d}.mp4"
         subprocess.run([
-            "ffmpeg", "-y", "-loop", "1", "-framerate", "5", "-i", str(sp), "-i", str(mp3),
+            FFMPEG, "-y", "-loop", "1", "-framerate", "5", "-i", str(sp), "-i", str(mp3),
             "-af", "apad", "-t", f"{dur:.3f}",
             "-c:v", "libx264", "-tune", "stillimage", "-preset", "veryfast", "-g", "60", "-r", "30", "-pix_fmt", "yuv420p",
             "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2", str(clip)],
@@ -1607,13 +1680,13 @@ async def main():
     concat = BUILD_DIR / "concat.txt"
     concat.write_text("\n".join(f"file '{c.name}'" for c in clips) + "\n", encoding="utf-8")
     raw = BUILD_DIR / "raw_concat.mp4"
-    subprocess.run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(concat), "-c", "copy", str(raw)],
+    subprocess.run([FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", str(concat), "-c", "copy", str(raw)],
                    check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     ass = BUILD_DIR / "subtitles.ass"
     write_ass(cues, ass)
     ass_esc = str(ass).replace("\\", "/").replace(":", "\\:")
     subprocess.run([
-        "ffmpeg", "-y", "-i", str(raw), "-vf", f"subtitles='{ass_esc}'",
+        FFMPEG, "-y", "-i", str(raw), "-vf", f"subtitles='{ass_esc}'",
         "-af", "loudnorm=I=-16:TP=-1.5:LRA=11",
         "-c:v", "libx264", "-crf", "18", "-preset", "fast", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(OUTPUT_MP4)], check=True,
@@ -1621,8 +1694,11 @@ async def main():
 
     print("\n=== Step 5: verify ===")
     dur = probe_duration(OUTPUT_MP4)
-    streams = subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,width,height",
-                                       "-of", "csv=p=0", str(OUTPUT_MP4)], text=True).split()
+    if FFPROBE:
+        streams = subprocess.check_output([FFPROBE, "-v", "error", "-show_entries", "stream=codec_type,width,height",
+                                           "-of", "csv=p=0", str(OUTPUT_MP4)], text=True).split()
+    else:
+        streams = ["video (ffprobe not installed)", "audio"]
     print("streams:", streams)
     print(f"DONE: {OUTPUT_MP4.resolve()}  |  {dur / 60:.2f} min  |  {OUTPUT_MP4.stat().st_size / 1048576:.1f} MB")
     if not any(s.startswith("audio") for s in streams):
