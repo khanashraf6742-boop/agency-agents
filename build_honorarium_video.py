@@ -663,7 +663,7 @@ SCENES += [
         ["Secretarial assistance", "Category I: Rs 40,000; II: Rs 30,000; III: Rs 20,000", "Follows the same witness bracket as the honorarium"]],
       "widths": [0.22, 0.36, 0.42]},
      {"kind": "callout", "color": "red", "text": "GUIDE FIX: the guide uses 'DA' for Daily Allowance here, and for Disciplinary Authority elsewhere. Read each use in full."}],
-   "narr": "Retired IO ke add-ons teen hain. Pehla, transport allowance 40,000 rupees per case, flat. Doosra, outstation journey mein actual air ya rail kharch, lekin class wahi jo retirement ke waqt entitled thi. Teesra, Daily Allowance, jo retirement se theek pehle ki entitlement ke barabar hai. Chautha, secretarial assistance, jo witness category ke hisaab se 40,000, 30,000 ya 20,000 rupees hai. Guide mein 'DA' ka ek hi shabd teen cheezon ke liye use hua hai, isliye yahan poora naam likha gaya hai.",
+   "narr": "Retired IO ke add-ons teen hain, aur ek extra kharch. Pehla, transport allowance 40,000 rupees per case, flat. Doosra, Daily Allowance, jo retirement se theek pehle ki entitlement ke barabar hai. Teesra, secretarial assistance, jo witness category ke hisaab se 40,000, 30,000 ya 20,000 rupees hai. Iske saath, outstation journey mein actual air ya rail kharch milta hai, lekin class wahi jo retirement ke waqt entitled thi. Guide mein 'DA' ka ek hi shabd teen cheezon ke liye use hua hai, isliye yahan poora naam likha gaya hai.",
    "spk": "teacher"},
 
   {"chapter": "Retired IO Add-ons", "tag": "PARA 4(a)(i) · CHART",
