@@ -57,7 +57,7 @@ REFERENCE_MD = Path(__file__).with_name("suspension_reference_sheet.md")
 PLAN_JSON = BUILD_DIR.parent / "narration.json"
 
 TITLE_TOP = "Suspension (DoPT Information Document, updated 04.11.2022) — Master Study Guide with 2026 update"
-FOOTER = "Source: DoPT Information Document on Suspension (04.11.2022) · CCS (CCA) Rules 1965 Rule 10 · GSR 156 (2022) · DoPT notification 12.01.2026 (G.S.R. 21(E)) · Status as on 2026-10-26"
+FOOTER = "Source: DoPT Information Document on Suspension (04.11.2022) · CCS (CCA) Rules 1965 Rule 10 · GSR 156 (2022) · DoPT notification 12.01.2026 (G.S.R. 21(E))"
 
 # Palette (matches the dark-navy reference style)
 BG_TOP = (10, 16, 36)
@@ -332,7 +332,7 @@ def draw_card_item(d, card, x, y, w, h, s):
         d.text((x + PAD, y + PAD), card["title"], font=f_t, fill=col)
         cy = y + PAD + _lh(f_t) + 10
         row_h = int(44 * s)
-        label_w = int(430 * s)
+        label_w = int(max(f_l.getlength(lb) for lb, _, _ in card["items"]) + 28 * s)
         value_w = int(200 * s)
         bar_max = w - 2 * PAD - label_w - value_w - 10
         mx = card.get("max") or max(v for _, v, _ in card["items"])
