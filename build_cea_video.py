@@ -858,6 +858,121 @@ SCENES += [
    "narr": "Sir, agar employee ne mid-year resign kar diya, to kya us bachche ka agle saal ka CEA bhi milega?",
    "spk": "student"},
 ]
+SCENES += [
+  {"chapter": "Both Spouses in Government", "tag": "CLAUSE 13 · SINGLE-CLAIM RULE",
+   "title": "Both spouses are Government servants: only one may claim, for all children",
+   "cards": [
+     {"kind": "row", "color": "cyan", "label": "Rule", "text": "If both husband and wife are Government servants, only one of them may claim CEA or Hostel Subsidy for their children."},
+     {"kind": "stat", "color": "green", "head": "One claimant", "sub": "For all eligible children together"},
+     {"kind": "stat", "color": "red", "head": "No split", "sub": "One child claimed by father, another by mother, is not allowed"},
+     {"kind": "row", "color": "orange", "label": "Declaration", "text": "The claiming spouse furnishes a declaration that the other spouse has not, and will not, claim for the same period (guide Clause 13)."},
+     {"kind": "row", "color": "sky", "label": "Source status", "text": "Single-claim rule: VERIFIED in the 2018 O.M. text as reproduced. Declaration wording: from the guide."}],
+   "narr": "Clause 13, dono Government servant ho to kya hota hai. Sirf ek hi spouse CEA ya Hostel Subsidy claim kar sakta hai, aur wo bhi saare eligible bachchon ke liye ek saath. Ek bachcha papa se aur doosra mummy se, aisa split allowed nahi hai. Doosre spouse ka declaration bhi dena hota hai ki wo same period ke liye claim nahi karega.",
+   "spk": "teacher"},
+  {"chapter": "Both Spouses in Government", "tag": "CONTRAST WITH LTC",
+   "title": "Why CEA is stricter than LTC on husband-and-wife claims",
+   "cards": [
+     {"kind": "table", "color": "purple", "title": "CEA and Hostel Subsidy versus LTC (LTC column from the guide)",
+      "headers": ["Feature", "CEA and Hostel Subsidy", "LTC (guide cross-reference)"],
+      "widths": [0.24, 0.38, 0.38],
+      "rows": [
+        ["Basic principle", "Only one spouse claims, for all children together", "Normally one spouse claims; the other travels as family"],
+        ["Split between parents", "Not allowed", "Allowed in specific cases, e.g. separate residence or own-side relatives"],
+        ["Declaration", "Written declaration by the non-claiming spouse", "Joint hometown declaration where the couple lives together"],
+        ["Governing logic", "Stops double reimbursement of one fixed CEA amount", "Stops double claim of the same journey concession"]]},
+     {"kind": "callout", "color": "yellow", "text": "The LTC column is from the guide. The LTC Rules were not verified in this video (NOT VERIFIED)."}],
+   "narr": "LTC se contrast dekhiye, kyunki exam me ye mix hota hai. CEA me sirf ek spouse claim karta hai, bachchon ka set ek saath. LTC me kuch specific situations me alag claim allowed hai, jaise alag residence ya apne side ke relatives. Ye LTC column guide se hai, aur LTC Rules abhi verify nahi hue, isliye NOT VERIFIED hai.",
+   "spk": "teacher"},
+  {"chapter": "Both Spouses in Government", "tag": "SINGLE-CLAIM FLOW",
+   "title": "Who claims: decide together, file once, keep the declaration",
+   "cards": [
+     {"kind": "steps", "color": "green", "steps": [
+        "Both spouses are Government servants",
+        "Decide together which one spouse will claim",
+        "Claiming spouse files CEA and Hostel Subsidy for all children",
+        "Other spouse gives written declaration: not claimed, will not claim",
+        "Job or deputation changes? Single-claim rule continues; new office honours the declaration"]}],
+   "narr": "Flow dekhiye. Pehle dono mil kar tay karein ki kaun claim karega. Claiming spouse saare bachchon ke liye file karega. Doosre spouse ka written declaration lagega. Agar baad me job ya department badle, jaise deputation, to bhi single-claim rule wahi rahega, aur naya office existing declaration ko maanega.",
+   "spk": "teacher"},
+  {"chapter": "Both Spouses in Government", "tag": "STUDENT QUESTION",
+   "title": "Student question: can each spouse claim CEA for a different child?",
+   "cards": [
+     {"kind": "row", "color": "sky", "label": "Student asks", "text": "If the husband claims CEA for one child and the wife claims for another, is that allowed?"},
+     {"kind": "row", "color": "green", "label": "Short answer", "text": "No. One spouse claims for the whole set of eligible children, through a single claim."}],
+   "narr": "Sir, agar pati ek bachche ka CEA le, aur patni doosre bachche ka, kya ye allowed hai?",
+   "spk": "student"},
+  {"chapter": "Deputation & Foreign Service", "tag": "CLAUSE 14 · THE TWO-QUESTION TEST",
+   "title": "For any deputation case, ask two questions separately",
+   "cards": [
+     {"kind": "row", "color": "cyan", "label": "Question 1", "text": "Which department's CEA scheme applies, if any?"},
+     {"kind": "row", "color": "orange", "label": "Question 2", "text": "Who actually disburses and bears the cost?"},
+     {"kind": "row", "color": "sky", "label": "Parent cadre", "text": "The lending (parent) cadre usually keeps administrative and disciplinary control, whoever pays the allowance."},
+     {"kind": "row", "color": "red", "label": "Status", "text": "Two-question method is the guide's approach. The parent-control point is the guide's view, not a quoted O.M. (NOT VERIFIED)."}],
+   "narr": "Deputation ke liye ek simple test. Do sawal poochhiye. Pehla, kis department ki CEA scheme lagu hoti hai, agar koi ho. Doosra, asli kharcha kaun uthata hai aur kaun pay karta hai. Guide ke according lending parent cadre aksar control rakhta hai, chahe pay kahin se bhi ho. Ye principle O.M. ka quoted text nahi hai, isliye NOT VERIFIED.",
+   "spk": "teacher"},
+  {"chapter": "Deputation & Foreign Service", "tag": "SCENARIOS 1 TO 4",
+   "title": "Deputation scenarios 1 to 4: who gets CEA and who pays",
+   "cards": [
+     {"kind": "table", "color": "cyan", "title": "Scenario table, part 1",
+      "headers": ["#", "Scenario", "CEA position", "Who is accountable or pays"],
+      "widths": [0.05, 0.31, 0.36, 0.28],
+      "rows": [
+        ["1", "Ordinary Central employee, no deputation", "Full CEA and Hostel Subsidy under this guide", "Own parent department"],
+        ["2", "State employee on deputation TO the Centre", "Automatically covered by Central CEA rules from day one", "Central office where posted (borrowing office)"],
+        ["3", "Central employee deputed OUT to a State Government", "Continues only if the deputation order expressly provides for it", "State, per deputation terms; otherwise not admissible"],
+        ["4", "Central employee deputed to a PSU with its own CEA-equivalent scheme", "Employee elects one scheme, not both", "Paying authority of the elected scheme"]]},
+     {"kind": "row", "color": "red", "label": "Status", "text": "Scenarios 1 to 3 follow Clause 2. Scenario 4's election rule is the guide's inference by analogy with LTC (NOT VERIFIED)."}],
+   "narr": "Scenario 1 se 4 tak. Normal Central employee ka CEA apne department se milta hai. State employee jo Centre par deputation par hai, usko automatic CEA milta hai, borrowing office se. Centre se State me deputation par gaye officer ka CEA tabhi milega jab order me likha ho. Aur PSU me own scheme ho to employee ek scheme chunega, dono nahi.",
+   "spk": "teacher"},
+  {"chapter": "Deputation & Foreign Service", "tag": "SCENARIOS 5 TO 8",
+   "title": "Deputation scenarios 5 to 8: no scheme, foreign service, training, reversion",
+   "cards": [
+     {"kind": "table", "color": "cyan", "title": "Scenario table, part 2",
+      "headers": ["#", "Scenario", "CEA position", "Who is accountable or pays"],
+      "widths": [0.05, 0.31, 0.36, 0.28],
+      "rows": [
+        ["5", "Deputed to a PSU or autonomous body with NO equivalent scheme", "CEA only if expressly provided in the deputation or foreign-service order", "Borrowing body, once so provided"],
+        ["6", "Foreign service with a foreign employer or international body", "Same express-provision test; foreign allowance packages may substitute CEA", "Per the foreign-service contract (case-specific)"],
+        ["7", "Officer sent on training, in India or abroad (not deputation)", "Full CEA continues; training is not foreign service", "Parent department"],
+        ["8", "Deputation ends and officer reverts mid-academic-year", "CEA liability returns to parent from reversion date; no double claim", "Parent department from reversion date"]]},
+     {"kind": "row", "color": "red", "label": "Status", "text": "Rows 5 to 8 apply Clause 2 and FR 110-125 principles. No single CEA deputation circular was verified (NOT VERIFIED)."}],
+   "narr": "Scenario 5 se 8. PSU me koi equivalent scheme nahi ho, to CEA sirf tab jab deputation order me express provision ho. Foreign employer ke case me contract dekhna padta hai. Training par jaane par CEA chalta hai, kyunki training foreign service nahi hai. Deputation khatam hone par mid-year revert hone par liability wapas parent department par aati hai.",
+   "spk": "teacher"},
+  {"chapter": "Deputation & Foreign Service", "tag": "DECISION FLOW",
+   "title": "Does CEA continue on deputation? The decision flow",
+   "cards": [
+     {"kind": "steps", "color": "orange", "steps": [
+        "State Govt employee moves INTO Centre: automatic, paid by Central borrowing office",
+        "Centre employee moves OUT: does the deputation order expressly provide CEA?",
+        "No: not automatic. Check whether the borrowing body has its own scheme",
+        "Yes, and borrowing body has no scheme: Central CEA continues, borne by borrowing body",
+        "Yes, and borrowing body has its own scheme: employee elects one, not both"]}],
+   "narr": "Ek flow se pura deputation case dekhiye. State se Centre me automatic. Centre se bahar, to deputation order me express provision check karein. Agar borrowing body ki apni scheme hai, to employee ek scheme chunega, dono nahi.",
+   "spk": "teacher"},
+  {"chapter": "Deputation & Foreign Service", "tag": "STUDENT QUESTION",
+   "title": "Student question: a PSU has its own CEA-like scheme. Can the employee take both?",
+   "cards": [
+     {"kind": "row", "color": "sky", "label": "Student asks", "text": "If a Central employee is on deputation to a PSU that has its own CEA-like scheme, can he take both?"},
+     {"kind": "row", "color": "green", "label": "Short answer", "text": "No. The employee elects one scheme, not both (guide scenario 4; NOT VERIFIED)."}],
+   "narr": "Sir, agar Centre ka employee PSU me deputation par hai aur PSU ki apni CEA jaisi scheme hai, to kya dono le sakte hain?",
+   "spk": "student"},
+]
+SCENES += [
+  {"chapter": "Deputation & Foreign Service", "tag": "SCENARIOS 9 TO 12",
+   "title": "Deputation scenarios 9 to 12: spouses, death, recovery, and two Governments",
+   "cards": [
+     {"kind": "table", "color": "cyan", "title": "Scenario table, part 3",
+      "headers": ["#", "Scenario", "CEA position", "Who is accountable or pays"],
+      "widths": [0.05, 0.31, 0.36, 0.28],
+      "rows": [
+        ["9", "Both spouses are Government servants in different departments or deputations", "Single-claim rule still applies; one spouse claims for all children", "Claiming spouse's current employing office"],
+        ["10", "Government servant dies while on deputation or foreign service", "Death-in-service clause applies; surviving-spouse test applies", "Parent (lending) cadre, since lien and service records rest there (guide view)"],
+        ["11", "CEA wrongly drawn while on deputation; recovery or disciplinary action", "Follows the general deputation disciplinary principle, not a CEA rule", "Lending cadre for major penalty; borrowing office may recover for minor penalty"],
+        ["12", "State deputationist's spouse is a separate State employee", "Single-claim rule applies across the two Governments", "Claiming spouse's current Government employer"]]},
+     {"kind": "row", "color": "red", "label": "Status", "text": "Rows 9 and 12 follow Clause 13. Rows 10 and 11 are the guide's inference and cite CCS(CCA) Rules 20-21 (NOT VERIFIED)."}],
+   "narr": "Scenario 9 se 12. Dono spouse alag departments me ho to bhi single-claim rule lagu hai. Deputation par marne par death clause wahi chalega. Galat CEA claim hone par recovery aur disciplinary action deputation ke general principle se hota hai, aur ye NOT VERIFIED hai. Last scenario me State ke do alag Governments me spouses ho, tab bhi ek hi claim.",
+   "spk": "teacher"},
+]
 # @@CONTENT_END@@
 
 
