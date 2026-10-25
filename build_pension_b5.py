@@ -150,11 +150,8 @@ SCENES = [
         "title": "RULE 53 — ONLINE BY DEFAULT, AND THE TWO KINDS OF EXEMPTION",
         "accent": RED, "badge": "RULE 53",
         "q": "How is a pension case processed, and what happens if an office cannot go online?",
-        "intro": ("Welcome back! This is batch five. We now enter Chapter ten of the Central Civil Services (Pension) Rules, 2021, "
-                  "which covers Rules fifty-three to seventy: how a pension is worked out when a government servant retires. "
-                  "This chapter is mostly about who must do what, and by which date. A pension case simply means the file of papers that must be "
-                  "ready so the pension starts on time. Let us hear Riya's first question."),
-        "q_say": "Sir, how is a pension case processed these days, and what happens if an office cannot work online?",
+        "intro": "Welcome back! Ye batch paanch hai. Ab hum Central Civil Services (Pension) Rules, 2021 ke Chapter ten mein aa gaye hain, jo Rules fifty-three se seventy tak cover karta hai: jab ek government servant retire hota hai, toh pension kaise nikaala jaata hai. Ye chapter zyaadatar is baat par hai ki kaun kya karega, aur kis date tak. Pension case ka matlab hai papers ki wo file jo tayyar honi chahiye, taaki pension time par shuru ho. Chaliye, Riya ka pehla sawaal sunte hain.",
+        "q_say": "Sir, aajkal pension case kaise process hota hai, aur agar koi office online kaam nahi kar sakta toh kya hota hai?",
         "boxes": [
             ("THE DEFAULT • RULE 53(1)",
              "Unless exempted by a general or special order, the case is processed online (Bhavishya or e-HRMS).",
@@ -183,7 +180,7 @@ SCENES = [
              "Savdhan rahein, yeh trap hai. Bahut saare students likhte hain ki exemption se poora case manual ho jata hai. Ye true hai sirf clause a ke under. Clause b mein sirf ek step manual hota hai. Isliye hamesha check karein ki kaun si clause apply hoti hai jab tak aap jawab na dein."),
         ],
         "hook": "REMEMBER: online is the default; clause (a) = whole case manual, clause (b) = one step only!",
-        "hook_say": "Remember: online is the default. Clause a makes the whole case manual, but clause b makes only one step manual.",
+        "hook_say": "Yaad rakhein: online default hai. Clause a poore case ko manual banata hai, lekin clause b sirf ek step ko manual banata hai.",
         "covers": ["R53(1)-DEFAULT", "R53(1)-ROUTING", "R53-BHAVISHYA-DEF", "R53(2)(a)", "R53(2)(b)", "R53-EXEMPTION-ORDER", "R53-2024-WORDING", "R53-EX-DIGSIG", "QA-R53"],
     },
     {
@@ -192,7 +189,7 @@ SCENES = [
         "title": "FORM 6-A ONLINE — THE O.M.s, BHAVISHYA SINCE 2017, AND A DATE FLAG",
         "accent": ORANGE, "badge": "RULE 53 • O.M.s",
         "q": "Which orders put Form 6-A online, and from which date does it apply?",
-        "q_say": "Sir, which orders put Form 6-A online, and from which date does all this apply?",
+        "q_say": "Sir, kaun se orders Form 6-A ko online karte hain, aur ye sab kis date se lagu hota hai?",
         "boxes": [
             ("BHAVISHYA SINCE 2017",
              "Bhavishya has been mandatory for pension cases from 01.01.2017 (Railways, Defence, P&T excluded).",
@@ -216,7 +213,7 @@ SCENES = [
              "Start date ke maamle mein savdhan rahein. Memoranda kehte hain amendment sixteenth November two thousand twenty-four se start hota hai. Lekin rule kehta hai publication ke ek sau bees din baad, aur sixteenth July plus ek sau bees din hai thirteenth November. Isliye Gazette publication date check karni hogi. Tab tak, DoPPW memoranda ke hisaab se effective sixteenth November kehein, aur ise not confirmed mark karein."),
         ],
         "hook": "REMEMBER: Form 6-A online (O.M.s 15.10.2024 and 04.11.2024); effective date 16.11.2024 is not confirmed!",
-        "hook_say": "Remember: Form 6-A goes online under the memoranda of fifteenth October and fourth November two thousand twenty-four, and the sixteenth November start date is not yet confirmed from the Gazette.",
+        "hook_say": "Yaad rakhein: Form 6-A online hota hai fifteenth October aur fourth November two thousand twenty-four ke memoranda ke under, aur sixteenth November wali start date Gazette se abhi confirm nahi hai.",
         "covers": ["OM-BHAVISHYA-2017", "OM-15.10.2024-6A", "OM-04.11.2024-6A", "FORM-6A-EFFECTIVE"],
     },
     {
@@ -225,7 +222,7 @@ SCENES = [
         "title": "RULE 54 — WHO MAKES THE LIST, WHEN, AND WHO IS TOLD",
         "accent": BLUE, "badge": "RULE 54",
         "q": "Who prepares the list of retiring staff, how often, and who gets it?",
-        "q_say": "Sir, who prepares the list of people who are about to retire, how often, and who receives it?",
+        "q_say": "Sir, jo log retire hone wale hain, unki list kaun banata hai, kitni baar, aur list kisko milti hai?",
         "boxes": [
             ("THE LIST • RULE 54(1)",
              "Head of DEPARTMENT: by the 15th of every month, list everyone retiring in the next 15 months.",
@@ -254,7 +251,7 @@ SCENES = [
              "Savdhan rahein, yeh trap hai. Rule fifty-four monthly list hai. September two thousand twenty-five guidelines ek alag administrative calendar add karte hain fixed dates ke saath: list ke liye first January, April, July aur October, aur pay and accounts office ko bhejne ke liye thirty-first January, April, July aur October. Dono ko padhein par unki layers ko mix na karein."),
         ],
         "hook": "REMEMBER: HoD lists by the 15th monthly (15 months ahead); other retirements: HoO within 10 days!",
-        "hook_say": "Remember: the Head of Department lists by the fifteenth every month, looking fifteen months ahead. For other retirements, the Head of Office informs within ten days.",
+        "hook_say": "Yaad rakhein: Head of Department har mahine ki fifteen tareekh tak list banata hai, pandrah mahine aage ki dekhte hue. Baaki retirements mein, Head of Office das din ke andar inform karta hai.",
         "covers": ["R54(1)", "R54(2)", "R54(3)", "R54-ACTOR-TRAP", "OM-SEP2025-STAGE1-2", "TL-ELEVEN-DAYS-HOO-DOE"],
     },
     {
@@ -263,7 +260,7 @@ SCENES = [
         "title": "RULE 55(1)-(3) — GOVERNMENT HOUSE DETAILS AND THE ONE YEAR AND EIGHT MONTHS",
         "accent": GREEN, "badge": "RULE 55(1)-(3)",
         "q": "What must the office do about government housing before a retirement?",
-        "q_say": "Sir, what must the office do about government housing before someone retires, and what are the one year and eight months?",
+        "q_say": "Sir, retire hone se pehle office ko government housing ke baare mein kya karna hota hai, aur ek saal aur aath mahine wali baat kya hai?",
         "boxes": [
             ("THE RULE • RULE 55(1)",
              "Right after the 54(1) list: collect housing details and send them to the Directorate of Estates 1 year ahead.",
@@ -292,7 +289,7 @@ SCENES = [
              "Ek real example, teaching ke liye banaya gaya. Esha ek government flat mein rehti hai aur thirty-first December two thousand twenty-seven ko retire hoti hai. Uska office details ko kam se kam thirty-first December two thousand twenty-six tak bhejne ko hai. Certificate fee ko April two thousand twenty-seven ke end tak cover karta hai, aur baad ke mahine uske pay se recover kiye jate hain."),
         ],
         "hook": "REMEMBER: details to the Directorate 1 YEAR before; NDC covers 8 MONTHS before; others within 10 days!",
-        "hook_say": "Remember: housing details go to the Directorate one year before; the certificate covers eight months before retirement; and in other cases the office forwards within ten days.",
+        "hook_say": "Yaad rakhein: housing details ek saal pehle Directorate ko jaati hain; certificate retirement se aath mahine pehle ka cover karta hai; aur baaki cases mein office das din ke andar forward karta hai.",
         "covers": ["R55(1)", "R55(1)-DOE-PRESCRIBES", "R55(1)-ALLOTTEE-DEF", "R55(2)", "R55(3)", "R55-ONEYEAR-8MONTHS", "LIMIT-DOE-EIGHT-MONTHS", "TL-DOE-ONEYEAR", "R55-EX-SO", "QA-R55"],
     },
     {
@@ -301,7 +298,7 @@ SCENES = [
         "title": "RULE 55(4)-(6) — THE DECLARATION, THE HoO'S OWN NDC, AND THE EXPLANATION",
         "accent": PINK, "badge": "RULE 55(4)-(6)",
         "q": "What if the retiring person never had government housing? Who gives the NDC then?",
-        "q_say": "Sir, what if the retiring person never had government housing, and who issues the certificate then?",
+        "q_say": "Sir, agar retire hone wale vyakti ke paas kabhi government housing nahi thi, toh certificate kaun issue karta hai?",
         "boxes": [
             ("AT RETIREMENT AGE • 55(4)",
              "Never had official housing? Give the HoO a declaration one year before retirement.",
@@ -330,7 +327,7 @@ SCENES = [
              "Ek example lete hain. Asha hamesha apne ghar mein rahi. Retire hone se ek saal pehle woh declaration deti hai, aur uska Head of Office khud certificate issue karta hai. Trap ye hai ki Directorate ke certificate ka intezar karna jo is case mein zaroorat nahi hai."),
         ],
         "hook": "REMEMBER: never had housing = declaration, and the Head of Office issues the NDC himself!",
-        "hook_say": "Remember: if a person never had government housing, he gives a declaration, and the Head of Office issues the no demand certificate himself.",
+        "hook_say": "Yaad rakhein: agar kisi vyakti ke paas kabhi government housing nahi thi, toh wo declaration deta hai, aur Head of Office khud no demand certificate issue karta hai.",
         "covers": ["R55(4)", "R55(5)", "R55(6)", "R55-EXPL"],
     },
     {
@@ -339,7 +336,7 @@ SCENES = [
         "title": "RULE 56 — PREPARATION STARTS ONE YEAR BEFORE, OR AT LEAVE, WHICHEVER IS EARLIER",
         "accent": SKY, "badge": "RULE 56",
         "q": "From which day must the office start preparing a retiring person's pension case?",
-        "q_say": "Sir, from which day must the office start preparing the pension case of a person who is about to retire?",
+        "q_say": "Sir, kis din se office us vyakti ka pension case tayyar karna shuru kare jo retire hone wala hai?",
         "boxes": [
             ("THE RULE • RULE 56",
              "Start the pension work one year before retirement, or on the day leave before retirement begins, whichever is EARLIER.",
@@ -363,7 +360,7 @@ SCENES = [
              "Rules fifty-four se fifty-six tak ki dates yaad rakhein. Agle pandrah mahine, mahine ka fifteenth, mahinay ka aakhri din, das din, ek saal, aur ath mahine. Sab retirement din se pehle taiyaari ke baare mein hain."),
         ],
         "hook": "REMEMBER: Rule 56 = one year before or LPR date, whichever is EARLIER!",
-        "hook_say": "Remember: Rule fifty-six starts the work one year before retirement or on the leave date, whichever is earlier.",
+        "hook_say": "Yaad rakhein: Rule fifty-six kaam ek saal pehle shuru karta hai, ya leave ki date par, jo bhi pehle ho.",
         "covers": ["R56", "R56-VS-R51", "R56-EX", "QA-R56", "BONUS-49-SIXDATES"],
     },
     {
@@ -372,7 +369,7 @@ SCENES = [
         "title": "RULE 57(1)(a) — STAGE ONE: VERIFY EVERY PERIOD OF SERVICE",
         "accent": ORANGE, "badge": "RULE 57(1)(a)",
         "q": "In stage one of Rule 57, how is the service verified, and what if records are missing?",
-        "q_say": "Sir, in the first stage of Rule 57, how is the service checked, and what happens if some records are missing or the other office does not reply?",
+        "q_say": "Sir, Rule 57 ke pehle stage mein service kaise check hoti hai, aur agar kuch records gayab hon ya doosra office reply na kare toh kya hota hai?",
         "boxes": [
             ("CHECK THE BOOK • (a)(i)-(ii)",
              "HoO checks the service book for service after the Rule 30 check. Gaps: pay bills, last pay certificate, April pay slip.",
@@ -401,7 +398,7 @@ SCENES = [
              "Ek real example. Asha ne pehle kisi doosre department mein serve kiya tha. Woh office do mahine mein reply nahi deta, isliye us period ko qualifying mana jata hai. Ek chhota stretch kahin bhi verify nahi ho sakta, isliye woh ek mahine ke andar statement file karti hai, aur Head of Office use admit karta hai."),
         ],
         "hook": "REMEMBER: no reply in 2 months = qualifying; unverified bit = 1-month statement; lying = grave misconduct!",
-        "hook_say": "Remember: no reply in two months means the period qualifies, an unverified bit needs a one month statement, and lying is grave misconduct.",
+        "hook_say": "Yaad rakhein: do mahine mein reply na aaye toh period qualify ho jaata hai, jo bit verify nahi hua uske liye ek mahine ka statement chahiye, aur jhooth bolna gambhir misconduct hai.",
         "covers": ["R57(1)-3STAGES", "R57(1)(a)(i)", "R57(1)(a)(ii)", "R57(1)(a)(iii)", "R57(1)(a)(iv)", "R57(1)(a)(v)", "R57(1)(a)(vi)", "R57(1)(a)(vii)", "R57(1)(a)(viii)", "R57(1)(a)(ix)", "R57(1)(a)(x)", "R57-EX-SENIORASST", "QA-R57", "TL-SVC-VERIF-8M", "R56-R57-R30"],
     },
     {
@@ -410,7 +407,7 @@ SCENES = [
         "title": "RULE 57(1)(b)-(c) — FIX THE GAPS, THEN GIVE THE CERTIFICATE AND ASK FOR FORM 6-A",
         "accent": BLUE, "badge": "RULE 57(1)(b)-(c)",
         "q": "What happens in stages two and three of Rule 57, and which figures matter?",
-        "q_say": "Sir, what happens in stages two and three of Rule 57, and which figures matter?",
+        "q_say": "Sir, Rule 57 ke stage do aur teen mein kya hota hai, aur kaun se figures matter karte hain?",
         "boxes": [
             ("STAGE TWO • 57(1)(b)",
              "Scrutinise certificates, find and fix omissions. Cannot fix? Ignore; use the service book entries.",
@@ -434,7 +431,7 @@ SCENES = [
              "Stage three ka aakhri step hai servant ko advise karna ki woh Form 6-A submit kare. Ye 2024 se change hai. Isse pehle rule ne kai purane forms ka naam liya tha, jaise Forms four, six aur Format nine undertaking. Ye sirf history hai; Form 6-A ne unhein replace kar diya, aur baaki purane forms ke baare mein koi limb ab maujood nahi hai."),
         ],
         "hook": "REMEMBER: stage 2 fixes gaps (24 months only); stage 3 = certificate at 8 months, then Form 6-A!",
-        "hook_say": "Remember: stage two fixes the gaps with a twenty-four month limit, and stage three is the certificate at eight months, followed by Form 6-A.",
+        "hook_say": "Yaad rakhein: stage do chaubis mahine ki limit ke saath gaps bharta hai, aur stage teen aath mahine par certificate hai, uske baad Form 6-A.",
         "covers": ["R57(1)(b)-OMISSIONS", "R57(1)(b)-24MONTHS", "R57(1)(b)-TENMONTHS", "R57(1)(c)(i)", "R57(1)(c)(ii)", "R57(1)(c)(iii)", "R57(1)(c)(iii)-OLD", "TL-CERT-8M", "TL-EMOL-24M"],
     },
     {
@@ -443,7 +440,7 @@ SCENES = [
         "title": "RULE 57(2)-(3) — WHEN FORM 6-A IS DUE, AND WHO FILES IT IF THE SERVANT CANNOT",
         "accent": GREEN, "badge": "RULE 57(2)-(3)",
         "q": "When must the retiring servant file Form 6-A, and who can file it if he is unwell?",
-        "q_say": "Sir, when must the retiring servant file Form 6-A, and who can file it if he is unable to?",
+        "q_say": "Sir, retiring servant ko Form 6-A kab file karna hota hai, aur agar wo na kar paaye toh kaun file kar sakta hai?",
         "boxes": [
             ("THE DEADLINE • RULE 57(2)(a)",
              "The servant gives a completed Form 6-A to the HoO not later than SIX months before retirement.",
@@ -467,7 +464,7 @@ SCENES = [
              "Ek real example. Bilal retirement se chaah mahine pehle hospital mein hai, toh uski patni Charu Form 6-A file karti hai. Uske pension ka hisab usual hi hoga, lekin woh commutation nahi le sakta jab tak woh khud baad mein apply na kare. Aur yaad rakhein, trap: Rule fifty-eight same tiers use karta hai, jaise hum dekhenge."),
         ],
         "hook": "REMEMBER: Form 6-A at 6 months; if infirm, spouse or family, then the gratuity nominee!",
-        "hook_say": "Remember: Form 6-A is due six months before; if the servant is infirm, the spouse or family files, and then the gratuity nominee.",
+        "hook_say": "Yaad rakhein: Form 6-A chhe mahine pehle due hai; agar servant ashakt hai, toh spouse ya family file karta hai, aur phir gratuity nominee.",
         "covers": ["R57(2)(a)", "R57(2)(b)", "R57(3)-TIERS", "R57(3)-PROVISO", "TL-6A-SUPER"],
     },
     {
@@ -476,7 +473,7 @@ SCENES = [
         "title": "RULE 58 VERSUS RULE 57 — SAME FORM, DIFFERENT CLOCK",
         "accent": PINK, "badge": "RULES 57 • 58",
         "q": "How does Rule 58 differ from Rule 57 for a retirement that is not superannuation?",
-        "q_say": "Sir, how does Rule 58 differ from Rule 57 for a retirement that is not superannuation?",
+        "q_say": "Sir, Rule 58 Rule 57 se kaise alag hai, us retirement ke liye jo superannuation nahi hai?",
         "boxes": [
             ("THE RULE • RULE 58(1)",
              "Retiring for a reason other than superannuation? Submit Form 6-A to the HoO immediately after approval or effect.",
@@ -500,7 +497,7 @@ SCENES = [
              "Ek real example. Dev ki voluntary retirement tenth May two thousand twenty-seven ko approve hoti hai. Woh turant Form 6-A submit karta hai kyunki rule kehta hai immediately. Trap ye hai ki aise cases mein chaah mahine ki window expect karna. Koi nahi hai, aur late form provisional pension aur gratuity ko delay karta hai."),
         ],
         "hook": "REMEMBER: same Form 6-A; Rule 57 = 6 months before, Rule 58 = immediately!",
-        "hook_say": "Remember: the form is the same Form 6-A; Rule fifty-seven needs it six months before, and Rule fifty-eight needs it immediately.",
+        "hook_say": "Yaad rakhein: form wahi Form 6-A hai; Rule fifty-seven ko ise chhe mahine pehle chahiye, aur Rule fifty-eight ko turant chahiye.",
         "covers": ["R58(1)", "R58(2)", "R58-PROVISO", "R58-SCOPE-EXAMPLES", "R57-VS-58-INFIRMITY", "R57-VS-58-FORM-TIMING", "R57-58-CLOCK-LABELS", "TL-6A-NONSUPER", "QA-R58"],
     },
     {
@@ -509,7 +506,7 @@ SCENES = [
         "title": "RULE 59 — THE HEAD OF OFFICE FILLS PART I OF FORM 7",
         "accent": RED, "badge": "RULE 59",
         "q": "What does Rule 59 ask the Head of Office to prepare, and by when?",
-        "q_say": "Sir, what does Rule 59 ask the Head of Office to prepare, and by when?",
+        "q_say": "Sir, Rule 59 Head of Office se kya tayyar karne ko kehta hai, aur kab tak?",
         "boxes": [
             ("THE RULE • RULE 59(1)",
              "HoO completes Part I of Form 7, with the check list and the calculation sheet.",
@@ -533,7 +530,7 @@ SCENES = [
              "Ek real example. Esha retire hoti hai thirty-first May two thousand twenty-seven ko. Uska Head of Office Part one ko, check list aur calculation sheet ke saath, thirty-first January two thousand twenty-seven tak khatam karne ko hai. Trap ye hai dono parts ko mix karna: Part one Head of Office ka hai, aur Part two Accounts Officer ka."),
         ],
         "hook": "REMEMBER: Form 7 Part I = Head of Office, 4 months before (or 2 months after Form 6-A)!",
-        "hook_say": "Remember: Part one of Form 7 belongs to the Head of Office, four months before retirement, or two months after Form 6-A in other cases.",
+        "hook_say": "Yaad rakhein: Form 7 ka Part one Head of Office ka hai, retirement se chaar mahine pehle, ya baaki cases mein Form 6-A ke do mahine baad.",
         "covers": ["R59(1)-SUPER", "R59(1)-NONSUPER", "R59(2)", "R59-PARTI-PARTII", "R59-2024", "FORM7-CHECKLIST-2024", "TL-PARTI-FORM7"],
     },
     {
@@ -542,7 +539,7 @@ SCENES = [
         "title": "RULE 60 — WHAT GOES TO THE ACCOUNTS OFFICER, AND BY WHEN",
         "accent": ORANGE, "badge": "RULE 60",
         "q": "What must the Head of Office send to the Accounts Officer, and what is the deadline?",
-        "q_say": "Sir, what must the Head of Office send to the Accounts Officer, and what is the deadline?",
+        "q_say": "Sir, Head of Office Accounts Officer ko kya bhejta hai, aur deadline kya hai?",
         "boxes": [
             ("THE THREE ITEMS • RULE 60(1)",
              "After Rules 57, 58, 59 are done: (i) Form 6-A, (ii) Form 7 + check list + sheet + Format 10 letter, (iii) service book.",
@@ -571,7 +568,7 @@ SCENES = [
              "Ek typical question. Dues details kaun prepare karta hai, Accounts Officer ya Head of Office? Head of Office karta hai, sub-rule two ke under; Accounts Officer sirf authorise karta hai. Example ke liye, agar Bilal retire hota hai thirtieth September two thousand twenty-seven ko, toh uska case Accounts Officer tak thirty-first May tak pahuchna chahiye."),
         ],
         "hook": "REMEMBER: Rule 60 = Form 6-A + Form 7 set + service book, 4 months before; HoO assesses the dues!",
-        "hook_say": "Remember: Rule sixty sends Form 6-A, the Form 7 set and the service book, four months before retirement, and the Head of Office assesses the dues.",
+        "hook_say": "Yaad rakhein: Rule sixty Form 6-A, Form 7 set aur service book bhejta hai, retirement se chaar mahine pehle, aur Head of Office dues ka assessment karta hai.",
         "covers": ["R60(1)-PRECOND", "R60(1)(i)", "R60(1)(i)-OLD", "R60(1)(ii)", "R60(1)(iii)", "R60(2)", "R60(3)", "R60(4)", "R60-CHAUDHA-CLAIM", "R60-FORMAT10", "R60-FORMAT9-DEATH", "TL-CASE-AO", "QA-R60"],
     },
     {
@@ -580,7 +577,7 @@ SCENES = [
         "title": "RULE 61 — TELL THE ACCOUNTS OFFICER PROMPTLY IF ANYTHING CHANGES",
         "accent": GREEN, "badge": "RULE 61",
         "q": "What if something changes, or new dues appear, after the case has gone to the Accounts Officer?",
-        "q_say": "Sir, what if something changes, or new dues appear, after the case has already gone to the Accounts Officer?",
+        "q_say": "Sir, agar case Accounts Officer ke paas chala gaya hai, uske baad kuch badal jaaye, ya naye dues aa jaayein, toh kya hota hai?",
         "boxes": [
             ("EVENTS AFTER SENDING • 61(1)",
              "Anything that happens after the case is forwarded: report it to the Accounts Officer promptly.",
@@ -599,7 +596,7 @@ SCENES = [
              "Ek real example. Charu ke case ko bheje ke do mahine baad, office ko uske house building advance par ek balance milta hai. Head of Office turant likhta hai, aur amount uski gratuity pay hone se pehle adjust kiya jata hai. Trap ye hai ki fixed din ki sankhya dhundna; Rule sixty-one mein koi nahi hai."),
         ],
         "hook": "REMEMBER: Rule 61 = report changes and new dues PROMPTLY, no day limit!",
-        "hook_say": "Remember: Rule sixty-one says report changes and new dues promptly, with no fixed number of days.",
+        "hook_say": "Yaad rakhein: Rule sixty-one kehta hai ki badlaav aur naye dues promptly report karein, din ki koi fixed sankhya nahi hai.",
         "covers": ["R61(1)", "R61(2)", "R61-EX"],
     },
     {
@@ -608,7 +605,7 @@ SCENES = [
         "title": "RULE 62(1)-(4) — WHEN AND HOW A PROVISIONAL PENSION IS SANCTIONED",
         "accent": SKY, "badge": "RULE 62(1)-(4)",
         "q": "If the final pension cannot be fixed in time, what does the retiree get meanwhile?",
-        "q_say": "Sir, if the final pension cannot be fixed in time, what does the retiring person get in the meantime?",
+        "q_say": "Sir, agar final pension time par fix nahi ho pata, toh retire hone wale vyakti ko beech ki avadhi mein kya milta hai?",
         "boxes": [
             ("WHEN IT APPLIES • 62(1)",
              "For delays NOT caused by disciplinary or court cases. Case not sent on time, or AO asks for more details.",
@@ -637,7 +634,7 @@ SCENES = [
              "Ek real example. Esha ka PPO delay ho raha hai. Uske provisional gratuity baarah lakh rupees hai. Das percent, ek lakh bees hazar, hold back kiya jata hai. Maan lijiye uske paas housing dues ke tees hazar rupees bhi hain. Woh ab das lakh pann hazar rupees receive karti hai. Uske pension ka agle din se full start hota hai."),
         ],
         "hook": "REMEMBER: provisional = 100% pension from next day, 100% gratuity less 10% held back!",
-        "hook_say": "Remember: provisional means one hundred percent pension from the next day, and one hundred percent gratuity less ten percent held back.",
+        "hook_say": "Yaad rakhein: provisional ka matlab hai agle din se sau percent pension, aur sau percent gratuity mein se das percent hold back karke.",
         "covers": ["R62-SCOPE", "R62(1)", "R62(2)", "R62(3)(a)", "R62(3)(b)", "R62(4)", "R62-FLOOR-100", "LIMIT-PROV-10PCT", "R62-EX", "TL-PROV-LETTER"],
     },
     {
@@ -646,7 +643,7 @@ SCENES = [
         "title": "RULE 62(5)-(10) — SIX MONTHS, THE ASYMMETRY, AND RELEASING THE 10%",
         "accent": PINK, "badge": "RULE 62(5)-(10)",
         "q": "How long does a provisional pension last, and what if too much was paid?",
-        "q_say": "Sir, how long can a provisional pension continue, and what happens if too much was paid?",
+        "q_say": "Sir, provisional pension kitne samay tak chal sakti hai, aur agar zyada pay ho gaya toh kya hota hai?",
         "boxes": [
             ("SIX MONTHS • 62(5), 62(6)(a)",
              "Revise after scrutiny. Provisional pension lasts up to 6 months, counted from the LATER of retirement or Form 6-A.",
@@ -675,7 +672,7 @@ SCENES = [
              "Ek real example. Esha retire hoti hai thirty-first January two thousand twenty-seven ko, lekin Form 6-A fifteenth February ko aata hai. Chaah mahine fifteenth February se run karte hain, jo late date hai. Aur trap: dono excesses recover hote hain mat kahein. Sirf excess pension recover kiya jaata hai. Excess gratuity nahi."),
         ],
         "hook": "REMEMBER: provisional pension max 6 months (from the LATER date); excess pension recovered, excess gratuity NOT!",
-        "hook_say": "Remember: provisional pension lasts at most six months from the later date. Excess pension is recovered, but excess gratuity is not refunded.",
+        "hook_say": "Yaad rakhein: provisional pension zyada se zyada chaah mahine tak chalti hai, baad wali date se. Zyada pension recover hoti hai, lekin zyada gratuity refund nahi hoti.",
         "covers": ["R62(5)", "R62(6)(a)", "R62(6)(b)", "R62(6)(c)", "R62(7)", "R62(8)", "R62(9)", "R62(10)", "QA-R62", "TL-PROV-MAX-6M", "LIMIT-GRATUITY-WITHHELD-10PCT"],
     },
     {
@@ -684,7 +681,7 @@ SCENES = [
         "title": "RULE 63(1) — THE ACCOUNTS OFFICER ISSUES THE PPO: TWO MONTHS OR 45 DAYS",
         "accent": BLUE, "badge": "RULE 63(1)",
         "q": "What does the Accounts Officer do with the case, and by when must the PPO be issued?",
-        "q_say": "Sir, what does the Accounts Officer do with the case, and by when must the pension payment order be issued?",
+        "q_say": "Sir, Accounts Officer case ke saath kya karta hai, aur pension payment order kab tak issue hona chahiye?",
         "boxes": [
             ("SUPERANNUATION • 63(1)(a)",
              "AO checks, fills Part II of Form 7, assesses pension, family pension AND gratuity, and issues the PPO 2 months BEFORE retirement.",
@@ -713,7 +710,7 @@ SCENES = [
              "Source guide ne clauses e se h chhod diye. Disabled bachche, dependent parents aur disabled siblings ka naam sirf tab liya jaata hai jab unse upar ranked koi eligible na ho. Wahi cheez ek existing pensioner dwara Form eight request par bhi laagu hoti hai. Marriage ya remarriage Rule fifty ke under report kiya jaata hai, aur Pension Disbursing Authority Rule fifty ki order ke under Rule seventy-nine ke under family pension pay karti hai."),
         ],
         "hook": "REMEMBER: PPO 2 months BEFORE (retirement age) or 45 days AFTER receipt (others); AO checks only 24 months!",
-        "hook_say": "Remember: the PPO is due two months before retirement at retirement age, or forty-five days after the papers arrive in other cases, and the Accounts Officer checks only twenty-four months.",
+        "hook_say": "Yaad rakhein: PPO retirement age par retirement se do mahine pehle due hai, ya baaki cases mein papers aane ke chaalis panch din baad, aur Accounts Officer sirf chaubis mahine check karta hai.",
         "covers": ["R63(1)(a)", "R63(1)(b)", "R63(1)(c)", "R63(1)(d)", "R63(1)(d)-PROV1", "R63(1)(d)-PROV2", "R63(1)(e)-(h)", "TL-PPO-SUPER-2M", "TL-PPO-OTHER-45D", "R63-EX", "QA-R63"],
     },
     {
@@ -722,7 +719,7 @@ SCENES = [
         "title": "RULE 63(2)-(5) — PAYING THE GRATUITY, THE CPAO SEAL AND PENDING PROCEEDINGS",
         "accent": ORANGE, "badge": "RULE 63(2)-(5)",
         "q": "After the PPO, how is the gratuity paid, who seals the PPO, and what if proceedings are pending?",
-        "q_say": "Sir, after the PPO, how is the gratuity paid, who seals the PPO, and what if disciplinary proceedings are pending?",
+        "q_say": "Sir, PPO ke baad gratuity kaise pay hoti hai, PPO par seal kaun lagata hai, aur agar disciplinary proceedings pending hon toh kya hota hai?",
         "boxes": [
             ("PAYING THE GRATUITY • 63(2)-(3)",
              "AO tells the HoO the gratuity. HoO pays after Rule 67 dues and any 68(5) hold.",
@@ -751,7 +748,7 @@ SCENES = [
              "Savdhan rahein, yeh trap hai. Source guide kehta hai ki Rule sixty-three, sub-rule four, 2024 mein replace hone wala ekmev clause hai. Ye galat hai. Amendment ne kai rules ko chua hai, jinmein fifty-three, fifty-seven se sixty, sixty-two aur eighty shamil hain. Rule sixty-three, sub-rule four mein, words Format nine sirf Form 6-A ban gaye."),
         ],
         "hook": "REMEMBER: gratuity paid after dues; CPAO seal 21 days (rule) vs 20th (2025 calendar); 63(4) is NOT the only change!",
-        "hook_say": "Remember: the gratuity is paid after dues; the CPAO seal is twenty-one days under the rule but the twentieth under the 2025 calendar; and Rule sixty-three, sub-rule four, was not the only change.",
+        "hook_say": "Yaad rakhein: gratuity dues ke baad pay hoti hai; CPAO seal rule ke under ikkis din mein hai, lekin September two thousand twenty-five calendar ke under bees tareekh ko; aur Rule sixty-three, sub-rule four, ek hi badlaav nahi tha.",
         "covers": ["R63(2)", "R63(3)", "R63(4)(a)", "R63(4)(b)", "R63(4)(c)", "R63(4)-ONLY-REPLACED", "R63(5)(a)", "R63(5)(b)", "OM-28.10.2022-TIMELINES", "OM-SEP2025-STAGE10"],
     },
     {
@@ -760,7 +757,7 @@ SCENES = [
         "title": "THE 29.09.2025 GUIDELINES — THE TWELVE-STEP RETIREMENT CALENDAR",
         "accent": GREEN, "badge": "O.M. 29.09.2025",
         "q": "What does the September 2025 calendar of DoPPW say, step by step?",
-        "q_say": "Sir, what does the September two thousand twenty-five calendar from the pension department say, step by step?",
+        "q_say": "Sir, pension department ka September two thousand twenty-five calendar step by step kya kehta hai?",
         "boxes": [
             ("THE ORDER ITSELF",
              "O.M. No. 4/35/2024-P&PW(D)/10377 dated 29.09.2025: Comprehensive Guidelines for timely retirement dues and PPOs.",
@@ -784,7 +781,7 @@ SCENES = [
              "Savdhan rahein, yeh trap hai. Rule sixty-three ka apna legal clock hai. Calendar ek working timetable hai, har stage ke liye ek date ke saath, designed taaki legal clock miss na ho. Unhein ek mat maanein. Aur yaad rakhein, chaalis panch din receipt of papers se shuru hote hain, lekin superannuation cases mein clock retirement date se count kiya jaata hai."),
         ],
         "hook": "REMEMBER: 12, 8, 6, 4, 2 months before retirement, then the PPO travels PAO, CPAO, bank!",
-        "hook_say": "Remember: twelve, eight, six, four and two months before retirement, and then the PPO travels from the pay office to the CPAO to the bank.",
+        "hook_say": "Yaad rakhein: retirement se pehle baarah, aath, chhe, chaar aur do mahine, aur phir PPO pay office se CPAO aur bank tak jaata hai.",
         "covers": ["OM-SEP2025-ID", "OM-SEP2025-STAGE3-7", "OM-SEP2025-STAGE8-12", "OM-SEP2025-TRAP", "OM-SEP2025-STAGE1-2", "OM-SEP2025-STAGE10"],
     },
     {
@@ -793,7 +790,7 @@ SCENES = [
         "title": "VIGILANCE CLEARANCE, PENSION MITRAS, THE HLOC AND NODAL OFFICERS",
         "accent": PINK, "badge": "O.M. 29.09.2025",
         "q": "Can pension be held back waiting for vigilance clearance, and who monitors the process?",
-        "q_say": "Sir, can pension be held back while waiting for vigilance clearance, and who monitors the whole process?",
+        "q_say": "Sir, vigilance clearance ka intezaar karte waqt pension rok sakte hain kya, aur poore process par nazar kaun rakhta hai?",
         "boxes": [
             ("VIGILANCE CLEARANCE",
              "Issue VC 3 months before retirement; valid 3 months. Pension must NOT be held back waiting for it.",
@@ -817,7 +814,7 @@ SCENES = [
              "Memorandum Bhavishya ke figures quote karta hai: ninnave Ministries, ek hazar chhattis offices, nau hazar panchees tees drawing officers aur do lakh treyanve hazar che sau chawallis PPOs issued. Wo us date par true the aur badhte rahenge. Do aur lines, ki PPO mein e-PPO shamil hai aur manual processing Rule fifty-three follow karta hai, confirm nahi kiye gaye."),
         ],
         "hook": "REMEMBER: VC 3 months before, valid 3 months, and NEVER hold the pension for VC!",
-        "hook_say": "Remember: vigilance clearance is issued three months before, is valid three months, and pension is never held back waiting for it.",
+        "hook_say": "Yaad rakhein: vigilance clearance teen mahine pehle issue hota hai, teen mahine valid rehta hai, aur iske intezaar mein pension kabhi nahi roki jaati.",
         "covers": ["OM-SEP2025-VC", "OM-SEP2025-MITRA", "OM-SEP2025-HLOC", "OM-SEP2025-NODAL", "OM-SEP2025-BHAV-STATS", "OM-SEP2025-EPPO", "OM-SEP2025-MANUAL"],
     },
     {
@@ -826,7 +823,7 @@ SCENES = [
         "title": "RULE 64 — WHO PROCESSES THE CASE OF A SERVANT ON DEPUTATION",
         "accent": SKY, "badge": "RULE 64",
         "q": "If the retiring servant is on deputation, which office prepares the pension case?",
-        "q_say": "Sir, if the retiring servant is on deputation, which office prepares the pension case?",
+        "q_say": "Sir, agar retire hone wala servant deputation par hai, toh pension case kaun sa office tayyar karta hai?",
         "boxes": [
             ("CENTRAL DEPUTATION • 64(1)",
              "On deputation to another CENTRAL department and retires there? The BORROWING department's HoO does the work.",
@@ -850,7 +847,7 @@ SCENES = [
              "Ek real example. Charu ko kisi doosri Central ministry par deputation par bheja gaya hai aur wahan se retire hoti hai, toh woh ministry uska case prepare karti hai. Dev ek State Government par deputation par hai, toh usne jis cadre authority ko bheja tha wo uska case prepare karegi. Trap dono directions ko mix karna hai."),
         ],
         "hook": "REMEMBER: Central deputation = borrowing side; State or foreign = lending side!",
-        "hook_say": "Remember: for Central deputation the borrowing side works the case; for State or foreign deputation the lending side does.",
+        "hook_say": "Yaad rakhein: Central deputation ke liye borrowing side case karti hai; State ya foreign deputation ke liye lending side karti hai.",
         "covers": ["R64(1)", "R64(2)", "R64-WHO-NOT-WHAT", "R64-R78-MIRROR", "QA-R64"],
     },
     {
@@ -859,7 +856,7 @@ SCENES = [
         "title": "RULE 65(1)-(4) — WHEN INTEREST IS PAYABLE AND WHO SANCTIONS IT",
         "accent": RED, "badge": "RULE 65(1)-(4)",
         "q": "If the pension or gratuity is paid late, when does the retiree get interest, and who approves it?",
-        "q_say": "Sir, if the pension or gratuity is paid late, when does the retiree get interest, and who approves it?",
+        "q_say": "Sir, agar pension ya gratuity late pay ho, toh retiree ko interest kab milta hai, aur ise kaun approve karta hai?",
         "boxes": [
             ("WHEN INTEREST IS DUE • 65(1)",
              "Provisional or final pension, family pension or gratuity not sanctioned, or paid late, for ADMINISTRATIVE reasons: interest at the GPF rate.",
@@ -888,7 +885,7 @@ SCENES = [
              "Chain yaad rakhne ke liye: trigger missing ya late sanction hai; test administrative lapse hai, claimant ki galti nahi; rate General Provident Fund rate hai; authority Secretary ya Joint Secretary se neeche nahi wala officer hai; aur payment do mahine ke andar hai. Source guide ne isse Rule fifty-one ke under missing-person gratuity se link bhi kiya; woh link yahan dobara check nahi kiya gaya."),
         ],
         "hook": "REMEMBER: administrative delay = interest at GPF rate; Secretary or JS sanctions; pay in 2 months!",
-        "hook_say": "Remember: an administrative delay earns interest at the provident fund rate; the Secretary or a Joint Secretary sanctions it; and it is paid in two months.",
+        "hook_say": "Yaad rakhein: administrative delay par provident fund rate se interest milta hai; Secretary ya Joint Secretary ise sanction karte hain; aur ye do mahine mein pay hota hai.",
         "covers": ["R65(1)", "R65(1)-PROV", "R65(2)", "R65(3)", "R65(4)", "TL-INTEREST-PAY-2M", "QA-R66-WAIVER", "R65-LINK-R51"],
     },
     {
@@ -897,7 +894,7 @@ SCENES = [
         "title": "RULE 65(5) AND THE WORKED EXAMPLE — INTEREST STARTS AFTER THREE MONTHS",
         "accent": ORANGE, "badge": "RULE 65(5)",
         "q": "From which day is interest counted, what is the rate now, and how do we compute it?",
-        "q_say": "Sir, from which day is interest counted, what is the rate now, and how do we compute it?",
+        "q_say": "Sir, interest kis din se count hota hai, abhi rate kya hai, aur hum ise kaise calculate karte hain?",
         "boxes": [
             ("START DATES • RULE 65(5)",
              "Interest starts the day after THREE months from retirement (or the other triggering date).",
@@ -926,7 +923,7 @@ SCENES = [
              "Ek office memorandum twenty-fifth October two thousand twenty-four ka Ministries ko kehta hai ki sab retirement benefits early release karein, extraordinary pension ke saath. Iska kehta hai ki delay se Rule sixty-five ke under interest lagta hai. Iska koi Bhavishya ya koi timeline ka zikr nahi hai."),
         ],
         "hook": "REMEMBER: interest starts after 3 months; GPF rate (7.1% now, check quarterly); corrected example Rs 53,250!",
-        "hook_say": "Remember: interest starts after three months, at the provident fund rate, which is seven point one percent now but changes quarterly. The corrected example gives fifty-three thousand two hundred fifty rupees.",
+        "hook_say": "Yaad rakhein: interest teen mahine ke baad se start hota hai, provident fund rate par, jo abhi saat point ek percent hai lekin har quarter badalta hai. Corrected example mein ye figure fifty-three thousand two hundred fifty rupees deta hai.",
         "covers": ["R65(5)", "R65-RATE-GPF", "R65-EX18-ARITHMETIC", "R65-EX18-START", "OM-25.10.2024", "QA-R65"],
     },
     {
@@ -935,7 +932,7 @@ SCENES = [
         "title": "RULE 66 — REVISION OF PENSION, CLERICAL ERRORS, WAIVER AND REFUND",
         "accent": GREEN, "badge": "RULE 66",
         "q": "Can a pension be changed after it is authorised, and what if too much was paid?",
-        "q_say": "Sir, can a pension be changed after it is authorised, and what happens if too much was paid?",
+        "q_say": "Sir, pension authorise hone ke baad badal sakti hai kya, aur agar zyada pay ho gaya toh kya hota hai?",
         "boxes": [
             ("GENERAL REVISION • 66(1)",
              "Pension and family pension can be revised by general order. The REVISED figure becomes the basic pension.",
@@ -964,7 +961,7 @@ SCENES = [
              "Dono office memoranda, dated eighteenth October two thousand twenty-four aur thirtieth October two thousand twenty-five, Revision of pension after authorisation ke title ke under wahi chain restate karte hain. Ye koi nayi rule add nahi karte. Source guide kehta hai ki doosra banks aur pension disbursing authorities ko bhi gaya tha; humne sirf dekha ki Ministries ko notice lena tha."),
         ],
         "hook": "REMEMBER: revised pension = new basic; only clerical errors; after 2 years need DoPPW; refund in 2 months!",
-        "hook_say": "Remember: a revised pension becomes the new basic pension; only clerical errors can be corrected against the pensioner; after two years the pension department must agree; and a refund is due within two months of the notice.",
+        "hook_say": "Yaad rakhein: revised pension naya basic pension ban jaata hai; pensioner ke against sirf clerical errors theek ho sakte hain; do saal ke baad pension department ki sahmati chahiye; aur notice ke do mahine ke andar refund dena hota hai.",
         "covers": ["R66(1)", "R66(2)", "R66(3)", "R66(4)", "R66(5)", "R66(6)", "TL-REFUND-2M", "OM-18.10.2024", "OM-30.10.2025-R66", "OM-30.10.2025-PDA-BANKS"],
     },
     {
@@ -973,7 +970,7 @@ SCENES = [
         "title": "RULE 67 — WHICH GOVERNMENT DUES ARE RECOVERED FROM THE GRATUITY",
         "accent": BLUE, "badge": "RULE 67",
         "q": "What are Government dues, who works them out, and from what are they recovered?",
-        "q_say": "Sir, what are Government dues, who works them out, and from what are they recovered?",
+        "q_say": "Sir, Government dues kya hain, inhe kaun calculate karta hai, aur inhe kis cheez se recover kiya jaata hai?",
         "boxes": [
             ("THE RULE • RULE 67(1)-(3)",
              "The HoO ascertains and assesses dues for every retirement. Dues left on the retirement date are taken from the gratuity.",
@@ -997,7 +994,7 @@ SCENES = [
              "Ek real example. Bilal ki house building advance ki balance chaalis hazar rupees hai aur licence fee arrears athraah hazar. Ye aathavan hazar rupees hai, jo uski retirement gratuity se liya jaata hai. Trap: Rule sixty-seven batata hai ki due mein kya count hota hai, jabki Rule sixty-eight housing dues ki procedure deta hai."),
         ],
         "hook": "REMEMBER: HoO assesses dues; (a) housing dues, (b) everything else; recovered from the gratuity!",
-        "hook_say": "Remember: the Head of Office assesses the dues; clause a is housing dues and clause b is everything else; and they are recovered from the gratuity.",
+        "hook_say": "Yaad rakhein: Head of Office dues assess karta hai; clause a housing dues hai aur clause b baaki sab; aur ye gratuity se recover hote hain.",
         "covers": ["R67(1)", "R67(2)", "R67(3)", "R67-EXPL-A", "R67-EXPL-A-DAMAGES-GROUNDS", "R67-EXPL-B"],
     },
     {
@@ -1006,7 +1003,7 @@ SCENES = [
         "title": "RULE 68(1)-(5) — THE DIRECTORATE OF ESTATES' CLOCK AND HOW THE FEE IS RECOVERED",
         "accent": ORANGE, "badge": "RULE 68(1)-(5)",
         "q": "How does the Directorate of Estates report the licence fee, and how is it recovered?",
-        "q_say": "Sir, how does the Directorate of Estates report the licence fee, and how is it recovered from the retiring servant?",
+        "q_say": "Sir, Directorate of Estates licence fee kaise report karta hai, aur retiring servant se ye kaise recover hoti hai?",
         "boxes": [
             ("THE DoE'S CLOCK • 68(1)(a)-(b)",
              "At retirement age: DoE replies in 2 months, fee up to 8 months before retirement. Other cases: 1 month, fee up to retirement.",
@@ -1035,7 +1032,7 @@ SCENES = [
              "Ek real example. Asha retire hoti hai thirty-first December two thousand twenty-seven ko. Directorate intimation ke do mahine ke andar tees April tak ki fee report karti hai. Uska Head of Office May se December tak ki fee uske pay se, mahine-war, recover karta hai. Agar Directorate silent rehti hai, toh report ki gaye period ke liye koi fee due nahi hai presume kiya jaata hai."),
         ],
         "hook": "REMEMBER: DoE replies in 2 months (1 month for others); silence = no fee; last 8 months from pay!",
-        "hook_say": "Remember: the Directorate replies in two months, or one month in other cases; silence means no fee is due; and the last eight months are recovered from pay.",
+        "hook_say": "Yaad rakhein: Directorate do mahine mein reply karta hai, baaki cases mein ek mahine mein; silence ka matlab hai koi fee due nahi; aur aakhri aath mahine ki fee pay se recover hoti hai.",
         "covers": ["R68(1)(a)", "R68(1)(b)", "R68(1)(c)", "R68(2)", "R68(3)", "R68(4)", "R68(5)", "R68-QA-SILENCE", "TL-DOE-2M-1M", "LIMIT-GRATUITY-WITHHELD-10PCT"],
     },
     {
@@ -1044,7 +1041,7 @@ SCENES = [
         "title": "RULE 68(6)-(8) — RELEASING THE WITHHELD GRATUITY AND THE LAST RESORT",
         "accent": GREEN, "badge": "RULE 68(6)-(8)",
         "q": "When is the withheld gratuity released, and what if dues remain even after that?",
-        "q_say": "Sir, when is the withheld gratuity released, and what happens if dues still remain after the gratuity is adjusted?",
+        "q_say": "Sir, rok ki gayi gratuity kab release hoti hai, aur agar gratuity adjust hone ke baad bhi dues baaki hon toh kya hota hai?",
         "boxes": [
             ("WHO RECOVERS • 68(6)",
              "DoE recovers the fee and damages, not the HoO. Withheld gratuity is released at once on the NDC, issued after ACTUAL vacation.",
@@ -1068,7 +1065,7 @@ SCENES = [
              "Sub-rule eight ke maamle mein savdhan rahein. Agar dues ab bhi baaki rahein, toh Directorate recovery ka order de sakti hai dearness relief se, jo pension ka cost-of-living addition hai, pensioner ki consent ke bina. Jab tak full amount recover nahi ho jaata, koi dearness relief pay nahi ki jaati. Explanation add karta hai ki licence fee mein accommodation ki damage ya loss ke charges shamil hain."),
         ],
         "hook": "REMEMBER: NDC only after ACTUAL vacation, in 14 days; DoE late = GPF interest; last resort = DR recovery!",
-        "hook_say": "Remember: the certificate comes only after actual vacation, within fourteen days; if the Directorate is late the retiree gets interest; and the last resort is recovery from dearness relief.",
+        "hook_say": "Yaad rakhein: certificate sirf actual vacation ke baad milta hai, chaudah din ke andar; agar Directorate late ho toh retiree ko interest milta hai; aur aakhri upaay hai dearness relief se recovery.",
         "covers": ["R68(6)", "R68(7)(a)", "R68(7)(b)(c)", "R68(8)", "TL-NDC-14D"],
     },
     {
@@ -1077,7 +1074,7 @@ SCENES = [
         "title": "RULE 69 — STARTING ONE YEAR BEFORE AND FINISHING EIGHT MONTHS BEFORE",
         "accent": SKY, "badge": "RULE 69",
         "q": "When must the other Government dues, apart from housing, be assessed?",
-        "q_say": "Sir, when must the other Government dues, apart from housing, be assessed?",
+        "q_say": "Sir, housing ke alawa doosre Government dues kab assess hone chahiye?",
         "boxes": [
             ("WHEN TO START • 69(1)",
              "At retirement age: start 1 year before, or at LPR, whichever is EARLIER. Others: at retirement or when the HoO learns of it.",
@@ -1101,7 +1098,7 @@ SCENES = [
              "Ek real example. Charu retire hoti hai thirty-first December two thousand twenty-seven ko. Uska Head of Office uske baaki dues ka assess karna shuru karta hai thirty-first December two thousand twenty-six ko aur use tees April two thousand twenty-seven tak khatam karna hoga. Trap ye hai Rule sixty-nine ko Rule sixty-eight se mix karna, jo housing dues cover karta hai."),
         ],
         "hook": "REMEMBER: dues assessment starts 1 year before (earlier of LPR) and ends 8 months before!",
-        "hook_say": "Remember: the assessment of other dues starts one year before, or at leave if earlier, and ends eight months before retirement.",
+        "hook_say": "Yaad rakhein: doosre dues ka assessment ek saal pehle shuru hota hai, ya leave par, jo pehle ho; aur retirement se aath mahine pehle khatam hota hai.",
         "covers": ["R69(1)", "R69(2)", "R69(3)", "TL-DUES-ASSESS"],
     },
     {
@@ -1110,7 +1107,7 @@ SCENES = [
         "title": "RULE 70 — THE RETIREMENT NOTIFICATION, AND WHAT IF NONE IS ISSUED",
         "accent": PINK, "badge": "RULE 70",
         "q": "Must the retirement date be notified, and what if no notification is issued?",
-        "q_say": "Sir, must the retirement date be notified, and what happens if no notification is issued?",
+        "q_say": "Sir, kya retirement date notify karni zaroori hai, aur agar notification issue na ho toh kya hota hai?",
         "boxes": [
             ("THE NOTIFICATION • 70(1)",
              "Gazetted: Gazette notification. Non-gazetted: office order. It states the date, within one week, copy to the AO.",
@@ -1134,7 +1131,7 @@ SCENES = [
              "Source guide Rule seventy ko declaratory kehte hain, constitutive nahi. Plain words mein, notification retirement ko record karta hai; ise create nahi karta. Ye ek teaching label hai, rule wording nahi. Example ke liye, agar Bilal retirement age poora karta hai aur koi order issue nahi hota, toh use abhi bhi us par reach karne par retired mana jaata hai."),
         ],
         "hook": "REMEMBER: notify the date (Gazette or office order); no extension order = deemed retired on reaching the age!",
-        "hook_say": "Remember: the retirement date is notified in the Gazette or by office order, and without an extension order the servant is deemed retired on reaching the age.",
+        "hook_say": "Yaad rakhein: retirement date Gazette mein ya office order se notify hoti hai; aur extension order na ho toh servant umar par pahunchte hi retired maana jaata hai.",
         "covers": ["R70(1)", "R70(1)-PROV", "R70(2)", "R70-DECLARATORY", "TL-RULE70-WEEK"],
     },
     {
@@ -1143,7 +1140,7 @@ SCENES = [
         "title": "WHAT G.S.R. 410(E) CHANGED, THE NOMINATION O.M., AND WHAT IS STILL OPEN",
         "accent": YELLOW, "badge": "AMENDMENTS",
         "q": "Which amendments touch Rules 53 to 70, and what is still not confirmed?",
-        "q_say": "Sir, which amendments touch Rules fifty-three to seventy, and what is still not confirmed?",
+        "q_say": "Sir, kaun se amendments Rules fifty-three se seventy ko chute hain, aur abhi kya confirm nahi hai?",
         "boxes": [
             ("WHAT G.S.R. 410(E) TOUCHED",
              "Rules 53, 57, 58, 59, 60, 62(6)(a) and 63(4) now say Form 6-A or online mode. Rule 80(5) is for batch six.",
@@ -1167,7 +1164,7 @@ SCENES = [
              "Source guide ki do cheezein confirm nahi ho payin. Ek hai corrigendum dated twenty-fifth July two thousand twenty-four, 2024 amendment ke liye. Doosra hai ek memorandum dated twenty-third October two thousand twenty-four Bhavishya par. Jo document humne us naam ke paas dala, wo actually November two thousand sixteen ka memorandum tha. Dono ko pointer maanein, authority nahi."),
         ],
         "hook": "REMEMBER: only G.S.R. 410(E) touches Chapter X; the corrigendum and the 23.10.2024 O.M. are unconfirmed!",
-        "hook_say": "Remember: only the 2024 amendment touches Chapter ten, and the corrigendum and the twenty-third October two thousand twenty-four memorandum are not confirmed.",
+        "hook_say": "Yaad rakhein: sirf 2024 amendment is chapter ko chhoota hai; aur corrigendum tatha twenty-third October two thousand twenty-four ka memorandum confirm nahi hue hain.",
         "covers": ["R2024-R57", "R2024-R58", "R2024-R59", "R2024-R60", "R2024-R62", "R2024-R63", "R2024-R80-5", "GSR-868E-770E-340E-CURRENCY", "NEWER-NONE-CH10", "OM-11.09.2024-NOMINATION", "FORM-A-RULE84", "CORRIGENDUM-25.07.2024", "OM-23.10.2024"],
     },
     {
@@ -1176,7 +1173,7 @@ SCENES = [
         "title": "THE COUNTDOWN — EVERY DEADLINE OF RULES 53 TO 70 IN ONE PLACE",
         "accent": SKY, "badge": "TIMELINE",
         "q": "Can we see all the deadlines of Chapter X in one countdown?",
-        "q_say": "Sir, can we see all the deadlines of Chapter ten in one countdown?",
+        "q_say": "Sir, kya hum Chapter ten ki saari deadlines ek countdown mein dekh sakte hain?",
         "flow": "countdown",
         "boxes": [
             ("1 YEAR BEFORE",
@@ -1201,7 +1198,7 @@ SCENES = [
              "Do mahine pehle: PPO, ya baaki cases mein papers receipt se chaalis panch din. Retirement ke aas paas aur baad mein: provisional sanction das din ya ek mahine mein, provisional pension zyada se zyada chaah mahino ke liye, certificate chaoods din mein, interest do mahine ke andar, refund do mahine ke andar, aur notification ek hafte ke andar."),
         ],
         "hook": "REMEMBER: 12, 8, 6, 4, 2 months — the five numbers of Chapter X!",
-        "hook_say": "Remember the five numbers of Chapter ten: twelve, eight, six, four and two months before retirement.",
+        "hook_say": "Yaad rakhein Chapter ten ke paanch numbers: baarah, aath, chhe, chaar aur do mahine retirement se pehle.",
         "covers": ["TL-FIVE-NUMBERS", "TL-DOE-ONEYEAR", "TL-SVC-VERIF-8M", "TL-CERT-8M", "TL-6A-SUPER", "TL-PARTI-FORM7", "TL-CASE-AO", "TL-PPO-SUPER-2M", "TL-PPO-OTHER-45D", "TL-EMOL-24M"],
     },
     {
@@ -1210,7 +1207,7 @@ SCENES = [
         "title": "RECAP — KEY NUMBERS, TOP TRAPS AND WHAT COMES NEXT",
         "accent": GREEN, "badge": "RECAP • RULES 53-70",
         "q": "Can you recap Chapter X in a few lines, with the traps and the currency note?",
-        "q_say": "Sir, can you recap Chapter ten in a few lines, with the traps and the currency note?",
+        "q_say": "Sir, kya aap Chapter ten ko kuch lines mein recap kar sakte hain, traps aur currency note ke saath?",
         "boxes": [
             ("KEY NUMBERS",
              "1 year, 8, 6, 4, 2 months. PPO 45 days. Emoluments 24 months. Provisional: 100% pension, 10% gratuity held, 6 months.",
@@ -1234,7 +1231,7 @@ SCENES = [
              "Agla batch mein hum Chapter eleven ko move karte hain, death in service, Rules seventy-one se seventy-eight, aur phir Rules seventy-nine se eighty-seven. Tab tak, do teen numbers yaad rakhein: baarah, ath, chaah, chaar aur do."),
         ],
         "hook": "REMEMBER: 12, 8, 6, 4, 2 months; silence helps; check the latest O.M. for dynamic figures!",
-        "hook_say": "Remember: twelve, eight, six, four and two months; silence helps the servant; and always check the latest memorandum for figures that change.",
+        "hook_say": "Yaad rakhein: baarah, aath, chhe, chaar aur do mahine; silence servant ki madad karta hai; aur jo figures badalte hain unke liye hamesha latest memorandum check karein.",
         "covers": ["TL-FIVE-NUMBERS", "GSR-868E-770E-340E-CURRENCY", "NEWER-NONE-CH10"],
     },
     {
@@ -1243,10 +1240,8 @@ SCENES = [
         "title": "AUDIT VERDICT: EVERY RULE, CLAUSE AND PROVISO IS ON A CARD",
         "accent": YELLOW, "badge": "AUDIT • 53-70",
         "q": "Did the compiler cover every rule, sub-rule, clause, proviso and exception from Rule 53 to Rule 70?",
-        "q_say": "Sir, did the compiler cover every rule, sub-rule, clause, proviso and exception from Rule fifty-three to Rule seventy?",
-        "intro": ("Before we close batch five, here is the senior audit. I went through Rules fifty-three to seventy of the "
-                  "Central Civil Services (Pension) Rules, 2021, clause by clause, and checked each one against the cards above. "
-                  "Here is what the audit found."),
+        "q_say": "Sir, kya compiler ne Rule fifty-three se Rule seventy tak har rule, sub-rule, clause, proviso aur exception cover kiya hai?",
+        "intro": "Batch paanch band karne se pehle, ye senior audit hai. Maine Central Civil Services (Pension) Rules, 2021 ke Rules fifty-three se seventy tak, clause by clause padha, aur har ek ko upar wale cards se check kiya. Ye raha audit ka result.",
         "boxes": [
             ("COVERAGE • RULES 53-70",
              "Every rule, sub-rule, clause, proviso and exception from Rule 53 to Rule 70 is on a card — none skipped.",
@@ -1270,7 +1265,7 @@ SCENES = [
              "Content non-obscure hai. Poore samay ye plain city English hai. Screen par short text, full wording spoken, aur har acronym pehle waqt mein spell kiya gaya hai."),
         ],
         "hook": "REMEMBER: audit says complete coverage of Rules 53-70; only a few wordings are flagged for Gazette cross-check!",
-        "hook_say": "Remember: the audit finds complete coverage from Rule fifty-three to Rule seventy; only a few wordings need a Gazette cross-check.",
+        "hook_say": "Yaad rakhein: audit Rule fifty-three se Rule seventy tak poori coverage confirm karta hai; sirf kuch wordings ko Gazette se cross-check ki zaroorat hai.",
         "covers": ["AUDIT-COVERAGE-COMPLETE", "AUDIT-FLAGS", "AUDIT-TIMELINE", "AUDIT-PLAIN-ENGLISH"],
     },
 ]
