@@ -407,7 +407,7 @@ def build_scene_video(idx, scene, n_stages, stage_pngs, dur):
     run([FFMPEG, "-y", "-f", "concat", "-safe", "0", "-i", str(lst),
          "-i", str(scene_clip(idx)),
          "-vf", f"fps={FPS},format=yuv420p", "-c:v", "libx264", "-preset", "veryfast",
-         "-tune", "stillimage", "-crf", "30",
+         "-tune", "stillimage", "-crf", "24",
          "-c:a", "aac", "-b:a", "96k", "-ar", "48000", "-ac", "2",
          "-t", f"{dur:.3f}", "-movflags", "+faststart", str(out)])
     return out
