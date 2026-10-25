@@ -1082,6 +1082,117 @@ SCENES += [
    "narr": "Clause 19, adopted, step aur ward bachche. Legally adopted bachcha biological bachche ke barabar hai, adoption complete hone ke baad. Step-child case-specific hai. Informal ward ko generally cover nahi kiya jata, jab tak koi rule ya court order na ho. Ward par assume mat kijiye.",
    "spk": "teacher"},
 ]
+SCENES += [
+  {"chapter": "Income-Tax Mix-Up", "tag": "CLAUSE 17 · TWO DIFFERENT THINGS",
+   "title": "Two different things called CEA: the DoPT reimbursement and the income-tax exemption",
+   "cards": [
+     {"kind": "table", "color": "cyan", "title": "Side by side (income-tax column from the guide)",
+      "headers": ["Feature", "DoPT CEA (this video)", "Income-tax CEA exemption"],
+      "widths": [0.24, 0.38, 0.38],
+      "rows": [
+        ["Governing law", "DoPT O.M.s on service rules", "Income-tax Act 1961, section 10(14), with Rule 2BB"],
+        ["Who administers", "Employee's own department or DDO", "Payroll and TDS computation by the employer"],
+        ["Nature", "Reimbursement paid to the employee", "Exemption on an allowance component, if the salary is structured that way"],
+        ["Amount", "Rs 2,812.50 per month, fixed", "Amounts in guide only (NOT VERIFIED)"]]}],
+   "narr": "Ab Clause 17, sabse common confusion. Do alag cheezein hain jinhe CEA kehte hain. Ek DoPT ka reimbursement scheme, jo is video ka subject hai. Doosra Income Tax Act ka chhota exemption, section 10(14) aur Rule 2BB ke under. Dono ke amount, authority aur rules alag hain.",
+   "spk": "teacher"},
+  {"chapter": "Income-Tax Mix-Up", "tag": "NOT VERIFIED · TAX AMOUNTS",
+   "title": "Income-tax figures from the guide: flagged, not to be quoted",
+   "cards": [
+     {"kind": "stat", "color": "orange", "head": "Rs 100 per child per month", "sub": "Guide says max two children; NOT VERIFIED"},
+     {"kind": "stat", "color": "orange", "head": "Rs 300 per child per month", "sub": "Hostel component per guide; NOT VERIFIED"},
+     {"kind": "stat", "color": "purple", "head": "Section 10(14) with Rule 2BB", "sub": "Cited by the guide; rule text not checked"},
+     {"kind": "callout", "color": "yellow", "text": "Do not quote these tax amounts from this video. Check the Income-tax Rules text and your payroll before use."}],
+   "narr": "Income tax wale amounts guide me Rs 100 aur Rs 300 per child per month bataye gaye hain, max do bachche. Ye figures abhi verify nahi hue, isliye inhe quote na karein. Income tax rules ka original text dekhna zaroori hai. Video me sirf ye flag hai, kyunki confusion bahut common hai.",
+   "spk": "teacher"},
+  {"chapter": "Income-Tax Mix-Up", "tag": "STUDENT QUESTION",
+   "title": "Student question: a payslip shows a separate CEA line. Is it the DoPT CEA?",
+   "cards": [
+     {"kind": "row", "color": "sky", "label": "Student asks", "text": "My payslip shows a separate CEA component. Is that the same as the DoPT CEA?"},
+     {"kind": "row", "color": "green", "label": "Short answer", "text": "Not necessarily. A tax-exemption component and the DoPT reimbursement are different. Check with your payroll section (guide view)."}],
+   "narr": "Sir, mere payslip me CEA ka alag component dikhta hai. Kya wahi DoPT wala CEA hai?",
+   "spk": "student"},
+  {"chapter": "Recovery and Force Circulars", "tag": "CLAUSE 20 · RECOVERY",
+   "title": "Wrongly drawn CEA: recovery follows the general overpayment rules",
+   "cards": [
+     {"kind": "row", "color": "red", "label": "Treatment", "text": "Excess CEA is treated as a standard overpayment and recovered from pay under the general recovery-of-overpayment principles (guide)."},
+     {"kind": "row", "color": "orange", "label": "Limitation", "text": "The guide says there is no CEA-specific limitation exception. NOT VERIFIED; check the pay rules text."}],
+   "narr": "Galat CEA draw ho gaya to kya hota hai. Guide ke hisaab se ye standard overpayment hai, aur pay rules ke general recovery principle se pay se vasool hota hai. CEA ke liye koi alag limitation exception nahi bataya gaya. Ye point NOT VERIFIED hai, isliye pay rules text dekhein.",
+   "spk": "teacher"},
+  {"chapter": "Recovery and Force Circulars", "tag": "CAPF AND DEFENCE",
+   "title": "CAPF and Defence personnel: parallel circulars, checked alongside this guide",
+   "cards": [
+     {"kind": "table", "color": "purple", "title": "Governing instrument by category",
+      "headers": ["Category", "Governing instrument", "Status"],
+      "widths": [0.34, 0.40, 0.26],
+      "rows": [
+        ["Central Armed Police Forces (MHA)", "Parallel circular that mirrors the DoPT scheme", "NOT VERIFIED"],
+        ["Defence forces and civilians (MoD)", "Parallel circular that mirrors the DoPT scheme", "NOT VERIFIED"],
+        ["Other Central Government employees", "DoPT O.M.s in this video", "VERIFIED (applicability)"]]},
+     {"kind": "callout", "color": "yellow", "text": "Check the force-specific circular alongside this guide, not instead of it."}],
+   "narr": "CAPF aur Defence forces ke employees par aam taur par parallel circulars lagte hain, jo DoPT scheme ko mirror karte hain. Ye seedhe DoPT O.M. se bound nahi hote. Guide ka ye claim NOT VERIFIED hai. Dono ko saath me check karein, ek ki jagah nahi.",
+   "spk": "teacher"},
+  {"chapter": "Myth-Busters", "tag": "MYTHS 1 TO 3 OF 12",
+   "title": "Myth-busters, part 1: fee receipts, the two-child cap, and failed classes",
+   "cards": [
+     {"kind": "table", "color": "red", "title": "Myth versus reality",
+      "headers": ["Myth", "Reality", "Status"],
+      "widths": [0.30, 0.46, 0.24],
+      "rows": [
+        ["CEA needs fee receipts", "No. CEA is flat; a self-attested report card or fee receipt suffices. Hostel Subsidy needs an actual bill from 30.06.2026.", "VERIFIED (flat rate)"],
+        ["Only two children ever, no exceptions", "Wrong. Twins or multiple birth at the second delivery, and children from a failed sterilisation, are exceptions.", "VERIFIED (2018 O.M. text)"],
+        ["If the child fails a class, CEA stops", "No, per guide Clause 10.", "NOT VERIFIED in full O.M."]]}],
+   "narr": "Myth-busters, part ek. Pehla myth: CEA ke liye fee receipt chahiye. Nahi, CEA flat hai, self-attested report card kaafi hai. Doosra: sirf do bachche, koi exception nahi. Galat hai, twins aur failed sterilisation me exception hai. Teesra: class fail ho to CEA band. Guide ke hisaab se ye bhi galat hai, lekin full O.M. se confirm karein.",
+   "spk": "teacher"},
+  {"chapter": "Myth-Busters", "tag": "MYTHS 4 TO 6 OF 12",
+   "title": "Myth-busters, part 2: concurrency, State deputationists, and Central deputationists",
+   "cards": [
+     {"kind": "table", "color": "red", "title": "Myth versus reality",
+      "headers": ["Myth", "Reality", "Status"],
+      "widths": [0.30, 0.46, 0.24],
+      "rows": [
+        ["CEA and Hostel Subsidy can never be claimed together", "Guide says they can be claimed concurrently for the same child.", "NOT VERIFIED"],
+        ["State employees on deputation to the Centre need special permission", "No. They are automatically covered by Central CEA rules.", "VERIFIED (State to Centre)"],
+        ["Central employees on deputation anywhere keep CEA", "Only if the deputation or foreign-service order expressly provides for it.", "Clause 2 wording (NOT VERIFIED)"]]}],
+   "narr": "Myth-busters, part do. Chauthha: CEA aur Hostel Subsidy kabhi saath nahi milte. Guide ke hisaab se saath milte hain, lekin ye NOT VERIFIED hai. Paanchva: State ke deputation officer ko permission chahiye. Nahi, automatic coverage hai. Chhathha: Central employee deputation par kahin bhi ho, CEA rahega. Nahi, sirf order me likha ho to.",
+   "spk": "teacher"},
+  {"chapter": "Myth-Busters", "tag": "MYTHS 7 TO 9 OF 12",
+   "title": "Myth-busters, part 3: splitting, death, and resignation",
+   "cards": [
+     {"kind": "table", "color": "red", "title": "Myth versus reality",
+      "headers": ["Myth", "Reality", "Status"],
+      "widths": [0.30, 0.46, 0.24],
+      "rows": [
+        ["Both spouses can split CEA, one child each", "No. One spouse claims for all children together.", "VERIFIED (single-claim rule)"],
+        ["Death of the employee always stops CEA for the children", "No. It continues unless the surviving spouse is employed in a Government-linked body.", "VERIFIED (2018 death clause)"],
+        ["Resignation forfeits CEA immediately", "No. It continues to the end of that academic year.", "Per guide Clause 11"]]}],
+   "narr": "Myth-busters, part teen. Saatvan: dono spouse CEA split kar sakte hain, ek bachcha ek ka, doosra doosre ka. Nahi, ek hi spouse sabke liye claim karega. Aathvan: employee ki death par CEA hamesha band. Nahi, spouse ki employment dekhi jaati hai. Nauvan: resignation par CEA turant khatam. Nahi, academic year ke end tak chalta hai.",
+   "spk": "teacher"},
+  {"chapter": "Myth-Busters", "tag": "MYTHS 10 TO 12 OF 12",
+   "title": "Myth-busters, part 4: flat hostel rate, Divyang age, and LTC",
+   "cards": [
+     {"kind": "table", "color": "red", "title": "Myth versus reality",
+      "headers": ["Myth", "Reality", "Status"],
+      "widths": [0.30, 0.46, 0.24],
+      "rows": [
+        ["Hostel Subsidy is still a flat amount like CEA", "No. Since 30.06.2026 it is the lower of actual cost or the ceiling.", "VERIFIED (corrigendum)"],
+        ["Divyang children have the same age limit as others", "Guide says Divyang limit is 22 with no minimum age.", "NOT VERIFIED"],
+        ["LTC needs the same two-eldest test as CEA", "No. Per guide, LTC uses its own dependency test.", "NOT VERIFIED"]]}],
+   "narr": "Myth-busters, part chaar. Dasvan: Hostel Subsidy bhi flat hai. Nahi, 30.06.2026 se asli kharcha ya ceiling, jo kam ho. Gyarahvan: Divyang bachchon ki age limit normal jaisi hai. Guide ke hisaab se nahi, 22 saal hai, lekin ye NOT VERIFIED hai. Barahvan: LTC me bhi two-eldest test hai. Guide ke hisaab se nahi, LTC ka apna dependency test hai.",
+   "spk": "teacher"},
+  {"chapter": "DoP FAQ O.M. 2026", "tag": "FAQ Q1 TO Q2 · ISSUER",
+   "title": "Consolidated FAQ O.M. dated 02.04.2026: the NEP-2020 questions",
+   "cards": [
+     {"kind": "table", "color": "sky", "title": "FAQ questions and answers",
+      "headers": ["FAQ", "Question", "Answer", "Status"],
+      "widths": [0.10, 0.36, 0.34, 0.20],
+      "rows": [
+        ["Q1", "Under NEP-2020, can a repeated pre-primary class, even before Class I, be claimed as an extra CEA class?", "Yes, as a one-time relaxation where the repeat is solely due to NEP-2020; available once per child", "VERIFIED (FAQ as summarised)"],
+        ["Q2", "Can Nursery (2022-23) be claimed with LKG and UKG when the O.M. applies from 2023-24?", "Yes, if the child studied all three pre-primary classes before Class I and other conditions are met", "VERIFIED (FAQ as summarised)"]]},
+     {"kind": "callout", "color": "yellow", "text": "ISSUER: Department of Posts, Ministry of Communications, O.M. PP-33/1/2022-PAP-DOP. Not DoPT."}],
+   "narr": "Consolidated FAQ O.M. dated 02.04.2026. Iska issuer Department of Posts hai, DoPT nahi. Q1 me NEP ki wajah se pre-primary class dobara padhne par ek baar relaxation milta hai. Q2 me Nursery 2022-23 ko LKG aur UKG ke saath claim kiya ja sakta hai, agar teeno pre-primary classes Class I se pehle padhi hon.",
+   "spk": "teacher"},
+]
 # @@CONTENT_END@@
 
 
