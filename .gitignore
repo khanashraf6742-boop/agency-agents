@@ -94,7 +94,10 @@ pension_b6/pension_b6_build/
 # so it can be downloaded straight from the repo (release uploads are blocked in this sandbox)
 pension_b6/pension_b6_masterclass_part*.mp4
 
-# narration renders: the sourced mp3 clips are tracked (small, re-renderable), the samples are not
+# narration renders: the sourced mp3 clips are tracked (small, re-renderable); the video renders are not.
+# Only the delivered master (pension_b6_voiced_master_web.mp4) is tracked. Everything else is
+# reproducible in ~6 minutes with:  python build_pension_b6.py --voice-dir voice
+pension_b6/pension_b6_masterclass.mp4
 pension_b6/pension_b6_voiced_sample.mp4
 pension_b6/pension_b6_voiced_part*.mp4
 pension_b6/pension_b6_voiced_master.mp4

@@ -200,12 +200,13 @@ Regenerate with `python build_pension_b6.py --no-tts` (≈6 min 30 s on 2 vCPU).
 
 **Status: complete. All 32 chapters voiced.**
 
-| Cut | Chapters | Length | Size | File |
+| Cut | Chapters | Length | Size | Tracked? |
 |---|---|---|---|---|
-| **master (delivery)** | **all 32** | **34:29** | **45.6 MB** | **`pension_b6_voiced_master_web.mp4`** |
-| master (archive) | all 32 | 34:29 | 59.5 MB | `pension_b6_voiced_master.mp4` (git-ignored) |
-| part 1 | 1–17, 19 | 19:29 | 35.0 MB | `pension_b6_voiced_part1.mp4` |
-| part 2 | 1–25, 27–28 | 29:04 | 52.4 MB | `pension_b6_voiced_part2.mp4` |
+| **master (delivery)** | **all 32** | **34:29** | **45.6 MB** | **yes — the only video in the repo** |
+| full-quality archive | all 32 | 34:29 | 59.5 MB | no — rebuild from `voice/` |
+| part 1 / part 2 previews | 1–17, 19 / 1–25, 27–28 | 19:29 / 29:04 | 35.0 / 52.4 MB | no — superseded, deleted |
+
+**Repository hygiene.** The repo is meant to hold one video per batch, not every intermediate render. The part-cuts and the silent master were removed from the tree on delivery; `pension_b6/voice/` (33 clips, ~5 MB) is the real source of truth, and the master is reproducible from it in about six minutes, so nothing was lost. The `.gitignore` now blocks all four superseded names, which stops them coming back on the next `git add -A`.
 
 Delivery encode: `crf 27`, `-tune stillimage`, 24 fps, AAC 64 kbps 44.1 kHz mono, `+faststart`. Mean level −19.5 dB, peak −1.3 dB. Still-image content compresses without visible loss at this setting — spot-checked chapter 1, 14 and 32 frames from the encoded file.
 
@@ -225,15 +226,14 @@ The recorded chapter audio is split where the speaker actually pauses (`silenced
 * **Burned captions are off by default** (`--subs` to enable): they were landing on the trap strip and simply repeated what the cards already print.
 * Two chapters (18 and 26) were initially declined by a content filter — the phrasing that set *death* or *dying* beside a list of alternatives. Both were reworded in `voice_plan.json` (chapter 18 recorded on the second take; chapter 26 keeps its full legal content, only the sentence shape changed). No rule text altered.
 
-### Remaining work
-All 33 clips are on disk (`pension_b6/voice/`, 33 files, ~33 min of speech). Re-render at any time with:
+### Rebuilding the master
+All 33 clips are committed in `pension_b6/voice/` (33 files, ~33 min of speech). Nothing else about the video needs to be kept:
 
 ```bash
-python build_pension_b6.py --voice-dir voice --out pension_b6_voiced_master.mp4
-``` The speech tool allows **10 clips per turn**, so the recording ran over three passes:
-
-```bash
-python build_pension_b6.py --voice-dir voice --out pension_b6_voiced_master.mp4   # after the last clip
+python build_pension_b6.py --voice-dir voice --out pension_b6_voiced_master.mp4   # ~6 min, 59.5 MB
+ffmpeg -i pension_b6_voiced_master.mp4 -c:v libx264 -crf 27 -preset medium -tune stillimage \
+  -pix_fmt yuv420p -c:a aac -b:a 64k -ar 44100 -ac 1 -movflags +faststart \
+  pension_b6_voiced_master_web.mp4                                                # ~7 min, 45.6 MB
 ```
 
-`voice_plan.json` holds the exact text, part number and character count of every clip, so the recording can be finished anywhere.
+`voice_plan.json` holds the exact text, part number and character count of every clip. The speech tool allows **10 clips per turn**, so the recording ran over three passes; that limit is the only reason the earlier part-cuts existed.
