@@ -752,6 +752,112 @@ SCENES += [
    "narr": "Sir, CEA ke liye fee receipt chahiye ya nahi? Aur Hostel Subsidy ke liye bhi wahi rule hai kya?",
    "spk": "student"},
 ]
+SCENES += [
+  {"chapter": "Service Status", "tag": "CLAUSE 10 · ADMISSIBILITY",
+   "title": "On duty, leave, and suspension keep CEA alive; dies non stops it",
+   "cards": [
+     {"kind": "table", "color": "green", "title": "Admissibility by service status",
+      "headers": ["Situation", "CEA and Hostel Subsidy", "Source status"],
+      "widths": [0.40, 0.30, 0.30],
+      "rows": [
+        ["On duty", "Admissible", "VERIFIED (2018 O.M.)"],
+        ["On leave, including extraordinary leave (EOL)", "Admissible", "VERIFIED (2018 O.M.)"],
+        ["Under suspension", "Admissible", "VERIFIED (2018 O.M.)"],
+        ["Dies non period", "NOT admissible", "VERIFIED (2018 O.M.)"],
+        ["Child fails a class", "Continues unaffected", "Per guide Clause 10"]]}],
+   "narr": "Clause 10 ka admissibility rule. CEA aur Hostel Subsidy milte hain jab employee on duty ho, suspension me ho, ya leave par ho, jisme extraordinary leave bhi shamil hai. Dies non period me ye nahi milta. Aur bachcha agar ek class me fail ho jaye, to bhi CEA nahi rukta. Ye table ka saar hai.",
+   "spk": "teacher"},
+  {"chapter": "Service Status", "tag": "DIES NON",
+   "title": "Dies non: the period that does not count for CEA",
+   "cards": [
+     {"kind": "row", "color": "red", "label": "What it is", "text": "A period treated as if the employee was not in service, usually imposed as a penalty for unauthorised absence (guide glossary)."},
+     {"kind": "row", "color": "orange", "label": "Effect on CEA", "text": "No CEA and no Hostel Subsidy for the dies non period. Reimbursement resumes once the period ends."},
+     {"kind": "row", "color": "sky", "label": "Failed class", "text": "Failure in a class does not stop CEA (guide Clause 10). Confirm this in the full 2018 O.M. text before relying on it."}],
+   "narr": "Dies non ko samjhiye. Ye ek aisa period hai jo service law me naukri ka hissa nahi maana jata, aam taur par unauthorised absence ki penalty ke roop me. Is period ka CEA nahi milta. Dies non khatam hone ke baad CEA phir se chalu hota hai. Fail hone wala point guide ke Clause 10 se hai, aur full O.M. se ek baar aur confirm karna chahiye.",
+   "spk": "teacher"},
+  {"chapter": "Service Status", "tag": "FAQ Q3 TO Q5",
+   "title": "FAQ questions on suspension, leave, restored service and dies non",
+   "cards": [
+     {"kind": "table", "color": "sky", "title": "Consolidated FAQ O.M. dated 02.04.2026 (Department of Posts)",
+      "headers": ["FAQ", "Question", "Answer", "Status"],
+      "widths": [0.10, 0.36, 0.34, 0.20],
+      "rows": [
+        ["Q3", "Period first treated as a break, later restored by court order", "Admissibility follows the final classification: on duty, suspension or leave means payable", "NOT VERIFIED"],
+        ["Q4", "CEA during suspension or leave, including EOL?", "Yes, admissible under suspension and leave", "VERIFIED (FAQ and 2018 O.M.)"],
+        ["Q5", "CEA for a dies non period?", "No, not admissible", "VERIFIED (FAQ and 2018 O.M.)"]]}],
+   "narr": "FAQ ke Q3 se Q5 tak. Department of Posts ka consolidated FAQ O.M., 02.04.2026, batata hai ki suspension aur leave par CEA admissible hai, aur dies non me nahi. Q3 me court order se restored service ka sawal hai. Ye guide me hai, lekin FAQ ka direct text confirm nahi hua, isliye NOT VERIFIED tag hai.",
+   "spk": "teacher"},
+  {"chapter": "Service Status", "tag": "STUDENT QUESTION",
+   "title": "Student question: suspension later ruled as on duty, what happens to CEA?",
+   "cards": [
+     {"kind": "row", "color": "sky", "label": "Student asks", "text": "If a suspension is later ended by a court order and the period is treated as on duty, what happens to CEA for that period?"},
+     {"kind": "row", "color": "green", "label": "Short answer", "text": "The period follows its final classification. If treated as on duty, suspension or leave, CEA is payable for it (guide, FAQ Q3; NOT VERIFIED)."}],
+   "narr": "Sir, agar kisi employee ka suspension baad me court order se khatam ho jaye, aur us period ko on duty maan liya jaye, to CEA ka kya hoga?",
+   "spk": "student"},
+  {"chapter": "Cessation & Death", "tag": "CLAUSE 11 · CESSATION OF SERVICE",
+   "title": "Retirement, resignation, dismissal or removal: CEA runs to the academic year-end",
+   "cards": [
+     {"kind": "table", "color": "orange", "title": "Event and CEA position",
+      "headers": ["Event", "CEA position", "Who pays"],
+      "widths": [0.34, 0.36, 0.30],
+      "rows": [
+        ["Retirement", "Admissible to end of that academic year", "Last employing office"],
+        ["Resignation", "Admissible to end of that academic year", "Last employing office"],
+        ["Discharge, dismissal or removal", "Admissible to end of that academic year", "Last employing office"]]},
+     {"kind": "callout", "color": "yellow", "text": "EXAM TRAP: dismissal and removal do not stop CEA on the spot. The academic-year rule applies to all four events."}],
+   "narr": "Clause 11 ka rule. Agar employee retirement, resignation, discharge, dismissal ya removal se service se bahar jata hai, to CEA us academic year ke end tak chalta hai jisme event hua. Payment wahi office karega jahan wo pehle kaam karta tha. Ye rule dismissal aur removal par bhi lagu hota hai, ye exam ka important point hai.",
+   "spk": "teacher"},
+  {"chapter": "Cessation & Death", "tag": "WORKED EXAMPLE",
+   "title": "Resignation on 10 November: CEA until the academic year ends",
+   "cards": [
+     {"kind": "steps", "color": "orange", "steps": [
+        "Employee resigns on 10 November, mid academic year",
+        "CEA runs to 31 March (guide assumes April to March)",
+        "Paid by the last employing office",
+        "No CEA in the next academic year: service has ended"]},
+     {"kind": "row", "color": "sky", "label": "Note", "text": "Year-end date follows the guide's April to March example. Confirm the academic-year definition in the full O.M. (see Clause 9 NOT VERIFIED)."}],
+   "narr": "Example dekhiye. Employee 10 November ko resign karta hai. CEA March tak chalega, kyunki guide academic year April se March maanta hai. Payment last office karega. Agle academic year ka CEA nahi milega, kyunki service khatam ho chuki hai.",
+   "spk": "teacher"},
+  {"chapter": "Cessation & Death", "tag": "CLAUSE 12 · DEATH IN SERVICE",
+   "title": "Death in service: CEA for the children continues, subject to the spouse test",
+   "cards": [
+     {"kind": "stat", "color": "cyan", "head": "Death in service", "sub": "Children's CEA and Hostel Subsidy admissible, other conditions met"},
+     {"kind": "stat", "color": "orange", "head": "Spouse test", "sub": "Applies to the surviving spouse's employment"},
+     {"kind": "stat", "color": "red", "head": "Excluded employers", "sub": "Central or State Govt, autonomous body, PSU, semi-Govt or Govt-funded body"},
+     {"kind": "row", "color": "green", "label": "Source status", "text": "VERIFIED against the 2018 O.M. death-in-service clause as reproduced in the sources checked."}],
+   "narr": "Clause 12, death in service. Agar Government servant service ke dauran guzar jaye, to bachchon ka CEA chalu rehta hai. Shart ye hai ki surviving spouse Central Government, State Government, autonomous body, PSU ya semi-Government body, jaise municipality ya port trust, me employed na ho. Ye 2018 O.M. ke death clause se verified hai.",
+   "spk": "teacher"},
+  {"chapter": "Cessation & Death", "tag": "SURVIVING SPOUSE TEST",
+   "title": "The surviving spouse's employment decides whether CEA continues",
+   "cards": [
+     {"kind": "table", "color": "purple", "title": "Surviving spouse's status and CEA for the children",
+      "headers": ["Surviving spouse's status", "CEA for children", "Note"],
+      "widths": [0.40, 0.28, 0.32],
+      "rows": [
+        ["Not employed (homemaker)", "Continues", "No exclusion applies"],
+        ["Employed in private, unfunded organisation", "Continues", "Test is specific to Govt-linked employment"],
+        ["Employed in Central or State Govt, autonomous body, PSU, or Govt-funded semi-Govt body (e.g. municipality, port trust)", "Does NOT continue", "Exclusion applies"]]}],
+   "narr": "Surviving spouse ka test dekhiye. Agar wo homemaker hai, to CEA chalega. Agar private unfunded organisation me kaam karti hai, to bhi chalega. Lekin agar wo Central ya State Government, autonomous body, PSU ya Govt-funded semi-Government body me hai, to CEA band ho jaayega. Is test par exam me sawal aata hai.",
+   "spk": "teacher"},
+  {"chapter": "Cessation & Death", "tag": "CESSATION AND DEATH FLOW",
+   "title": "Two triggers, two outcomes: which event stops CEA and when",
+   "cards": [
+     {"kind": "steps", "color": "orange", "steps": [
+        "Trigger: retirement, resignation, dismissal or removal",
+        "Pay to end of that academic year, through the last office",
+        "Trigger: death in service",
+        "Spouse employed in a Govt-linked body? Then CEA stops",
+        "Spouse not employed there? CEA continues for children"]}],
+   "narr": "Ab dono triggers ka flow dekhiye. Retirement, resignation, dismissal ya removal me academic year ke end tak CEA, aur payment last office se. Death in service me pehle spouse ka employment check karein. Govt-linked job ho to rukega, nahi to bachchon ka CEA chalega.",
+   "spk": "teacher"},
+  {"chapter": "Cessation & Death", "tag": "STUDENT QUESTION",
+   "title": "Student question: after a mid-year resignation, is next year's CEA payable?",
+   "cards": [
+     {"kind": "row", "color": "sky", "label": "Student asks", "text": "If an employee resigns in the middle of the year, will the child's CEA for the next year also be paid?"},
+     {"kind": "row", "color": "green", "label": "Short answer", "text": "No. CEA runs only to the end of the academic year in which service ended. Next year's CEA is not payable."}],
+   "narr": "Sir, agar employee ne mid-year resign kar diya, to kya us bachche ka agle saal ka CEA bhi milega?",
+   "spk": "student"},
+]
 # @@CONTENT_END@@
 
 
