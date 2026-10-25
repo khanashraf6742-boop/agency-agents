@@ -973,6 +973,115 @@ SCENES += [
    "narr": "Scenario 9 se 12. Dono spouse alag departments me ho to bhi single-claim rule lagu hai. Deputation par marne par death clause wahi chalega. Galat CEA claim hone par recovery aur disciplinary action deputation ke general principle se hota hai, aur ye NOT VERIFIED hai. Last scenario me State ke do alag Governments me spouses ho, tab bhi ek hi claim.",
    "spk": "teacher"},
 ]
+SCENES += [
+  {"chapter": "CEA, Hostel Subsidy and LTC", "tag": "CLAUSE 15 · THREE TESTS",
+   "title": "CEA, Hostel Subsidy and LTC: three benefits, three different tests",
+   "cards": [
+     {"kind": "table", "color": "cyan", "title": "Intra-rule comparison (LTC column from the guide)",
+      "headers": ["Test", "CEA", "Hostel Subsidy", "LTC (guide)"],
+      "widths": [0.20, 0.26, 0.26, 0.28],
+      "rows": [
+        ["Children covered", "Two eldest surviving, with twins and sterilisation exceptions", "Two eldest surviving, same cap as CEA", "All dependent children meeting the LTC dependency test"],
+        ["Dependency or income test", "None", "None", "Yes, per guide (NOT VERIFIED)"],
+        ["What is reimbursed", "Flat monthly amount toward education", "Boarding and lodging: actual or ceiling, whichever lower", "Travel fare for the declared LTC journey"],
+        ["Claimable together?", "Yes", "Yes", "Yes, each under its own rules"]]},
+     {"kind": "row", "color": "red", "label": "Status", "text": "The LTC column is the guide's cross-reference. The LTC Rules were not verified in this video."}],
+   "narr": "Ab Clause 15, CEA, Hostel Subsidy aur LTC. Teeno alag rules se chalte hain. CEA aur Hostel Subsidy me sirf do sabse bade zinda bachche covered hain. LTC me koi two eldest wali cap nahi hai, balki family dependency test hai. Ye LTC column guide se hai, aur LTC Rules abhi verify nahi hue, isliye NOT VERIFIED.",
+   "spk": "teacher"},
+  {"chapter": "CEA, Hostel Subsidy and LTC", "tag": "EXAM TRAP",
+   "title": "The same child can generate three claims, but the cap belongs to CEA only",
+   "cards": [
+     {"kind": "stat", "color": "cyan", "head": "Three tests", "sub": "Each benefit has its own rule-set"},
+     {"kind": "stat", "color": "orange", "head": "Two-child cap", "sub": "Applies to CEA and Hostel Subsidy only (guide)"},
+     {"kind": "stat", "color": "green", "head": "Same child, three claims", "sub": "Possible in one year, each assessed separately"},
+     {"kind": "stat", "color": "purple", "head": "No LTC cap", "sub": "Guide says LTC uses its own dependency test (NOT VERIFIED)"},
+     {"kind": "callout", "color": "yellow", "text": "EXAM TRAP: do not apply CEA's two-eldest cap to LTC."}],
+   "narr": "Is clause ka sabse important point. Ek hi bachcha teeno benefits ke liye eligible ho sakta hai, lekin har benefit ka apna test hai. Exam trap: LTC par CEA ka two-eldest cap mat lagayiye. Ye bhi guide ka claim hai, isliye verify karna zaroori hai.",
+   "spk": "teacher"},
+  {"chapter": "CEA, Hostel Subsidy and LTC", "tag": "CHILD LIVING AWAY · FLOW",
+   "title": "A child living away from headquarters: which benefit applies, step by step",
+   "cards": [
+     {"kind": "steps", "color": "green", "steps": [
+        "Child lives away from HQ: hostel town, or grandparents' home",
+        "One of the two eldest surviving? Then CEA at the flat rate",
+        "In a residential-school hostel? Then Hostel Subsidy, lower of actual or ceiling",
+        "Passes LTC dependency test? Then LTC journey, capped by distance (guide)",
+        "Each benefit is assessed under its own rule"]},
+     {"kind": "row", "color": "sky", "label": "Note", "text": "The LTC distance cap (lower of actual distance or HQ-hometown distance) follows the guide and is NOT VERIFIED."}],
+   "narr": "Child living away ka flow dekhiye. Bachcha hostel town me ya grandparents ke paas ho sakta hai. Pehle check karein ki wo do sabse bade zinda bachchon me hai, to CEA milega. Hostel me hai to Hostel Subsidy. LTC dependency test pass kare to journey ka LTC. Har benefit ka rule alag hai.",
+   "spk": "teacher"},
+  {"chapter": "CEA, Hostel Subsidy and LTC", "tag": "STUDENT QUESTION",
+   "title": "Student question: can CEA, Hostel Subsidy and LTC all be claimed for a hostel child?",
+   "cards": [
+     {"kind": "row", "color": "sky", "label": "Student asks", "text": "If the child is in a hostel, can CEA, Hostel Subsidy and LTC all be claimed together?"},
+     {"kind": "row", "color": "green", "label": "Short answer", "text": "Yes, if each benefit's own test is met. The LTC part is the guide's view and is NOT VERIFIED."}],
+   "narr": "Sir, agar bachcha hostel me hai, to kya CEA, Hostel Subsidy aur LTC teeno ek saath mil sakte hain?",
+   "spk": "student"},
+  {"chapter": "Beyond Class XII", "tag": "CLAUSE 16 · POLYTECHNIC AND ITI",
+   "title": "Beyond the usual range: the first two years of a diploma after Class X",
+   "cards": [
+     {"kind": "row", "color": "green", "label": "Rule", "text": "CEA is allowed for the first two years of a diploma or certificate course at a recognised Polytechnic, ITI or engineering institution, taken right after Class X instead of Class XI and XII."},
+     {"kind": "row", "color": "orange", "label": "Status", "text": "Core rule matches the 2018 O.M. text as reproduced. The 'not already claimed for XI and XII' proviso is NOT VERIFIED."},
+     {"kind": "row", "color": "sky", "label": "Why it is easy to miss", "text": "Most explainers say only 'Nursery to XII'. The diploma window is an exception to that range."}],
+   "narr": "Clause 16, Class XII ke baad. Agar bachcha Class X ke baad regular Class XI aur XII ki jagah Polytechnic, ITI ya engineering diploma leta hai, to pehle do saal ka CEA milta hai. Ye 2018 O.M. ke text se match karta hai. Lekin pehle se XI aur XII ka claim nahi hua ho, wali shart NOT VERIFIED hai.",
+   "spk": "teacher"},
+  {"chapter": "Beyond Class XII", "tag": "DIPLOMA WORKED EXAMPLES",
+   "title": "Diploma years: which ones count, and what happens if XI and XII were already claimed",
+   "cards": [
+     {"kind": "table", "color": "green", "title": "Worked cases",
+      "headers": ["Case", "Diploma year", "Result"],
+      "widths": [0.46, 0.18, 0.36],
+      "rows": [
+        ["Passes Class X and joins a 3-year Polytechnic diploma instead of Class XI", "Years 1 and 2", "Covered, as Class XI and XII equivalent"],
+        ["Same diploma student", "Year 3 onward", "Not covered; the CEA window has closed"],
+        ["CEA already drawn for Class XI and XII, then joins a diploma", "Diploma years", "Not covered: one child, one window (guide, NOT VERIFIED)"]]}],
+   "narr": "Diploma ke saal dekhiye. Teen saal ke diploma me pehle do saal covered hain. Teesra saal covered nahi hai, kyunki CEA ki window band ho chuki hai. Aur agar XI aur XII ka CEA pehle le chuke ho, to diploma ke saal nahi milenge, ek bachche ko ek hi window milti hai.",
+   "spk": "teacher"},
+  {"chapter": "Beyond Class XII", "tag": "WHERE CEA STOPS",
+   "title": "After Class XII: degree and professional courses are outside CEA",
+   "cards": [
+     {"kind": "table", "color": "red", "title": "Course after Class XII and CEA position",
+      "headers": ["Course", "CEA position", "Source status"],
+      "widths": [0.36, 0.34, 0.30],
+      "rows": [
+        ["Degree or professional course", "Not admissible", "Guide flow (NOT VERIFIED as a rule)"],
+        ["Diploma year 3 onward", "Not admissible", "Follows the Clause 16 window"],
+        ["Class XI and XII in a regular school", "Admissible, normal rules", "VERIFIED (class range)"]]}],
+   "narr": "Class XII ke baad kya band hota hai. Degree ya professional course me CEA admissible nahi hai. Diploma ke teesre saal se aage bhi nahi. CEA ka window Class XII tak, ya diploma ke pehle do saal tak hai, bas.",
+   "spk": "teacher"},
+  {"chapter": "Beyond Class XII", "tag": "CLAUSE 18 · CORRESPONDENCE AND NIOS",
+   "title": "Correspondence and NIOS study for normal children: generally admissible, not verified",
+   "cards": [
+     {"kind": "row", "color": "cyan", "label": "Guide position", "text": "A normal child studying through a recognised distance or open-school mode, such as NIOS, up to Class XII is generally admissible, subject to a recognised institution."},
+     {"kind": "row", "color": "red", "label": "Status", "text": "From general secondary reporting, not a verbatim clause. NOT VERIFIED; get written confirmation from the DDO before relying on it."},
+     {"kind": "row", "color": "sky", "label": "Recognition", "text": "The institution must be recognised for the claim. Check this before filing."}],
+   "narr": "NIOS aur correspondence study. Guide ke hisaab se normal bachcha agar recognised correspondence ya distance mode, jaise NIOS, se Class XII tak padhta hai, to CEA generally admissible hai. Ye general secondary reporting par based hai, clause ka verbatim text nahi mila. Isliye NOT VERIFIED hai, aur DDO se likhit confirm karein.",
+   "spk": "teacher"},
+  {"chapter": "Beyond Class XII", "tag": "AFTER CLASS X · FLOW",
+   "title": "After Class X: which paths keep CEA going",
+   "cards": [
+     {"kind": "steps", "color": "green", "steps": [
+        "Child passes Class X",
+        "Regular Class XI and XII: CEA continues normally",
+        "Diploma instead: first two years CEA; year 3 onward stops",
+        "NIOS or correspondence up to XII: generally admissible (NOT VERIFIED)",
+        "Degree or professional course after XII: CEA not admissible"]}],
+   "narr": "Class X ke baad ka flow. Regular Class XI aur XII me CEA normal chalta hai. Diploma me pehle do saal CEA, teesre saal se band. NIOS ya correspondence Class XII tak: generally admissible, NOT VERIFIED. Degree ya professional course me CEA nahi milta.",
+   "spk": "teacher"},
+  {"chapter": "Adopted, Step and Ward Children", "tag": "CLAUSE 19 · WHO IS A CHILD",
+   "title": "Adopted, step and ward children: who is covered",
+   "cards": [
+     {"kind": "table", "color": "purple", "title": "Category and CEA position",
+      "headers": ["Category", "CEA position", "Status"],
+      "widths": [0.28, 0.50, 0.22],
+      "rows": [
+        ["Legally adopted child", "At par with a biological child once adoption is legally complete; counts within the two-eldest cap", "NOT VERIFIED (guide Clause 19)"],
+        ["Step-child, wholly dependent", "Generally admissible as part of the family; case-specific", "NOT VERIFIED; DDO to confirm"],
+        ["Ward under informal guardianship", "Generally not covered unless a rule or court order extends the definition", "NOT VERIFIED"]]},
+     {"kind": "callout", "color": "yellow", "text": "Do not assume coverage for an informal ward without checking."}],
+   "narr": "Clause 19, adopted, step aur ward bachche. Legally adopted bachcha biological bachche ke barabar hai, adoption complete hone ke baad. Step-child case-specific hai. Informal ward ko generally cover nahi kiya jata, jab tak koi rule ya court order na ho. Ward par assume mat kijiye.",
+   "spk": "teacher"},
+]
 # @@CONTENT_END@@
 
 
