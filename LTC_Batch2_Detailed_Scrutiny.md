@@ -17,3 +17,9 @@
 5. Historical GID collections may contain superseded material; the current legal status of each instruction cannot be inferred merely from its appearance in an old compilation. A complete amendment chain and comprehensive current GID inventory remain open.
 
 Part 1 of the detailed video covers only Rule 7(1)–(2), Notes 1–5 and FAQ Q26. Its captions display each short utterance for its corresponding audio clip; they are clip-aligned, not word-level timed. It is not the completed Rules 7–11 video.
+
+## Update: Rule 7 Notes 6–17 (Part 2)
+
+The 2025 consolidation has now been reviewed at summary level for all twelve notes, and Part 2 identifies each. This is **not** yet a granular verification of every condition or of current status; for example, the original orders on one-way journeys, PSU deputation, emergency passage and escort still need full checking. The 2016 technical-resignation order was located in an official Central Water Commission copy: [DoPT OM No. 28020/1/2010-Estt.(C), dated 17 August 2016](https://cwc.gov.in/sites/default/files/resignation_2.pdf), section 2.3. It provides the example of four years' previous service leaving four years of the initial eight-year fresh-recruit period. Its general definition of technical resignation and later modifications must also be checked in individual cases.
+
+The [DoPT historical compilation](https://dopt.gov.in/central-civil-services) reproduces the 8 May 1990 decision on government-employed spouses, including the one-parent-only condition for children in a block. Later orders and factual conditions remain to be checked. Rule 8–11 detailed videos and the combined final video remain outstanding.
