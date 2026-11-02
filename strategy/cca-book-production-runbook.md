@@ -113,6 +113,15 @@ python3 scripts/cca-1965/validate.py CCS_CCA_Rules_1965_Case_Studies_$(date +%F)
 | E | clock, scope, obsolete, case-law and source cross-references; every rule cited exists in the register; every OM number cited is traceable in the notes or sources |
 | F | spacing, quote and dash hygiene, duplicated sentences, literal markup leaking into the text, front-matter counts, print rules |
 
+A print edition is rendered from the same HTML, so the PDF can never drift from the book:
+
+```bash
+pip install --target /tmp/x2p xhtml2pdf
+PYTHONPATH=/tmp/x2p python3 scripts/cca-1965/pdf.py
+```
+
+`pdf.py` flattens what a PDF cannot do — it drops the toolbar, promotes every `<details>` to a visible block, removes the reveal buttons and keeps the level pill and marks badge off the heading line — then renders A4 with DejaVu (which carries ⚑, ⊘, ⚠ and ₹). The four fonts are copied into `scripts/cca-1965/.fonts/` on first use and are git-ignored; the folder falls back to the system DejaVu if it is missing. Ship the HTML and the PDF together.
+
 It prints `VALID — n assertions, 0 errors, 0 warnings` or a numbered list of failures and exits non-zero. `--quiet` prints only the failures. A warning is not automatically noise: the first run produced 74 errors of which five were real defects and sixty-nine were the validator's own assumptions — every false positive was fixed in the validator, never by loosening the book.
 
 Then the builder's QA checklist (print, mobile, keyboard, JavaScript disabled) is run by a human.
@@ -172,6 +181,7 @@ Rules for a new pass:
 - [ ] zero superseded provisions taught as current
 - [ ] `verify.py` exits 0 and its output is quoted in the memo
 - [ ] `validate.py` prints `VALID` with zero errors, and every warning is either fixed or explained in the memo
+- [ ] a print PDF is rendered from the shipped HTML and opens with every solution visible
 - [ ] rebuild is one command, deterministic, and documented
 - [ ] the roster, the register and the memo are committed alongside the book
 

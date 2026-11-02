@@ -86,3 +86,6 @@ integrations/vibe/agents/
 integrations/vibe/prompts/
 integrations/zcode/agents/
 graphify-out/
+
+# font cache for the PDF build (see scripts/cca-1965/pdf.py)
+scripts/cca-1965/.fonts/
