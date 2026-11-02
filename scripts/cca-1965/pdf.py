@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import shutil
 import re
 import sys
 
@@ -34,7 +35,7 @@ h1 { font-size: 17pt; color: #14284b; }
 h2 { font-size: 11.5pt; color: #ffffff; background-color: #14284b; padding: 5px 8px; page-break-after: avoid; }
 h3 { font-size: 9.6pt; color: #14284b; }
 .sub { font-size: 8pt; color: #6b7a8f; }
-.flt, .top-index, nav.toc .grp { display: none; }
+.flt, .top-index, .prog, nav.toc .grp { display: none; }
 .cover { background-color: #14284b; padding: 26px 22px; margin-bottom: 10px; }
 .cover h1, .cover .law, .cover .k, .cover .disc, .cover span, .cover b { color: #ffffff; }
 .cover table td, .cover table th { border-color: #46608c; color: #e7edf7; }
@@ -111,6 +112,15 @@ def flatten(html: str) -> str:
     return html
 
 
+def ensure_fonts() -> None:
+    """The font cache is git-ignored; rebuild it from the system copy on first run."""
+    os.makedirs(FONT_DIR, exist_ok=True)
+    for name in ("DejaVuSans.ttf", "DejaVuSans-Bold.ttf", "DejaVuSansMono.ttf", "DejaVuSansMono-Bold.ttf"):
+        dst = os.path.join(FONT_DIR, name)
+        if not os.path.exists(dst):
+            shutil.copy2(os.path.join(FONT_DIR_FALLBACK, name), dst)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("source", nargs="?", default=DEFAULT)
@@ -121,6 +131,8 @@ def main() -> int:
     out = args.out or os.path.splitext(src)[0] + ".pdf"
     with open(src, encoding="utf-8") as fh:
         raw = fh.read()
+
+    ensure_fonts()
 
     sys.path.insert(0, "/tmp/x2p")
     from xhtml2pdf import pisa  # noqa: E402

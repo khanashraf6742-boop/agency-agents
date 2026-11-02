@@ -824,7 +824,8 @@ def main():
     else:
         ok()
 
-    for m in re.finditer(r"(\d{1,3}(?:\.\d+)?)\s?%", raw):
+    text_only = re.sub(r"(?s)<style.*?</style>", " ", raw)   # CSS gradients use any percentage
+    for m in re.finditer(r"(\d{1,3}(?:\.\d+)?)\s?%", text_only):
         v = float(m.group(1))
         if v > 100:
             err("D3 money", f"percentage above 100: {m.group(0)}")
