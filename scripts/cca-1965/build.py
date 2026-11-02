@@ -55,7 +55,7 @@ CSS = r"""
 *{box-sizing:border-box} body{font-family:Inter,'DejaVu Sans',Arial,sans-serif;color:var(--ink);font-size:9.4pt;line-height:1.45;margin:0;background:#fff}
 .wrap{max-width:920px;margin:0 auto;padding:18px}
 h1{font-size:16pt;color:var(--navy);margin:0 0 6px} h2{font-size:12.5pt;color:#fff;background:var(--navy);padding:6px 10px;border-radius:4px;margin:16px 0 8px}
-h3{margin:0;font-size:inherit} h4{margin:8px 0 3px;font-size:10pt;color:var(--navy)}
+h3{margin:0;font-size:inherit} h3.set{margin:10px 0 4px;font-size:10pt;color:var(--navy);font-weight:700}
 .sub{color:var(--mut);font-size:8.4pt;margin:4px 0 8px}
 .lv{display:inline-block;font-size:7.5pt;font-weight:700;padding:1px 6px;border-radius:10px;margin-right:6px;color:#fff}
 .lv.L1{background:#6b8e23}.lv.L2{background:#2b5797}.lv.L3{background:#8e3b8e}
@@ -97,6 +97,7 @@ nav.toc .grp{font-weight:800;color:var(--navy);text-transform:uppercase;font-siz
 .flt button,.flt input{font:inherit;padding:3px 9px;border:1px solid var(--line);background:#fff;border-radius:14px;cursor:pointer}
 .flt button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
 .flt input{cursor:text;min-width:200px;border-radius:6px}
+.flt .hint{font-size:7.6pt;color:#5a6b85;margin-left:auto}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .qf td.a{width:34%}
 .reveal{font:inherit;font-size:7.3pt;padding:1px 7px;border:1px solid #c5d3ea;background:#eef3fa;color:var(--blue);border-radius:9px;cursor:pointer;margin-right:6px}
@@ -113,7 +114,8 @@ table.idx a{color:var(--blue);text-decoration:none}
 .top-index{position:fixed;right:14px;bottom:14px;background:var(--navy);color:#fff;text-decoration:none;padding:7px 11px;border-radius:18px;font-size:8pt;z-index:9}
 a.back{font-size:7.4pt;color:var(--mut);text-decoration:none;display:inline-block;margin:2px 0}
 h2#sources + div + ul{font-size:8.8pt}
-@media print{
+@page{margin:14mm 11mm}
+@media print{.flt{display:none!important}
   .noprint{display:none!important} .wrap{max-width:none;padding:0}
   body{font-size:9pt} .case{border-color:#bbb} details{margin:4px 0} summary{display:none}
   details>div{display:block!important} .pb{page-break-before:always} a{color:inherit;text-decoration:none}
@@ -144,7 +146,7 @@ function apply(){
     });
     t.hidden=!count;
     const h=t.previousElementSibling;
-    if(h&&h.tagName==='H4')h.hidden=!count;
+    if(h&&(h.tagName==='H3'||h.tagName==='H4'))h.hidden=!count;
     total+=count;
   });
   const p1=document.getElementById('part-1'); if(p1)p1.hidden=!total;
@@ -167,6 +169,8 @@ const ex=document.getElementById('ex');
 if(ex)ex.addEventListener('click',()=>document.querySelectorAll('.case:not([hidden]) details').forEach(d=>d.open=true));
 const co=document.getElementById('co');
 if(co)co.addEventListener('click',()=>document.querySelectorAll('.case details').forEach(d=>d.open=false));
+const pr=document.getElementById('pr');
+if(pr)pr.addEventListener('click',()=>window.print());
 document.querySelectorAll('.reveal').forEach(b=>b.addEventListener('click',()=>{
   const row=b.closest('tr');
   const show=b.getAttribute('aria-expanded')!=='true';
@@ -221,7 +225,7 @@ def search_blob(case) -> str:
 def render_l1():
     out = []
     for i, st in enumerate(L1_SETS, start=1):
-        out.append(f'<h4 id="l1-set-{i}"><span class="lv L1">L1</span> Set {i} — {esc(st["title"])} ({esc(st["range"])})</h4>')
+        out.append(f'<h3 class="set" id="l1-set-{i}"><span class="lv L1">L1</span> Set {i} — {esc(st["title"])} ({esc(st["range"])})</h3>')
         out.append('<table class="qf"><tr><th>#</th><th>Question</th><th>Answer</th><th>Rule · Trap</th></tr>')
         for it in st["items"]:
             n = it["n"]
@@ -435,11 +439,24 @@ def render():
     parts.append("</div>")
     parts.append("<table>")
     for label, text in meta.COVERAGE:
-        parts.append(f"<tr><td>{label}</td><td>{text}</td></tr>")
+        parts.append(f'<tr><th scope="row">{label}</th><td>{text}</td></tr>')
     parts.append("</table></div>")
     parts.append('<div class="disc"><b>Disclaimer.</b> Exam-study aid, not legal advice. Rely on the Gazette text and the current DoPT/CVC/CAG instructions '
                  'for official work. Facts, names, offices and figures are constructed for teaching; pay computations use 7th CPC matrix values and '
                  'illustrative DA/DR flagged ⚑ where the formal order was awaited on the law date.</div></section>')
+
+    # toolbar — the controls the script has always listened for
+    parts.append('<div class="flt" role="toolbar" aria-label="Filter and search the book">')
+    parts.append('<button type="button" data-f="all" class="on" aria-pressed="true">All</button>')
+    parts.append('<button type="button" data-f="L1" aria-pressed="false">L1 · checks</button>')
+    parts.append('<button type="button" data-f="L2" aria-pressed="false">L2 · cases</button>')
+    parts.append('<button type="button" data-f="L3" aria-pressed="false">L3 · integrated</button>')
+    parts.append('<input id="q" type="search" placeholder="Search facts, rules, figures, cases" aria-label="Search the book"/>')
+    parts.append('<button type="button" id="ex">Expand all</button>')
+    parts.append('<button type="button" id="co">Collapse all</button>')
+    parts.append('<button type="button" id="pr">Print</button>')
+    parts.append('<span class="hint">Filters and search work offline; nothing leaves the file.</span>')
+    parts.append('</div>')
 
     # how to use
     parts.append('<h2 class="pb" id="how-to">How to use this book</h2>')
@@ -466,6 +483,7 @@ def render():
                  "<li><b>Part 1</b> L1 checks: use the row button to reveal the answer and the rule together.</li>"
                  "<li><b>Part 2</b> L2 cases: attempt on paper, then open the solution.</li>"
                  "<li><b>Part 3</b> L3 cases: full file, every computation, model answer in exam register.</li>"
+                 "<li><b>Toolbar</b> filter by level, search every case, expand or collapse all solutions, or send the book to the printer.</li>"
                  "<li><b>Indices</b> rule, clock and case law — each links back to the item that tests it.</li>"
                  "<li><b>Printing</b> opens every solution automatically and breaks before each part.</li></ul></div>")
     parts.append("</div>")

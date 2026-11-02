@@ -230,6 +230,11 @@ SOURCES = [
      "https://www.referencer.in/CS_Regulations/CCS(CCA)Rules1965/11012_15_2016_Estt.A-III.aspx"),
     ("DoPT — instructions on the sealed cover procedure, 19.01.2017 (11012/6/2016-Estt.A-III)",
      "https://www.referencer.in/CS_Regulations/CCS(CCA)Rules1965/11012_6_2016-Estt.A-III.aspx"),
+    ("DoPT OM No. 22011/4/91-Estt.(A), 14.09.1992 — promotion of Government servants against whom disciplinary or court proceedings "
+     "are pending: the sealed cover, paras 2 to 7 (full text, PDF)",
+     "https://documents.doptcirculars.nic.in/D2/D02est/22011_4_91-Estt.A-14091992.pdf"),
+    ("DoPT OM No. 22011/4/2007-Estt.(D), 28.04.2014 — effect of penalties on promotion and the role of the DPC (full text, PDF)",
+     "https://documents.doptcirculars.nic.in/D2/D02est/22011_4_2007-Estt.D-28042014.pdf"),
     ("Indian Kanoon — consolidated text of the Rules (as published)",
      "https://indiankanoon.org/doc/18288843/"),
 ]
@@ -244,7 +249,7 @@ NOTES = [
     "Every date arithmetic in this book uses the conventions published in the verification harness: statutory day counts "
     "run from the day after the trigger unless the rule says “from the date of”; clear days exclude both termini; "
     "45-day and six-month caps are computed from the trigger date and not by adding extensions.",
-    "Pay figures use 7th CPC matrix values and illustrative DA/DR of 60% (01.01.2026) and 63% (01.07.2026). The 63% rate "
+    "Pay figures use 7th CPC matrix values and illustrative DA/DR of 60% (01.01.2026) and 63% ⚑ (01.07.2026). The 63% rate "
     "rests on the Cabinet decision of 28.10.2026; the formal order was awaited on the law date and is flagged ⚑ wherever "
     "it drives a figure.",
     "Facts, names, file numbers and offices are constructed for teaching. No case describes a real officer, and no case "
@@ -252,5 +257,9 @@ NOTES = [
     "The sealed-cover cases apply executive instruction, not rule: DoPT OM No. 22011/4/91-Estt.(A) dated 14.09.1992, issued after "
     "Jankiraman. Where a case turns on it, the paragraph is cited, and the book says plainly that the OM cannot enlarge a power given by "
     "the rules — which is why r.18(2) is read as subject to r.12(4).",
+    "Communication of adverse entries in the APAR is governed by DoPT OM No. 21011/1/2005-Estt.(A)(Pt-II) dated 23.07.2009, read with "
+    "the OM of 14.05.2009: an adverse entry must be communicated, the officer may represent against it, and an uncommunicated entry cannot "
+    "be the foundation of a denial of promotion. That OM is cited by number and date because the Department has moved it between hosts; "
+    "check the current copy on the DoPT circulars site before relying on it.",
     "Nothing here replaces the Gazette text or the departmental instructions in force in the office where a case is handled.",
 ]

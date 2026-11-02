@@ -114,7 +114,9 @@ L2D = [
     dict(id="L2-39", title="Censure turned into two increments lost",
          facts=("The disciplinary authority imposed censure on Shri AF on 12.01.2026. He appealed. On 20.04.2026 the appellate authority, without any notice, "
                 "set aside the censure and imposed withholding of two increments for two years, recording that the original penalty was “too lenient for the "
-                "gravity of the charge”. Shri AF challenges the enhancement."),
+                "gravity of the charge”. The appellate order was despatched on 24.04.2026 and reached him on 30.04.2026; it records that he was heard, "
+                "though no notice of enhancement and no hearing slip appears on either file. He challenges the enhancement on that ground and on "
+                "the further ground that the appellate authority could at most have remanded the case for a fresh penalty."),
          record=[["Original penalty", "censure, 12.01.2026", "r.11(i)"],
                  ["Appeal", "filed", "—"],
                  ["Enhancement", "withholding 2 increments, 2 years", "r.11(iv)"],

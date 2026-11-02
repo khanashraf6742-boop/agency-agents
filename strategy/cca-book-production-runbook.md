@@ -96,6 +96,25 @@ python3 scripts/cca-1965/build.py --out CCS_CCA_Rules_1965_Case_Studies_$(date +
 
 The build refuses to write on: duplicate ids, unresolved anchors, external resources, empty required blocks, marks mismatch.
 
+Then the whole file is cross-checked against its own source modules — granularly, element by element:
+
+```bash
+python3 scripts/cca-1965/validate.py CCS_CCA_Rules_1965_Case_Studies_$(date +%F).html
+```
+
+`validate.py` re-reads `l1.py`, `l2a–d.py`, `l3a–c.py` and `meta.py`, parses the finished HTML with its own mini-DOM, and compares both directions: is every source item rendered, and is every rendered item traceable to the source? It then audits the file as a whole. Twelve groups:
+
+| Group | What it proves |
+|---|---|
+| A | file size, one `<script>`, doctype, charset, viewport, language, no external resources, no `http://` beyond source links, script syntax |
+| B | tag nesting, duplicate ids, broken anchors, heading order, table and `details` structure, script-referenced ids that do not exist |
+| C | source-vs-render for every L1 row, every L2/L3 case, both registers, the matrices and the indices — heading, marks badge, facts, record, questions, path, step cells, total row, answer, model answer, tags, back-links |
+| D | every date is a real calendar date and lies on or before the law date; rupee grouping; percentages; flags |
+| E | clock, scope, obsolete, case-law and source cross-references; every rule cited exists in the register; every OM number cited is traceable in the notes or sources |
+| F | spacing, quote and dash hygiene, duplicated sentences, literal markup leaking into the text, front-matter counts, print rules |
+
+It prints `VALID — n assertions, 0 errors, 0 warnings` or a numbered list of failures and exits non-zero. `--quiet` prints only the failures. A warning is not automatically noise: the first run produced 74 errors of which five were real defects and sixty-nine were the validator's own assumptions — every false positive was fixed in the validator, never by loosening the book.
+
 Then the builder's QA checklist (print, mobile, keyboard, JavaScript disabled) is run by a human.
 
 ---
@@ -141,6 +160,7 @@ Rules for a new pass:
 3. **Say which instrument you are using.** The sealed cover is executive instruction, not rule. A case that uses the OM says so in the first step and never lets the OM enlarge a power in the rules.
 4. **Extend `verify.py` in the same commit.** Every new money figure and date gets an assertion; every new case gets an existence check and a citation check.
 5. **Fix the index in the same pass.** Every clock row must point at a case that actually computes it; a stale cross-reference is worse than no reference.
+6. **Run `validate.py` last, and read its warnings as findings.** It compares the finished HTML with the modules that generated it, so it catches what `verify.py` cannot: a case that lost a step in rendering, an index row that lost its link, an OM cited in the text but missing from the sources.
 
 ---
 
@@ -151,6 +171,7 @@ Rules for a new pass:
 - [ ] marks reconcile everywhere
 - [ ] zero superseded provisions taught as current
 - [ ] `verify.py` exits 0 and its output is quoted in the memo
+- [ ] `validate.py` prints `VALID` with zero errors, and every warning is either fixed or explained in the memo
 - [ ] rebuild is one command, deterministic, and documented
 - [ ] the roster, the register and the memo are committed alongside the book
 

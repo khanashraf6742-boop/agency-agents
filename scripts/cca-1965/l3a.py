@@ -104,8 +104,9 @@ L3A = [
 
     dict(id="L3-03", title="Three years one stage down — pay, increments and pension",
          facts=("Shri C, in Level 7 with basic pay ₹52,000 from 01.07.2025 (increment on 1 July), was imposed the penalty of reduction by one stage for three "
-                "years under r.11(v) with effect from 01.07.2026. The order directs that he shall not earn increments during the period and that the reduction "
-                "shall not postpone his future increments. The reduction was applied to the pay he was drawing immediately before the increment of 01.07.2026 fell due, ₹52,000, so the next lower stage is ₹50,500; the stages above are ₹53,600, ₹55,200, ₹56,900 and ₹58,600. "
+                "years under r.11(v) with effect from 01.07.2026. The penalty order is in the standard form: no increment is to be earned during the three "
+                "years, and what comes after them is not postponed. It was applied to the pay he was drawing immediately before the increment of 01.07.2026 "
+                "fell due, ₹52,000, so the next lower stage is ₹50,500; the stages above are ₹53,600, ₹55,200, ₹56,900 and ₹58,600. "
                 "DA is 63% ⚑. He retires on 30.06.2030."),
          record=[["Pay from 01.07.2025", "₹52,000", "Level 7"],
                  ["Penalty effective", "01.07.2026, 3 years", "r.11(v)"],

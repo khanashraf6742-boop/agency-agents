@@ -136,7 +136,7 @@ L2A = [
     dict(id="L2-05", title="Three clear days — and a witness nobody listed",
          facts=("At the hearing on 12.10.2026 the Presenting Officer closed the departmental evidence. On 19.10.2026 he applied to examine "
                 "one more witness, a cashier whose name was not in the list served with the charge sheet, saying she had been traced late. "
-                "The inquiry authority allowed the application and fixed 27.10.2026. The employee objected that he had had no notice and no "
+                "The inquiry authority allowed the application and fixed 27.10.2026. The employee objected that he had received no notice and no "
                 "statement of the new witness. The authority recorded that he would have “ample time” and proceeded on 27.10.2026."),
          record=[["Departmental evidence closed", "12.10.2026", "—"],
                  ["Application for new witness", "19.10.2026", "not in the original list"],
@@ -190,7 +190,8 @@ L2A = [
          tags=[["14(24)", "Rule 14(24) — completion of the inquiry"], ["15(1)", "Rule 15(1) — remission for further inquiry"]]),
 
     dict(id="L2-07", title="The plea that was never recorded",
-         facts=("At the first hearing on 05.05.2026 the employee produced a written statement denying the charges and said he wished to be heard "
+         facts=("The charge sheet reached the inquiry authority on 22.04.2026; the first hearing was on 05.05.2026, within the ten working days allowed by r.14(7) on any "
+                "view of the May Day holiday. At that hearing the employee produced a written statement denying the charges and said he wished to be heard "
                 "in person. The inquiry authority's order sheet for that date reads: “Charged officer present. He denies the charges. Case adjourned "
                 "to 02.06.2026 for departmental evidence.” At the next hearing the Presenting Officer examined three witnesses. The employee "
                 "cross-examined two and declined the third. The report records that “the charged officer pleaded not guilty”. No signed record of "
@@ -205,7 +206,7 @@ L2A = [
                     "Does it matter that he cross-examined the witnesses?"],
          path=["appearance", "r.14(9) ask guilty or defence", "record plea, sign, obtain signature", "omission = irregular", "cure by recording before findings"],
          steps=[["Issue", "Recording of the plea and its consequences", "14(9)–(10)", 1],
-                ["The duty", "On appearance the inquiry authority must ask whether the employee is guilty or has a defence; if he pleads guilty, the plea must be recorded, signed and countersigned by him", "14(9)", 2],
+                ["The duty", "The employee must appear within ten working days of the authority receiving the charge sheet; on appearance the authority must ask whether he is guilty or has a defence, and if he pleads guilty the plea must be recorded, signed and countersigned by him", "14(9)", 2],
                 ["What happened", "The order sheet records a denial, not an inquiry into the plea; there is no signed record. The duty under r.14(9) was not performed in the manner the rule requires", "14(9)", 2],
                 ["Consequence", "It is an irregularity in the record; since the employee participated, cross-examined and denied the charges, no prejudice arises from the absence of a signed plea, and the findings on the merits stand", "14(9); B. Karunakar (1993)", 2],
                 ["Cure", "Before the report is acted on, the authority should record the plea afresh on the basis of the order sheet, or note the denial expressly in the report", "14(9)–(10), 14(23)", 1],
