@@ -120,6 +120,14 @@ pip install --target /tmp/x2p xhtml2pdf
 PYTHONPATH=/tmp/x2p python3 scripts/cca-1965/pdf.py
 ```
 
+To hand the book to a reader as a **download** rather than a page, serve it with an
+attachment header — `serve.py` stages the deliverables in `/tmp/preview` and adds
+`/download`, which sends the same bytes with `Content-Disposition: attachment`:
+
+```bash
+python3 scripts/cca-1965/serve.py     # / renders the book, /download saves it
+```
+
 `pdf.py` flattens what a PDF cannot do — it drops the toolbar, promotes every `<details>` to a visible block, removes the reveal buttons and keeps the level pill and marks badge off the heading line — then renders A4 with DejaVu (which carries ⚑, ⊘, ⚠ and ₹). The four fonts are copied into `scripts/cca-1965/.fonts/` on first use and are git-ignored; the folder falls back to the system DejaVu if it is missing. Ship the HTML and the PDF together.
 
 It prints `VALID — n assertions, 0 errors, 0 warnings` or a numbered list of failures and exits non-zero. `--quiet` prints only the failures. A warning is not automatically noise: the first run produced 74 errors of which five were real defects and sixty-nine were the validator's own assumptions — every false positive was fixed in the validator, never by loosening the book.
