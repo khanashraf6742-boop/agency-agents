@@ -114,9 +114,13 @@ a fourth the statutory authority.
 
 ## Where the figures come from
 
-* **Rules** — the CCS (Revised Pay) Rules, 2016 as notified on 25 July 2016, Rules 1 to 17 with their Explanations and
-  Notes. The statutory text of each rule is reproduced in the rule library, followed by a plain-language summary that
-  is labelled as a summary rather than passed off as the section itself.
+* **Rules** — the CCS (Revised Pay) Rules, 2016 as notified on 25 July 2016 (G.S.R. 721(E)), Rules 1 to 17 with
+  their Explanations, Notes and Illustrations. Every rule's statutory text is held in **one** place,
+  `build/verbatim.py`, transcribed clause by clause — Rule 7 in full, from (1)(A)(i) through (11), including the four
+  conditions in 10(i)(a)–(d) and both provisos to rule 10(2). The plain-language summary is kept separate from the
+  text and is labelled *In short*, so the two can never be confused for one another. The audit fails the build if any
+  rule's text is not the verbatim text, if rule 7 is missing a sub-rule, or if a question cites a sub-rule that does
+  not exist in the statute.
 * **Matrix** — Part A of the Schedule, all 543 cells, transcribed and then re-derived. The Level 13 column is
   taken from the resolution of 16 May 2017, which raised the index of rationalisation for that Level from 2.57 to 2.67.
 * **Worked illustrations** — the sums printed with rules 7(1)(A), 7(1)(B), 7(2), 9 and 13, each reproduced with its
@@ -135,7 +139,7 @@ pip install -r requirements.txt   # nothing — the build is pure Python 3.8+
 cd build
 python3 paymatrix.py              # self-check: 19 levels, 543 cells, 0 disagreements
 python3 engine.py                 # writes pay.json, matrix.json, rules_out.json
-python3 audit.py                  # 46 checks; exits non-zero on any failure
+python3 audit.py                  # 53 checks; exits non-zero on any failure
 python3 assemble.py               # refuses to write the HTML if the audit fails
 node smoke.js                     # 72 behavioural checks against the built file
 ```

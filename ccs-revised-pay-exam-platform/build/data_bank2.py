@@ -256,25 +256,24 @@ Q("RB-013", "7", "Rule 7(6)", "Merged Levels",
   "Rule 7(6), CCS (Revised Pay) Rules, 2016",
   "Assuming a merger of Levels equalises the pay of the servants in them")
 
-Q("RB-014", "7", "Rule 7(9)", "Pay above the matrix",
-  "A servant's existing basic pay, multiplied by 2.57, exceeds the last cell of his Level. What happens?",
-  "He is fixed at the last cell of the Level",
-  ("He is placed in the next higher Level at the corresponding cell",
-   "A fixation under rule 7(1)(A) never changes the Level of the post; the Level is fixed by rule 4."),
-  ("He is placed at a cell above the last one, created for the purpose",
-   "The matrix has no cells beyond the last one of a column; nothing is created on fixation."),
-  ("His pay is left unrevised until the Level is revised",
-   "Fixation still takes place; the question is where it lands."),
-  "Rule 7(9) covers the servant whose 2.57 figure runs past the top of his Level. He is fixed at the last cell of "
-  "the Level; the matrix cannot take him higher, because the column ends. In practice this is rare — the top cells "
-  "of the lower Levels are high enough for almost every servant — but it is the reason rule 7(9) exists, and the "
-  "reason a pay fixation statement must show the Level's last cell alongside the figure.",
-  "Above the top of the Level: the last cell, and no further.",
-  "Rule 7(9), CCS (Revised Pay) Rules, 2016",
-  "Inventing a cell above the end of the column",
-  level="1", cells=pm.matrix("1")[-3:], marks={"land": 40},
-  table_note="The last three cells of Level 1. Cell 40 is ₹56,900, and the column stops there — a figure above it "
-             "has nowhere in this Level to land.")
+Q("RB-014", "7", "Rule 7(9)", "Personal pay already drawn",
+  "A servant was already receiving personal pay on 24 July 2016. On fixation, that personal pay plus his existing "
+  "emoluments exceed his revised emoluments. Rule 7(9) provides that:",
+  "The excess is allowed as personal pay, absorbed by later increases",
+  ("The personal pay is cancelled on the revised structure coming into force",
+   "Rule 7(9) preserves it; it does not sweep it away with the old structure."),
+  ("The excess is paid as a lump sum once, at the date of notification",
+   "It is personal pay, drawn monthly and absorbed; not a one-off payment."),
+  ("The excess is added to his basic pay in the Level",
+   "Personal pay sits outside the matrix. Only increments move a servant along the cells."),
+  "Rule 7(9) deals with a servant who is already in receipt of personal pay immediately before the date of "
+  "notification. If that personal pay, taken together with his existing emoluments, exceeds his revised "
+  "emoluments, the difference representing the excess is allowed to him as personal pay, to be absorbed in future "
+  "increases in pay. It sits alongside rule 7(7), which does the same where it is the existing emoluments alone "
+  "that exceed the revised emoluments — 7(9) catches the case where it is the personal pay that carries him over.",
+  "Personal pay already drawn: the excess over revised emoluments survives, as absorbable personal pay.",
+  "Rule 7(9), read with rule 7(7), CCS (Revised Pay) Rules, 2016",
+  "Working rule 7(9) as if it dealt with a figure above the top of a Level, which no rule provides for")
 
 Q("RB-015", "7", "Rule 7(11)", "Officiating pay",
   "A servant officiating in a higher post draws less than the pay of the lower post he substantively holds. The rule "

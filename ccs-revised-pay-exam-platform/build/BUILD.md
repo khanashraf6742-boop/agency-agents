@@ -7,7 +7,10 @@ build refuses to write the file if any check fails.
 
 ```
 paymatrix.py          the Pay Matrix as code: 19 Levels, 543 cells, the fitment helpers, and a self-check
-rules.py              Rules 1-17 with their statutory text, a plain-language summary, figures, traps and hooks
+verbatim.py           the statutory text of all 17 rules, transcribed from the gazette in one place.
+                      Rule 7 is given in full, (1)(A)(i) through (11).
+rules.py              the rule cards: figures, traps, hooks and a plain-language summary, drawing their text
+                      from verbatim.py
 data_numeric.py       the numerical set — N() appends one question with its steps, distractors and matrix slice
 data_bank.py          the general bank, written in the rule's own form
 data_bank2.py         the general bank, written the way a paper tests it (negative, sequencing, case files)
@@ -17,7 +20,7 @@ engine.py             shuffles each question's options, balances the key, builds
                       matrix payload -> pay.json, matrix.json, rules_out.json
         |
         v
-audit.py              46 checks. Re-derives every rupee asserted in an answer from paymatrix.py. Refuses to
+audit.py              51 checks. Re-derives every rupee asserted in an answer from paymatrix.py. Refuses to
                       pass a question whose table is not a real slice of the Level it claims, whose key is not
                       unique, or whose options two of which propose the same figure. -> ../AUDIT.md
         |
@@ -36,7 +39,7 @@ smoke.js              72 behavioural checks against the BUILT file in jsdom
 cd build
 python3 paymatrix.py     # the matrix self-check: 19 levels, 543 cells, 0 disagreements
 python3 engine.py        # build the JSON
-python3 audit.py         # 46 checks; exits non-zero on failure
+python3 audit.py         # 53 checks; exits non-zero on failure
 python3 assemble.py      # refuses to write the HTML if the audit failed
 node smoke.js            # 72 checks against the built HTML
 ```
@@ -56,7 +59,13 @@ recomputes the sum from the stem's inputs and compares. `pm.next_higher_cell("4"
 and `"32,300" in key("PY-001")` are two halves of one assertion — either half alone could pass while the item was
 wrong.
 
-**3. A table may only mark a cell it can defend.** A question's `marks` name the cell the reader starts from and the
+**3. A summary can never pass itself off as the section.** Every rule's text comes from `verbatim.py`, and the
+audit asserts that fact three ways: the `verbatim` flag on each rule, the presence of every sub-rule of rule 7, and
+the absence of the phrasing that gave away the first draft's paraphrases. It then checks that no question cites a
+sub-rule the statute does not contain — which is how the draft's citation of "rule 7(9)" for a case rule 7(9) does
+not cover was caught. The summaries live in a separate `bare` field, rendered under an *In short* label.
+
+**4. A table may only mark a cell it can defend.** A question's `marks` name the cell the reader starts from and the
 cell he lands on. The audit asserts that both are real cells of the Level displayed, that the cell NUMBER is right,
 and that the note actually discusses the figure — because the first version of this build marked a "pay before" cell
 in the *destination* Level of a promotion, where that pay does not exist.

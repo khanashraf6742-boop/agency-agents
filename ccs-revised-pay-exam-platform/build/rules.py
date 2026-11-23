@@ -8,6 +8,8 @@ rule as notified or the position as it now stands.
 """
 from __future__ import annotations
 
+from verbatim import TEXT as VERBATIM
+
 RULES = [
     dict(no="1", title="Short title and commencement",
          chapter="I",
@@ -295,6 +297,13 @@ RULES = [
          trap="Sending an interpretation question to the President.",
          hooks=["interpretation", "Central Government"]),
 ]
+
+# The statutory text is held in verbatim.py, one string per rule, transcribed from the
+# gazette. Anything in this file's `text` field is a placeholder; the real text wins.
+for _r in RULES:
+    if _r["no"] in VERBATIM:
+        _r["text"] = VERBATIM[_r["no"]]
+    _r["verbatim"] = _r["no"] in VERBATIM
 
 CHAPTERS = [
     ("I", "Preliminary and definitions", "Rules 1 and 3"),
