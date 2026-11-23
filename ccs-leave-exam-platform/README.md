@@ -9,11 +9,11 @@ from the network and no server is needed.
 | Datasets | Count | What they are |
 | --- | --- | --- |
 | Rule cards | 69 | Rules 1–66 plus 38‑A, 39‑A to 39‑D, 43‑A, 43‑AA, 43‑B, 43‑C — bare text, plain explanation, Hinglish gloss, requirements, exceptions, authority, key figures, cross‑references and the exam trap |
-| MCQs | 682 | Four options, one key, a full explanation in the pension-platform layout (Answer → Steps & Statutory Rationale → Why the others are wrong → Exam-safe point → Statutory Authority) |
+| MCQs | 700 | Four options, one key, a full explanation in the pension-platform layout (Answer → Steps & Statutory Rationale → Why the others are wrong → Exam-safe point → Statutory Authority) |
 | Numerical 80 | 80 | A separate set of every arithmetic question in the book, each with a three-step worked solution and a note on which mistake produces each wrong option. Also published as `Numerical-80-CCS-Leave-Rules-1972.md` |
 | Flashcards | 341 | Rule identification (69), key figures (65), competent authorities (67), definitions (10) and exam traps (130) |
 | Revision modules | 40 | Every rule in the book, grouped into microlearning cards with a mnemonic |
-| CBT papers | 31 | Chapter tests, focused rule tests, numeric drills, clause audits, case-file papers, five 100-question full lengths, plus a statement/negative/sequence drill and a timed run at the Numerical 80 |
+| CBT papers | 31 | Chapter tests, focused rule tests, numeric drills, clause audits, case-file papers, five 100-question full lengths, plus a statement/negative/sequence drill, a timed run at the Numerical 80 and an eighteen-question paper on the highest-yield gaps |
 | Comparative tables | 28 | Leave salary by type, the combination matrix, the register of deleted rules, the First Schedule, all forms |
 | Case files | 20 | Establishment files with facts, issue, correct action, authority and the point to carry away |
 | Forms | 11 | Forms I–X with the rule, signatory and timing of each |
@@ -93,6 +93,16 @@ The first edition tested rules well but under-tested *format*. These were added:
 | `SEQ-` | 8 | Items where the *order* of the steps is the test — regularisation, encashment, commutation checks, the study-leave exit |
 | `HL-` | 10 | The headline figures (730, 360, 90, 28, 18, 12, 3, 10, 5, 300) one rule at a time |
 | `WORK-` | 9 | The study guide's own nine hardest trap-cases, converted from worked examples into questions |
+
+A later pass added **eighteen more of the most examinable points still thin in the bank**, taking it from 682 to
+700: leave preparatory to retirement and what it is made of (Rule 38), the recovery proviso on commuted leave
+(Rule 30(2)), the pay rate for each kind of leave (Rule 40), advance of leave salary (Rule 42), the interest
+refund when LTC is not availed (Rule 38-A), the order of payment under Rule 39-C, invalidation for a temporary
+servant (Rule 39-B(2)), absorption in a PSU (Rule 39-D), seamen's sick leave (Rule 47), a refused commutation
+(Rule 30(1)(a)), the pension test for re-employment (Rule 34), Form 1 (Rule 14), the 60-day provisional sanction
+(Rule 16), the two ends of leave (Rule 21), prefixed and suffixed holidays (Rule 22), the Vacation Department
+fraction (Rule 28(1)(b)), the male adoption route (Rule 43-AA) and the WRIIL half pay tail (Rule 44(2)(a)).
+They form CBT paper **MOCK-32**.
 
 ## Licence and caution
 

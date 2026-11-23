@@ -122,3 +122,43 @@ node smoke.js            # end-to-end UI test
   `MISC-01..03`, and the engine asserts unique ids.
 * MOCK-31 draws its 40 questions from `num80.json`, so those ids are registered in `MCQS_MAP` as well as
   `NUM80_MAP`. Any new paper that uses the numerical set must do the same.
+
+## Third pass — the last eighteen (682 → 700)
+
+Eighteen questions were added to `data_plus.py` in a final block, each chosen because a high-yield rule was thin
+in the bank or was being tested only through the rule-map families:
+
+| Id | Rule | Point tested |
+| --- | --- | --- |
+| `LPR-05` | 38 | what LPR is composed of; EOL excluded by the Note |
+| `COM-05` | 30(2) | conversion and recovery where the servant resigns after commuted leave |
+| `EW-05` | 40 | full pay / half pay rates across EL, commuted and HPL |
+| `ADV-01` | 42 | advance of leave salary, 30-day threshold, one month's pay |
+| `LTC-08` | 38-A | refund with interest at PF + 2% where the LTC is not availed |
+| `DEATH-03` | 39-C | the order in which the cash equivalent is paid |
+| `INV-03` | 39-B(2) | no HPL leg on invalidation for a temporary servant |
+| `PSU-03` | 39-D | earned leave only on absorption |
+| `SEA-03` | 47 | seaman's two limbs |
+| `COM-06` | 30(1)(a) | refused commutation falls back to ordinary HPL |
+| `EW-06` | 34 | the pension test for re-employment |
+| `FORM-05` | 14 | Form 1 for leave and for extension |
+| `ORD-03` | 16 | provisional sanction of 60 days |
+| `EW-07` | 21(1) | leave ends the day before charge is resumed |
+| `EW-08` | 22 | prefixed/suffixed holidays, automatic on medical certificate |
+| `VAC-01` | 28(1)(b) | the 20-day fraction for vacation not taken |
+| `ADP-03` | 43-AA | the male route on adoption: 15 days within six months |
+| `WRIIL-07` | 44(2)(a) | the half pay tail converted at an equal HPL debit |
+
+Two lessons worth keeping:
+
+* **Chapter codes are a taxonomy, not the rule's chapter number.** `IV-A` holds Rules 26–42 and `IV-C` holds
+  Rules 38-A to 39-D; assigning by the statutory chapter puts a question in the wrong filter. Check an existing
+  question on the same rule before choosing the code (`LS-01` for Rule 40, `SEA-01` for Rule 47, `LTC-01` for
+  Rule 38-A).
+* **A correct option that is also the longest option is a free mark.** Thirteen of these eighteen were written
+  that way on the first pass. The fix is always the same: shorten the key to its bare proposition and lengthen
+  the distractors with the plausible reason a candidate would invent. `smoke_audit.py` now fails the build if
+  the share of such questions across the bank rises above 55%.
+
+`MOCK-32` draws exactly these eighteen, so the paper and the block cannot drift apart; `smoke.js` scores it to
+18/18 and asserts the bank is 700.
