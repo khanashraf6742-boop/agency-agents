@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CCS (Revised Pay) Rules, 2016 — Pay Matrix, Fixation &amp; Practice Platform</title>
+<meta name="description" content="The CCS (Revised Pay) Rules, 2016 with the full 543-cell Pay Matrix: every rule, 50 worked questions, a matrix excerpt inside every question that turns on a figure, four calculators and four timed papers.">
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="app-header">
+  <div class="header-wrap">
+    <div class="header-title-box">
+      <svg class="header-emblem" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
+        <rect x="5" y="6" width="38" height="36" rx="3" stroke="#f59e0b" stroke-width="2.5" fill="#1e3a8a"/>
+        <path d="M5 16h38M17 16v26M29 16v26M5 27h38" stroke="#f59e0b" stroke-width="1.6" opacity=".85"/>
+        <rect x="18" y="28" width="10" height="7" fill="#fef3c7"/>
+        <rect x="30.5" y="18.5" width="10" height="6.5" fill="#f59e0b"/>
+      </svg>
+      <div class="header-title">
+        <h1>CCS (REVISED PAY) RULES, 2016</h1>
+        <p>The Pay Matrix, fixation, the option and the increment — rule by rule</p>
+      </div>
+    </div>
+    <div class="header-badges">
+      <div class="badge-chip gold">543 matrix cells, each regenerated at 3% and checked</div>
+      <div class="badge-chip">Level 13 as re-cast on 16.05.2017</div>
+    </div>
+    <div class="header-actions">
+      <button class="btn-hdr" id="btnTheme" onclick="toggleTheme()" title="Toggle light and dark theme">🌙 Dark</button>
+      <button class="btn-hdr" onclick="exportProgress()" title="Download a JSON backup of your progress">💾 Export</button>
+      <label class="btn-hdr" for="importFile" title="Restore progress from a JSON backup">
+        📂 Import<input type="file" id="importFile" class="visually-hidden" accept=".json"
+          onchange="importProgress(event)" aria-label="Choose a backup file">
+      </label>
+      <button class="btn-hdr" onclick="window.print()" title="Print the current view">🖨️ Print</button>
+    </div>
+  </div>
+</header>
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand"><span class="sidebar-brand-mark" aria-hidden="true">₹</span>
+      <span><b>Pay Rules</b><small>CCS (RP) · 2016</small></span></div>
+    <div class="sidebar-progress">
+      <div class="side-progress-top"><span>Question bank</span><b id="sideProgressPercent">0%</b></div>
+      <div class="progress-track"><span id="sideProgressFill"></span></div>
+      <small id="sideProgressText">0 / 0 questions seen</small>
+    </div>
+    <nav aria-label="Primary navigation">
+      <div class="nav-group-title">HOME</div>
+      <button class="nav-btn active" data-view="dash"><span class="icon">⌂</span> Dashboard</button>
+      <button class="nav-btn" data-view="rules"><span class="icon">§</span> Rule library <span class="cnt" data-count="rules"></span></button>
+      <div class="nav-group-title">THE MATRIX</div>
+      <button class="nav-btn" data-view="matrix"><span class="icon">▦</span> The full Pay Matrix</button>
+      <button class="nav-btn" data-view="lab"><span class="icon">∑</span> Fixation lab</button>
+      <div class="nav-group-title">PRACTISE</div>
+      <button class="nav-btn" data-view="bank"><span class="icon">✓</span> Question bank <span class="cnt" data-count="pay"></span></button>
+      <button class="nav-btn" data-view="numerical"><span class="icon">₹</span> Numerical set <span class="cnt" data-count="num"></span></button>
+      <button class="nav-btn" data-view="mock"><span class="icon">▣</span> Timed papers <span class="cnt" data-count="papers"></span></button>
+      <button class="nav-btn" data-view="mistakes"><span class="icon">↻</span> Mistake notebook</button>
+      <div class="nav-group-title">REFERENCE</div>
+      <button class="nav-btn" data-view="settings"><span class="icon">⚙</span> Sources &amp; settings</button>
+    </nav>
+  </aside>
+
+  <main class="main-view" id="main-content" tabindex="-1">
+
+    <!-- ============================================ DASHBOARD -->
+    <section class="view-panel active" id="view-dash">
+      <div class="dash-heading">
+        <div>
+          <p class="dash-eyebrow">YOUR PREPARATION HOME</p>
+          <h2>One matrix, 543 cells, seventeen rules.</h2>
+          <p>Every question in this file that turns on a figure carries the slice of the Pay Matrix it turns on — the real
+            cells, with their cell numbers, and the cell it lands on marked.</p>
+        </div>
+        <div class="dash-heading-actions">
+          <button class="btn-secondary" onclick="switchView('matrix')">Open the Pay Matrix</button>
+          <button class="btn-primary" onclick="switchView('numerical')">Start the numerical set →</button>
+        </div>
+      </div>
+
+      <div class="dash-hero-grid">
+        <section class="dash-hero">
+          <div class="dash-hero-copy">
+            <span class="hero-kicker"><span class="hero-kicker-dot"></span> GRANULAR PRECISION</span>
+            <h3>The rule, the cell, and the rupee.</h3>
+            <p><span data-count="pay"></span> questions — <span data-count="num"></span> of them worked numericals —
+              across all <span data-count="rules"></span> rules. Each numerical is solved step by step, and each matrix
+              question shows the column of the Schedule it depends on. Nothing here is rounded "about"; the matrix is
+              held cell by cell and re-derived before the file is built.</p>
+            <div class="hero-actions">
+              <button class="btn-primary" onclick="setBankFilter('UNSEEN'); switchView('bank')">Start with unseen questions</button>
+              <button class="btn-secondary" onclick="switchView('lab')">Work a fixation yourself</button>
+            </div>
+          </div>
+          <div class="hero-facts">
+            <div><b id="dashAttempted">0</b><span>questions attempted</span></div>
+            <div><b id="dashAccuracy">—</b><span>accuracy so far</span></div>
+            <div><b id="dashCoverage">0%</b><span>bank covered</span></div>
+            <div><b id="dashMistakes">0</b><span>in the mistake notebook</span></div>
+            <div><b id="dashTableCount">0</b><span>matrix excerpts</span></div>
+            <div><b id="dashNumericCount">0</b><span>worked numericals</span></div>
+          </div>
+        </section>
+        <section class="dash-readiness">
+          <div class="readiness-top">
+            <div class="readiness-icon">◎</div>
+            <div>
+              <h3>Coverage</h3>
+              <p class="readiness-footnote">of the question bank</p>
+            </div>
+          </div>
+          <div class="prep-ring" id="dashRing"><span id="dashRingLabel">0%</span></div>
+          <div class="progress-track" style="margin-top:12px"><span id="dashProgressFill"></span></div>
+          <p class="readiness-footnote">Counts every question you have answered or revealed, once.</p>
+        </section>
+      </div>
+
+      <h3 class="dash-section-heading">What to do next</h3>
+      <div class="stat-card" style="border-left:4px solid var(--gold)">
+        <div id="dashRecommendation" style="font-size:.92rem">Reading your progress…</div>
+      </div>
+
+      <div class="dash-hero-grid" style="margin-top:18px">
+        <section class="stat-card">
+          <h3 style="font-size:1rem;margin-bottom:8px">The five facts that carry the paper</h3>
+          <div class="sum">
+            <div class="sum-row"><span class="k">Fitment factor<span class="why">Rule 7(1)(A)(i)</span></span><span class="v">2.57</span></div>
+            <div class="sum-row"><span class="k">Product rounded to<span class="why">then located in the Level</span></span><span class="v">nearest ₹1</span></div>
+            <div class="sum-row"><span class="k">Pay fixed at<span class="why">never a lower cell</span></span><span class="v">equal / next higher</span></div>
+            <div class="sum-row"><span class="k">Increment<span class="why">Rule 9</span></span><span class="v">one vertical cell</span></div>
+            <div class="sum-row"><span class="k">Promotion increment<span class="why">Rule 13(i)</span></span><span class="v">in the OLD Level</span></div>
+          </div>
+        </section>
+        <section class="stat-card">
+          <h3 style="font-size:1rem;margin-bottom:8px">Study shortcuts</h3>
+          <div class="shell-list" style="grid-template-columns:1fr">
+            <button class="shortcut-card" onclick="switchView('matrix')"><span>▦</span><span><b>The full Pay Matrix</b><br>
+              <small>All nineteen Levels, every cell, aligned so a row can be read across.</small></span></button>
+            <button class="shortcut-card" onclick="switchView('lab')"><span>∑</span><span><b>Fixation lab</b><br>
+              <small>Fit a basic pay, take an increment, work a promotion, run the NPA route.</small></span></button>
+            <button class="shortcut-card" onclick="switchView('rules')"><span>§</span><span><b>Rule library</b><br>
+              <small>Bare text, the working, the figures and the trap, rule by rule.</small></span></button>
+          </div>
+        </section>
+      </div>
+
+      <h3 class="dash-section-heading">Rule map</h3>
+      <div class="table-wrap"><table class="mini-table">
+        <thead><tr><th>Rule</th><th>Title</th><th>Questions</th><th>Seen</th><th>Accuracy</th><th></th></tr></thead>
+        <tbody id="dashChapterRows"></tbody>
+      </table></div>
+    </section>
+
+    <!-- ============================================ RULES -->
+    <section class="view-panel" id="view-rules">
+      <div class="sec-hd">
+        <div><h2>Rule library — Rules 1 to 17</h2>
+          <p>The bare text of each rule, the reason it is drawn that way, the figures it fixes, and the trap an examiner builds on it.</p></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-secondary" onclick="expandAllRules()">Expand all</button>
+          <button class="btn-secondary" onclick="collapseAllRules()">Collapse all</button>
+        </div>
+      </div>
+      <div class="filter-bar">
+        <input class="search-input" id="ruleSearch" type="search" placeholder="Search the rule text, a figure, or a trap…" aria-label="Search rules">
+        <select class="filter-select" id="ruleChapter" onchange="ruleFilters()" aria-label="Filter rules by chapter"></select>
+        <span class="pill" id="ruleCount">rule cards</span>
+      </div>
+      <div id="rulesList" style="display:flex;flex-direction:column;gap:14px;margin-top:14px"></div>
+    </section>
+
+    <!-- ============================================ MATRIX -->
+    <section class="view-panel" id="view-matrix">
+      <div class="sec-hd">
+        <div><h2>The Pay Matrix</h2>
+          <p>The Schedule to the Rules in full: <b id="mxLevelCount">19</b> Levels and <b id="mxCellCount">543</b> cells.
+            Each column is 3 per cent of the cell above it, rounded to the nearest ₹100, which is why the rupee step drifts
+            from ₹800 to ₹900 without any cell breaking the pattern.</p></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-secondary" onclick="window.print()">🖨️ Print the matrix</button>
+        </div>
+      </div>
+      <div class="mx-legend">
+        <span><i style="background:var(--primary)"></i>Level caption</span>
+        <span><i style="background:var(--gold-light)"></i>Level 13 cells re-cast on 16.05.2017</span>
+        <span><i style="background:var(--panel-subtle)"></i>· = the column ends before this cell number</span>
+      </div>
+      <div id="mxTableWrap"></div>
+      <div class="danger-note" style="margin-top:14px">
+        <b>Read the footer, not just the cell.</b> Levels 11 and 12 stop at 39 and 34 cells; Levels 13A to 18 are short
+        columns. A figure that looks like it belongs to a Level may simply not be a cell of it — which is exactly the
+        point rule 7(1)(A) turns on.
+      </div>
+      <div class="stat-card" style="margin-top:18px">
+        <h3 style="font-size:1rem;margin-bottom:10px">How the matrix was built, and how it is checked</h3>
+        <div class="schema-row"><b>fitment factor</b><span>2.57 for Levels 1 to 5, 2.62 for Levels 6 to 8 and 13A, 2.67 for Levels 9 to 13 and 14, 2.72 for Level 15, 2.78 for Level 16 — the factor used to arrive at each Level's first cell from the 6th CPC entry pay.</span></div>
+        <div class="schema-row"><b>cell rule</b><span>each cell is 3 per cent of the cell immediately above it, rounded to the nearest ₹100. Rounding UP to the next ₹100 desynchronises eighteen of the nineteen columns, so the nearest-₹100 form is the operative one.</span></div>
+        <div class="schema-row"><b>the check</b><span>every one of the 543 printed cells is regenerated from its Level's first cell and compared. The build fails on a single disagreement, and the table above is drawn only from cells that pass.</span></div>
+        <div class="schema-row"><b>Level 13</b><span>notified at ₹1,18,500; re-cast by the resolution of 16.05.2017 following the 2.67 factor, from ₹1,23,100. The gap widens from ₹4,600 at cell 1 to ₹8,000 at cell 20, and is marked in gold above.</span></div>
+      </div>
+    </section>
+
+    <!-- ============================================ LAB -->
+    <section class="view-panel" id="view-lab">
+      <div class="sec-hd">
+        <div><h2>Fixation lab</h2>
+          <p>Four calculators that do what the rules do, in the order the rules do it: fit a basic pay, take an increment,
+            fix a promotion, and run the NPA route. Each one shows its working, not just its answer.</p></div>
+      </div>
+      <div class="tip-note"><b>Type a basic pay, not a cell number.</b> The lab reads the real matrix, so it will refuse a figure that
+        is not a cell of the Level you have chosen — which is the discipline rule 7(1)(A) demands.</div>
+      <div class="calc-grid" style="margin-top:16px">
+
+        <div class="calc-card">
+          <h3 style="font-size:1rem;margin-bottom:10px">Fit a basic pay — Rule 7(1)(A)</h3>
+          <div class="calc-input-group"><label for="labPay">Pay in the Pay Band (₹)</label>
+            <input type="number" id="labPay" value="10160" min="0" step="10" oninput="labFitment()"></div>
+          <div class="calc-input-group"><label for="labGP">Grade Pay (₹)</label>
+            <select id="labGP" onchange="labFitment()"></select></div>
+          <div class="calc-input-group"><label for="labLevel">Level</label>
+            <select id="labLevel" onchange="labFitment()"></select></div>
+          <div class="calc-res-box"><div class="calc-res-lbl">Result</div>
+            <div id="labFitOut" class="calc-out" style="font-size:.86rem;line-height:1.55"></div></div>
+          <div class="ladder" id="labFitBar"></div>
+        </div>
+
+        <div class="calc-card">
+          <h3 style="font-size:1rem;margin-bottom:10px">Take an increment — Rule 9</h3>
+          <div class="calc-input-group"><label for="labIncLevel">Level</label>
+            <select id="labIncLevel" onchange="labIncrement()"></select></div>
+          <div class="calc-input-group"><label for="labIncPay">Pay drawn (₹)</label>
+            <input type="number" id="labIncPay" value="32300" min="0" step="100" oninput="labIncrement()"></div>
+          <div class="calc-res-box"><div class="calc-res-lbl">Result</div>
+            <div id="labIncOut" class="calc-out" style="font-size:.86rem;line-height:1.55"></div></div>
+          <div class="ladder" id="labIncBar"></div>
+        </div>
+
+        <div class="calc-card">
+          <h3 style="font-size:1rem;margin-bottom:10px">Fix a promotion — Rule 13(i)</h3>
+          <div class="calc-input-group"><label for="labPromFrom">Promoted from</label>
+            <select id="labPromFrom" onchange="labPromotion()"></select></div>
+          <div class="calc-input-group"><label for="labPromTo">Promoted to</label>
+            <select id="labPromTo" onchange="labPromotion()"></select></div>
+          <div class="calc-input-group"><label for="labPromPay">Pay drawn before promotion (₹)</label>
+            <input type="number" id="labPromPay" value="28700" min="0" step="100" oninput="labPromotion()"></div>
+          <div class="calc-res-box"><div class="calc-res-lbl">Result</div>
+            <div id="labPromOut" class="calc-out" style="font-size:.86rem;line-height:1.55"></div></div>
+          <div class="ladder" id="labPromBar"></div>
+        </div>
+
+        <div class="calc-card">
+          <h3 style="font-size:1rem;margin-bottom:10px">The NPA route — Rule 7(1)(B)</h3>
+          <div class="calc-input-group"><label for="labNpaPay">Existing basic pay (₹)</label>
+            <input type="number" id="labNpaPay" value="21000" min="0" step="100" oninput="labNpa()"></div>
+          <div class="calc-input-group"><label for="labNpaPct">NPA as a percentage of basic pay</label>
+            <input type="number" id="labNpaPct" value="25" min="0" max="100" oninput="labNpa()"></div>
+          <div class="calc-res-box"><div class="calc-res-lbl">Result</div>
+            <div id="labNpaOut" class="calc-out" style="font-size:.86rem;line-height:1.55"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ BANK -->
+    <section class="view-panel" id="view-bank">
+      <div class="sec-hd">
+        <div><h2>Question bank</h2><p id="bankScope">Showing all seventeen rules</p></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">
+          <button class="mcq-act-btn" data-filter="ALL" onclick="setBankFilter('ALL')">All</button>
+          <button class="mcq-act-btn" data-filter="UNSEEN" onclick="setBankFilter('UNSEEN')">Unseen</button>
+          <button class="mcq-act-btn" data-filter="NUMERICAL" onclick="setBankFilter('NUMERICAL')">Numericals</button>
+          <button class="mcq-act-btn" data-filter="MATRIX" onclick="setBankFilter('MATRIX')">With a matrix</button>
+          <button class="mcq-act-btn" data-filter="MISTAKES" onclick="setBankFilter('MISTAKES')">Mistakes</button>
+          <button class="mcq-act-btn" data-filter="BOOKMARKS" onclick="setBankFilter('BOOKMARKS')">Bookmarked</button>
+        </div>
+      </div>
+      <div class="filter-bar">
+        <input class="search-input" id="bankSearch" type="search" placeholder="Search the stem, a figure or the solution…" aria-label="Search questions">
+        <select class="filter-select" id="bankRule" onchange="bankFilters()" aria-label="Filter by rule"></select>
+        <span class="pill" id="bankCount">0 questions</span>
+      </div>
+      <div id="bankList" style="display:flex;flex-direction:column;gap:14px;margin-top:14px"></div>
+      <div id="bankPager" style="display:flex;gap:10px;justify-content:center;align-items:center;margin-top:18px"></div>
+    </section>
+
+    <!-- ============================================ NUMERICAL -->
+    <section class="view-panel" id="view-numerical">
+      <div class="sec-hd">
+        <div><h2>The numerical set — every figure worked out</h2>
+          <p>Fitment, increments, the increment date, promotion, MACP, the option, direct recruitment and the Level 13
+            re-cast. Each carries its matrix column and a step-by-step solution written the way the rule reads.</p></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn-secondary" onclick="exportNumerical()">⬇ Download as a text file</button>
+          <button class="btn-secondary" onclick="window.print()">🖨️ Print / save as PDF</button>
+        </div>
+      </div>
+      <div class="filter-bar">
+        <input class="search-input" id="numSearch" type="search" placeholder="Search the numerical set…" aria-label="Search the numerical set">
+        <button class="mcq-act-btn" data-n="ALL" onclick="setNumFilter('ALL')">All</button>
+        <button class="mcq-act-btn" data-n="UNSEEN" onclick="setNumFilter('UNSEEN')">Not yet done</button>
+        <button class="mcq-act-btn" data-n="MISTAKES" onclick="setNumFilter('MISTAKES')">Got wrong</button>
+        <button class="mcq-act-btn" data-n="STEPS" onclick="setNumFilter('STEPS')">Show all steps</button>
+        <span class="pill" id="numCount"></span>
+        <span class="pill ok" id="numScore"></span>
+      </div>
+      <div class="tip-note"><b>Work it with the solution closed.</b> Then read the steps: each one is a clause of the rule, in
+        the order the clause applies. The line that tells you where each wrong option comes from is the one worth remembering —
+        it is the mistake the paper is built to catch.</div>
+      <div id="numericalList" style="display:flex;flex-direction:column;gap:14px;margin-top:14px"></div>
+    </section>
+
+    <!-- ============================================ MOCK -->
+    <section class="view-panel" id="view-mock">
+      <div class="sec-hd">
+        <div><h2 id="mockHeading">Timed papers</h2>
+          <p id="mockSubheading">Four papers generated from the bank itself, each weighted so that at least a third of the
+            questions are arithmetic. The matrix comes with the question, as it does in the practice bank.</p></div>
+      </div>
+      <div class="cbt-bar" id="cbtBar" hidden>
+        <div class="cbt-bar-left"><b id="cbtName"></b><span class="fc-progress" id="cbtProgress"></span></div>
+        <div class="cbt-bar-right">
+          <span class="cbt-timer">⏱ <span id="cbtTimer">00:00</span></span>
+          <button class="btn-primary" onclick="finishPaper()">Submit the paper</button>
+          <button class="btn-secondary" onclick="abandonPaper()">Leave</button>
+        </div>
+      </div>
+      <div id="cbtResult"></div>
+      <div id="cbtList"></div>
+      <div id="mockList" style="display:flex;flex-direction:column;gap:14px"></div>
+    </section>
+
+    <!-- ============================================ MISTAKES -->
+    <section class="view-panel" id="view-mistakes">
+      <div class="sec-hd">
+        <div><h2>Mistake notebook</h2>
+          <p><b id="mistakeCount">0</b> question(s) answered wrongly or revealed. They stay here until you get them right.</p></div>
+        <button class="btn-secondary" onclick="clearMistakes()">Empty the notebook</button>
+      </div>
+      <div id="mistakesList" style="display:flex;flex-direction:column;gap:14px"></div>
+    </section>
+
+    <!-- ============================================ SETTINGS -->
+    <section class="view-panel" id="view-settings">
+      <div class="sec-hd">
+        <div><h2>Sources and settings</h2>
+          <p>What is in this file, where every figure comes from, and what it deliberately does not do.</p></div>
+      </div>
+      <div class="stat-card" style="border-left:4px solid var(--bad)">
+        <h3 style="font-size:1.05rem;margin-bottom:8px">Read this before you rely on a figure</h3>
+        <p style="font-size:.9rem;line-height:1.6">
+          This is a study aid, not a consolidated statute and not legal advice. The rule text follows the CCS (Revised Pay)
+          Rules, 2016 as notified on 25 July 2016; the matrix follows Part A of the Schedule, with the Level 13 column taken
+          from the resolution of 16 May 2017. Where a later order moves a figure, the later order governs to the extent of
+          the difference. Verify any operative figure against the bare rules before using it in an office order.
+        </p>
+      </div>
+      <div class="dash-hero-grid" style="margin-top:18px">
+        <section class="stat-card">
+          <h3 style="font-size:1rem;margin-bottom:8px">What is in this file</h3>
+          <div id="settingsStats"></div>
+        </section>
+        <section class="stat-card">
+          <h3 style="font-size:1rem;margin-bottom:8px">Data and privacy</h3>
+          <p style="font-size:.88rem;line-height:1.6">Everything runs offline in the browser. Your answers, bookmarks and
+            paper results live in this browser's local storage and never leave the device. Use <b>Export</b> to keep a
+            copy and <b>Import</b> to move it to another machine.</p>
+          <div class="pill-row">
+            <button class="btn-secondary" onclick="exportProgress()">Export progress</button>
+            <button class="btn-secondary" onclick="resetEverything()" style="color:var(--bad)">Reset everything</button>
+          </div>
+        </section>
+      </div>
+      <h3 class="dash-section-heading" style="margin-top:22px">Amendment register — every figure that has moved</h3>
+      <div class="stat-card"><div id="amendList"></div></div>
+      <div class="stat-card" style="margin-top:18px">
+        <h3 style="font-size:1rem;margin-bottom:10px">Source map</h3>
+        <div class="schema-row"><b>Bare rule text</b><span>CCS (Revised Pay) Rules, 2016, Rules 1 to 17 — reproduced clause by clause, with the Explanations and the Notes that carry the operative detail.</span></div>
+        <div class="schema-row"><b>The Pay Matrix</b><span>Part A of the Schedule, all 543 cells, plus the Level 13 column as re-cast on 16.05.2017. Each cell is regenerated at 3 per cent and checked at build time.</span></div>
+        <div class="schema-row"><b>Worked examples</b><span>The illustrations printed with rules 7(1)(A), 7(1)(B), 7(2), 9, 10(2) and 13 — reproduced with their rupees, then re-derived from the matrix.</span></div>
+        <div class="schema-row"><b>Instruments that moved a figure</b><span>The resolution of 16.05.2017 (Level 13) and the order on increment dates under rule 10. Both are recorded in the amendment register on the rule library.</span></div>
+        <div class="schema-row"><b>Deliberately excluded</b><span>State rules, the All India Services, and anything fixed only by an individual office order. Rule 2 excludes those categories from this rule-book.</span></div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>/*__DATA__*/</script>
+<script>/*__APP__*/</script>
+</body>
+</html>

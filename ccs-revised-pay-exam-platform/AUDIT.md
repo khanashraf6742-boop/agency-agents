@@ -1,0 +1,89 @@
+# Audit — CCS (Revised Pay) Rules, 2016
+
+- Questions: **89** (23 worked numericals, 66 general)
+- Questions carrying a pay-matrix table: **30**
+- Pay-matrix cells held and verified: **543**
+- Rules reproduced: **17**
+
+All checks passed:
+
+- PASS — every level regenerates from its first cell by 3% rounded to the nearest ₹100
+- PASS — the matrix has 19 levels and 543 cells
+- PASS — Level 13 as notified begins at 1,18,500 and today begins at 1,23,100
+- PASS — the two Level 13 columns are the same length
+- PASS — every level's first cell is its IOR applied to the 6th CPC entry pay and rationalised
+- PASS — Level 17 and Level 18 are single fixed cells
+- PASS — ids are unique
+- PASS — every question has four distinct options
+- PASS — the key letter matches the explanation's answer line
+- PASS — no two questions share a stem
+- PASS — no question makes its key the longest option
+- PASS — the answer key is balanced to within one question per letter
+- PASS — every question cites an authority
+- PASS — every question names a trap
+- PASS — the work is shown in every numerical answer
+- PASS — every numerical that quotes a rupee figure carries the matrix it turns on
+- PASS — at least a quarter of the bank carries a pay-matrix table
+- PASS — every table row is a real cell, with the correct cell number
+- PASS — a question that carries a table also names the level it comes from
+- PASS — fitment 12,560 × 2.57 lands on ₹32,300 at cell 9 of Level 4
+- PASS — fitment 8,000 × 2.57 = 20,560 lands on ₹20,900, cell 6 of Level 1
+- PASS — a product below the first cell takes the first cell (rule 7(1)(A)(ii))
+- PASS — the increment from ₹32,300 in Level 4 is ₹33,300, a rise of ₹1,000
+- PASS — 3% of ₹32,300 is ₹969, so the increment is not a flat percentage
+- PASS — the top of Level 1 is ₹56,900 and has no next cell
+- PASS — promotion 28,700 from Level 4 goes 29,600 → ₹30,100 at cell 2 of Level 5
+- PASS — promotion 44,900 from Level 7 lands on ₹47,600 in Level 8
+- PASS — MACP 30,500 from Level 4 lands on ₹31,900 in Level 5
+- PASS — the promotion option re-fixes 30,500 at ₹32,900 after two increments to ₹32,300
+- PASS — a direct recruit in Level 7 starts at ₹44,900
+- PASS — Level 13: ₹1,18,500 as notified and ₹1,23,100 today
+- PASS — the Level 13 gap is ₹4,600 at cell 1 and ₹8,000 at cell 20
+- PASS — the Level 13 gap at cell 4 is ₹4,900 (1,29,600 → 1,34,500)
+- PASS — the gap widens monotonically down the column
+- PASS — Level 4 cell 1→2 is a ₹800 step although 3% is ₹765
+- PASS — Level 4 steps drift: 800, 800, 800, 800, 900, 900
+- PASS — Grade Pay ₹5,400 opens Level 9 at ₹53,100 and Level 10 at ₹56,100
+- PASS — the upgraded-post illustration 12,960 × 2.57 = 33,307 lands on ₹33,900, cell 6 of Level 5
+- PASS — the NPA illustration 21,000 × 2.57 + DA on NPA = 60,533 lands on ₹61,300, cell 4 of Level 10
+- PASS — 44,900 × 2.57 = 1,15,393 lands on ₹1,15,500, cell 19 of Level 11
+- PASS — MACP from 35,400 in Level 6: step to 36,500, then the first cell of Level 7, ₹44,900
+- PASS — the option's two increments in Level 4: 30,500 → 31,400 → 32,300, re-fixed at ₹32,900
+- PASS — the fitment factor 2.57 is a rise of 157 per cent, and 12,560 × 1.57 = 19,719
+- PASS — the NPA cap is the average of ₹2,25,000 and ₹2,50,000 = ₹2,37,500
+- PASS — all seventeen rules are present
+- PASS — every rule carries its bare text, its rationale, figures and a trap
+- PASS — every rule is reachable from at least one question
+- PASS — the two instruments that moved a figure are recorded
+
+## Answer key
+
+- A: 23
+- B: 22
+- C: 22
+- D: 22
+
+## Questions by rule
+
+- Rule 1: 3
+- Rule 2: 4
+- Rule 3: 3
+- Rule 4: 4
+- Rule 5: 5
+- Rule 6: 6
+- Rule 7: 18
+- Rule 8: 4
+- Rule 9: 6
+- Rule 10: 6
+- Rule 11: 2
+- Rule 12: 3
+- Rule 13: 13
+- Rule 14: 3
+- Rule 15: 2
+- Rule 16: 3
+- Rule 17: 1
+- Rule Schedule: 3
+
+## Difficulty
+
+- Tough: 89
