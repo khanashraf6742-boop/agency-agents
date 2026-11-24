@@ -170,7 +170,7 @@ def main():
             for L, o in zip("ABCD", q["opts"]))
         return f'''
 <div class="q-card" id="q-{q['id']}">
-  <div class="q-head"><b>{q['id']}</b> \u00b7 {esc(q['topic'])} \u00b7 {esc(q['rules_text'])}</div>
+  <div class="q-head"><b>{q['id']}</b> \u00b7 Chapter {esc(q['chapter'])} \u00b7 {esc(q['rules_text'])}</div>
   <div class="q-stem">{esc(q['q'])}</div>
   <ol class="q-opts">{opts}</ol>
   <details class="q-expl"><summary>Answer and reasoning</summary><div style="white-space:pre-wrap">{esc(q['expl'])}</div></details>
