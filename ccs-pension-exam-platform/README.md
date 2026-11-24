@@ -79,7 +79,7 @@ prescribes it, so a question that asks for a Form cannot be answered with a Form
 
 ## How the build is verified
 
-`build/audit.py` runs 57 checks and **exits non-zero** if any fails. The load-bearing ones:
+`build/audit.py` runs 65 checks and **exits non-zero** if any fails. The load-bearing ones:
 
 - all 87 rules transcribed, no rule left pending, and every chapter's span present;
 - every question cites a rule the build actually holds;
@@ -102,7 +102,7 @@ instruments, and the coverage section showing 100 per cent.
 cd build
 python3 engine.py     # 1,033 questions from the rule text and the orders
 python3 coverage.py   # provision-level reach
-python3 audit.py      # 57 checks, writes AUDIT.md
+python3 audit.py      # 65 checks, writes AUDIT.md
 python3 assemble.py   # the HTML
 node smoke.js         # DOM checks
 ```
@@ -117,14 +117,15 @@ build/titles.py           the 87 marginal headings
 build/forms.py            14 Forms, 13 Formats, 11 leave Forms
 build/provisions.py       parses the text into 1,065 provisions
 build/coverage.py         which provisions a question reaches
-build/xrefs.py            resolves every internal citation
+build/xrefs.py            resolves every internal citation; the closed defect whitelist
+build/mutation_test.py    seeds faults and proves the control catches them
 build/amendments.py       the 18 instruments, with provenance
 build/gen_questions.py    whole-text and opening-words questions
 build/data_current.py     the current-affairs facts
 build/engine.py           record builder and option balancer
 build/data_*.py           the hand-written question facts
 build/assemble.py         builds the HTML
-build/audit.py            57 checks
+build/audit.py            65 checks
 build/smoke.js            jsdom checks
 ```
 
@@ -155,20 +156,57 @@ The same pattern applies in three other places, all shown on the page:
   the Secretary or the C&AG with an appeal to the President;
 - **Form 4 and Form 6 at retirement** — both are now Form 6-A under G.S.R. 410(E) of 16 July 2024.
 
-## Defects in the instrument itself
+## Defects in the instrument itself — a closed whitelist
 
-Five cross-references in the gazette point at provisions that do not exist. They are not transcription
-errors: each was checked against the published text directly. `build/xrefs.py` lists them and
-`build/audit.py` fails on any unresolved citation that is *not* on that list, so a transcription gap
-cannot hide among them.
+Five cross-references in the gazette point at provisions that do not exist in the form described.
+They are not transcription errors: each was checked against the published text, and the offending
+words are quoted verbatim.
 
-| Citation | Refers to | The defect |
-|---|---|---|
-| r8(4)(d) | sub-rule (9) of rule 8 | rule 8 has only (1)–(8) |
-| r65(5)(d), r65(5)(e) | clause (c) of rule 8(5) | rule 8(5) has no clauses |
-| r76(5)(e) | clause (b) of rule 77(1) | rule 77(1) has clauses (i)–(x) |
-| r81(2) | clause (d) of rule 76(2) | rule 76(2) has no clauses |
+| Provision | What it says | Points to | Why that fails |
+|---|---|---|---|
+| **Rule 8(4)(d)** | "in accordance with sub-rule (9)" | `8(9)` | rule 8 has only sub-rules (1)–(8) |
+| **Rule 65(5)(d)** | "clause (c) of sub-rule (5) of rule 8" | `8(5)(c)` | rule 8(5) is one unbroken sentence, with no clauses |
+| **Rule 65(5)(e)** | the same words, repeated | `8(5)(c)` | same defect as (d) |
+| **Rule 76(5)(e)** | "clause (b) of sub-rule (1) of rule 77" | `77(1)(b)` | rule 77(1) is lettered (i)–(x), so there is no (b) |
+| **Rule 81(2)** | "clause (d) of sub-rule (2) of rule 76" | `76(2)(d)` | rule 76(2) is one paragraph, with no clauses |
 
-Rule 35 was truncated in an earlier build and the check caught it: rule 35(1) says "subject to
+These are repeated patterns rather than slips: in each the drafter has used a sub-rule or clause
+label that the target provision's structure does not support. Two of the five are the same sentence
+repeated in adjacent clauses.
+
+**The list is closed and enforced.** `build/xrefs.py` holds them as an exact-match set of
+`(source provision, target address)` pairs. `build/audit.py` fails on *any* unresolved citation that
+is not a match, so a transcription gap cannot be excused as "probably another statute defect". The
+audit also asserts:
+
+- **exactly five entries** — a sixth cannot be added without the build failing;
+- **every entry still occurs** in the rule text — a stale entry, left behind after an amendment
+  fixes a reference, fails the build, so the list cannot rot;
+- **no entry points at an address the statute contains** — if a "defect" starts resolving, it is no
+  longer a defect and must come off;
+- **the structural claim behind each entry** — that rule 8 really stops at (8), that rule 8(5) and
+  rule 76(2) really have no clauses, that rule 77(1) really is lettered (i)–(x). If the statute were
+  ever reprinted differently, these fail rather than the justification quietly becoming false.
+
+The resolver itself is deliberately **exact**: there is no lenient fallback that would accept an
+address merely because some provision begins with its prefix. Leniency in a resolver is
+indistinguishable from a blind spot.
+
+### The control is proved, not assumed
+
+`build/mutation_test.py` seeds four faults into a scratch copy of the build and asserts the audit
+fails on each:
+
+| Seeded fault | Result |
+|---|---|
+| Truncate rule 35 at sub-rule (5) — the bug that actually happened | **caught** |
+| Retarget a live citation to rule 99, which does not exist | **caught** |
+| Add a sixth entry to the whitelist to excuse a gap | **caught** |
+| Leave a stale entry after the statute is amended to fix a defect | **caught** |
+
+`audit.py` runs it as a check, so the control is re-proved on every build. A whitelist that has
+never been seen to reject anything proves nothing.
+
+Rule 35 was truncated in an earlier build and this control caught it: rule 35(1) says "subject to
 sub-rule (6)", and the transcription stopped at (5). Sub-rules (6) and (7) are now present, and the
 audit asserts that rule 35 carries every sub-rule its own text cites.

@@ -8,6 +8,7 @@ import pathlib
 import amendments
 import coverage
 import forms
+import xrefs
 import provisions as pv
 import pension_rules as pr
 from titles import TITLES
@@ -186,6 +187,14 @@ def main():
     if leftovers:
         qs_html.append('<h3>Other</h3>' + "".join(q_html(q) for q in leftovers))
 
+    # ---- defects in the instrument itself, with the offending words quoted
+    defect_rows = "".join(
+        f'<tr><td><b>Rule {esc(d["source"])}</b></td>'
+        f'<td>\u201c{esc(d["quote"])}\u201d</td>'
+        f'<td><code>{esc(d["target"])}</code></td>'
+        f'<td>{esc(d["reason"])}</td></tr>'
+        for d in xrefs.defects())
+
     # ---- amendment register
     amend_rows = []
     for a in sorted(amendments.AMENDMENTS, key=lambda x: (x["date"][-4:], x["date"][3:5], x["date"][:2])):
@@ -323,6 +332,18 @@ questions that cite it, and the build fails if any provision is left without one
 <tbody>{cov_rows}</tbody></table>
 <p class="muted">Every provision is listed in the coverage matrix in <code>AUDIT.md</code>, with the questions
 that reach it.</p>
+
+<h2 id="defects">Defects in the instrument itself ({len(xrefs.KNOWN_DEFECTS)})</h2>
+<p class="muted">Five cross-references in the published Rules point at provisions that do not exist in the form
+described. They are not transcription errors: each was checked against the gazette, and the offending words are
+quoted below exactly as printed. The platform cannot correct them and does not silently repair them \u2014 it
+records them, and the build fails if any <em>other</em> citation fails to resolve, so a transcription gap cannot
+hide behind the statute&rsquo;s own drafting slips.</p>
+<table class="defect"><thead><tr><th>Provision</th><th>What it says</th><th>Points to</th><th>Why that fails</th></tr></thead>
+<tbody>{defect_rows}</tbody></table>
+<p class="muted">Two of the five are the same sentence repeated: rule 65(5)(d) and (e) both send the reader to a
+clause of rule 8(5) that was never lettered. The list is closed. If an amendment corrects one of these references,
+the entry is deleted and the build tightens \u2014 a stale entry fails it.</p>
 
 <h2 id="forms">Forms appended to the rules ({len(forms.FORMS)})</h2>
 <p class="muted">Rule 3(1)(k): a Form is a form appended to these rules. Each entry gives the sub-rule that prescribes it.</p>

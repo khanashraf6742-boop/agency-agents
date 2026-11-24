@@ -37,6 +37,12 @@ const qs = [...d.querySelectorAll(".q-card")];
 const QCOUNT = JSON.parse(fs.readFileSync(path.join(__dirname, "questions.json"), "utf8")).length;
 ck("question cards rendered", qs.length === QCOUNT, `${qs.length} vs ${QCOUNT}`);
 ck("every provision is covered", /Coverage, measured/.test(d.body.textContent));
+ck("the five statute defects are shown with their target addresses",
+   d.querySelectorAll("table.defect tbody tr").length === 5,
+   `${d.querySelectorAll("table.defect tbody tr").length}`);
+ck("each defect row quotes the offending words",
+   [...d.querySelectorAll("table.defect tbody tr")]
+     .every(r => r.children[1].textContent.trim().length > 40));
 ck("the amendment register is on the page", d.querySelectorAll("table.amend tbody tr").length >= 15,
    `${d.querySelectorAll("table.amend tbody tr").length}`);
 ck("every question has exactly four options",
@@ -49,8 +55,14 @@ ck("no question shows an empty explanation",
    qs.every(q => q.querySelector("details.q-expl div").textContent.trim().length > 80));
 
 // every Form and Format row must be present and sourced
-const tables = [...d.querySelectorAll("table")].filter(t => !t.classList.contains("amend")
-  && !t.classList.contains("cov"));
+// scope the register checks to their own sections; positional table indices broke
+// as soon as a new table was added above them, which is a brittle test, not a real failure
+const tables = [
+  d.querySelector("#forms + p + table"),
+  d.querySelector("#formats + p + table"),
+];
+ck("both registers were found by section, not by position",
+   tables.every(Boolean), tables.map(t => !!t).join(","));
 ck("two registers: Forms then Formats", tables.length === 2, `${tables.length}`);
 const rows = t => [...t.querySelectorAll("tbody tr")];
 ck("14 Form rows", rows(tables[0]).length === 14, `${rows(tables[0]).length}`);

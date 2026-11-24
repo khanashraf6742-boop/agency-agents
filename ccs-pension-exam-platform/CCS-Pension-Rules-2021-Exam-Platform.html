@@ -2063,6 +2063,18 @@ questions that cite it, and the build fails if any provision is left without one
 <p class="muted">Every provision is listed in the coverage matrix in <code>AUDIT.md</code>, with the questions
 that reach it.</p>
 
+<h2 id="defects">Defects in the instrument itself (5)</h2>
+<p class="muted">Five cross-references in the published Rules point at provisions that do not exist in the form
+described. They are not transcription errors: each was checked against the gazette, and the offending words are
+quoted below exactly as printed. The platform cannot correct them and does not silently repair them — it
+records them, and the build fails if any <em>other</em> citation fails to resolve, so a transcription gap cannot
+hide behind the statute&rsquo;s own drafting slips.</p>
+<table class="defect"><thead><tr><th>Provision</th><th>What it says</th><th>Points to</th><th>Why that fails</th></tr></thead>
+<tbody><tr><td><b>Rule 8(4)(d)</b></td><td>“deemed to have been instituted in accordance with sub-rule (9) till the date of retirement”</td><td><code>8(9)</code></td><td>Rule 8 contains only sub-rules (1) to (8); there is no sub-rule (9) for proceedings to be instituted under. The drafter has used a sub-rule number the target provision does not have.</td></tr><tr><td><b>Rule 65(5)(d)</b></td><td>“retirement gratuity was not paid on retirement in accordance with clause (c) of sub-rule (5) of rule 8”</td><td><code>8(5)(c)</code></td><td>Rule 8(5) is a single unbroken sentence - it is not divided into clauses - so there is no clause (c). The drafter has used a clause label the target provision does not support.</td></tr><tr><td><b>Rule 65(5)(e)</b></td><td>“gratuity was not paid on retirement in accordance with clause (c) of sub-rule (5) of rule 8”</td><td><code>8(5)(c)</code></td><td>The same defect as rule 65(5)(d), repeated verbatim in the adjacent clause: rule 8(5) has no clauses.</td></tr><tr><td><b>Rule 76(5)(e)</b></td><td>“The amount of gratuity withheld under clause (b) of sub-rule (1) of rule 77”</td><td><code>77(1)(b)</code></td><td>Rule 77(1) is lettered (i) to (x), not (a), (b), (c), so there is no clause (b) of rule 77(1). The withholding the drafter means is done under clause (vi) of rule 77(1), which withholds ten per cent pending intimation from the Directorate of Estates. The same sentence also cites clause (viii) of rule 77(1), which does exist - only the (b) reference is defective.</td></tr><tr><td><b>Rule 81(2)</b></td><td>“Subject to provisions of clause (d) of sub-rule (2) of rule 76”</td><td><code>76(2)(d)</code></td><td>Rule 76(2) is a single paragraph - it is not divided into lettered clauses - so there is no clause (d). The drafter has used a clause label the target provision does not have.</td></tr></tbody></table>
+<p class="muted">Two of the five are the same sentence repeated: rule 65(5)(d) and (e) both send the reader to a
+clause of rule 8(5) that was never lettered. The list is closed. If an amendment corrects one of these references,
+the entry is deleted and the build tightens — a stale entry fails it.</p>
+
 <h2 id="forms">Forms appended to the rules (14)</h2>
 <p class="muted">Rule 3(1)(k): a Form is a form appended to these rules. Each entry gives the sub-rule that prescribes it.</p>
 <table><thead><tr><th>Form</th><th>Title</th><th>Prescribed by</th><th>What it is for</th><th>Status</th></tr></thead>

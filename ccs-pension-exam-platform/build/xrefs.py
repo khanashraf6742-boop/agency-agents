@@ -91,28 +91,62 @@ def inventory():
     return provs, have
 
 
-# Citations that point at a provision the statute does not contain. These are defects in the
-# gazette, not in the transcription: each one was checked against the published rule text.
-# The audit fails on any unresolved citation that is not listed here, so a transcription gap
-# shows up as an error while a known defect in the instrument stays visible but does not.
+# ---------------------------------------------------------------------------- the closed whitelist
+#
+# These five citations point at provisions the statute does not contain. They are defects in the
+# gazette, not in the transcription: each was checked against the published rule text, and the
+# wording quoted against each entry is verbatim from it.
+#
+# THIS IS A CLOSED LIST. unresolved() fails on any citation that is not an exact
+# (source provision, target address) match for an entry here, so a transcription gap cannot be
+# excused as "probably another statute defect". The list may shrink; it may not grow without
+# re-reading the gazette. If an amendment corrects one of these references, delete the entry and
+# the audit tightens automatically - audit.py asserts that every entry still occurs, so a stale
+# entry fails the build rather than sitting here forever.
 KNOWN_DEFECTS = {
-    # r8(4)(d) refers to sub-rule (9) of rule 8, but rule 8 has only sub-rules (1) to (8).
-    ("8(4)(d)", "8(9)"): "rule 8 ends at sub-rule (8); the reference is to sub-rule (4) or is a "
-                         "carry-over from the 1972 Rules, where the corresponding provision sat in sub-rule (9)",
-    # r65(5)(d) and (e) refer to clause (c) of sub-rule (5) of rule 8; rule 8(5) has no clauses.
-    ("65(5)(d)", "8(5)(c)"): "rule 8(5) is a single sentence without clauses; the clause letter is a "
-                             "carry-over from the 1972 Rules",
-    ("65(5)(e)", "8(5)(c)"): "rule 8(5) is a single sentence without clauses; the clause letter is a "
-                             "carry-over from the 1972 Rules",
-    # r76(5)(e) uses the withholding power in r77(1), which is a single unlettered sub-rule.
-    ("76(5)(e)", "77(1)(b)"): "rule 77(1) has clauses (i) to (x), not (a) and (b); the withholding is "
-                              "done under clause (vi) of rule 77(1)",
-    # r81(2) refers to rule 76(2)(d); rule 76(2) has no clauses.
-    ("81(2)", "76(2)(d)"): "rule 76(2) is a single paragraph without clauses",
+    ("8(4)(d)", "8(9)"): {
+        "quote": "deemed to have been instituted in accordance with sub-rule (9) till the date of retirement",
+        "reason": "Rule 8 contains only sub-rules (1) to (8); there is no sub-rule (9) for proceedings "
+                  "to be instituted under. The drafter has used a sub-rule number the target provision "
+                  "does not have.",
+    },
+    ("65(5)(d)", "8(5)(c)"): {
+        "quote": "retirement gratuity was not paid on retirement in accordance with clause (c) of "
+                 "sub-rule (5) of rule 8",
+        "reason": "Rule 8(5) is a single unbroken sentence - it is not divided into clauses - so there "
+                  "is no clause (c). The drafter has used a clause label the target provision does not "
+                  "support.",
+    },
+    ("65(5)(e)", "8(5)(c)"): {
+        "quote": "gratuity was not paid on retirement in accordance with clause (c) of sub-rule (5) "
+                 "of rule 8",
+        "reason": "The same defect as rule 65(5)(d), repeated verbatim in the adjacent clause: rule "
+                  "8(5) has no clauses.",
+    },
+    ("76(5)(e)", "77(1)(b)"): {
+        "quote": "The amount of gratuity withheld under clause (b) of sub-rule (1) of rule 77",
+        "reason": "Rule 77(1) is lettered (i) to (x), not (a), (b), (c), so there is no clause (b) of "
+                  "rule 77(1). The withholding the drafter means is done under clause (vi) of rule "
+                  "77(1), which withholds ten per cent pending intimation from the Directorate of "
+                  "Estates. The same sentence also cites clause (viii) of rule 77(1), which does "
+                  "exist - only the (b) reference is defective.",
+    },
+    ("81(2)", "76(2)(d)"): {
+        "quote": "Subject to provisions of clause (d) of sub-rule (2) of rule 76",
+        "reason": "Rule 76(2) is a single paragraph - it is not divided into lettered clauses - so "
+                  "there is no clause (d). The drafter has used a clause label the target provision "
+                  "does not have.",
+    },
 }
 
 
 def unresolved(include_known=True):
+    """Citations that name an address the statute does not contain.
+
+    Resolution is exact. There is deliberately no lenient fallback of the kind that would accept
+    an address merely because some provision begins with its prefix: leniency in a resolver is
+    indistinguishable from a blind spot, and the whole point of this check is that a gap surfaces.
+    """
     provs, have = inventory()
     bad = []
     for p in provs:
@@ -123,17 +157,47 @@ def unresolved(include_known=True):
                 continue
             if target.isdigit() and 1 <= int(target) <= 87:
                 continue
-            if any(h.startswith(target + "(") or h.startswith(target + "#") for h in have):
-                continue
-            if not include_known and (p["path"], target) in KNOWN_DEFECTS:
-                continue
             bad.append((p["path"], target, p["text"][max(0, pos - 70):pos + 40]))
-    return bad
+    if include_known:
+        return bad
+    return [b for b in bad if (b[0], b[1]) not in KNOWN_DEFECTS]
 
 
 def unknown():
-    """Unresolved citations that are not on the known-defect list. This must be empty."""
-    return [b for b in unresolved() if (b[0], b[1]) not in KNOWN_DEFECTS]
+    """Unresolved citations that are NOT one of the five enumerated statute defects.
+
+    This is the control. It must be empty, and the audit fails if it is not: any entry here is a
+    candidate transcription gap and has to be investigated, not whitelisted.
+    """
+    return unresolved(include_known=False)
+
+
+def defect_occurrences():
+    """Every occurrence of a whitelisted defect, with the exact span it sits in.
+
+    Keyed by (source, target) an entry can hide a provision that cites the defect in several
+    places; counting occurrences keeps the documentation honest about how often the statute
+    repeats each one.
+    """
+    provs, have = inventory()
+    seen = {}
+    for p in provs:
+        for pos, target in citations(p["text"], owner=p["rule"]):
+            key = (p["path"], target)
+            if key in KNOWN_DEFECTS:
+                seen.setdefault(key, []).append((pos, p["text"][max(0, pos - 110):pos + 90]))
+    return seen
+
+
+def defects():
+    """The whitelist, with how many times each defective reference actually occurs."""
+    occ = defect_occurrences()
+    out = []
+    for key, meta in KNOWN_DEFECTS.items():
+        out.append({"source": key[0], "target": key[1],
+                    "occurrences": len(occ.get(key, [])),
+                    "quote": meta["quote"], "reason": meta["reason"]})
+    return sorted(out, key=lambda d: (int(d["source"].split("(")[0]), d["source"]))
 
 
 if __name__ == "__main__":
