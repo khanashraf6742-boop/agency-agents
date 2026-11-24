@@ -658,5 +658,425 @@
   ],
   "src": "CCS (Pension) Rules, 2021, rule 10",
   "rules_text": "Rule 10"
+ },
+ {
+  "id": "P-0034",
+  "q": "Qualifying service begins on the date the servant:",
+  "opts": [
+   "is confirmed in his first appointment",
+   "takes charge of the post he is first appointed to",
+   "attains the age of eighteen years, in every such case.",
+   "completes his first year of service"
+  ],
+  "ans": "B",
+  "expl": "(B) takes charge of the post he is first appointed to. Rule 11 fixes commencement at taking charge of the first post\n(A) is confirmed in his first appointment. — Confirmation is dealt with at rule 16, not as the starting point\n(C) attains the age of eighteen years, in every such case. — Age operates as an exclusion in the second proviso, not as the trigger\n(D) completes his first year of service. — No minimum period is needed to start the clock\n\nRule 11 provides that qualifying service commences from the date the servant takes charge of the post to which he is first appointed, whether substantively, in an officiating capacity or on a temporary basis. Two provisos qualify it: officiating or temporary service must be followed without interruption by substantive appointment, and service rendered before the age of eighteen does not count except where military service is counted for civil pension under rule 20. Commencement and confirmation are therefore different events, and rule 16 deals with the second.",
+  "trap": "Reading confirmation or probation into the commencement date",
+  "rule": "11",
+  "chapter": "III",
+  "covers": [
+   "11"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 11",
+  "rules_text": "Rule 11"
+ },
+ {
+  "id": "P-0035",
+  "q": "A servant held an officiating post for three years, resigned, and was reappointed substantively two years later. His officiating service:",
+  "opts": [
+   "qualifies in full, because it was officiating service of the required kind",
+   "qualifies at half, as interrupted service is halved",
+   "does not qualify: it was not followed by substantive appointment",
+   "qualifies if he produces a no-objection certificate"
+  ],
+  "ans": "C",
+  "expl": "(C) does not qualify: it was not followed by substantive appointment. The first proviso to rule 11 requires uninterrupted continuity\n(A) qualifies in full, because it was officiating service of the required kind. — Officiating service qualifies only on the continuity condition\n(B) qualifies at half, as interrupted service is halved. — The rules do not halve interrupted service; it either qualifies or does not\n(D) qualifies if he produces a no-objection certificate. — No certificate cures the break in continuity\n\nThe first proviso to rule 11 allows officiating or temporary service to count only where it is followed without interruption by substantive appointment in the same or another service or post. A break of two years between resignation and reappointment is an interruption, so the earlier service falls away. Where an interruption does occur, the remedy lies in rule 28, condonation of interruption, and not in reading a halving rule into rule 11 that the text does not contain.",
+  "trap": "Assuming interrupted service counts at a reduced rate",
+  "rule": "11",
+  "chapter": "III",
+  "covers": [
+   "11-prov-1"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 11-prov-1",
+  "rules_text": "Rule 11"
+ },
+ {
+  "id": "P-0036",
+  "q": "A servant's service book shows he took charge at age sixteen and a half and continued without a break. The service before he turned eighteen:",
+  "opts": [
+   "counts if he was confirmed before turning eighteen",
+   "counts from the date of his first increment, in every such case.",
+   "counts in full, because there was no interruption",
+   "is excluded, unless it is military service counted under rule 20"
+  ],
+  "ans": "D",
+  "expl": "(D) is excluded, unless it is military service counted under rule 20. The second proviso to rule 11 excludes pre-eighteen service with that single exception\n(A) counts if he was confirmed before turning eighteen. — Confirmation does not displace the age exclusion\n(B) counts from the date of his first increment, in every such case. — There is no such rule; age is the test\n(C) counts in full, because there was no interruption. — Continuity satisfies the first proviso but not the second\n\nThe second proviso to rule 11 is an absolute exclusion: service rendered before attaining the age of eighteen years shall not count, except in the cases of counting of military service for civil pension under rule 20. It is worth separating the two provisos in the mind, because they do different work. The first is about continuity and is satisfied by uninterrupted officiating or temporary service ending in substantive appointment. The second is about age and cannot be satisfied by continuity at all.",
+  "trap": "Assuming uninterrupted junior service must count",
+  "rule": "11",
+  "chapter": "III",
+  "covers": [
+   "11-prov-2"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 11-prov-2",
+  "rules_text": "Rule 11"
+ },
+ {
+  "id": "P-0037",
+  "q": "Service qualifies under rule 12 only if the servant's duties and pay are regulated:",
+  "opts": [
+   "by the Government, or under conditions determined by the Government",
+   "by the autonomous body that employs him, in every such case.",
+   "by any employer who pays from a Local Fund, irrespective of the facts.",
+   "by the terms of his contract, whatever those terms say"
+  ],
+  "ans": "A",
+  "expl": "(A) by the Government, or under conditions determined by the Government. Rule 12 requires that regulation by or under the Government\n(B) by the autonomous body that employs him, in every such case. — Autonomous body service is reached by rule 14, on conditions\n(C) by any employer who pays from a Local Fund, irrespective of the facts. — Paying from a Local Fund is part of the Explanation's definition, not the test in the rule\n(D) by the terms of his contract, whatever those terms say. — Contract employment is excluded by rule 2(g) unless the contract provides otherwise\n\nRule 12 lays down the basic condition of qualification: the service of a Government servant shall not qualify unless his duties and pay are regulated by the Government, or under conditions determined by the Government. Its Explanation then defines service as service under the Government and paid by that Government from the Consolidated Fund of India or a Local Fund administered by that Government, and excludes service in an establishment without a non-contributory pension scheme, unless the Government treats that service as qualifying. The rule is the gate through which every counting rule that follows has to pass.",
+  "trap": "Treating the payment source as the whole test",
+  "rule": "12",
+  "chapter": "III",
+  "covers": [
+   "12"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 12",
+  "rules_text": "Rule 12"
+ },
+ {
+  "id": "P-0038",
+  "q": "A State Government servant appointed on 1 June 2001 is permanently transferred to a post to which these rules apply. His continuous State service qualifies:",
+  "opts": [
+   "only from the date of his transfer, in every such case.",
+   "in full, because he was in a pensionable establishment before the cut-off",
+   "only if he exercises an option under rule 4, irrespective of the facts.",
+   "not at all, because State service is outside these rules, as a matter of course."
+  ],
+  "ans": "B",
+  "expl": "(B) in full, because he was in a pensionable establishment before the cut-off. Rule 13(1) counts continuous State service on a permanent transfer, subject to the continuity proviso\n(A) only from the date of his transfer, in every such case. — That would make rule 13 pointless; the rule counts the State service itself\n(C) only if he exercises an option under rule 4, irrespective of the facts. — The rule 4 election concerns which pension rules govern, not whether the service counts\n(D) not at all, because State service is outside these rules, as a matter of course. — Rule 13 is the express provision that brings it in\n\nRule 13(1) deals with a servant belonging to a State Government who was initially appointed in a pensionable establishment of that Government on or before 31 December 2003 and is permanently transferred to a service or post to which these rules apply. The continuous service rendered under the State Government, in an officiating, temporary or substantive capacity, qualifies. The proviso insists that officiating or temporary service be followed without interruption by substantive appointment in the State Government or the Central Government, which is the same continuity requirement as rule 11.",
+  "trap": "Assuming service must be under the Central Government to count at all",
+  "rule": "13",
+  "chapter": "III",
+  "covers": [
+   "13(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 13(1)",
+  "rules_text": "Rule 13"
+ },
+ {
+  "id": "P-0039",
+  "q": "A State servant appointed after 2003 joins the Centre after resigning, with proper permission. Rule 13(2) makes his State service qualify:",
+  "opts": [
+   "only if he is later confirmed in the Central post, irrespective of the facts.",
+   "never, because he resigned from the State, in every such case.",
+   "subject to the continuity condition, the cut-off in sub-rule (1) not applying",
+   "on the same terms as sub-rule (1), including the 2003 cut-off"
+  ],
+  "ans": "C",
+  "expl": "(C) subject to the continuity condition, the cut-off in sub-rule (1) not applying. Sub-rule (2) omits the 2003 cut-off that governs sub-rule (1)\n(A) only if he is later confirmed in the Central post, irrespective of the facts. — For State service the continuity must be by substantive appointment in either Government\n(B) never, because he resigned from the State, in every such case. — Resignation with proper permission is the very case sub-rule (2) covers\n(D) on the same terms as sub-rule (1), including the 2003 cut-off. — Sub-rule (2) does not repeat the cut-off\n\nRule 13(2) addresses a different route from sub-rule (1). Here the State servant is appointed, with proper permission, to a Central post after acceptance of his resignation from the State service. His continuous State service in an officiating, temporary or substantive capacity qualifies, provided that officiating or temporary service was followed without interruption by substantive appointment in the State or the Central Government. The Explanation defines proper permission in the same way as rule 6: the application was made with the previous permission of the State Government and the order records that he is resigning to join with that permission.",
+  "trap": "Importing the sub-rule (1) cut-off into sub-rule (2)",
+  "rule": "13",
+  "chapter": "III",
+  "covers": [
+   "13(2)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 13(2)",
+  "rules_text": "Rule 13"
+ },
+ {
+  "id": "P-0040",
+  "q": "Service in an autonomous body counts under rule 14 only if the body discharges its pension liability. It does so by:",
+  "opts": [
+   "issuing a certificate that it has no pension scheme",
+   "transferring the service book to the Central Government",
+   "undertaking to pay the pension when the servant retires from the Centre",
+   "paying a lump sum determined with reference to the commutation table"
+  ],
+  "ans": "D",
+  "expl": "(D) paying a lump sum determined with reference to the commutation table. Rule 14(1)(c) and (d) require the lump sum, valued on the commutation table\n(A) issuing a certificate that it has no pension scheme. — The body must have a non-contributory scheme similar to these rules\n(B) transferring the service book to the Central Government. — Transfer of records is not discharge of a liability\n(C) undertaking to pay the pension when the servant retires from the Centre. — The liability must be discharged, by a lump sum, at the point of resignation\n\nRule 14(1) allows service in an autonomous body to qualify where the servant was appointed there on or before 31 December 2003, the body has a non-contributory pension scheme similar to these rules, and he is later appointed to the Central Government with proper permission after resignation. Four conditions apply: his officiating or temporary Central appointment must be followed without interruption by substantive appointment; he must not be drawing a separate pension from the body; the body must discharge the liability by paying a lump sum for the service; and that lump sum must be determined with reference to the commutation table in the CCS (Commutation of Pension) Rules, 1981.",
+  "trap": "Thinking the body's pension liability can be left outstanding",
+  "rule": "14",
+  "chapter": "III",
+  "covers": [
+   "14(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 14(1)",
+  "rules_text": "Rule 14"
+ },
+ {
+  "id": "P-0041",
+  "q": "Service on probation counts as qualifying service:",
+  "opts": [
+   "when it is followed by confirmation in the same or another post",
+   "only if the probation period is expressly mentioned in the appointment order",
+   "never, because probation is a trial period",
+   "from the first day, whether or not he is confirmed"
+  ],
+  "ans": "A",
+  "expl": "(A) when it is followed by confirmation in the same or another post. Rule 16 counts probation that is followed by confirmation\n(B) only if the probation period is expressly mentioned in the appointment order. — The rule turns on the outcome, not the wording of the order\n(C) never, because probation is a trial period. — Rule 16 exists because it does count\n(D) from the first day, whether or not he is confirmed. — The rule makes confirmation the condition\n\nRule 16 provides that service rendered on probation counts as qualifying service when it is followed by confirmation in the same or another service or post. The condition is confirmation, so a probationer who is discharged, or who resigns before confirmation, does not carry that period into his pensionable service. The rule sits alongside rule 11 rather than inside it: rule 11 fixes when service starts, rule 16 settles whether the probationary stretch of it is reckonable at all.",
+  "trap": "Counting probation that did not end in confirmation",
+  "rule": "16",
+  "chapter": "III",
+  "covers": [
+   "16"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 16",
+  "rules_text": "Rule 16"
+ },
+ {
+  "id": "P-0042",
+  "q": "Apprenticeship training counts as qualifying service:",
+  "opts": [
+   "never, under any circumstances",
+   "only where the rules or a general order so provide",
+   "always, because the apprentice is on the establishment",
+   "only if the apprentice is later confirmed"
+  ],
+  "ans": "B",
+  "expl": "(B) only where the rules or a general order so provide. Rule 17 does not count apprenticeship as a matter of course\n(A) never, under any circumstances. — The rule permits counting where it is so provided\n(C) always, because the apprentice is on the establishment. — Being on the establishment is not the test\n(D) only if the apprentice is later confirmed. — Confirmation is the test in rule 16, for probation, not here\n\nRule 17 deals with service as an apprentice and does not count it automatically. The point worth carrying is the contrast with rule 16: probation is counted once it is followed by confirmation, whereas apprenticeship counts only where the rules or a general or special order provide for it. That asymmetry reflects the difference between a trial appointment to a post and a period of training that may not be employment at all.",
+  "trap": "Treating apprenticeship and probation as governed by the same test",
+  "rule": "17",
+  "chapter": "III",
+  "covers": [
+   "17"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 17",
+  "rules_text": "Rule 17"
+ },
+ {
+  "id": "P-0043",
+  "q": "A pensioner is re-employed in a civil post. Under rule 19 his previous civil service:",
+  "opts": [
+   "is counted only if he refunds his entire pension",
+   "is counted automatically, without any condition, irrespective of the facts.",
+   "may be counted for pension on final retirement, on the rule's conditions",
+   "is never counted a second time, in every such case."
+  ],
+  "ans": "C",
+  "expl": "(C) may be counted for pension on final retirement, on the rule's conditions. Rule 19 permits counting pre-retirement civil service for a re-employed servant\n(A) is counted only if he refunds his entire pension. — The refund is of gratuity in the circumstances the rule specifies, not the whole pension\n(B) is counted automatically, without any condition, irrespective of the facts. — The rule imposes conditions, including an option and refund\n(D) is never counted a second time, in every such case. — Rule 6(2) is expressly subject to rule 19, which permits the counting\n\nRule 19 is the provision that makes re-employment coherent with rule 6. Rule 6(2) bars a separate pension for the period of re-employment, but says 'except as provided in rule 19 or rule 20'. Rule 19 then allows the pre-retirement civil service to be counted for pension on final retirement, on conditions that include the exercise of an option and the refund of gratuity already received. The structure is that a re-employed pensioner can end with one pension calculated on the whole of his qualifying service, rather than two.",
+  "trap": "Reading rule 6 in isolation from the rule 19 exception",
+  "rule": "19",
+  "chapter": "III",
+  "covers": [
+   "19(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 19(1)",
+  "rules_text": "Rule 19"
+ },
+ {
+  "id": "P-0044",
+  "q": "Military service rendered before civil employment is counted for civil pension:",
+  "opts": [
+   "never, because the two services are separate, in every such case.",
+   "only if the military service exceeded ten years, irrespective of the facts.",
+   "automatically, because military service is always pensionable service",
+   "on the conditions rule 20 sets, including the absence of a military pension"
+  ],
+  "ans": "D",
+  "expl": "(D) on the conditions rule 20 sets, including the absence of a military pension. Rule 20 permits counting subject to its conditions\n(A) never, because the two services are separate, in every such case. — Rule 20 is the provision that joins them\n(B) only if the military service exceeded ten years, irrespective of the facts. — No such threshold appears in rule 20\n(C) automatically, because military service is always pensionable service. — The rule is conditional, not automatic\n\nRule 20 permits military service rendered before civil employment to be counted for civil pension, on conditions. It is the second of the two exceptions carved out of the rule 6 bar, and it also supplies the single exception to the pre-eighteen exclusion in rule 11, since military service counted for civil pension under rule 20 is expressly allowed to count even where rendered before that age. The conditions are what make the rule workable: a servant cannot take a military pension and count the same years for civil pension as though nothing had been paid for them.",
+  "trap": "Assuming the pre-eighteen bar has no exception",
+  "rule": "20",
+  "chapter": "III",
+  "covers": [
+   "20"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 20",
+  "rules_text": "Rule 20"
+ },
+ {
+  "id": "P-0045",
+  "q": "All extraordinary leave granted on medical certificate counts as qualifying service:",
+  "opts": [
+   "without any order, but other extraordinary leave needs a direction",
+   "only if the appointing authority directs in every case",
+   "never, because extraordinary leave is without pay, irrespective of the facts.",
+   "only if it does not exceed three months, in every such case."
+  ],
+  "ans": "A",
+  "expl": "(A) without any order, but other extraordinary leave needs a direction. Rule 21 counts medical-certificate EOL of its own force; the proviso governs the rest\n(B) only if the appointing authority directs in every case. — That requirement applies to EOL other than on medical certificate\n(C) never, because extraordinary leave is without pay, irrespective of the facts. — The rule counts it in the stated circumstances\n(D) only if it does not exceed three months, in every such case. — No such limit appears in rule 21\n\nRule 21 counts all leave during service for which leave salary is payable, and all extraordinary leave granted on medical certificate, without any order. Its proviso reaches the remaining kind of extraordinary leave: the appointing authority may, at the time of granting it, direct that it count as qualifying service where the servant could not join or rejoin duty because of civil commotion, or was prosecuting higher scientific and technical studies. The distinction between leave with salary, medical EOL and other EOL is therefore the whole of the rule.",
+  "trap": "Treating every kind of extraordinary leave alike",
+  "rule": "21",
+  "chapter": "III",
+  "covers": [
+   "21"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 21",
+  "rules_text": "Rule 21"
+ },
+ {
+  "id": "P-0046",
+  "q": "Periods spent on training count as qualifying service:",
+  "opts": [
+   "never, because he is not discharging the duties of his post",
+   "where it is in the Government's interest and the orders so provide",
+   "only if the training was outside India, in every such case.",
+   "always, since the servant remains on the establishment, irrespective of the facts."
+  ],
+  "ans": "B",
+  "expl": "(B) where it is in the Government's interest and the orders so provide. Rule 22 makes the counting depend on the character of the training\n(A) never, because he is not discharging the duties of his post. — The rule permits counting in the stated circumstances\n(C) only if the training was outside India, in every such case. — Location is not the test\n(D) always, since the servant remains on the establishment, irrespective of the facts. — Remaining on the establishment is not the test in rule 22\n\nRule 22 deals with periods spent on training. The provision turns on the character of the training rather than on the servant's nominal position: training undertaken in the interest of the Government is capable of counting, and training a servant arranges for his own advancement is not. The rule is grouped with rules 21 and 23 because all three deal with periods when the servant is not at his desk but the period is still capable of being reckoned, and each fixes its own conditions for that.",
+  "trap": "Assuming a servant absent on training necessarily loses the period",
+  "rule": "22",
+  "chapter": "III",
+  "covers": [
+   "22"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 22",
+  "rules_text": "Rule 22"
+ },
+ {
+  "id": "P-0047",
+  "q": "A suspension period is treated under rule 23 in the light of:",
+  "opts": [
+   "the discretion of the Head of Office alone, irrespective of the facts.",
+   "the length of the suspension, whatever its result",
+   "the outcome of proceedings, counting only if he is exonerated",
+   "nothing: suspension never counts, in every such case."
+  ],
+  "ans": "C",
+  "expl": "(C) the outcome of proceedings, counting only if he is exonerated. Rule 23 makes the treatment of suspension depend on the result\n(A) the discretion of the Head of Office alone, irrespective of the facts. — The rule ties the outcome to the result of the proceedings\n(B) the length of the suspension, whatever its result. — Length is not the test the rule applies\n(D) nothing: suspension never counts, in every such case. — A servant who is exonerated is not penalised for the period\n\nRule 23 deals with periods of suspension. The governing principle is that a period of suspension is not automatically a period of qualifying service or automatically a gap: it is reckoned by reference to how the proceedings ended. A servant who is fully exonerated should not lose pensionable service for a period during which the Government kept him away from his post, while one who is visited with a penalty that carries its own service consequence is dealt with under that penalty. The rule is grouped with rules 21 and 22 for that reason.",
+  "trap": "Treating every suspension period as a break in service",
+  "rule": "23",
+  "chapter": "III",
+  "covers": [
+   "23"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 23",
+  "rules_text": "Rule 23"
+ },
+ {
+  "id": "P-0048",
+  "q": "On dismissal or removal from service, the servant's service:",
+  "opts": [
+   "continues to count for any pension already earned, irrespective of the facts.",
+   "is halved, as a permanent penalty, in every such case.",
+   "is unaffected, the penalty being the loss of the post",
+   "is forfeited, which is why dismissal and removal carry pension consequences"
+  ],
+  "ans": "D",
+  "expl": "(D) is forfeited, which is why dismissal and removal carry pension consequences. Rule 24 forfeits service on dismissal or removal\n(A) continues to count for any pension already earned, irrespective of the facts. — Forfeiture removes the qualifying service\n(B) is halved, as a permanent penalty, in every such case. — The rule forfeits rather than halves\n(C) is unaffected, the penalty being the loss of the post. — The rule is the provision that adds the pension consequence\n\nRule 24 provides for the forfeiture of service on dismissal or removal. It is the provision that gives dismissal and removal their pension significance, and it explains why a servant so dealt with cannot point to the years before the penalty as though nothing had happened. The rule sits in Chapter III with the counting rules because the question whether a period counts is answered here just as much as in rules 16 to 23. Compare rule 25, which deals with counting past service on reinstatement.",
+  "trap": "Assuming the penalty touches only the post and not the service",
+  "rule": "24",
+  "chapter": "III",
+  "covers": [
+   "24"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 24",
+  "rules_text": "Rule 24"
+ },
+ {
+  "id": "P-0049",
+  "q": "A servant who was dismissed and later reinstated has his past service counted:",
+  "opts": [
+   "on the terms rule 25 provides, the reinstatement order governing",
+   "only if he repaid the whole of his pay for the period",
+   "never, because rule 24 forfeited it for good, in every such case.",
+   "automatically in full, because the dismissal was undone"
+  ],
+  "ans": "A",
+  "expl": "(A) on the terms rule 25 provides, the reinstatement order governing. Rule 25 deals with counting past service after reinstatement\n(B) only if he repaid the whole of his pay for the period. — Repayment of pay is not the test in rule 25\n(C) never, because rule 24 forfeited it for good, in every such case. — Rule 25 is the provision that allows counting on reinstatement\n(D) automatically in full, because the dismissal was undone. — Reinstatement does not by itself restore every pension consequence\n\nRule 25 deals with the counting of past service on reinstatement. Rule 24 forfeits service on dismissal or removal, so a servant who is later reinstated needs a provision that can restore the reckoning, and rule 25 is that provision. What it counts, and on what terms, depends on the order of reinstatement, which may restore the service in whole or in part, or on specified conditions. The pair of rules is a good example of why the forfeiture rules have to be read together rather than in isolation.",
+  "trap": "Reading rule 24 as the last word on a dismissed servant's service",
+  "rule": "25",
+  "chapter": "III",
+  "covers": [
+   "25"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 25",
+  "rules_text": "Rule 25"
+ },
+ {
+  "id": "P-0050",
+  "q": "On resignation from service, the servant's service is:",
+  "opts": [
+   "preserved in full for any later appointment",
+   "forfeited, which is the general rule subject to exceptions",
+   "counted at half, in every such case.",
+   "preserved if he gave three months' notice, irrespective of the facts."
+  ],
+  "ans": "B",
+  "expl": "(B) forfeited, which is the general rule subject to exceptions. Rule 26 forfeits service on resignation, subject to its stated exceptions\n(A) preserved in full for any later appointment. — Forfeiture is the general rule, not preservation\n(C) counted at half, in every such case. — The rule forfeits rather than halves\n(D) preserved if he gave three months' notice, irrespective of the facts. — Notice affects the manner of leaving, not the forfeiture rule\n\nRule 26 provides for the forfeiture of service on resignation. It is the counterpart of rule 24: both dismissal and resignation extinguish the reckoning, but for different reasons, one punitive and one voluntary. Rule 26 carries its own exceptions, which is why a resignation accepted to take up another appointment with proper permission can be treated differently, as rules 13 and 14 illustrate. Reading rule 26 as absolute would make those counting provisions impossible to operate.",
+  "trap": "Assuming resignation and retirement have the same pension effect",
+  "rule": "26",
+  "chapter": "III",
+  "covers": [
+   "26"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 26",
+  "rules_text": "Rule 26"
+ },
+ {
+  "id": "P-0051",
+  "q": "An interruption in service affects qualifying service under rule 27:",
+  "opts": [
+   "by halving the service either side of it, irrespective of the facts.",
+   "not at all, because the servant was reappointed",
+   "by breaking the continuity, unless the interruption is condoned",
+   "only if the break exceeded one year, in every such case."
+  ],
+  "ans": "C",
+  "expl": "(C) by breaking the continuity, unless the interruption is condoned. Rule 27 states the effect of an interruption and points to condonation\n(A) by halving the service either side of it, irrespective of the facts. — There is no halving rule in the rules\n(B) not at all, because the servant was reappointed. — The rule exists because interruption does matter\n(D) only if the break exceeded one year, in every such case. — The rule does not set a threshold at one year\n\nRule 27 states the effect of an interruption in service. Because several counting rules, including rules 11 and 13, depend on service being followed without interruption, the consequence of a break is that the earlier period stops counting as continuous. The rules then provide a remedy rather than leaving the servant without one: rule 28 permits condonation of an interruption, on the terms it sets. Rules 27 and 28 are therefore read as a pair, and a question that asks about a break is usually also asking whether condonation was sought.",
+  "trap": "Treating a break as fatal without considering condonation",
+  "rule": "27",
+  "chapter": "III",
+  "covers": [
+   "27"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 27",
+  "rules_text": "Rule 27"
+ },
+ {
+  "id": "P-0052",
+  "q": "Condonation of an interruption in service under rule 28 is granted by:",
+  "opts": [
+   "the court, on a writ petition, in every such case.",
+   "the servant himself, by an application, irrespective of the facts.",
+   "the Accounts Officer, as part of the pension calculation, as a matter of course.",
+   "the authority the rule specifies, on being satisfied of the grounds"
+  ],
+  "ans": "D",
+  "expl": "(D) the authority the rule specifies, on being satisfied of the grounds. Rule 28 vests the power in the specified authority on stated grounds\n(A) the court, on a writ petition, in every such case. — Condonation is an administrative act under the rules\n(B) the servant himself, by an application, irrespective of the facts. — An application may be made, but the authority grants it\n(C) the Accounts Officer, as part of the pension calculation, as a matter of course. — The Accounts Officer computes pension; condonation is not his function\n\nRule 28 permits condonation of an interruption in service. It matters because rule 27 makes an interruption break continuity, and several counting provisions depend on continuity: officiating or temporary service counts only if followed without interruption by substantive appointment. Condonation restores the position where the interruption is capable of being excused. The audit of a pension case therefore asks two questions in sequence, whether there was an interruption, and if so whether it was condoned.",
+  "trap": "Answering a break-in-service question without reaching condonation",
+  "rule": "28",
+  "chapter": "III",
+  "covers": [
+   "28"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 28",
+  "rules_text": "Rule 28"
+ },
+ {
+  "id": "P-0053",
+  "q": "Deputation to the United Nations or another international organisation is dealt with in rule 29, which:",
+  "opts": [
+   "sets out when the period counts as qualifying service",
+   "leaves the matter to the organisation concerned",
+   "bars such deputation altogether",
+   "treats the period as foreign service under rule 3(1)(j) in every case"
+  ],
+  "ans": "A",
+  "expl": "(A) sets out when the period counts as qualifying service. Rule 29 governs the reckoning of such deputation\n(B) leaves the matter to the organisation concerned. — The rules govern their own servants' pension\n(C) bars such deputation altogether. — The rule regulates the reckoning rather than prohibiting the deputation\n(D) treats the period as foreign service under rule 3(1)(j) in every case. — Foreign service is defined by the source of pay; rule 29 deals with this class specifically\n\nRule 29 addresses deputation to the United Nations and other organisations. It is a specific provision sitting inside the general counting scheme, and it is the reason a question about an international deputation should be answered from rule 29 rather than from the definition of foreign service in rule 3(1)(j). The definition tells you what foreign service is; rule 29 tells you what happens to qualifying service when a servant is deputed to an international body.",
+  "trap": "Answering from the definition of foreign service instead of rule 29",
+  "rule": "29",
+  "chapter": "III",
+  "covers": [
+   "29"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 29",
+  "rules_text": "Rule 29"
+ },
+ {
+  "id": "P-0054",
+  "q": "Rule 30 requires periodic verification of qualifying service, which exists to:",
+  "opts": [
+   "fix the date of retirement, in every such case.",
+   "catch gaps and errors while records and witnesses are still available",
+   "transfer the service book to the Accounts Officer",
+   "calculate the pension in advance of retirement, irrespective of the facts."
+  ],
+  "ans": "B",
+  "expl": "(B) catch gaps and errors while records and witnesses are still available. Rule 30 requires verification at intervals, before the case is built\n(A) fix the date of retirement, in every such case. — The date of retirement is dealt with at rule 70\n(C) transfer the service book to the Accounts Officer. — Rule 30 verifies the service; forwarding the case is dealt with at rule 60\n(D) calculate the pension in advance of retirement, irrespective of the facts. — The calculation is done at authorisation, not by this rule\n\nRule 30 provides for periodic verification of qualifying service. Its practical importance is that it moves the discovery of a gap or an error forward, to a time when the service book, the office records and colleagues who can speak to a period are still available. Rule 73 addresses what happens when service records are in fact incomplete, which is the situation periodic verification is designed to prevent. A question that asks why verification happens periodically, rather than once at retirement, is asking for that rationale.",
+  "trap": "Treating verification as a formality rather than an evidential safeguard",
+  "rule": "30",
+  "chapter": "III",
+  "covers": [
+   "30"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 30",
+  "rules_text": "Rule 30"
  }
 ]
