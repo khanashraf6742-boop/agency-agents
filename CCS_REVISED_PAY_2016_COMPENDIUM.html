@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A verified, self-contained compendium of the Central Civil Services (Revised Pay) Rules, 2016 — G.S.R. 721(E) — and the CCS (Revised Pay) (Amendment) Rules, 2017 — G.S.R. 592(E): full Pay Matrix, fixation calculators, allowances, pension and self-test labs.">
+<title>Pay Matrix Compendium — CCS (Revised Pay) Rules, 2016</title>
+<style>
+  :root{
+    --ink:#14181f;
+    --ink-soft:#3d4653;
+    --muted:#66707d;
+    --paper:#f6f3ec;
+    --paper-2:#efeade;
+    --card:#ffffff;
+    --line:#e3ddd0;
+    --line-strong:#cfc6b3;
+    --maroon:#7d1526;
+    --maroon-2:#a01f33;
+    --gold:#a8802a;
+    --gold-soft:#f2e6c8;
+    --ok:#1c6b4a;
+    --ok-bg:#e7f4ec;
+    --bad:#9c2a20;
+    --bad-bg:#fbeae7;
+    --warn-bg:#fdf3dc;
+    --shadow:0 1px 2px rgba(20,24,31,.06),0 8px 24px -12px rgba(20,24,31,.18);
+    --radius:14px;
+    --strip:#efeade;
+    --hit:#efdfae;
+    --lvl13:#fbf1f2;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  }
+  html[data-theme="dark"]{
+    --ink:#eae6dd;
+    --ink-soft:#c3bcae;
+    --muted:#9a9385;
+    --paper:#12151a;
+    --paper-2:#181c23;
+    --card:#1b2029;
+    --line:#2b323d;
+    --line-strong:#3b434f;
+    --maroon:#c9607a;
+    --maroon-2:#e08aa0;
+    --gold:#d9b872;
+    --gold-soft:#2c2519;
+    --ok:#6fd6a5;
+    --ok-bg:#132a21;
+    --bad:#f0938a;
+    --bad-bg:#2c1a18;
+    --warn-bg:#2a2416;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px -14px rgba(0,0,0,.8);
+    --strip:#20262f;
+    --hit:#4a3d1f;
+    --lvl13:#241a1d;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background-color:var(--paper);
+    background-image:
+      radial-gradient(circle at 12% -10%, rgba(168,128,42,.14), transparent 55%),
+      radial-gradient(circle at 92% 0%, rgba(125,21,38,.10), transparent 46%);
+    background-repeat:no-repeat;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    font-size:16px;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  a{color:var(--maroon-2);text-underline-offset:3px}
+  h1,h2,h3,h4{line-height:1.22;margin:0 0 .5em;letter-spacing:-.01em}
+  h2{font-size:clamp(1.4rem,2.4vw,1.85rem)}
+  h3{font-size:1.16rem}
+  h4{font-size:.78rem;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}
+  p{margin:0 0 1em}
+  ul,ol{margin:0 0 1em;padding-left:1.25em}
+  li{margin:.28em 0}
+  code,kbd,.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  code{background:var(--gold-soft);padding:.1em .38em;border-radius:5px;font-size:.9em}
+
+  /* ---------- masthead ---------- */
+  header.masthead{
+    background:linear-gradient(160deg, #4a0f1c 0%, #6d1322 48%, #3a0d17 100%);
+    color:#f7f0e2;
+    border-bottom:4px solid #a8802a;
+    padding:34px 0 26px;
+    position:relative;
+    overflow:hidden;
+  }
+  header.masthead::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 85% 20%, rgba(255,255,255,.10), transparent 45%);
+    pointer-events:none;
+  }
+  .masthead .wrap{position:relative;z-index:1}
+  .eyebrow{
+    display:inline-flex;gap:.5rem;align-items:center;
+    font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+    color:#e9d3a3;font-weight:650;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:#c9a961}
+  .masthead h1{
+    font-size:clamp(1.6rem,3.6vw,2.7rem);
+    margin:.45rem 0 .35rem;
+    color:#fff8ea;
+    max-width:22ch;
+  }
+  .masthead .sub{color:#f0dfc4;max-width:64ch;margin:0 0 1.1rem}
+  .gsr{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem}
+  .chip{
+    display:inline-flex;align-items:center;gap:.4rem;
+    border:1px solid rgba(255,255,255,.34);
+    background:rgba(255,255,255,.08);
+    color:#fdf4e3;border-radius:999px;
+    padding:.26rem .7rem;font-size:.76rem;letter-spacing:.02em;
+    white-space:nowrap;
+  }
+  .chip b{font-weight:700;color:#fff}
+
+  /* ---------- nav ---------- */
+  nav.tabs{
+    position:sticky;top:0;z-index:40;
+    background:var(--paper);
+    border-bottom:1px solid var(--line-strong);
+    box-shadow:0 6px 18px -14px rgba(0,0,0,.5);
+  }
+  .tabs .wrap{display:flex;align-items:center;gap:6px;overflow-x:auto;padding:8px 20px;scrollbar-width:thin}
+  .tablist{display:flex;gap:6px;flex:1 1 auto;min-width:0}
+  .tab{
+    -webkit-appearance:none;appearance:none;border:1px solid transparent;background:transparent;
+    color:var(--ink-soft);font:inherit;font-size:.82rem;font-weight:600;
+    padding:.42rem .72rem;border-radius:999px;cursor:pointer;white-space:nowrap;
+    transition:background .15s,color .15s,border-color .15s;
+  }
+  .tab:hover{background:var(--paper-2);color:var(--ink)}
+  .tab[aria-selected="true"]{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+  .tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .theme-btn{
+    -webkit-appearance:none;appearance:none;flex:0 0 auto;
+    border:1px solid var(--line-strong);background:var(--card);
+    color:var(--ink-soft);border-radius:999px;padding:.4rem .6rem;cursor:pointer;
+    font:inherit;font-size:.78rem;font-weight:600;display:inline-flex;gap:.35rem;align-items:center;
+  }
+  .theme-btn:hover{border-color:var(--gold);color:var(--ink)}
+
+  /* ---------- layout ---------- */
+  main{padding:30px 0 70px}
+  .panel{display:none}
+  .panel.active{display:block;animation:rise .28s ease both}
+  @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion: reduce){.panel.active{animation:none}}
+  .lead{font-size:1.03rem;color:var(--ink-soft);max-width:74ch}
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .g4{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+  .card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow);min-width:0;
+  }
+  .card.tight{padding:14px 16px}
+  .card > :last-child{margin-bottom:0}
+  .stat{display:flex;flex-direction:column;gap:2px}
+  .stat .k{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .stat .v{font-size:1.35rem;font-weight:750;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .stat .n{font-size:.78rem;color:var(--muted);line-height:1.4}
+  .section-head{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;margin-bottom:.35rem}
+  .kicker{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:750}
+  .rule{height:1px;background:linear-gradient(90deg,var(--gold),transparent);border:0;margin:18px 0 22px}
+  .note{
+    border-left:3px solid var(--gold);background:var(--gold-soft);
+    padding:.7rem .9rem;border-radius:0 10px 10px 0;font-size:.92rem;
+  }
+  .note.warn{border-left-color:#b7791f;background:var(--warn-bg)}
+  .note.ok{border-left-color:var(--ok);background:var(--ok-bg)}
+  .src{font-size:.78rem;color:var(--muted);margin-top:.5rem;line-height:1.5}
+  .src b{color:var(--ink-soft);font-weight:650}
+  .pill{
+    display:inline-block;font-size:.7rem;font-weight:750;letter-spacing:.06em;
+    text-transform:uppercase;padding:.16rem .5rem;border-radius:999px;
+    background:var(--paper-2);color:var(--ink-soft);border:1px solid var(--line-strong);
+  }
+  .pill.gold{background:var(--gold-soft);border-color:var(--gold);color:#6d5216}
+  html[data-theme="dark"] .pill.gold{color:var(--gold)}
+  .pill.red{background:var(--bad-bg);border-color:var(--bad);color:var(--bad)}
+
+  /* ---------- tables ---------- */
+  .tablewrap{
+    border:1px solid var(--line);border-radius:var(--radius);
+    background:var(--card);box-shadow:var(--shadow);overflow:auto;max-height:76vh;
+  }
+  .tablewrap.flat{max-height:none;box-shadow:none}
+  table{border-collapse:collapse;width:100%;font-size:.86rem}
+  th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{
+    position:sticky;top:0;z-index:3;background:var(--strip);
+    font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);
+    border-bottom:1px solid var(--line-strong);white-space:nowrap;
+  }
+  td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:.83rem;white-space:nowrap}
+  .matrix th[scope="row"]{
+    position:sticky;left:0;z-index:2;background:var(--strip);
+    font-family:var(--mono);font-size:.78rem;color:var(--muted);width:46px;text-align:center;
+  }
+  .matrix thead th:first-child{left:0;z-index:5}
+  .matrix td{padding:4px 8px;font-family:var(--mono);font-size:.78rem;text-align:right;white-space:nowrap}
+  .matrix td.hit{background:var(--hit);font-weight:750;color:var(--ink)}
+  .matrix td.lvl13,.matrix th.lvl13{background:var(--lvl13)}
+  .matrix td.hit.lvl13{background:var(--hit)}
+  .matrix td.clickable{cursor:pointer}
+  .matrix td.clickable:hover{outline:2px solid var(--gold);outline-offset:-2px}
+
+  /* ---------- calculators ---------- */
+  .calc{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:12px 14px;align-items:end;
+  }
+  .field{display:flex;flex-direction:column;gap:5px;min-width:0}
+  .field.wide{grid-column:span 2}
+  .field label{font-size:.74rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  input[type="number"],input[type="text"],select{
+    font:inherit;font-size:.93rem;color:var(--ink);background:var(--card);
+    border:1px solid var(--line-strong);border-radius:10px;padding:.5rem .62rem;width:100%;
+  }
+  input:focus,select:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+  .check{display:flex;align-items:center;gap:.5rem;font-size:.88rem;font-weight:600;color:var(--ink-soft);letter-spacing:0;text-transform:none}
+  .check input{width:auto;accent-color:var(--maroon)}
+  .btn{
+    -webkit-appearance:none;appearance:none;border:1px solid var(--maroon);background:var(--maroon);color:#fff;
+    font:inherit;font-weight:700;font-size:.88rem;padding:.55rem 1.05rem;border-radius:10px;
+    cursor:pointer;transition:transform .08s,filter .15s;white-space:nowrap;
+  }
+  .btn:hover{filter:brightness(1.12)}
+  .btn:active{transform:translateY(1px)}
+  .btn.ghost{background:transparent;color:var(--maroon-2);border-color:var(--line-strong)}
+  .btn.ghost:hover{border-color:var(--maroon-2)}
+  .btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  .out{margin-top:14px;border-top:1px dashed var(--line-strong);padding-top:12px}
+  .out:empty{display:none}
+  .steps{list-style:none;padding:0;margin:0 0 10px;counter-reset:s}
+  .steps li{
+    counter-increment:s;position:relative;padding-left:2.1rem;margin:.45rem 0;font-size:.92rem;
+  }
+  .steps li::before{
+    content:counter(s);position:absolute;left:0;top:.12rem;
+    width:1.5rem;height:1.5rem;border-radius:50%;
+    background:var(--gold-soft);color:#6d5216;border:1px solid var(--gold);
+    display:grid;place-items:center;font-size:.74rem;font-weight:800;font-family:var(--mono);
+  }
+  html[data-theme="dark"] .steps li::before{color:var(--gold)}
+  .verdict{
+    display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;align-items:baseline;
+    background:var(--gold-soft);
+    border:1px solid var(--gold);border-radius:12px;padding:.7rem .9rem;margin-bottom:.8rem;
+  }
+  .verdict .big{font-size:1.28rem;font-weight:800;font-family:var(--mono);font-variant-numeric:tabular-nums}
+  .verdict .lbl{font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:750}
+  .kbdline{font-family:var(--mono);font-size:.86rem;background:var(--paper-2);border:1px solid var(--line);
+    border-radius:8px;padding:.35rem .55rem;display:inline-block;margin:.15rem 0;word-break:break-word}
+  .err{color:var(--bad);font-weight:650}
+  .good{color:var(--ok);font-weight:650}
+
+  /* ---------- figures ---------- */
+  figure{margin:0}
+  figcaption{font-size:.79rem;color:var(--muted);margin-top:.55rem;line-height:1.5}
+  figcaption b{color:var(--ink-soft)}
+  .flow{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch}
+  .flow .node{
+    flex:1 1 150px;background:var(--card);border:1px solid var(--line-strong);
+    border-radius:12px;padding:11px 12px;min-width:0;
+  }
+  .flow .node .t{font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--gold);font-weight:800}
+  .flow .node .m{font-family:var(--mono);font-size:.95rem;font-weight:700;margin:.12rem 0;word-break:break-word}
+  .flow .node .d{font-size:.76rem;color:var(--muted);line-height:1.4}
+  .flow .arrow{align-self:center;color:var(--gold);font-size:1.25rem;flex:0 0 auto}
+  svg{max-width:100%;height:auto;display:block}
+  .svgtext{font-family:var(--sans);fill:var(--ink)}
+  .svgmono{font-family:var(--mono);fill:var(--ink)}
+
+  /* ---------- quiz ---------- */
+  .q{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--card);margin-bottom:12px}
+  .q h4{color:var(--ink);text-transform:none;letter-spacing:0;font-size:.96rem;margin-bottom:.6rem;display:flex;gap:.5rem;align-items:flex-start;font-weight:700}
+  .q h4 .qn{color:var(--gold);font-family:var(--mono);font-weight:800;flex:0 0 auto}
+  .opts{display:grid;gap:6px}
+  .opt{
+    display:flex;gap:.55rem;align-items:flex-start;
+    border:1px solid var(--line);border-radius:9px;padding:.45rem .6rem;cursor:pointer;
+    font-size:.9rem;background:transparent;transition:background .12s,border-color .12s;
+    text-align:left;width:100%;color:inherit;font-family:inherit;
+  }
+  .opt:hover{border-color:var(--gold);background:var(--gold-soft)}
+  .opt .mark{
+    flex:0 0 auto;width:1.2rem;height:1.2rem;border-radius:50%;border:1.5px solid var(--line-strong);
+    display:grid;place-items:center;font-size:.7rem;font-weight:800;font-family:var(--mono);color:var(--muted);
+  }
+  .opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+  .opt.correct .mark{border-color:var(--ok);background:var(--ok);color:#fff}
+  .opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+  .opt.wrong .mark{border-color:var(--bad);background:var(--bad);color:#fff}
+  .opt[disabled]{cursor:default}
+  .opt[disabled]:hover{background:transparent}
+  .expl{font-size:.86rem;color:var(--ink-soft);border-top:1px dashed var(--line);margin-top:.6rem;padding-top:.5rem;display:none}
+  .expl.show{display:block}
+  .quizbar{
+    display:flex;gap:1rem;align-items:center;flex-wrap:wrap;
+    position:sticky;bottom:0;background:var(--paper);border-top:1px solid var(--line-strong);
+    padding:.6rem 0;margin-top:.5rem;
+  }
+  .scorebox{font-weight:750;font-family:var(--mono);font-size:.9rem}
+
+  /* ---------- flashcards ---------- */
+  .fcgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+  .fc{
+    perspective:1000px;background:none;border:0;padding:0;height:158px;cursor:pointer;font:inherit;text-align:left;
+  }
+  .fc-inner{position:relative;display:block;width:100%;height:100%;transition:transform .45s cubic-bezier(.4,.1,.2,1);transform-style:preserve-3d}
+  .fc.flipped .fc-inner{transform:rotateY(180deg)}
+  .fc-face{
+    position:absolute;inset:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;
+    border-radius:12px;padding:12px 14px;
+    border:1px solid var(--line-strong);background:var(--card);box-shadow:var(--shadow);
+    display:flex;flex-direction:column;justify-content:center;overflow:auto;
+  }
+  .fc-front .q-txt{font-weight:700;font-size:.92rem}
+  .fc-face .hint{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-bottom:.25rem}
+  .fc-back{transform:rotateY(180deg);background:var(--gold-soft);font-size:.85rem;color:var(--ink-soft)}
+  .fc:focus-visible .fc-face{outline:2px solid var(--gold);outline-offset:2px}
+  @media (prefers-reduced-motion: reduce){.fc-inner{transition:none}}
+
+  /* ---------- error lab ---------- */
+  .lab{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:14px 16px;margin-bottom:12px}
+  .lab .claim{font-size:.95rem;display:flex;gap:.6rem;align-items:flex-start}
+  .lab .claim .tag{flex:0 0 auto;margin-top:.15rem}
+  .lab .reveal{display:none;margin-top:.7rem;border-top:1px dashed var(--line);padding-top:.6rem;font-size:.88rem}
+  .lab.open .reveal{display:block}
+  .lab .reveal p{margin:.35rem 0}
+  .lab .reveal .lbl{font-weight:800;color:var(--bad);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:0}
+  .lab .reveal .lbl.ok{color:var(--ok)}
+  .lab .btn{margin-top:.6rem}
+  .lab.open .btn{display:none}
+
+  /* ---------- toast ---------- */
+  #toast{
+    position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);
+    background:#14181f;color:#f6f3ec;padding:.6rem 1rem;border-radius:999px;
+    font-size:.84rem;font-weight:650;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:90;
+    box-shadow:0 10px 30px -10px rgba(0,0,0,.6);max-width:90vw;
+  }
+  #toast.show{opacity:1;transform:translate(-50%,0)}
+
+
+  /* ---------- utilities (replacing inline styles) ---------- */
+  .mt-18{margin-top:18px}
+  .mt-16{margin-top:16px}
+  .mt-20{margin-top:20px}
+  .mt-14{margin-top:14px}
+  .mt-12{margin-top:12px}
+  .mt-8{margin-top:8px}
+  .mb-16{margin-bottom:16px}
+  .mb-14{margin-bottom:14px}
+  .my-18{margin:18px 0}
+  .my-20{margin:20px 0 8px}
+  .my-8{margin:.7rem 0}
+  .mt-7{margin-top:.7rem}
+  .mt-6{margin-top:.6rem}
+  .mb-4{margin-bottom:.4rem}
+  .m0{margin:0}
+  .p-20{padding:20px}
+  .maxh-420{max-height:420px}
+  .accent-maroon{border-left:4px solid var(--maroon)}
+  .accent-gold{border-left:4px solid var(--gold)}
+  .row-head{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin-bottom:.4rem}
+  .sw-l13{background:var(--lvl13);border-color:var(--maroon)}
+  .sw-hit{background:var(--hit);border-color:var(--gold)}
+  .small-mb{margin:0 0 .4rem}
+
+  /* ---------- misc ---------- */
+  .legend{display:flex;flex-wrap:wrap;gap:.9rem;font-size:.78rem;color:var(--muted);margin:.6rem 0}
+  .legend span{display:inline-flex;gap:.4rem;align-items:center}
+  .swatch{width:14px;height:14px;border-radius:4px;border:1px solid var(--line-strong);display:inline-block;flex:0 0 auto}
+  .btnrow{display:flex;gap:8px;flex-wrap:wrap}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+  footer{border-top:1px solid var(--line-strong);padding:24px 0 40px;color:var(--muted);font-size:.82rem}
+  @media print{
+    nav.tabs,.btn,#toast{display:none !important}
+    .panel{display:block !important;animation:none !important}
+    body{background:#fff}
+    .card,.tablewrap{box-shadow:none;break-inside:avoid}
+    .tablewrap{max-height:none;overflow:visible}
+    .lab .reveal{display:block !important}
+    .expl{display:block !important}
+    a{color:inherit;text-decoration:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Verified statutory compendium &middot; 7th CPC</div>
+    <h1>The Pay Matrix Compendium</h1>
+    <p class="sub">Central Civil Services (Revised Pay) Rules, 2016 — the full 19-column Pay Matrix, the Rule 7 / Rule 13 / Rule 10 fixation engines, allowances, pension, and self-test labs. Every cell and figure is checked against the Gazette text and the departmental orders cited in each section.</p>
+    <div class="gsr">
+      <span class="chip"><b>G.S.R. 721(E)</b> &middot; 25.07.2016</span>
+      <span class="chip"><b>G.S.R. 592(E)</b> &middot; 15.06.2017</span>
+      <span class="chip">w.e.f. <b>01.01.2016</b></span>
+      <span class="chip">DA <b>63%</b> from 01.07.2026</span>
+      <span class="chip"><b>540</b> matrix cells</span>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <div class="wrap">
+    <div class="tablist" role="tablist" aria-label="Compendium sections">
+      <button type="button" class="tab" id="tab-overview" role="tab" data-target="overview" aria-controls="overview" aria-selected="true">Overview</button>
+      <button type="button" class="tab" id="tab-matrix" role="tab" data-target="matrix" aria-controls="matrix" aria-selected="false">Pay Matrix</button>
+      <button type="button" class="tab" id="tab-fixation" role="tab" data-target="fixation" aria-controls="fixation" aria-selected="false">Rule 7 fixation</button>
+      <button type="button" class="tab" id="tab-promotion" role="tab" data-target="promotion" aria-controls="promotion" aria-selected="false">Promotion &amp; DNI</button>
+      <button type="button" class="tab" id="tab-allowances" role="tab" data-target="allowances" aria-controls="allowances" aria-selected="false">Allowances</button>
+      <button type="button" class="tab" id="tab-emoluments" role="tab" data-target="emoluments" aria-controls="emoluments" aria-selected="false">Salary estimator</button>
+      <button type="button" class="tab" id="tab-pension" role="tab" data-target="pension" aria-controls="pension" aria-selected="false">Pension</button>
+      <button type="button" class="tab" id="tab-quiz" role="tab" data-target="quiz" aria-controls="quiz" aria-selected="false">Quiz</button>
+      <button type="button" class="tab" id="tab-cards" role="tab" data-target="cards" aria-controls="cards" aria-selected="false">Flashcards</button>
+      <button type="button" class="tab" id="tab-lab" role="tab" data-target="lab" aria-controls="lab" aria-selected="false">Error lab</button>
+      <button type="button" class="tab" id="tab-sources" role="tab" data-target="sources" aria-controls="sources" aria-selected="false">Sources</button>
+    </div>
+    <span id="themeBtn"></span>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ============================ OVERVIEW ============================ -->
+<section class="panel active" id="overview" role="tabpanel" aria-labelledby="tab-overview" tabindex="-1">
+  <div class="section-head">
+    <span class="kicker">Foundation</span>
+    <h2>What the 2016 Rules actually say</h2>
+  </div>
+  <p class="lead">The Rules were notified on 25 July 2016 and are deemed to have come into force on 1 January 2016. They replace six earlier revision-of-pay rule-sets, apply to persons appointed to civil posts in connection with the affairs of the Union whose pay is debitable to the Civil Estimates, and fix pay in a <b>matrix of 18 levels printed across 19 columns</b> — Level 13A sits between Levels 13 and 14.</p>
+
+  <div class="grid g4 my-20">
+    <div class="card tight stat"><span class="k">Fitment factor</span><span class="v">2.57</span><span class="n">Rule 7(1)(A)(i) &middot; on existing basic pay</span></div>
+    <div class="card tight stat"><span class="k">Levels / columns</span><span class="v">18 / 19</span><span class="n">Level 13A between 13 and 14</span></div>
+    <div class="card tight stat"><span class="k">Minimum pay</span><span class="v">₹18,000</span><span class="n">Level 1, Cell 1</span></div>
+    <div class="card tight stat"><span class="k">Maximum pay</span><span class="v">₹2,50,000</span><span class="n">Level 18 (Cabinet Secretary)</span></div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Scope and exclusions — Rule 2</h3>
+      <p>Rule 2(1) applies the Rules to persons appointed to civil services and posts in connection with the affairs of the Union whose pay is debitable to the Civil Estimates, and to persons serving in the Indian Audit and Accounts Department. <b>Rule 2(2)</b> carves out eight categories:</p>
+      <ol>
+        <li>Group A, B and C posts under the administrative control of the Administrator of the Union Territory of Chandigarh;</li>
+        <li>persons locally recruited for service in Diplomatic, Consular or other Indian establishments in foreign countries;</li>
+        <li>persons not in whole-time employment;</li>
+        <li>persons paid out of contingencies;</li>
+        <li>persons paid otherwise than on a monthly basis, including piece-rate payment;</li>
+        <li>persons employed on contract, except where the contract provides otherwise;</li>
+        <li>persons re-employed in Government service after retirement; and</li>
+        <li>any other class of persons whom the President may, by order, specifically exclude.</li>
+      </ol>
+      <p class="note">The Explanatory Memorandum clarifies that <b>Railways, Defence Services personnel paid from Defence Services Estimates and Gramin Dak Sevaks</b> are outside these Rules because separate rules govern them, whereas <b>work-charged establishments are covered</b>, since Rule 2 does not exclude them.</p>
+      <p class="src"><b>Source:</b> Rule 2 and the Explanatory Memorandum to G.S.R. 721(E).</p>
+    </div>
+
+    <div class="card">
+      <h3>Switchover — Rule 5 and Rule 6</h3>
+      <p><b>Rule 5, first proviso:</b> an employee may elect to continue drawing pay in the existing structure until he earns his next or any subsequent increment there, or until he vacates the post or ceases to draw pay in that structure. <b>Second proviso:</b> where he was placed in a higher grade pay between 01.01.2016 and the date of notification on promotion or up-gradation, he may elect to switch over from the date of that promotion or up-gradation.</p>
+      <p><b>Rule 6:</b> the option must be exercised <b>in writing in the prescribed form within three months of notification</b> — by <b>25 October 2016</b> — and must reach the Head of Office <b>along with the undertaking</b> in the form appended to the Rules. <b>Rule 6(4):</b> the option once exercised is <b>final</b>.</p>
+      <p class="note warn"><b>Rule 6(3):</b> if the intimation is not received in time, the employee is <b>deemed to have elected the revised pay structure from 01.01.2016</b>. And by <b>Rule 5, Explanation 2</b>, the option is not admissible at all to a person appointed to a post for the first time, or by transfer, on or after 01.01.2016.</p>
+      <p class="src"><b>Source:</b> Rules 5 and 6, with Notes 1–3 to Rule 6 (terminated service, death, and leave on 01.01.2016).</p>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <h3>Fixing the starting point — Rule 7 in four moves</h3>
+  <figure class="card p-20">
+    <div class="flow">
+      <div class="node">
+        <div class="t">Step 1</div>
+        <div class="m">Basic pay</div>
+        <div class="d">Pay in the pay band <b>plus</b> grade pay in the pre-revised structure.</div>
+      </div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node">
+        <div class="t">Step 2</div>
+        <div class="m">× 2.57</div>
+        <div class="d">Multiply the existing basic pay by the fitment factor.</div>
+      </div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node">
+        <div class="t">Step 3</div>
+        <div class="m">nearest ₹</div>
+        <div class="d">Round the product off to the <b>nearest rupee</b>.</div>
+      </div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="node">
+        <div class="t">Step 4</div>
+        <div class="m">= cell</div>
+        <div class="d">Locate in the Level: identical cell if there is one, otherwise the <b>immediate next higher</b> cell.</div>
+      </div>
+    </div>
+    <figcaption><b>Figure 1.</b> Rule 7(1)(A): the multiplication, the rounding to the rupee, and the “identical or immediate next higher cell” test. Rounding to a hundred rupees is a property of the matrix, not a step in the Rule.</figcaption>
+  </figure>
+
+  <div class="grid g3 mt-16">
+    <div class="card">
+      <h4>Gazette illustration 1</h4>
+      <p>Pay in band <b>₹10,160</b> + GP <b>₹2,400</b> = ₹12,560.<br>
+      ₹12,560 × 2.57 = <b>₹32,279.20</b> → ₹32,279 →<br>
+      Level 4, <b>Cell 9 = ₹32,300</b>.<br>
+      <span class="src">Next increment under Rule 9: ₹33,300.</span></p>
+    </div>
+    <div class="card">
+      <h4>Gazette illustration 2</h4>
+      <p>Medical Officer, PB-3 GP ₹5,400; existing basic pay <b>₹21,000</b> (pay in band ₹15,600 + GP ₹5,400); pre-revised NPA ₹5,250.<br>
+      ₹21,000 × 2.57 = ₹53,970 + DA on NPA (125% = ₹6,563) = <b>₹60,533</b> →<br>
+      Level 10, <b>Cell 4 = ₹61,300</b>.</p>
+    </div>
+    <div class="card">
+      <h4>Gazette illustration 3</h4>
+      <p>Post upgraded from GP ₹2,400 to GP ₹2,800.<br>
+      ₹10,160 + ₹2,800 = ₹12,960 × 2.57 = <b>₹33,307.20</b> → ₹33,307 →<br>
+      Level 5, <b>Cell 6 = ₹33,900</b>.</p>
+    </div>
+  </div>
+  <p class="src"><b>Source:</b> the illustrations printed with the notification G.S.R. 721(E), re-computed here and located cell-by-cell in Part A of the Schedule.</p>
+
+  <hr class="rule">
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Rules 8 and 9 — entry and increments</h3>
+      <ul>
+        <li><b>Rule 8:</b> a direct recruit appointed on or after 01.01.2016 is fixed at the <b>minimum pay or first Cell</b> of the Level. Where pay had already been fixed in the existing structure before notification and his existing emoluments exceed that first cell, the difference is paid as <b>personal pay</b> absorbed in future increments.</li>
+        <li><b>Rule 9</b> reads, in full: “<i>The increment shall be as specified in the vertical Cells of the applicable Level in the Pay Matrix.</i>” The increment is therefore <b>movement to the next cell</b> — the Rules nowhere state a percentage or a rounding rule.</li>
+        <li>The cells themselves rise by about <b>3%</b>, rounded to the nearest ₹100 (7th CPC report, para 5.1.38). That is a property of the printed Schedule, inferred from it, not a formula in Rule 9.</li>
+        <li>A Level's column ends at its last cell; below the last cell there is no further increment until promotion or up-gradation.</li>
+      </ul>
+      <p class="src"><b>Source:</b> Rules 8 and 9 (with the Rule 9 illustration: ₹32,300 → ₹33,300 in Level 4), Part A of the Schedule.</p>
+    </div>
+    <div class="card">
+      <h3>Rule 10 — two increment dates</h3>
+      <figure>
+        <svg viewBox="0 0 520 152" role="img" aria-label="Timeline showing increment dates on 1 January and 1 July">
+          <line x1="30" y1="100" x2="490" y2="100" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/>
+          <g class="svgtext" font-size="12">
+            <line x1="90" y1="90" x2="90" y2="110" stroke="currentColor" stroke-opacity=".5" stroke-width="2"/>
+            <text x="90" y="130" text-anchor="middle">1 Jan</text>
+            <line x1="270" y1="90" x2="270" y2="110" stroke="currentColor" stroke-opacity=".5" stroke-width="2"/>
+            <text x="270" y="130" text-anchor="middle">1 Jul</text>
+            <line x1="450" y1="90" x2="450" y2="110" stroke="currentColor" stroke-opacity=".5" stroke-width="2"/>
+            <text x="450" y="130" text-anchor="middle">1 Jan</text>
+          </g>
+          <g>
+            <rect x="90" y="34" width="180" height="36" rx="8" fill="currentColor" fill-opacity=".07" stroke="currentColor" stroke-opacity=".3"/>
+            <text class="svgtext" x="180" y="51" text-anchor="middle" font-size="11">appointed / promoted</text>
+            <text class="svgtext" x="180" y="64" text-anchor="middle" font-size="11">2 Jan – 1 Jul</text>
+            <path d="M180 72 L180 88" stroke="currentColor" stroke-opacity=".45" stroke-width="1.6"/>
+            <rect x="270" y="34" width="180" height="36" rx="8" fill="currentColor" fill-opacity=".07" stroke="currentColor" stroke-opacity=".3"/>
+            <text class="svgtext" x="360" y="51" text-anchor="middle" font-size="11">appointed / promoted</text>
+            <text class="svgtext" x="360" y="64" text-anchor="middle" font-size="11">2 Jul – 1 Jan</text>
+            <path d="M360 72 L360 88" stroke="currentColor" stroke-opacity=".45" stroke-width="1.6"/>
+          </g>
+          <text class="svgtext" x="30" y="22" font-size="11" fill-opacity=".7">One annual increment only — never two in a year</text>
+        </svg>
+        <figcaption><b>Figure 2.</b> The date of next increment is decided by the <i>date of appointment, promotion or MACP</i>, not by the date of the last increment. Employees whose pay was fixed on 01.01.2016 took their first revised-structure increment on <b>01.07.2016</b>, and the next on 01.07.2017 (provisos to Rule 10(2)).</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <div class="card accent-maroon">
+    <div class="row-head">
+      <span class="pill gold">2017 amendment</span>
+      <h3 class="m0">G.S.R. 592(E) — what changed</h3>
+    </div>
+    <div class="grid g2 mt-6">
+      <div>
+        <ul>
+          <li><b>Part A substituted in whole.</b> The amendment replaced Part A of the Schedule outright. The substantive change is <b>Level 13</b>: entry pay rose from ₹1,18,500 to <b>₹1,23,100</b> and the column now has <b>20 cells</b> instead of 21, closing at ₹2,15,900. The index of rationalisation for the level moved from 2.57 to <b>2.67</b>.</li>
+          <li><b>Consequential instructions</b> followed in DoE O.M. No. 4-6/2017-IC/E.III(A) dated 28.09.2017.</li>
+          <li><b>Part C additions.</b> Items 48 to 52 were inserted after item 47 — Poster Artists, EME Corps (GP ₹2,000 → ₹2,400, Level 4), Russian Translation Officer (GP ₹4,600 → ₹5,400, PB-3, Level 10), Russian Senior Translation Officer (→ GP ₹6,600, Level 11), Russian Editor (→ GP ₹7,600, Level 12), and the Junior Works Manager pool of the Department of Defence Production (GP ₹4,200/₹4,600, with 10% earmarked for GP ₹4,800, Level 8, and non-functional up-gradation to Level 9).</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><b>Defined-date correction.</b> In Rule 3(v), for the figures “2006” the figures <b>“2016”</b> were substituted — which matters, because “existing emoluments” carry the DA component of the fitment.</li>
+          <li><b>Nothing else changed.</b> The notification amends only Rule 3(v), Rule 12 and the Schedule. In particular, <b>Rule 7, Rule 9 and Rule 10 are untouched</b> by the 2017 amendment.</li>
+          <li><b>Rule 12 widened.</b> Pay protection by personal pay on Central deputation, earlier confined to officers under the Central Staffing Scheme, was extended to posts <b>not covered</b> by that Scheme, with effect from 01.01.2016.</li>
+          <li>The amendment is <b>deemed to have come into force on 01.01.2016</b>, so Level 13 pay is re-fixed from that date and arrears follow.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="src"><b>Source:</b> CCS (Revised Pay) (Amendment) Rules, 2017, G.S.R. 592(E), F. No. 1-2/2016-IC, dated 15.06.2017.</p>
+  </div>
+
+  <hr class="rule">
+
+  <div class="grid g3">
+    <div class="card">
+      <h4>Rule 13</h4>
+      <p>On promotion on or after 01.01.2016: <b>one increment in the Level from which</b> the employee is promoted, then placement at the <b>cell equal to that figure, or the next higher cell</b> of the promoted Level.</p>
+    </div>
+    <div class="card">
+      <h4>Rule 14</h4>
+      <p>Arrears for the period from 01.01.2016 are to be paid <b>during the financial year 2016-17</b>. “Arrears” means the difference between the revised and the unrevised pay plus DA for that period.</p>
+    </div>
+    <div class="card">
+      <h4>Rules 15–17</h4>
+      <p>The Rules <b>override</b> the FRs and all earlier revision-of-pay rule-sets; the <b>President may relax</b> them by special order; and the <b>Central Government decides</b> questions of interpretation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ MATRIX ============================ -->
+<section class="panel" id="matrix" role="tabpanel" aria-labelledby="tab-matrix" tabindex="-1">
+  <div class="section-head">
+    <span class="kicker">Part A of the Schedule</span>
+    <h2>The Pay Matrix — all 19 columns</h2>
+  </div>
+  <p class="lead">The table below is the complete Part A as it stands after G.S.R. 592(E): <b>540 cells</b> across 18 levels. Level 13 is shaded because it is the only column substituted by the 2017 amendment.</p>
+
+  <div class="grid g4 my-18">
+    <div class="card tight stat"><span class="k">Total cells</span><span class="v">540</span><span class="n">400 of them in Levels 1–10</span></div>
+    <div class="card tight stat"><span class="k">Longest columns</span><span class="v">40</span><span class="n">Levels 1 to 10</span></div>
+    <div class="card tight stat"><span class="k">Shortest columns</span><span class="v">1</span><span class="n">Levels 17 and 18</span></div>
+    <div class="card tight stat"><span class="k">Level 13</span><span class="v">20</span><span class="n">was 21 before 15.06.2017</span></div>
+  </div>
+
+  <div class="card mb-14">
+    <div class="calc">
+      <div class="field">
+        <label for="findPay">Find a cell by pay (₹)</label>
+        <input id="findPay" type="number" inputmode="numeric" placeholder="e.g. 44900" min="0" step="100">
+      </div>
+      <div class="field">
+        <label for="findLevel">Restrict to Level</label>
+        <select id="findLevel"></select>
+      </div>
+      <div class="field">
+        <button class="btn" id="findBtn" type="button">Highlight</button>
+      </div>
+      <div class="field">
+        <button class="btn ghost" id="findClear" type="button">Clear</button>
+      </div>
+    </div>
+    <p id="findOut" class="src my-8 mt-0" aria-live="polite">Tip: click any cell to carry that Level and pay into the salary estimator.</p>
+  </div>
+
+  <div class="legend">
+    <span><span class="swatch sw-l13"></span> Level 13 — substituted by the 2017 amendment</span>
+    <span><span class="swatch sw-hit"></span> Search hit</span>
+  </div>
+
+  <div class="tablewrap">
+    <table class="matrix" id="matrixTable" aria-describedby="matrixNote">
+      <caption class="sr-only">Pay Matrix, Part A of the Schedule to the CCS (Revised Pay) Rules, 2016, as amended in 2017</caption>
+      <thead><tr id="matrixHead"></tr></thead>
+      <tbody id="matrixBody"></tbody>
+    </table>
+  </div>
+  <p class="src" id="matrixNote"><b>Source:</b> Part A of the Schedule to G.S.R. 721(E) dated 25.07.2016, with the Level 13 column as substituted by G.S.R. 592(E) dated 15.06.2017. Each cell was checked against the printed Schedule and against the Schedule's own progression.</p>
+
+  <div class="grid g2 mt-18">
+    <div class="card">
+      <h3>How the matrix is put together</h3>
+      <p>Each horizontal row is a <b>cell number</b>; each vertical column is a <b>Level</b>. Within a column the printed cells rise by about 3%, rounded to the nearest ₹100, which reproduces every one of the 521 column-to-column steps in Part A. Levels are <b>not</b> aligned to each other — a Level 7 cell can equal a Level 8 cell, which is exactly why promotion fixation speaks of the “equal or next higher” cell rather than a fixed jump.</p>
+      <p class="kbdline">next cell ≈ round(previous × 1.03 ÷ 100) × 100</p>
+      <p class="src">A reconstruction of the printed progression, not a formula prescribed by the Rules: Rule 9 simply says the increment is “as specified in the vertical Cells”.</p>
+    </div>
+    <div class="card">
+      <h3>Reading the column headings</h3>
+      <ul>
+        <li><b>Level 6</b> corresponds to pre-revised GP ₹4,200, into which GP ₹3,600 and ₹4,000 were merged.</li>
+        <li><b>Levels 9 and 10</b> both carry GP ₹5,400 — L9 is PB-2 (₹9,300–34,800), L10 is PB-3 (₹15,600–39,100).</li>
+        <li><b>Level 13A</b> carries GP ₹8,900, which is why it needs a column of its own between 13 (₹8,700) and 14 (₹10,000).</li>
+        <li><b>Levels 15–18</b> are the HAG, HAG+, Apex and Cabinet Secretary scales.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FIXATION ============================ -->
+<section class="panel" id="fixation" role="tabpanel" aria-labelledby="tab-fixation" tabindex="-1">
+  <div class="section-head">
+    <span class="kicker">Rule 7 engine</span>
+    <h2>Fixation from the 6th CPC structure</h2>
+  </div>
+  <p class="lead">Enter the pre-revised pay in the pay band and the grade pay. The calculator applies Rule 7(1)(A) in order — multiply, round to the rupee, find the identical cell or the immediate next higher one — and shows every intermediate figure so that the result can be audited by hand.</p>
+
+  <div class="card my-18">
+    <div class="calc">
+      <div class="field wide">
+        <label for="r7Post">Pre-revised post / scale</label>
+        <select id="r7Post"></select>
+      </div>
+      <div class="field">
+        <label for="r7Band">Pay in pay band (₹, excluding GP)</label>
+        <input id="r7Band" type="number" min="0" step="10" value="10160">
+      </div>
+      <div class="field">
+        <label for="r7GP">Grade pay (₹)</label>
+        <input id="r7GP" type="number" min="0" step="100" value="2400">
+      </div>
+      <div class="field">
+        <label for="r7NPA">Pre-revised NPA (₹, optional)</label>
+        <input id="r7NPA" type="number" min="0" step="10" value="0">
+      </div>
+      <div class="field">
+        <button class="btn" id="r7Go" type="button">Fix pay</button>
+      </div>
+    </div>
+    <div class="out" id="r7Out" aria-live="polite"></div>
+  </div>
+
+  <div class="card">
+    <h3>Re-run the three Gazette illustrations</h3>
+    <p class="src mb-4">Each button loads the exact figures printed with the notification and re-computes them.</p>
+    <div class="btnrow">
+      <button class="btn ghost" type="button" data-ex="1">Illustration 1 — GP ₹2,400</button>
+      <button class="btn ghost" type="button" data-ex="2">Illustration 2 — Medical Officer with NPA</button>
+      <button class="btn ghost" type="button" data-ex="3">Illustration 3 — upgraded post, GP ₹2,800</button>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>The NPA complication — Rule 7(1)(B)</h3>
+      <p>For medical officers to whom NPA is admissible the method changes. Sub-clause (i): multiply existing basic pay by 2.57, then <b>add DA on the pre-revised NPA</b>, and locate that total in the Level — identical cell, otherwise the immediate next higher one. Sub-clause (ii): the <b>pre-revised NPA</b> admissible on the existing basic pay is then added to the pay so fixed, <b>until the revised rates of NPA are decided</b>.</p>
+      <p>The Gazette illustration runs ₹21,000 × 2.57 = ₹53,970, plus ₹6,563 of DA on a pre-revised NPA of ₹5,250 (that is 125%), giving ₹60,533 and therefore <b>₹61,300</b> in Level 10.</p>
+      <p class="note">From <b>01.07.2017</b> NPA is <b>20% of revised basic pay</b>, and <b>basic pay plus NPA may not exceed ₹2,37,500</b>. The printed text of Rule 7(1)(B)(i) refers to DA “as on 1st day of January, 2006”; the 2017 amendment corrected that slip only in Rule 3(v), while the illustration applies the 01.01.2016 rate of 125%.</p>
+      <p class="src"><b>Source:</b> Rule 7(1)(B); Rule 13(ii); DoE O.M. No. 12-2/2016-E.III.A dated 07.07.2017.</p>
+    </div>
+    <div class="card">
+      <h3>Pay protection — Rules 7(7) to 7(11)</h3>
+      <ul>
+        <li><b>7(7) Personal pay:</b> where existing emoluments exceed the revised emoluments, the difference is allowed as personal pay, absorbed in future increases of pay.</li>
+        <li><b>7(8) Stepping up on fixation:</b> where pay is fixed in a cell lower than that of a junior in the same cadre, who was drawing less immediately before 01.01.2016, the senior is stepped up to the junior's cell.</li>
+        <li><b>7(10) Stepping up on promotion:</b> where a senior promoted <i>before</i> 01.01.2016 draws less than a junior promoted <i>on or after</i> that date, his pay is stepped up from the <b>date of the junior's promotion</b>, subject to four conditions — same cadre and identical posts, identical lower and higher structures, the senior drawing equal or more pay at the time of his promotion, and the anomaly flowing directly from FR 22 or the pay-fixation rules. The order issues under <b>FR 27</b>, and the next increment then falls after the required qualifying service from re-fixation.</li>
+        <li><b>Proviso:</b> no stepping up where the junior drew more because of <b>advance increments</b>.</li>
+        <li><b>7(11):</b> officiating pay fixed lower than substantive pay is brought to the same stage.</li>
+      </ul>
+      <p class="src"><b>Source:</b> Rules 7(7)–(11); DoPT O.M. No. 4/3/2017-Estt.(Pay-I) dated 26.10.2018 (consolidated guidelines).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PROMOTION ============================ -->
+<section class="panel" id="promotion" role="tabpanel" aria-labelledby="tab-promotion" tabindex="-1">
+  <div class="section-head">
+    <span class="kicker">Rules 13 and 10</span>
+    <h2>Promotion, increments and the DNI option</h2>
+  </div>
+  <p class="lead">Promotion fixation is a two-level operation: an increment is earned in the Level <i>left behind</i>, and the result is then located in the Level <i>entered</i>. The optional FR 22(I)(a)(1) route defers that to the date of next increment and then applies two increments at once.</p>
+
+  <div class="card my-18">
+    <div class="calc">
+      <div class="field">
+        <label for="r13From">Level before promotion</label>
+        <select id="r13From"></select>
+      </div>
+      <div class="field">
+        <label for="r13Pay">Current basic pay (₹)</label>
+        <input id="r13Pay" type="number" min="0" step="100" value="28700">
+      </div>
+      <div class="field">
+        <label for="r13To">Level on promotion</label>
+        <select id="r13To"></select>
+      </div>
+      <div class="field">
+        <button class="btn" id="r13Go" type="button">Fix promoted pay</button>
+      </div>
+    </div>
+    <div class="out" id="r13Out" aria-live="polite"></div>
+  </div>
+
+  <figure class="card mb-16">
+    <svg viewBox="0 0 700 258" role="img" aria-label="Diagram of promotion fixation from Level 4 pay 28,700 to Level 5 pay 30,100">
+      <g class="svgtext" font-size="12">
+        <text x="20" y="24" font-weight="700">Level 4 (lower post)</text>
+        <text x="380" y="24" font-weight="700">Level 5 (promoted post)</text>
+        <g class="svgmono" font-size="12.5">
+          <rect x="20" y="42" width="150" height="30" rx="6" fill="currentColor" fill-opacity=".04" stroke="currentColor" stroke-opacity=".22"/>
+          <text x="32" y="62">27,900</text>
+          <rect x="20" y="78" width="150" height="30" rx="6" fill="currentColor" fill-opacity=".04" stroke="currentColor" stroke-opacity=".22"/>
+          <text x="32" y="98">28,700</text>
+          <rect x="20" y="114" width="150" height="30" rx="6" fill="currentColor" fill-opacity=".20" stroke="currentColor" stroke-opacity=".55" stroke-width="1.6"/>
+          <text x="32" y="134" font-weight="700">29,600</text>
+          <text x="178" y="134" font-size="10" fill-opacity=".72">← +1 increment</text>
+
+          <rect x="380" y="42" width="150" height="30" rx="6" fill="currentColor" fill-opacity=".04" stroke="currentColor" stroke-opacity=".22"/>
+          <text x="392" y="62">29,200</text>
+          <rect x="380" y="78" width="150" height="30" rx="6" fill="currentColor" fill-opacity=".20" stroke="currentColor" stroke-opacity=".55" stroke-width="1.6"/>
+          <text x="392" y="98" font-weight="700">30,100</text>
+          <text x="538" y="98" font-size="10" fill-opacity=".72">← equal / next higher</text>
+          <rect x="380" y="114" width="150" height="30" rx="6" fill="currentColor" fill-opacity=".04" stroke="currentColor" stroke-opacity=".22"/>
+          <text x="392" y="134">31,000</text>
+        </g>
+        <path d="M175 129 C255 129 300 93 375 93" fill="none" stroke="currentColor" stroke-opacity=".5" stroke-width="1.8" stroke-dasharray="5 4"/>
+        <path d="M366 88 L378 93 L366 98" fill="none" stroke="currentColor" stroke-opacity=".5" stroke-width="1.8"/>
+        <text x="20" y="182" font-size="11.5" fill-opacity=".78">Step 1 — ₹28,700 in Level 4. One increment takes the employee to ₹29,600 in the same Level.</text>
+        <text x="20" y="203" font-size="11.5" fill-opacity=".78">Step 2 — ₹29,600 is not a Level 5 cell, so he is placed at the next higher cell: ₹30,100.</text>
+        <text x="20" y="226" font-size="11.5" font-weight="700">Result — Level 5, ₹30,100; the next increment falls on the existing DNI.</text>
+        <text x="20" y="247" font-size="10.5" fill-opacity=".6">Cell figures taken from Levels 4 and 5 of Part A of the Schedule.</text>
+      </g>
+    </svg>
+    <figcaption><b>Figure 3.</b> Rule 13 worked on real matrix cells: Level 4 ₹28,700 → Level 5 ₹30,100.</figcaption>
+  </figure>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Rule 10 — dates that move</h3>
+      <ul>
+        <li>Two increment dates: <b>1 January</b> and <b>1 July</b>, instead of the single 1 July date earlier.</li>
+        <li>Appointed, promoted or granted MACP between <b>2 January and 1 July</b> (both inclusive) → increment on <b>1 January</b>.</li>
+        <li>Appointed, promoted or granted MACP between <b>2 July and 1 January</b> (both inclusive) → increment on <b>1 July</b>.</li>
+        <li>The proviso to Rule 10(1): <b>only one annual increment</b>, on one of the two dates. The dates are alternatives, never additive.</li>
+      </ul>
+      <div class="calc mt-8">
+        <div class="field">
+          <label for="dniLevel">Level</label>
+          <select id="dniLevel"></select>
+        </div>
+        <div class="field">
+          <label for="dniPay">Basic pay (₹)</label>
+          <input id="dniPay" type="number" min="0" step="100" value="44900">
+        </div>
+        <div class="field">
+          <label for="dniDate">Existing DNI</label>
+          <select id="dniDate">
+            <option value="jan">1 January</option>
+            <option value="jul" selected>1 July</option>
+          </select>
+        </div>
+        <div class="field">
+          <button class="btn" id="dniGo" type="button">Next increment</button>
+        </div>
+      </div>
+      <div class="out" id="dniOut" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <h3>The FR 22(I)(a)(1) option</h3>
+      <p>Within <b>one month</b> of promotion an employee may opt to have his pay fixed from his <b>date of next increment in the lower post</b> instead of from the date of promotion. The two routes then diverge:</p>
+      <div class="tablewrap flat my-8">
+        <table>
+          <thead><tr><th>Stage</th><th>Rule 13 (default)</th><th>DNI option</th></tr></thead>
+          <tbody>
+            <tr><td>Promotion day</td><td>+1 increment in Level 6 (₹50,500 → ₹52,000), placed in Level 7 at <b>₹52,000</b></td><td>Level 7 at the next higher cell above ₹50,500 — <b>₹52,000</b></td></tr>
+            <tr><td>DNI (01.07.2018)</td><td>No change</td><td>Two increments in Level 6 (₹50,500 → ₹52,000 → ₹53,600), placed in Level 7 at <b>₹53,600</b></td></tr>
+            <tr><td>Next increment</td><td>01.07.2019 → ₹53,600</td><td>01.07.2019 → ₹55,200</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="src">Worked on real matrix cells under the DoPT method (O.M. No. 13/02/2017-Estt.(Pay-I) dated 27.07.2017, clarified 28.08.2018). The figures are illustrative; they are not a reproduction of the O.M.'s own examples.</p>
+      <p class="note warn">The option is <b>not</b> available on appointment on deputation to an ex-cadre post, on direct recruitment, or on ad-hoc appointment or promotion. Where the promotion date and the DNI fall close together the option may gain nothing — work out both routes before opting.</p>
+    </div>
+  </div>
+
+  <div class="card mt-16">
+    <h3>Rule 13(ii) — the NPA ceiling on promotion</h3>
+    <p>For Government servants receiving NPA, <b>basic pay plus NPA shall not exceed the average of the basic pay of the revised scale applicable to the Apex Level and to the Level of the Cabinet Secretary</b> — that is the average of ₹2,25,000 and ₹2,50,000, or <b>₹2,37,500</b>.</p>
+    <p class="src"><b>Source:</b> Rule 13(ii); DoE O.M. No. 12-2/2016-E.III.A dated 07.07.2017.</p>
+  </div>
+</section>
+
+<!-- ============================ ALLOWANCES ============================ -->
+<section class="panel" id="allowances" role="tabpanel" aria-labelledby="tab-allowances" tabindex="-1">
+  <div class="section-head">
+    <span class="kicker">DoE resolution of 06.07.2017 and the O.M.s of 07.07.2017</span>
+    <h2>Allowances after the 7th CPC</h2>
+  </div>
+  <p class="lead">The 2016 Rules fix pay; allowances were notified separately with effect from 01.07.2017, and some of them escalate automatically with the DA rate. The tables carry the position as it stands with DA at 63% from 01.07.2026.</p>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Dearness Allowance — the full run</h3>
+      <div class="tablewrap maxh-420">
+        <table>
+          <thead><tr><th>Effective</th><th class="n">DA</th><th>Change</th></tr></thead>
+          <tbody id="daTable"></tbody>
+        </table>
+      </div>
+      <p class="src">DA is a percentage of basic pay only. The 18-month freeze (Jan 2020 – Jun 2021) was lifted by restoring the rate from 01.07.2021; the withheld instalments were not paid as arrears.</p>
+    </div>
+
+    <div class="card">
+      <h3>House Rent Allowance</h3>
+      <div class="tablewrap flat">
+        <table>
+          <thead><tr><th>Period</th><th class="n">X</th><th class="n">Y</th><th class="n">Z</th><th>Trigger</th></tr></thead>
+          <tbody>
+            <tr><td>01.07.2017 – 30.06.2021</td><td class="n">24%</td><td class="n">16%</td><td class="n">8%</td><td>Base rates</td></tr>
+            <tr><td>01.07.2021 – 31.12.2023</td><td class="n">27%</td><td class="n">18%</td><td class="n">9%</td><td>DA crosses 25%</td></tr>
+            <tr><td>From 01.01.2024</td><td class="n">30%</td><td class="n">20%</td><td class="n">10%</td><td>DA crosses 50%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-7">Floors: <b>₹5,400 / ₹3,600 / ₹1,800</b> a month for X / Y / Z cities. “Basic pay” here is pay in the Level and <b>excludes NPA</b>, special pay and other additions. The O.M. provides only two escalators, at 25% and 50% DA, so 30/20/10% holds even at 63%.</p>
+      <p class="src"><b>Source:</b> DoE O.M. No. 2/5/2017-E.II(B) dated 07.07.2017, para 3; DoE I.D. Note dated 04.08.2021 (no separate order needed at the triggers).</p>
+    </div>
+  </div>
+
+  <div class="grid g2 mt-16">
+    <div class="card">
+      <h3>Transport Allowance</h3>
+      <div class="tablewrap flat">
+        <table>
+          <thead><tr><th>Pay level / condition</th><th class="n">Higher TPTA city</th><th class="n">Other places</th></tr></thead>
+          <tbody>
+            <tr><td>Level 9 and above</td><td class="n">₹7,200 + DA</td><td class="n">₹3,600 + DA</td></tr>
+            <tr><td>Level 3 to 8, and Level 1–2 drawing ₹24,200 or more</td><td class="n">₹3,600 + DA</td><td class="n">₹1,800 + DA</td></tr>
+            <tr><td>Level 1–2 drawing less than ₹24,200</td><td class="n">₹1,350 + DA</td><td class="n">₹900 + DA</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-7">DA is payable on Transport Allowance at the same rate as on basic pay. Employees with disabilities get <b>double</b> the normal rate. The allowance is not admissible during leave exceeding 30 days, and is reduced by 30% where government transport is provided.</p>
+      <p class="src"><b>Source:</b> DoE O.M. No. 21(2)/2017-E.II(B) dated 07.07.2017, read with the O.M. dated 02.08.2017.</p>
+    </div>
+
+    <div class="card">
+      <h3>Children Education Allowance and Hostel Subsidy</h3>
+      <div class="tablewrap flat">
+        <table>
+          <thead><tr><th>Item</th><th class="n">From 01.07.2017</th><th class="n">From 01.01.2024</th></tr></thead>
+          <tbody>
+            <tr><td>CEA per child per month</td><td class="n">₹2,250</td><td class="n">₹2,812.50</td></tr>
+            <tr><td>CEA — child with disability</td><td class="n">₹4,500</td><td class="n">₹5,625</td></tr>
+            <tr><td>Hostel subsidy per month</td><td class="n">₹6,750</td><td class="n">₹8,437.50</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-7">Admissible for a maximum of <b>two children</b>. The 25% increase took effect when DA crossed 50% on 01.01.2024. CEA is reimbursed against fee receipts; Hostel Subsidy is subject to a ceiling of the actual hostel charges and is payable only where the child actually resides in a hostel.</p>
+      <p class="src"><b>Source:</b> DoPT O.M. No. A-27012/01/2017-Estt.(AL) dated 17.07.2018; O.M. dated 25.04.2024; corrigendum on file A-27012/01/2023-Pers. Policy(AL) dated 30.06.2026.</p>
+    </div>
+  </div>
+
+  <div class="grid g2 mt-16">
+    <div class="card">
+      <h3>Non-Practising Allowance</h3>
+      <p>Revised to <b>20% of revised basic pay</b> for medical officers with effect from <b>01.07.2017</b>, down from the pre-revised 25%, with basic pay plus NPA capped at <b>₹2,37,500</b>.</p>
+      <p>NPA counts for DA, transport allowance, pension and gratuity, but <b>not</b> for HRA, which is computed on basic pay alone.</p>
+      <p class="src"><b>Source:</b> DoE O.M. No. 12-2/2016-E.III.A dated 07.07.2017; Rule 13(ii).</p>
+    </div>
+    <div class="card">
+      <h3>Other allowances — the headline changes</h3>
+      <ul>
+        <li><b>Rationalised.</b> The 7th CPC recommended abolishing 53 of the 196 allowances and subsuming 37; those accepted took effect from 01.07.2017.</li>
+        <li><b>Advances abolished.</b> Festival, bicycle, warm clothing, cycle and several other advances were discontinued; interest-free Medical, TA on tour and transfer, LTC and TA to the family of a deceased employee were retained, as were HBA and the PC advance (₹50,000 or actuals, whichever is lower, not more than five times in a career).</li>
+        <li><b>Check the Annexure.</b> Conditional allowances vary by department, and the relevant O.M. governs each one.</li>
+      </ul>
+      <p class="src"><b>Source:</b> DoE Resolution dated 06.07.2017 and the allowance O.M.s of 07.07.2017; DoE O.M. of October 2016 on advances.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ EMOLUMENTS ============================ -->
+<section class="panel" id="emoluments" role="tabpanel" aria-labelledby="tab-emoluments" tabindex="-1">
+  <div class="section-head">
+    <span class="kicker">Monthly estimate</span>
+    <h2>Salary estimator</h2>
+  </div>
+  <p class="lead">Basic pay from the matrix plus DA, HRA (with the statutory floors), transport allowance and optional NPA. This gives gross emoluments before deductions such as NPS, CGHS, CGEGIS and income tax.</p>
+
+  <div class="card my-18">
+    <div class="calc">
+      <div class="field">
+        <label for="salLevel">Level</label>
+        <select id="salLevel"></select>
+      </div>
+      <div class="field">
+        <label for="salPay">Basic pay (₹)</label>
+        <input id="salPay" type="number" min="0" step="100" value="44900">
+      </div>
+      <div class="field">
+        <label for="salCity">City class (HRA)</label>
+        <select id="salCity">
+          <option value="X">X — 30%</option>
+          <option value="Y" selected>Y — 20%</option>
+          <option value="Z">Z — 10%</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="salTpta">TA city</label>
+        <select id="salTpta">
+          <option value="higher">Higher TPTA city</option>
+          <option value="other" selected>Other place</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="salDa">DA rate</label>
+        <select id="salDa"></select>
+      </div>
+      <div class="field">
+        <label class="check"><input type="checkbox" id="salNpa"> NPA 20% (medical)</label>
+      </div>
+      <div class="field">
+        <button class="btn" id="salGo" type="button">Calculate</button>
+      </div>
+    </div>
+    <div class="out" id="salOut" aria-live="polite"></div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>What is included</h3>
+      <ul>
+        <li><b>DA</b> on basic pay at the selected rate, rounded to the nearest rupee.</li>
+        <li><b>HRA</b> at the city-class rate, subject to the ₹5,400 / ₹3,600 / ₹1,800 floors.</li>
+        <li><b>Transport Allowance</b> at the level-appropriate flat rate, plus DA on it.</li>
+        <li><b>NPA</b> at 20% of basic pay, trimmed so that basic pay plus NPA never exceeds ₹2,37,500.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>What is excluded</h3>
+      <ul>
+        <li>Deductions — NPS (10% of basic pay plus DA), CGHS, CGEGIS, professional tax, income tax.</li>
+        <li>Special pay, personal pay, and post-specific allowances such as hardship or uniform allowance.</li>
+        <li>CEA and Hostel Subsidy, which are reimbursements and depend on actual expenditure.</li>
+        <li>Arrears and one-off payments.</li>
+      </ul>
+      <p class="note warn">HRA is not admissible where the employee occupies government accommodation; the estimator assumes it is admissible.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PENSION ============================ -->
+<section class="panel" id="pension" role="tabpanel" aria-labelledby="tab-pension" tabindex="-1">
+  <div class="section-head">
+    <span class="kicker">CCS (Pension) Rules, 2021</span>
+    <h2>Pension, gratuity and family pension</h2>
+  </div>
+  <p class="lead">Retirement benefits flow from the last basic pay drawn in the matrix. The 2021 Rules consolidated the earlier pension rules and are the operative text for a civil servant retiring today.</p>
+
+  <div class="grid g2 my-18">
+    <div class="card">
+      <h3>Pension — Rule 44</h3>
+      <p>Pension is <b>50% of the last basic pay</b>, or of the average emoluments of the last ten months, <b>whichever is higher</b>, for qualifying service of ten years or more. The floor is <b>₹9,000</b> a month and the ceiling <b>₹1,25,000</b>.</p>
+      <p>Qualifying service below ten years attracts a lump-sum withdrawal benefit instead of pension.</p>
+      <p class="src"><b>Source:</b> CCS (Pension) Rules, 2021, Rule 44.</p>
+    </div>
+    <div class="card">
+      <h3>Gratuity — Rule 45</h3>
+      <p>Retirement gratuity is <b>one quarter of “emoluments” for each completed six-month period</b> of qualifying service, subject to a maximum of <b>16.5 times</b> the emoluments. Emoluments here means <b>basic pay plus DA</b>.</p>
+      <p>With DA at 50%, the monetary ceiling rose from <b>₹20 lakh to ₹25 lakh</b> with effect from <b>01.01.2024</b>. Death gratuity follows a separate slab scale.</p>
+      <p class="src"><b>Source:</b> CCS (Pension) Rules, 2021, Rule 45; DoP&amp;PW O.M. raising the ceiling with effect from 01.01.2024.</p>
+    </div>
+  </div>
+
+  <div class="card mb-16">
+    <div class="calc">
+      <div class="field">
+        <label for="penBasic">Last basic pay (₹)</label>
+        <input id="penBasic" type="number" min="0" step="100" value="78700">
+      </div>
+      <div class="field">
+        <label for="penYears">Qualifying service (years)</label>
+        <input id="penYears" type="number" min="0" max="40" step="0.5" value="30">
+      </div>
+      <div class="field">
+        <label for="penDa">DA rate</label>
+        <select id="penDa"></select>
+      </div>
+      <div class="field">
+        <button class="btn" id="penGo" type="button">Estimate</button>
+      </div>
+    </div>
+    <div class="out" id="penOut" aria-live="polite"></div>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Family pension — Rule 51</h3>
+      <p>Normal family pension is <b>30% of the basic pay</b> last drawn, subject to a floor of ₹9,000 a month. Where the employee dies in service after ten years of qualifying service, the <b>enhanced</b> family pension is <b>50%</b> of basic pay for <b>ten years</b>, reverting thereafter to the normal rate.</p>
+      <p class="src"><b>Source:</b> CCS (Pension) Rules, 2021, Rule 51.</p>
+    </div>
+    <div class="card">
+      <h3>Commutation and NPS</h3>
+      <p>Up to <b>40%</b> of pension may be commuted for a lump sum, the commuted portion being restored after 15 years. Employees covered by the <b>National Pension System</b> are governed by the NPS Rules, 2021 rather than by Rules 44 and 45, and receive a lump sum plus an annuity from their corpus.</p>
+      <p class="note">Check whether the employee is on the <b>old (defined benefit)</b> or the <b>NPS (defined contribution)</b> scheme — the calculator applies only to the former.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ QUIZ ============================ -->
+<section class="panel" id="quiz" role="tabpanel" aria-labelledby="tab-quiz" tabindex="-1">
+  <div class="section-head">
+    <span class="kicker">Self-check</span>
+    <h2>Twenty questions</h2>
+  </div>
+  <p class="lead">Each answer is followed by the reason and the provision it rests on. The score updates as you go.</p>
+  <div id="quizBox" class="mt-18"></div>
+  <div class="quizbar">
+    <button class="btn ghost" id="quizReset" type="button">Reset quiz</button>
+    <span class="scorebox" id="quizScore" aria-live="polite">Score 0 / 20</span>
+  </div>
+</section>
+
+<!-- ============================ FLASHCARDS ============================ -->
+<section class="panel" id="cards" role="tabpanel" aria-labelledby="tab-cards" tabindex="-1">
+  <div class="section-head">
+    <span class="kicker">Revision</span>
+    <h2>Flashcards</h2>
+  </div>
+  <p class="lead">Click a card to turn it. Twenty-five cards on the provisions that are most often got wrong.</p>
+  <div class="fcgrid mt-18" id="fcGrid"></div>
+</section>
+
+<!-- ============================ ERROR LAB ============================ -->
+<section class="panel" id="lab" role="tabpanel" aria-labelledby="tab-lab" tabindex="-1">
+  <div class="section-head">
+    <span class="kicker">Diagnostics</span>
+    <h2>Error lab — spot what is wrong</h2>
+  </div>
+  <p class="lead">Each card states a proposition of the kind that is often repeated and is wrong. Decide what is wrong with it before you reveal the correction.</p>
+  <div id="errList" class="mt-18"></div>
+</section>
+
+<!-- ============================ SOURCES ============================ -->
+<section class="panel" id="sources" role="tabpanel" aria-labelledby="tab-sources" tabindex="-1">
+  <div class="section-head">
+    <span class="kicker">Provenance</span>
+    <h2>Sources and verification notes</h2>
+  </div>
+  <p class="lead">Nothing here rests on secondary commentary alone. The primary instruments used are listed with their gazette or file numbers, followed by a note on how the figures were checked.</p>
+
+  <div class="grid g2 mt-18">
+    <div class="card">
+      <h3>Primary instruments</h3>
+      <ul>
+        <li><b>CCS (Revised Pay) Rules, 2016</b> — G.S.R. 721(E), F. No. 1-2/2016-IC, dated 25.07.2016: Rules 1–17, the Annexures (Form of Option and Undertaking), the Explanatory Memorandum and Schedule Parts A, B and C.</li>
+        <li><b>CCS (Revised Pay) (Amendment) Rules, 2017</b> — G.S.R. 592(E), F. No. 1-2/2016-IC, dated 15.06.2017, deemed effective 01.01.2016.</li>
+        <li><b>DoE O.M. No. 4-6/2017-IC/E.III(A) dated 28.09.2017</b> — modification of Level 13 of the Pay Matrix.</li>
+        <li><b>CCS (Pension) Rules, 2021</b> — Rules 44, 45 and 51.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Allowances, advances and pay-fixation orders</h3>
+      <ul>
+        <li>DoE O.M. No. 2/5/2017-E.II(B) dated 07.07.2017 — HRA, with the 25% and 50% DA escalators.</li>
+        <li>DoE O.M. No. 21(2)/2017-E.II(B) dated 07.07.2017 and 02.08.2017 — Transport Allowance.</li>
+        <li>DoE O.M. No. 12-2/2016-E.III.A dated 07.07.2017 — NPA at 20%, effective 01.07.2017.</li>
+        <li>DoPT O.M. No. A-27012/01/2017-Estt.(AL) dated 17.07.2018, and the O.M.s dated 25.04.2024 and 30.06.2026 — CEA and Hostel Subsidy.</li>
+        <li>DoPT O.M. No. 13/02/2017-Estt.(Pay-I) dated 27.07.2017 and 28.08.2018 — DNI option on promotion under FR 22(I)(a)(1).</li>
+        <li>DoPT O.M. No. 4/3/2017-Estt.(Pay-I) dated 26.10.2018 — consolidated stepping-up guidelines.</li>
+        <li>DoE O.M. of October 2016 — abolition of festival, bicycle, warm-clothing and other advances.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card mt-16">
+    <h3>How the numbers on this page were checked</h3>
+    <ol>
+      <li><b>Matrix.</b> All 540 cells were compared with Part A of the Schedule, and each of the 521 column-to-column steps was re-derived from its predecessor (about 3%, rounded to the nearest ₹100). Every step reconciles, including the 20-cell Level 13 substituted in 2017.</li>
+      <li><b>Illustrations.</b> The three Gazette illustrations under Rule 7 were recomputed arithmetically and the resulting amounts located in the matrix — ₹32,300, ₹61,300 and ₹33,900, in Levels 4, 10 and 5 respectively.</li>
+      <li><b>Cell counts.</b> Levels 1–10 have 40 cells each (400); Level 11 has 39; Level 12 has 34; Level 13 has 20; Level 13A has 18; Level 14 has 15; Level 15 has 8; Level 16 has 4; Levels 17 and 18 have 1 each — 540 in total.</li>
+      <li><b>Rule 9 wording.</b> The Rule grants the increment as the vertical cell movement and prescribes no percentage. Statements elsewhere that “Rule 9 grants 3% rounded to the next ₹100” are a conflation of the Rule with the printed Schedule and with para 5.1.38 of the 7th CPC report; this compendium keeps the two apart.</li>
+      <li><b>DA.</b> The series runs from 0% on 01.01.2016 to 63% from 01.07.2026, with the freeze of January 2020 to June 2021 reflected as a restoration rather than as arrears.</li>
+    </ol>
+  </div>
+
+  <div class="card mt-16 accent-gold">
+    <h3>Scope and caveats</h3>
+    <ul>
+      <li>This is an <b>educational compilation</b>. In an individual case the Head of Office fixes pay under the Rules, and the Central Government's interpretation under Rule 17 prevails.</li>
+      <li>Railways, Defence Services personnel paid from Defence Services Estimates and Gramin Dak Sevaks are <b>not</b> governed by these Rules; parallel rules apply to them, although the matrix is similar.</li>
+      <li>The compendium covers the <b>7th CPC structure</b>. Any revision recommended by a later Pay Commission is outside its scope; the DA rate shown is the instalment effective 01.07.2026.</li>
+      <li>Allowance rates change by O.M.; where an O.M. is cited, the O.M. governs and not this page.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="small-mb"><b>Pay Matrix Compendium</b> — CCS (Revised Pay) Rules, 2016 (G.S.R. 721(E)) and the 2017 Amendment (G.S.R. 592(E)).</p>
+    <p class="m0">A single self-contained file: no external scripts, fonts, images or network calls. Intended for offline reading and printing.</p>
+  </div>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ============================================================
+   Pay Matrix Compendium — application script
+   Data verified against G.S.R. 721(E) and G.S.R. 592(E).
+   No external dependencies, no network calls.
+   ============================================================ */
+(function () {
+  "use strict";
+
+  /* ---------------------------------------------------------------
+     Part A of the Schedule. Level 13 is the column substituted by
+     G.S.R. 592(E) dated 15.06.2017.
+     Cells per level: 1-10 = 40, 11 = 39, 12 = 34, 13 = 20,
+     13A = 18, 14 = 15, 15 = 8, 16 = 4, 17 = 1, 18 = 1  -> 540.
+     --------------------------------------------------------------- */
+  var PAY_MATRIX = {
+    "1": [18000, 18500, 19100, 19700, 20300, 20900, 21500, 22100, 22800, 23500, 24200, 24900, 25600, 26400, 27200, 28000, 28800, 29700, 30600, 31500, 32400, 33400, 34400, 35400, 36500, 37600, 38700, 39900, 41100, 42300, 43600, 44900, 46200, 47600, 49000, 50500, 52000, 53600, 55200, 56900],
+    "2": [19900, 20500, 21100, 21700, 22400, 23100, 23800, 24500, 25200, 26000, 26800, 27600, 28400, 29300, 30200, 31100, 32000, 33000, 34000, 35000, 36100, 37200, 38300, 39400, 40600, 41800, 43100, 44400, 45700, 47100, 48500, 50000, 51500, 53000, 54600, 56200, 57900, 59600, 61400, 63200],
+    "3": [21700, 22400, 23100, 23800, 24500, 25200, 26000, 26800, 27600, 28400, 29300, 30200, 31100, 32000, 33000, 34000, 35000, 36100, 37200, 38300, 39400, 40600, 41800, 43100, 44400, 45700, 47100, 48500, 50000, 51500, 53000, 54600, 56200, 57900, 59600, 61400, 63200, 65100, 67100, 69100],
+    "4": [25500, 26300, 27100, 27900, 28700, 29600, 30500, 31400, 32300, 33300, 34300, 35300, 36400, 37500, 38600, 39800, 41000, 42200, 43500, 44800, 46100, 47500, 48900, 50400, 51900, 53500, 55100, 56800, 58500, 60300, 62100, 64000, 65900, 67900, 69900, 72000, 74200, 76400, 78700, 81100],
+    "5": [29200, 30100, 31000, 31900, 32900, 33900, 34900, 35900, 37000, 38100, 39200, 40400, 41600, 42800, 44100, 45400, 46800, 48200, 49600, 51100, 52600, 54200, 55800, 57500, 59200, 61000, 62800, 64700, 66600, 68600, 70700, 72800, 75000, 77300, 79600, 82000, 84500, 87000, 89600, 92300],
+    "6": [35400, 36500, 37600, 38700, 39900, 41100, 42300, 43600, 44900, 46200, 47600, 49000, 50500, 52000, 53600, 55200, 56900, 58600, 60400, 62200, 64100, 66000, 68000, 70000, 72100, 74300, 76500, 78800, 81200, 83600, 86100, 88700, 91400, 94100, 96900, 99800, 102800, 105900, 109100, 112400],
+    "7": [44900, 46200, 47600, 49000, 50500, 52000, 53600, 55200, 56900, 58600, 60400, 62200, 64100, 66000, 68000, 70000, 72100, 74300, 76500, 78800, 81200, 83600, 86100, 88700, 91400, 94100, 96900, 99800, 102800, 105900, 109100, 112400, 115800, 119300, 122900, 126600, 130400, 134300, 138300, 142400],
+    "8": [47600, 49000, 50500, 52000, 53600, 55200, 56900, 58600, 60400, 62200, 64100, 66000, 68000, 70000, 72100, 74300, 76500, 78800, 81200, 83600, 86100, 88700, 91400, 94100, 96900, 99800, 102800, 105900, 109100, 112400, 115800, 119300, 122900, 126600, 130400, 134300, 138300, 142400, 146700, 151100],
+    "9": [53100, 54700, 56300, 58000, 59700, 61500, 63300, 65200, 67200, 69200, 71300, 73400, 75600, 77900, 80200, 82600, 85100, 87700, 90300, 93000, 95800, 98700, 101700, 104800, 107900, 111100, 114400, 117800, 121300, 124900, 128600, 132500, 136500, 140600, 144800, 149100, 153600, 158200, 162900, 167800],
+    "10": [56100, 57800, 59500, 61300, 63100, 65000, 67000, 69000, 71100, 73200, 75400, 77700, 80000, 82400, 84900, 87400, 90000, 92700, 95500, 98400, 101400, 104400, 107500, 110700, 114000, 117400, 120900, 124500, 128200, 132000, 136000, 140100, 144300, 148600, 153100, 157700, 162400, 167300, 172300, 177500],
+    "11": [67700, 69700, 71800, 74000, 76200, 78500, 80900, 83300, 85800, 88400, 91100, 93800, 96600, 99500, 102500, 105600, 108800, 112100, 115500, 119000, 122600, 126300, 130100, 134000, 138000, 142100, 146400, 150800, 155300, 160000, 164800, 169700, 174800, 180000, 185400, 191000, 196700, 202600, 208700],
+    "12": [78800, 81200, 83600, 86100, 88700, 91400, 94100, 96900, 99800, 102800, 105900, 109100, 112400, 115800, 119300, 122900, 126600, 130400, 134300, 138300, 142400, 146700, 151100, 155600, 160300, 165100, 170100, 175200, 180500, 185900, 191500, 197200, 203100, 209200],
+    "13": [123100, 126800, 130600, 134500, 138500, 142700, 147000, 151400, 155900, 160600, 165400, 170400, 175500, 180800, 186200, 191800, 197600, 203500, 209600, 215900],
+    "13A": [131100, 135000, 139100, 143300, 147600, 152000, 156600, 161300, 166100, 171100, 176200, 181500, 186900, 192500, 198300, 204200, 210300, 216600],
+    "14": [144200, 148500, 153000, 157600, 162300, 167200, 172200, 177400, 182700, 188200, 193800, 199600, 205600, 211800, 218200],
+    "15": [182200, 187700, 193300, 199100, 205100, 211300, 217600, 224100],
+    "16": [205400, 211600, 217900, 224400],
+    "17": [225000],
+    "18": [250000]
+  };
+
+  var LEVELS = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "13A", "14", "15", "16", "17", "18"];
+
+  var LEVEL_GP = {
+    "1": "GP 1,800", "2": "GP 1,900", "3": "GP 2,000", "4": "GP 2,400",
+    "5": "GP 2,800", "6": "GP 4,200", "7": "GP 4,600", "8": "GP 4,800",
+    "9": "GP 5,400 (PB-2)", "10": "GP 5,400 (PB-3)", "11": "GP 6,600",
+    "12": "GP 7,600", "13": "GP 8,700", "13A": "GP 8,900", "14": "GP 10,000",
+    "15": "HAG 67,000-79,000", "16": "HAG+ 75,500-80,000",
+    "17": "Apex 80,000 (fixed)", "18": "Cabinet Secretary 90,000 (fixed)"
+  };
+
+  /* ---------------- DA history ---------------- */
+  var DA_HISTORY = [
+    ["01.01.2016", 0, "Base date of the revised structure"],
+    ["01.07.2016", 2, "+2"],
+    ["01.01.2017", 4, "+2"],
+    ["01.07.2017", 5, "+1"],
+    ["01.01.2018", 7, "+2"],
+    ["01.07.2018", 9, "+2"],
+    ["01.01.2019", 12, "+3"],
+    ["01.07.2019", 17, "+5"],
+    ["01.01.2020", 17, "Freeze begins - no instalment"],
+    ["01.07.2020", 17, "Freeze continues"],
+    ["01.01.2021", 17, "Freeze continues"],
+    ["01.07.2021", 28, "Restored; withheld instalments not paid as arrears"],
+    ["01.01.2022", 34, "+6"],
+    ["01.07.2022", 38, "+4"],
+    ["01.01.2023", 42, "+4"],
+    ["01.07.2023", 46, "+4"],
+    ["01.01.2024", 50, "+4 - HRA moves to 30/20/10%"],
+    ["01.07.2024", 53, "+3"],
+    ["01.01.2025", 55, "+2"],
+    ["01.07.2025", 58, "+3"],
+    ["01.01.2026", 60, "+2"],
+    ["01.07.2026", 63, "+3 - current rate"]
+  ];
+
+  /* ---------------- helpers ---------------- */
+  function $(id) { return document.getElementById(id); }
+
+  function fmt(n) {
+    if (n === null || n === undefined || isNaN(n)) { return "\u2014"; }
+    return Number(n).toLocaleString("en-IN", { maximumFractionDigits: 2 });
+  }
+  function rupees(n) { return "\u20B9" + fmt(n); }
+
+  function nextCellFrom(level, current) {
+    var cells = PAY_MATRIX[level], i;
+    for (i = 0; i < cells.length; i++) {
+      if (cells[i] > current) { return cells[i]; }
+    }
+    return null;
+  }
+  function cellAtOrAbove(level, target) {
+    var cells = PAY_MATRIX[level], i;
+    for (i = 0; i < cells.length; i++) {
+      if (cells[i] >= target) { return cells[i]; }
+    }
+    return null;
+  }
+  function cellIndex(level, pay) {
+    var idx = PAY_MATRIX[level].indexOf(pay);
+    return idx < 0 ? null : idx + 1;
+  }
+  function hraFloor(city) { return { X: 5400, Y: 3600, Z: 1800 }[city]; }
+  function hraRate(city) { return { X: 0.30, Y: 0.20, Z: 0.10 }[city]; }
+  function lastCell(level) {
+    var c = PAY_MATRIX[level];
+    return c[c.length - 1];
+  }
+  function num(id, fallback) {
+    var el = $(id);
+    if (!el) { return fallback || 0; }
+    var v = parseFloat(el.value);
+    return isNaN(v) ? (fallback || 0) : v;
+  }
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  var toastTimer = null;
+  function toast(msg) {
+    var t = $("toast");
+    if (!t) { return; }
+    t.textContent = msg;
+    t.className = "show";
+    if (toastTimer) { window.clearTimeout(toastTimer); }
+    toastTimer = window.setTimeout(function () { t.className = ""; }, 2400);
+  }
+
+  /* ---------------- theme ---------------- */
+  var THEME_KEY = "ccsrp-theme";
+
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  }
+
+  function applyTheme(mode) {
+    document.documentElement.setAttribute("data-theme", mode);
+    var host = $("themeBtn");
+    if (!host) { return; }
+    host.innerHTML = "";
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "theme-btn";
+    var dark = mode === "dark";
+    b.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
+    b.appendChild(document.createTextNode(dark ? "\u2600 Light" : "\u263E Dark"));
+    b.addEventListener("click", function () {
+      var next = currentTheme() === "dark" ? "light" : "dark";
+      applyTheme(next);
+      try { window.localStorage.setItem(THEME_KEY, next); } catch (e) { /* storage may be blocked */ }
+    });
+    host.appendChild(b);
+  }
+
+  var savedTheme = "light";
+  try {
+    savedTheme = window.localStorage.getItem(THEME_KEY) === "dark" ? "dark" : "light";
+  } catch (e) {
+    savedTheme = "light";
+  }
+
+  /* ---------------- tabs ---------------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
+
+  function showPanel(id) {
+    var panels = document.querySelectorAll(".panel");
+    var found = false, i;
+    for (i = 0; i < panels.length; i++) {
+      var on = panels[i].id === id;
+      panels[i].className = on ? "panel active" : "panel";
+      if (on) { found = true; }
+    }
+    if (!found) { return; }
+    for (i = 0; i < tabs.length; i++) {
+      tabs[i].setAttribute("aria-selected", tabs[i].getAttribute("data-target") === id ? "true" : "false");
+    }
+    var nav = document.querySelector("nav.tabs");
+    if (nav) {
+      var top = nav.offsetTop;
+      try { window.scrollTo({ top: Math.max(0, top - 4), behavior: "smooth" }); }
+      catch (e) { window.scrollTo(0, Math.max(0, top - 4)); }
+    }
+  }
+
+  function wireTabs() {
+    tabs.forEach(function (t) {
+      t.addEventListener("click", function () { showPanel(t.getAttribute("data-target")); });
+    });
+    window.addEventListener("hashchange", function () {
+      var id = window.location.hash.replace("#", "");
+      if (id && $(id)) { showPanel(id); }
+    });
+  }
+
+  /* ---------------- level selects ---------------- */
+  function fillLevelSelect(sel) {
+    if (!sel) { return; }
+    var html = "", i;
+    for (i = 0; i < LEVELS.length; i++) {
+      html += '<option value="' + LEVELS[i] + '">Level ' + LEVELS[i] +
+        " \u00B7 " + LEVEL_GP[LEVELS[i]] + "</option>";
+    }
+    sel.innerHTML = html;
+  }
+
+  /* ---------------- matrix ---------------- */
+  function renderMatrix() {
+    var head = $("matrixHead"), body = $("matrixBody");
+    if (!head || !body) { return; }
+
+    var h = '<th scope="col">Cell</th>', i, r;
+    for (i = 0; i < LEVELS.length; i++) {
+      var lv = LEVELS[i];
+      h += '<th scope="col" class="' + (lv === "13" ? "lvl13" : "") + '" title="Level ' + lv +
+        " - " + LEVEL_GP[lv] + '">L' + lv + (lv === "13" ? " (2017)" : "") + "</th>";
+    }
+    head.innerHTML = h;
+
+    var maxCells = 0;
+    for (i = 0; i < LEVELS.length; i++) {
+      maxCells = Math.max(maxCells, PAY_MATRIX[LEVELS[i]].length);
+    }
+
+    var rows = [];
+    for (r = 0; r < maxCells; r++) {
+      var tr = '<tr><th scope="row">' + (r + 1) + "</th>";
+      for (i = 0; i < LEVELS.length; i++) {
+        var lv2 = LEVELS[i];
+        var v = PAY_MATRIX[lv2][r];
+        if (v === undefined) {
+          tr += '<td class="' + (lv2 === "13" ? "lvl13" : "") + '"></td>';
+        } else {
+          tr += '<td class="clickable' + (lv2 === "13" ? " lvl13" : "") +
+            '" data-level="' + lv2 + '" data-pay="' + v + '" title="Level ' + lv2 +
+            ", cell " + (r + 1) + " \u2014 " + rupees(v) + '">' + fmt(v) + "</td>";
+        }
+      }
+      rows.push(tr + "</tr>");
+    }
+    body.innerHTML = rows.join("");
+
+    body.addEventListener("click", function (ev) {
+      var node = ev.target;
+      while (node && node !== body && !(node.tagName === "TD" && node.getAttribute("data-pay"))) {
+        node = node.parentNode;
+      }
+      if (!node || node === body) { return; }
+      var lv = node.getAttribute("data-level");
+      var pay = Number(node.getAttribute("data-pay"));
+      if ($("salLevel")) { $("salLevel").value = lv; }
+      if ($("salPay")) { $("salPay").value = pay; }
+      if ($("salOut")) { $("salOut").innerHTML = ""; }
+      showPanel("emoluments");
+      toast("Level " + lv + ", " + rupees(pay) + " carried to the salary estimator");
+    });
+  }
+
+  function searchMatrix() {
+    var val = num("findPay", 0);
+    var only = $("findLevel") ? $("findLevel").value : "";
+    var out = $("findOut");
+    if (!out) { return; }
+
+    var cells = document.querySelectorAll("#matrixBody td[data-pay]");
+    Array.prototype.forEach.call(cells, function (td) { td.className = td.className.replace(/\s*hit/g, ""); });
+
+    if (!val || val <= 0) {
+      out.textContent = "Enter a pay figure to locate its Level and cell number.";
+      return;
+    }
+
+    var hits = [];
+    Array.prototype.forEach.call(cells, function (td) {
+      var lv = td.getAttribute("data-level");
+      if (only && lv !== only) { return; }
+      if (Number(td.getAttribute("data-pay")) === val) {
+        td.className += " hit";
+        var parent = td.parentNode, cellNo = 0, k;
+        for (k = 0; k < parent.children.length; k++) {
+          if (parent.children[k] === td) { cellNo = k; break; }
+        }
+        hits.push("Level " + lv + ", cell " + cellNo);
+      }
+    });
+
+    if (!hits.length) {
+      out.innerHTML = '<span class="err">' + rupees(val) + " is not a cell" +
+        (only ? " in Level " + only : "") + ".</span> Use the Rule 7 or Rule 13 fixer to see which cell applies to a given amount.";
+      return;
+    }
+    out.innerHTML = '<span class="good">' + rupees(val) + "</span> appears at " + hits.join("; ") +
+      ". The same amount can sit in more than one Level, which is why promotion fixation speaks of the \u201Cequal or next higher\u201D cell.";
+  }
+
+  function wireMatrixTools() {
+    var sel = $("findLevel");
+    if (sel) {
+      sel.innerHTML = '<option value="">All levels</option>';
+      var html = "", i;
+      for (i = 0; i < LEVELS.length; i++) {
+        html += '<option value="' + LEVELS[i] + '">Level ' + LEVELS[i] + "</option>";
+      }
+      sel.innerHTML += html;
+      sel.value = "";
+    }
+    if ($("findBtn")) { $("findBtn").addEventListener("click", searchMatrix); }
+    if ($("findClear")) {
+      $("findClear").addEventListener("click", function () {
+        if ($("findPay")) { $("findPay").value = ""; }
+        Array.prototype.forEach.call(document.querySelectorAll("#matrixBody td.hit"), function (td) {
+          td.className = td.className.replace(/\s*hit/g, "");
+        });
+        if ($("findOut")) {
+          $("findOut").textContent = "Tip: click any cell to carry that Level and pay into the salary estimator.";
+        }
+      });
+    }
+    if ($("findPay")) {
+      $("findPay").addEventListener("keydown", function (ev) {
+        if (ev.key === "Enter") { ev.preventDefault(); searchMatrix(); }
+      });
+    }
+  }
+
+  /* ---------------- Rule 7 ---------------- */
+  var PRE_REVISED = [
+    { t: "PB-1 \u20B95,200-20,200 \u2014 GP \u20B91,800", gp: 1800, level: "1", bandMin: 5200 },
+    { t: "PB-1 \u20B95,200-20,200 \u2014 GP \u20B91,900", gp: 1900, level: "2", bandMin: 5200 },
+    { t: "PB-1 \u20B95,200-20,200 \u2014 GP \u20B92,000", gp: 2000, level: "3", bandMin: 5200 },
+    { t: "PB-1 \u20B95,200-20,200 \u2014 GP \u20B92,400", gp: 2400, level: "4", bandMin: 5200 },
+    { t: "PB-1 \u20B95,200-20,200 \u2014 GP \u20B92,800", gp: 2800, level: "5", bandMin: 5200 },
+    { t: "PB-2 \u20B99,300-34,800 \u2014 GP \u20B94,200 (2,800 merged)", gp: 4200, level: "6", bandMin: 9300 },
+    { t: "PB-2 \u20B99,300-34,800 \u2014 GP \u20B94,600", gp: 4600, level: "7", bandMin: 9300 },
+    { t: "PB-2 \u20B99,300-34,800 \u2014 GP \u20B94,800", gp: 4800, level: "8", bandMin: 9300 },
+    { t: "PB-2 \u20B99,300-34,800 \u2014 GP \u20B95,400", gp: 5400, level: "9", bandMin: 9300 },
+    { t: "PB-3 \u20B915,600-39,100 \u2014 GP \u20B95,400", gp: 5400, level: "10", bandMin: 15600 },
+    { t: "PB-3 \u20B915,600-39,100 \u2014 GP \u20B96,600", gp: 6600, level: "11", bandMin: 15600 },
+    { t: "PB-3 \u20B915,600-39,100 \u2014 GP \u20B97,600", gp: 7600, level: "12", bandMin: 15600 },
+    { t: "PB-4 \u20B937,400-67,000 \u2014 GP \u20B98,700", gp: 8700, level: "13", bandMin: 37400 },
+    { t: "PB-4 \u20B937,400-67,000 \u2014 GP \u20B98,900", gp: 8900, level: "13A", bandMin: 37400 },
+    { t: "PB-4 \u20B937,400-67,000 \u2014 GP \u20B910,000", gp: 10000, level: "14", bandMin: 37400 },
+    { t: "HAG \u20B967,000-79,000", gp: 0, level: "15", bandMin: 67000 },
+    { t: "HAG+ \u20B975,500-80,000", gp: 0, level: "16", bandMin: 75500 },
+    { t: "Apex \u2014 \u20B980,000 (fixed)", gp: 0, level: "17", bandMin: 80000 },
+    { t: "Cabinet Secretary \u2014 \u20B990,000 (fixed)", gp: 0, level: "18", bandMin: 90000 }
+  ];
+
+  function renderFixation() {
+    var sel = $("r7Post");
+    if (!sel) { return; }
+    var html = "", i;
+    for (i = 0; i < PRE_REVISED.length; i++) {
+      html += '<option value="' + i + '">' + PRE_REVISED[i].t + " \u2192 Level " + PRE_REVISED[i].level + "</option>";
+    }
+    sel.innerHTML = html;
+    sel.value = "3";
+
+    sel.addEventListener("change", function () {
+      var p = PRE_REVISED[Number(sel.value)];
+      if (!p) { return; }
+      if ($("r7GP")) { $("r7GP").value = p.gp; }
+      if ($("r7Band")) { $("r7Band").value = p.bandMin; }
+    });
+
+    if ($("r7Go")) { $("r7Go").addEventListener("click", runFixation); }
+
+    Array.prototype.forEach.call(document.querySelectorAll("[data-ex]"), function (btn) {
+      btn.addEventListener("click", function () {
+        var ex = btn.getAttribute("data-ex");
+        if (ex === "1") {
+          sel.value = "3";                 /* PB-1, GP 2,400 */
+          $("r7Band").value = 10160;
+          $("r7GP").value = 2400;
+          $("r7NPA").value = 0;
+        } else if (ex === "2") {
+          sel.value = "9";                 /* PB-3, GP 5,400 -> Level 10 */
+          /* The illustration's "basic pay of 21,000" is pay in band 15,600 + GP 5,400 */
+          $("r7Band").value = 15600;
+          $("r7GP").value = 5400;
+          $("r7NPA").value = 5250;
+        } else {
+          sel.value = "4";                 /* upgraded post, GP 2,800 -> Level 5 */
+          $("r7Band").value = 10160;
+          $("r7GP").value = 2800;
+          $("r7NPA").value = 0;
+        }
+        runFixation();
+      });
+    });
+  }
+
+  function runFixation() {
+    var out = $("r7Out");
+    if (!out) { return; }
+
+    var basic = num("r7Band", 0);
+    var gp = num("r7GP", 0);
+    var preNpa = num("r7NPA", 0);
+    var idxPost = $("r7Post") ? Number($("r7Post").value) : 3;
+    var post = PRE_REVISED[idxPost];
+    var level = post ? post.level : "1";
+
+    if (basic < 0 || gp < 0 || preNpa < 0) {
+      out.innerHTML = '<p class="err">Enter non-negative amounts.</p>';
+      return;
+    }
+    if (basic + gp <= 0) {
+      out.innerHTML = '<p class="err">Enter the pay in the pay band and the grade pay.</p>';
+      return;
+    }
+
+    var existing = basic + gp;
+    var product = existing * 2.57;
+    var rounded = Math.round(product);
+    var npaDa = Math.round(preNpa * 1.25);
+    var target = rounded + npaDa;
+
+    var fixed = cellAtOrAbove(level, target);
+    var capped = false;
+    if (fixed === null) {
+      fixed = lastCell(level);
+      capped = true;
+    }
+    var idx = cellIndex(level, fixed);
+
+    var steps = [];
+    steps.push("<b>Existing basic pay</b> = pay in band " + rupees(basic) + " + grade pay " + rupees(gp) +
+      " = <b>" + rupees(existing) + "</b>.");
+    steps.push("Multiply by 2.57: " + fmt(existing) + " \u00D7 2.57 = <b>" +
+      fmt(Math.round(product * 100) / 100) + "</b>.");
+    steps.push("Rounded to the nearest rupee: <b>" + rupees(rounded) + "</b>.");
+
+    if (preNpa > 0) {
+      steps.push("DA at 125% on the pre-revised NPA of " + rupees(preNpa) + " = <b>" + rupees(npaDa) + "</b>.");
+      steps.push("Figure to be located in the Level: " + rupees(rounded) + " + " + rupees(npaDa) +
+        " = <b>" + rupees(target) + "</b>.");
+    }
+
+    if (capped) {
+      steps.push("That exceeds the top cell of Level " + level + ", so pay is fixed at the last cell of the Level.");
+    } else {
+      var below = null, i;
+      for (i = 0; i < PAY_MATRIX[level].length; i++) {
+        if (PAY_MATRIX[level][i] < target) { below = PAY_MATRIX[level][i]; }
+      }
+      if (below === null) {
+        steps.push("The amount is below the first cell of Level " + level + ", so pay is fixed at the minimum: " +
+          rupees(fixed) + " (cell 1).");
+      } else if (below === target) {
+        steps.push("An identical cell exists in Level " + level + ": " + rupees(fixed) + " (cell " + idx + ").");
+      } else {
+        steps.push("The cell below is " + rupees(below) + " and the cell above is " + rupees(fixed) +
+          ", so pay is fixed at the <b>immediate next higher</b> cell: " + rupees(fixed) + " (cell " + idx + ").");
+      }
+    }
+
+    var nextInc = nextCellFrom(level, fixed);
+    var extra = "";
+    if (preNpa > 0) {
+      var npaRevised = Math.round(fixed * 0.20);
+      if (fixed + npaRevised > 237500) { npaRevised = Math.max(0, 237500 - fixed); }
+      extra = '<p class="src">From 01.07.2017 NPA is <b>20% of revised basic pay</b>: ' + rupees(npaRevised) +
+        ", so basic pay plus NPA comes to <b>" + rupees(fixed + npaRevised) + "</b>, within the \u20B92,37,500 ceiling. " +
+        "Until the revised rate applies, Rule 7(1)(B)(ii) keeps the pre-revised NPA of " + rupees(preNpa) +
+        " payable on the revised basic pay.</p>";
+    }
+
+    out.innerHTML =
+      '<div class="verdict">' +
+      '<div><div class="lbl">Revised basic pay</div><div class="big">' + rupees(fixed) + "</div></div>" +
+      '<div><div class="lbl">Level / cell</div><div class="big">' + level + " \u00B7 " + idx + "</div></div>" +
+      '<div><div class="lbl">Next increment</div><div class="big">' +
+      (nextInc ? rupees(nextInc) : "top of level") + "</div></div></div>" +
+      '<ol class="steps">' + steps.map(function (s) { return "<li>" + s + "</li>"; }).join("") + "</ol>" +
+      extra +
+      '<p class="src">Rule 7(1)(A) (or Rule 7(1)(B) where NPA is admissible), with the amount then located in the corresponding Level of Part A of the Schedule.</p>';
+  }
+
+  /* ---------------- Rule 13 ---------------- */
+  function renderPromotion() {
+    var from = $("r13From"), to = $("r13To");
+    if (!from || !to) { return; }
+    fillLevelSelect(from);
+    fillLevelSelect(to);
+    from.value = "4";
+    to.value = "5";
+    if ($("r13Go")) { $("r13Go").addEventListener("click", runPromotion); }
+  }
+
+  function runPromotion() {
+    var out = $("r13Out");
+    if (!out) { return; }
+
+    var from = $("r13From").value;
+    var to = $("r13To").value;
+    var pay = num("r13Pay", 0);
+
+    if (pay <= 0) {
+      out.innerHTML = '<p class="err">Enter the current basic pay.</p>';
+      return;
+    }
+    if (PAY_MATRIX[from].indexOf(pay) < 0) {
+      out.innerHTML = '<p class="err">' + rupees(pay) + " is not a cell in Level " + from +
+        ". The nearest cell at or above it is " +
+        rupees(cellAtOrAbove(from, pay) || lastCell(from)) + ".</p>";
+      return;
+    }
+
+    var steps = [];
+    var inc = nextCellFrom(from, pay);
+    var atTop = false;
+    if (inc === null) {
+      inc = pay;
+      atTop = true;
+      steps.push("Pay is already at the <b>last cell</b> of Level " + from +
+        ", so no increment can be granted in the lower Level.");
+    } else {
+      steps.push("One increment in the Level from which the employee is promoted: " + rupees(pay) +
+        " \u2192 <b>" + rupees(inc) + "</b> (Level " + from + ").");
+    }
+
+    var promoted = cellAtOrAbove(to, inc);
+    if (promoted === null) {
+      promoted = lastCell(to);
+      steps.push("The figure exceeds the top of Level " + to + ", so pay is fixed at its last cell.");
+    } else if (promoted > inc) {
+      steps.push(rupees(inc) + " is not a Level " + to + " cell, so the employee is placed at the equal or " +
+        "<b>next higher</b> cell: " + rupees(promoted) + ".");
+    } else {
+      steps.push(rupees(inc) + " is itself a Level " + to + " cell, so it is retained: " + rupees(promoted) + ".");
+    }
+
+    var pidx = cellIndex(to, promoted);
+    var gain = promoted - pay;
+    var note = "";
+    if (LEVELS.indexOf(to) <= LEVELS.indexOf(from)) {
+      note = '<p class="note warn">The level selected as the promoted level is not above the current one. ' +
+        "Rule 13 applies to a promotion or financial up-gradation into a higher Level.</p>";
+    }
+
+    out.innerHTML =
+      '<div class="verdict">' +
+      '<div><div class="lbl">Pay on promotion</div><div class="big">' + rupees(promoted) + "</div></div>" +
+      '<div><div class="lbl">Level / cell</div><div class="big">' + to + " \u00B7 " + pidx + "</div></div>" +
+      '<div><div class="lbl">Gain over present pay</div><div class="big">' + rupees(gain) + "</div></div></div>" +
+      '<ol class="steps">' + steps.map(function (s) { return "<li>" + s + "</li>"; }).join("") + "</ol>" +
+      note +
+      '<p class="src">Rule 13(i): one increment in the Level from which the employee is promoted, then placement at the cell equal to the figure so arrived at, or the next higher cell where no such cell exists in the promoted Level. ' +
+      (atTop ? "The lower Level was at its maximum, so that increment was nil. " : "") +
+      "The next increment thereafter falls on the existing date of next increment.</p>";
+  }
+
+  /* ---------------- Rule 10 / DNI ---------------- */
+  function renderDni() {
+    var lv = $("dniLevel");
+    if (!lv) { return; }
+    fillLevelSelect(lv);
+    lv.value = "7";
+    if (!$("dniGo")) { return; }
+    $("dniGo").addEventListener("click", function () {
+      var out = $("dniOut");
+      if (!out) { return; }
+      var level = lv.value;
+      var pay = num("dniPay", 0);
+      if (PAY_MATRIX[level].indexOf(pay) < 0) {
+        out.innerHTML = '<p class="err">' + rupees(pay) + " is not a cell in Level " + level + ".</p>";
+        return;
+      }
+      var nxt = nextCellFrom(level, pay);
+      var when = $("dniDate").value === "jan" ? "1 January" : "1 July";
+      if (nxt === null) {
+        out.innerHTML = '<p class="err">This is the last cell of Level ' + level +
+          ". No further increment accrues there until promotion or financial up-gradation.</p>";
+        return;
+      }
+      var pct = Math.round((nxt - pay) / pay * 1000) / 10;
+      out.innerHTML =
+        '<div class="verdict">' +
+        '<div><div class="lbl">Next increment</div><div class="big">' + rupees(nxt) + "</div></div>" +
+        '<div><div class="lbl">Falls on</div><div class="big">' + when + "</div></div>" +
+        '<div><div class="lbl">Rise</div><div class="big">' + rupees(nxt - pay) +
+        " (" + pct + "%)</div></div></div>" +
+        '<p class="src">The increment moves the employee one cell down the same Level. The date is fixed by the date of appointment, promotion or MACP under Rule 10, not by the date of the last increment, and only one annual increment is admissible.</p>';
+    });
+  }
+
+  /* ---------------- DA table ---------------- */
+  function renderDaTable() {
+    var body = $("daTable");
+    if (!body) { return; }
+    body.innerHTML = DA_HISTORY.map(function (row) {
+      return "<tr><td>" + row[0] + '</td><td class="n">' + row[1] +
+        '%</td><td class="n">' + row[2] + "</td></tr>";
+    }).join("");
+  }
+
+  function fillDaSelect(sel, def) {
+    if (!sel) { return; }
+    var out = [];
+    DA_HISTORY.forEach(function (r) {
+      if (r[1] <= 0) { return; }
+      out.push('<option value="' + r[1] + '"' + (r[1] === def ? " selected" : "") + ">" +
+        r[1] + "% \u2014 from " + r[0] + "</option>");
+    });
+    sel.innerHTML = out.join("");
+  }
+
+  /* ---------------- salary estimator ---------------- */
+  function transportAllowance(level, pay, city) {
+    var lvNum = level === "13A" ? 13.5 : Number(level);
+    var higher = city === "higher";
+    if (lvNum >= 9) { return higher ? 7200 : 3600; }
+    if (lvNum >= 3 || pay >= 24200) { return higher ? 3600 : 1800; }
+    return higher ? 1350 : 900;
+  }
+
+  function renderSalary() {
+    var lv = $("salLevel");
+    if (!lv) { return; }
+    fillLevelSelect(lv);
+    lv.value = "7";
+    fillDaSelect($("salDa"), 63);
+    if ($("salGo")) { $("salGo").addEventListener("click", runSalary); }
+  }
+
+  function runSalary() {
+    var out = $("salOut");
+    if (!out) { return; }
+
+    var level = $("salLevel").value;
+    var pay = num("salPay", 0);
+    var city = $("salCity").value;
+    var tptaCity = $("salTpta").value;
+    var daRate = Number($("salDa").value);
+    var withNpa = $("salNpa") && $("salNpa").checked;
+
+    if (pay <= 0) {
+      out.innerHTML = '<p class="err">Enter a basic pay greater than zero.</p>';
+      return;
+    }
+    var inMatrix = PAY_MATRIX[level].indexOf(pay) >= 0;
+
+    var da = Math.round(pay * daRate / 100);
+    var hraRaw = Math.round(pay * hraRate(city));
+    var floor = hraFloor(city);
+    var hra = Math.max(hraRaw, floor);
+    var ta = transportAllowance(level, pay, tptaCity);
+    var taDa = Math.round(ta * daRate / 100);
+
+    var npa = 0, npaNote = "";
+    if (withNpa) {
+      npa = Math.round(pay * 0.20);
+      if (pay + npa > 237500) {
+        npa = Math.max(0, 237500 - pay);
+        npaNote = "NPA was trimmed so that basic pay plus NPA does not exceed \u20B92,37,500.";
+      }
+    }
+
+    var gross = pay + da + hra + ta + taDa + npa;
+
+    var rows = [
+      ["Basic pay", pay, inMatrix
+        ? "Level " + level + ", cell " + cellIndex(level, pay)
+        : "not a matrix cell"],
+      ["Dearness Allowance", da, daRate + "% of basic pay"],
+      ["House Rent Allowance", hra, city + " class \u2014 " + Math.round(hraRate(city) * 100) + "%" +
+        (hraRaw < floor ? " (floor applied)" : "")],
+      ["Transport Allowance", ta, tptaCity === "higher" ? "Higher TPTA city" : "Other place"],
+      ["DA on Transport Allowance", taDa, daRate + "% of TA"],
+      ["Non-Practising Allowance", npa, withNpa ? "20% of basic pay, capped" : "not claimed"]
+    ];
+
+    out.innerHTML =
+      '<div class="verdict">' +
+      '<div><div class="lbl">Estimated gross</div><div class="big">' + rupees(gross) + "</div></div>" +
+      '<div><div class="lbl">Per month</div><div class="big">before deductions</div></div></div>' +
+      '<div class="tablewrap flat"><table><thead><tr><th>Component</th><th class="n">Amount</th>' +
+      "<th>Basis</th></tr></thead><tbody>" +
+      rows.map(function (r) {
+        return "<tr><td>" + r[0] + '</td><td class="n">' + rupees(r[1]) + "</td><td>" + r[2] + "</td></tr>";
+      }).join("") +
+      '<tr><td><b>Total</b></td><td class="n"><b>' + rupees(gross) +
+      "</b></td><td>gross, before NPS and other deductions</td></tr></tbody></table></div>" +
+      (inMatrix ? "" :
+        '<p class="note warn">' + rupees(pay) + " is not a cell of Level " + level +
+        ". The arithmetic still runs, but a real basic pay always sits on the matrix; the nearest cell at or above is " +
+        rupees(cellAtOrAbove(level, pay) || lastCell(level)) + ".</p>") +
+      (npaNote ? '<p class="note">' + npaNote + "</p>" : "") +
+      '<p class="src">HRA is computed on basic pay only; DA is computed on basic pay and separately on Transport Allowance. ' +
+      "The NPS deduction, where applicable, is 10% of basic pay plus DA and is not reflected above.</p>";
+  }
+
+  /* ---------------- pension ---------------- */
+  function renderPension() {
+    if (!$("penGo")) { return; }
+    fillDaSelect($("penDa"), 63);
+    $("penGo").addEventListener("click", runPension);
+  }
+
+  function runPension() {
+    var out = $("penOut");
+    if (!out) { return; }
+
+    var basic = num("penBasic", 0);
+    var years = num("penYears", 0);
+    var daRate = Number($("penDa").value);
+
+    if (basic <= 0) {
+      out.innerHTML = '<p class="err">Enter the last basic pay.</p>';
+      return;
+    }
+
+    var pensionRaw = Math.round(basic * 0.5);
+    var pension = pensionRaw;
+    var floor = false, ceiling = false;
+    if (pension < 9000) { pension = 9000; floor = true; }
+    if (pension > 125000) { pension = 125000; ceiling = true; }
+
+    var periods = Math.floor(years * 2);
+    var emoluments = basic + Math.round(basic * daRate / 100);
+    var gratuity = 0, gratNote = "";
+    if (years >= 5) {
+      gratuity = Math.round(emoluments / 4 * periods);
+      var capRule = Math.round(emoluments * 16.5);
+      var capMoney = 2500000;
+      if (gratuity > capRule) { gratuity = capRule; gratNote = " and capped at 16.5 times emoluments"; }
+      if (gratuity > capMoney) { gratuity = capMoney; gratNote = " and capped at the \u20B925 lakh ceiling"; }
+    } else {
+      gratNote = "; no retirement gratuity accrues below five years of qualifying service";
+    }
+
+    var family = Math.max(9000, Math.round(basic * 0.30));
+    var familyHigh = Math.round(basic * 0.50);
+
+    out.innerHTML =
+      '<div class="verdict">' +
+      '<div><div class="lbl">Monthly pension</div><div class="big">' + rupees(pension) + "</div></div>" +
+      '<div><div class="lbl">Retirement gratuity</div><div class="big">' + rupees(gratuity) + "</div></div>" +
+      '<div><div class="lbl">Family pension</div><div class="big">' + rupees(family) + "</div></div></div>" +
+      '<ol class="steps">' +
+      "<li>Pension is 50% of the last basic pay: " + rupees(basic) + " \u00D7 0.5 = <b>" + rupees(pensionRaw) + "</b>." +
+      (floor ? " Raised to the minimum of \u20B99,000." : "") +
+      (ceiling ? " Limited to the maximum of \u20B91,25,000." : "") + "</li>" +
+      "<li>Qualifying service of " + fmt(years) + " years gives <b>" + periods +
+      "</b> completed six-month periods.</li>" +
+      "<li>Emoluments (basic pay + DA at " + daRate + "%) = " + rupees(emoluments) +
+      "; gratuity = one quarter of that for each period = " + rupees(emoluments) + " \u00F7 4 \u00D7 " +
+      periods + " = <b>" + rupees(gratuity) + "</b>" + gratNote + ".</li>" +
+      "<li>Normal family pension is 30% of basic pay, with a minimum of \u20B99,000: <b>" + rupees(family) +
+      "</b>. The enhanced rate on death in service after ten years is 50%, i.e. " + rupees(familyHigh) +
+      ", payable for ten years.</li></ol>" +
+      '<p class="src">CCS (Pension) Rules, 2021, Rules 44, 45 and 51. The gratuity ceiling rose from \u20B920 lakh to \u20B925 lakh with effect from 01.01.2024, when DA reached 50%. NPS employees are governed by separate rules.</p>';
+  }
+
+  /* ---------------- quiz ---------------- */
+  var QUIZ = [
+    {
+      q: "What fitment factor does Rule 7 apply to existing basic pay?",
+      o: ["2.57", "2.67", "2.72", "1.86"],
+      a: 0,
+      e: "Rule 7(1)(A)(i) prescribes multiplication by 2.57. The index of rationalisation for Level 13 rose to 2.67 by the 2017 amendment, but the factor in the Rule is unchanged."
+    },
+    {
+      q: "After G.S.R. 592(E), what is the entry cell of Level 13?",
+      o: ["\u20B91,18,500", "\u20B91,23,100", "\u20B91,31,100", "\u20B91,44,200"],
+      a: 1,
+      e: "The 2017 amendment substituted the Level 13 column: entry pay became \u20B91,23,100 and the column now ends at \u20B92,15,900 after 20 cells. \u20B91,18,500 was the original 2016 figure; \u20B91,31,100 is Level 13A."
+    },
+    {
+      q: "How many cells does Level 1 contain?",
+      o: ["18", "20", "34", "40"],
+      a: 3,
+      e: "Levels 1 to 10 each have 40 cells. The shorter columns are Level 11 (39), Level 12 (34), Level 13 (20), Level 13A (18), Level 14 (15), Level 15 (8), Level 16 (4), and Levels 17 and 18 (1 each)."
+    },
+    {
+      q: "An employee who wants to retain the 6th CPC structure until his next increment must exercise the option:",
+      o: ["Within one month of notification", "Within three months of notification", "Within six months of notification", "Within one year of notification"],
+      a: 1,
+      e: "Rule 6(1): the option must be exercised in writing, in the prescribed form, within three months of the date of notification \u2014 that is, by 25 October 2016 \u2014 and must reach the Head of Office with the undertaking (Rule 6(2))."
+    },
+    {
+      q: "A direct recruit appointed on 15 March 2016 is fixed at which cell of his Level?",
+      o: ["Cell 1", "The cell equal to 2.57 times his last pay", "The third cell", "Whichever cell the Head of Office allows"],
+      a: 0,
+      e: "Rule 8: a person appointed by direct recruitment on or after 01.01.2016 is fixed at the minimum pay or first cell of the Level. The 2.57 multiplication applies only to those already in service on 01.01.2016."
+    },
+    {
+      q: "Rule 9, in terms, provides that the increment is:",
+      o: ["3% of basic pay rounded to the next \u20B9100", "As specified in the vertical cells of the applicable Level", "3% of the entry pay of the Level", "Indexed to the DA rate"],
+      a: 1,
+      e: "Rule 9 reads: \u201CThe increment shall be as specified in the vertical Cells of the applicable Level in the Pay Matrix.\u201D The 3% progression rounded to \u20B9100 is the printed Schedule's convention, described in para 5.1.38 of the 7th CPC report \u2014 it is not stated in the Rule."
+    },
+    {
+      q: "An employee appointed on 15 September 2016 gets his first increment on:",
+      o: ["1 January 2017", "1 July 2017", "1 September 2017", "15 September 2017"],
+      a: 1,
+      e: "Rule 10(2): appointment between 2 July and 1 January (both inclusive) makes the increment fall on 1 July. 15 September is in that window, so the first increment is on 01.07.2017."
+    },
+    {
+      q: "Which rate of pre-revised DA enters \u201Cexisting emoluments\u201D for the switchover?",
+      o: ["0%", "107%", "119%", "125%"],
+      a: 3,
+      e: "Rule 3(v) uses DA at the index average as on 01.01.2016, which is 125% of pre-revised basic pay. The 2017 amendment corrected the printed year in this provision from \u201C2006\u201D to \u201C2016\u201D."
+    },
+    {
+      q: "Level 6 of the matrix corresponds to which pre-revised grade pay?",
+      o: ["\u20B93,600 only", "\u20B94,000 only", "\u20B94,200, into which \u20B93,600 and \u20B94,000 were merged", "\u20B94,600"],
+      a: 2,
+      e: "Grade pays of \u20B93,600 and \u20B94,000 were merged into \u20B94,200, which is Level 6 (entry \u20B935,400). Level 7 is \u20B94,600 and Level 8 is \u20B94,800."
+    },
+    {
+      q: "What is the highest cell in the matrix?",
+      o: ["\u20B92,25,000", "\u20B92,37,500", "\u20B92,50,000", "\u20B92,24,400"],
+      a: 2,
+      e: "Level 18, the Cabinet Secretary's scale, is a single cell of \u20B92,50,000. \u20B92,25,000 is the Apex Level 17 cell, and \u20B92,37,500 is the average of the two, used as the basic-plus-NPA ceiling."
+    },
+    {
+      q: "Under Rule 13, pay on promotion is fixed by:",
+      o: ["Multiplying by 2.57 again", "One increment in the lower Level, then the equal or next higher cell of the promoted Level", "Two increments in the promoted Level", "Placing at the entry cell of the promoted Level"],
+      a: 1,
+      e: "Rule 13(i) grants one increment in the Level from which the employee is promoted, then places him at the cell equal to that figure or the next higher cell in the promoted Level."
+    },
+    {
+      q: "NPA for medical officers was revised to what percentage of revised basic pay, and from when?",
+      o: ["25% from 01.01.2016", "20% from 01.07.2017", "20% from 01.01.2016", "15% from 01.07.2017"],
+      a: 1,
+      e: "DoE O.M. No. 12-2/2016-E.III.A dated 07.07.2017 reduced NPA from 25% to 20% of revised basic pay with effect from 01.07.2017, subject to the cap on basic pay plus NPA."
+    },
+    {
+      q: "Basic pay plus NPA is capped at:",
+      o: ["\u20B92,25,000", "\u20B92,37,500", "\u20B92,50,000", "\u20B92,24,400"],
+      a: 1,
+      e: "The cap is the average of the basic pay of the Apex Level (\u20B92,25,000) and of the Cabinet Secretary's Level (\u20B92,50,000): \u20B92,37,500. It appears in Rule 13(ii) and in the NPA order."
+    },
+    {
+      q: "HRA for X class cities from 01.01.2024 is:",
+      o: ["24%", "27%", "30%", "32%"],
+      a: 2,
+      e: "The 2017 HRA order gives 24/16/8%, revised to 27/18/9% when DA crosses 25% and to 30/20/10% when DA crosses 50%. DA crossed 50% on 01.01.2024, so X class cities get 30%."
+    },
+    {
+      q: "The minimum HRA payable in a Z class city is:",
+      o: ["\u20B91,800", "\u20B93,600", "\u20B95,400", "\u20B92,700"],
+      a: 0,
+      e: "The floors are \u20B95,400 (X), \u20B93,600 (Y) and \u20B91,800 (Z) a month \u2014 each equal to 30%, 20% and 10% of the \u20B918,000 minimum pay."
+    },
+    {
+      q: "Transport Allowance for an employee in Level 9 posted in a higher TPTA city is:",
+      o: ["\u20B93,600 + DA", "\u20B97,200 + DA", "\u20B91,350 + DA", "\u20B97,200 flat"],
+      a: 1,
+      e: "Level 9 and above get \u20B97,200 plus DA in higher TPTA cities and \u20B93,600 plus DA elsewhere. \u20B93,600 plus DA is the rate for Levels 3 to 8, and \u20B91,350 plus DA for Levels 1-2 drawing less than \u20B924,200."
+    },
+    {
+      q: "Children Education Allowance per child per month from 01.01.2024 is:",
+      o: ["\u20B92,250", "\u20B92,500", "\u20B92,812.50", "\u20B93,000"],
+      a: 2,
+      e: "CEA rose by 25% when DA crossed 50%: \u20B92,250 became \u20B92,812.50, the disability rate became \u20B95,625, and Hostel Subsidy became \u20B98,437.50, subject to actuals."
+    },
+    {
+      q: "The maximum retirement gratuity from 01.01.2024 is:",
+      o: ["\u20B920 lakh", "\u20B925 lakh", "\u20B930 lakh", "\u20B916.5 lakh"],
+      a: 1,
+      e: "With DA at 50% the monetary ceiling under Rule 45 rose from \u20B920 lakh to \u20B925 lakh with effect from 01.01.2024. The separate formula cap of 16.5 times emoluments continues to apply."
+    },
+    {
+      q: "Normal family pension under Rule 51 of the CCS (Pension) Rules, 2021 is:",
+      o: ["30% of basic pay, minimum \u20B99,000", "50% of basic pay", "30% of pension", "\u20B99,000 flat"],
+      a: 0,
+      e: "Normal family pension is 30% of the basic pay last drawn, subject to a floor of \u20B99,000. The enhanced rate of 50% applies for ten years where death occurs in service after ten years of qualifying service."
+    },
+    {
+      q: "The 2017 Amendment Rules are deemed to have come into force on:",
+      o: ["15.06.2017", "01.07.2017", "01.01.2016", "25.07.2016"],
+      a: 2,
+      e: "Rule 1(2) of G.S.R. 592(E) makes the amendment effective from 01.01.2016, so Level 13 pay is re-fixed from that date and arrears follow."
+    }
+  ];
+
+  var quizState = { answered: {} };
+
+  function renderQuiz() {
+    var box = $("quizBox");
+    if (!box) { return; }
+
+    var html = QUIZ.map(function (item, qi) {
+      var opts = item.o.map(function (text, oi) {
+        return '<button class="opt" type="button" data-q="' + qi + '" data-o="' + oi + '">' +
+          '<span class="mark">' + String.fromCharCode(65 + oi) + "</span><span>" + text + "</span></button>";
+      }).join("");
+      return '<div class="q" id="qcard-' + qi + '"><h4><span class="qn">Q' + (qi + 1) + "</span><span>" +
+        item.q + '</span></h4><div class="opts">' + opts + "</div>" +
+        '<div class="expl" id="expl-' + qi + '"><b>Answer:</b> ' + item.e + "</div></div>";
+    });
+    box.innerHTML = html.join("");
+
+    /* delegated listeners are attached once; innerHTML replacement keeps them alive */
+    if (!box.getAttribute("data-wired")) {
+      box.setAttribute("data-wired", "1");
+      box.addEventListener("click", function (ev) {
+        var node = ev.target;
+        while (node && node !== box && !(node.getAttribute && node.getAttribute("data-q"))) {
+          node = node.parentNode;
+        }
+        if (!node || node === box) { return; }
+        var qi = Number(node.getAttribute("data-q"));
+        var oi = Number(node.getAttribute("data-o"));
+        if (quizState.answered[qi] !== undefined) { return; }
+        quizState.answered[qi] = oi;
+
+        var card = $("qcard-" + qi);
+        if (!card) { return; }
+        var all = card.querySelectorAll(".opt"), i2;
+        for (i2 = 0; i2 < all.length; i2++) {
+          all[i2].disabled = true;
+          if (i2 === QUIZ[qi].a) { all[i2].className = "opt correct"; }
+          else if (i2 === oi) { all[i2].className = "opt wrong"; }
+        }
+        var ex = $("expl-" + qi);
+        if (ex) { ex.className = "expl show"; }
+        updateScore();
+      });
+    }
+
+    if ($("quizReset") && !$("quizReset").getAttribute("data-wired")) {
+      $("quizReset").setAttribute("data-wired", "1");
+      $("quizReset").addEventListener("click", function () {
+        quizState.answered = {};
+        renderQuiz();
+        updateScore();
+      });
+    }
+    updateScore();
+  }
+
+  function updateScore() {
+    var correct = 0, answered = 0;
+    Object.keys(quizState.answered).forEach(function (k) {
+      answered++;
+      if (quizState.answered[k] === QUIZ[Number(k)].a) { correct++; }
+    });
+    var box = $("quizScore");
+    if (box) {
+      box.textContent = "Score " + correct + " / " + QUIZ.length + " \u00B7 answered " + answered;
+    }
+  }
+
+  /* ---------------- flashcards ---------------- */
+  var CARDS = [
+    ["What is the fitment factor and where does it appear?", "2.57, in Rule 7(1)(A)(i). Level 13 was later rationalised at 2.67 by the 2017 amendment, but the Rule's factor is unchanged."],
+    ["State Rule 7(1)(A) in one line.", "Existing basic pay (pay in band + grade pay) x 2.57, rounded to the nearest rupee, then the identical cell or the immediate next higher cell of the corresponding Level."],
+    ["How many cells in the matrix, and how are they distributed?", "540. Levels 1-10: 40 each; 11: 39; 12: 34; 13: 20; 13A: 18; 14: 15; 15: 8; 16: 4; 17 and 18: 1 each."],
+    ["What did G.S.R. 592(E) do to Level 13?", "Substituted the Level: entry pay \u20B91,18,500 to \u20B91,23,100, and 21 cells to 20, ending at \u20B92,15,900. Effective from 01.01.2016."],
+    ["What does Rule 9 actually say?", "\u201CThe increment shall be as specified in the vertical Cells of the applicable Level in the Pay Matrix.\u201D No percentage and no rounding rule appears in the Rule."],
+    ["Time limit for the option to retain the 6th CPC structure?", "Three months from notification, i.e. by 25 October 2016, in writing in the prescribed form to the Head of Office with the undertaking (Rules 6(1) and 6(2))."],
+    ["What happens if no option is exercised?", "Rule 6(3): the employee is deemed to have elected the revised pay structure with effect from 01.01.2016."],
+    ["Can the option be changed later?", "No. Rule 6(4): the option once exercised is final."],
+    ["How is a direct recruit appointed on or after 01.01.2016 fixed?", "At the minimum pay or first cell of the applicable Level (Rule 8). No fitment multiplication."],
+    ["How does an increment work in the matrix?", "The employee moves one cell down the same Level. The printed cells rise by about 3%, rounded to the nearest \u20B9100."],
+    ["The two increment dates?", "1 January and 1 July. Appointment, promotion or MACP between 2 Jan and 1 Jul gives 1 Jan; between 2 Jul and 1 Jan gives 1 Jul (Rule 10(2))."],
+    ["How many increments can an employee get in one year?", "One annual increment. The proviso to Rule 10(1) makes the two dates alternatives, not cumulative."],
+    ["Rule 13 in one line?", "One increment in the Level from which the employee is promoted, then the cell equal to that figure or the next higher cell of the promoted Level."],
+    ["What is the basic pay plus NPA ceiling?", "\u20B92,37,500 - the average of the basic pay of the Apex Level (\u20B92,25,000) and the Cabinet Secretary's Level (\u20B92,50,000)."],
+    ["NPA rate after 01.07.2017?", "20% of revised basic pay for medical officers, down from 25%, subject to the \u20B92,37,500 cap."],
+    ["HRA rates and their triggers?", "24/16/8% initially; 27/18/9% when DA crossed 25% (01.07.2021); 30/20/10% when DA crossed 50% (01.01.2024). Floors \u20B95,400 / \u20B93,600 / \u20B91,800."],
+    ["Transport Allowance slabs?", "L9+: \u20B97,200 / \u20B93,600 + DA. L3-L8 (and L1-2 drawing \u20B924,200 or more): \u20B93,600 / \u20B91,800 + DA. L1-2 below \u20B924,200: \u20B91,350 / \u20B9900 + DA. Doubled for employees with disabilities."],
+    ["CEA and Hostel Subsidy after 01.01.2024?", "CEA \u20B92,812.50 per child per month (\u20B95,625 for a child with disability); Hostel Subsidy \u20B98,437.50 or actuals, whichever is lower. Maximum two children."],
+    ["What is the DNI option on promotion?", "Under FR 22(I)(a)(1), opted for within one month: pay from the promotion date at the next higher cell; then on the DNI two increments in the lower Level and re-fixation in the promoted Level."],
+    ["When is the DNI option not available?", "On appointment on deputation to an ex-cadre post, on direct recruitment, and on ad-hoc appointment or promotion."],
+    ["Stepping up of pay - the essentials?", "Only where a junior draws more than a senior in the same post for the same reason; order under FR 27; the next increment falls after the required qualifying service from re-fixation. Not available where the junior gained by advance increments."],
+    ["Pension under Rule 44 of the 2021 Rules?", "50% of the last basic pay, or of the average emoluments of the last ten months, whichever is higher, after ten years or more of qualifying service. Minimum \u20B99,000, maximum \u20B91,25,000."],
+    ["Gratuity formula and ceiling?", "One quarter of emoluments (basic pay + DA) for each completed six-month period, capped at 16.5 times emoluments and at \u20B925 lakh from 01.01.2024."],
+    ["Family pension rates?", "Normal: 30% of basic pay, minimum \u20B99,000. Enhanced: 50% for ten years where death occurs in service after ten years of qualifying service."],
+    ["Which posts are outside the 2016 Rules?", "Railways, Defence Services personnel paid from Defence Services Estimates, and Gramin Dak Sevaks, all under separate rules. Work-charged establishments are covered."]
+  ];
+
+  function renderCards() {
+    var grid = $("fcGrid");
+    if (!grid) { return; }
+
+    grid.innerHTML = CARDS.map(function (c, i) {
+      return '<button class="fc" type="button" aria-pressed="false" aria-label="Flashcard ' + (i + 1) + '">' +
+        '<span class="fc-inner">' +
+        '<span class="fc-face fc-front"><span class="hint">Question ' + (i + 1) + "</span>" +
+        '<span class="q-txt">' + esc(c[0]) + "</span></span>" +
+        '<span class="fc-face fc-back"><span class="hint">Answer</span>' + esc(c[1]) + "</span>" +
+        "</span></button>";
+    }).join("");
+
+    grid.addEventListener("click", function (ev) {
+      var node = ev.target;
+      while (node && node !== grid && !(node.className && String(node.className).indexOf("fc") === 0 && node.tagName === "BUTTON")) {
+        node = node.parentNode;
+      }
+      if (!node || node === grid) { return; }
+      var flipped = node.className.indexOf("flipped") >= 0;
+      node.className = flipped ? "fc" : "fc flipped";
+      node.setAttribute("aria-pressed", flipped ? "false" : "true");
+    });
+  }
+
+  /* ---------------- error lab ---------------- */
+  var ERRORS = [
+    {
+      claim: "\u201CThe fitment factor of 2.57 is applied twice for Level 13, because its index of rationalisation is 2.67.\u201D",
+      wrong: "The 2.57 in Rule 7 and the index of rationalisation are different things. Rule 7 applies 2.57 to existing basic pay; the index of rationalisation is the internal ratio used to construct each Level's entry pay, and it is not applied by the employee at all.",
+      right: "After G.S.R. 592(E), Level 13 simply starts at \u20B91,23,100. The Level was substituted by the amendment \u2014 not recomputed by the employee \u2014 and the change is effective from 01.01.2016 (DoE O.M. dated 28.09.2017)."
+    },
+    {
+      claim: "\u201CRule 9 grants an increment of 3% of basic pay rounded to the next \u20B9100.\u201D",
+      wrong: "Rule 9 says no such thing. Its operative words are that the increment \u201Cshall be as specified in the vertical Cells of the applicable Level\u201D. Neither a percentage nor a rounding rule appears in the Rule.",
+      right: "The increment is the movement to the next cell. The cells themselves rise by about 3%, rounded to the nearest \u20B9100, as described in para 5.1.38 of the 7th CPC report and visible in the printed Schedule."
+    },
+    {
+      claim: "\u201CAn employee can take both the January and the July increment in the same year if his promotion falls between them.\u201D",
+      wrong: "Rule 10 provides two increment dates as alternatives. The proviso to Rule 10(1) allows only one annual increment, on one of the two dates.",
+      right: "The date of next increment is determined by the date of appointment, promotion or MACP. A promotion changes the Level in which the increment accrues (Rule 13), not the number of increments in the year."
+    },
+    {
+      claim: "\u201CIf you miss the three-month window for the option, you forfeit the revised pay for 2016.\u201D",
+      wrong: "Missing the window produces the opposite result: the revised structure applies from the earliest possible date.",
+      right: "Rule 6(3): an employee whose option does not reach the authority in time is deemed to have elected the revised pay structure with effect from 01.01.2016. What is lost is the choice to stay on the pre-revised structure until the next increment."
+    },
+    {
+      claim: "\u201CHRA rose again in 2026 because DA crossed 60%.\u201D",
+      wrong: "The 2017 HRA order contains only two escalators \u2014 at 25% DA and at 50% DA. There is no third trigger.",
+      right: "HRA has been 30/20/10% from 01.01.2024 and stays there until a fresh order is issued, however far DA rises. The clarification of 04.08.2021 only confirms that no separate order is needed at the two existing triggers."
+    },
+    {
+      claim: "\u201CNPA continues at 25% of revised basic pay, as before.\u201D",
+      wrong: "25% was the pre-revised rate of NPA.",
+      right: "DoE O.M. dated 07.07.2017 fixed NPA at 20% of revised basic pay from 01.07.2017, with basic pay plus NPA capped at \u20B92,37,500."
+    },
+    {
+      claim: "\u201CPromotion gives two increments in the promoted Level under Rule 13.\u201D",
+      wrong: "Neither route gives two increments in the promoted Level, and the default route gives only one increment in all.",
+      right: "Rule 13 gives one increment in the lower Level and then places the employee at the equal or next higher cell of the promoted Level. Two increments arise only under the optional FR 22(I)(a)(1) route, and both of those are in the lower Level."
+    },
+    {
+      claim: "\u201CGratuity is 15 days' wages for every year of service, as under the Payment of Gratuity Act.\u201D",
+      wrong: "That is the private-sector formula. Central Government servants are governed by the CCS (Pension) Rules, 2021.",
+      right: "Rule 45: one quarter of emoluments (basic pay + DA) for each completed six-month period, capped at 16.5 times emoluments and at \u20B925 lakh from 01.01.2024."
+    },
+    {
+      claim: "\u201CA Superintendent in an NIT and a Superintendent in an IIT hold the same Level, so the posts are interchangeable.\u201D",
+      wrong: "The recruitment norms differ, so the Levels differ even where the designations look alike.",
+      right: "Under the NIT Recruitment Rules, 2019 the Superintendent sits at Level 6 (GP \u20B94,200). Under the IIT norms of 2020, Junior Superintendent is Level 6 and Superintendent is Level 7 (GP \u20B94,600). Always check the institution's own recruitment rules."
+    },
+    {
+      claim: "\u201CExisting emoluments are computed using DA at 119%.\u201D",
+      wrong: "119% was the DA rate at a different point in the 6th CPC cycle; the fitment uses the index average as on 01.01.2016.",
+      right: "Rule 3(v) uses DA at 125% of pre-revised basic pay as on 01.01.2016. The 2017 amendment corrected the reference year in this provision from \u201C2006\u201D to \u201C2016\u201D."
+    },
+    {
+      claim: "\u201CFestival Advance is still admissible at \u20B94,500.\u201D",
+      wrong: "Festival Advance was among the advances discontinued on the 7th CPC's recommendations, together with the bicycle, warm clothing and cycle advances.",
+      right: "The interest-free advances retained are those for medical treatment, TA on tour and transfer, LTC, and TA to the family of a deceased employee. HBA and the PC advance remain; the latter is \u20B950,000 or actuals, whichever is lower, and not more than five times in a career."
+    }
+  ];
+
+  function renderErrors() {
+    var list = $("errList");
+    if (!list) { return; }
+
+    list.innerHTML = ERRORS.map(function (e, i) {
+      return '<div class="lab" id="labcard-' + i + '">' +
+        '<div class="claim"><span class="pill red tag">Claim</span><span>' + esc(e.claim) + "</span></div>" +
+        '<button class="btn ghost" type="button" data-lab="' + i + '">What is wrong?</button>' +
+        '<div class="reveal"><p><span class="lbl">Why it is wrong</span></p><p>' + esc(e.wrong) + "</p>" +
+        '<p><span class="lbl ok">Correct position</span></p><p>' + esc(e.right) + "</p></div></div>";
+    }).join("");
+
+    list.addEventListener("click", function (ev) {
+      var node = ev.target;
+      while (node && node !== list && !(node.getAttribute && node.getAttribute("data-lab"))) {
+        node = node.parentNode;
+      }
+      if (!node || node === list) { return; }
+      var card = $("labcard-" + node.getAttribute("data-lab"));
+      if (card) { card.className = "lab open"; }
+    });
+  }
+
+  /* ---------------- matrix self-check ---------------- */
+  function matrixSelfTest() {
+    var problems = [], total = 0, i, k;
+    for (i = 0; i < LEVELS.length; i++) {
+      var lv = LEVELS[i];
+      var cells = PAY_MATRIX[lv];
+      total += cells.length;
+      for (k = 1; k < cells.length; k++) {
+        /* nearest-100 reconstruction of the printed progression */
+        var expected = Math.round(cells[k - 1] * 1.03 / 100) * 100;
+        if (expected !== cells[k]) {
+          problems.push("Level " + lv + " cell " + (k + 1) + ": " + cells[k] + ", progression gives " + expected);
+        }
+        if (cells[k] <= cells[k - 1]) {
+          problems.push("Level " + lv + " cell " + (k + 1) + " is not above its predecessor");
+        }
+      }
+    }
+    if (total !== 540) { problems.push("Total cells " + total + ", expected 540"); }
+    return problems;
+  }
+
+  /* ---------------- boot ---------------- */
+  function boot() {
+    applyTheme(savedTheme);
+    wireTabs();
+    renderMatrix();
+    wireMatrixTools();
+    renderFixation();
+    renderPromotion();
+    renderDni();
+    renderDaTable();
+    renderSalary();
+    renderPension();
+    renderQuiz();
+    renderCards();
+    renderErrors();
+
+    var problems = matrixSelfTest();
+    if (window.console) {
+      if (problems.length) {
+        window.console.error("Pay Matrix self-check failed:", problems);
+      } else {
+        window.console.info("Pay Matrix self-check passed: 540 cells, all 521 steps consistent.");
+      }
+    }
+
+    showPanel("overview");
+    var hash = window.location.hash.replace("#", "");
+    if (hash && $(hash)) { showPanel(hash); }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
+})();
+
+</script>
+</body>
+</html>
