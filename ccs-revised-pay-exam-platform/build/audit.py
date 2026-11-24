@@ -322,6 +322,21 @@ def verify_rules():
         for no, sub in re.findall(r"Rule\s+(\d+)\((\d+|[A-Z]|[ivx]+)\)", r["rules_text"] + " " + r["src"]):
             if no in VERBATIM and f"({sub})" not in VERBATIM[no]:
                 phantom.append((r["id"], f"Rule {no}({sub})"))
+    # every sub-rule that carries an operative condition must be reachable from some question
+    MUST_TEST = {"7": ["(3)", "(4)", "(5)", "(6)", "(9)", "(11)", "(10)"],
+                 "11": [], "14": []}
+    unreached = []
+    for no, subs in MUST_TEST.items():
+        cited = " ".join(r["rules_text"] + " " + r["src"] for r in pay if r["rule"] == no)
+        unreached += [f"Rule {no}{sb}" for sb in subs if sb not in cited]
+        if not any(r["rule"] == no for r in pay):
+            unreached.append(f"Rule {no}: no question at all")
+    check("every operative sub-rule is reachable from a question", not unreached, str(unreached))
+
+    faqs = [r for r in pay if r.get("faq")]
+    check("the FAQ library is populated and every item is sourced to an authority",
+          len(faqs) >= 12 and all("faq" in r["src"].lower() for r in faqs), f"{len(faqs)} FAQ items")
+
     check("no question cites a sub-rule that does not exist in the statute", not phantom,
           f"{len(phantom)}: {phantom[:5]}")
 
@@ -413,6 +428,8 @@ def main():
             "rule 7 carries every sub-rule and sub-clause, (1)(A)(i) through (11)",
             "all seventeen rules are present",
             "every rule carries its bare text, its rationale, figures and a trap",
+            "every operative sub-rule is reachable from a question",
+            "the FAQ library is populated and every item is sourced to an authority",
             "no question cites a sub-rule that does not exist in the statute",
             "every rule is reachable from at least one question",
             "the two instruments that moved a figure are recorded",

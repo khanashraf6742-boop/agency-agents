@@ -158,6 +158,7 @@ def build_record(fact, key_index: int) -> dict:
         "opts": opts,
         "ans": ans,
         "tag": fact.get("tag", "Tough"),
+        "faq": bool(fact.get("faq")),
         "expl": expl,
         "src": fact["src"],
         "trap": fact["trap"],
@@ -169,13 +170,14 @@ def main():
     import data_numeric
     import data_bank
     import data_bank2
+    import data_bank3
 
     for f in data_numeric.FACTS:
         f["section"] = SECTION_NUM
-    for f in data_bank.FACTS + data_bank2.FACTS:
+    for f in data_bank.FACTS + data_bank2.FACTS + data_bank3.FACTS:
         f["section"] = SECTION_BANK
 
-    facts = data_numeric.FACTS + data_bank.FACTS + data_bank2.FACTS
+    facts = data_numeric.FACTS + data_bank.FACTS + data_bank2.FACTS + data_bank3.FACTS
     ids = [f["id"] for f in facts]
     assert len(ids) == len(set(ids)), "duplicate ids"
 

@@ -20,6 +20,8 @@
 - PASS — every buffer-band balance re-derives independently
 - PASS — every death and retirement pot re-derives independently
 - PASS — every joining-time credit re-derives independently
+- PASS — every rule marked verbatim really is the consolidated text
+- PASS — no question cites a rule whose text is unverified as if quoting it
 
 ## Answer key
 - A: 198

@@ -298,6 +298,7 @@ function qCard(q, opts) {
       <span class="mcq-tag Tag">${esc(q.tag)}</span>
       <span class="mcq-tag Topic">${esc(q.rules_text)}</span>
       ${q.section === "NUM" ? `<span class="mcq-tag Topic" style="border-color:var(--gold)">Numerical</span>` : ""}
+      ${q.faq ? `<span class="mcq-tag Topic" style="border-color:var(--teal)">FAQ</span>` : ""}
       ${q.table ? `<span class="mcq-tag Topic">▦ matrix</span>` : ""}
       ${opts.comped ? "" : `<button class="copy-btn" onclick="toggleBookmark('${esc(q.id)}')">${booked ? "★ Bookmarked" : "☆ Bookmark"}</button>`}
     </div>
@@ -410,6 +411,7 @@ function bankList() {
   if (c.filter === "UNSEEN") list = list.filter(q => !STATE.answers[q.id]);
   if (c.filter === "NUMERICAL") list = list.filter(q => q.section === "NUM");
   if (c.filter === "MATRIX") list = list.filter(q => q.table);
+  if (c.filter === "FAQ") list = list.filter(q => q.faq);
   if (c.search) {
     const q = c.search.toLowerCase();
     list = list.filter(m => (m.id + " " + m.q + " " + m.topic + " " + m.expl + " " + m.rules_text).toLowerCase().includes(q));
@@ -439,6 +441,7 @@ function describeScope() {
   if (c.filter === "UNSEEN") bits.push("not yet attempted");
   if (c.filter === "NUMERICAL") bits.push("the numerical set only");
   if (c.filter === "MATRIX") bits.push("questions that carry a matrix");
+  if (c.filter === "FAQ") bits.push(`the FAQ library — ${PAY_DATA.filter(q => q.faq).length} points settled by the Department`);
   if (c.search) bits.push(`search "${c.search}"`);
   return bits.join(" · ");
 }

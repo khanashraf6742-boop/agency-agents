@@ -22,11 +22,12 @@ setTimeout(() => {
   const d = w.document;
   console.log("\n== boot ==");
   ok("no script errors", errors.length === 0, errors.join(" | "));
-  ok("the data is inlined", Array.isArray(w.__CCSRP.PAY_DATA) && w.__CCSRP.PAY_DATA.length === 89);
+  const N = w.__CCSRP.PAY_DATA.length;
+  ok("the data is inlined", Array.isArray(w.__CCSRP.PAY_DATA) && N >= 89);
   ok("the matrix is inlined", !!w.__CCSRP.MATRIX_DATA && w.__CCSRP.MATRIX_DATA.levels.length === 19);
   ok("543 cells reach the page", w.__CCSRP.MATRIX_DATA.levels.reduce((n, l) => n + w.__CCSRP.MATRIX_DATA.current[l].length, 0) === 543);
   ok("the dashboard rendered", d.querySelector("#dashChapterRows").children.length === 17);
-  ok("counts filled from the data", d.querySelector('[data-count="pay"]').textContent === "89");
+  ok("counts filled from the data", d.querySelector('[data-count="pay"]').textContent === String(N));
 
   console.log("\n== a matrix question draws the matrix ==");
   const q = w.__CCSRP.PAY_MAP["PY-001"];

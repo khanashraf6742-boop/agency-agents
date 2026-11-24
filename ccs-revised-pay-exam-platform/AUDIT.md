@@ -5,7 +5,7 @@ trusted: each one is re-derived in the audit from `build/paymatrix.py`, and the 
 HTML if any check fails. The statutory text, likewise, is held in `build/verbatim.py` and the audit fails
 the build if a rule's text is not the verbatim text or if a question cites a clause that does not exist.
 
-- Questions: **89** (23 worked numericals, 66 general)
+- Questions: **112** (23 worked numericals, 89 general)
 - Questions carrying a pay-matrix table: **29**
 - Pay-matrix cells held and verified: **543**
 - Rules reproduced: **17**
@@ -62,33 +62,35 @@ All checks passed:
 - PASS — rule 7 carries every sub-rule and sub-clause, (1)(A)(i) through (11)
 - PASS — all seventeen rules are present
 - PASS — every rule carries its bare text, its rationale, figures and a trap
+- PASS — every operative sub-rule is reachable from a question
+- PASS — the FAQ library is populated and every item is sourced to an authority
 - PASS — no question cites a sub-rule that does not exist in the statute
 - PASS — every rule is reachable from at least one question
 - PASS — the two instruments that moved a figure are recorded
 
 ## Answer key
 
-- A: 23
-- B: 22
-- C: 22
-- D: 22
+- A: 28
+- B: 28
+- C: 28
+- D: 28
 
 ## Questions by rule
 
-- Rule 1: 3
+- Rule 1: 4
 - Rule 2: 4
 - Rule 3: 3
-- Rule 4: 4
+- Rule 4: 5
 - Rule 5: 5
-- Rule 6: 6
-- Rule 7: 18
-- Rule 8: 4
-- Rule 9: 6
+- Rule 6: 9
+- Rule 7: 29
+- Rule 8: 5
+- Rule 9: 7
 - Rule 10: 6
-- Rule 11: 2
+- Rule 11: 3
 - Rule 12: 3
-- Rule 13: 13
-- Rule 14: 3
+- Rule 13: 15
+- Rule 14: 5
 - Rule 15: 2
 - Rule 16: 3
 - Rule 17: 1
@@ -96,4 +98,4 @@ All checks passed:
 
 ## Difficulty
 
-- Tough: 89
+- Tough: 112
