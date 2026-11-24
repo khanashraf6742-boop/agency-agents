@@ -4,6 +4,17 @@ A single-file, offline exam platform for the Central Civil Services (Leave) Rule
 Open `CCS-Leave-Rules-1972-Exam-Platform.html` in any modern browser; nothing is fetched
 from the network and no server is needed.
 
+## Forms and Formats
+
+Rule 3(h) of the CCS (Leave) Rules, 1972 defines a "Form" as a Form appended to the **Second Schedule**. That is
+the only appended series these Rules have; no instrument in them is described as a Format. The eleven Forms
+(1, 2, 3, 3-A, 4, 5, 6, 7, 8, 9, 10) are therefore the complete set, and the Forms library now says so on the
+page, with the source clause cited.
+
+This differs from the CCS (Pension) Rules, 2021, where rule 3(1)(k) defines a Form and rule 3(1)(l) defines a
+Format as two separately numbered series. An earlier assumption that the leave rules also had a Formats series
+was wrong, and the platform now records the position rather than leaving the absence unexplained.
+
 ## How far the rule text is verified
 
 The rule library does not treat every card the same way, because they were not
