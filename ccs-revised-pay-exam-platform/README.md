@@ -11,10 +11,11 @@ so it opens from a USB stick, an email attachment or a locked-down office machin
 
 | | |
 |---|---|
-| Questions | **89** — 23 worked numericals and 66 on the rules themselves |
+| Questions | **112** — 23 worked numericals and 89 on the rules themselves |
 | Questions that carry a pay-matrix table | **30** |
 | Pay-matrix cells held, cell by cell | **543** across 19 Levels |
 | Rules reproduced, clause by clause | **17** (plus 6 chapters and 2 instruments that moved a figure) |
+| FAQ library | **12** points the Department has published an answer to, each sourced |
 | Timed papers | 4, generated from the bank |
 | Calculators | 4 — fitment, increment, promotion, the NPA route |
 

@@ -4,6 +4,22 @@ A single-file, offline exam platform for the Central Civil Services (Leave) Rule
 Open `CCS-Leave-Rules-1972-Exam-Platform.html` in any modern browser; nothing is fetched
 from the network and no server is needed.
 
+## How far the rule text is verified
+
+The rule library does not treat every card the same way, because they were not
+all verified the same way.
+
+| Cards | Source of the text | Status |
+| --- | --- | --- |
+| Rules 1–39 and 38-A (**36 cards**) | DoPT consolidated edition, updated 19.09.2022, transcribed clause by clause | **Statutory text** — quotable |
+| Rules 39-A onward (**33 cards**) | Earlier hand-typed text, abridged in places | **Key provisions** — *not* checked against the edition; the card says so in an amber warning and must not be quoted as the section |
+
+The reason for the split is recorded rather than hidden: the consolidated edition
+ran past the page limit of the reader used to transcribe it, so the second half
+of the book has not yet been recovered. `build/coverage.json` lists both sets by
+rule number. The audit fails the build if a card marked statutory is not in the
+transcription table, or if a question quotes an unverified card as the section.
+
 ## What is inside the HTML file
 
 | Datasets | Count | What they are |
