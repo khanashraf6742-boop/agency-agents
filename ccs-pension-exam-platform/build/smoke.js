@@ -33,7 +33,12 @@ ck("rule 87 mentions the 1972 Rules",
    /1972/.test(d.querySelector("#rule-87").textContent));
 
 const qs = [...d.querySelectorAll(".q-card")];
-ck("question cards rendered", qs.length === 95, `${qs.length}`);
+// read the count from the build itself, so a rebuild never leaves a stale constant here
+const QCOUNT = JSON.parse(fs.readFileSync(path.join(__dirname, "questions.json"), "utf8")).length;
+ck("question cards rendered", qs.length === QCOUNT, `${qs.length} vs ${QCOUNT}`);
+ck("every provision is covered", /Coverage, measured/.test(d.body.textContent));
+ck("the amendment register is on the page", d.querySelectorAll("table.amend tbody tr").length >= 15,
+   `${d.querySelectorAll("table.amend tbody tr").length}`);
 ck("every question has exactly four options",
    qs.every(q => q.querySelectorAll(".q-opts li").length === 4));
 ck("every question marks exactly one key",
@@ -44,7 +49,8 @@ ck("no question shows an empty explanation",
    qs.every(q => q.querySelector("details.q-expl div").textContent.trim().length > 80));
 
 // every Form and Format row must be present and sourced
-const tables = [...d.querySelectorAll("table")];
+const tables = [...d.querySelectorAll("table")].filter(t => !t.classList.contains("amend")
+  && !t.classList.contains("cov"));
 ck("two registers: Forms then Formats", tables.length === 2, `${tables.length}`);
 const rows = t => [...t.querySelectorAll("tbody tr")];
 ck("14 Form rows", rows(tables[0]).length === 14, `${rows(tables[0]).length}`);
@@ -70,4 +76,5 @@ if (fails.length) {
   fails.forEach(f => console.log("  FAIL —", f));
   process.exit(1);
 }
-console.log(`SMOKE PASSED — ${qs.length} questions, ${cards.length} rules, 14 Forms, 13 Formats`);
+const amend = d.querySelectorAll("table.amend tbody tr").length;
+console.log(`SMOKE PASSED — ${qs.length} questions, ${cards.length} rules, 14 Forms, 13 Formats, ${amend} instruments`);

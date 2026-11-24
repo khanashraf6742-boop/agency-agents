@@ -7,9 +7,13 @@ import pathlib
 import re
 import sys
 
+import amendments
+import coverage
 import data_compute
 import forms
 import pension_rules as pr
+import provisions as pv
+import xrefs
 
 HERE = pathlib.Path(__file__).parent
 OUT = HERE.parent / "AUDIT.md"
@@ -138,6 +142,97 @@ for q, a, cite in assemble.FAQ:
 ck("every FAQ cites a transcribed rule", not bad_faq, str(bad_faq))
 ck("every FAQ answer is substantive", all(len(a) > 120 for _, a, _ in assemble.FAQ))
 
+
+# ---- granular coverage: every provision, down to provisos and Explanations
+PROVS = pv.build()
+COV = coverage.report(qs, verbose=False)
+per = COV["per_kind"]
+hit = COV["per_kind_hit"]
+for kind, label in (("rule", "rule"), ("sub-rule", "sub-rule"), ("clause", "clause"),
+                    ("sub-clause", "sub-clause"), ("proviso", "proviso"),
+                    ("explanation", "Explanation")):
+    if per.get(kind):
+        ck(f"every {label} is reached by a question",
+           hit.get(kind, 0) == per[kind],
+           f"{hit.get(kind, 0)}/{per[kind]}")
+
+ck("the provision inventory accounts for the rule text",
+   sum(len(re.sub(r"\W+", "", p["text"])) for p in PROVS)
+   / sum(len(re.sub(r"\W+", "", pr.TEXT[str(n)])) for n in range(1, 88)) > 0.99,
+   "less than 99 per cent of the rule text survives parsing, so provisions are being lost")
+
+ck("every internal cross-reference resolves, or is a listed defect in the instrument",
+   not xrefs.unknown(),
+   str([(b[0], b[1]) for b in xrefs.unknown()]))
+ck("no known defect has quietly disappeared (the list is checked, not trusted)",
+   set(xrefs.KNOWN_DEFECTS) <= {(b[0], b[1]) for b in xrefs.unresolved()},
+   str(sorted(k for k in xrefs.KNOWN_DEFECTS
+              if k not in {(b[0], b[1]) for b in xrefs.unresolved()})))
+ck("rule 35 carries the sub-rules its own text cites",
+   all(f"35({i})" in {p["path"] for p in PROVS} for i in range(1, 8)),
+   "rule 35(1) says 'subject to sub-rule (6)'; a transcription without (6) and (7) is truncated")
+
+# rule 50 was transcribed short of its clauses; these are the addresses the 2026 orders use
+for path in ("50(8)(e)", "50(8)(f)", "50(8)(g)", "50(8)(h)", "50(8)(i)", "50(8)(j)", "50(8)(k)",
+             "50(9)(h)", "50(9)(p)", "50(10)(a)", "50(12)(b)(i)", "50(16)"):
+    ck(f"rule 50 has {path}", any(p["path"] == path for p in PROVS), path)
+
+ck("rule 45(1) still prints the 2021 figure and rule 45 has its provisos",
+   "twenty lakh rupees" in pr.TEXT["45"] or "Twenty lakh rupees" in pr.TEXT["45"],
+   "the printed figure must stay as notified; the order is recorded separately")
+
+# ---- the amendment register
+ck("every amendment cites its instrument",
+   all(a["number"].strip() and a["date"].strip() for a in amendments.AMENDMENTS))
+ck("every amendment names at least one provision it touches",
+   all(a["affects"] for a in amendments.AMENDMENTS if a["kind"] == "rules"),
+   str([a["id"] for a in amendments.AMENDMENTS if a["kind"] == "rules" and not a["affects"]]))
+ck("every provision an amendment names exists in the rule text",
+   all(any(p["path"] == x for p in PROVS) for a in amendments.AMENDMENTS for x in a["affects"]),
+   str([(a["id"], x) for a in amendments.AMENDMENTS for x in a["affects"]
+        if not any(p["path"] == x for p in PROVS)]))
+ck("no two instruments share an id",
+   len({a["id"] for a in amendments.AMENDMENTS}) == len(amendments.AMENDMENTS))
+ck("the gratuity ceiling order is registered with its effective date",
+   any(a["id"] == "A-2024-03" and a["effective"] == "01.01.2024" for a in amendments.AMENDMENTS))
+ck("the female-nominee instrument is registered as an order, not an amendment",
+   any(a["id"] == "A-2024-02" and a["kind"] == "om" for a in amendments.AMENDMENTS))
+ck("the 2022 rule 8 amendment is registered",
+   any(a["id"] == "A-2022-01" and a["kind"] == "rules" for a in amendments.AMENDMENTS))
+
+ck("provenance is recorded for every instrument, and full text outnumbers summaries",
+   all(a["verified"] in ("gazette text", "order text", "summary") for a in amendments.AMENDMENTS)
+   and sum(1 for a in amendments.AMENDMENTS if a["verified"] != "summary") >= 8,
+   f"{sum(1 for a in amendments.AMENDMENTS if a['verified'] != 'summary')} read in full, "
+   f"{sum(1 for a in amendments.AMENDMENTS if a['verified'] == 'summary')} from the index")
+
+ck("an instrument recorded only from the index is not used to state a paragraph",
+   all(not (a["verified"] == "summary" and len(a["effect"].split()) > 60)
+       for a in amendments.AMENDMENTS),
+   str([a["id"] for a in amendments.AMENDMENTS
+        if a["verified"] == "summary" and len(a["effect"].split()) > 60]))
+
+# ---- currency: no question may state a superseded figure as current
+texts = [(q["id"], q["opts"][ord(q["ans"]) - 65]) for q in qs]
+bad_twenty = [i for i, o in texts
+              if re.search(r"\btwenty lakh rupees\b", o, re.I)
+              and re.search(r"maximum|ceiling", o, re.I)
+              and not re.search(r"printed|rule 45\(1\)|2021", o, re.I)]
+ck("no question offers twenty lakh rupees as the current gratuity ceiling",
+   not bad_twenty, str(bad_twenty))
+
+ck("the four substitutions are shown on the page",
+   len(assemble.SUBSTITUTIONS) == 4,
+   str(len(assemble.SUBSTITUTIONS)))
+ck("every substitution names the instrument that displaces the printed rule",
+   all(any(k in body for k in ("G.S.R. 770(E)", "G.S.R. 410(E)", "30 May 2024", "1 January 2024"))
+       for _, body in assemble.SUBSTITUTIONS))
+
+# a question tagged with a version must carry the amendment it tests
+bad_ver = [q["id"] for q in qs if q.get("version") and q["version"] not in
+           {a["id"] for a in amendments.AMENDMENTS}]
+ck("every versioned question names a registered instrument", not bad_ver, str(bad_ver))
+
 # ---- write the report
 lines = ["# Audit \u2014 CCS (Pension) Rules, 2021", "",
          "Generated by `build/audit.py`. The build refuses to publish if any check fails.", "",
@@ -146,9 +241,45 @@ lines = ["# Audit \u2014 CCS (Pension) Rules, 2021", "",
          f"- Rules listed as pending (number and title only, no text invented): **{len(pr.PENDING)}**",
          f"- Questions: **{len(qs)}**",
          f"- Forms: **{len(forms.FORMS)}**, Formats: **{len(forms.FORMATS)}**",
-         f"- FAQs: **{len(assemble.FAQ)}** (each cited to a transcribed rule)", ""]
+         f"- FAQs: **{len(assemble.FAQ)}** (each cited to a transcribed rule)",
+         f"- Provisions in the parsed inventory: **{len(PROVS)}**",
+         f"- Instruments in the amendment register: **{len(amendments.AMENDMENTS)}**",
+         f"- Rules touched by an instrument: **{len({int(k) for k in amendments.BY_RULE})}**", ""]
 for k, (ok, detail) in checks.items():
     lines.append(f"- {'PASS' if ok else 'FAIL'} \u2014 {k}" + (f"  ({detail})" if detail and not ok else ""))
+lines += ["", "## Coverage by level", "",
+          "| Level | Provisions | With a question | Coverage |", "|---|---|---|---|"]
+for kind, label in (("rule", "Rule as a whole"), ("sub-rule", "Sub-rule"), ("clause", "Clause"),
+                    ("sub-clause", "Sub-clause"), ("proviso", "Proviso"),
+                    ("explanation", "Explanation")):
+    if per.get(kind):
+        lines.append(f"| {label} | {per[kind]} | {hit.get(kind, 0)} | "
+                     f"{100 * hit.get(kind, 0) / per[kind]:.0f}% |")
+lines.append(f"| **Total** | **{COV['provs']}** | **{sum(hit.values())}** | "
+             f"**{100 * sum(hit.values()) / max(1, COV['provs']):.0f}%** |")
+
+lines += ["", "## The amendment register", "",
+          "| Instrument | Date | Effective | Kind | Provisions |", "|---|---|---|---|---|"]
+for a in amendments.AMENDMENTS:
+    lines.append(f"| {a['number']} | {a['date']} | {a['effective']} | "
+                 f"{'Amendment rules' if a['kind'] == 'rules' else 'Office Memorandum'} | "
+                 f"{len(a['affects'])} |")
+
+lines += ["", "## Provision coverage matrix", "",
+          "Every provision the parser finds, with the questions that reach it. A provision with no "
+          "question is a failure of the audit above, and the row is here so the claim can be checked by "
+          "hand as well as by code.", ""]
+hitmap = {}
+for q in qs:
+    for c in q.get("covers") or []:
+        hitmap.setdefault(c, []).append(q["id"])
+lines.append("| Provision | Kind | Questions |")
+lines.append("|---|---|---|")
+for p in PROVS:
+    ids = hitmap.get(p["path"], [])
+    short = ", ".join(ids[:4]) + (f" +{len(ids) - 4}" if len(ids) > 4 else "")
+    lines.append(f"| {p['path']} | {p['kind']} | {short or '**none**'} |")
+
 lines += ["", "## Pending rules", "",
           "These carry no text in this build. They are listed so the gap is visible, not so that it can be filled "
           "with prose:", ""]

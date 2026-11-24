@@ -5,12 +5,46 @@ from __future__ import annotations
 import json
 import pathlib
 
+import amendments
+import coverage
 import forms
+import provisions as pv
 import pension_rules as pr
 from titles import TITLES
 
 HERE = pathlib.Path(__file__).parent
 OUT = HERE.parent / "CCS-Pension-Rules-2021-Exam-Platform.html"
+
+# The places where quoting the 2021 text would state a superseded position. Kept as data so
+# the audit can check that each one is shown on the page and that its figures are consistent
+# with the instrument it cites.
+SUBSTITUTIONS = [
+    ("Gratuity ceiling: \u20b920 lakh in the rule, \u20b925 lakh in force",
+     "Rule 45(1) caps retirement and death gratuity at twenty lakh rupees. The Office Memorandum of 30 May 2024 "
+     "raised the maximum to twenty-five lakh rupees with effect from 1 January 2024, on the Seventh Pay "
+     "Commission's trigger of dearness allowance reaching fifty per cent. Paragraph 7 of the order says the "
+     "formal amendment to the Rules will be notified separately, so the printed rule has not caught up. A case "
+     "decided today is settled at twenty-five lakh rupees."),
+    ("Family pension to a child before the husband: an order, not an amendment",
+     "Rule 50(8)(a) pays family pension to the widow or widower first. The Office Memorandum of 1 January 2024 "
+     "allows a female Government servant or pensioner to ask that her eligible child be paid in precedence where "
+     "divorce proceedings are pending or she has filed a case under the Domestic Violence Act, the Dowry "
+     "Prohibition Act or the Indian Penal Code. Paragraph 6 of that order records that a formal amendment to "
+     "rule 50 will be notified separately; none has been. The rule text still reads spouse-first and the order "
+     "governs the case."),
+    ("The authority that may withhold a pension: the President, in the 2021 text",
+     "Rule 8(1) in the 2021 gazette reserves the power to the President. G.S.R. 770(E) dated 7 October 2022 "
+     "substituted the sub-rule so that the power is exercised by the President only where the President is the "
+     "appointing authority, otherwise by the Secretary of the administrative Ministry or Department, and by the "
+     "Comptroller and Auditor-General for the Indian Audit and Accounts Department. The same instrument added "
+     "sub-rule (6A), which allows an appeal to the President against an order of any other authority."),
+    ("Form 4 and Form 6 at retirement: Form 6-A since 2024",
+     "Rule 50(15)(e) and rule 57 required the family details in Form 4 and Form 6. G.S.R. 410(E) dated 16 July "
+     "2024 substituted Form 6-A for both across rules 50, 53, 57, 58, 59, 60, 62, 63 and 80, and rewrote the "
+     "proviso to rule 80(5) so that a gratuity nominee may submit Form 6-A in place of Form 10 where no family "
+     "member is eligible. The notification gives the date of effect as one hundred twenty days after "
+     "publication, which is 13 November 2024."),
+]
 
 CHAPTERS = [
     ("I", "Preliminary", 1, 4),
@@ -152,6 +186,41 @@ def main():
     if leftovers:
         qs_html.append('<h3>Other</h3>' + "".join(q_html(q) for q in leftovers))
 
+    # ---- amendment register
+    amend_rows = []
+    for a in sorted(amendments.AMENDMENTS, key=lambda x: (x["date"][-4:], x["date"][3:5], x["date"][:2])):
+        badge = "rules" if a["kind"] == "rules" else "order"
+        ver = ('<span class="pill full">full text</span>'
+               if a["verified"] in ("gazette text", "order text")
+               else '<span class="pill part">from the index</span>')
+        provs = ", ".join(a["affects"][:6]) + (" ..." if len(a["affects"]) > 6 else "")
+        provs = provs or "\u2014"
+        amend_rows.append(
+            f'<tr><td><b>{esc(a["number"])}</b><br><span class="muted">{esc(a["title"])}</span>'
+            f'<br><span class="pill">{badge}</span>{ver}</td>'
+            f'<td>{esc(a["date"])}<br><span class="muted">from {esc(a["effective"])}</span></td>'
+            f'<td>{esc(a["effect"])}</td>'
+            f'<td><span class="muted">{esc(provs)}</span></td></tr>')
+    amend_rows = "".join(amend_rows)
+
+    # ---- the four places where the order and the rule part company
+    currency_html = "".join(
+        f'<div class="delta"><b>{esc(t)}</b><div class="delta-body">{body}</div></div>'
+        for t, body in SUBSTITUTIONS)
+
+    # ---- coverage table
+    cov = coverage.report(qs, verbose=False)
+    order = [("rule", "Rule as a whole"), ("sub-rule", "Sub-rule"), ("clause", "Clause"),
+             ("sub-clause", "Sub-clause"), ("proviso", "Proviso"), ("explanation", "Explanation")]
+    cov_rows = "".join(
+        f'<tr><td>{label}</td><td>{cov["per_kind"].get(k, 0):,}</td>'
+        f'<td>{cov["per_kind_hit"].get(k, 0):,}</td>'
+        f'<td>{100 * cov["per_kind_hit"].get(k, 0) / max(1, cov["per_kind"].get(k, 0)):.0f}%</td></tr>'
+        for k, label in order if cov["per_kind"].get(k))
+    cov_rows += (f'<tr class="total"><td><b>Total</b></td><td><b>{cov["provs"]:,}</b></td>'
+                 f'<td><b>{sum(cov["per_kind_hit"].values()):,}</b></td>'
+                 f'<td><b>{100 * sum(cov["per_kind_hit"].values()) / max(1, cov["provs"]):.0f}%</b></td></tr>')
+
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -228,6 +297,32 @@ text. The Forms and Formats are listed separately, because rule 3 treats them as
 
 <h2>The rule library</h2>
 {"".join(chapters_html)}
+
+<h2 id="amendments">The amendments and orders in force ({len(amendments.AMENDMENTS)})</h2>
+<p class="muted">The 2021 gazette is the starting point, not the current position. Three sets of amendment rules
+and fifteen office memoranda have changed or explained it since. Each entry says what it does, the date it takes
+effect, and the provisions it touches. Where an order operates on a rule without amending its text, both are
+shown: the rule as printed and the order as applied.</p>
+<p class="muted"><b>full text</b> means the instrument was read in full and its paragraphs are
+reflected in the questions. <b>from the index</b> means the instrument is listed in the
+Department&rsquo;s own circular index and its effect is recorded from that listing; the paragraphs have
+not been read in full, so the entry is a description of the instrument and not a substitute for it.
+Eight of the eighteen were read in full.</p>
+<table class="amend"><thead><tr><th>Instrument</th><th>Date</th><th>Effect</th><th>Provisions</th></tr></thead>
+<tbody>{amend_rows}</tbody></table>
+
+<h2 id="currency">Where the current order differs from the printed rule</h2>
+<p class="muted">Four places where a figure or a rule quoted straight from the 2021 text would now be wrong.</p>
+{currency_html}
+
+<h2 id="coverage">Coverage, measured ({cov["provs"]:,} provisions)</h2>
+<p class="muted">The platform claims to cover every rule, sub-rule, clause, sub-clause, proviso and Explanation.
+That claim is measured at build time, not asserted: each provision the parser finds is matched against the
+questions that cite it, and the build fails if any provision is left without one.</p>
+<table class="cov"><thead><tr><th>Level</th><th>Provisions</th><th>With a question</th><th>Coverage</th></tr></thead>
+<tbody>{cov_rows}</tbody></table>
+<p class="muted">Every provision is listed in the coverage matrix in <code>AUDIT.md</code>, with the questions
+that reach it.</p>
 
 <h2 id="forms">Forms appended to the rules ({len(forms.FORMS)})</h2>
 <p class="muted">Rule 3(1)(k): a Form is a form appended to these rules. Each entry gives the sub-rule that prescribes it.</p>

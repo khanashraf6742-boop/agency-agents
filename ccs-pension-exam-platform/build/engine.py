@@ -98,6 +98,7 @@ def build_record(f: dict, idx: int) -> dict:
         topic=f["topic"], q=f["q"], opts=opts, ans=ans,
         tag=f.get("tag", "Tough"), expl="\n".join(expl), src=f["src"], trap=f["trap"],
         kind=f.get("kind", "RULE"),
+        covers=f.get("covers", []), version=f.get("version"),
     )
 
 
@@ -108,9 +109,12 @@ def main():
     import data_statute
     import data_statute2
     import data_statute3
+    import data_current
+    import gen_questions
 
     facts = (data_rules.FACTS + data_compute.FACTS + data_forms.FACTS
-             + data_statute.FACTS + data_statute2.FACTS + data_statute3.FACTS)
+             + data_statute.FACTS + data_statute2.FACTS + data_statute3.FACTS
+             + data_current.FACTS + gen_questions.facts() + gen_questions.long_facts())
     ids = [f["id"] for f in facts]
     assert len(ids) == len(set(ids)), "duplicate ids"
     recs = [build_record(f, i) for i, f in enumerate(facts)]
