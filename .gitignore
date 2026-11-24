@@ -86,3 +86,14 @@ integrations/vibe/agents/
 integrations/vibe/prompts/
 integrations/zcode/agents/
 graphify-out/
+
+# python bytecode and generated JSON in the pay-rules build
+__pycache__/
+*.pyc
+ccs-revised-pay-exam-platform/build/pay.json
+ccs-revised-pay-exam-platform/build/matrix.json
+ccs-revised-pay-exam-platform/build/rules_out.json
+
+# python bytecode
+__pycache__/
+*.pyc

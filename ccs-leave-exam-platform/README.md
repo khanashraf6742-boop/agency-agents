@@ -1,0 +1,138 @@
+# CCS (Leave) Rules, 1972 — study and practice platform
+
+A single-file, offline exam platform for the Central Civil Services (Leave) Rules, 1972.
+Open `CCS-Leave-Rules-1972-Exam-Platform.html` in any modern browser; nothing is fetched
+from the network and no server is needed.
+
+## Forms and Formats
+
+Rule 3(h) of the CCS (Leave) Rules, 1972 defines a "Form" as a Form appended to the **Second Schedule**. That is
+the only appended series these Rules have; no instrument in them is described as a Format. The eleven Forms
+(1, 2, 3, 3-A, 4, 5, 6, 7, 8, 9, 10) are therefore the complete set, and the Forms library now says so on the
+page, with the source clause cited.
+
+This differs from the CCS (Pension) Rules, 2021, where rule 3(1)(k) defines a Form and rule 3(1)(l) defines a
+Format as two separately numbered series. An earlier assumption that the leave rules also had a Formats series
+was wrong, and the platform now records the position rather than leaving the absence unexplained.
+
+## How far the rule text is verified
+
+The rule library does not treat every card the same way, because they were not
+all verified the same way.
+
+| Cards | Source of the text | Status |
+| --- | --- | --- |
+| Rules 1–39 and 38-A (**36 cards**) | DoPT consolidated edition, updated 19.09.2022, transcribed clause by clause | **Statutory text** — quotable |
+| Rules 39-A onward (**33 cards**) | Earlier hand-typed text, abridged in places | **Key provisions** — *not* checked against the edition; the card says so in an amber warning and must not be quoted as the section |
+
+The reason for the split is recorded rather than hidden: the consolidated edition
+ran past the page limit of the reader used to transcribe it, so the second half
+of the book has not yet been recovered. `build/coverage.json` lists both sets by
+rule number. The audit fails the build if a card marked statutory is not in the
+transcription table, or if a question quotes an unverified card as the section.
+
+## What is inside the HTML file
+
+| Datasets | Count | What they are |
+| --- | --- | --- |
+| Rule cards | 69 | Rules 1–66 plus 38‑A, 39‑A to 39‑D, 43‑A, 43‑AA, 43‑B, 43‑C — bare text, plain explanation, Hinglish gloss, requirements, exceptions, authority, key figures, cross‑references and the exam trap |
+| MCQs | 700 | Four options, one key, a full explanation in the pension-platform layout (Answer → Steps & Statutory Rationale → Why the others are wrong → Exam-safe point → Statutory Authority) |
+| Numerical 80 | 80 | A separate set of every arithmetic question in the book, each with a three-step worked solution and a note on which mistake produces each wrong option. Also published as `Numerical-80-CCS-Leave-Rules-1972.md` |
+| Flashcards | 341 | Rule identification (69), key figures (65), competent authorities (67), definitions (10) and exam traps (130) |
+| Revision modules | 40 | Every rule in the book, grouped into microlearning cards with a mnemonic |
+| CBT papers | 31 | Chapter tests, focused rule tests, numeric drills, clause audits, case-file papers, five 100-question full lengths, plus a statement/negative/sequence drill, a timed run at the Numerical 80 and an eighteen-question paper on the highest-yield gaps |
+| Comparative tables | 28 | Leave salary by type, the combination matrix, the register of deleted rules, the First Schedule, all forms |
+| Case files | 20 | Establishment files with facts, issue, correct action, authority and the point to carry away |
+| Forms | 11 | Forms I–X with the rule, signatory and timing of each |
+| Amendments | 19 | Every instrument that moved a figure, with the date in force |
+| Core facts | 40 | The last-page revision sheet |
+
+## Using it
+
+* **Dashboard** — coverage, accuracy, weakest chapters, recent papers.
+* **Question practice** — filter by chapter, difficulty, unseen, bookmarked or mistakes;
+  search the stem, the id or the explanation; shuffle the set.
+* **Numerical 80** — the arithmetic set, grouped into nine blocks, with stepwise solutions that can be
+  opened per question or all at once, and a one-click download of the whole set as a text file.
+* **Test series** — a timed CBT with a palette, mark-for-review, a countdown and a
+  question-by-question scorecard.
+* **Numerical lab** — six calculators that show the arithmetic: EL credit with the
+  285-day buffer, commutation, retirement encashment, the EOL penalties, the study-leave
+  combination cap and CCL tranches.
+* **Export / Import** — progress is kept in the browser's local storage; the header
+  buttons move it between devices as JSON.
+
+## Rebuilding
+
+The build directory holds the generators; the HTML is assembled from them.
+
+```bash
+cd build
+python3 engine.py        # writes mcqs.json and num80.json (needs data_*.py + rules.json)
+python3 build_extras.py  # writes extras.json (flashcards, modules, mocks, tables, cases, forms, amendments, core)
+python3 assemble.py      # writes ../CCS-Leave-Rules-1972-Exam-Platform.html and ../Numerical-80-CCS-Leave-Rules-1972.md
+python3 smoke_audit.py   # writes ../AUDIT.md; exits non-zero if any content check fails
+node smoke.js            # headless test: 15 checks over every view (needs jsdom)
+```
+
+`smoke.js` needs `npm install jsdom` once. The test fails loudly if a view stops
+rendering, a filter returns nothing, a mock cannot be scored, a calculator throws or a
+console error appears. `smoke_audit.py` is the content side of the same discipline: it
+re-derives the counts, checks that every key letter matches its explanation, and refuses
+a build in which a numerical answer contradicts its own arithmetic.
+
+### Source of each figure
+
+* **Bare text** — DoPT consolidation of the CCS (Leave) Rules, 1972, edition updated
+  24.09.2024, reproduced rule by rule in `rules.json` with the guide's clause‑level
+  annotations. `extract_rules.py` built that file from the supplied study guide.
+* **Key figures** — Rules 26, 27, 29–32, 38, 38‑A, 39–39‑D, 43–43‑C, 44, 49–63, each
+  cross‑checked against the amendment register.
+* **Non‑statutory leave** — casual leave, special casual leave, compensatory leave and
+  restricted holidays come from DoPT O.M.s and the Leave Brochure. They are held in a
+  separate chapter (`NS`) and every card, question and flashcard says so. **No rule
+  number is ever cited for them**, because they are not in the Rules.
+* **Deleted and omitted provisions** — Rules 18, 23(1)–(2), 30(1)(b), 30(1)(c),
+  30(1)(e), 32(2)(c), 35–37, 45, 46 and 58–59 are treated as dead law. The bank tests
+  only their *status*, never a benefit under them. The register is in table 19.
+
+### Quality rules enforced by the build
+
+* Exactly four distinct options; the key letter in the explanation always matches the
+  `ans` field.
+* No two questions share a stem or an identical option set.
+* The correct option is not systematically the longest: across the bank it is the
+  longest option in 51% of questions, and the case files (which used to be 20/20) are
+  now 6/20.
+* Distractors never come from the same rule as the answer, and a distractor's figures
+  never overlap the answer's figures.
+* Omitted rules are never asked as "which rule governs X"; they are asked only as
+  "what is its status" or "what did it once govern".
+
+## The question families added in the second pass
+
+The first edition tested rules well but under-tested *format*. These were added:
+
+| Family | Count | Why |
+| --- | --- | --- |
+| `STMT-` | 12 | Multi-statement "how many are correct" items — the format most competitive papers use |
+| `NEG-` | 10 | "Which of the following is NOT …" items, where the three distractors are true statements of the same rule |
+| `SEQ-` | 8 | Items where the *order* of the steps is the test — regularisation, encashment, commutation checks, the study-leave exit |
+| `HL-` | 10 | The headline figures (730, 360, 90, 28, 18, 12, 3, 10, 5, 300) one rule at a time |
+| `WORK-` | 9 | The study guide's own nine hardest trap-cases, converted from worked examples into questions |
+
+A later pass added **eighteen more of the most examinable points still thin in the bank**, taking it from 682 to
+700: leave preparatory to retirement and what it is made of (Rule 38), the recovery proviso on commuted leave
+(Rule 30(2)), the pay rate for each kind of leave (Rule 40), advance of leave salary (Rule 42), the interest
+refund when LTC is not availed (Rule 38-A), the order of payment under Rule 39-C, invalidation for a temporary
+servant (Rule 39-B(2)), absorption in a PSU (Rule 39-D), seamen's sick leave (Rule 47), a refused commutation
+(Rule 30(1)(a)), the pension test for re-employment (Rule 34), Form 1 (Rule 14), the 60-day provisional sanction
+(Rule 16), the two ends of leave (Rule 21), prefixed and suffixed holidays (Rule 22), the Vacation Department
+fraction (Rule 28(1)(b)), the male adoption route (Rule 43-AA) and the WRIIL half pay tail (Rule 44(2)(a)).
+They form CBT paper **MOCK-32**.
+
+## Licence and caution
+
+This is a study aid, not a consolidated statute and not legal advice. Casual leave and
+the other non-statutory heads are labelled as such throughout. Verify any operative
+figure against the bare Rules, or the O.M. in force, before using it in an office order.

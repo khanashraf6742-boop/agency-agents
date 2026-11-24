@@ -1,0 +1,1442 @@
+[
+ {
+  "id": "P-0001",
+  "q": "The CCS (Pension) Rules, 2021 were notified by G.S.R. 868(E) dated 20 December 2021. A question asks when they came into force. The correct date is:",
+  "opts": [
+   "20 December 2021",
+   "1 April 2021",
+   "1 January 2022",
+   "The date the National Pension System rules came into force"
+  ],
+  "ans": "A",
+  "expl": "(A) 20 December 2021. Rule 1(2) brings them into force from the date of publication in the Official Gazette, which is this date\n(B) 1 April 2021. — No retrospective commencement appears in rule 1(2)\n(C) 1 January 2022. — That is the date the 2021 rules were made generally known, but the rule adopts publication, not a calendar date\n(D) The date the National Pension System rules came into force. — The two instruments are separate and each has its own commencement\n\nRule 1(2) reads that the rules shall come into force with effect from the date of their publication in the Official Gazette. It fixes commencement by reference to publication, not to a named calendar date. The contrast worth carrying is with the CCS (Revised Pay) Rules, 2016, which were given effect from 1 January 2016, a date earlier than the notification. Nothing of that kind appears here, so there is no question of reading a retrospective date into this instrument.",
+  "trap": "Assuming a retrospective date because the pay rules had one",
+  "rule": "1",
+  "chapter": "I",
+  "covers": [
+   "1(2)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 1(2)",
+  "rules_text": "Rule 1"
+ },
+ {
+  "id": "P-0002",
+  "q": "These rules apply to Government servants appointed on or before a stated cut-off. A person appointed on 1 March 2004 asks whether these rules cover him. The answer turns on the cut-off, which is:",
+  "opts": [
+   "31 March 2004",
+   "31 December 2003",
+   "1 January 2004",
+   "The date of publication of the rules"
+  ],
+  "ans": "B",
+  "expl": "(B) 31 December 2003. Rule 2 opens by applying the rules to servants appointed on or before this date\n(A) 31 March 2004. — No such date appears in rule 2\n(C) 1 January 2004. — This is the day after the cut-off; the rules use 31 December 2003 and the date is inclusive\n(D) The date of publication of the rules. — Commencement under rule 1(2) is a different matter from the class of servants the rules cover\n\nRule 2 applies the rules, save as otherwise provided, to Government servants appointed on or before 31 December 2003, including civilian Government servants in the Defence Services appointed substantively to civil services and posts borne on pensionable establishments. The date is inclusive, so an appointment on 31 December 2003 is within it and an appointment on 1 January 2004 is not. The Explanation to rule 2 then carves out three cases in which a servant appointed after that date is still covered, which is why the cut-off cannot be applied mechanically without reading on.",
+  "trap": "Reading the cut-off as exclusive, or ignoring the Explanation",
+  "rule": "2",
+  "chapter": "I",
+  "covers": [
+   "2"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 2",
+  "rules_text": "Rule 2"
+ },
+ {
+  "id": "P-0003",
+  "q": "A railway servant is appointed to a post in a Ministry. Which statement about the CCS (Pension) Rules, 2021 is correct?",
+  "opts": [
+   "Railway servants are covered only if appointed before 2004",
+   "Railway servants are covered because they serve the Union",
+   "Railway servants are expressly excluded by rule 2",
+   "The rules are silent on railway servants"
+  ],
+  "ans": "C",
+  "expl": "(C) Railway servants are expressly excluded by rule 2. Rule 2(a) excludes railway servants from the class to which the rules apply\n(A) Railway servants are covered only if appointed before 2004. — The exclusion in rule 2(a) is unqualified and is not saved by the date of appointment\n(B) Railway servants are covered because they serve the Union. — The rules apply to civil services borne on pensionable establishments; railways are separately excluded\n(D) The rules are silent on railway servants. — Rule 2(a) names them\n\nRule 2 applies the rules to servants appointed on or before 31 December 2003 to civil services borne on pensionable establishments, but then excludes a list of classes in clauses (a) to (h). Clause (a) is railway servants. The list is worth learning as a whole because the examinable point is usually which class is excluded, not whether a particular person is a Government servant: casual and daily rated staff, persons paid from contingencies, Contributory Provident Fund beneficiaries, All India Service members, local recruits to Indian establishments abroad, contract staff and those governed by the Constitution or another law all sit in the same list.",
+  "trap": "Confusing 'serves the Union' with 'is covered by these rules'",
+  "rule": "2",
+  "chapter": "I",
+  "covers": [
+   "2(a)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 2(a)",
+  "rules_text": "Rule 2"
+ },
+ {
+  "id": "P-0004",
+  "q": "Four employees are described. Which one is NOT excluded by rule 2 from the application of these rules?",
+  "opts": [
+   "A person entitled to the benefit of a Contributory Provident Fund",
+   "A railway servant",
+   "A member of the All India Services",
+   "A person paid from contingencies"
+  ],
+  "ans": "D",
+  "expl": "(D) A person paid from contingencies. Rule 2(c) excludes persons paid from contingencies\n(A) A person entitled to the benefit of a Contributory Provident Fund. — Excluded by clause (d)\n(B) A railway servant. — Excluded by clause (a)\n(C) A member of the All India Services. — Excluded by clause (e)\n\nRule 2 lists the excluded classes in clauses (a) to (h): railway servants; persons in casual and daily rated employment; persons paid from contingencies; persons entitled to a Contributory Provident Fund; members of the All India Services; persons locally recruited for service in Indian establishments abroad; persons employed on contract except where the contract provides otherwise; and persons whose terms are regulated by the Constitution or another law. The question asks which is NOT excluded, so the trap is to read it as asking which IS excluded. All four options are in the list, so the discriminating work is done by the wording of the question rather than by the list.",
+  "trap": "Answering the opposite question from the one asked",
+  "rule": "2",
+  "chapter": "I",
+  "covers": [
+   "2(a),2(b),2(d)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 2(a),2(b),2(d)",
+  "rules_text": "Rule 2"
+ },
+ {
+  "id": "P-0005",
+  "q": "A servant was put on induction training in November 2003 and appointed on a regular basis in February 2004. He is covered by these rules only if the training satisfies conditions. Which is NOT one of them?",
+  "opts": [
+   "The training was completed outside India",
+   "The training period was countable as qualifying service under the 1972 Rules",
+   "He was eligible for a salary or stipend during the training",
+   "Completion of the training was an essential condition for regular appointment"
+  ],
+  "ans": "A",
+  "expl": "(A) The training was completed outside India. Nothing in the Explanation requires the place of training\n(B) The training period was countable as qualifying service under the 1972 Rules. — This is the third condition\n(C) He was eligible for a salary or stipend during the training. — This is the second condition\n(D) Completion of the training was an essential condition for regular appointment. — This is the first condition in the proviso\n\nRule 2 applies to servants appointed on or before 31 December 2003. Explanation (1) reaches a servant put on induction training on or before that date and appointed regularly afterwards, but only on three conditions set out in the proviso: completing the training was an essential condition of the regular appointment, he drew a salary or stipend during it, and the period was eligible to be counted as qualifying service under the 1972 Rules. The purpose is to stop a training period being used to manufacture coverage where it was really a probationary or casual arrangement.",
+  "trap": "Assuming any pre-2004 training carries the appointment into the rules",
+  "rule": "2",
+  "chapter": "I",
+  "covers": [
+   "2-Explanation(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 2-Explanation(1)",
+  "rules_text": "Rule 2"
+ },
+ {
+  "id": "P-0006",
+  "q": "The rules define 'child'. Under that definition a person is a child of the Government servant if he or she:",
+  "opts": [
+   "has not attained the age of twenty-five years on the relevant date of death",
+   "is eligible for death gratuity or family pension under the rules",
+   "is a legitimate son or daughter only",
+   "is financially dependent on the Government servant"
+  ],
+  "ans": "B",
+  "expl": "(B) is eligible for death gratuity or family pension under the rules. Rule 3(1)(e) defines child by reference to eligibility under those two provisions, not by age alone\n(A) has not attained the age of twenty-five years on the relevant date of death. — Age enters through rules 45 and 50; the definition itself does not fix an age\n(C) is a legitimate son or daughter only. — The definition does not confine itself to legitimate children\n(D) is financially dependent on the Government servant. — Dependency is a test inside rule 50, not the definition in rule 3\n\nRule 3(1)(e) defines a child as a son or daughter of the Government servant who is eligible to receive death gratuity under rule 45 or family pension under rule 50, and provides that 'children' is construed accordingly. The definition is therefore a pointer rather than a self-contained test: whether someone is a child depends on the eligibility conditions in the two operative rules, which deal separately with sons, unmarried daughters, widowed and divorced daughters, and disabled children. A candidate who learns an age limit as 'the definition of child' will be caught, because the age limits live in rule 50.",
+  "trap": "Learning an age limit as though it were part of the definition",
+  "rule": "3",
+  "chapter": "I",
+  "covers": [
+   "3(1)(e)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 3(1)(e)",
+  "rules_text": "Rule 3"
+ },
+ {
+  "id": "P-0007",
+  "q": "Form 3 and Format 3 both exist in these rules. What follows from the definitions in rule 3(1)?",
+  "opts": [
+   "A Format is a Form prescribed for use outside the Ministry",
+   "The words are interchangeable and the numbering avoids confusion",
+   "two separate series, each numbered independently from one",
+   "Format 3 is the earlier, superseded version of Form 3"
+  ],
+  "ans": "C",
+  "expl": "(C) two separate series, each numbered independently from one. Rule 3(1)(k) defines a Form and rule 3(1)(l) a Format as separate appendices, each numbered from one\n(A) A Format is a Form prescribed for use outside the Ministry. — The definition is by appendix, not by the user of the document\n(B) The words are interchangeable and the numbering avoids confusion. — Interchangeability is exactly what the two definitions prevent\n(D) Format 3 is the earlier, superseded version of Form 3. — The two series are independent; neither supersedes the other\n\nRule 3(1)(k) defines a Form as a form appended to these rules and rule 3(1)(l) defines a Format as a format appended to them. They are appended separately and numbered independently, so Form 3 can be the gratuity nomination under rule 46 while Format 3 is the memorandum of charges under rule 8(2)(c). The definitions exist precisely so that a reference to one can never be read as a reference to the other, and a question that asks which instrument is prescribed has a different answer depending on which word the rule used.",
+  "trap": "Treating Form and Format as interchangeable",
+  "rule": "3",
+  "chapter": "I",
+  "covers": [
+   "3(1)(k),3(1)(l)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 3(1)(k),3(1)(l)",
+  "rules_text": "Rule 3"
+ },
+ {
+  "id": "P-0008",
+  "q": "'Gratuity' in these rules is a composite term. Which of the following is NOT one of its three limbs?",
+  "opts": [
+   "Retirement gratuity or death gratuity under sub-rule (1) of rule 45",
+   "Residuary gratuity payable under sub-rule (3) of rule 45",
+   "Service gratuity payable under rule 44 of these rules",
+   "Compensation gratuity on absorption in a public sector undertaking"
+  ],
+  "ans": "D",
+  "expl": "(D) Compensation gratuity on absorption in a public sector undertaking. No such limb appears in rule 3(1)(o)\n(A) Retirement gratuity or death gratuity under sub-rule (1) of rule 45. — This is limb (ii)\n(B) Residuary gratuity payable under sub-rule (3) of rule 45. — This is limb (iii)\n(C) Service gratuity payable under rule 44 of these rules. — This is limb (i)\n\nRule 3(1)(o) defines gratuity to include service gratuity under rule 44, retirement gratuity or death gratuity under rule 45(1), and residuary gratuity under rule 45(3). The three limbs matter because different rules attach different consequences to them: service gratuity is what a servant with short qualifying service receives in place of pension, retirement and death gratuity are the lump sums on retirement and death, and residuary gratuity is the top-up paid to a family where the pensioner died soon after retiring and the sums already received fall short of the statutory floor.",
+  "trap": "Assuming every lump sum paid on leaving service falls inside the definition",
+  "rule": "3",
+  "chapter": "I",
+  "covers": [
+   "3(1)(o)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 3(1)(o)",
+  "rules_text": "Rule 3"
+ },
+ {
+  "id": "P-0009",
+  "q": "A Government servant is deputed to a body that pays his salary from its own funds with the sanction of the Government. His service there is:",
+  "opts": [
+   "foreign service, because his pay comes from outside the Consolidated Fund",
+   "deputation to the United Nations, which rule 29 governs as a separate class",
+   "ordinary duty, because he remains a Government servant throughout the period",
+   "suspension, because the Government no longer pays him during that period"
+  ],
+  "ans": "A",
+  "expl": "(A) foreign service, because his pay comes from outside the Consolidated Fund. Rule 3(1)(j) defines foreign service by the source of pay, not by the place of work\n(B) deputation to the United Nations, which rule 29 governs as a separate class. — Rule 29 deals with a specific class of deputation; the definition here is general\n(C) ordinary duty, because he remains a Government servant throughout the period. — He does remain a servant, but the character of the service is fixed by the source of his pay\n(D) suspension, because the Government no longer pays him during that period. — Suspension is a different concept and has its own consequences under rule 23\n\nRule 3(1)(j) defines foreign service as service in which a Government servant receives his pay, with the sanction of the Government, from any source other than the Consolidated Fund of India, of a State or of a Union territory. The test is the source of the money, not the location of the post or the identity of the employer. That is why a servant working in Delhi for a public sector body on foreign service terms is on foreign service, while one working abroad but paid from the Consolidated Fund is not.",
+  "trap": "Assuming foreign service means service outside India",
+  "rule": "3",
+  "chapter": "I",
+  "covers": [
+   "3(1)(j)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 3(1)(j)",
+  "rules_text": "Rule 3"
+ },
+ {
+  "id": "P-0010",
+  "q": "'Bhavishya' appears throughout the pension-processing rules. It is:",
+  "opts": [
+   "a form for the family details of a servant who is retiring",
+   "an online system for sanctioning pension and tracking its payment",
+   "the register of Government servants who are due for retirement",
+   "the ledger of Government dues recoverable from gratuity on retirement or death"
+  ],
+  "ans": "B",
+  "expl": "(B) an online system for sanctioning pension and tracking its payment. This is the definition in rule 3(1)(d)\n(A) a form for the family details of a servant who is retiring. — The family details are given in Form 4, later Form 6-A\n(C) the register of Government servants who are due for retirement. — That list is prepared under rule 54 on a different footing\n(D) the ledger of Government dues recoverable from gratuity on retirement or death. — Government dues are defined by reference to rule 67(2)\n\nRule 3(1)(d) defines Bhavishya as an online system for the sanction of retirement benefits and the tracking of sanction and payment of pension by the Government servant and the authorities concerned. It is one of two named systems in these rules, the other being e-HRMS, and G.S.R. 410(E) of 16 July 2024 made the choice between them depend on whether the servant retired on superannuation. The definitions matter because a question about which system carries a case is answerable only if the systems themselves are understood as things, not as forms.",
+  "trap": "Assuming every online pension system named in the rules is the same system",
+  "rule": "3",
+  "chapter": "I",
+  "covers": [
+   "3(1)(d)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 3(1)(d)",
+  "rules_text": "Rule 3"
+ },
+ {
+  "id": "P-0011",
+  "q": "A servant retires on 31 May 2024. His pension claim falls to be decided by the rules in force:",
+  "opts": [
+   "on the date the Accounts Officer authorises the pension",
+   "on the date the Head of Office forwards the case",
+   "on that date, not on the date the claim is settled",
+   "on whichever date is more beneficial to the servant"
+  ],
+  "ans": "C",
+  "expl": "(C) on that date, not on the date the claim is settled. Rule 5(1) fixes the governing rules by the date of retirement, not the date of decision\n(A) on the date the Accounts Officer authorises the pension. — Authorisation is a later step and does not select the governing rules\n(B) on the date the Head of Office forwards the case. — Processing dates do not change the rule that governs the claim\n(D) on whichever date is more beneficial to the servant. — No such choice is given by rule 5\n\nRule 5(1) provides that any claim to pension or family pension shall be regulated by the provisions in force at the time when the Government servant retires, is retired, is discharged, is allowed to resign, or dies, as the case may be. The governing law is therefore frozen at the event, not at the administrative stage. That matters whenever the rules are amended: an amendment after retirement changes the position for those who retire after it, and does not reopen a case already governed by the earlier text unless the amending instrument itself says otherwise.",
+  "trap": "Applying whatever version of the rules is current when the file is decided",
+  "rule": "5",
+  "chapter": "II",
+  "covers": [
+   "5(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 5(1)",
+  "rules_text": "Rule 5"
+ },
+ {
+  "id": "P-0012",
+  "q": "A servant's last working day was 30 June and he died on 2 July while on leave. For the purposes of these rules his date of death is treated as:",
+  "opts": [
+   "outside service altogether, so no death gratuity is payable to the family",
+   "irrelevant, because he had already retired",
+   "the last day of the month, by deeming",
+   "a completed working day, and the day falls within his leave"
+  ],
+  "ans": "D",
+  "expl": "(D) a completed working day, and the day falls within his leave. Rule 5(2) treats death as a completed working day and the proviso keeps the day within the leave\n(A) outside service altogether, so no death gratuity is payable to the family. — Treating the day as a completed working day puts it inside service\n(B) irrelevant, because he had already retired. — He had not retired; retirement on superannuation and death in service are different events\n(C) the last day of the month, by deeming. — The rule deems the day of death, not a month-end\n\nRule 5(2) treats the day of retirement, discharge, resignation or death as the last completed working day. Its proviso deals with a servant who, immediately before retirement or death, was absent on leave or otherwise, or under suspension: the day of retirement or death is part of that leave, absence or suspension. The effect is that the day counts for service purposes without being converted into duty. A candidate who reads the main clause alone will treat the day as duty; a candidate who reads the proviso alone may think it does not count at all.",
+  "trap": "Reading the deeming clause without its proviso",
+  "rule": "5",
+  "chapter": "II",
+  "covers": [
+   "5(2)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 5(2)",
+  "rules_text": "Rule 5"
+ },
+ {
+  "id": "P-0013",
+  "q": "A servant completes twenty-two years, retires, and is re-employed the next day in another Ministry. He later claims a second pension for the re-employed period. Under rule 6(1) he:",
+  "opts": [
+   "cannot earn two pensions for the same continuous service",
+   "forfeits the first pension on re-employment",
+   "is entitled to a second pension because there was a fresh appointment",
+   "is entitled to a second pension because the post is different"
+  ],
+  "ans": "A",
+  "expl": "(A) cannot earn two pensions for the same continuous service. Rule 6(1) bars two pensions in the same service or post at the same time or by the same continuous service\n(B) forfeits the first pension on re-employment. — The rule bars a second pension; it does not take away the first\n(C) is entitled to a second pension because there was a fresh appointment. — Rule 6(2) addresses re-employment and does not create a second pension\n(D) is entitled to a second pension because the post is different. — The bar operates on continuous service, and a change of post does not break it\n\nRule 6(1) is a short, absolute provision: a Government servant shall not earn two pensions in the same service or post at the same time or by the same continuous service. Rule 6(2) then deals with the re-employed pensioner and provides that, except as provided in rule 19 or rule 20, he is not entitled to a separate pension or gratuity for the period of re-employment. The two together mean that a re-employed pensioner draws his original pension but does not build a second one, subject to the specific counting provisions in rules 19 and 20.",
+  "trap": "Assuming a new appointment necessarily starts a new pension",
+  "rule": "6",
+  "chapter": "II",
+  "covers": [
+   "6(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 6(1)",
+  "rules_text": "Rule 6"
+ },
+ {
+  "id": "P-0014",
+  "q": "A servant resigns from a public sector undertaking with its permission to join the Government in 2002. On retirement from Government service he claims pension from the Government for his PSU years. That claim:",
+  "opts": [
+   "fails, because service in a PSU is never counted",
+   "fails, because the PSU bears its own pension liability",
+   "succeeds, because the two periods together exceed the minimum service",
+   "succeeds, because he joined with proper permission"
+  ],
+  "ans": "B",
+  "expl": "(B) fails, because the PSU bears its own pension liability. Explanation 2 to rule 6 puts the PSU pension on the PSU and disclaims Government liability\n(A) fails, because service in a PSU is never counted. — It may be counted under rule 19; what fails here is the claim against the Government for it\n(C) succeeds, because the two periods together exceed the minimum service. — Aggregation is dealt with in rule 19, not by shifting liability\n(D) succeeds, because he joined with proper permission. — Proper permission protects his Government pension; it does not shift the PSU liability\n\nThe first proviso to rule 6(2) allows a servant who came from an autonomous body or public sector undertaking with proper permission on or before 31 December 2003 to receive pension and gratuity for the Government service in addition to anything received from the body. Explanation 2 then fixes where each liability sits: pension on account of the PSU service is paid by the PSU itself, and the Government bears no liability for it. So the servant keeps both, but each is paid by the employer whose service gave rise to it. The second proviso caps the combined gratuity at what would have been admissible on the whole service.",
+  "trap": "Reading 'proper permission' as making the Government liable for the earlier service",
+  "rule": "6",
+  "chapter": "II",
+  "covers": [
+   "6-Explanation-2"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 6-Explanation-2",
+  "rules_text": "Rule 6"
+ },
+ {
+  "id": "P-0015",
+  "q": "A pensioner is found guilty of grave misconduct. The Appointing Authority proposes to withhold part of his pension. The reduction must not take the pension below:",
+  "opts": [
+   "half of his last emoluments",
+   "the amount of gratuity he received",
+   "the minimum pension under rule 44",
+   "the family pension admissible to his widow"
+  ],
+  "ans": "C",
+  "expl": "(C) the minimum pension under rule 44. The first proviso to rule 7(1)(b) sets that floor\n(A) half of his last emoluments. — No such floor appears in rule 7\n(B) the amount of gratuity he received. — Gratuity is a lump sum and is not a floor for pension\n(D) the family pension admissible to his widow. — Family pension is a separate entitlement under rule 50\n\nRule 7(1)(b) allows the Appointing Authority, by order in writing, to withhold or withdraw a pension or part of it, permanently or for a specified period, where the pensioner is convicted of a serious crime or found guilty of grave misconduct. The first proviso fixes a floor: where a part of the pension is withheld or withdrawn, the amount shall not be reduced below the minimum pension under rule 44. The second proviso requires consultation with the Union Public Service Commission before final orders. The distinction worth holding is between reducing a pension, which is capped in effect by that floor, and withholding it entirely, which the rule also permits in a suitable case.",
+  "trap": "Assuming a part-withholding can reduce the pension to nothing",
+  "rule": "7",
+  "chapter": "II",
+  "covers": [
+   "7(1)(b)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 7(1)(b)",
+  "rules_text": "Rule 7"
+ },
+ {
+  "id": "P-0016",
+  "q": "Where a pensioner is prima facie guilty of grave misconduct but has not been convicted by a court, he must be given a notice. The period allowed to him for representation is:",
+  "opts": [
+   "such period as the Appointing Authority thinks fit",
+   "thirty days, extendable without limit",
+   "ten days, with no extension",
+   "fifteen days, extendable by up to fifteen more"
+  ],
+  "ans": "D",
+  "expl": "(D) fifteen days, extendable by up to fifteen more. Rule 7(3)(a) fixes fifteen days, with further time not exceeding fifteen days\n(A) such period as the Appointing Authority thinks fit. — The rule fixes the period and caps the extension\n(B) thirty days, extendable without limit. — Thirty days is the period for a representation under rule 9(7), a different provision\n(C) ten days, with no extension. — Neither the period nor the bar on extension is right\n\nRule 7(3) applies where the case does not fall under rule 7(2), that is, where there is no conviction by a court. Before passing an order the authority must serve a notice specifying the proposed action and the ground for it, calling on the pensioner to submit a representation within fifteen days of receipt or such further time, not exceeding fifteen days, as the authority allows, and must then take that representation into consideration. The structure is a compact natural-justice code: notice, a fixed opportunity, and a duty to consider what comes back.",
+  "trap": "Confusing the rule 7 notice period with the rule 9 representation period",
+  "rule": "7",
+  "chapter": "II",
+  "covers": [
+   "7(3)(a)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 7(3)(a)",
+  "rules_text": "Rule 7"
+ },
+ {
+  "id": "P-0017",
+  "q": "A pensioner is convicted of a serious crime by a court. Before taking action under rule 7(1) the authority should:",
+  "opts": [
+   "act in the light of the court's judgment on the conviction",
+   "conduct a fresh departmental enquiry into the same conduct",
+   "wait for the appeal period to expire in every case",
+   "ignore the conviction unless it is for an offence under the Official Secrets Act"
+  ],
+  "ans": "A",
+  "expl": "(A) act in the light of the court's judgment on the conviction. Rule 7(2) directs the authority to take action in the light of that judgment\n(B) conduct a fresh departmental enquiry into the same conduct. — Rule 7(2) routes the authority to the judgment rather than to a fresh enquiry\n(C) wait for the appeal period to expire in every case. — No such waiting period appears in rule 7(2)\n(D) ignore the conviction unless it is for an offence under the Official Secrets Act. — The Act is one example within 'serious crime', not the only route\n\nRule 7(2) deals with the case where a pensioner is convicted of a serious crime by a court of law and directs that action under sub-rule (1) shall be taken in the light of the judgment of the court relating to that conviction. Rule 7(3) is expressly the 'case not falling under sub-rule (2)', which is why the notice procedure does not apply to a convicted pensioner: the court has already found the facts. The Explanation defines serious crime to include an offence under the Official Secrets Act, 1923, and grave misconduct to include disclosure of secret material.",
+  "trap": "Running the sub-rule (3) notice procedure against a convicted pensioner",
+  "rule": "7",
+  "chapter": "II",
+  "covers": [
+   "7(2)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 7(2)",
+  "rules_text": "Rule 7"
+ },
+ {
+  "id": "P-0018",
+  "q": "Before the President passes final orders withholding a pension under rule 8, he must consult:",
+  "opts": [
+   "the Comptroller and Auditor-General",
+   "the Union Public Service Commission",
+   "the pensioner's last Head of Department",
+   "the Department of Personnel and Training"
+  ],
+  "ans": "B",
+  "expl": "(B) the Union Public Service Commission. The first proviso to rule 8(1) requires that consultation\n(A) the Comptroller and Auditor-General. — The C&AG is the withholding authority for the Indian Audit and Accounts Department, not a consultee here\n(C) the pensioner's last Head of Department. — The Head of Department processes the case; he is not the consultee\n(D) the Department of Personnel and Training. — No consulting role is given to the Department by rule 8\n\nRule 8(1) reserves to the President the right to withhold or withdraw a pension or gratuity, in full or in part, and to order recovery of pecuniary loss, where in departmental or judicial proceedings the pensioner is found guilty of grave misconduct or negligence. The first proviso requires consultation with the Union Public Service Commission before final orders; the second fixes the same floor as rule 7, that a part withholding cannot take the pension below the minimum under rule 44. G.S.R. 770(E) of 7 October 2022 substituted sub-rule (1) so that the power is exercised by the President only where the President is the appointing authority, and otherwise by the Secretary of the administrative Ministry or Department.",
+  "trap": "Treating the UPSC as an appellate body rather than a consultee",
+  "rule": "8",
+  "chapter": "II",
+  "covers": [
+   "8(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 8(1)",
+  "rules_text": "Rule 8"
+ },
+ {
+  "id": "P-0019",
+  "q": "Departmental proceedings are instituted after retirement over an event that occurred five years earlier. They are:",
+  "opts": [
+   "permissible, because there is no time limit, in every such case.",
+   "permissible, because the pensioner can always be heard, irrespective of the facts.",
+   "not permissible: the event is outside the four-year limit in rule 8(2)(c)(ii)",
+   "permissible if the President sanctions them in Format 2"
+  ],
+  "ans": "C",
+  "expl": "(C) not permissible: the event is outside the four-year limit in rule 8(2)(c)(ii). Rule 8(2)(c)(ii) bars proceedings over an event more than four years before institution\n(A) permissible, because there is no time limit, in every such case. — The four-year bar in clause (c)(ii) is a time limit\n(B) permissible, because the pensioner can always be heard, irrespective of the facts. — Hearing the pensioner does not cure the time bar\n(D) permissible if the President sanctions them in Format 2. — The sanction in Format 2 is a separate requirement and does not displace the four-year bar\n\nWhere departmental proceedings were not instituted while the servant was in service, rule 8(2)(c) imposes three conditions: they may not be instituted save with the sanction of the President in Format 2; they may not concern an event that took place more than four years before institution; and they must be conducted by such authority and place as the President directs, following the procedure applicable to proceedings in which dismissal could be ordered. The proviso requires a memorandum of charges in Format 3. The three conditions are cumulative, so a valid sanction does not rescue a proceeding that is out of time.",
+  "trap": "Thinking a presidential sanction cures the four-year bar",
+  "rule": "8",
+  "chapter": "II",
+  "covers": [
+   "8(2)(c)(ii)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 8(2)(c)(ii)",
+  "rules_text": "Rule 8"
+ },
+ {
+  "id": "P-0020",
+  "q": "Proceedings were started against a servant under rule 16 of the CCS (Classification, Control and Appeal) Rules, 1965 while he was in service and continued after retirement. Their effect on his pension is:",
+  "opts": [
+   "the pension is forfeited if the finding is against him",
+   "the pension is reduced to provisional pension, irrespective of the facts.",
+   "the pension is withheld until they conclude, in every such case.",
+   "none at all: clause (b) says they have no effect on pension or gratuity"
+  ],
+  "ans": "D",
+  "expl": "(D) none at all: clause (b) says they have no effect on pension or gratuity. Clause (b) expressly disapplies the withholding regime to rule 16 proceedings\n(A) the pension is forfeited if the finding is against him. — Clause (b) removes the pension consequence altogether\n(B) the pension is reduced to provisional pension, irrespective of the facts. — Provisional pension under rule 8(3) does not attach to rule 16 proceedings\n(C) the pension is withheld until they conclude, in every such case. — That is the position for other proceedings, not for rule 16 proceedings\n\nRule 8(2)(b) begins with a non obstante formula: notwithstanding sub-rule (1) and clause (a), departmental proceedings instituted under rule 16 of the CCA Rules, 1965 while the servant was in service and continued after retirement shall have no effect on the pension and gratuity of the pensioner. The reason is that rule 16 proceedings concern minor penalties, which do not carry the pension consequences that rule 8 exists to enforce. Compare clause (a), which continues proceedings begun while in service and treats them as proceedings under rule 8, and sub-rule (3), which brings in provisional pension.",
+  "trap": "Extending the withholding regime to minor-penalty proceedings",
+  "rule": "8",
+  "chapter": "II",
+  "covers": [
+   "8(2)(b)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 8(2)(b)",
+  "rules_text": "Rule 8"
+ },
+ {
+  "id": "P-0021",
+  "q": "A servant against whom departmental proceedings are instituted retires on superannuation. He is sanctioned provisional pension equal to:",
+  "opts": [
+   "the maximum pension admissible up to the date of retirement",
+   "the minimum pension under rule 44, irrespective of the facts.",
+   "the family pension admissible to his family",
+   "fifty per cent of his last pay, in every such case."
+  ],
+  "ans": "A",
+  "expl": "(A) the maximum pension admissible up to the date of retirement. Rule 8(4)(a) fixes provisional pension at the maximum admissible on that service\n(B) the minimum pension under rule 44, irrespective of the facts. — The minimum is a floor, not the measure of provisional pension\n(C) the family pension admissible to his family. — Family pension is separately provided for in rule 51 and rule 50\n(D) fifty per cent of his last pay, in every such case. — That is the ordinary pension rate, not the provisional figure\n\nRule 8(3) requires a provisional pension to be sanctioned where a servant who has retired is faced with departmental or judicial proceedings, or where rule 14 CCA proceedings are continued under sub-rule (2). Rule 8(4)(a) measures it: the Accounts Officer authorises provisional pension equal to the maximum pension that would have been admissible on qualifying service up to the date of retirement, or, if he was under suspension on that date, up to the date immediately preceding suspension. The generosity is deliberate: the servant is presumed entitled to the best figure until the proceedings produce a reason to reduce it.",
+  "trap": "Using the ordinary rate instead of the maximum admissible",
+  "rule": "8",
+  "chapter": "II",
+  "covers": [
+   "8(3),8(4)(a)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 8(3),8(4)(a)",
+  "rules_text": "Rule 8"
+ },
+ {
+  "id": "P-0022",
+  "q": "A servant retires with proceedings pending. As regards his gratuity, rule 8(4)(c) provides that:",
+  "opts": [
+   "gratuity is paid at half the admissible amount, irrespective of the facts.",
+   "no gratuity at all until the proceedings conclude and final orders issue",
+   "gratuity is paid in full with the provisional pension",
+   "gratuity is forfeited on retirement, in every such case."
+  ],
+  "ans": "B",
+  "expl": "(B) no gratuity at all until the proceedings conclude and final orders issue. Clause (c) withholds gratuity until that point\n(A) gratuity is paid at half the admissible amount, irrespective of the facts. — No partial release is provided for\n(C) gratuity is paid in full with the provisional pension. — The rule withholds it, which is the contrast with provisional pension\n(D) gratuity is forfeited on retirement, in every such case. — It is withheld pending the outcome, not forfeited\n\nThe structure of rule 8(4) is that pension and gratuity are treated differently while proceedings are pending. Provisional pension is paid, at the maximum admissible rate, from the day after retirement until final orders. Gratuity, by contrast, is withheld entirely: clause (c) provides that no gratuity shall be paid until the proceedings conclude and final orders are issued. That is why the two are spoken of separately throughout the pension-processing rules, and why rule 62 provides separately for provisional gratuity in cases that do not involve proceedings at all.",
+  "trap": "Assuming pension and gratuity are always treated alike while proceedings pend",
+  "rule": "8",
+  "chapter": "II",
+  "covers": [
+   "8(4)(c)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 8(4)(c)",
+  "rules_text": "Rule 8"
+ },
+ {
+  "id": "P-0023",
+  "q": "Allegations of misconduct are under investigation but no proceedings have been instituted by the date of retirement. The pension and gratuity:",
+  "opts": [
+   "are forfeited if the investigation later finds misconduct",
+   "are withheld until the investigation ends, irrespective of the facts.",
+   "are paid under rule 63, subject to later proceedings under rule 8(2)",
+   "are paid as provisional pension only, in every such case."
+  ],
+  "ans": "C",
+  "expl": "(C) are paid under rule 63, subject to later proceedings under rule 8(2). Clause (d) releases them, with the proviso preserving the effect of sub-rule (2)\n(A) are forfeited if the investigation later finds misconduct. — The proviso routes any later proceedings through sub-rule (2); forfeiture is not automatic\n(B) are withheld until the investigation ends, irrespective of the facts. — Clause (d) disapplies the withholding regime in exactly this situation\n(D) are paid as provisional pension only, in every such case. — Provisional pension under sub-rule (4) is what clause (d) disapplies\n\nRule 8(4)(d) is the safety valve in the scheme. Where allegations of misconduct are still under investigation, or proceedings are merely contemplated and have not been instituted or deemed instituted, on the date of retirement, the provisions of sub-rule (4) do not apply, and the pension and gratuity are authorised on retirement in accordance with rule 63. Its proviso keeps the door open: any departmental proceedings instituted after retirement remain subject to sub-rule (2), including the four-year bar and the requirement of presidential sanction. The policy is that a servant is not left unpaid merely because an investigation is in the air.",
+  "trap": "Withholding benefits because an investigation is merely on foot",
+  "rule": "8",
+  "chapter": "II",
+  "covers": [
+   "8(4)(d)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 8(4)(d)",
+  "rules_text": "Rule 8"
+ },
+ {
+  "id": "P-0024",
+  "q": "Provisional pension of ₹40,000 was paid for two years. The final pension sanctioned is ₹36,000. The recovery of the excess is:",
+  "opts": [
+   "made in full from the next pension payment, irrespective of the facts.",
+   "made by reducing the gratuity, in every such case.",
+   "made at one-third of the pension each month",
+   "not made: the final pension is lower than the provisional pension"
+  ],
+  "ans": "D",
+  "expl": "(D) not made: the final pension is lower than the provisional pension. Rule 8(5) bars recovery where the final pension is less than the provisional pension\n(A) made in full from the next pension payment, irrespective of the facts. — The rule expressly bars that recovery\n(B) made by reducing the gratuity, in every such case. — Neither adjustment nor reduction of gratuity is provided for in this situation\n(C) made at one-third of the pension each month. — The one-third rate governs recovery of pecuniary loss under rule 8(6), not adjustment here\n\nRule 8(5) provides that provisional pension paid under sub-rule (4) is adjusted against the final retirement benefits sanctioned on conclusion of the proceedings, but that no recovery shall be made where the pension finally sanctioned is less than the provisional pension, or where the pension is reduced or withheld permanently or for a specified period. The rule therefore allows the shortfall to fall on the Government rather than on the pensioner. That is a deliberate policy choice and is worth contrasting with the one-third recovery rate in sub-rule (6), which applies to recovery of pecuniary loss, a different kind of debt.",
+  "trap": "Recovering an overpayment that the rule excuses",
+  "rule": "8",
+  "chapter": "II",
+  "covers": [
+   "8(5)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 8(5)",
+  "rules_text": "Rule 8"
+ },
+ {
+  "id": "P-0025",
+  "q": "The President decides not to withhold a pension but orders recovery of a pecuniary loss from it. The monthly recovery shall not ordinarily exceed:",
+  "opts": [
+   "one-third of the pension admissible at retirement",
+   "ten per cent of the pension",
+   "the whole pension, since the loss is Government money",
+   "one-half of the pension admissible at retirement"
+  ],
+  "ans": "A",
+  "expl": "(A) one-third of the pension admissible at retirement. Rule 8(6) caps the instalment at one-third\n(B) ten per cent of the pension. — Ten per cent is the withholding in rule 77(1)(vi) for accommodation dues\n(C) the whole pension, since the loss is Government money. — The rule caps the rate; it does not permit the whole pension\n(D) one-half of the pension admissible at retirement. — Half is the family pension rate, not this cap\n\nRule 8(6) deals with the case where the President decides not to withhold or withdraw pension but orders recovery of pecuniary loss from it. The recovery shall not ordinarily be made at a rate exceeding one-third of the pension admissible on the date of retirement. The word 'ordinarily' leaves room for an exceptional case, but the normal ceiling is a third. Two other caps sit nearby in the scheme and are easy to confuse: the ten per cent withheld under rule 77(1)(vi) pending a no-demand certificate for Government accommodation, and the one-third here, which concerns recovery of a loss rather than security for a due.",
+  "trap": "Confusing the one-third recovery cap with the ten per cent accommodation withholding",
+  "rule": "8",
+  "chapter": "II",
+  "covers": [
+   "8(6)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 8(6)",
+  "rules_text": "Rule 8"
+ },
+ {
+  "id": "P-0026",
+  "q": "Departmental proceedings are deemed instituted under rule 8 on the date:",
+  "opts": [
+   "the authority first forms a suspicion, in every such case.",
+   "the statement of charges issues, or the earlier date of suspension",
+   "the pensioner is informed of the proposed penalty",
+   "the enquiry officer submits his report, irrespective of the facts."
+  ],
+  "ans": "B",
+  "expl": "(B) the statement of charges issues, or the earlier date of suspension. Explanation 1(a) fixes the date of the statement of charges, or of earlier suspension\n(A) the authority first forms a suspicion, in every such case. — Suspicion is not the trigger in the Explanation\n(C) the pensioner is informed of the proposed penalty. — That is a later stage in the proceedings\n(D) the enquiry officer submits his report, irrespective of the facts. — The report comes at the end; institution is at the start\n\nExplanation 1(a) to rule 8 deems departmental proceedings to be instituted on the date on which the statement of charges is issued to the servant or pensioner or, if he was placed under suspension from an earlier date, on that earlier date. The date matters because rule 8(2)(c)(ii) bars post-retirement proceedings over an event more than four years old, and because the pending-proceedings question in rule 8(4)(d) turns on whether proceedings were instituted by the date of retirement. Explanation 1(b) does the same work for judicial proceedings: the date of the complaint or police report for criminal proceedings, and the date the suit is filed for civil proceedings.",
+  "trap": "Dating institution from the final report rather than the charge sheet",
+  "rule": "8",
+  "chapter": "II",
+  "covers": [
+   "8-Explanation(1)(a)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 8-Explanation(1)(a)",
+  "rules_text": "Rule 8"
+ },
+ {
+  "id": "P-0027",
+  "q": "'Civil proceedings' in rule 8 has a narrow meaning. It means proceedings in respect of:",
+  "opts": [
+   "proceedings under the Contempt of Courts Act",
+   "any proceeding in a civil court, including appeals",
+   "a civil suit filed by the Government only",
+   "any civil suit touching the servant's service"
+  ],
+  "ans": "C",
+  "expl": "(C) a civil suit filed by the Government only. Explanation 4 confines the expression to suits filed by the Government\n(A) proceedings under the Contempt of Courts Act. — Contempt is not a civil suit filed by the Government\n(B) any proceeding in a civil court, including appeals. — The definition is confined to suits filed by the Government\n(D) any civil suit touching the servant's service. — A suit by a private party is outside the definition\n\nExplanation 4 to rule 8 provides that the expression civil proceedings means such proceedings in respect of a civil suit filed by the Government only. That is narrower than it sounds, because it excludes a suit brought against the Government by a private litigant, even where the subject matter touches the servant's service. The reason is that rule 8 exists to protect the public purse where the Government is pursuing a remedy, not to convert private litigation into a ground for withholding a pension. Criminal proceedings are defined separately in Explanation 1(b)(i) by reference to the complaint or police report.",
+  "trap": "Treating any civil litigation as civil proceedings under rule 8",
+  "rule": "8",
+  "chapter": "II",
+  "covers": [
+   "8-Explanation(4)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 8-Explanation(4)",
+  "rules_text": "Rule 8"
+ },
+ {
+  "id": "P-0028",
+  "q": "A Group 'A' pensioner wishes to take up commercial employment. He needs the previous sanction of the Government if he proposes to start:",
+  "opts": [
+   "at any time after retirement, whenever it begins",
+   "within six months of his retirement",
+   "within two years of his retirement",
+   "within one year of his retirement"
+  ],
+  "ans": "D",
+  "expl": "(D) within one year of his retirement. Rule 9(1) fixes the one-year window by reference to the date of retirement\n(A) at any time after retirement, whenever it begins. — The rule is confined to the first year\n(B) within six months of his retirement. — Six months is the election period under rule 4, a different provision\n(C) within two years of his retirement. — The window is one year, not two\n\nRule 9(1) requires a pensioner who was, immediately before retirement, a member of Central Service Group 'A' and who wishes to accept commercial employment before the expiry of one year from the date of retirement, to obtain the previous sanction of the Government, applying in Form 1. Two provisos matter: a servant already permitted to take up a particular commercial employment during leave preparatory to retirement or refused leave needs no further permission to continue it, and a servant may not negotiate for commercial employment during service without the prior permission of the administrative Ministry or Department, which is given only for special reasons.",
+  "trap": "Confusing the one-year window with the six-month election period in rule 4",
+  "rule": "9",
+  "chapter": "II",
+  "covers": [
+   "9(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 9(1)",
+  "rules_text": "Rule 9"
+ },
+ {
+  "id": "P-0029",
+  "q": "The Government grants permission under rule 9 subject to conditions the pensioner thinks unreasonable. He may represent against the conditions within:",
+  "opts": [
+   "thirty days of receiving the order",
+   "ninety days of receiving the order",
+   "one year from the date of retirement",
+   "fifteen days of receiving the order"
+  ],
+  "ans": "A",
+  "expl": "(A) thirty days of receiving the order. Rule 9(7) allows thirty days from receipt of the order\n(B) ninety days of receiving the order. — No ninety-day period appears in rule 9\n(C) one year from the date of retirement. — The one-year period governs when sanction is needed, not when a representation is made\n(D) fifteen days of receiving the order. — Fifteen days is the notice period in rule 7(3)(a)\n\nRule 9(7) gives an applicant whose permission is granted subject to conditions, or refused, thirty days from receipt of the order to make a representation, and allows the Government to pass such orders as it thinks fit. Its proviso protects the pensioner: no order other than one cancelling the condition or granting permission without conditions may be made without giving him an opportunity to show cause against the order proposed. So the representation cannot simply be rejected with no hearing: any outcome adverse to him must be preceded by a show-cause opportunity.",
+  "trap": "Assuming the representation can be rejected without a hearing",
+  "rule": "9",
+  "chapter": "II",
+  "covers": [
+   "9(7)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 9(7)",
+  "rules_text": "Rule 9"
+ },
+ {
+  "id": "P-0030",
+  "q": "A pensioner takes up commercial employment in the eighth month after retirement without sanction. The Government may:",
+  "opts": [
+   "prosecute him for a criminal offence under the rules, irrespective of the facts.",
+   "declare, for recorded reasons, that he is not entitled to the whole or part",
+   "recover from him a penalty equal to one full year's pension by way of fine",
+   "forfeit his gratuity in addition to the pension, in every such case."
+  ],
+  "ans": "B",
+  "expl": "(B) declare, for recorded reasons, that he is not entitled to the whole or part. Rule 9(8) authorises that declaration, after a show-cause opportunity\n(A) prosecute him for a criminal offence under the rules, irrespective of the facts. — Rule 9(8) is an administrative consequence, not a criminal one\n(C) recover from him a penalty equal to one full year's pension by way of fine. — The rule operates on entitlement, not by a fixed monetary penalty\n(D) forfeit his gratuity in addition to the pension, in every such case. — The rule speaks of pension, not gratuity\n\nRule 9(8) provides that where a pensioner takes up commercial employment within one year of retirement without prior permission, or breaches a condition of permission granted, the Government may by order in writing, for reasons recorded, declare that he shall not be entitled to the whole or such part of the pension, and for such periods, as may be specified. The first proviso requires an opportunity to show cause; the second requires the Government to have regard to his financial circumstances, the nature of and emoluments from the employment, and any other relevant factor. The sanction is therefore proportionate rather than automatic.",
+  "trap": "Assuming breach produces an automatic and total forfeiture",
+  "rule": "9",
+  "chapter": "II",
+  "covers": [
+   "9(8)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 9(8)",
+  "rules_text": "Rule 9"
+ },
+ {
+  "id": "P-0031",
+  "q": "Which of the following is NOT 'commercial employment' for the purposes of rule 9?",
+  "opts": [
+   "A partnership in a professional firm, in every such case.",
+   "A directorship of a company engaged in trading, irrespective of the facts.",
+   "Employment under a body corporate owned or controlled by the Central Government",
+   "Setting up practice as a consultant in matters relatable to official knowledge, as a matter of course."
+  ],
+  "ans": "C",
+  "expl": "(C) Employment under a body corporate owned or controlled by the Central Government. The Explanation expressly excludes such employment from the definition\n(A) A partnership in a professional firm, in every such case. — Partnership of such a firm is expressly included\n(B) A directorship of a company engaged in trading, irrespective of the facts. — A directorship is expressly included\n(D) Setting up practice as a consultant in matters relatable to official knowledge, as a matter of course. — This is the second limb of the definition\n\nThe Explanation to rule 9 defines commercial employment in two limbs. The first is employment in any capacity, including that of an agent, under a company, co-operative society, firm or individual engaged in trading, commercial, industrial, financial or professional business, and includes a directorship and a partnership, but expressly does not include employment under a body corporate wholly or substantially owned or controlled by the Central Government or a State Government. The second limb is setting up practice as an adviser or consultant in matters where the pensioner lacks professional qualifications and the work is relatable to his official knowledge, or where his position would give clients an unfair advantage, or where the work involves liaison with Government offices.",
+  "trap": "Reading the definition's exclusions as inclusions",
+  "rule": "9",
+  "chapter": "II",
+  "covers": [
+   "9-Explanation(a)(i)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 9-Explanation(a)(i)",
+  "rules_text": "Rule 9"
+ },
+ {
+  "id": "P-0032",
+  "q": "In deciding whether to permit commercial employment, the Government must consider whether the officer was privy to sensitive information during:",
+  "opts": [
+   "the last year of his service only",
+   "his entire service, however long",
+   "the last five years of his service before he laid down office",
+   "the last three years of his service"
+  ],
+  "ans": "D",
+  "expl": "(D) the last three years of his service. Rule 9(3)(b) fixes a three-year look-back\n(A) the last year of his service only. — One year is the window for sanction, not the look-back for sensitive information\n(B) his entire service, however long. — The clause is confined to the last three years\n(C) the last five years of his service before he laid down office. — The period is three years, not five\n\nRule 9(3) lists the factors to which the Government must have regard in granting or refusing permission. Clause (b) asks whether the officer has been privy to sensitive or strategic information in the last three years of his service which is directly related to the areas of interest or work of the organisation he proposes to join, or the areas in which he proposes to practise or consult. Clause (c) looks to conflict of interest between the policies of the office he held in those same three years and the interest represented by the organisation, with an Explanation that normal economic competition is not conflict of interest.",
+  "trap": "Extending the sensitive-information look-back to the whole of service",
+  "rule": "9",
+  "chapter": "II",
+  "covers": [
+   "9(3)(b)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 9(3)(b)",
+  "rules_text": "Rule 9"
+ },
+ {
+  "id": "P-0033",
+  "q": "Rule 10 governs a pensioner taking employment under a Government outside India. Its effect is that such employment:",
+  "opts": [
+   "requires sanction, and the pension may be withheld if taken without it",
+   "is freely permitted once the pension is sanctioned, irrespective of the facts.",
+   "is treated as foreign service for pension purposes",
+   "ends the pension from the date of the employment, in every such case."
+  ],
+  "ans": "A",
+  "expl": "(A) requires sanction, and the pension may be withheld if taken without it. Rule 10 puts foreign Government employment under sanction and attaches a pension consequence\n(B) is freely permitted once the pension is sanctioned, irrespective of the facts. — The rule imposes a sanction requirement\n(C) is treated as foreign service for pension purposes. — Foreign service is defined in rule 3(1)(j); rule 10 concerns employment under another Government\n(D) ends the pension from the date of the employment, in every such case. — The consequence is withholding, not automatic cessation\n\nRule 10 deals with a pensioner who takes employment under any Government outside India. Such employment requires the sanction of the Central Government, and where it is taken without that sanction the pension may be withheld. The rule is the counterpart, in the pension rules, of the general principle that a pensioner remains subject to a measure of control in his post-retirement dealings with foreign governments. It is distinct from rule 9, which is about commercial employment in the private sector within one year, and from the definition of foreign service in rule 3(1)(j), which concerns the source of a serving officer's pay.",
+  "trap": "Confusing employment under a foreign Government with foreign service",
+  "rule": "10",
+  "chapter": "II",
+  "covers": [
+   "10"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 10",
+  "rules_text": "Rule 10"
+ },
+ {
+  "id": "P-0034",
+  "q": "Qualifying service begins on the date the servant:",
+  "opts": [
+   "is confirmed in his first appointment",
+   "takes charge of the post he is first appointed to",
+   "attains the age of eighteen years, in every such case.",
+   "completes his first year of service"
+  ],
+  "ans": "B",
+  "expl": "(B) takes charge of the post he is first appointed to. Rule 11 fixes commencement at taking charge of the first post\n(A) is confirmed in his first appointment. — Confirmation is dealt with at rule 16, not as the starting point\n(C) attains the age of eighteen years, in every such case. — Age operates as an exclusion in the second proviso, not as the trigger\n(D) completes his first year of service. — No minimum period is needed to start the clock\n\nRule 11 provides that qualifying service commences from the date the servant takes charge of the post to which he is first appointed, whether substantively, in an officiating capacity or on a temporary basis. Two provisos qualify it: officiating or temporary service must be followed without interruption by substantive appointment, and service rendered before the age of eighteen does not count except where military service is counted for civil pension under rule 20. Commencement and confirmation are therefore different events, and rule 16 deals with the second.",
+  "trap": "Reading confirmation or probation into the commencement date",
+  "rule": "11",
+  "chapter": "III",
+  "covers": [
+   "11"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 11",
+  "rules_text": "Rule 11"
+ },
+ {
+  "id": "P-0035",
+  "q": "A servant held an officiating post for three years, resigned, and was reappointed substantively two years later. His officiating service:",
+  "opts": [
+   "qualifies in full, because it was officiating service of the required kind",
+   "qualifies at half, as interrupted service is halved",
+   "does not qualify: it was not followed by substantive appointment",
+   "qualifies if he produces a no-objection certificate"
+  ],
+  "ans": "C",
+  "expl": "(C) does not qualify: it was not followed by substantive appointment. The first proviso to rule 11 requires uninterrupted continuity\n(A) qualifies in full, because it was officiating service of the required kind. — Officiating service qualifies only on the continuity condition\n(B) qualifies at half, as interrupted service is halved. — The rules do not halve interrupted service; it either qualifies or does not\n(D) qualifies if he produces a no-objection certificate. — No certificate cures the break in continuity\n\nThe first proviso to rule 11 allows officiating or temporary service to count only where it is followed without interruption by substantive appointment in the same or another service or post. A break of two years between resignation and reappointment is an interruption, so the earlier service falls away. Where an interruption does occur, the remedy lies in rule 28, condonation of interruption, and not in reading a halving rule into rule 11 that the text does not contain.",
+  "trap": "Assuming interrupted service counts at a reduced rate",
+  "rule": "11",
+  "chapter": "III",
+  "covers": [
+   "11-prov-1"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 11-prov-1",
+  "rules_text": "Rule 11"
+ },
+ {
+  "id": "P-0036",
+  "q": "A servant's service book shows he took charge at age sixteen and a half and continued without a break. The service before he turned eighteen:",
+  "opts": [
+   "counts if he was confirmed before turning eighteen",
+   "counts from the date of his first increment, in every such case.",
+   "counts in full, because there was no interruption",
+   "is excluded, unless it is military service counted under rule 20"
+  ],
+  "ans": "D",
+  "expl": "(D) is excluded, unless it is military service counted under rule 20. The second proviso to rule 11 excludes pre-eighteen service with that single exception\n(A) counts if he was confirmed before turning eighteen. — Confirmation does not displace the age exclusion\n(B) counts from the date of his first increment, in every such case. — There is no such rule; age is the test\n(C) counts in full, because there was no interruption. — Continuity satisfies the first proviso but not the second\n\nThe second proviso to rule 11 is an absolute exclusion: service rendered before attaining the age of eighteen years shall not count, except in the cases of counting of military service for civil pension under rule 20. It is worth separating the two provisos in the mind, because they do different work. The first is about continuity and is satisfied by uninterrupted officiating or temporary service ending in substantive appointment. The second is about age and cannot be satisfied by continuity at all.",
+  "trap": "Assuming uninterrupted junior service must count",
+  "rule": "11",
+  "chapter": "III",
+  "covers": [
+   "11-prov-2"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 11-prov-2",
+  "rules_text": "Rule 11"
+ },
+ {
+  "id": "P-0037",
+  "q": "Service qualifies under rule 12 only if the servant's duties and pay are regulated:",
+  "opts": [
+   "by the Government, or under conditions determined by the Government",
+   "by the autonomous body that employs him, in every such case.",
+   "by any employer who pays from a Local Fund, irrespective of the facts.",
+   "by the terms of his contract, whatever those terms say"
+  ],
+  "ans": "A",
+  "expl": "(A) by the Government, or under conditions determined by the Government. Rule 12 requires that regulation by or under the Government\n(B) by the autonomous body that employs him, in every such case. — Autonomous body service is reached by rule 14, on conditions\n(C) by any employer who pays from a Local Fund, irrespective of the facts. — Paying from a Local Fund is part of the Explanation's definition, not the test in the rule\n(D) by the terms of his contract, whatever those terms say. — Contract employment is excluded by rule 2(g) unless the contract provides otherwise\n\nRule 12 lays down the basic condition of qualification: the service of a Government servant shall not qualify unless his duties and pay are regulated by the Government, or under conditions determined by the Government. Its Explanation then defines service as service under the Government and paid by that Government from the Consolidated Fund of India or a Local Fund administered by that Government, and excludes service in an establishment without a non-contributory pension scheme, unless the Government treats that service as qualifying. The rule is the gate through which every counting rule that follows has to pass.",
+  "trap": "Treating the payment source as the whole test",
+  "rule": "12",
+  "chapter": "III",
+  "covers": [
+   "12"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 12",
+  "rules_text": "Rule 12"
+ },
+ {
+  "id": "P-0038",
+  "q": "A State Government servant appointed on 1 June 2001 is permanently transferred to a post to which these rules apply. His continuous State service qualifies:",
+  "opts": [
+   "only from the date of his transfer, in every such case.",
+   "in full, because he was in a pensionable establishment before the cut-off",
+   "only if he exercises an option under rule 4, irrespective of the facts.",
+   "not at all, because State service is outside these rules, as a matter of course."
+  ],
+  "ans": "B",
+  "expl": "(B) in full, because he was in a pensionable establishment before the cut-off. Rule 13(1) counts continuous State service on a permanent transfer, subject to the continuity proviso\n(A) only from the date of his transfer, in every such case. — That would make rule 13 pointless; the rule counts the State service itself\n(C) only if he exercises an option under rule 4, irrespective of the facts. — The rule 4 election concerns which pension rules govern, not whether the service counts\n(D) not at all, because State service is outside these rules, as a matter of course. — Rule 13 is the express provision that brings it in\n\nRule 13(1) deals with a servant belonging to a State Government who was initially appointed in a pensionable establishment of that Government on or before 31 December 2003 and is permanently transferred to a service or post to which these rules apply. The continuous service rendered under the State Government, in an officiating, temporary or substantive capacity, qualifies. The proviso insists that officiating or temporary service be followed without interruption by substantive appointment in the State Government or the Central Government, which is the same continuity requirement as rule 11.",
+  "trap": "Assuming service must be under the Central Government to count at all",
+  "rule": "13",
+  "chapter": "III",
+  "covers": [
+   "13(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 13(1)",
+  "rules_text": "Rule 13"
+ },
+ {
+  "id": "P-0039",
+  "q": "A State servant appointed after 2003 joins the Centre after resigning, with proper permission. Rule 13(2) makes his State service qualify:",
+  "opts": [
+   "only if he is later confirmed in the Central post, irrespective of the facts.",
+   "never, because he resigned from the State, in every such case.",
+   "subject to the continuity condition, the cut-off in sub-rule (1) not applying",
+   "on the same terms as sub-rule (1), including the 2003 cut-off"
+  ],
+  "ans": "C",
+  "expl": "(C) subject to the continuity condition, the cut-off in sub-rule (1) not applying. Sub-rule (2) omits the 2003 cut-off that governs sub-rule (1)\n(A) only if he is later confirmed in the Central post, irrespective of the facts. — For State service the continuity must be by substantive appointment in either Government\n(B) never, because he resigned from the State, in every such case. — Resignation with proper permission is the very case sub-rule (2) covers\n(D) on the same terms as sub-rule (1), including the 2003 cut-off. — Sub-rule (2) does not repeat the cut-off\n\nRule 13(2) addresses a different route from sub-rule (1). Here the State servant is appointed, with proper permission, to a Central post after acceptance of his resignation from the State service. His continuous State service in an officiating, temporary or substantive capacity qualifies, provided that officiating or temporary service was followed without interruption by substantive appointment in the State or the Central Government. The Explanation defines proper permission in the same way as rule 6: the application was made with the previous permission of the State Government and the order records that he is resigning to join with that permission.",
+  "trap": "Importing the sub-rule (1) cut-off into sub-rule (2)",
+  "rule": "13",
+  "chapter": "III",
+  "covers": [
+   "13(2)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 13(2)",
+  "rules_text": "Rule 13"
+ },
+ {
+  "id": "P-0040",
+  "q": "Service in an autonomous body counts under rule 14 only if the body discharges its pension liability. It does so by:",
+  "opts": [
+   "issuing a certificate that it has no pension scheme",
+   "transferring the service book to the Central Government",
+   "undertaking to pay the pension when the servant retires from the Centre",
+   "paying a lump sum determined with reference to the commutation table"
+  ],
+  "ans": "D",
+  "expl": "(D) paying a lump sum determined with reference to the commutation table. Rule 14(1)(c) and (d) require the lump sum, valued on the commutation table\n(A) issuing a certificate that it has no pension scheme. — The body must have a non-contributory scheme similar to these rules\n(B) transferring the service book to the Central Government. — Transfer of records is not discharge of a liability\n(C) undertaking to pay the pension when the servant retires from the Centre. — The liability must be discharged, by a lump sum, at the point of resignation\n\nRule 14(1) allows service in an autonomous body to qualify where the servant was appointed there on or before 31 December 2003, the body has a non-contributory pension scheme similar to these rules, and he is later appointed to the Central Government with proper permission after resignation. Four conditions apply: his officiating or temporary Central appointment must be followed without interruption by substantive appointment; he must not be drawing a separate pension from the body; the body must discharge the liability by paying a lump sum for the service; and that lump sum must be determined with reference to the commutation table in the CCS (Commutation of Pension) Rules, 1981.",
+  "trap": "Thinking the body's pension liability can be left outstanding",
+  "rule": "14",
+  "chapter": "III",
+  "covers": [
+   "14(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 14(1)",
+  "rules_text": "Rule 14"
+ },
+ {
+  "id": "P-0041",
+  "q": "Service on probation counts as qualifying service:",
+  "opts": [
+   "when it is followed by confirmation in the same or another post",
+   "only if the probation period is expressly mentioned in the appointment order",
+   "never, because probation is a trial period",
+   "from the first day, whether or not he is confirmed"
+  ],
+  "ans": "A",
+  "expl": "(A) when it is followed by confirmation in the same or another post. Rule 16 counts probation that is followed by confirmation\n(B) only if the probation period is expressly mentioned in the appointment order. — The rule turns on the outcome, not the wording of the order\n(C) never, because probation is a trial period. — Rule 16 exists because it does count\n(D) from the first day, whether or not he is confirmed. — The rule makes confirmation the condition\n\nRule 16 provides that service rendered on probation counts as qualifying service when it is followed by confirmation in the same or another service or post. The condition is confirmation, so a probationer who is discharged, or who resigns before confirmation, does not carry that period into his pensionable service. The rule sits alongside rule 11 rather than inside it: rule 11 fixes when service starts, rule 16 settles whether the probationary stretch of it is reckonable at all.",
+  "trap": "Counting probation that did not end in confirmation",
+  "rule": "16",
+  "chapter": "III",
+  "covers": [
+   "16"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 16",
+  "rules_text": "Rule 16"
+ },
+ {
+  "id": "P-0042",
+  "q": "Apprenticeship training counts as qualifying service:",
+  "opts": [
+   "never, under any circumstances",
+   "only where the rules or a general order so provide",
+   "always, because the apprentice is on the establishment",
+   "only if the apprentice is later confirmed"
+  ],
+  "ans": "B",
+  "expl": "(B) only where the rules or a general order so provide. Rule 17 does not count apprenticeship as a matter of course\n(A) never, under any circumstances. — The rule permits counting where it is so provided\n(C) always, because the apprentice is on the establishment. — Being on the establishment is not the test\n(D) only if the apprentice is later confirmed. — Confirmation is the test in rule 16, for probation, not here\n\nRule 17 deals with service as an apprentice and does not count it automatically. The point worth carrying is the contrast with rule 16: probation is counted once it is followed by confirmation, whereas apprenticeship counts only where the rules or a general or special order provide for it. That asymmetry reflects the difference between a trial appointment to a post and a period of training that may not be employment at all.",
+  "trap": "Treating apprenticeship and probation as governed by the same test",
+  "rule": "17",
+  "chapter": "III",
+  "covers": [
+   "17"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 17",
+  "rules_text": "Rule 17"
+ },
+ {
+  "id": "P-0043",
+  "q": "A pensioner is re-employed in a civil post. Under rule 19 his previous civil service:",
+  "opts": [
+   "is counted only if he refunds his entire pension",
+   "is counted automatically, without any condition, irrespective of the facts.",
+   "may be counted for pension on final retirement, on the rule's conditions",
+   "is never counted a second time, in every such case."
+  ],
+  "ans": "C",
+  "expl": "(C) may be counted for pension on final retirement, on the rule's conditions. Rule 19 permits counting pre-retirement civil service for a re-employed servant\n(A) is counted only if he refunds his entire pension. — The refund is of gratuity in the circumstances the rule specifies, not the whole pension\n(B) is counted automatically, without any condition, irrespective of the facts. — The rule imposes conditions, including an option and refund\n(D) is never counted a second time, in every such case. — Rule 6(2) is expressly subject to rule 19, which permits the counting\n\nRule 19 is the provision that makes re-employment coherent with rule 6. Rule 6(2) bars a separate pension for the period of re-employment, but says 'except as provided in rule 19 or rule 20'. Rule 19 then allows the pre-retirement civil service to be counted for pension on final retirement, on conditions that include the exercise of an option and the refund of gratuity already received. The structure is that a re-employed pensioner can end with one pension calculated on the whole of his qualifying service, rather than two.",
+  "trap": "Reading rule 6 in isolation from the rule 19 exception",
+  "rule": "19",
+  "chapter": "III",
+  "covers": [
+   "19(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 19(1)",
+  "rules_text": "Rule 19"
+ },
+ {
+  "id": "P-0044",
+  "q": "Military service rendered before civil employment is counted for civil pension:",
+  "opts": [
+   "never, because the two services are separate, in every such case.",
+   "only if the military service exceeded ten years, irrespective of the facts.",
+   "automatically, because military service is always pensionable service",
+   "on the conditions rule 20 sets, including the absence of a military pension"
+  ],
+  "ans": "D",
+  "expl": "(D) on the conditions rule 20 sets, including the absence of a military pension. Rule 20 permits counting subject to its conditions\n(A) never, because the two services are separate, in every such case. — Rule 20 is the provision that joins them\n(B) only if the military service exceeded ten years, irrespective of the facts. — No such threshold appears in rule 20\n(C) automatically, because military service is always pensionable service. — The rule is conditional, not automatic\n\nRule 20 permits military service rendered before civil employment to be counted for civil pension, on conditions. It is the second of the two exceptions carved out of the rule 6 bar, and it also supplies the single exception to the pre-eighteen exclusion in rule 11, since military service counted for civil pension under rule 20 is expressly allowed to count even where rendered before that age. The conditions are what make the rule workable: a servant cannot take a military pension and count the same years for civil pension as though nothing had been paid for them.",
+  "trap": "Assuming the pre-eighteen bar has no exception",
+  "rule": "20",
+  "chapter": "III",
+  "covers": [
+   "20"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 20",
+  "rules_text": "Rule 20"
+ },
+ {
+  "id": "P-0045",
+  "q": "All extraordinary leave granted on medical certificate counts as qualifying service:",
+  "opts": [
+   "without any order, but other extraordinary leave needs a direction",
+   "only if the appointing authority directs in every case",
+   "never, because extraordinary leave is without pay, irrespective of the facts.",
+   "only if it does not exceed three months, in every such case."
+  ],
+  "ans": "A",
+  "expl": "(A) without any order, but other extraordinary leave needs a direction. Rule 21 counts medical-certificate EOL of its own force; the proviso governs the rest\n(B) only if the appointing authority directs in every case. — That requirement applies to EOL other than on medical certificate\n(C) never, because extraordinary leave is without pay, irrespective of the facts. — The rule counts it in the stated circumstances\n(D) only if it does not exceed three months, in every such case. — No such limit appears in rule 21\n\nRule 21 counts all leave during service for which leave salary is payable, and all extraordinary leave granted on medical certificate, without any order. Its proviso reaches the remaining kind of extraordinary leave: the appointing authority may, at the time of granting it, direct that it count as qualifying service where the servant could not join or rejoin duty because of civil commotion, or was prosecuting higher scientific and technical studies. The distinction between leave with salary, medical EOL and other EOL is therefore the whole of the rule.",
+  "trap": "Treating every kind of extraordinary leave alike",
+  "rule": "21",
+  "chapter": "III",
+  "covers": [
+   "21"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 21",
+  "rules_text": "Rule 21"
+ },
+ {
+  "id": "P-0046",
+  "q": "Periods spent on training count as qualifying service:",
+  "opts": [
+   "never, because he is not discharging the duties of his post",
+   "where it is in the Government's interest and the orders so provide",
+   "only if the training was outside India, in every such case.",
+   "always, since the servant remains on the establishment, irrespective of the facts."
+  ],
+  "ans": "B",
+  "expl": "(B) where it is in the Government's interest and the orders so provide. Rule 22 makes the counting depend on the character of the training\n(A) never, because he is not discharging the duties of his post. — The rule permits counting in the stated circumstances\n(C) only if the training was outside India, in every such case. — Location is not the test\n(D) always, since the servant remains on the establishment, irrespective of the facts. — Remaining on the establishment is not the test in rule 22\n\nRule 22 deals with periods spent on training. The provision turns on the character of the training rather than on the servant's nominal position: training undertaken in the interest of the Government is capable of counting, and training a servant arranges for his own advancement is not. The rule is grouped with rules 21 and 23 because all three deal with periods when the servant is not at his desk but the period is still capable of being reckoned, and each fixes its own conditions for that.",
+  "trap": "Assuming a servant absent on training necessarily loses the period",
+  "rule": "22",
+  "chapter": "III",
+  "covers": [
+   "22"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 22",
+  "rules_text": "Rule 22"
+ },
+ {
+  "id": "P-0047",
+  "q": "A suspension period is treated under rule 23 in the light of:",
+  "opts": [
+   "the discretion of the Head of Office alone, irrespective of the facts.",
+   "the length of the suspension, whatever its result",
+   "the outcome of proceedings, counting only if he is exonerated",
+   "nothing: suspension never counts, in every such case."
+  ],
+  "ans": "C",
+  "expl": "(C) the outcome of proceedings, counting only if he is exonerated. Rule 23 makes the treatment of suspension depend on the result\n(A) the discretion of the Head of Office alone, irrespective of the facts. — The rule ties the outcome to the result of the proceedings\n(B) the length of the suspension, whatever its result. — Length is not the test the rule applies\n(D) nothing: suspension never counts, in every such case. — A servant who is exonerated is not penalised for the period\n\nRule 23 deals with periods of suspension. The governing principle is that a period of suspension is not automatically a period of qualifying service or automatically a gap: it is reckoned by reference to how the proceedings ended. A servant who is fully exonerated should not lose pensionable service for a period during which the Government kept him away from his post, while one who is visited with a penalty that carries its own service consequence is dealt with under that penalty. The rule is grouped with rules 21 and 22 for that reason.",
+  "trap": "Treating every suspension period as a break in service",
+  "rule": "23",
+  "chapter": "III",
+  "covers": [
+   "23"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 23",
+  "rules_text": "Rule 23"
+ },
+ {
+  "id": "P-0048",
+  "q": "On dismissal or removal from service, the servant's service:",
+  "opts": [
+   "continues to count for any pension already earned, irrespective of the facts.",
+   "is halved, as a permanent penalty, in every such case.",
+   "is unaffected, the penalty being the loss of the post",
+   "is forfeited, which is why dismissal and removal carry pension consequences"
+  ],
+  "ans": "D",
+  "expl": "(D) is forfeited, which is why dismissal and removal carry pension consequences. Rule 24 forfeits service on dismissal or removal\n(A) continues to count for any pension already earned, irrespective of the facts. — Forfeiture removes the qualifying service\n(B) is halved, as a permanent penalty, in every such case. — The rule forfeits rather than halves\n(C) is unaffected, the penalty being the loss of the post. — The rule is the provision that adds the pension consequence\n\nRule 24 provides for the forfeiture of service on dismissal or removal. It is the provision that gives dismissal and removal their pension significance, and it explains why a servant so dealt with cannot point to the years before the penalty as though nothing had happened. The rule sits in Chapter III with the counting rules because the question whether a period counts is answered here just as much as in rules 16 to 23. Compare rule 25, which deals with counting past service on reinstatement.",
+  "trap": "Assuming the penalty touches only the post and not the service",
+  "rule": "24",
+  "chapter": "III",
+  "covers": [
+   "24"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 24",
+  "rules_text": "Rule 24"
+ },
+ {
+  "id": "P-0049",
+  "q": "A servant who was dismissed and later reinstated has his past service counted:",
+  "opts": [
+   "on the terms rule 25 provides, the reinstatement order governing",
+   "only if he repaid the whole of his pay for the period",
+   "never, because rule 24 forfeited it for good, in every such case.",
+   "automatically in full, because the dismissal was undone"
+  ],
+  "ans": "A",
+  "expl": "(A) on the terms rule 25 provides, the reinstatement order governing. Rule 25 deals with counting past service after reinstatement\n(B) only if he repaid the whole of his pay for the period. — Repayment of pay is not the test in rule 25\n(C) never, because rule 24 forfeited it for good, in every such case. — Rule 25 is the provision that allows counting on reinstatement\n(D) automatically in full, because the dismissal was undone. — Reinstatement does not by itself restore every pension consequence\n\nRule 25 deals with the counting of past service on reinstatement. Rule 24 forfeits service on dismissal or removal, so a servant who is later reinstated needs a provision that can restore the reckoning, and rule 25 is that provision. What it counts, and on what terms, depends on the order of reinstatement, which may restore the service in whole or in part, or on specified conditions. The pair of rules is a good example of why the forfeiture rules have to be read together rather than in isolation.",
+  "trap": "Reading rule 24 as the last word on a dismissed servant's service",
+  "rule": "25",
+  "chapter": "III",
+  "covers": [
+   "25"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 25",
+  "rules_text": "Rule 25"
+ },
+ {
+  "id": "P-0050",
+  "q": "On resignation from service, the servant's service is:",
+  "opts": [
+   "preserved in full for any later appointment",
+   "forfeited, which is the general rule subject to exceptions",
+   "counted at half, in every such case.",
+   "preserved if he gave three months' notice, irrespective of the facts."
+  ],
+  "ans": "B",
+  "expl": "(B) forfeited, which is the general rule subject to exceptions. Rule 26 forfeits service on resignation, subject to its stated exceptions\n(A) preserved in full for any later appointment. — Forfeiture is the general rule, not preservation\n(C) counted at half, in every such case. — The rule forfeits rather than halves\n(D) preserved if he gave three months' notice, irrespective of the facts. — Notice affects the manner of leaving, not the forfeiture rule\n\nRule 26 provides for the forfeiture of service on resignation. It is the counterpart of rule 24: both dismissal and resignation extinguish the reckoning, but for different reasons, one punitive and one voluntary. Rule 26 carries its own exceptions, which is why a resignation accepted to take up another appointment with proper permission can be treated differently, as rules 13 and 14 illustrate. Reading rule 26 as absolute would make those counting provisions impossible to operate.",
+  "trap": "Assuming resignation and retirement have the same pension effect",
+  "rule": "26",
+  "chapter": "III",
+  "covers": [
+   "26"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 26",
+  "rules_text": "Rule 26"
+ },
+ {
+  "id": "P-0051",
+  "q": "An interruption in service affects qualifying service under rule 27:",
+  "opts": [
+   "by halving the service either side of it, irrespective of the facts.",
+   "not at all, because the servant was reappointed",
+   "by breaking the continuity, unless the interruption is condoned",
+   "only if the break exceeded one year, in every such case."
+  ],
+  "ans": "C",
+  "expl": "(C) by breaking the continuity, unless the interruption is condoned. Rule 27 states the effect of an interruption and points to condonation\n(A) by halving the service either side of it, irrespective of the facts. — There is no halving rule in the rules\n(B) not at all, because the servant was reappointed. — The rule exists because interruption does matter\n(D) only if the break exceeded one year, in every such case. — The rule does not set a threshold at one year\n\nRule 27 states the effect of an interruption in service. Because several counting rules, including rules 11 and 13, depend on service being followed without interruption, the consequence of a break is that the earlier period stops counting as continuous. The rules then provide a remedy rather than leaving the servant without one: rule 28 permits condonation of an interruption, on the terms it sets. Rules 27 and 28 are therefore read as a pair, and a question that asks about a break is usually also asking whether condonation was sought.",
+  "trap": "Treating a break as fatal without considering condonation",
+  "rule": "27",
+  "chapter": "III",
+  "covers": [
+   "27"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 27",
+  "rules_text": "Rule 27"
+ },
+ {
+  "id": "P-0052",
+  "q": "Condonation of an interruption in service under rule 28 is granted by:",
+  "opts": [
+   "the court, on a writ petition, in every such case.",
+   "the servant himself, by an application, irrespective of the facts.",
+   "the Accounts Officer, as part of the pension calculation, as a matter of course.",
+   "the authority the rule specifies, on being satisfied of the grounds"
+  ],
+  "ans": "D",
+  "expl": "(D) the authority the rule specifies, on being satisfied of the grounds. Rule 28 vests the power in the specified authority on stated grounds\n(A) the court, on a writ petition, in every such case. — Condonation is an administrative act under the rules\n(B) the servant himself, by an application, irrespective of the facts. — An application may be made, but the authority grants it\n(C) the Accounts Officer, as part of the pension calculation, as a matter of course. — The Accounts Officer computes pension; condonation is not his function\n\nRule 28 permits condonation of an interruption in service. It matters because rule 27 makes an interruption break continuity, and several counting provisions depend on continuity: officiating or temporary service counts only if followed without interruption by substantive appointment. Condonation restores the position where the interruption is capable of being excused. The audit of a pension case therefore asks two questions in sequence, whether there was an interruption, and if so whether it was condoned.",
+  "trap": "Answering a break-in-service question without reaching condonation",
+  "rule": "28",
+  "chapter": "III",
+  "covers": [
+   "28"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 28",
+  "rules_text": "Rule 28"
+ },
+ {
+  "id": "P-0053",
+  "q": "Deputation to the United Nations or another international organisation is dealt with in rule 29, which:",
+  "opts": [
+   "sets out when the period counts as qualifying service",
+   "leaves the matter to the organisation concerned",
+   "bars such deputation altogether",
+   "treats the period as foreign service under rule 3(1)(j) in every case"
+  ],
+  "ans": "A",
+  "expl": "(A) sets out when the period counts as qualifying service. Rule 29 governs the reckoning of such deputation\n(B) leaves the matter to the organisation concerned. — The rules govern their own servants' pension\n(C) bars such deputation altogether. — The rule regulates the reckoning rather than prohibiting the deputation\n(D) treats the period as foreign service under rule 3(1)(j) in every case. — Foreign service is defined by the source of pay; rule 29 deals with this class specifically\n\nRule 29 addresses deputation to the United Nations and other organisations. It is a specific provision sitting inside the general counting scheme, and it is the reason a question about an international deputation should be answered from rule 29 rather than from the definition of foreign service in rule 3(1)(j). The definition tells you what foreign service is; rule 29 tells you what happens to qualifying service when a servant is deputed to an international body.",
+  "trap": "Answering from the definition of foreign service instead of rule 29",
+  "rule": "29",
+  "chapter": "III",
+  "covers": [
+   "29"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 29",
+  "rules_text": "Rule 29"
+ },
+ {
+  "id": "P-0054",
+  "q": "Rule 30 requires periodic verification of qualifying service, which exists to:",
+  "opts": [
+   "fix the date of retirement, in every such case.",
+   "catch gaps and errors while records and witnesses are still available",
+   "transfer the service book to the Accounts Officer",
+   "calculate the pension in advance of retirement, irrespective of the facts."
+  ],
+  "ans": "B",
+  "expl": "(B) catch gaps and errors while records and witnesses are still available. Rule 30 requires verification at intervals, before the case is built\n(A) fix the date of retirement, in every such case. — The date of retirement is dealt with at rule 70\n(C) transfer the service book to the Accounts Officer. — Rule 30 verifies the service; forwarding the case is dealt with at rule 60\n(D) calculate the pension in advance of retirement, irrespective of the facts. — The calculation is done at authorisation, not by this rule\n\nRule 30 provides for periodic verification of qualifying service. Its practical importance is that it moves the discovery of a gap or an error forward, to a time when the service book, the office records and colleagues who can speak to a period are still available. Rule 73 addresses what happens when service records are in fact incomplete, which is the situation periodic verification is designed to prevent. A question that asks why verification happens periodically, rather than once at retirement, is asking for that rationale.",
+  "trap": "Treating verification as a formality rather than an evidential safeguard",
+  "rule": "30",
+  "chapter": "III",
+  "covers": [
+   "30"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 30",
+  "rules_text": "Rule 30"
+ },
+ {
+  "id": "P-0055",
+  "q": "A servant retires on superannuation with 28 years' qualifying service. His emoluments are ₹72,000 and his average emoluments ₹74,000. His monthly pension is:",
+  "opts": [
+   "₹36,000",
+   "₹74,000",
+   "₹37,000",
+   "₹1,25,000"
+  ],
+  "ans": "C",
+  "expl": "(C) ₹37,000. Fifty per cent of the more beneficial figure, which is the average emoluments of ₹74,000\n(A) ₹36,000. — That is 50 per cent of last emoluments, which is the lower of the two numbers here\n(B) ₹74,000. — Pension is a percentage of emoluments, not the emoluments themselves\n(D) ₹1,25,000. — That is the ceiling, which caps a figure that reaches it\n\nRule 44(1) grants a pension calculated at 50 per cent of emoluments or of average emoluments, whichever is more beneficial to the servant, subject to a floor of ₹9,000 and a ceiling of ₹1,25,000 a month. Here 50 per cent of emoluments is ₹36,000 and 50 per cent of average emoluments is ₹37,000, so the pension is ₹37,000. The election is not a matter of choice for the servant: the rule directs that the more beneficial figure be taken, so the calculation must always be done both ways.",
+  "trap": "Taking the last emoluments because they were the last drawn",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(1)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0056",
+  "q": "A servant retires with 22 years' qualifying service and emoluments of ₹2,40,000. His monthly pension is:",
+  "opts": [
+   "₹9,000, the minimum",
+   "₹2,40,000",
+   "₹1,20,000, being fifty per cent",
+   "₹1,25,000, the ceiling"
+  ],
+  "ans": "D",
+  "expl": "(D) ₹1,25,000, the ceiling. Fifty per cent would be ₹1,20,000 here only if the figure were lower; the ceiling is the cap on the uncapped entitlement\n(A) ₹9,000, the minimum. — The minimum applies only where the calculation falls below it\n(B) ₹2,40,000. — Pension is a percentage of emoluments, not the emoluments\n(C) ₹1,20,000, being fifty per cent. — Fifty per cent of ₹2,40,000 is ₹1,20,000, which is below the ceiling and is the correct figure\n\nRule 44(1) caps pension at ₹1,25,000 a month. Where 50 per cent of emoluments or of average emoluments exceeds that figure, the pension is the ceiling; where it falls below, the figure governs. A candidate who sees a large emolument figure and reaches for the ceiling will be caught when the calculation produces a number below it, as here: 50 per cent of ₹2,40,000 is ₹1,20,000, which is under the cap, so ₹1,20,000 is the answer.",
+  "trap": "Applying the ceiling as though it were the rate",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(1)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0057",
+  "q": "Pension under rule 44(1) can be sanctioned only to a servant who has completed qualifying service of at least:",
+  "opts": [
+   "ten years",
+   "fifteen years",
+   "five years",
+   "twenty years"
+  ],
+  "ans": "A",
+  "expl": "(A) ten years. Rule 44(1) requires ten years for pension\n(B) fifteen years. — No such threshold appears in rule 44\n(C) five years. — Five years is the threshold for retirement gratuity under rule 45(1)(a)\n(D) twenty years. — Twenty years is the qualifying service for voluntary retirement under rule 43\n\nRule 44(1) makes a servant eligible for pension on completing a qualifying service of not less than ten years. Below that threshold rule 44(2) provides a service gratuity instead, calculated at half a month's emoluments for every completed six-monthly period of service. Three thresholds in these rules are easily confused and should be kept apart: five years for retirement gratuity under rule 45(1)(a), ten years for pension under rule 44(1), and twenty years for retirement on completion of twenty years' qualifying service under rule 43.",
+  "trap": "Confusing the ten-year pension threshold with the five-year gratuity threshold",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(1)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0058",
+  "q": "A servant retires under rule 34 with 7 years' qualifying service. He is entitled to:",
+  "opts": [
+   "both pension and gratuity, in every such case.",
+   "service gratuity, at half a month's emoluments per six-monthly period",
+   "nothing, because he did not complete ten years, as a matter of course.",
+   "pension at fifty per cent of emoluments, irrespective of the facts."
+  ],
+  "ans": "B",
+  "expl": "(B) service gratuity, at half a month's emoluments per six-monthly period. Rule 44(2) substitutes service gratuity where pension is not earned\n(A) both pension and gratuity, in every such case. — The two are alternatives under sub-rules (1) and (2)\n(C) nothing, because he did not complete ten years, as a matter of course. — Service gratuity exists precisely for the short-service case\n(D) pension at fifty per cent of emoluments, irrespective of the facts. — Pension needs ten years, so seven is short\n\nRule 44(2) provides that a servant who retires under one of the rules referred to in sub-rule (1) but has not become eligible for pension shall be eligible instead for a service gratuity, calculated at half a month's emoluments for every completed six-monthly period of qualifying service. The two sub-rules are alternatives, not cumulative: a servant with ten years or more gets pension, and one with less gets service gratuity. That is why the ten-year line matters so much in practice.",
+  "trap": "Assuming a short-service retirement produces nothing",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(2)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(2)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0059",
+  "q": "A servant with 7 years and 4 months' qualifying service retires. For service gratuity under rule 44(2), the number of completed six-monthly periods is:",
+  "opts": [
+   "14 periods",
+   "7 periods",
+   "15 periods",
+   "16 periods"
+  ],
+  "ans": "C",
+  "expl": "(C) 15 periods. Seven years is 14 periods and the extra four months rounds up to one more under rule 45(4)\n(A) 14 periods. — Four months is three months or more, so rule 45(4) adds a period to the 14\n(B) 7 periods. — That counts years, not six-monthly periods\n(D) 16 periods. — That would need the four months to complete two periods, which it does not\n\nRule 44(2) calculates service gratuity at half a month's emoluments for every completed six-monthly period of qualifying service. Rule 45(4) supplies the rounding rule for gratuity generally: a fraction of a year equal to three months or more is treated as a completed six-monthly period. Seven years yields 14 periods, and the remaining four months, being three months or more, yields one more, so the count is 15. The arithmetic is deliberately tested because a candidate who forgets the rounding loses a half-month of emoluments.",
+  "trap": "Forgetting the three-month rounding in sub-rule (4)",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(2)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(2)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0060",
+  "q": "A servant with 18 years' qualifying service is compulsorily retired. His compulsory retirement pension is:",
+  "opts": [
+   "the full superannuation pension in every case, in every such case.",
+   "service gratuity, because he was compulsorily retired",
+   "half the superannuation pension in every case",
+   "such portion of the superannuation pension as is sanctioned"
+  ],
+  "ans": "D",
+  "expl": "(D) such portion of the superannuation pension as is sanctioned. Rule 44(4)(a) makes it a proportion of the superannuation pension\n(A) the full superannuation pension in every case, in every such case. — The rule makes it a portion fixed by the competent authority\n(B) service gratuity, because he was compulsorily retired. — Service gratuity applies below ten years; he has eighteen\n(C) half the superannuation pension in every case. — The rule does not fix the proportion at a half\n\nRule 44(4)(a) deals with a servant compulsorily retired after completing qualifying service of not less than ten years who has become eligible for compulsory retirement pension under rule 40. The amount of that pension is such portion or percentage of the superannuation pension calculated under sub-rule (1) as the competent authority may sanction under rule 40. The proportion is therefore a matter for the sanctioning authority and not a fixed figure, which is why a question asking for 'the' percentage has no single answer in the rules.",
+  "trap": "Assuming compulsory retirement carries a fixed fraction of pension",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(4)(a)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(4)(a)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0061",
+  "q": "A servant with 14 years' service is dismissed and sanctioned a compassionate allowance. Its amount is:",
+  "opts": [
+   "a portion of the pension he would have earned, as rule 41 sanctions",
+   "service gratuity under sub-rule (2), in every such case.",
+   "nothing, because dismissal forfeits all benefits, irrespective of the facts.",
+   "the full pension he would have got on superannuation"
+  ],
+  "ans": "A",
+  "expl": "(A) a portion of the pension he would have earned, as rule 41 sanctions. Rule 44(5)(a) measures the allowance against the pension he would have earned\n(B) service gratuity under sub-rule (2), in every such case. — Sub-rule (5)(b) uses the gratuity measure only below ten years\n(C) nothing, because dismissal forfeits all benefits, irrespective of the facts. — Rule 41 provides the compassionate allowance precisely for this case\n(D) the full pension he would have got on superannuation. — The rule makes it a portion of that pension, not the whole\n\nRule 44(5)(a) provides that where a servant is dismissed or removed after completing qualifying service of not less than ten years and is sanctioned a compassionate allowance under rule 41, the amount is such portion or percentage of the pension which would have been admissible had he retired on superannuation as the competent authority may sanction under rule 41. Rule 24 forfeits the service for ordinary pension purposes, and rule 41 with rule 44(5) is the mechanism by which a long-serving servant who is dismissed still receives something.",
+  "trap": "Reading rule 24's forfeiture as leaving nothing at all",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(5)(a)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(5)(a)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0062",
+  "q": "A servant retires with 30 years' qualifying service and emoluments of ₹60,000. His retirement gratuity is:",
+  "opts": [
+   "₹3,60,000, being six times emoluments",
+   "capped at 16½ times his emoluments",
+   "thirty times emoluments, being one month per year",
+   "₹4,50,000, being 30 × ¼ × emoluments"
+  ],
+  "ans": "B",
+  "expl": "(B) capped at 16½ times his emoluments. Sixty half-yearly periods at a quarter each would far exceed the 16½ times cap\n(A) ₹3,60,000, being six times emoluments. — Six times is a death gratuity rate for one to five years' service\n(C) thirty times emoluments, being one month per year. — The rule uses a quarter per six-monthly period, not a month per year\n(D) ₹4,50,000, being 30 × ¼ × emoluments. — That is 7½ times emoluments and is below the true figure; the quarter-per-period calculation gives 15 times\n\nRule 45(1)(a) grants retirement gratuity equal to one-fourth of emoluments for each completed six-monthly period of qualifying service, subject to a maximum of 16½ times the emoluments. Thirty years is 60 six-monthly periods, and a quarter of emoluments for each gives 15 times the emoluments, which is under the cap. A servant with 33 years or more would reach the 16½ times ceiling, because 66 quarters is 16½. The cap is expressed as a multiple of emoluments, not as a rupee figure, and that is what makes it durable across pay revisions.",
+  "trap": "Applying the maximum without first computing the quarter-per-period figure",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(1)(a)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(1)(a)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0063",
+  "q": "Retirement gratuity under rule 45(1)(a) is available only to a servant who has completed qualifying service of at least:",
+  "opts": [
+   "ten years",
+   "one year",
+   "five years",
+   "twenty years"
+  ],
+  "ans": "C",
+  "expl": "(C) five years. Rule 45(1)(a) requires five years and eligibility for service gratuity or pension\n(A) ten years. — Ten years is the pension threshold in rule 44(1)\n(B) one year. — One year is a death gratuity band, not the retirement gratuity threshold\n(D) twenty years. — Twenty years is the voluntary retirement threshold under rule 43\n\nRule 45(1)(a) grants retirement gratuity to a servant who has completed five years' qualifying service and has become eligible for service gratuity or pension under rule 44. The five-year threshold is lower than the ten years pension requires precisely because gratuity is the benefit that bridges the gap: a servant with seven years gets service gratuity under rule 44(2) and retirement gratuity under rule 45(1)(a). Rule 45(5) then helps the borderline case, treating four years and nine months or more as five years.",
+  "trap": "Applying the ten-year pension threshold to gratuity",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(1)(a)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(1)(a)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0064",
+  "q": "A servant dies in service after 7 years' qualifying service. The death gratuity payable is:",
+  "opts": [
+   "half his emoluments per six-monthly period",
+   "20 times his emoluments",
+   "6 times his emoluments",
+   "12 times his emoluments"
+  ],
+  "ans": "D",
+  "expl": "(D) 12 times his emoluments. Seven years falls in the five-to-eleven band, which pays 12 times\n(A) half his emoluments per six-monthly period. — That is the measure for twenty years or more, capped at 33 times\n(B) 20 times his emoluments. — Twenty times begins at eleven years\n(C) 6 times his emoluments. — Six times is the band for one year or more but less than five\n\nRule 45(1)(b) sets death gratuity by bands of qualifying service: less than one year, two times emoluments; one year or more but less than five, six times; five years or more but less than eleven, twelve times; eleven years or more but less than twenty, twenty times; and twenty years or more, half of emoluments for each completed six-monthly period subject to a maximum of 33 times. Seven years sits in the third band, so the family receives twelve times his emoluments. The bands are stated in years of service, not in months, and the boundaries are 'or more but less than', so each year belongs to exactly one band.",
+  "trap": "Using the six-times rate that applies below five years",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(1)(b)(iii)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(1)(b)(iii)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0065",
+  "q": "A servant with 24 years' qualifying service dies in service. The death gratuity is:",
+  "opts": [
+   "half of emoluments per six-monthly period, capped at 33 times",
+   "24 times his emoluments, one for each year, irrespective of the facts.",
+   "20 times his emoluments, the top band rate",
+   "12 times his emoluments, in every such case."
+  ],
+  "ans": "A",
+  "expl": "(A) half of emoluments per six-monthly period, capped at 33 times. Twenty years or more moves the calculation to the per-period measure with its own cap\n(B) 24 times his emoluments, one for each year, irrespective of the facts. — The rule uses a half per six-monthly period, which gives 24 times here and is under the cap\n(C) 20 times his emoluments, the top band rate. — Twenty times is the band below this one, ending at twenty years\n(D) 12 times his emoluments, in every such case. — Twelve times is the five-to-eleven band\n\nThe final band in rule 45(1)(b) applies where qualifying service is twenty years or more: death gratuity is half of emoluments for every completed six-monthly period of qualifying service, subject to a maximum of 33 times emoluments. Twenty-four years is 48 six-monthly periods, and half for each gives 24 times emoluments, which is under the 33 times cap. A servant with 66 or more six-monthly periods, that is 33 years, would reach the cap. The switch from a flat multiple to a per-period measure at twenty years is the point most often missed.",
+  "trap": "Stopping at the twenty-times band because it looks like the top",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(1)(b)(v)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(1)(b)(v)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0066",
+  "q": "Death gratuity is payable under rule 45(1)(b) where a servant dies in service. The proviso to sub-rule (1) caps retirement and death gratuity together at:",
+  "opts": [
+   "thirty-three times emoluments, with no rupee cap",
+   "twenty lakh rupees, as the rule is printed",
+   "sixteen and a half times emoluments",
+   "twenty-five lakh rupees, as an order of 2024 raised it"
+  ],
+  "ans": "B",
+  "expl": "(B) twenty lakh rupees, as the rule is printed. The proviso to rule 45(1) states twenty lakh rupees\n(A) thirty-three times emoluments, with no rupee cap. — Thirty-three times is the per-period cap in the top band, not the overall ceiling\n(C) sixteen and a half times emoluments. — That is the retirement gratuity cap in clause (a)\n(D) twenty-five lakh rupees, as an order of 2024 raised it. — An Office Memorandum of 30 May 2024 raised the ceiling to twenty-five lakh from 1 January 2024, but rule 45 still prints twenty lakh\n\nThe proviso to rule 45(1) prints a ceiling of twenty lakh rupees on retirement and death gratuity. The Office Memorandum of 30 May 2024 raised the operative maximum to twenty-five lakh rupees with effect from 1 January 2024, and its paragraph 7 records that the formal amendment to the Rules will be notified separately. The rule text has not caught up. A candidate should know both figures and know which is which: the printed rule says twenty lakh, and the order in force pays twenty-five.",
+  "trap": "Assuming the printed ceiling is still the operative one",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(1)(b)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(1)(b)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0067",
+  "q": "A pensioner who retired with a pension dies two years later. A residuary gratuity is payable where the sums already received fall short of:",
+  "opts": [
+   "six times his emoluments",
+   "the retirement gratuity he received",
+   "12 times his emoluments",
+   "twenty times his emoluments"
+  ],
+  "ans": "C",
+  "expl": "(C) 12 times his emoluments. Rule 45(3) uses 12 times emoluments as the floor for the deficiency calculation\n(A) six times his emoluments. — Six times is the one-to-five-year death gratuity rate, not this floor\n(B) the retirement gratuity he received. — The retirement gratuity is one of the sums counted towards the floor\n(D) twenty times his emoluments. — Twenty times is a death gratuity band, not the residuary measure\n\nRule 45(3) provides a residuary gratuity where a servant who became eligible for service gratuity or pension on retirement dies within five years of that retirement. If the sums actually received by him on account of gratuity or pension, together with the retirement gratuity admissible under sub-rule (1) and the commuted value of any commuted portion, are less than twelve times his emoluments, a residuary gratuity equal to the deficiency may be granted to his family. The purpose is to guarantee a minimum lump sum to the family of a pensioner who dies soon after retiring.",
+  "trap": "Assuming the family gets nothing because he had already retired",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(3)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(3)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0068",
+  "q": "In reckoning qualifying service for gratuity, a fraction of a year of three months or more is treated as:",
+  "opts": [
+   "half a six-monthly period",
+   "a completed year",
+   "nothing, until a full six months accrues",
+   "a completed six-monthly period"
+  ],
+  "ans": "D",
+  "expl": "(D) a completed six-monthly period. Rule 45(4) rounds three months or more up to a full six-monthly period\n(A) half a six-monthly period. — The rule treats it as a whole period, not a half\n(B) a completed year. — The rounding is to a six-monthly period, not a year\n(C) nothing, until a full six months accrues. — Three months or more is exactly what the rule rounds up\n\nRule 45(4) supplies the rounding rule for calculating the length of qualifying service under rule 45: a fraction of a year equal to three months or more is treated as a completed six-monthly period and reckoned as qualifying service. The rule is generous in the servant's favour and is deliberately so, because the gratuity is built out of six-monthly periods: a servant at four years and ten months needs the rounding to cross the five-year threshold in sub-rule (1)(a), which sub-rule (5) separately assists by treating four years and nine months as five years.",
+  "trap": "Dropping the part-period instead of rounding it up",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(4)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(4)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0069",
+  "q": "A servant retires with exactly 4 years and 10 months' qualifying service. For the purpose of rule 45 his qualifying service is treated as:",
+  "opts": [
+   "five years, so he is eligible for gratuity",
+   "four years, so he gets nothing",
+   "four and a half years, in every such case.",
+   "ten years, for pension"
+  ],
+  "ans": "A",
+  "expl": "(A) five years, so he is eligible for gratuity. Rule 45(5) treats four years and nine months or more as five years\n(B) four years, so he gets nothing. — The sub-rule exists to prevent exactly that result\n(C) four and a half years, in every such case. — The sub-rule rounds up to five years, not to a half\n(D) ten years, for pension. — The deeming is to five years and for gratuity only\n\nRule 45(5) provides that a servant who has rendered qualifying service of four years and nine months or more but less than five years shall have his qualifying service treated as five years for the purpose of this rule, and shall be eligible for retirement gratuity under clause (a) of sub-rule (1). It is a narrowly drawn bridge across the five-year threshold, and it operates only for rule 45. It does not make him eligible for pension under rule 44, which needs ten years, and it does not change his actual service anywhere else in the rules.",
+  "trap": "Extending the deeming beyond rule 45",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(5)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(5)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0070",
+  "q": "The death gratuity rates in rule 45(1)(b) apply to a servant who dies by suicide:",
+  "opts": [
+   "only if the family produces a medical certificate",
+   "yes, sub-rule (2) extends them expressly to that case",
+   "only where there is no criminal proceeding pending",
+   "no, because suicide is not death in service, in every such case."
+  ],
+  "ans": "B",
+  "expl": "(B) yes, sub-rule (2) extends them expressly to that case. Rule 45(2) applies clause (b) to death by suicide\n(A) only if the family produces a medical certificate. — No such condition appears in the sub-rule\n(C) only where there is no criminal proceeding pending. — The sub-rule attaches no such condition\n(D) no, because suicide is not death in service, in every such case. — The sub-rule was inserted to put the point beyond doubt\n\nRule 45(2) provides that clause (b) of sub-rule (1), the death gratuity table, shall also be applicable in the case of death of a Government servant by suicide. The sub-rule exists because it might otherwise have been argued that a death by suicide is not a death in service for the purpose of the table, which would have deprived the family of the gratuity in the very circumstances where it is most needed. It is a short provision and worth remembering as an example of the rules reaching a result that a literal reading might not.",
+  "trap": "Reading 'dies while in service' as excluding suicide",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(2)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(2)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0071",
+  "q": "For the purpose of gratuity under rule 45, dearness allowance admissible on the date of retirement or death:",
+  "opts": [
+   "is included only if the servant had opted for it",
+   "is excluded from emoluments",
+   "is also treated as emoluments",
+   "is included only for death gratuity"
+  ],
+  "ans": "C",
+  "expl": "(C) is also treated as emoluments. The second proviso to rule 45(6) includes DA in emoluments for gratuity\n(A) is included only if the servant had opted for it. — No option is required by the proviso\n(B) is excluded from emoluments. — The proviso includes it, which is the point of the provision\n(D) is included only for death gratuity. — The proviso covers retirement and death alike\n\nRule 45(6) requires emoluments for gratuity to be reckoned in accordance with rule 31. Two provisos then modify that: if the servant's emoluments were reduced during the last ten months of service, average emoluments under rule 32 are treated as emoluments, and dearness allowance admissible on the date of retirement or death is also treated as emoluments for the purpose of this rule. The second proviso matters because it brings DA into the gratuity base, which the definition in rule 31 does not do of its own force.",
+  "trap": "Leaving dearness allowance out of the gratuity base",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(6)-prov-2"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(6)-prov-2",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0072",
+  "q": "The gratuity finally calculated under rule 45 comes to ₹4,23,456.40. The amount payable is:",
+  "opts": [
+   "₹4,23,456.40, paid to the paise, irrespective of the facts.",
+   "₹4,23,456, rounded down, in every such case.",
+   "₹4,23,500, rounded to the nearest hundred",
+   "₹4,23,457, rounded up to the next higher rupee"
+  ],
+  "ans": "D",
+  "expl": "(D) ₹4,23,457, rounded up to the next higher rupee. The second proviso to rule 45(1) rounds a fraction of a rupee up\n(A) ₹4,23,456.40, paid to the paise, irrespective of the facts. — Gratuity is rounded to the rupee\n(B) ₹4,23,456, rounded down, in every such case. — The proviso rounds up, not down\n(C) ₹4,23,500, rounded to the nearest hundred. — The rounding is to the rupee, not to hundreds\n\nThe second proviso to rule 45(1) provides that where the amount of retirement or death gratuity, as finally calculated, contains a fraction of a rupee, it shall be rounded off to the next higher rupee. The direction is upward in every case, so a fraction however small increases the payment by one rupee. That is worth contrasting with rule 44, which says nothing about rounding pension, and with the pay rules, which round differently again.",
+  "trap": "Rounding down, or to the nearest rupee rather than up",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(1)-prov-2"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(1)-prov-2",
+  "rules_text": "Rule 45"
+ }
+]
