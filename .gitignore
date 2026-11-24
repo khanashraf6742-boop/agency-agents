@@ -93,3 +93,7 @@ __pycache__/
 ccs-revised-pay-exam-platform/build/pay.json
 ccs-revised-pay-exam-platform/build/matrix.json
 ccs-revised-pay-exam-platform/build/rules_out.json
+
+# python bytecode
+__pycache__/
+*.pyc
