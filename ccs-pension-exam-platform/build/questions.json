@@ -1078,5 +1078,365 @@
   ],
   "src": "CCS (Pension) Rules, 2021, rule 30",
   "rules_text": "Rule 30"
+ },
+ {
+  "id": "P-0055",
+  "q": "A servant retires on superannuation with 28 years' qualifying service. His emoluments are ₹72,000 and his average emoluments ₹74,000. His monthly pension is:",
+  "opts": [
+   "₹36,000",
+   "₹74,000",
+   "₹37,000",
+   "₹1,25,000"
+  ],
+  "ans": "C",
+  "expl": "(C) ₹37,000. Fifty per cent of the more beneficial figure, which is the average emoluments of ₹74,000\n(A) ₹36,000. — That is 50 per cent of last emoluments, which is the lower of the two numbers here\n(B) ₹74,000. — Pension is a percentage of emoluments, not the emoluments themselves\n(D) ₹1,25,000. — That is the ceiling, which caps a figure that reaches it\n\nRule 44(1) grants a pension calculated at 50 per cent of emoluments or of average emoluments, whichever is more beneficial to the servant, subject to a floor of ₹9,000 and a ceiling of ₹1,25,000 a month. Here 50 per cent of emoluments is ₹36,000 and 50 per cent of average emoluments is ₹37,000, so the pension is ₹37,000. The election is not a matter of choice for the servant: the rule directs that the more beneficial figure be taken, so the calculation must always be done both ways.",
+  "trap": "Taking the last emoluments because they were the last drawn",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(1)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0056",
+  "q": "A servant retires with 22 years' qualifying service and emoluments of ₹2,40,000. His monthly pension is:",
+  "opts": [
+   "₹9,000, the minimum",
+   "₹2,40,000",
+   "₹1,20,000, being fifty per cent",
+   "₹1,25,000, the ceiling"
+  ],
+  "ans": "D",
+  "expl": "(D) ₹1,25,000, the ceiling. Fifty per cent would be ₹1,20,000 here only if the figure were lower; the ceiling is the cap on the uncapped entitlement\n(A) ₹9,000, the minimum. — The minimum applies only where the calculation falls below it\n(B) ₹2,40,000. — Pension is a percentage of emoluments, not the emoluments\n(C) ₹1,20,000, being fifty per cent. — Fifty per cent of ₹2,40,000 is ₹1,20,000, which is below the ceiling and is the correct figure\n\nRule 44(1) caps pension at ₹1,25,000 a month. Where 50 per cent of emoluments or of average emoluments exceeds that figure, the pension is the ceiling; where it falls below, the figure governs. A candidate who sees a large emolument figure and reaches for the ceiling will be caught when the calculation produces a number below it, as here: 50 per cent of ₹2,40,000 is ₹1,20,000, which is under the cap, so ₹1,20,000 is the answer.",
+  "trap": "Applying the ceiling as though it were the rate",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(1)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0057",
+  "q": "Pension under rule 44(1) can be sanctioned only to a servant who has completed qualifying service of at least:",
+  "opts": [
+   "ten years",
+   "fifteen years",
+   "five years",
+   "twenty years"
+  ],
+  "ans": "A",
+  "expl": "(A) ten years. Rule 44(1) requires ten years for pension\n(B) fifteen years. — No such threshold appears in rule 44\n(C) five years. — Five years is the threshold for retirement gratuity under rule 45(1)(a)\n(D) twenty years. — Twenty years is the qualifying service for voluntary retirement under rule 43\n\nRule 44(1) makes a servant eligible for pension on completing a qualifying service of not less than ten years. Below that threshold rule 44(2) provides a service gratuity instead, calculated at half a month's emoluments for every completed six-monthly period of service. Three thresholds in these rules are easily confused and should be kept apart: five years for retirement gratuity under rule 45(1)(a), ten years for pension under rule 44(1), and twenty years for retirement on completion of twenty years' qualifying service under rule 43.",
+  "trap": "Confusing the ten-year pension threshold with the five-year gratuity threshold",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(1)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(1)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0058",
+  "q": "A servant retires under rule 34 with 7 years' qualifying service. He is entitled to:",
+  "opts": [
+   "both pension and gratuity, in every such case.",
+   "service gratuity, at half a month's emoluments per six-monthly period",
+   "nothing, because he did not complete ten years, as a matter of course.",
+   "pension at fifty per cent of emoluments, irrespective of the facts."
+  ],
+  "ans": "B",
+  "expl": "(B) service gratuity, at half a month's emoluments per six-monthly period. Rule 44(2) substitutes service gratuity where pension is not earned\n(A) both pension and gratuity, in every such case. — The two are alternatives under sub-rules (1) and (2)\n(C) nothing, because he did not complete ten years, as a matter of course. — Service gratuity exists precisely for the short-service case\n(D) pension at fifty per cent of emoluments, irrespective of the facts. — Pension needs ten years, so seven is short\n\nRule 44(2) provides that a servant who retires under one of the rules referred to in sub-rule (1) but has not become eligible for pension shall be eligible instead for a service gratuity, calculated at half a month's emoluments for every completed six-monthly period of qualifying service. The two sub-rules are alternatives, not cumulative: a servant with ten years or more gets pension, and one with less gets service gratuity. That is why the ten-year line matters so much in practice.",
+  "trap": "Assuming a short-service retirement produces nothing",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(2)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(2)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0059",
+  "q": "A servant with 7 years and 4 months' qualifying service retires. For service gratuity under rule 44(2), the number of completed six-monthly periods is:",
+  "opts": [
+   "14 periods",
+   "7 periods",
+   "15 periods",
+   "16 periods"
+  ],
+  "ans": "C",
+  "expl": "(C) 15 periods. Seven years is 14 periods and the extra four months rounds up to one more under rule 45(4)\n(A) 14 periods. — Four months is three months or more, so rule 45(4) adds a period to the 14\n(B) 7 periods. — That counts years, not six-monthly periods\n(D) 16 periods. — That would need the four months to complete two periods, which it does not\n\nRule 44(2) calculates service gratuity at half a month's emoluments for every completed six-monthly period of qualifying service. Rule 45(4) supplies the rounding rule for gratuity generally: a fraction of a year equal to three months or more is treated as a completed six-monthly period. Seven years yields 14 periods, and the remaining four months, being three months or more, yields one more, so the count is 15. The arithmetic is deliberately tested because a candidate who forgets the rounding loses a half-month of emoluments.",
+  "trap": "Forgetting the three-month rounding in sub-rule (4)",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(2)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(2)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0060",
+  "q": "A servant with 18 years' qualifying service is compulsorily retired. His compulsory retirement pension is:",
+  "opts": [
+   "the full superannuation pension in every case, in every such case.",
+   "service gratuity, because he was compulsorily retired",
+   "half the superannuation pension in every case",
+   "such portion of the superannuation pension as is sanctioned"
+  ],
+  "ans": "D",
+  "expl": "(D) such portion of the superannuation pension as is sanctioned. Rule 44(4)(a) makes it a proportion of the superannuation pension\n(A) the full superannuation pension in every case, in every such case. — The rule makes it a portion fixed by the competent authority\n(B) service gratuity, because he was compulsorily retired. — Service gratuity applies below ten years; he has eighteen\n(C) half the superannuation pension in every case. — The rule does not fix the proportion at a half\n\nRule 44(4)(a) deals with a servant compulsorily retired after completing qualifying service of not less than ten years who has become eligible for compulsory retirement pension under rule 40. The amount of that pension is such portion or percentage of the superannuation pension calculated under sub-rule (1) as the competent authority may sanction under rule 40. The proportion is therefore a matter for the sanctioning authority and not a fixed figure, which is why a question asking for 'the' percentage has no single answer in the rules.",
+  "trap": "Assuming compulsory retirement carries a fixed fraction of pension",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(4)(a)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(4)(a)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0061",
+  "q": "A servant with 14 years' service is dismissed and sanctioned a compassionate allowance. Its amount is:",
+  "opts": [
+   "a portion of the pension he would have earned, as rule 41 sanctions",
+   "service gratuity under sub-rule (2), in every such case.",
+   "nothing, because dismissal forfeits all benefits, irrespective of the facts.",
+   "the full pension he would have got on superannuation"
+  ],
+  "ans": "A",
+  "expl": "(A) a portion of the pension he would have earned, as rule 41 sanctions. Rule 44(5)(a) measures the allowance against the pension he would have earned\n(B) service gratuity under sub-rule (2), in every such case. — Sub-rule (5)(b) uses the gratuity measure only below ten years\n(C) nothing, because dismissal forfeits all benefits, irrespective of the facts. — Rule 41 provides the compassionate allowance precisely for this case\n(D) the full pension he would have got on superannuation. — The rule makes it a portion of that pension, not the whole\n\nRule 44(5)(a) provides that where a servant is dismissed or removed after completing qualifying service of not less than ten years and is sanctioned a compassionate allowance under rule 41, the amount is such portion or percentage of the pension which would have been admissible had he retired on superannuation as the competent authority may sanction under rule 41. Rule 24 forfeits the service for ordinary pension purposes, and rule 41 with rule 44(5) is the mechanism by which a long-serving servant who is dismissed still receives something.",
+  "trap": "Reading rule 24's forfeiture as leaving nothing at all",
+  "rule": "44",
+  "chapter": "VII",
+  "covers": [
+   "44(5)(a)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 44(5)(a)",
+  "rules_text": "Rule 44"
+ },
+ {
+  "id": "P-0062",
+  "q": "A servant retires with 30 years' qualifying service and emoluments of ₹60,000. His retirement gratuity is:",
+  "opts": [
+   "₹3,60,000, being six times emoluments",
+   "capped at 16½ times his emoluments",
+   "thirty times emoluments, being one month per year",
+   "₹4,50,000, being 30 × ¼ × emoluments"
+  ],
+  "ans": "B",
+  "expl": "(B) capped at 16½ times his emoluments. Sixty half-yearly periods at a quarter each would far exceed the 16½ times cap\n(A) ₹3,60,000, being six times emoluments. — Six times is a death gratuity rate for one to five years' service\n(C) thirty times emoluments, being one month per year. — The rule uses a quarter per six-monthly period, not a month per year\n(D) ₹4,50,000, being 30 × ¼ × emoluments. — That is 7½ times emoluments and is below the true figure; the quarter-per-period calculation gives 15 times\n\nRule 45(1)(a) grants retirement gratuity equal to one-fourth of emoluments for each completed six-monthly period of qualifying service, subject to a maximum of 16½ times the emoluments. Thirty years is 60 six-monthly periods, and a quarter of emoluments for each gives 15 times the emoluments, which is under the cap. A servant with 33 years or more would reach the 16½ times ceiling, because 66 quarters is 16½. The cap is expressed as a multiple of emoluments, not as a rupee figure, and that is what makes it durable across pay revisions.",
+  "trap": "Applying the maximum without first computing the quarter-per-period figure",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(1)(a)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(1)(a)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0063",
+  "q": "Retirement gratuity under rule 45(1)(a) is available only to a servant who has completed qualifying service of at least:",
+  "opts": [
+   "ten years",
+   "one year",
+   "five years",
+   "twenty years"
+  ],
+  "ans": "C",
+  "expl": "(C) five years. Rule 45(1)(a) requires five years and eligibility for service gratuity or pension\n(A) ten years. — Ten years is the pension threshold in rule 44(1)\n(B) one year. — One year is a death gratuity band, not the retirement gratuity threshold\n(D) twenty years. — Twenty years is the voluntary retirement threshold under rule 43\n\nRule 45(1)(a) grants retirement gratuity to a servant who has completed five years' qualifying service and has become eligible for service gratuity or pension under rule 44. The five-year threshold is lower than the ten years pension requires precisely because gratuity is the benefit that bridges the gap: a servant with seven years gets service gratuity under rule 44(2) and retirement gratuity under rule 45(1)(a). Rule 45(5) then helps the borderline case, treating four years and nine months or more as five years.",
+  "trap": "Applying the ten-year pension threshold to gratuity",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(1)(a)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(1)(a)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0064",
+  "q": "A servant dies in service after 7 years' qualifying service. The death gratuity payable is:",
+  "opts": [
+   "half his emoluments per six-monthly period",
+   "20 times his emoluments",
+   "6 times his emoluments",
+   "12 times his emoluments"
+  ],
+  "ans": "D",
+  "expl": "(D) 12 times his emoluments. Seven years falls in the five-to-eleven band, which pays 12 times\n(A) half his emoluments per six-monthly period. — That is the measure for twenty years or more, capped at 33 times\n(B) 20 times his emoluments. — Twenty times begins at eleven years\n(C) 6 times his emoluments. — Six times is the band for one year or more but less than five\n\nRule 45(1)(b) sets death gratuity by bands of qualifying service: less than one year, two times emoluments; one year or more but less than five, six times; five years or more but less than eleven, twelve times; eleven years or more but less than twenty, twenty times; and twenty years or more, half of emoluments for each completed six-monthly period subject to a maximum of 33 times. Seven years sits in the third band, so the family receives twelve times his emoluments. The bands are stated in years of service, not in months, and the boundaries are 'or more but less than', so each year belongs to exactly one band.",
+  "trap": "Using the six-times rate that applies below five years",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(1)(b)(iii)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(1)(b)(iii)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0065",
+  "q": "A servant with 24 years' qualifying service dies in service. The death gratuity is:",
+  "opts": [
+   "half of emoluments per six-monthly period, capped at 33 times",
+   "24 times his emoluments, one for each year, irrespective of the facts.",
+   "20 times his emoluments, the top band rate",
+   "12 times his emoluments, in every such case."
+  ],
+  "ans": "A",
+  "expl": "(A) half of emoluments per six-monthly period, capped at 33 times. Twenty years or more moves the calculation to the per-period measure with its own cap\n(B) 24 times his emoluments, one for each year, irrespective of the facts. — The rule uses a half per six-monthly period, which gives 24 times here and is under the cap\n(C) 20 times his emoluments, the top band rate. — Twenty times is the band below this one, ending at twenty years\n(D) 12 times his emoluments, in every such case. — Twelve times is the five-to-eleven band\n\nThe final band in rule 45(1)(b) applies where qualifying service is twenty years or more: death gratuity is half of emoluments for every completed six-monthly period of qualifying service, subject to a maximum of 33 times emoluments. Twenty-four years is 48 six-monthly periods, and half for each gives 24 times emoluments, which is under the 33 times cap. A servant with 66 or more six-monthly periods, that is 33 years, would reach the cap. The switch from a flat multiple to a per-period measure at twenty years is the point most often missed.",
+  "trap": "Stopping at the twenty-times band because it looks like the top",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(1)(b)(v)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(1)(b)(v)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0066",
+  "q": "Death gratuity is payable under rule 45(1)(b) where a servant dies in service. The proviso to sub-rule (1) caps retirement and death gratuity together at:",
+  "opts": [
+   "thirty-three times emoluments, with no rupee cap",
+   "twenty lakh rupees, as the rule is printed",
+   "sixteen and a half times emoluments",
+   "twenty-five lakh rupees, as an order of 2024 raised it"
+  ],
+  "ans": "B",
+  "expl": "(B) twenty lakh rupees, as the rule is printed. The proviso to rule 45(1) states twenty lakh rupees\n(A) thirty-three times emoluments, with no rupee cap. — Thirty-three times is the per-period cap in the top band, not the overall ceiling\n(C) sixteen and a half times emoluments. — That is the retirement gratuity cap in clause (a)\n(D) twenty-five lakh rupees, as an order of 2024 raised it. — An Office Memorandum of 30 May 2024 raised the ceiling to twenty-five lakh from 1 January 2024, but rule 45 still prints twenty lakh\n\nThe proviso to rule 45(1) prints a ceiling of twenty lakh rupees on retirement and death gratuity. The Office Memorandum of 30 May 2024 raised the operative maximum to twenty-five lakh rupees with effect from 1 January 2024, and its paragraph 7 records that the formal amendment to the Rules will be notified separately. The rule text has not caught up. A candidate should know both figures and know which is which: the printed rule says twenty lakh, and the order in force pays twenty-five.",
+  "trap": "Assuming the printed ceiling is still the operative one",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(1)(b)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(1)(b)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0067",
+  "q": "A pensioner who retired with a pension dies two years later. A residuary gratuity is payable where the sums already received fall short of:",
+  "opts": [
+   "six times his emoluments",
+   "the retirement gratuity he received",
+   "12 times his emoluments",
+   "twenty times his emoluments"
+  ],
+  "ans": "C",
+  "expl": "(C) 12 times his emoluments. Rule 45(3) uses 12 times emoluments as the floor for the deficiency calculation\n(A) six times his emoluments. — Six times is the one-to-five-year death gratuity rate, not this floor\n(B) the retirement gratuity he received. — The retirement gratuity is one of the sums counted towards the floor\n(D) twenty times his emoluments. — Twenty times is a death gratuity band, not the residuary measure\n\nRule 45(3) provides a residuary gratuity where a servant who became eligible for service gratuity or pension on retirement dies within five years of that retirement. If the sums actually received by him on account of gratuity or pension, together with the retirement gratuity admissible under sub-rule (1) and the commuted value of any commuted portion, are less than twelve times his emoluments, a residuary gratuity equal to the deficiency may be granted to his family. The purpose is to guarantee a minimum lump sum to the family of a pensioner who dies soon after retiring.",
+  "trap": "Assuming the family gets nothing because he had already retired",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(3)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(3)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0068",
+  "q": "In reckoning qualifying service for gratuity, a fraction of a year of three months or more is treated as:",
+  "opts": [
+   "half a six-monthly period",
+   "a completed year",
+   "nothing, until a full six months accrues",
+   "a completed six-monthly period"
+  ],
+  "ans": "D",
+  "expl": "(D) a completed six-monthly period. Rule 45(4) rounds three months or more up to a full six-monthly period\n(A) half a six-monthly period. — The rule treats it as a whole period, not a half\n(B) a completed year. — The rounding is to a six-monthly period, not a year\n(C) nothing, until a full six months accrues. — Three months or more is exactly what the rule rounds up\n\nRule 45(4) supplies the rounding rule for calculating the length of qualifying service under rule 45: a fraction of a year equal to three months or more is treated as a completed six-monthly period and reckoned as qualifying service. The rule is generous in the servant's favour and is deliberately so, because the gratuity is built out of six-monthly periods: a servant at four years and ten months needs the rounding to cross the five-year threshold in sub-rule (1)(a), which sub-rule (5) separately assists by treating four years and nine months as five years.",
+  "trap": "Dropping the part-period instead of rounding it up",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(4)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(4)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0069",
+  "q": "A servant retires with exactly 4 years and 10 months' qualifying service. For the purpose of rule 45 his qualifying service is treated as:",
+  "opts": [
+   "five years, so he is eligible for gratuity",
+   "four years, so he gets nothing",
+   "four and a half years, in every such case.",
+   "ten years, for pension"
+  ],
+  "ans": "A",
+  "expl": "(A) five years, so he is eligible for gratuity. Rule 45(5) treats four years and nine months or more as five years\n(B) four years, so he gets nothing. — The sub-rule exists to prevent exactly that result\n(C) four and a half years, in every such case. — The sub-rule rounds up to five years, not to a half\n(D) ten years, for pension. — The deeming is to five years and for gratuity only\n\nRule 45(5) provides that a servant who has rendered qualifying service of four years and nine months or more but less than five years shall have his qualifying service treated as five years for the purpose of this rule, and shall be eligible for retirement gratuity under clause (a) of sub-rule (1). It is a narrowly drawn bridge across the five-year threshold, and it operates only for rule 45. It does not make him eligible for pension under rule 44, which needs ten years, and it does not change his actual service anywhere else in the rules.",
+  "trap": "Extending the deeming beyond rule 45",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(5)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(5)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0070",
+  "q": "The death gratuity rates in rule 45(1)(b) apply to a servant who dies by suicide:",
+  "opts": [
+   "only if the family produces a medical certificate",
+   "yes, sub-rule (2) extends them expressly to that case",
+   "only where there is no criminal proceeding pending",
+   "no, because suicide is not death in service, in every such case."
+  ],
+  "ans": "B",
+  "expl": "(B) yes, sub-rule (2) extends them expressly to that case. Rule 45(2) applies clause (b) to death by suicide\n(A) only if the family produces a medical certificate. — No such condition appears in the sub-rule\n(C) only where there is no criminal proceeding pending. — The sub-rule attaches no such condition\n(D) no, because suicide is not death in service, in every such case. — The sub-rule was inserted to put the point beyond doubt\n\nRule 45(2) provides that clause (b) of sub-rule (1), the death gratuity table, shall also be applicable in the case of death of a Government servant by suicide. The sub-rule exists because it might otherwise have been argued that a death by suicide is not a death in service for the purpose of the table, which would have deprived the family of the gratuity in the very circumstances where it is most needed. It is a short provision and worth remembering as an example of the rules reaching a result that a literal reading might not.",
+  "trap": "Reading 'dies while in service' as excluding suicide",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(2)"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(2)",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0071",
+  "q": "For the purpose of gratuity under rule 45, dearness allowance admissible on the date of retirement or death:",
+  "opts": [
+   "is included only if the servant had opted for it",
+   "is excluded from emoluments",
+   "is also treated as emoluments",
+   "is included only for death gratuity"
+  ],
+  "ans": "C",
+  "expl": "(C) is also treated as emoluments. The second proviso to rule 45(6) includes DA in emoluments for gratuity\n(A) is included only if the servant had opted for it. — No option is required by the proviso\n(B) is excluded from emoluments. — The proviso includes it, which is the point of the provision\n(D) is included only for death gratuity. — The proviso covers retirement and death alike\n\nRule 45(6) requires emoluments for gratuity to be reckoned in accordance with rule 31. Two provisos then modify that: if the servant's emoluments were reduced during the last ten months of service, average emoluments under rule 32 are treated as emoluments, and dearness allowance admissible on the date of retirement or death is also treated as emoluments for the purpose of this rule. The second proviso matters because it brings DA into the gratuity base, which the definition in rule 31 does not do of its own force.",
+  "trap": "Leaving dearness allowance out of the gratuity base",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(6)-prov-2"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(6)-prov-2",
+  "rules_text": "Rule 45"
+ },
+ {
+  "id": "P-0072",
+  "q": "The gratuity finally calculated under rule 45 comes to ₹4,23,456.40. The amount payable is:",
+  "opts": [
+   "₹4,23,456.40, paid to the paise, irrespective of the facts.",
+   "₹4,23,456, rounded down, in every such case.",
+   "₹4,23,500, rounded to the nearest hundred",
+   "₹4,23,457, rounded up to the next higher rupee"
+  ],
+  "ans": "D",
+  "expl": "(D) ₹4,23,457, rounded up to the next higher rupee. The second proviso to rule 45(1) rounds a fraction of a rupee up\n(A) ₹4,23,456.40, paid to the paise, irrespective of the facts. — Gratuity is rounded to the rupee\n(B) ₹4,23,456, rounded down, in every such case. — The proviso rounds up, not down\n(C) ₹4,23,500, rounded to the nearest hundred. — The rounding is to the rupee, not to hundreds\n\nThe second proviso to rule 45(1) provides that where the amount of retirement or death gratuity, as finally calculated, contains a fraction of a rupee, it shall be rounded off to the next higher rupee. The direction is upward in every case, so a fraction however small increases the payment by one rupee. That is worth contrasting with rule 44, which says nothing about rounding pension, and with the pay rules, which round differently again.",
+  "trap": "Rounding down, or to the nearest rupee rather than up",
+  "rule": "45",
+  "chapter": "VII",
+  "covers": [
+   "45(1)-prov-2"
+  ],
+  "src": "CCS (Pension) Rules, 2021, rule 45(1)-prov-2",
+  "rules_text": "Rule 45"
  }
 ]

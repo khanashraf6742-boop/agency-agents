@@ -226,6 +226,19 @@ ck("rule 77(1) really is lettered (i)-(x), as the rule 76(5)(e) entry claims",
 ck("rule 76(2) really has no clauses, as the rule 81(2) entry claims",
    not _clauses("76(2)"), str(_clauses("76(2)")))
 
+# ---- every rupee figure in the bank re-derives from the rule that produces it
+import contextlib
+import io
+import money_checks
+
+_fails = []
+_buf = io.StringIO()
+with contextlib.redirect_stdout(_buf):
+    _fails = money_checks.run()
+ck("every rupee figure in the bank re-derives from its rule",
+   not _fails,
+   "; ".join(f"{q}: computed {c}, question says {a}" for q, d, c, a in _fails))
+
 # the control must be shown to fail; a whitelist never seen to reject anything proves nothing
 if ONLY != "xref":
     import subprocess as _sp
